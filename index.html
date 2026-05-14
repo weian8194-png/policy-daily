@@ -57,38 +57,6 @@
       font-weight: 500;
     }
 
-    /* ========== 导航栏 ========== */
-    .nav-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 10px 18px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-      font-size: 14px;
-    }
-    .nav-bar a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .nav-bar a:hover { text-decoration: underline; }
-    .nav-bar .nav-center {
-      font-weight: 700;
-      color: #111827;
-      font-size: 15px;
-    }
-    .nav-bar .nav-arrow {
-      font-size: 16px;
-    }
-    .nav-bar .nav-disabled {
-      color: #d1d5db;
-      pointer-events: none;
-      font-weight: 400;
-    }
-
     /* ========== 统计概览条 ========== */
     .stats-bar {
       display: flex;
@@ -205,7 +173,6 @@
       color: #111827;
       padding: 4px 8px;
       border-radius: 6px;
-      transition: background 0.15s;
     }
     .archive-list a:hover { background: #eff6ff; }
     .archive-date { font-weight: 600; font-size: 15px; }
@@ -218,15 +185,7 @@
     .page-footer a { color: #2563eb; text-decoration: none; }
     .page-footer a:hover { text-decoration: underline; }
 
-    /* ========== 响应式 ========== */
-    @media (max-width: 480px) {
-      .page-header h1 { font-size: 20px; }
-      .stat-item { min-width: 70px; padding: 10px 8px; }
-      .stat-item .stat-number { font-size: 22px; }
-      .card-title { font-size: 15px; }
-      .stats-bar { gap: 8px; }
-      .nav-bar { font-size: 13px; padding: 8px 12px; }
-    }
+    .new-tag { display: inline-block; font-size: 10px; background: #dc2626; color: #fff; padding: 1px 5px; border-radius: 3px; margin-left: 6px; vertical-align: middle; font-weight: 600; }
 
     /* 首页最新日期标记 */
     .new-badge {
@@ -251,18 +210,18 @@
     <h1>🌊 跨境出海政策日报</h1>
     <div class="meta">
       <span class="date">2026年5月14日（周四）</span>
-      <span class="update-hint">每日 9:00 更新</span>
+      <span class="update-hint">14:20 更新</span>
     </div>
   </div>
 
   <!-- ==================== 统计概览条 ==================== -->
   <div class="stats-bar">
     <div class="stat-item stat-urgent">
-      <div class="stat-number">2</div>
+      <div class="stat-number">3</div>
       <div class="stat-label">🔴 紧急</div>
     </div>
     <div class="stat-item stat-watch">
-      <div class="stat-number">9</div>
+      <div class="stat-number">10</div>
       <div class="stat-label">🟡 关注</div>
     </div>
     <div class="stat-item stat-note">
@@ -270,7 +229,7 @@
       <div class="stat-label">🟢 留意</div>
     </div>
     <div class="stat-item stat-platform">
-      <div class="stat-number">7</div>
+      <div class="stat-number">8</div>
       <div class="stat-label">涉事平台/机构</div>
     </div>
   </div>
@@ -279,16 +238,19 @@
   <div class="compliance-banner">
     <div class="banner-title">⚡ 近期关键时间节点</div>
     <ul>
+      <li><span class="date-tag">5月15日</span> Prime Day Deal提报截止（今日！）</li>
       <li><span class="date-tag">5月18日</span> 亚马逊参考价新规生效（List Price验证+Typical Price计算逻辑变更）</li>
       <li><span class="date-tag">5月24日</span> Prime Day价格静默期开始（禁止BD/OTD）</li>
-      <li><span class="date-tag">5月26日</span> Prime Day促销提报截止</li>
-      <li><span class="date-tag">5月27日</span> FBA入仓截止</li>
+      <li><span class="date-tag">5月26日</span> Prime Day BD/LD提报截止</li>
+      <li><span class="date-tag">5月27日</span> FBA入仓截止（欧洲站）</li>
+      <li><span class="date-tag">6月2日</span> FBA入仓截止（美国站）</li>
+      <li><span class="date-tag">6月16-17日</span> Prime Day正式开跑</li>
       <li><span class="date-tag">6月</span> TikTok Shop美区退货新规生效</li>
       <li><span class="date-tag">6月30日</span> 欧洲站COO原产国信息截止填报</li>
       <li><span class="date-tag">7月1日</span> 欧盟€3/类小包关税生效</li>
       <li><span class="date-tag">7月8日</span> 美国站CPSC证书申报新规生效</li>
       <li><span class="date-tag">8月1日</span> 亚马逊广告费从卖家收益直接扣除</li>
-      <li><span class="date-tag">持续中</span> 深圳税务严查跨境电商隐匿收入，金税四期多维度交叉核验</li>
+      <li><span class="date-tag">持续中</span> AI合规严审·深圳税务严查·金税四期交叉核验</li>
     </ul>
   </div>
 
@@ -300,16 +262,37 @@
       <span class="platform-tag tag-amazon">亚马逊</span>
       <span class="urgency-badge">🔴 紧急</span>
     </div>
+    <div class="card-title">AI合规严审风暴 · 大批卖家被停售 · ASIN创建规则全面收紧<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变了什么：</span>平台AI自动化审核全面铺开，发票字体差异/时间偏差即判定无效；ASIN创建权限收紧、品牌上架入口垄断，无自有品牌分销卖家被逐步淘汰</div>
+      <div class="summary-item"><span class="summary-label">影响谁：</span>所有亚马逊卖家，多店铺分销卖家和无自有品牌卖家影响最大</div>
+      <div class="summary-item"><span class="summary-label">何时生效：</span>已生效，AI自动化审核正在大面积执行</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>立即补齐近一年采购凭证确保发票格式规范统一，分销卖家尽快转型自有品牌或建立品牌授权，建立完善供应链文档存档体系至少保留12个月</div>
+    </div>
+    <div class="card-background">
+      <div class="bg-title">📋 政策背景</div>
+      <div class="bg-text">资深卖家反馈：店铺无重大违规记录却被停售，反复申诉了解到AI系统对发票进行严苛细节筛查。平台强制要求提供近一年完整发票记录，大量成熟老Listing因无法补齐超期历史凭证被迫永久下架。平台通过收紧ASIN创建权限、垄断品牌上架入口，逐步淘汰无自有品牌的分销卖家，全力扶持品牌自营。</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7639618437673534006/" target="_blank">今日头条 → toutiao.com</a>
+    </div>
+  </div>
+
+  <div class="policy-card card-urgent">
+    <div class="card-top">
+      <span class="platform-tag tag-amazon">亚马逊</span>
+      <span class="urgency-badge">🔴 紧急</span>
+    </div>
     <div class="card-title">参考价格规则重大更新 · List Price验证+Typical Price计算逻辑变更 · 5月18日生效</div>
     <div class="card-summary">
       <div class="summary-item"><span class="summary-label">变了什么：</span>List Price必须满足外部渠道真实销售记录或站内成交记录才可显示划线价；Typical Price计算逻辑变更，90天低价促销天数超50%（原70%）则所有价格纳入常规价计算</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>美/英/日/欧全站卖家，高频BD和优惠券卖家影响最大</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年5月18日（4天后生效）</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>立即核查List Price真实成交记录，合理规划促销节奏（90天促销天数≤50%），所有折扣必须通过亚马逊官方促销工具设置，促销结束后及时回调售价</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>立即核查List Price真实成交记录，合理规划促销节奏（90天促销天数≤50%），所有折扣必须通过亚马逊官方促销工具设置</div>
     </div>
     <div class="card-background">
       <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">List Price（建议零售价/划线价）验证收紧：美国站、英国站卖家的List Price必须满足至少一个条件——外部渠道真实销售记录（品牌官网、沃尔玛、Target等）或亚马逊站内成交记录，都不满足则划线价不显示。Typical Price计算逻辑变更：若90天内低价促销天数超过50%（原为70%），系统会将所有价格（含BD、优惠券、会员折扣）全部纳入计算中位数，频繁跑BD会导致"真实价格"基准被拉低。日本站及欧洲9站：5月18日起，未通过官方促销工具设置的折扣将视为非促销销售，计入常规价格。</div>
+      <div class="bg-text">List Price验证收紧：须满足外部渠道真实销售记录或站内成交记录，否则划线价不显示。Typical Price计算逻辑变更：若90天内低价促销天数超过50%，系统会将所有价格（含BD、优惠券、会员折扣）全部纳入计算中位数。日本站及欧洲9站：5月18日起，未通过官方促销工具设置的折扣将视为非促销销售。</div>
     </div>
     <div class="card-source">
       <span class="source-label">来源：</span><a href="https://m.mjzj.com/article/flwe6xfhh81s" target="_blank">海象跨境解读 → mjzj.com</a> · <a href="https://t.cj.sina.cn/articles/view/1564243777/5d3c7741001038p2k" target="_blank">BD影响分析 → sina.cn</a>
@@ -325,12 +308,12 @@
     <div class="card-summary">
       <div class="summary-item"><span class="summary-label">变了什么：</span>所有销往欧盟及英国的商品必须强制填写原产国（COO）信息，未填写将标记不合规并限制销售</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有涉及跨境配送至欧盟及英国的卖家（FBA/FBM均包含）</div>
-      <div class="summary-item"><span class="summary-label">何时生效：</span>2026年6月30日（47天后截止）</div>
+      <div class="summary-item"><span class="summary-label">何时生效：</span>2026年6月30日</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>立即盘点全店铺产品排查缺失COO的链接，通过后台批量模板统一更新（country_of_origin列），与供应商确认原产国资质凭证</div>
     </div>
     <div class="card-background">
       <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">COO定义：商品完全在一个国家生产则以该国为原产国；多国参与生产以最后实质性改变产品的国家为准。适用范围覆盖所有欧洲跨境卖家（FBA/FBM均包含）。可通过后台分类商品报告批量更新，在"原产国/原产地信息"列选择正确原产国。上传前检查数量和价格列确保数据最新。</div>
+      <div class="bg-text">COO定义：商品完全在一个国家生产则以该国为原产国；多国参与生产以最后实质性改变产品的国家为准。适用范围覆盖所有欧洲跨境卖家（FBA/FBM均包含）。</div>
     </div>
     <div class="card-source">
       <span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7639260135654720063/" target="_blank">敏哥跨境说 → toutiao.com</a> · <a href="http://m.toutiao.com/group/7639261940946092559/" target="_blank">合规操作指南 → toutiao.com</a>
@@ -341,31 +324,46 @@
   <div class="section-label section-watch">🟡 关注 · 需及时跟进</div>
 
   <div class="policy-card card-watch">
-    <div class="card-top">
-      <span class="platform-tag tag-amazon">亚马逊</span>
-      <span class="urgency-badge">🟡 关注</span>
-    </div>
-    <div class="card-title">FBA 3.5%燃油附加费扩展至MCF和Buy with Prime · 无截止日期</div>
+    <div class="card-top"><span class="platform-tag tag-amazon">亚马逊</span><span class="urgency-badge">🟡 关注</span></div>
+    <div class="card-title">Alexa for Shopping取代Rufus · AI购物助手整合进搜索栏 · 搜索流量格局巨变<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>美加站FBA配送费加收3.5%燃油及物流附加费，已扩展至MCF和Buy with Prime，无截止日期</div>
-      <div class="summary-item"><span class="summary-label">影响谁：</span>美加站所有FBA/MCF/Buy with Prime卖家</div>
-      <div class="summary-item"><span class="summary-label">何时生效：</span>4月17日已生效（FBA），5月2日扩展至MCF/Buy with Prime</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>重新核算产品成本结构将3.5%附加费纳入定价模型，低客单价SKU（$15以下）重点评估FBA履约成本占比</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>Rufus品牌退休，Alexa for Shopping直接嵌入搜索栏成为默认体验；AI导购决策区占据搜索顶部，电子产品等品类搜索结果被压缩至仅推荐约3款核心商品</div>
+      <div class="summary-item"><span class="summary-label">影响谁：</span>所有亚马逊美国站卖家，尤其依赖大词流量的卖家</div>
+      <div class="summary-item"><span class="summary-label">何时生效：</span>5月13日美国站已上线</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>优化Listing内容适应AI理解，重点优化长尾关键词和场景化搜索SEO，争取被AI推荐为"核心3款"</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">伊朗局势推高能源价格为附加费理由。亚马逊测算平均每单多付约$0.17。月销2000单年多付$4,080，月销10,000单年多付$20,400。季度重新评估，可能进一步上调。不适用于Small-and-Light/NIL项目。考虑海外仓+近岸外包组合降低物流成本。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7638908822739747391/" target="_blank">悟特胖精灵 → toutiao.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">Rufus从"可选功能"变为"默认体验"，AI直接占据搜索结果最黄金位置。10词以上对话式查询触发AI响应概率约68%，高意向买家被不成比例截获。新功能支持降价提醒、商品对比、自动复购。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/flydn9wb1s74" target="_blank">海象跨境 → mjzj.com</a> · <a href="https://www.ithome.com/0/950/066.htm" target="_blank">IT之家 → ithome.com</a></div>
   </div>
 
   <div class="policy-card card-watch">
-    <div class="card-top">
-      <span class="platform-tag tag-amazon">亚马逊</span>
-      <span class="urgency-badge">🟡 关注</span>
+    <div class="card-top"><span class="platform-tag tag-amazon">亚马逊</span><span class="urgency-badge">🟡 关注</span></div>
+    <div class="card-title">Prime Day 2026定档6月16-17日 · 覆盖26国 · 美西入仓费降25%</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变了什么：</span>Prime Day定档6月16-17日覆盖26国，价格门槛双重红线，费用改为预付+抽成，美西FBA入仓费下调25%</div>
+      <div class="summary-item"><span class="summary-label">影响谁：</span>所有参与Prime Day的卖家</div>
+      <div class="summary-item"><span class="summary-label">何时生效：</span>5月15日Deal提报截止，5月26日BD/LD提报截止，6月2日FBA入仓截止（美国站）</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>今日完成Deal提报！利用美西入仓费降25%和AWD带电商品入仓利好优化备货，静默期靠Coupon和站外引流维持转化</div>
     </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">促销价须≤过去60天最低价且≤最近30天最低价×95%。价格静默期5月24日-6月15日禁止BD/OTD。费用新模式：预付定金+按销售额抽成。美西FBA入仓费下调25%，AWD开放中小型带电商品入仓。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/KSQVNEHK0538U1ZG.html" target="_blank">163新闻 → 163.com</a></div>
+  </div>
+
+  <div class="policy-card card-watch">
+    <div class="card-top"><span class="platform-tag tag-amazon">亚马逊</span><span class="urgency-badge">🟡 关注</span></div>
+    <div class="card-title">FBA 3.5%燃油附加费扩展至MCF和Buy with Prime · 无截止日期</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变了什么：</span>美加站FBA配送费加收3.5%燃油及物流附加费，已扩展至MCF和Buy with Prime</div>
+      <div class="summary-item"><span class="summary-label">影响谁：</span>美加站所有FBA/MCF/Buy with Prime卖家</div>
+      <div class="summary-item"><span class="summary-label">何时生效：</span>已生效</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>重新核算成本结构将3.5%附加费纳入定价模型，低客单价SKU重点评估</div>
+    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">伊朗局势推高能源价格为附加费理由。平均每单多付约$0.17。月销2000单年多付$4,080。不适用于Small-and-Light/NIL项目。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7638908822739747391/" target="_blank">悟特胖精灵 → toutiao.com</a></div>
+  </div>
+
+  <div class="policy-card card-watch">
+    <div class="card-top"><span class="platform-tag tag-amazon">亚马逊</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">CPSC证书申报新规7月8日生效</div>
     <div class="card-summary">
       <div class="summary-item"><span class="summary-label">变了什么：</span>美国站CPSC证书申报新规即将生效，儿童产品及带电产品需提前准备合规证书</div>
@@ -373,41 +371,12 @@
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年7月8日</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>涉及相关品类的卖家提前准备CPSC合规证书，确认检测报告和认证文件齐全</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">美国消费品安全委员会（CPSC）证书申报新规，涉及儿童产品及带电产品的亚马逊卖家需提前准备合规文件，确保检测报告和认证文件齐全，避免因合规问题导致产品下架。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="https://m.mjzj.com/?page=146" target="_blank">卖家之家 → mjzj.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">美国消费品安全委员会（CPSC）证书申报新规，涉及儿童产品及带电产品的卖家需提前准备合规文件。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/?page=146" target="_blank">卖家之家 → mjzj.com</a></div>
   </div>
 
   <div class="policy-card card-watch">
-    <div class="card-top">
-      <span class="platform-tag tag-amazon">亚马逊</span>
-      <span class="urgency-badge">🟡 关注</span>
-    </div>
-    <div class="card-title">Prime Day 2026定档6月23-26日 · 费用模式改为预付+抽成</div>
-    <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>价格门槛双重红线（≤60天最低价 且 ≤30天最低价×95%），5月24日价格静默期开始，费用告别固定收费改为预付定金+按销售额抽成</div>
-      <div class="summary-item"><span class="summary-label">影响谁：</span>所有参与Prime Day的卖家</div>
-      <div class="summary-item"><span class="summary-label">何时生效：</span>大促6月23-26日，5月26日提报截止，5月27日FBA入仓截止</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>4月24日后不要大幅降价避免拉低价格基准，静默期靠Coupon和站外引流维持转化，5月26日前完成提报，仔细测算新费用模式下利润空间</div>
-    </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">美加站促销价须≤过去60天最低价且≤最近30天最低价×95%（含优惠券真实成交价计算）。价格静默期：5月24日-6月22日禁止使用BD/OTD等站内促销工具。促销费用新模式：告别固定收费，改为"预付定金+按销售额抽成"，设单ASIN费用上限。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="https://m.sohu.com/a/1021875114_120827100/" target="_blank">搜狐 → sohu.com</a>
-    </div>
-  </div>
-
-  <div class="policy-card card-watch">
-    <div class="card-top">
-      <span class="platform-tag tag-tiktok">TikTok Shop</span>
-      <span class="urgency-badge">🟡 关注</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">东南亚加强内容合规+AHT评分体系7月生效</div>
     <div class="card-summary">
       <div class="summary-item"><span class="summary-label">变了什么：</span>AIGC内容必须真实准确，违规最高冻结达人佣金90天；7月起店铺评分"买家投诉率"替换为"60天售后处理时长"(AHT)</div>
@@ -415,150 +384,93 @@
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年7月</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>加强AIGC内容审核确保宣传真实性，提升售后响应速度AHT控制在20小时以内</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">TikTok Shop东南亚加强内容合规管理：所有宣传内容（含AIGC生成内容）必须真实准确，违规最高冻结达人佣金90天。店铺评分维度调整：7月起"买家投诉率"替换为"60天售后处理时长"(AHT)，官方目标控制在20小时以内。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7639347469553336873/" target="_blank">出海观察哨 → toutiao.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">TikTok Shop东南亚加强内容合规管理：所有宣传内容（含AIGC生成内容）必须真实准确。店铺评分维度调整：7月起"买家投诉率"替换为AHT，官方目标控制在20小时以内。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7639347469553336873/" target="_blank">出海观察哨 → toutiao.com</a></div>
   </div>
 
   <div class="policy-card card-watch">
-    <div class="card-top">
-      <span class="platform-tag tag-tiktok">TikTok Shop</span>
-      <span class="urgency-badge">🟡 关注</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">美区6月起买家原因退货运费商家全担</div>
     <div class="card-summary">
       <div class="summary-item"><span class="summary-label">变了什么：</span>买家因个人原因退货的运费由商家全额承担，取消此前平台或买家分摊机制</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>TikTok Shop美区卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年6月</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>将退货运费纳入产品定价成本，关注商家保障险条款评估是否投保，优化产品描述减少"货不对板"退货</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>将退货运费纳入产品定价成本，关注商家保障险条款，优化产品描述减少退货</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">因"不再需要""尺码不合适"等买家个人原因产生的退货，运费全部转由商家承担，取消此前平台及相关方分摊机制。平台同步上线经营成本可视化功能与商家保障险。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="https://m.weibo.cn/detail/5298047454022546" target="_blank">上海跨境公服 → weibo.cn</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">因"不再需要""尺码不合适"等买家个人原因产生的退货，运费全部转由商家承担。平台同步上线经营成本可视化功能与商家保障险。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="https://m.weibo.cn/detail/5298047454022546" target="_blank">上海跨境公服 → weibo.cn</a></div>
   </div>
 
   <div class="policy-card card-watch">
-    <div class="card-top">
-      <span class="platform-tag tag-brazil">巴西</span>
-      <span class="urgency-badge">🟡 关注</span>
-    </div>
-    <div class="card-title">取消50美元以下跨境商品20%联邦进口税</div>
+    <div class="card-top"><span class="platform-tag tag-brazil">巴西</span><span class="urgency-badge">🟡 关注</span></div>
+    <div class="card-title">取消50美元以下跨境商品20%联邦进口税 · 已生效</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>取消2024年8月起征收的50美元以下国际网购商品20%联邦进口税（"小衬衫税"），恢复免税政策</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>取消50美元以下国际网购商品20%联邦进口税，恢复免税政策</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>面向巴西市场的跨境电商卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年5月13日（已生效）</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>巴西市场50美元以下商品成本下降约20%，可考虑调整定价策略，关注ICMS州税是否同步调整</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>巴西市场成本下降约20%，可调整定价策略，关注ICMS州税是否同步调整</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">巴西总统卢拉签署临时法令取消"小衬衫税"，恢复50美元以下商品免税。注意：10个州同步提高的ICMS流转税（20%）是否同步调整尚不明确。该法令为临时法令(MP)，仍需国会批准才能永久生效。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="http://world.people.com.cn/n1/2026/0513/c1002-40719153.html" target="_blank">人民网 → people.com.cn</a> · <a href="http://www.eeo.com.cn/2026/0513/874895.shtml" target="_blank">经济观察网 → eeo.com.cn</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">巴西总统卢拉签署临时法令取消"小衬衫税"。"Remessa Conforme"体系仍继续运行。该法令为临时法令(MP)，仍需国会批准才能永久生效。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="http://world.people.com.cn/n1/2026/0513/c1002-40719153.html" target="_blank">人民网 → people.com.cn</a></div>
   </div>
 
   <div class="policy-card card-watch">
-    <div class="card-top">
-      <span class="platform-tag tag-shopee">Shopee</span>
-      <span class="urgency-badge">🟡 关注</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-shopee">Shopee</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">泰国6月1日起调整销售费率 · 新加坡5月18日起严查包裹申报</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>泰国6月1日起调整销售费率（部分调至1.5%）；新加坡5月18日起严查包裹申报信息</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>泰国6月1日起调整销售费率（部分调至1.5%）；新加坡5月18日起严查包裹申报</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>Shopee泰国站和新加坡站卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>泰国6月1日，新加坡5月18日</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>泰国站重新核算各品类利润率评估定价调整空间，新加坡站确保包裹申报信息准确无误</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>泰国站重新核算利润率，新加坡站确保包裹申报信息准确</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">Shopee泰国站6月1日起调整部分品类销售费率至1.5%，卖家需重新评估利润空间。新加坡站5月18日起加强包裹申报审核力度，申报不合规可能面临处罚。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="https://www.chwang.com/shopee" target="_blank">出海网 → chwang.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">Shopee泰国站6月1日起调整部分品类销售费率至1.5%，新加坡站5月18日起加强包裹申报审核力度。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="https://www.chwang.com/shopee" target="_blank">出海网 → chwang.com</a></div>
   </div>
 
   <div class="policy-card card-watch">
-    <div class="card-top">
-      <span class="platform-tag tag-tax">中国税务</span>
-      <span class="urgency-badge">🟡 关注</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-tax">中国税务</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">跨境电商企业所得税查账征收2026年起全面执行</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>2026年起全面切换查账征收（此前核定征收2%-4%），认可境外发票和平台费用清单作为税前扣除凭证</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>2026年起全面切换查账征收，认可境外发票和平台费用清单作为税前扣除凭证</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有跨境电商企业</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年起全面执行</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>建立规范财务核算体系，收集整理境外发票和平台费用清单，多店铺运营企业设计合理费用分摊方案</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>建立规范财务核算体系，收集整理境外发票和平台费用清单</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">国税总局下发跨境电商企业所得税内部口径：认可以Invoice、Receipt或平台费用清单作为境外支出的税前扣除凭证；多店铺集团化运营可用"收入占比法"分摊费用；2025年9月前存量业务按2%应税所得率事后核定。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7639201369647268395/" target="_blank">中融说企服 → toutiao.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">国税总局下发跨境电商企业所得税内部口径：认可Invoice、Receipt或平台费用清单作为税前扣除凭证；多店铺集团化运营可用"收入占比法"分摊费用。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7639201369647268395/" target="_blank">中融说企服 → toutiao.com</a></div>
   </div>
 
   <div class="policy-card card-watch">
-    <div class="card-top">
-      <span class="platform-tag tag-tiktok">TikTok Shop</span>
-      <span class="urgency-badge">🟡 关注</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">欧盟及墨西哥品类资质管控更新 · CE/CPNP/FCC/CPC证书+EPR要求</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>欧盟电子电器需CE证书、玩具需CE证书、化妆品需CPNP备案；墨西哥带蓝牙/WiFi产品需FCC ID、低电压需FCC SDoC、儿童产品需CPC；德国需包装/WEEE/电池EPR号</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>欧盟电子电器需CE证书、化妆品需CPNP备案；墨西哥带蓝牙/WiFi产品需FCC ID、儿童产品需CPC；德国需包装/WEEE/电池EPR号</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>TikTok Shop面向欧盟和墨西哥市场的卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>已公告</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>盘点在售欧盟和墨西哥产品核对资质证书是否齐全，联系实验室获取相关认证</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>盘点在售产品核对资质证书，联系实验室获取相关认证，更新产品标签</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">欧盟（德/意/西/法）和墨西哥品类资质管控：电子电器需CE证书，化妆品需CPNP备案，墨西哥带蓝牙/WiFi产品需FCC ID，儿童产品需CPC。标签须使用目的国语言。德国市场需填写LUCID号、WEEE EPR号、电池EPR号。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="https://www.tt123.com/fullservice/vgwu5ijR" target="_blank">TT123卖家导航 → tt123.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">欧盟和墨西哥品类资质管控：电子电器需CE证书，化妆品需CPNP备案，墨西哥带蓝牙/WiFi产品需FCC ID，儿童产品需CPC。德国市场需填写LUCID号、WEEE EPR号、电池EPR号。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="https://www.tt123.com/fullservice/vgwu5ijR" target="_blank">TT123卖家导航 → tt123.com</a></div>
   </div>
 
   <div class="policy-card card-watch">
-    <div class="card-top">
-      <span class="platform-tag tag-tax">中国税务</span>
-      <span class="urgency-badge">🟡 关注</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-tax">中国税务</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">深圳税务严查跨境电商隐匿收入 · 大卖被罚超1.2亿</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>深圳部分跨境企业收到"风险事项调查通知"；一家老牌大卖隐匿收入超1.2亿被追缴+罚款+刑事处罚</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>深圳部分跨境企业收到"风险事项调查通知"；老牌大卖隐匿收入超1.2亿被追缴+罚款+刑事处罚</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有跨境电商企业，尤其是深圳、东莞、义乌等重镇卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>持续执行中</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>及时完成税务自查主动补缴差额，杜绝私户收款和账外经营</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">金税四期实现银行、第三方支付、电商平台多渠道数据交叉核验，私户大额收款、无合理理由公转私都会被系统精准识别预警。东莞卖家因未足额申报已被正式约谈。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="https://m.sohu.com/a/1022037457_609544/" target="_blank">搜狐 → sohu.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">金税四期实现银行、第三方支付、电商平台多渠道数据交叉核验，私户大额收款被系统精准识别预警。东莞卖家因未足额申报已被正式约谈。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="https://m.sohu.com/a/1022037457_609544/" target="_blank">搜狐 → sohu.com</a></div>
   </div>
-
 
   <!-- ==================== 🟢 留意政策 ==================== -->
   <div class="section-label section-note">🟢 留意 · 适度关注即可</div>
 
   <div class="policy-card card-note">
-    <div class="card-top">
-      <span class="platform-tag tag-amazon">亚马逊</span>
-      <span class="urgency-badge">🟢 留意</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-amazon">亚马逊</span><span class="urgency-badge">🟢 留意</span></div>
     <div class="card-title">SP-API收费计划撤回 · 不再向第三方开发者收取API使用费</div>
     <div class="card-summary">
       <div class="summary-item"><span class="summary-label">变了什么：</span>SP-API收费计划撤回，不再向第三方开发者收取API使用费</div>
@@ -566,62 +478,38 @@
       <div class="summary-item"><span class="summary-label">何时生效：</span>已撤回</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>无需额外行动，关注API服务商是否调整收费</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">亚马逊原计划向第三方开发者收取API使用费，因科技公司强烈反对而撤回。此前收费计划引发了广泛行业争议，撤回后第三方ERP/工具服务商的运营成本压力缓解。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="https://japannews24.com/exclusive-amazon-scraps-planned-api-fees-after-backlash-from-tech-firms/" target="_blank">JapanNews24 → japannews24.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">亚马逊原计划向第三方开发者收取API使用费，因科技公司强烈反对而撤回。撤回后第三方ERP/工具服务商的运营成本压力缓解。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="https://japannews24.com/exclusive-amazon-scraps-planned-api-fees-after-backlash-from-tech-firms/" target="_blank">JapanNews24 → japannews24.com</a></div>
   </div>
 
   <div class="policy-card card-note">
-    <div class="card-top">
-      <span class="platform-tag tag-tiktok">TikTok</span>
-      <span class="urgency-badge">🟢 留意</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-tiktok">TikTok</span><span class="urgency-badge">🟢 留意</span></div>
     <div class="card-title">推出TikTok Real打假计划 · 品牌验证流程上线</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>推出TikTok Real打假计划，品牌验证流程上线</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>推出TikTok Real IP保护计划，邀请品牌方审核商家品牌授权，加强假冒商品主动检测</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>在TikTok平台销售品牌商品的卖家</div>
-      <div class="summary-item"><span class="summary-label">何时生效：</span>已上线</div>
+      <div class="summary-item"><span class="summary-label">何时生效：</span>已上线，首批约100个品牌参与</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>品牌卖家可申请验证保护品牌权益，关注打假计划对商品上架审核的影响</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">TikTok推出TikTok Real打假计划，加强品牌验证流程，打击假冒商品销售。品牌方可通过验证流程保护自身知识产权，平台将加大对假冒商品的识别和处罚力度。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="https://digitalusa.info/2026/05/13/tiktok-launches-counterfeit-goods-detection-initiative/" target="_blank">DigitalUSA → digitalusa.info</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">TikTok Real计划整合品牌反馈到系统功能、政策和流程中，包括品牌验证模块邀请品牌审核商家提交的品牌授权。2025上半年超7000万商品被拒绝上架。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="https://digitalusa.info/2026/05/13/tiktok-launches-counterfeit-goods-detection-initiative/" target="_blank">DigitalUSA → digitalusa.info</a></div>
   </div>
 
   <div class="policy-card card-note">
-    <div class="card-top">
-      <span class="platform-tag tag-walmart">沃尔玛</span>
-      <span class="urgency-badge">🟢 留意</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-walmart">沃尔玛</span><span class="urgency-badge">🟢 留意</span></div>
     <div class="card-title">裁员1000人简化运营 · 加大电商和配送业务投入</div>
     <div class="card-summary">
       <div class="summary-item"><span class="summary-label">变了什么：</span>裁员1000人简化运营结构，加大电商和配送业务投入</div>
-      <div class="summary-item"><span class="summary-label">影响谁：</span>沃尔玛平台卖家（可能面临服务调整）</div>
+      <div class="summary-item"><span class="summary-label">影响谁：</span>沃尔玛平台卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>已公告</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>关注沃尔玛平台运营政策变化，评估平台服务稳定性</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">沃尔玛裁员1000人旨在简化运营结构，将资源向电商和配送业务倾斜。可能带来平台服务调整和政策变化，卖家需密切关注平台动态。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="http://widgets.economictimes.com/tech/technology/walmart-cuts-1000-roles-to-simplify-operations-source-says/articleshow/131066415.cms" target="_blank">Economic Times → economictimes.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">沃尔玛裁员1000人旨在简化运营结构，将资源向电商和配送业务倾斜。新CEO John Furner推动数字化转型。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="http://widgets.economictimes.com/tech/technology/walmart-cuts-1000-roles-to-simplify-operations-source-says/articleshow/131066415.cms" target="_blank">Economic Times → economictimes.com</a></div>
   </div>
 
   <div class="policy-card card-note">
-    <div class="card-top">
-      <span class="platform-tag tag-tiktok">TikTok Shop</span>
-      <span class="urgency-badge">🟢 留意</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge">🟢 留意</span></div>
     <div class="card-title">东南亚"亿元直通车"计划 · 大卖佣金减免+货补+广告激励</div>
     <div class="card-summary">
       <div class="summary-item"><span class="summary-label">变了什么：</span>推出"亿元直通车"计划，成熟大卖可享120天佣金减免、每月最高$1.5万货补、$1万广告激励金</div>
@@ -629,42 +517,28 @@
       <div class="summary-item"><span class="summary-label">何时生效：</span>已公告</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>大卖可积极申请"亿元直通车"计划获取资源，中小卖家关注后续扶持政策</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">TikTok Shop东南亚推出"亿元直通车"激励计划，成熟大卖可享120天佣金减免、每月最高1.5万美元货补、1万美元广告激励金。印尼站6月1日起调整运费承担规则，因买家原因导致售后/派送失败，卖家每笔最高承担IDR5,000。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7639347469553336873/" target="_blank">出海观察哨 → toutiao.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">TikTok Shop东南亚推出"亿元直通车"激励计划。印尼站6月1日起调整运费承担规则。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7639347469553336873/" target="_blank">出海观察哨 → toutiao.com</a></div>
   </div>
 
   <div class="policy-card card-note">
-    <div class="card-top">
-      <span class="platform-tag tag-amazon">亚马逊</span>
-      <span class="urgency-badge">🟢 留意</span>
-    </div>
-    <div class="card-title">Amazon One掌纹支付系统6月3日停止运营</div>
+    <div class="card-top"><span class="platform-tag tag-amazon">亚马逊</span><span class="urgency-badge">🟢 留意</span></div>
+    <div class="card-title">Selling Partner Services部门裁员 · 可能影响卖家服务体验<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>Amazon One掌纹认证/支付系统将于6月3日停止服务，用户数据安全删除</div>
-      <div class="summary-item"><span class="summary-label">影响谁：</span>使用Amazon One的零售门店和消费者（对卖家几乎无直接影响）</div>
-      <div class="summary-item"><span class="summary-label">何时生效：</span>2026年6月3日</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>无需额外行动，仅为平台动态参考</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>亚马逊Selling Partner Services组织裁员，卖家服务团队可能受到影响</div>
+      <div class="summary-item"><span class="summary-label">影响谁：</span>所有亚马逊卖家（客服/支持响应可能变慢）</div>
+      <div class="summary-item"><span class="summary-label">何时生效：</span>本周</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>关注卖家支持响应速度变化，重要问题尽早提交避免延误</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">Amazon One因用户采纳率低而终止，同时亚马逊正在关闭Amazon Fresh和Amazon Go门店，掌纹支付系统依托的线下场景正在收缩。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="https://trendsmask.com/why-is-amazon-one-palm-ending-414825.html" target="_blank">TrendsMask → trendsmask.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">亚马逊本周再次裁员，此次波及Selling Partner Services组织。该部门负责卖家服务和支持，裁员可能影响卖家获得支持的效率。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="https://in.marketscreener.com/news/amazon-cut-more-jobs-this-week-with-reductions-hitting-its-selling-partner-services-organization-th-ce7f5bdcdf81f122" target="_blank">MarketScreener → marketscreener.com</a></div>
   </div>
 
   <!-- ==================== 历史归档 ==================== -->
   <div class="archive-section">
     <div class="archive-title">📂 历史归档</div>
     <ul class="archive-list">
-      <!-- CC维护：每天更新时在此列表顶部添加新的一行 -->
-      <li><a href="./daily/20260514.html"><span class="archive-date">5月14日（周四）<span class="new-badge">NEW</span></span><span class="archive-meta"><span class="count">17条</span>政策</span></a></li>
+      <li><a href="./daily/20260514.html"><span class="archive-date">5月14日（周四）<span class="new-badge">NEW</span></span><span class="archive-meta"><span class="count">18条</span>政策</span></a></li>
       <li><a href="./daily/20260513.html"><span class="archive-date">5月13日（周三）</span><span class="archive-meta"><span class="count">10条</span>政策</span></a></li>
       <li><a href="./daily/20260512.html"><span class="archive-date">5月12日（周二）</span><span class="archive-meta"><span class="count">10条</span>政策</span></a></li>
       <li><a href="./daily/20260511.html"><span class="archive-date">5月11日（周一）</span><span class="archive-meta"><span class="count">8条</span>政策</span></a></li>
