@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>跨境出海政策日报</title>
+  <title>跨境政策日报 | 2026年5月15日</title>
   <style>
     /* ========== 全局重置与基础样式 ========== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -55,6 +55,38 @@
       border-radius: 20px;
       margin-left: 8px;
       font-weight: 500;
+    }
+
+    /* ========== 导航栏 ========== */
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 10px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      font-size: 14px;
+    }
+    .nav-bar a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center {
+      font-weight: 700;
+      color: #111827;
+      font-size: 15px;
+    }
+    .nav-bar .nav-arrow {
+      font-size: 16px;
+    }
+    .nav-bar .nav-disabled {
+      color: #d1d5db;
+      pointer-events: none;
+      font-weight: 400;
     }
 
     /* ========== 统计概览条 ========== */
@@ -141,44 +173,7 @@
     .section-watch  { color: #f59e0b; }
     .section-note   { color: #16a34a; }
 
-    /* ========== 历史归档区（首页专用） ========== */
-    .archive-section {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-top: 24px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    }
-    .archive-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #eff6ff;
-    }
-    .archive-list {
-      list-style: none;
-      padding: 0;
-    }
-    .archive-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid #f3f4f6;
-    }
-    .archive-list li:last-child { border-bottom: none; }
-    .archive-list a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-decoration: none;
-      color: #111827;
-      padding: 4px 8px;
-      border-radius: 6px;
-    }
-    .archive-list a:hover { background: #eff6ff; }
-    .archive-date { font-weight: 600; font-size: 15px; }
-    .archive-meta { font-size: 13px; color: #6b7280; }
-    .archive-meta .count { color: #2563eb; font-weight: 600; margin-right: 8px; }
+    .new-tag { display: inline-block; font-size: 10px; background: #dc2626; color: #fff; padding: 1px 5px; border-radius: 3px; margin-left: 6px; vertical-align: middle; font-weight: 600; }
 
     /* ========== 页脚 ========== */
     .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
@@ -186,20 +181,14 @@
     .page-footer a { color: #2563eb; text-decoration: none; }
     .page-footer a:hover { text-decoration: underline; }
 
-    .new-tag { display: inline-block; font-size: 10px; background: #dc2626; color: #fff; padding: 1px 5px; border-radius: 3px; margin-left: 6px; vertical-align: middle; font-weight: 600; }
-
-    /* 首页最新日期标记 */
-    .new-badge {
-      display: inline-block;
-      font-size: 10px;
-      background: #dc2626;
-      color: #fff;
-      padding: 1px 6px;
-      border-radius: 8px;
-      margin-left: 6px;
-      vertical-align: middle;
-      line-height: 1.5;
-      font-weight: 600;
+    /* ========== 响应式 ========== */
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
     }
   </style>
 </head>
@@ -215,24 +204,19 @@
     </div>
   </div>
 
+  <!-- ==================== 导航栏 ==================== -->
+  <div class="nav-bar">
+    <a href="../index.html">← 返回首页</a>
+    <span class="nav-center">5月15日</span>
+    <a href="./20260514.html" class="nav-arrow">← 前一天</a>
+  </div>
+
   <!-- ==================== 统计概览条 ==================== -->
   <div class="stats-bar">
-    <div class="stat-item stat-urgent">
-      <div class="stat-number">3</div>
-      <div class="stat-label">🔴 紧急</div>
-    </div>
-    <div class="stat-item stat-watch">
-      <div class="stat-number">10</div>
-      <div class="stat-label">🟡 关注</div>
-    </div>
-    <div class="stat-item stat-note">
-      <div class="stat-number">5</div>
-      <div class="stat-label">🟢 留意</div>
-    </div>
-    <div class="stat-item stat-platform">
-      <div class="stat-number">9</div>
-      <div class="stat-label">涉事平台/机构</div>
-    </div>
+    <div class="stat-item stat-urgent"><div class="stat-number">3</div><div class="stat-label">🔴 紧急</div></div>
+    <div class="stat-item stat-watch"><div class="stat-number">10</div><div class="stat-label">🟡 关注</div></div>
+    <div class="stat-item stat-note"><div class="stat-number">5</div><div class="stat-label">🟢 留意</div></div>
+    <div class="stat-item stat-platform"><div class="stat-number">9</div><div class="stat-label">涉事平台/机构</div></div>
   </div>
 
   <!-- ==================== 近期合规提醒条 ==================== -->
@@ -262,66 +246,42 @@
   <div class="section-label section-urgent">🔴 紧急 · 需立即行动</div>
 
   <div class="policy-card card-urgent">
-    <div class="card-top">
-      <span class="platform-tag tag-tax">中国税务</span>
-      <span class="urgency-badge">🔴 紧急</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-tax">中国税务</span><span class="urgency-badge">🔴 紧急</span></div>
     <div class="card-title">深圳税务新一轮严查 · 多地卖家被倒查3-5年 · 多店群数据合并核查即将落地<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>亚马逊再次群发Q4税务报表，深圳多地卖家收到《风险事项调查通知书》5天内须提供销售记录、银行流水等；部分卖家被倒查3-5年；深圳税局发布多店群经营主体统计表为合并核查做准备</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>亚马逊再次群发Q4税务报表，深圳多地卖家收到《风险事项调查通知书》5天内须提供销售记录、银行流水等；部分卖家被倒查3-5年，东莞/义乌/合肥等地卖家也接到核查电话；深圳税局发布多店群经营主体统计表为合并核查做准备</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有跨境电商企业，深圳/东莞/义乌重镇卖家风险最高</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>持续执行中</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>立即完成税务自查主动补缴差额，杜绝私户收款和账外经营</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>立即完成税务自查主动补缴差额，杜绝私户收款和账外经营，确保平台数据与申报数据一致</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">金税四期已彻底打通海关出口数据、跨境平台流水、第三方支付数据的多方交叉核验。大卖因隐匿收入超1.2亿被追缴+罚款+刑事处罚。网传"核定征收2%-4%"系片面解读，目前无全国统一公开落地文件。"多开店、少报税"逻辑即将彻底失效。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="http://m.163.com/news/article/KSTDODO40538AT1N.html" target="_blank">AMZ123/网易 → 163.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">金税四期已彻底打通海关出口数据、跨境平台流水、第三方支付数据的多方交叉核验。大卖因隐匿收入超1.2亿被追缴+罚款+刑事处罚。网传"核定征收2%-4%"系片面解读国税总局2019年36号公告，目前无全国统一公开落地文件。"多开店、少报税"避税逻辑即将彻底失效。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="http://m.163.com/news/article/KSTDODO40538AT1N.html" target="_blank">AMZ123/网易 → 163.com</a></div>
   </div>
 
   <div class="policy-card card-urgent">
-    <div class="card-top">
-      <span class="platform-tag tag-temu">TEMU</span>
-      <span class="urgency-badge">🔴 紧急</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-temu">TEMU</span><span class="urgency-badge">🔴 紧急</span></div>
     <div class="card-title">德国站包装法合规今日截止 · 未上传LUCID注册号将禁售<span class="new-tag">NEW</span></div>
     <div class="card-summary">
       <div class="summary-item"><span class="summary-label">变了什么：</span>所有德国站卖家须在5月15日前上传2025年度二元回收系统缴费凭证及LUCID注册号，否则商品禁售</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>TEMU德国站所有卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年5月15日（今日截止！）</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>立即上传LUCID注册号和缴费凭证，未完成将面临禁售+最高20万欧元罚款</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>立即上传LUCID注册号和缴费凭证，未完成将面临商品禁售+最高20万欧元罚款</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">德国包装法（VerpackG）要求所有向德国消费者销售包装商品的生产者必须在LUCID系统注册并缴纳回收费用。2025年有销售记录的卖家必须提交注册号+缴费凭证。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="https://m.sohu.com/a/1020272610_121007204/" target="_blank">至美通研究院 → sohu.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">德国包装法（VerpackG）要求所有向德国消费者销售包装商品的生产者必须在LUCID系统注册并缴纳回收费用。TEMU平台加强合规管控，2025年有销售记录的卖家必须提交注册号+缴费凭证。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="https://m.sohu.com/a/1020272610_121007204/" target="_blank">至美通研究院 → sohu.com</a></div>
   </div>
 
   <div class="policy-card card-urgent">
-    <div class="card-top">
-      <span class="platform-tag tag-brazil">巴西</span>
-      <span class="urgency-badge">🔴 紧急</span>
-    </div>
+    <div class="card-top"><span class="platform-tag tag-brazil">巴西</span><span class="urgency-badge">🔴 紧急</span></div>
     <div class="card-title">取消50美元以下跨境商品20%联邦进口税 · 已生效 · 120天黄金窗口期<span class="new-tag">NEW</span></div>
     <div class="card-summary">
       <div class="summary-item"><span class="summary-label">变了什么：</span>巴西总统卢拉签署行政令取消50美元以下跨境网购20%联邦进口税，综合税负从约44.5%降至约20.4%</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有面向巴西市场的跨境电商卖家（亚马逊/Shopee/速卖通/Temu/Shein等均受益）</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年5月13日已生效，临时法令有效期120天需国会批准转永久</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>抓住120天红利期！立即调整20-50美元价格带产品定价，重点布局服装/家居/3C/美妆</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>抓住120天红利期！立即调整20-50美元价格带产品定价，重点布局服装/家居/3C/美妆，继续通过"合规寄递计划"发货保持绿色清关</div>
     </div>
-    <div class="card-background">
-      <div class="bg-title">📋 政策背景</div>
-      <div class="bg-text">以45美元商品为例：到手价从65.03降至54.18美元（直降10.85美元）。TikTok Shop巴西站爆发式增长：上线首月约100万美元→3个月后5000万美元→2026年1月单月1817万单。"Remessa Conforme"体系仍继续运行。</div>
-    </div>
-    <div class="card-source">
-      <span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7639624102679937599/" target="_blank">跨境派 → toutiao.com</a> · <a href="http://m.toutiao.com/group/7639692811842945536/" target="_blank">亿迈跨境 → toutiao.com</a>
-    </div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">以45美元商品为例：到手价从65.03降至54.18美元（直降10.85美元）。TikTok Shop巴西站爆发式增长：上线首月约100万美元→3个月后5000万美元→2026年1月单月1817万单。"Remessa Conforme"体系仍继续运行。10个州ICMS流转税仍需缴纳（17%-20%）。</div></div>
+    <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7639624102679937599/" target="_blank">跨境派 → toutiao.com</a> · <a href="http://m.toutiao.com/group/7639692811842945536/" target="_blank">亿迈跨境 → toutiao.com</a></div>
   </div>
 
   <!-- ==================== 🟡 关注政策 ==================== -->
@@ -334,9 +294,9 @@
       <div class="summary-item"><span class="summary-label">变了什么：</span>所有成功付款订单交易手续费从5.0%上调至6.0%</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>TikTok Shop越南跨境店卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年5月9日（已生效）</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>及时评估运营成本调整利润预期</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>及时评估运营成本调整利润预期，薄利类目需重新核算</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">越南站手续费上调1个百分点，叠加物流和运营成本，薄利类目可能直接无利润空间。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">越南站手续费上调1个百分点，叠加物流和运营成本，薄利类目可能直接无利润空间。建议选择PingPong等本地币种收款工具避免汇损。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.chwang.com/tiktokshop" target="_blank">出海网 → chwang.com</a></div>
   </div>
 
@@ -344,12 +304,12 @@
     <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">泰国水果类目保证金6月11日全面执行 · 未缴纳将限制提现</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>5月11日起逐步实施水果类目保证金新规，6月11日正式全面执行；现有卖家须6月11日前完成缴纳</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>5月11日起逐步实施水果类目保证金新规，6月11日正式全面执行；新卖家须先认证+缴保证金方可上架，现有卖家须6月11日前完成缴纳</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>TikTok Shop泰国站水果类目卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>6月11日正式执行</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>在售水果卖家6月11日前完成保证金缴纳</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>在售水果卖家6月11日前完成保证金缴纳，不愿缴纳须在截止日前下架所有水果商品</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">保证金仅用于商品质量问题的买家退款赔付，停售或更换品类时可正常申请提现。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">保证金仅用于商品质量问题的买家退款赔付，停售或更换品类时可正常申请提现。此举措旨在提升服务品质与农产品贸易交易信心。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.chwang.com/tiktokshop" target="_blank">出海网 → chwang.com</a></div>
   </div>
 
@@ -357,12 +317,12 @@
     <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">菲律宾本土店增设商家成长服务费 · 合规商家享0%返现</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>按类目差异化收取"商家成长服务费"：电子/生鲜/生活类1%，美妆/时尚/母婴/健康类1.5%</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>按类目差异化收取"商家成长服务费"：电子/生鲜/生活类1%，美妆/时尚/母婴/健康类1.5%；合规商家服务费可从2%降至0%</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>TikTok Shop菲律宾本土店卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年4月27日已生效</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>确保店铺体验分≥2.8、违规扣分&lt;36以享受返现权益</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">平台首期措施为符合条件的商家提供服务费从2%下调至0%的返现奖励，全年将陆续推出更多补贴政策。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">平台称全年将陆续推出更多补贴政策与扶持资源，首期措施为符合条件的商家提供服务费从2%下调至0%的返现奖励。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.chwang.com/tiktokshop" target="_blank">出海网 → chwang.com</a></div>
   </div>
 
@@ -370,10 +330,10 @@
     <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">东南亚"账号健康分"7月全面取代违规分 · 5月起可预览</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>推出全新店铺合规评估指标"账号健康分"(AHR)，7月正式取代违规分体系</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>推出全新店铺合规评估指标"账号健康分"(AHR)，采用更清晰计分标准，7月正式取代违规分体系</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>TikTok Shop东南亚跨境全站点卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>5月起预览，7月正式执行</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>5月起提前预览健康分，了解各类经营行为对评分影响</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>5月起提前预览健康分，了解各类经营行为对评分影响并调整运营策略</div>
     </div>
     <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">AHR功能与现行违规分机制一致但采用更清晰的计分标准，能更直观反映店铺合规状况与整体健康度。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.chwang.com/tiktokshop" target="_blank">出海网 → chwang.com</a></div>
@@ -381,14 +341,14 @@
 
   <div class="policy-card card-watch">
     <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge">🟡 关注</span></div>
-    <div class="card-title">印尼站5月1日起开征物流服务费</div>
+    <div class="card-title">印尼站5月1日起开征物流服务费 · TikTok Shop/同步执行</div>
     <div class="card-summary">
       <div class="summary-item"><span class="summary-label">变了什么：</span>按买家实际支付运费比例计算物流服务费，TikTok Shop单笔上限5055印尼盾，Tokopedia上限10110印尼盾</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>TikTok Shop印尼站卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年5月1日（已生效）</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>将物流服务费纳入成本核算</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>将物流服务费纳入成本核算，偏远地区实际配送成本可能超出限额</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">半年内第二次收费调整（2025年8月起已收1250印尼盾/单处理费）。费用由卖家承担，不会在买家结账时显示。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">这是半年内第二次收费调整（2025年8月起已收1250印尼盾/单处理费）。费用由卖家承担，不会在买家结账时显示。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.chwang.com/tiktokshop" target="_blank">出海网 → chwang.com</a></div>
   </div>
 
@@ -396,12 +356,12 @@
     <div class="card-top"><span class="platform-tag tag-customs">美国海关</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">首批关税退款354.6亿美元已到账 · 沃尔玛预计获100亿<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>美国CBP宣布首批IEEPA关税退款已到账，已处理约354.6亿美元（含利息）；约15%申请被驳回</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>美国CBP宣布首批IEEPA关税退款已到账，已处理约354.6亿美元（含利息）；沃尔玛预计获100亿，塔吉特约20亿</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>作为进口商(IOR)的跨境企业</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>已到账</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>确认自身是否为IOR、报关单是否涉及IEEPA关税、是否在80天窗口期内</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>确认自身是否为IOR、报关单是否涉及IEEPA关税、是否在80天窗口期内；DDP模式出口商可申请，FOB/CIF模式需与美方协商</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">退款针对被裁定非法的IEEPA关税。CAPE系统已上线支持批量退税，60-90天完成。DDP模式出口商可申请，FOB/CIF模式需与美方协商分享。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">退款针对被裁定非法的IEEPA关税。CAPE系统已上线支持批量退税，60-90天完成。约15%申请被驳回（信息不准确或不符合条件）。UPS/FedEx/DHL表示受影响包裹将直接退款给客户。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.163.com/dy/article/KSTMVNKR0556D2EH.html" target="_blank">网易 → 163.com</a></div>
   </div>
 
@@ -412,9 +372,9 @@
       <div class="summary-item"><span class="summary-label">变了什么：</span>意大利税务局对非欧盟卖家VAT税号大规模清查，大量税号批量失效；未满足5万欧元财务担保+指定合规财税代表两项硬性要求</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>意大利站所有非欧盟跨境卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>持续执行中</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>验证财税代表是否在意大利税务局注册，合作完成5万欧元财务担保提交</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>验证财税代表是否在意大利税务局注册，合作完成5万欧元财务担保提交，定期在VIES平台检查VAT税号有效性</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">税号失效引发连锁反应：新货件无法入仓、泛欧配送链路断裂。恢复税号需"更换财税代表+办理担保+海牙认证"，审批2-6个月。过渡期可借助EFN+OSS维持销售。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">税号失效引发连锁反应：新货件无法入仓、泛欧配送链路断裂、库存面临强制移仓。恢复税号需"更换财税代表+办理担保+海牙认证"，审批2-6个月。过渡期可借助EFN+OSS从其他欧盟国发货维持销售。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.chwang.com/europe" target="_blank">出海网 → chwang.com</a></div>
   </div>
 
@@ -422,12 +382,12 @@
     <div class="card-top"><span class="platform-tag tag-shopee">Shopee</span><span class="urgency-badge">🟡 关注</span></div>
     <div class="card-title">印尼站上调物流服务费及佣金 · 综合成本最高约12.5%</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>5月2日起调整XTRA免运费计划按商品尺寸分级收费；时尚类常规尺寸佣金5.5%→7.5%</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>5月2日起调整XTRA免运费计划，按商品尺寸分级收费；时尚类常规尺寸佣金5.5%→7.5%，特殊尺寸综合成本最高约12.5%</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>Shopee印尼站卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年5月2日（已生效）</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>重新核算各品类成本结构</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>重新核算各品类成本结构，特别是时尚类和特殊尺寸商品</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">时尚类常规尺寸免运费服务费1.5%→2%、佣金5.5%→7.5%；特殊尺寸服务费3.5%、佣金9%。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">时尚类常规尺寸免运费服务费从1.5%上调至2%、佣金从5.5%涨至7.5%；特殊尺寸服务费3.5%、佣金9%。电子、快消、生活类目同步执行尺寸分级。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://m.sohu.com/a/1020272610_121007204/" target="_blank">至美通研究院 → sohu.com</a></div>
   </div>
 
@@ -438,7 +398,7 @@
       <div class="summary-item"><span class="summary-label">变了什么：</span>新《海商法》规定目的港无人提货产生的费用与风险由托运人承担</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有跨境出口企业</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年5月1日（已生效）</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>弃货止损旧路径已堵死，需更加谨慎处理滞销库存</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>弃货止损旧路径已堵死，需更加谨慎处理滞销库存，避免目的港弃货</div>
     </div>
     <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">新法意味着卖家的单笔交易风险敞口被急剧放大，中小卖家在信息不对称、议价能力弱的贸易结构中极易成为费用追偿的被动承担方。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://m.sohu.com/a/1020272610_121007204/" target="_blank">至美通研究院 → sohu.com</a></div>
@@ -453,7 +413,7 @@
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年6月22日</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>将新增0.16%费用纳入成本核算</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">该费用最早2021年6月推出费率0.25%，2023年7月上调至0.32%，此次再调至0.48%。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">该费用最早于2021年6月推出费率0.25%，2023年7月上调至0.32%，此次再调至0.48%。计算基数包括商品标价、运费及礼品包装等额外费用。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.chwang.com/europe" target="_blank">出海网 → chwang.com</a></div>
   </div>
 
@@ -464,12 +424,12 @@
     <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge">🟢 留意</span></div>
     <div class="card-title">6月1日欧洲三站上线（波兰/荷兰/比利时）· 入驻标准已放宽<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>TikTok Shop将于6月1日在波兰、荷兰、比利时正式上线，入驻标准已放宽</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>TikTok Shop将于6月1日在波兰、荷兰、比利时正式上线，欧洲五国入驻标准已放宽（第三方平台运营经验从必填改为选填）</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>有意拓展欧洲市场的跨境卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年6月1日</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>提前准备多币种收款和欧洲合规（VAT/EPR）</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>提前准备多币种收款和欧洲合规（VAT/EPR），关注PingPong等官方合作收款工具</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">新站点意味着新流量和新增长点，但需面对多币种收款、本地合规、资金周转效率等挑战。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">新站点意味着新流量和新增长点，但需面对多币种收款、本地合规、资金周转效率等挑战。PingPong是TikTok Shop全站点官方合作收款伙伴。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.163.com/dy/article/KSQLLE3V0556M0N5.html" target="_blank">跨境情报局 → 163.com</a></div>
   </div>
 
@@ -477,12 +437,12 @@
     <div class="card-top"><span class="platform-tag tag-brazil">巴西</span><span class="urgency-badge">🟢 留意</span></div>
     <div class="card-title">欧盟-南共市协定5月1日临时实施 · 巴西82.7%对欧出口可免税进入</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>欧盟与南方共同市场协定临时实施，欧盟对54.3%相关产品立即零关税</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>欧盟与南方共同市场协定临时实施，欧盟对54.3%相关产品立即零关税，巴西82.7%对欧出口可免税进入</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>面向巴西/南美市场的出口企业</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年5月1日（已生效）</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>关注协定项下关税减免品类机会</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>关注协定项下关税减免品类机会，评估巴西市场布局可行性</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">巴西国会已完成批准。巴西市场准入从8%提升至36%。叠加巴西取消50美元以下联邦进口税，巴西市场迎来双重利好。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">巴西国会已完成批准。协定生效后巴西市场准入从8%提升至36%，巴方将逐步下调关税。叠加巴西取消50美元以下联邦进口税，巴西市场迎来双重利好。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://m.sohu.com/a/1020272610_121007204/" target="_blank">至美通研究院 → sohu.com</a></div>
   </div>
 
@@ -493,9 +453,9 @@
       <div class="summary-item"><span class="summary-label">变了什么：</span>亚马逊全面开放"供应链服务"不再限于平台卖家，宝洁、3M等大企业入场将分流仓储配送资源</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有FBA卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>已生效</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>关注旺季爆仓风险维持IPI高分，多渠道卖家可利用统一入仓降低成本</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>关注旺季爆仓风险维持IPI高分避免库存限制，多渠道卖家可利用统一入仓降低成本</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">大企业入场将分流FBA仓储和配送资源，旺季爆仓可能更严重；亚马逊获得外部大客户增量收入后议价权增强。利好：多渠道卖家可将全渠道库存统一入仓。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">大企业入场将分流FBA仓储和配送资源，旺季爆仓可能更严重；亚马逊获得外部大客户增量收入后议价权增强，未来上调FBA物流费用动力加大。利好：多渠道卖家可将全渠道库存统一入仓，共用同一批库存履约亚马逊/独立站/Shopify订单。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.chwang.com/section/amazon_latest" target="_blank">出海网 → chwang.com</a></div>
   </div>
 
@@ -503,12 +463,12 @@
     <div class="card-top"><span class="platform-tag tag-customs">中国海关</span><span class="urgency-badge">🟢 留意</span></div>
     <div class="card-title">威海全国首个跨境电商"前置监管仓"落地 · 通关时间压缩3小时+</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>青岛海关创新推出"先查验后装运"模式，监管嵌入企业仓库；通关时间压缩3小时以上</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>青岛海关创新推出"先查验后装运"模式，监管嵌入企业仓库；通关时间压缩3小时以上，30%出口商品可提前一天发运</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>对韩跨境电商出口企业</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>2026年3月已落地</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>威海跨境电商卖家可利用新模式提升通关效率降低物流成本</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">运行首月监管64万票。韩国消费者每日14时前下单可实现当日登船、次日抵韩。预计全年带动出口增收30亿元。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">运行首月监管跨境电商零售出口商品64万票。韩国消费者每日14时前下单可实现当日登船、次日抵韩。预计全年带动威海跨境电商出口增收30亿元。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="http://tianjin.customs.gov.cn/qingdao_customs/406496/406497/7153281/index.html" target="_blank">青岛海关 → customs.gov.cn</a></div>
   </div>
 
@@ -521,27 +481,22 @@
       <div class="summary-item"><span class="summary-label">何时生效：</span>5月13日-19日（进行中）</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>参与促销获取流量，关注竞品价格动态</div>
     </div>
-    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">Amazon Fresh食品杂货最高可享20%折扣。97%英国消费者将"高性价比"视为网购最重要因素。</div></div>
+    <div class="card-background"><div class="bg-title">📋 政策背景</div><div class="bg-text">Amazon Fresh食品杂货最高可享20%折扣。97%英国消费者将"高性价比"视为网购最重要因素，84%会因折扣影响购买决策。</div></div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.chwang.com/section/amazon_latest" target="_blank">出海网 → chwang.com</a></div>
   </div>
 
-  <!-- ==================== 历史归档 ==================== -->
-  <div class="archive-section">
-    <div class="archive-title">📂 历史归档</div>
-    <ul class="archive-list">
-      <li><a href="./daily/20260515.html"><span class="archive-date">5月15日（周五）<span class="new-badge">NEW</span></span><span class="archive-meta"><span class="count">18条</span>政策</span></a></li>
-      <li><a href="./daily/20260514.html"><span class="archive-date">5月14日（周四）</span><span class="archive-meta"><span class="count">18条</span>政策</span></a></li>
-      <li><a href="./daily/20260513.html"><span class="archive-date">5月13日（周三）</span><span class="archive-meta"><span class="count">10条</span>政策</span></a></li>
-      <li><a href="./daily/20260512.html"><span class="archive-date">5月12日（周二）</span><span class="archive-meta"><span class="count">10条</span>政策</span></a></li>
-      <li><a href="./daily/20260511.html"><span class="archive-date">5月11日（周一）</span><span class="archive-meta"><span class="count">8条</span>政策</span></a></li>
-    </ul>
+  <!-- ==================== 底部导航 ==================== -->
+  <div class="nav-bar">
+    <a href="../index.html">← 返回首页</a>
+    <span class="nav-center">5月15日</span>
+    <a href="./20260514.html" class="nav-arrow">← 前一天</a>
   </div>
 
   <!-- ==================== 页脚 ==================== -->
   <div class="page-footer">
     <div class="footer-divider"></div>
     <div>📊 数据来源：亚马逊/TikTok Shop/Shopee官方公告、至美通、亿邦动力、AMZ123、出海网、人民网等</div>
-    <div>🔄 每日14:00自动更新 · 近24小时跨境政策变化</div>
+    <div>🔄 每日14:00更新 · 近24小时跨境政策变化</div>
     <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI · 纯静态HTML零JS</div>
   </div>
 
