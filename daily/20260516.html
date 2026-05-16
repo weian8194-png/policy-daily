@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 | 2026年5月16日</title>
+  <style>
+    /* ========== 全局重置与基础样式 ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== 页面容器 ========== */
+    .page-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    /* ========== 顶部标题区 ========== */
+    .page-header {
+      text-align: center;
+      padding: 32px 20px 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .page-header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .page-header .meta {
+      font-size: 14px;
+      color: #6b7280;
+    }
+    .page-header .meta .date {
+      font-weight: 600;
+      color: #374151;
+    }
+    .page-header .meta .update-hint {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 12px;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-left: 8px;
+      font-weight: 500;
+    }
+
+    /* ========== 导航栏 ========== */
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 10px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      font-size: 14px;
+    }
+    .nav-bar a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center {
+      font-weight: 700;
+      color: #111827;
+      font-size: 15px;
+    }
+    .nav-bar .nav-arrow {
+      font-size: 16px;
+    }
+    .nav-bar .nav-disabled {
+      color: #d1d5db;
+      pointer-events: none;
+      font-weight: 400;
+    }
+
+    /* ========== 统计概览条 ========== */
+    .stats-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      flex: 1;
+      min-width: 100px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 14px 16px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-urgent .stat-number { color: #dc2626; }
+    .stat-watch .stat-number { color: #f59e0b; }
+    .stat-note .stat-number { color: #16a34a; }
+    .stat-platform .stat-number { color: #2563eb; }
+
+    /* ========== 合规提醒条 ========== */
+    .compliance-banner {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-left: 4px solid #dc2626;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+    }
+    .compliance-banner .banner-title { font-size: 14px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .compliance-banner ul { list-style: none; padding: 0; }
+    .compliance-banner li { font-size: 13px; color: #7f1d1d; padding: 3px 0; padding-left: 16px; position: relative; }
+    .compliance-banner li::before { content: "\26A0"; position: absolute; left: 0; font-size: 11px; }
+    .compliance-banner li .date-tag { font-weight: 700; color: #991b1b; }
+
+    /* ========== 政策卡片通用样式 ========== */
+    .policy-card {
+      background: #ffffff;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+    .card-urgent { border-left: 4px solid #dc2626; }
+    .card-watch  { border-left: 4px solid #f59e0b; }
+    .card-note   { border-left: 4px solid #16a34a; }
+
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .platform-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-amazon  { background: #FF9900; }
+    .tag-tiktok  { background: #000000; }
+    .tag-walmart { background: #0071DC; }
+    .tag-customs { background: #dc2626; }
+    .tag-eu      { background: #003399; }
+    .tag-shopee  { background: #EE4D2D; }
+    .tag-brazil  { background: #059669; }
+    .tag-tax     { background: #7c3aed; }
+    .tag-temu    { background: #E85D2C; }
+    .tag-indonesia { background: #dc2626; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+
+    .card-summary { background: #eff6ff; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #1e40af; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #1e3a8a; margin-right: 4px; }
+
+    .card-background { background: #fffbeb; border-radius: 6px; margin: 0 18px 12px; padding: 12px 14px; }
+    .card-background .bg-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .card-background .bg-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+
+    .card-source { padding: 10px 18px 14px; border-top: 1px solid #f3f4f6; }
+    .card-source .source-label { font-size: 12px; color: #9ca3af; }
+    .card-source a { font-size: 12px; color: #2563eb; text-decoration: none; word-break: break-all; }
+    .card-source a:hover { text-decoration: underline; }
+
+    /* ========== 分隔标题 ========== */
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-urgent { color: #dc2626; }
+    .section-watch  { color: #f59e0b; }
+    .section-note   { color: #16a34a; }
+
+    .new-tag { display: inline-block; font-size: 10px; background: #dc2626; color: #fff; padding: 1px 5px; border-radius: 3px; margin-left: 6px; vertical-align: middle; font-weight: 600; }
+
+    /* ========== 页脚 ========== */
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #e5e7eb; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #2563eb; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    /* ========== 响应式 ========== */
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- ==================== 顶部标题区 ==================== -->
+  <div class="page-header">
+    <h1>🌊 跨境出海政策日报</h1>
+    <div class="meta">
+      <span class="date">2026年5月16日（周六）</span>
+      <span class="update-hint">09:00 更新</span>
+    </div>
+  </div>
+
+  <!-- ==================== 导航栏 ==================== -->
+  <div class="nav-bar">
+    <a href="../index.html">← 返回首页</a>
+    <span class="nav-center">5月16日</span>
+    <a href="./20260515.html" class="nav-arrow">← 前一天</a>
+  </div>
+
+  <!-- ==================== 统计概览条 ==================== -->
+  <div class="stats-bar">
+    <div class="stat-item stat-urgent"><div class="stat-number">3</div><div class="stat-label">🔴 紧急</div></div>
+    <div class="stat-item stat-watch"><div class="stat-number">7</div><div class="stat-label">🟡 关注</div></div>
+    <div class="stat-item stat-note"><div class="stat-number">4</div><div class="stat-label">🟢 留意</div></div>
+    <div class="stat-item stat-platform"><div class="stat-number">8</div><div class="stat-label">涉事平台/机构</div></div>
+  </div>
+
+  <!-- ==================== 近期合规提醒条 ==================== -->
+  <div class="compliance-banner">
+    <div class="banner-title">⚡ 近期关键时间节点</div>
+    <ul>
+      <li><span class="date-tag">5月18日</span> 亚马逊参考价/划线价新规生效（后天！）</li>
+      <li><span class="date-tag">5月18日</span> 国新办发布会介绍离境退税优化措施</li>
+      <li><span class="date-tag">5月24日</span> Prime Day价格静默期开始</li>
+      <li><span class="date-tag">5月25日</span> 美国站FBA入仓截止</li>
+      <li><span class="date-tag">5月27日</span> 欧洲站FBA入仓截止</li>
+      <li><span class="date-tag">6月16-17日</span> Prime Day正式开跑</li>
+      <li><span class="date-tag">6月30日</span> 欧洲站COO原产国信息截止填报</li>
+      <li><span class="date-tag">7月1日</span> 欧盟€3/类小包关税+20%VAT生效</li>
+      <li><span class="date-tag">8月12日</span> 欧盟PPWR包装法生效</li>
+    </ul>
+  </div>
+
+  <!-- ==================== 🔴 紧急 ==================== -->
+  <div class="section-label section-urgent">🔴 紧急</div>
+
+  <!-- Card 1 -->
+  <div class="policy-card card-urgent">
+    <div class="card-top">
+      <span class="platform-tag tag-amazon">亚马逊</span>
+      <span class="urgency-badge">🔴 紧急</span>
+    </div>
+    <div class="card-title">参考价/划线价新规后天(5/18)生效，长期促销将拉低常规价基准<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>若商品90天内实际售价低于非促销中位价的天数超45天，促销价/优惠券价/Deal价将纳入常规价格(Was Price)计算</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>长期低价冲量拉低划线价，秒杀/BD提报门槛提高，虚高List Price无法通过验证</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>2026年5月18日（美/欧/日站同步）</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>①严控90天内促销天数≤45天 ②做实List Price验证 ③提报前核查最高促销限价</div>
+    </div>
+    <div class="card-background">
+      <div class="bg-title">背景与深度解读</div>
+      <div class="bg-text">新规核心打击"虚高定价+大幅打折"策略。以日常$29.99但90天有50天跑$24.99优惠券为例：旧规Was Price维持$29.99，新规系统直接认定$24.99为常规基准价，秒杀需再低15%即$21.24，若成本$22则报不了。新品低价促销超45天也会被固化。前台Rufus AI同时展示90天价格曲线，买家可辨别真假降价。建议每月只做一次秒杀，保留充足冷静期。</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://m.sohu.com/a/1023048058_609544/" target="_blank">易仓ERP/搜狐</a> · 
+      <a href="https://m.mjzj.com/article/fm3f4x0pk54w" target="_blank">卖家之家/妙手智库</a>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="policy-card card-urgent">
+    <div class="card-top">
+      <span class="platform-tag tag-indonesia">印尼政府</span>
+      <span class="urgency-badge">🔴 紧急</span>
+    </div>
+    <div class="card-title">印尼政府紧急叫停电商平台上调费用，TikTok Shop动态佣金被拦<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>印尼中小微企业部长5月15日宣布暂停所有电商平台服务费上调，直至新政府法规出台</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>TikTok Shop原计划5月18日推行动态佣金（最高从4万→65万印尼盾），被紧急叫停；Shopee等同样受限</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月15日已生效（临时禁令）</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>印尼站卖家短期费率稳定，但长期仍有上调预期；0.5%电商税实施时间仍存变数</div>
+    </div>
+    <div class="card-background">
+      <div class="bg-title">背景</div>
+      <div class="bg-text">印尼大量中小企业投诉电商平台佣金和物流成本持续上涨。TikTok Shop动态佣金模式引发最大争议，同时推出退货费（买家偏好退货最高5000印尼盾/单）。政府正制定全面法律框架，同时计划修订2023年第31号贸易部长条例，强化本土商品扶持和费用透明化。</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://teknowarta.com/government-bans-e-commerce-platforms-from-raising-seller-fees/" target="_blank">TeknoWarta</a> · 
+      <a href="https://jakartaglobe.id/business/rising-seller-fees-mark-new-phase-for-indonesias-ecommerce-industry" target="_blank">Jakarta Globe</a>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="policy-card card-urgent">
+    <div class="card-top">
+      <span class="platform-tag tag-customs">美国海关</span>
+      <span class="urgency-badge">🔴 紧急</span>
+    </div>
+    <div class="card-title">美国T86免税通道已关闭，直邮小包成本上涨25%-35%</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>美国正式取消800美元小额包裹免税政策，征30%或$25/件（6月后$50/件）</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>直邮清关成本上涨25%-35%，低价商品利润被严重压缩</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月2日已生效</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>停止直邮小包，全面切海外仓；重算单件综合成本</div>
+    </div>
+    <div class="card-background">
+      <div class="bg-title">背景</div>
+      <div class="bg-text">TEMU已于5月3日停止中国直发美国，全面转向本土仓与本地卖家履约。小包直邮模式已不可行，海外仓成为美区卖家的唯一出路。同时，亚马逊供应链服务(ASCS)已向非平台卖家开放，可考虑利用其FBA/MCF能力。</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://m.weibo.cn/detail/5298758607962422" target="_blank">跨境前沿/微博</a>
+    </div>
+  </div>
+
+  <!-- ==================== 🟡 关注 ==================== -->
+  <div class="section-label section-watch">🟡 关注</div>
+
+  <!-- Card 4 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-tiktok">TikTok Shop</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">爱尔兰站从邀请制转为全面开放<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>5月15日起爱尔兰站所有企业均可入驻，不再需要邀请</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>爱尔兰市场新入口，联盟创作者增长600%</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月15日</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>爱尔兰品牌可入驻，46-61岁人群占最大消费比例(37%)</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://irishcountrymagazine.ie/tiktok-shop-announces-new-open-access-model-for-irish-businesses/" target="_blank">Irish Country Magazine</a>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-temu">拼多多/Temu</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">拼多多因"幽灵外卖"案被罚15.22亿元，系电商食品安全最高罚单<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>国家市场监管总局4月17日对拼多多开出15.22亿元天价罚单</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>Temu母公司声誉承压；拼多多被暂停新增非预包装蛋糕店铺9个月</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>4月17日已处罚</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>Temu卖家注意平台合规风险，同时关注Temu与SHEIN版权诉讼进展</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="http://m.toutiao.com/group/7640253230206681627/" target="_blank">跨境大发哥/头条</a>
+    </div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-amazon">亚马逊</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">Vine评论大清洗：AI精准锁定灰色产业链，卖家存"连坐"风险<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>5月上旬亚马逊对Vine评论者账号进行史上最大规模清洗，欧洲站重灾区</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>AI通过内容相似度/留评频率/IP聚类精准锁定；卖家可能被"连坐"追查</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月上旬已执行</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>立即停止定制化Vine操作，排查历史ASIN风险，监控前台Vine绿标动态</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://m.mjzj.com/article/fm4c7va09vk0" target="_blank">丝路猫申诉/卖家之家</a>
+    </div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-amazon">亚马逊</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">擅自开通多国站点并自动扣费，客服称后续还会追加<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>亚马逊擅自为卖家账号自动开通巴西/加拿大/墨西哥等站点，未提前通知即扣订阅费</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>卖家误触新站点设为"非停用"即被扣费；客服透露后续继续追加</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>持续发生中</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>立即检查后台站点状态，关闭非主营站点，排查近期扣费记录</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://m.chwang.com/amazon/latest" target="_blank">出海网</a>
+    </div>
+  </div>
+
+  <!-- Card 8 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-amazon">亚马逊</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">Prime Day定档6月16-17日，LD报名费从$150涨至$750（涨4.5倍）</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>LD秒杀报名费$150→$750；7DD/DOTD费涨20%-30%；入仓截止提前两周</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>活动报名决策逻辑改变——报得多不再是优势，算得清才是核心</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>6月16-17日开跑，FBA入仓截止5/25(美)/5/27(欧)</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>重新核算活动ROI，聚焦利润款；预热期不开大额Coupon避免拉低30天最低价</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://m.mjzj.com/article/flxcv27bauio" target="_blank">优麦云/卖家之家</a>
+    </div>
+  </div>
+
+  <!-- Card 9 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-amazon">亚马逊</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">全球活跃卖家减少16%，单卖家平均流量增长25%<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>Marketplace Pulse数据：过去一年全球活跃卖家降至不足156万，但单卖家月访问量达3544次</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>存活卖家流量更集中，市场向大卖家加速集中；美国50%第三方GMV由不足8000卖家贡献</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>2026年5月报告</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>聚焦产品力与品牌壁垒，深耕单点突破，避免盲目铺货</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://m.mjzj.com/article/fm3mbbvsxudc" target="_blank">卖家之家/Marketplace Pulse</a>
+    </div>
+  </div>
+
+  <!-- Card 10 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-tiktok">TikTok Shop</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">菲律宾加强消费者保护，与IPOPHL合作打假<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>TikTok Shop菲律宾与知识产权局(IPOPHL)及贸工部(DTI)合作，强化打假</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>2025上半年拒绝140万卖家注册，屏蔽7000万+假冒商品；AI辅助检测可疑Listing</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月15日宣布</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>菲律宾站卖家注意IP合规，确保商标注册和授权齐全</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://insiderph.com/tiktok-shop-strengthens-consumer-protection-drive" target="_blank">InsiderPH</a>
+    </div>
+  </div>
+
+  <!-- ==================== 🟢 留意 ==================== -->
+  <div class="section-label section-note">🟢 留意</div>
+
+  <!-- Card 11 -->
+  <div class="policy-card card-note">
+    <div class="card-top">
+      <span class="platform-tag tag-brazil">巴西</span>
+      <span class="urgency-badge">🟢 留意</span>
+    </div>
+    <div class="card-title">恢复50美元以下跨境包裹进口税豁免，买家到手价降低约16%<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>巴西总统卢拉签署行政令，终止2024年推出的"衬衫税"，50美元以内不再征20%联邦进口税</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>以$45商品为例，买家税费从$20.03降至$9.18，到手价从$65.03降至$54.18</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月14日立即生效</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>巴西站低价商品税负降低，利好小件出海；Remessa Conforme体系仍继续运行</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="http://www.100ec.cn/detail--6659249.html" target="_blank">网经社</a>
+    </div>
+  </div>
+
+  <!-- Card 12 -->
+  <div class="policy-card card-note">
+    <div class="card-top">
+      <span class="platform-tag tag-customs">中国海关/税务</span>
+      <span class="urgency-badge">🟢 留意</span>
+    </div>
+    <div class="card-title">出口退运免税延续至2027年底+跨关区退货全国通办，逆向物流成本降30%</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>跨境电商4类监管代码出口(1210/9610/9710/9810)，6个月内原状退运免进口税；5月新增跨关区退货通办</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>退货不再回原出口港，全国任一口岸就近入境；时效45天→15天，成本降60%</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>执行中(2026.1.1-2027.12.31)</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>海外滞销库存4个月内启动退运，出口时标注正确监管代码，保留原包装/标签/照片</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="http://m.toutiao.com/group/7639944678489506339/" target="_blank">头条/双双麻麻</a>
+    </div>
+  </div>
+
+  <!-- Card 13 -->
+  <div class="policy-card card-note">
+    <div class="card-top">
+      <span class="platform-tag tag-tiktok">TikTok Shop</span>
+      <span class="urgency-badge">🟢 留意</span>
+    </div>
+    <div class="card-title">东南亚物流运费价格表更新，马来西亚费率调整<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>TikTok Shop东南亚跨境物流运费价格表更新，主要调整马来西亚市场费率</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>马来西亚站卖家物流成本变化</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月15日</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>马来西亚站卖家重新核算物流成本及利润空间</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="http://m.toutiao.com/group/7640253230206681627/" target="_blank">跨境大发哥/头条</a>
+    </div>
+  </div>
+
+  <!-- Card 14 -->
+  <div class="policy-card card-note">
+    <div class="card-top">
+      <span class="platform-tag tag-tax">中国政府</span>
+      <span class="urgency-badge">🟢 留意</span>
+    </div>
+    <div class="card-title">国新办5/18发布会预告：离境退税优化措施<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>5月18日下午3时，商务部副部长及税务总局等介绍离境退税优化措施</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>可能利好出口退税效率和跨境资金回流</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月18日发布会</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>关注发布会内容，评估离境退税政策对业务的影响</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="http://m.toutiao.com/group/7640253230206681627/" target="_blank">跨境大发哥/头条</a>
+    </div>
+  </div>
+
+  <!-- ==================== 页脚 ==================== -->
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>🌊 跨境出海政策日报 · 每日9:00自动更新</p>
+    <p>数据来源：亚马逊官方 · TikTok Shop · 印尼政府 · Marketplace Pulse · 至美通研究院</p>
+    <p><a href="../index.html">返回首页</a> · <a href="./20260515.html">← 前一天</a></p>
+  </div>
+
+</div>
+</body>
+</html>
