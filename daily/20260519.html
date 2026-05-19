@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 | 2026年5月19日</title>
+  <style>
+    /* ========== 全局重置与基础样式 ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== 页面容器 ========== */
+    .page-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    /* ========== 顶部标题区 ========== */
+    .page-header {
+      text-align: center;
+      padding: 32px 20px 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .page-header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .page-header .meta {
+      font-size: 14px;
+      color: #6b7280;
+    }
+    .page-header .meta .date {
+      font-weight: 600;
+      color: #374151;
+    }
+    .page-header .meta .update-hint {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 12px;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-left: 8px;
+      font-weight: 500;
+    }
+
+    /* ========== 导航栏 ========== */
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 10px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      font-size: 14px;
+    }
+    .nav-bar a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center {
+      font-weight: 700;
+      color: #111827;
+      font-size: 15px;
+    }
+    .nav-bar .nav-arrow {
+      font-size: 16px;
+    }
+    .nav-bar .nav-disabled {
+      color: #d1d5db;
+      pointer-events: none;
+      font-weight: 400;
+    }
+
+    /* ========== 统计概览条 ========== */
+    .stats-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      flex: 1;
+      min-width: 100px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 14px 16px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-urgent .stat-number { color: #dc2626; }
+    .stat-watch .stat-number { color: #f59e0b; }
+    .stat-note .stat-number { color: #16a34a; }
+    .stat-platform .stat-number { color: #2563eb; }
+
+    /* ========== 合规提醒条 ========== */
+    .compliance-banner {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-left: 4px solid #dc2626;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+    }
+    .compliance-banner .banner-title { font-size: 14px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .compliance-banner ul { list-style: none; padding: 0; }
+    .compliance-banner li { font-size: 13px; color: #7f1d1d; padding: 3px 0; padding-left: 16px; position: relative; }
+    .compliance-banner li::before { content: "\26A0"; position: absolute; left: 0; font-size: 11px; }
+    .compliance-banner li .date-tag { font-weight: 700; color: #991b1b; }
+
+    /* ========== 政策卡片通用样式 ========== */
+    .policy-card {
+      background: #ffffff;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+    .card-urgent { border-left: 4px solid #dc2626; }
+    .card-watch  { border-left: 4px solid #f59e0b; }
+    .card-note   { border-left: 4px solid #16a34a; }
+
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .platform-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-amazon  { background: #FF9900; }
+    .tag-tiktok  { background: #000000; }
+    .tag-walmart { background: #0071DC; }
+    .tag-customs { background: #dc2626; }
+    .tag-eu      { background: #003399; }
+    .tag-shopee  { background: #EE4D2D; }
+    .tag-brazil  { background: #059669; }
+    .tag-tax     { background: #7c3aed; }
+    .tag-temu    { background: #E85D2C; }
+    .tag-lazada  { background: #0f146d; }
+    .tag-ebay    { background: #86B817; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+
+    .card-summary { background: #eff6ff; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #1e40af; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #1e3a8a; margin-right: 4px; }
+
+    .card-background { background: #fffbeb; border-radius: 6px; margin: 0 18px 12px; padding: 12px 14px; }
+    .card-background .bg-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .card-background .bg-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+
+    .card-source { padding: 10px 18px 14px; border-top: 1px solid #f3f4f6; }
+    .card-source .source-label { font-size: 12px; color: #9ca3af; }
+    .card-source a { font-size: 12px; color: #2563eb; text-decoration: none; word-break: break-all; }
+    .card-source a:hover { text-decoration: underline; }
+
+    /* ========== 分隔标题 ========== */
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-urgent { color: #dc2626; }
+    .section-watch  { color: #f59e0b; }
+    .section-note   { color: #16a34a; }
+
+    .new-tag { display: inline-block; font-size: 10px; background: #dc2626; color: #fff; padding: 1px 5px; border-radius: 3px; margin-left: 6px; vertical-align: middle; font-weight: 600; }
+
+    /* ========== 页脚 ========== */
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #e5e7eb; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #2563eb; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    /* ========== 响应式 ========== */
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- ==================== 顶部标题区 ==================== -->
+  <div class="page-header">
+    <h1>🌊 跨境出海政策日报</h1>
+    <div class="meta">
+      <span class="date">2026年5月19日（周二）</span>
+      <span class="update-hint">09:00 更新</span>
+    </div>
+  </div>
+
+  <!-- ==================== 导航栏 ==================== -->
+  <div class="nav-bar">
+    <a href="../index.html">← 返回首页</a>
+    <span class="nav-center">5月19日</span>
+    <a href="./20260518.html" class="nav-arrow">← 前一天</a>
+  </div>
+
+  <!-- ==================== 统计概览条 ==================== -->
+  <div class="stats-bar">
+    <div class="stat-item stat-urgent"><div class="stat-number">2</div><div class="stat-label">🔴 紧急</div></div>
+    <div class="stat-item stat-watch"><div class="stat-number">5</div><div class="stat-label">🟡 关注</div></div>
+    <div class="stat-item stat-note"><div class="stat-number">3</div><div class="stat-label">🟢 留意</div></div>
+    <div class="stat-item stat-platform"><div class="stat-number">6</div><div class="stat-label">涉事平台/机构</div></div>
+  </div>
+
+  <!-- ==================== 近期合规提醒条 ==================== -->
+  <div class="compliance-banner">
+    <div class="banner-title">⚡ 近期关键时间节点</div>
+    <ul>
+      <li><span class="date-tag">5月20日</span> 亚马逊停止支持13款旧Kindle设备</li>
+      <li><span class="date-tag">5月24日</span> Prime Day价格静默期开始 + Lazada泰国站关税调整</li>
+      <li><span class="date-tag">5月25日</span> 美国站FBA入仓截止</li>
+      <li><span class="date-tag">5月27日</span> 欧洲站FBA入仓截止</li>
+      <li><span class="date-tag">6月1日</span> TikTok Shop美区退货新规+欧洲三站上线+Shopee新马预售服务费+泰国佣金上调+新加坡大促服务费</li>
+      <li><span class="date-tag">6月16-17日</span> Prime Day正式开跑</li>
+      <li><span class="date-tag">6月30日</span> 欧洲站COO原产国信息截止填报</li>
+      <li><span class="date-tag">7月1日</span> 欧盟€3/类小包关税+取消€150免税门槛</li>
+      <li><span class="date-tag">7月8日</span> CPSC eFiling强制电子备案</li>
+      <li><span class="date-tag">持续中</span> 亚马逊变体评论去共享化·Vine严查·深圳税务严查·意大利VAT清查</li>
+    </ul>
+  </div>
+
+  <!-- ==================== 🔴 紧急 ==================== -->
+  <div class="section-label section-urgent">🔴 紧急</div>
+
+  <!-- Card 1 -->
+  <div class="policy-card card-urgent">
+    <div class="card-top">
+      <span class="platform-tag tag-amazon">亚马逊</span>
+      <span class="urgency-badge">🔴 紧急</span>
+    </div>
+    <div class="card-title">变体评论"去共享化"全面执行 · AI切断非颜色变体评论 · "一物一评独立显示"<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>5月起全平台推行变体评论Decoupling政策，仅纯粹"颜色变体"等极少数类目可继续共享评论；尺寸跨度过大、材质不同、技术参数升级的变体，AI强行切断评论纽带，实行"一物一评独立显示"</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>服装/美妆/3C数码配件卖家核心子产品显示评论量断崖式下跌，"以老带新"/"僵尸合并"套路彻底终结；不合规变体合并定性为"Section 3"严重违规</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月已全面执行</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>①立即排查变体结构，不合规组合尽快拆分 ②修改站外FB/Google广告中星级宣称，避免虚假广告诉讼 ③新变体独立积累评论，停止合并套利</div>
+    </div>
+    <div class="card-background">
+      <div class="bg-title">背景与深度解读</div>
+      <div class="bg-text">传统体系下，同一Parent ASIN下所有子变体可共享评价和星级，催生"以老带新"和"僵尸合并"套路。新政策下，10寸与55寸显示器、不同芯片的标配/高配版等将被AI强行切断评论纽带。此举为响应FTC针对"虚假与误导性评价格式"的最新严厉民事处罚标准。卖家须核对站外广告中"4.8星好评"等文案，否则可能因虚假广告遭双重监管夹击。</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://m.mjzj.com/article/fmexrj4a1p8g" target="_blank">跨境资讯通/卖家之家</a>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="policy-card card-urgent">
+    <div class="card-top">
+      <span class="platform-tag tag-amazon">亚马逊</span>
+      <span class="urgency-badge">🔴 紧急</span>
+    </div>
+    <div class="card-title">Vine计划严查风暴落地 · 违规合并变体首次移除评论+降权30天 · 二次冻结资金<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>亚马逊组建Vine评论专项治理团队，5月15日起逐步执行处罚。核心：①父ASIN评论额度不叠加 ②违规合并变体列为"一级违规行为" ③首次违规移除所有Vine评论+ASIN搜索降权30天 ④二次违规冻结账户资金14天+限制Vine参与6个月 ⑤三次及以上永久封禁品牌备案</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>"拆分变体+分别注册Vine+合并评论"的灰色操作被全面打击，违规成本极高</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月15日起逐步落地</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>①立即停止拆分合并变体套利 ②合规使用Vine，不跨品类/跨功能合并ASIN ③已有违规操作尽快自查自纠</div>
+    </div>
+    <div class="card-background">
+      <div class="bg-title">Vine注册三层级与评论上限</div>
+      <div class="bg-text">高端层级：注册11-30件商品，最多30条Vine评论 | 中级层级：注册3-10件商品，最多10条 | 免费层级：注册1-2件商品，仅2条。合并后仅保留最高注册层级对应额度，不累加。5月10日起11个核心站点同步升级合规规则，新增AI+人工双重审核机制。</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://m.sohu.com/a/1024179204_122629960/" target="_blank">搜狐/卖家之家</a> · 
+      <a href="https://m.sohu.com/a/1024180056_122635408/" target="_blank">萧亚跨境/搜狐</a>
+    </div>
+  </div>
+
+  <!-- ==================== 🟡 关注 ==================== -->
+  <div class="section-label section-watch">🟡 关注</div>
+
+  <!-- Card 3 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-amazon">亚马逊</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">BSR排名算法调整 · 变体共享Best Seller排名 · 大卖霸屏终结<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>同一父体下所有变体共享BSR排名，此前不同颜色/尺寸各有独立排名，现合并为一个共享排名</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>大卖十几款变体霸屏Best Seller榜单的场面消失，新品/小卖家获更多曝光；但BSR排名估算销量的方式变模糊，选品分析难度加大</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>3月起逐步推进</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>重新评估选品销量估算方式，利用新品曝光窗口期加速推广</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://blog.csdn.net/SellerKnight/article/details/106401371" target="_blank">SellerKnight/CSDN</a>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-amazon">亚马逊</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">关停Rufus AI购物助手 · 全面并入Alexa for Shopping · Review/QA权重提升<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>5月13日官宣关停Rufus，所有功能并入Alexa for Shopping，直接嵌入搜索栏和商品详情页；Review和QA内容被AI读取生成产品摘要</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>AI购物入口从独立对话框变为内嵌式，流量入口逻辑改变；差评中重复出现的问题会影响AI总结语气</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月13日已生效</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>①差评分类：产品真实问题→回传供应链，买家误解→页面提前解释 ②Review中重复同类问题的产品优先优化 ③优化QA内容质量</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="http://m.toutiao.com/group/7641136917039383059/" target="_blank">跨境移花宫/头条</a>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-ebay">eBay</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">服饰尺码标准化新规 · 7月起非标尺码商品将被隐藏<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>6月起自动标准化高置信度尺码(如"Small"→"S")，"See description""N/A"等低置信度信息被标记；7月起尺码信息不完整/不规范的服饰鞋类商品将被隐藏/暂停展示/无法上架</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>eBay服饰/鞋类卖家，古着/大码服饰等难以适配统一标准的品类受冲击</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>6月自动标准化 / 7月强制执行</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>6月前完成在售商品尺码属性自查与调整，确保尺码字段规范填写</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://m.mjzj.com/article/fme8hy07k5j4" target="_blank">AMZ123/卖家之家</a> · 
+      <a href="https://www.ecommercebytes.com" target="_blank">EcommerceBytes</a>
+    </div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-shopee">Shopee</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">新加坡站6月起大促服务费 · 免运门槛降至10新元<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>6月1日起大促日(Spike Days)对每笔已完成订单收取服务费；免运券门槛从25新元降至10新元；提供更高面额Shopee币返还+平台优惠券；卖家商品获专属筛选标签/LiveXtra直播权益/横幅广告优先展示</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>大促日新增服务费成本，但免运门槛降低+曝光增加可能提升转化</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>2026年6月1日</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>重新规划大促促销策略，平衡新增服务费与流量红利，优化定价覆盖成本</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://m.mjzj.com/article/fmewnuhlo9og" target="_blank">AMZ123/卖家之家</a>
+    </div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="policy-card card-watch">
+    <div class="card-top">
+      <span class="platform-tag tag-shopee">印尼监管</span>
+      <span class="urgency-badge">🟡 关注</span>
+    </div>
+    <div class="card-title">印尼拟出台电商新规 · 平台涨佣需提前3个月通知+至少签1年协议<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>印尼拟定电商行业新规：①TikTok Shop/Shopee等与卖家须签至少1年费用协议 ②合约期内平台不得单方面上调佣金 ③调价需提前3个月通知 ④退货运费改由平台与商家共同承担</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>如落地将重塑印尼电商收费及运营生态，遏制平台随意调价行为</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>拟定中</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>关注TikTok Shop/Shopee印尼站佣金变化，新规落地后评估合同条款</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="http://m.ennews.com/News/news_short?tags_id=27873" target="_blank">亿恩网</a>
+    </div>
+  </div>
+
+  <!-- ==================== 🟢 留意 ==================== -->
+  <div class="section-label section-note">🟢 留意</div>
+
+  <!-- Card 8 -->
+  <div class="policy-card card-note">
+    <div class="card-top">
+      <span class="platform-tag tag-tax">中国税务</span>
+      <span class="urgency-badge">🟢 留意</span>
+    </div>
+    <div class="card-title">六部门优化离境退税2.0版 · 7月起万元以下随机抽查<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>商务部等六部门联合发布离境退税2.0版政策：7月1日起万元以下退税申请随机抽查(不再逐单验证)；退税商店覆盖面扩大；跨地"即买即退"服务优化；离境期限统一延长至28天</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>主要利好入境消费，对跨境出口卖家间接影响有限；海外仓/保税模式商家可关注退税便利化</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>2026年7月1日</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>适度关注，跨境进口商家评估退税流程优化带来的效率提升</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="http://www.globaltimes.cn/page/202605/1361237.shtml" target="_blank">Global Times</a>
+    </div>
+  </div>
+
+  <!-- Card 9 -->
+  <div class="policy-card card-note">
+    <div class="card-top">
+      <span class="platform-tag tag-temu">SHEIN/Temu</span>
+      <span class="urgency-badge">🟢 留意</span>
+    </div>
+    <div class="card-title">SHEIN诉Temu版权案伦敦开庭 · Temu放弃2300张图片辩护<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>SHEIN指控Temu实施"工业规模"版权侵权，盗用数千张产品照片；庭审中Temu放弃对2300张图片的辩护，被法律界解读为对部分侵权事实的承认</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>服饰印花/家居图案/动漫周边/小电子配件卖家需加强版权自查；美国Q1 TRO案件同比增长102%</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>审理中</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>加强产品图片/设计版权审查，避免使用来源不明的素材</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="https://m.sohu.com/a/1024047221_121824247/" target="_blank">睿观AI/搜狐</a>
+    </div>
+  </div>
+
+  <!-- Card 10 -->
+  <div class="policy-card card-note">
+    <div class="card-top">
+      <span class="platform-tag tag-amazon">亚马逊</span>
+      <span class="urgency-badge">🟢 留意</span>
+    </div>
+    <div class="card-title">5月20日起停止支持13款旧Kindle设备 · 二手卖家注意<span class="new-tag">NEW</span></div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">变更：</span>5月20日终止对Kindle 1st至5th代、Paperwhite 1代及多款Fire系列的技术支持，设备仅能离线阅读已下载书籍</div>
+      <div class="summary-item"><span class="summary-label">影响：</span>二手Kindle卖家产品价值下降，大量用户越狱可能影响二手市场流通</div>
+      <div class="summary-item"><span class="summary-label">生效：</span>5月20日</div>
+      <div class="summary-item"><span class="summary-label">行动：</span>二手电子书卖家评估库存风险，关注越狱设备的二手合规问题</div>
+    </div>
+    <div class="card-source">
+      <span class="source-label">来源：</span>
+      <a href="http://m.ennews.com/News/news_short?tags_id=25709" target="_blank">亿恩网</a>
+    </div>
+  </div>
+
+  <!-- ==================== 页脚 ==================== -->
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <div>📊 数据来源：卖家之家/亿恩网/EcommerceBytes/GCBI跨境出海研究院/至美通等</div>
+    <div>🔄 每日09:00自动更新 · 近24小时跨境政策变化</div>
+    <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI · 纯静态HTML零JS</div>
+  </div>
+
+</div>
+</body>
+</html>
