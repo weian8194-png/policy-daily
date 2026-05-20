@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美国亚马逊$90+小家电市场趋势</title>
+  <style>
+    /* ========== 全局重置与基础样式 ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #f0fdfa;
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== 页面容器 ========== */
+    .page-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    /* ========== 顶部标题区 ========== */
+    .page-header {
+      text-align: center;
+      padding: 32px 20px 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .page-header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .page-header .meta {
+      font-size: 14px;
+      color: #6b7280;
+    }
+    .page-header .meta .date {
+      font-weight: 600;
+      color: #374151;
+    }
+    .page-header .meta .update-hint {
+      display: inline-block;
+      background: #f0fdfa;
+      color: #0d9488;
+      font-size: 12px;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-left: 8px;
+      font-weight: 500;
+    }
+
+    /* ========== 统计概览条 ========== */
+    .stats-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      flex: 1;
+      min-width: 100px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 14px 16px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+
+    /* ========== Prime Day倒计时条 ========== */
+    .primeday-banner {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+    }
+    .primeday-banner .banner-title { font-size: 14px; font-weight: 700; color: #d97706; margin-bottom: 8px; }
+    .primeday-banner ul { list-style: none; padding: 0; }
+    .primeday-banner li { font-size: 13px; color: #92400e; padding: 3px 0; padding-left: 16px; position: relative; }
+    .primeday-banner li::before { content: "\23F0"; position: absolute; left: 0; font-size: 11px; }
+    .primeday-banner li .date-tag { font-weight: 700; color: #b45309; }
+
+    /* ========== 机会速报卡片 ========== */
+    .opportunity-card {
+      background: #ffffff;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-kitchen { background: #0d9488; }
+    .tag-bbq { background: #dc2626; }
+    .tag-smart { background: #8b5cf6; }
+    .tag-drink { background: #2563eb; }
+    .tag-bake { background: #d97706; }
+    .tag-outdoor { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+
+    /* ========== 分隔标题 ========== */
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-new { color: #8b5cf6; }
+    .section-trend { color: #f59e0b; }
+
+    /* ========== 历史归档区 ========== */
+    .archive-section {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .archive-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0fdfa;
+    }
+    .archive-list {
+      list-style: none;
+      padding: 0;
+    }
+    .archive-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .archive-list li:last-child { border-bottom: none; }
+    .archive-list a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: #111827;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+    .archive-list a:hover { background: #f0fdfa; }
+    .archive-date { font-weight: 600; font-size: 15px; }
+    .archive-meta { font-size: 13px; color: #6b7280; }
+    .archive-meta .count { color: #0d9488; font-weight: 600; margin-right: 8px; }
+
+    /* ========== NEW徽章 ========== */
+    .new-badge {
+      display: inline-block;
+      font-size: 10px;
+      background: #0d9488;
+      color: #fff;
+      padding: 1px 6px;
+      border-radius: 8px;
+      margin-left: 6px;
+      vertical-align: middle;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    /* ========== 页脚 ========== */
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    /* ========== 响应式 ========== */
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .stats-bar { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- ==================== 顶部标题区 ==================== -->
+  <div class="page-header">
+    <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">每日选品机会扫描</span>
+      <span class="update-hint">2026年5月19日 更新</span>
+    </div>
+  </div>
+
+  <!-- ==================== 统计概览条 ==================== -->
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">🔥 今日机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">3</div>
+      <div class="stat-label">💜 新兴品类</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">2</div>
+      <div class="stat-label">📈 热门品类</div>
+    </div>
+  </div>
+
+  <!-- ==================== Prime Day倒计时条 ==================== -->
+  <div class="primeday-banner">
+    <div class="banner-title">⏰ Prime Day 2026 倒计时</div>
+    <ul>
+      <li><span class="date-tag">5月24日</span> 价格静默期开始（禁止BD/OTD）</li>
+      <li><span class="date-tag">5月26日</span> Deal提报截止</li>
+      <li><span class="date-tag">6月16-17日</span> Prime Day正式开跑</li>
+      <li><span class="date-tag">本周</span> 最后的选品和备货窗口！</li>
+    </ul>
+  </div>
+
+  <!-- ==================== 🔥 最新机会速报 ==================== -->
+  <div class="section-label section-hot">🔥 今日机会速报 · 5月19日</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-drink">冰品赛道</span>
+      <span class="urgency-badge">🔥 强烈推荐</span>
+    </div>
+    <div class="card-title">nutribullet Chill冰淇淋机 — 紧凑型冰品赛道的"品类开创者"</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>5月新上市，$199.99，5大冰品预设，体积比Ninja CREAMi小40%+，HappyFoodGeek评为"最佳紧凑型冰淇淋机"</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>首个"小型化"家用冰品机，精准切入Apartment/小厨房场景。中国供应链可做$99-149更紧凑版</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$199.99（紧凑型）/ $187-400（压缩机一体机区间）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">冰棒赛道</span>
+      <span class="urgency-badge">💜 新品类</span>
+    </div>
+    <div class="card-title">Coolwill XG01压缩机冰棒机 — Kickstarter 141%超额，"冰棒自由"品类确认</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Kickstarter已筹$54.9万+（141%），压缩机冷却30分钟出冰棒，6智能预设，一键脱模</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>冰棒品类巨大空白，传统模具需冷冻6-8小时。中国品牌可抢先Amazon上架$199-249压缩机冰棒机</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$279（早鸟）/ $349+（零售预计）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-drink">冰沙赛道</span>
+      <span class="urgency-badge">📈 品类升级</span>
+    </div>
+    <div class="card-title">Ninja SLUSHi Max $500 — 冰沙品类冲入"高端旗舰"价格带</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Ninja 5月New Release，$500 MSRP，150oz超大容量，WhisperChill压缩机，15档温控</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>Ninja正在用"手机打法"建立品类矩阵：入门$259→中端$369→旗舰$500。中国品牌做$150-249紧凑型是核心差异化</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$259（入门）/ $369（中端）/ $500（旗舰）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-smart">多功能烹饪</span>
+      <span class="urgency-badge">🔥 强烈推荐</span>
+    </div>
+    <div class="card-title">Thermomix平替$400-600 — 品类战场白热化</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>David's Been Here横评4款对标TM7($1,699)，$400-600产品功能覆盖TM7的70-80%</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>TM7的$1,699留下巨大价格真空。$400-600的Thermomix平替=确定性机会，亚洲烹饪优化+免费食谱社区是差异化</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$400-$650（平替）/ $1,699（旗舰）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">搅拌机</span>
+      <span class="urgency-badge">💜 社媒驱动</span>
+    </div>
+    <div class="card-title">DipTok带动热冷一体搅拌机 — 12亿浏览量催生新品类</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>TikTok #diprecipe突破12亿浏览，Tefal 5月推出Blendforce Cook热冷一体，5自动程序+6手动速度</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>美国$100-150价位段几乎空白，中国品牌可主打"热汤+冷酱+冰沙"三合一，6月Prime Day前上架</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$130-$200（Tefal约$165，平替$100-150）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <!-- ==================== 历史归档区 ==================== -->
+  <div class="archive-section">
+    <div class="archive-title">📁 历史分析归档</div>
+    <ul class="archive-list">
+      <li>
+        <a href="daily/20260519.html">
+          <span class="archive-date">2026年5月19日（周一）<span class="new-badge">NEW</span></span>
+          <span class="archive-meta"><span class="count">5机会</span>紧凑冰品机·冰棒机·SLUSHi Max·Thermomix平替·DipTok</span>
+        </a>
+      </li>
+      <li>
+        <a href="daily/20260518.html">
+          <span class="archive-date">2026年5月18日（周日）</span>
+          <span class="archive-meta"><span class="count">5机会</span>GreenPan Frost·KitchenAid温度计·室内披萨炉·SLUSHi双缸·Thermomix平替</span>
+        </a>
+      </li>
+      <li>
+        <a href="daily/20260517.html">
+          <span class="archive-date">2026年5月17日（周六）</span>
+          <span class="archive-meta"><span class="count">5机会</span>Ninja SLUSHi·发酵温控·冰沙冰淇淋二合一·Memorial Day·面团机</span>
+        </a>
+      </li>
+      <li>
+        <a href="daily/20260516.html">
+          <span class="archive-date">2026年5月16日（周五）</span>
+          <span class="archive-meta"><span class="count">5机会</span>室内披萨炉·热冷搅拌机·Combi Steam Oven·户外披萨炉·Combi Fryer</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ==================== 页脚 ==================== -->
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    数据来源：Amazon Best Sellers / Movers & Shakers / New Releases、主流媒体评测、行业报告、社媒趋势<br>
+    仅供选品参考，不构成投资建议
+  </div>
+
+</div>
+</body>
+</html>

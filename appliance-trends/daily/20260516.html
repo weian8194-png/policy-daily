@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年5月16日</title>
+  <style>
+    /* ========== 全局重置与基础样式 ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #f0fdfa;
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== 页面容器 ========== */
+    .page-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    /* ========== 顶部标题区 ========== */
+    .page-header {
+      text-align: center;
+      padding: 32px 20px 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .page-header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .page-header .meta {
+      font-size: 14px;
+      color: #6b7280;
+    }
+    .page-header .meta .date {
+      font-weight: 600;
+      color: #374151;
+    }
+    .page-header .meta .update-hint {
+      display: inline-block;
+      background: #f0fdfa;
+      color: #0d9488;
+      font-size: 12px;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-left: 8px;
+      font-weight: 500;
+    }
+
+    /* ========== 导航栏 ========== */
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 10px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      font-size: 14px;
+    }
+    .nav-bar a {
+      color: #0d9488;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center {
+      font-weight: 700;
+      color: #111827;
+      font-size: 15px;
+    }
+    .nav-bar .nav-arrow {
+      font-size: 16px;
+    }
+    .nav-bar .nav-disabled {
+      color: #d1d5db;
+      pointer-events: none;
+      font-weight: 400;
+    }
+
+    /* ========== 统计概览条 ========== */
+    .stats-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      flex: 1;
+      min-width: 100px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 14px 16px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+
+    /* ========== Prime Day倒计时条 ========== */
+    .primeday-banner {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+    }
+    .primeday-banner .banner-title { font-size: 14px; font-weight: 700; color: #d97706; margin-bottom: 8px; }
+    .primeday-banner ul { list-style: none; padding: 0; }
+    .primeday-banner li { font-size: 13px; color: #92400e; padding: 3px 0; padding-left: 16px; position: relative; }
+    .primeday-banner li::before { content: "\23F0"; position: absolute; left: 0; font-size: 11px; }
+    .primeday-banner li .date-tag { font-weight: 700; color: #b45309; }
+
+    /* ========== 机会速报卡片 ========== */
+    .opportunity-card {
+      background: #ffffff;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-kitchen { background: #0d9488; }
+    .tag-bbq { background: #dc2626; }
+    .tag-smart { background: #8b5cf6; }
+    .tag-drink { background: #2563eb; }
+    .tag-bake { background: #d97706; }
+    .tag-outdoor { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+
+    /* ========== 分隔标题 ========== */
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
+
+    /* ========== 详析卡片 ========== */
+    .detail-card {
+      background: #ffffff;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      overflow: hidden;
+      border-top: 3px solid #0d9488;
+    }
+    .detail-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+      padding: 16px 18px 8px;
+    }
+    .detail-section {
+      padding: 8px 18px;
+    }
+    .detail-section .detail-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .detail-section .detail-text {
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.8;
+    }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight {
+      background: #f0fdfa;
+      border-radius: 6px;
+      margin: 8px 18px;
+      padding: 12px 14px;
+    }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #0d9488; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #115e59; line-height: 1.7; }
+    .detail-verdict {
+      background: #fef3c7;
+      border-radius: 6px;
+      margin: 8px 18px 14px;
+      padding: 12px 14px;
+    }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+
+    /* ========== 其他关注项 ========== */
+    .watch-item {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      border-left: 3px solid #d1d5db;
+    }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+
+    /* ========== 页脚 ========== */
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    /* ========== 响应式 ========== */
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- ==================== 顶部标题区 ==================== -->
+  <div class="page-header">
+    <h1>🏠 美国$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">2026年5月16日（周五）</span>
+      <span class="update-hint">每日分析</span>
+    </div>
+  </div>
+
+  <!-- ==================== 导航栏 ==================== -->
+  <div class="nav-bar">
+    <a href="../index.html" class="nav-arrow">← 首页</a>
+    <span class="nav-center">5月16日</span>
+    <a href="20260517.html" class="nav-arrow">次日 →</a>
+  </div>
+
+  <!-- ==================== 统计概览条 ==================== -->
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">🔥 今日机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">2</div>
+      <div class="stat-label">💜 新兴品类</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">3</div>
+      <div class="stat-label">📈 热门品类</div>
+    </div>
+  </div>
+
+  <!-- ==================== 机会速报 ==================== -->
+  <div class="section-label section-hot">🔥 今日$90+机会速报</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">披萨炉</span>
+      <span class="urgency-badge">🔥 品类爆发</span>
+    </div>
+    <div class="card-title">室内电披萨炉（Indoor Electric Pizza Oven）— 品类爆发拐点</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Chefman 50%折扣后$199.93热销，BIG HORN 14"上架即获高分，Ooni Volt 2 Electric上市；"indoor pizza oven"搜索量暴涨</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>户外披萨炉已教育市场数年，消费者"想吃披萨但不想在户外搞"的痛点长期未解。2026年室内电款首次实现800°F高温，夏日即将来临，室内+户外双场景覆盖是杀手级卖点</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-$500（入门款$90-130 / 主流款$200-350 / 高端款$400-500）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">搅拌机</span>
+      <span class="urgency-badge">💜 TikTok驱动</span>
+    </div>
+    <div class="card-title">热冷一体搅拌机（Hot & Cold Blender）— TikTok DipTok驱动新品类</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Tefal Blendforce Cook 5月首发（£129.99/约$165），TikTok #diprecipe 超12亿播放，"fricy"被预测为2026年度风味趋势</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>热冷一体=冷打smoothie+热煮浓汤+热融芝士+自制酱料，一站式解决。DipTok社交传播力极强</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$130-$200</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-smart">蒸汽烤箱</span>
+      <span class="urgency-badge">📈 持续升温</span>
+    </div>
+    <div class="card-title">Combi Steam Oven（蒸汽组合烤箱）— 品类持续升温，新选手入局</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Whynter 2026版TSO-488GB-2上市（$489.99），Toshiba 6-in-1上架（$319），SMEG COF01杀入高端线（$1,099.95），Nutricook 24L折扣45%至$219</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>品类从"爆发前夜"进入"爆发初期"，价格段快速拉开，品类逻辑类似当年Instant Pot的多功能替代路径</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$149-$1,100（入门$149-250 / 主流$250-500 / 高端$500+）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-outdoor">户外</span>
+      <span class="urgency-badge">📈 夏季旺季</span>
+    </div>
+    <div class="card-title">户外披萨炉（Outdoor Pizza Oven）— 夏季旺季已到</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Ooni Karu 12降至$199.95（43% off），900+ past month购买；Ninja Woodfire 8-in-1折扣至$221；HALO Versa 16旋转石盘新款$499</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>5月起美国家庭后院烧烤季正式开始，户外披萨炉是"社交货币型"产品。配件生态（披萨铲/石板/保护套）也是可观利润来源</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-$850</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-smart">组合炸锅</span>
+      <span class="urgency-badge">📈 品类升级</span>
+    </div>
+    <div class="card-title">智能Combi Fryer（组合炸锅）— "空气炸锅2.0"品类定义者</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Dreo ChefMaker Combi Fryer获The Takeout 2026高评价，内置温度探针+水雾化+多段烹饪；Ninja 14-in-1折扣至$149.99</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>不是简单空气炸锅升级，而是将空气炸+sous vide+蒸汽+烘烤整合。内置探针解决"肉到底熟没熟"的永恒痛点</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$150-$300</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <!-- ==================== 重点机会详析 ==================== -->
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <!-- 详析一：室内电披萨炉 -->
+  <div class="detail-card">
+    <div class="detail-title">一、室内电披萨炉（Indoor Electric Pizza Oven）</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$90-$500</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Chefman Indoor Pizza Oven：800°F高温，5个触屏预设，含披萨石板+披萨铲，50%折扣$199.93（原$399.99）</li>
+          <li>BIG HORN 14"：850°F，6预设模式，PID精准控温，$349.99，14寸大容量</li>
+          <li>Ooni Volt 2 Electric：从户外杀入室内的首款电烤炉，获Best Products Reviews 2026第1名</li>
+          <li>Cuisinart CPZ-120：700°F，大视窗+内置灯，50%折扣</li>
+          <li>PIEZANO XL 14"：800°F，双温控，$143.96</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">⚔️ 竞争情况</div>
+      <div class="detail-text">
+        <ul>
+          <li><strong>入门级$90-130</strong>：PIEZANO/Presto等，功能简单，固定温度，无智能控制</li>
+          <li><strong>主流级$150-300</strong>：Chefman/BIG HORN/Cuisinart，触屏预设+高温+配件齐全，是当前竞争主战场</li>
+          <li><strong>高端级$300-500</strong>：Ooni Volt 2/Breville Smart Oven，品牌溢价+精准控温+App联动</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">😣 用户痛点</div>
+      <div class="hl-text">家庭烤箱最高只能500-550°F做不出专业级脆底披萨 · 户外披萨炉需要后院空间+明火操作，公寓住户无法使用 · 冷冻披萨口感差，外卖成本高（$15-25/次） · 多数入门款温控不准，底部糊了顶部还没熟</div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">配件生态：披萨石板/铲/切割器/面团容器，客单价$20-50，利润率极高 · 跨界组合：披萨炉+空气炸锅一体机（Gourmia已有$129.99款） · 细分市场：针对素食/无麸质饮食的专用预设模式 · 与冰淇淋机联动：做披萨后自然想吃甜品，厨房场景组合营销</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">室内电披萨炉正处于品类爆发的早期阶段。户外披萨炉已验证了"家庭做披萨"的需求，但受限于季节和空间。室内电款解决了两大痛点（无后院+全年可用），且价格已下探到$150-200甜区。<strong>强烈建议重点关注$150-300价位段的差异化产品</strong>。</div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <!-- 详析二：热冷一体搅拌机 -->
+  <div class="detail-card">
+    <div class="detail-title">二、热冷一体搅拌机（Hot & Cold Blender）</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$130-$200</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Tefal Blendforce Cook 5月首发，5个自动程序+6档手动+冷热双模式+自清洁+可拆卸刀片</li>
+          <li>TikTok #diprecipe 超12亿播放量，"DipTok"成为增长最快的食谱类别之一</li>
+          <li>"Fricy"（果味+辣味）被预测为2026年度风味趋势</li>
+          <li>Tefal与厨师Aidan Mannion合作推出DipTok灵感食谱系列</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">⚔️ 竞争情况</div>
+      <div class="detail-text">
+        <ul>
+          <li><strong>Vitamix</strong>：高端破壁机可加热（通过摩擦热），但非真正热煮，$300-500</li>
+          <li><strong>Instant Pot Ace Blender</strong>：热搅拌机先驱，已停产生代</li>
+          <li><strong>Ninja Foodi Cold & Hot</strong>：$199，冷热一体，但主要定位为破壁机+热汤</li>
+          <li><strong>Tefal Blendforce Cook</strong>：约$165，聚焦"蘸酱+热汤+冷饮"场景，定位更精准</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">😣 用户痛点</div>
+      <div class="hl-text">传统搅拌机只能冷打，做热汤需要另外倒进锅里加热 · 自制蘸酱需要先煮食材再打碎，两步操作 · 市售蘸酱添加剂多、价格贵，自制更健康但太麻烦</div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">DipTok是社交传播引擎：蘸酱制作视频天然适合短视频传播 · "fricy"趋势：果味+辣味的组合是2026年食品趋势，可开发专用预设 · 健康定位："no preservatives, no additives"是核心卖点 · 中国供应链优势：热搅拌机技术门槛不高，国内已有成熟方案</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">这是一个TikTok驱动的新兴品类，全球首款Tefal刚上市，Amazon上几乎没有竞品。社交传播力强+健康趋势+差异化空间大。<strong>当前是最佳的提前布局窗口</strong>。</div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <!-- 详析三：Combi Steam Oven -->
+  <div class="detail-card">
+    <div class="detail-title">三、Combi Steam Oven（蒸汽组合烤箱）</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$149-$1,100</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 5月16日新变化</div>
+      <div class="detail-text">
+        <ul>
+          <li><strong>Whynter 2026 Edition TSO-488GB-2</strong>上市：10-in-1功能，40QT大容量，$489.99</li>
+          <li><strong>SMEG COF01</strong>杀入：$1,099.95，意大利制造，将品类调性拉到奢侈品级别</li>
+          <li><strong>Nutricook Steami 24L</strong>折扣45%至$219：1600W，11-in-1，不锈钢内胆</li>
+          <li><strong>Toshiba 6-in-1 Compact</strong>：$319，App控制+36预设+蒸汽清洁，20L紧凑型</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">⚔️ 竞争格局变化</div>
+      <div class="detail-text">
+        <ul>
+          <li>入门段$149-250：CIARRA（8-in-1, $149.99）/ Nutricook折扣后$219</li>
+          <li>主流段$250-500：Nuwave（$359.99）/ Whynter（$489.99）/ OUNIN（$279.99）</li>
+          <li>高端段$500+：FOTILE ChefCubii（$649）/ VAL CUCINA（$599.99）/ SMEG（$1,099.95）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">😣 用户差评集中点</div>
+      <div class="hl-text">容量仍偏小（countertop款16-40QT） · 蒸汽功能水箱容量不足，需频繁加水 · 部分低价款温控不精准 · 清洁麻烦，蒸汽残留水渍</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">品类持续升温，新品牌持续涌入。当前最佳切入点是<strong>$200-350价位段</strong>——低于Nutricook折扣价但功能更完善。核心差异化方向：精准蒸汽控湿+大容量水箱+一键自清洁。</div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <!-- 详析四：户外披萨炉 -->
+  <div class="detail-card">
+    <div class="detail-title">四、户外披萨炉（Outdoor Pizza Oven）</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$90-$850</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Ooni Karu 12降至$199.95（43% off），900+ bought in past month</li>
+          <li>Ninja Woodfire 8-in-1降至$221（原$420），多功能（披萨/烤/烟熏/脱水）</li>
+          <li>HALO Versa 16新款：$499，16寸旋转石盘+双燃烧器</li>
+          <li>Gozney Arc：$799.99，专业级精准火焰控制</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">配件是利润奶牛：披萨铲$30-50/保护套$25-50/石板$50/木屑颗粒$15-20，毛利率60%+ · "Pizza Night Kit"组合销售：炉子+铲+石板+面团配方卡+木屑，$399.99套装 · 露营场景：轻便款+收纳袋+便携燃气罐 · 与室内款组合：户外夏天用+室内冬天用，品牌全家桶</div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <!-- ==================== 其他值得关注 ==================== -->
+  <div class="section-label section-other">👁️ 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">🌡️ 家用冻干机（Home Freeze Dryer）</div>
+    <div class="watch-text">VEVOR真空冻干机$3,659.90，Harvest Right $1,795起，Amazon供给空白。品类热度持续但$2,000+对消费者仍太高。短期不建议切入，如未来$500-800简化款出现才是真正机会点</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🧊 Nugget Ice Maker（冰粒制冰机）</div>
+    <div class="watch-text">Antarctic Star折扣至$95.99（49% off）。已成红海，新入局者需极致差异化（更大产量/更静音/更小体积/Smart App控制）</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🍳 智能站立式搅拌机（Smart Stand Mixer）</div>
+    <div class="watch-text">KitchenAid Artisan 5Qt $380（24% off）。KitchenAid统治力太强，直接硬碰硬不明智。但"智能搅拌+App食谱+自动称重"的差异化方向有空间</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🏠 户外厨房设备</div>
+    <div class="watch-text">Mophorn户外厨房收纳柜$89.35起。夏季户外厨房套装整体需求上涨，但客单价高、物流重，适合有仓储能力的大卖</div>
+  </div>
+
+  <!-- ==================== 页脚 ==================== -->
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    数据来源：Amazon Best Sellers / Movers & Shakers、主流媒体评测、行业报告、社媒趋势<br>
+    仅供选品参考，不构成投资建议
+  </div>
+
+</div>
+</body>
+</html>

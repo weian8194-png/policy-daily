@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年5月19日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .primeday-banner { background: #fffbeb; border: 1px solid #fde68a; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; }
+    .primeday-banner .banner-title { font-size: 14px; font-weight: 700; color: #d97706; margin-bottom: 8px; }
+    .primeday-banner ul { list-style: none; padding: 0; }
+    .primeday-banner li { font-size: 13px; color: #92400e; padding: 3px 0; padding-left: 16px; position: relative; }
+    .primeday-banner li::before { content: "\23F0"; position: absolute; left: 0; font-size: 11px; }
+    .primeday-banner li .date-tag { font-weight: 700; color: #b45309; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-kitchen { background: #0d9488; }
+    .tag-bbq { background: #dc2626; }
+    .tag-smart { background: #8b5cf6; }
+    .tag-drink { background: #2563eb; }
+    .tag-bake { background: #d97706; }
+    .tag-outdoor { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #0d9488; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #f0fdfa; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #0d9488; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #115e59; line-height: 1.7; }
+    .detail-verdict { background: #fef3c7; border-radius: 6px; margin: 8px 18px 14px; padding: 12px 14px; }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🏠 美国$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">2026年5月19日（周一）</span>
+      <span class="update-hint">每日分析</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="20260518.html" class="nav-arrow">← 前日</a>
+    <span class="nav-center">5月19日</span>
+    <span style="color:#d1d5db;font-size:14px;">最新</span>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">🔥 今日机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">3</div>
+      <div class="stat-label">💜 新兴品类</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">2</div>
+      <div class="stat-label">📈 热门品类</div>
+    </div>
+  </div>
+
+  <div class="primeday-banner">
+    <div class="banner-title">⏰ Prime Day 2026 倒计时</div>
+    <ul>
+      <li><span class="date-tag">5月24日</span> 价格静默期开始（禁止BD/OTD）</li>
+      <li><span class="date-tag">5月26日</span> Deal提报截止</li>
+      <li><span class="date-tag">6月16-17日</span> Prime Day正式开跑</li>
+      <li><span class="date-tag">本周</span> 最后的选品和备货窗口！</li>
+    </ul>
+  </div>
+
+  <!-- ==================== 机会速报 ==================== -->
+  <div class="section-label section-hot">🔥 今日$90+机会速报</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-drink">冰品赛道</span>
+      <span class="urgency-badge">🔥 品类开创</span>
+    </div>
+    <div class="card-title">nutribullet Chill冰淇淋机 — 紧凑型冰品赛道的"品类开创者"</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>5月新上市$199.99，5大冰品预设，仅9.6"×5.74"×15.08"、10.49磅。HappyFoodGeek评为"最佳紧凑型冰淇淋机"，直接对标Ninja CREAMi但体积小40%+</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>首个"小型化"家用冰品机，精准切入Apartment/小厨房场景。Ninja CREAMi"太大占地方"是Top 3差评。中国供应链可做$99-149更紧凑版，带Mix-In功能补nutribullet缺失的搅拌程序</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$199.99（紧凑型）/ $187-400（压缩机一体机区间）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">冰棒赛道</span>
+      <span class="urgency-badge">💜 品类确认</span>
+    </div>
+    <div class="card-title">Coolwill XG01压缩机冰棒机 — Kickstarter 141%超额，"冰棒自由"品类确认</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Kickstarter已筹$54.9万+（141%），压缩机冷却30分钟出冰棒，6智能预设，一键脱模。Willing Technology背书（20年热管理经验、500+专利）</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>冰棒品类巨大空白——传统模具需冷冻6-8小时，过程繁琐。中国品牌可抢先在Amazon上架$199-249压缩机冰棒机，提前占位</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$279（早鸟）/ $349+（零售预计）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-drink">冰沙赛道</span>
+      <span class="urgency-badge">📈 高端旗舰</span>
+    </div>
+    <div class="card-title">Ninja SLUSHi Max $500 — 冰沙品类冲入"高端旗舰"价格带</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Ninja 5月New Release，$500 MSRP，150oz超大容量，SlushAssist自动感温，WhisperChill压缩机，15档温控。9to5Toys/People密集评测</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>Ninja用"手机行业打法"建立品类矩阵：入门$259→中端$369→旗舰$500。品类升级信号明确。中国品牌做$150-249紧凑型，解决台面焦虑是核心差异化</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$259-$500</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-smart">多功能烹饪</span>
+      <span class="urgency-badge">🔥 确定性机会</span>
+    </div>
+    <div class="card-title">多功能烹饪机$400-600价位段 — Thermomix平替战场白热化</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>David's Been Here横评4款对标TM7($1,699)：TOKIT Omni Cook C2(~$500) / ChefRobot Ultracook(~$650) / Cuisinart CompleteChef(~$400)。$400-600功能覆盖TM7的70-80%</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>TM7的$1,699留下巨大价格真空。关键差异化：更大碗容量(3L+)、亚洲烹饪优化(蒸/炒/炖)、免费食谱社区、中文/英文双语APP。$400-600的Thermomix平替=确定性机会</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$400-$650（平替）/ $1,699（旗舰）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">搅拌机</span>
+      <span class="urgency-badge">💜 社媒爆发</span>
+    </div>
+    <div class="card-title">DipTok带动热冷一体搅拌机 — 社媒驱动的新品类爆发</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>TikTok #diprecipe 话题突破12亿浏览量，Tefal 5月推出Blendforce Cook，5自动程序+6手动速度，专攻DipTok食谱，RRP £129.99</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>DipTok不是短期潮流，12亿浏览量=品类需求已被验证。美国$100-150价位段几乎空白，中国品牌可主打"热汤+冷酱+冰沙"三合一，6月Prime Day前上架抢占先机</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$130-$200</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <!-- ==================== 重点机会详析 ==================== -->
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">一、紧凑型压缩机冰品机 — 从Ninja CREAMi到nutribullet Chill的品类进化</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$199-$400</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 5月19日最新动态</div>
+      <div class="detail-text">
+        <ul>
+          <li><strong>nutribullet Chill</strong>正式上市，$199.99，Amazon评分4.5，"最佳紧凑型冰淇淋机"</li>
+          <li>5大预设+2个16oz品脱杯，预冻24小时→搅拌出杯，体积比Ninja CREAMi小40%+</li>
+          <li>缺少Mix-In程序是最大短板（Ninja CREAMi有，用户需求高）</li>
+          <li>Ninja CREAMi Memorial Day降至$199（原$230），两者价格战一触即发</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">⚔️ 竞争格局</div>
+      <div class="detail-text">
+        <ul>
+          <li><strong>nutribullet Chill</strong>：$199.99，9.6"×5.74"×15.08"，预冻碗+搅拌，紧凑、现代设计、5程序。无Mix-In、预冻24h</li>
+          <li><strong>Ninja CREAMi NC301</strong>：$199(促销)，14"×8"×16"，预冻碗+搅拌，5800+评论、7程序+Mix-In。体积大、噪音大</li>
+          <li><strong>GreenPan Frost</strong>：$187(促销)，大型，压缩机+6模式+7质地，无需预冻、冰品+冰沙。促销价不持久</li>
+          <li><strong>Cuisinart ICE-70</strong>：$99，中型，压缩机，价格低经典品牌。功能单一</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">😣 用户痛点</div>
+      <div class="hl-text">预冻碗机型需24小时准备→最大摩擦点 · 体积大占台面→nutribullet Chill试图解决 · Mix-In功能缺失→用户想做"奥利奥碎冰淇淋"需手动加 · 一次只能做1-2品脱→家庭场景不够</div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">压缩机+紧凑型结合：GreenPan Frost证明压缩机可行但体积巨大，小型化压缩机+nutribullet Chill紧凑设计=$199-249"迷你压缩机冰品机"无需预冻，体积比CREAMi小50%=真正蓝海 · 与冰淇淋机开品关联：升降式冰淇淋机(IEM1006-GS)定位$169.99，加"冰沙模式"可同时覆盖CREAMi和SLUSHi用户群 · 冰品机+酸奶发酵模式：加低温发酵(20-45°C)，覆盖"夏做冰、冬做酸奶"全年需求</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">紧凑型冰品机赛道正在被nutribullet Chill验证。但真正的机会不在"更小的预冻碗机型"，而在<strong>"更小的压缩机机型"</strong>。中国供应链在压缩机小型化方面有天然优势（便携式冰箱/车载冰箱已有成熟方案）。<strong>$199-299的紧凑压缩机冰品机，入场窗口期约3-6个月。</strong></div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">二、压缩机冰棒机 — Kickstarter验证的"蓝海品类"</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$279-$349</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 5月19日最新动态</div>
+      <div class="detail-text">
+        <ul>
+          <li>Coolwill XG01 Kickstarter超额141%（$54.9万/目标$39万），还剩14天</li>
+          <li>压缩机冷却，30分钟出冰棒，6智能预设，一键脱模</li>
+          <li>含3套模具：标准冰棒模（5根）+冰块模（12格）+猫爪模（24个）</li>
+          <li>保鲜模式：做好的冰棒可保持在机器中不融化</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">😣 用户痛点分析</div>
+      <div class="hl-text">传统冰棒模具需冷冻室6-8小时→时间摩擦大 · 占用冷冻室空间→美国家庭冷冻室通常已满 · 脱模困难→需冲热水，容易碎裂 · 无法做含酒精冰棒→酒精冰点低，普通冷冻室难以成型</div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">冰棒+冰淇淋双模式：可设计"可替换模具"系统——一套做冰棒，换一套碗做冰淇淋 · 亲子场景深度绑定：猫爪模具是爆款设计，可推更多IP联名模具形成"硬件+耗材"商业模式 · Mini版冰棒机：3-4根的"迷你版"（$149-179）更适合1-2人家庭 · 与现有开品关联：冰棒机和冰淇淋机共享压缩机+温控技术栈，模具是唯一差异化组件</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">Kickstarter 141%超额说明需求真实。但需注意：1）Coolwill是众筹产品，量产交付是风险点；2）冰棒品类在美国家庭渗透率远低于冰淇淋，教育成本存在；3）季节性明显。建议策略：<strong>不直接做冰棒机，而是做冰淇淋机的"冰棒模具配件"</strong>，用配件测试市场反应，再决定是否独立SKU。</div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">三、热冷一体搅拌机 — DipTok社媒爆款的品类化机会</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$130-$200</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 背景</div>
+      <div class="detail-text">
+        <ul>
+          <li>TikTok #diprecipe 12亿+浏览量，DipTok成为2026年增长最快的食品类话题</li>
+          <li>Tefal 5月推出Blendforce Cook，5自动程序+6手动速度，热冷双模式</li>
+          <li>"Fricy"（甜辣组合）被预测为2026年食品趋势之一</li>
+          <li>消费趋势：居家聚会（Home Entertaining）驱动Dip需求</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">😣 用户痛点</div>
+      <div class="hl-text">做热蘸酱需先在锅里加热再转到搅拌机→操作繁琐 · 做巧克力火锅需单独设备→额外占空间 · 普通破壁机不能加热→功能断层 · 清洗困难→热冷一体机需更好的自清洁</div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">DipTok内容营销天然适配：12亿浏览量=免费流量，开发"一键DipTok食谱"——APP内置热门蘸酱食谱 · 火锅+Dip双场景：中国品牌天然理解"火锅文化"，可定位为"西式Dip+中式火锅底料"双场景产品 · $130价位段空白：Tefal约$165，美国市场无直接竞品，$100-130"热冷搅拌机"几乎是空白</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">DipTok是2026年最确定的社媒驱动厨房品类。热冷一体搅拌机在美国$100-150价位段缺乏竞品。但需注意：1）Tefal品牌力强可能很快进入美国市场；2）Dip需求有季节性（派对/节假日高峰）。<strong>建议快进快出，6月Prime Day前上架抢占先机。</strong></div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <!-- ==================== 其他值得关注 ==================== -->
+  <div class="section-label section-other">👁️ 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">🏠 IHA MarketScope 2026 — 美国小家电市场数据</div>
+    <div class="watch-text">美国小家电增长+1%至$449.4亿，电动厨房品类+4%（空气炸锅/意式咖啡机/碎冰机/搅拌机驱动），烘焙用品+4%，在线渠道占比60%（+2pp YoY）。小家电逆势增长，电动厨房是增长引擎，DIY趋势利好烹饪类小家电</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">💰 Memorial Day促销观察 — 高端厨房电器促销力度大</div>
+    <div class="watch-text">Ninja Creami $199（-14%）、KitchenAid Artisan $380（-24%）、De'Longhi La Specialista Opera $700（-22%）、Breville Barista Express $549（-20%）、Ooni Koda 2 Pro $639（-20%）。高客单产品正通过促销加速渗透，Prime Day 6/16-17临近</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🤖 AI家电加速 — Samsung Bespoke AI Family Hub获AI Awards 2026</div>
+    <div class="watch-text">食材识别从100+种升级到2000+种。AI识别技术在冰箱上已验证，可下放到小家电——如"AI识别食材推荐食谱"的多功能烹饪机</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🔥 GoveeLife智能碎冰机Pro — $499.99</div>
+    <div class="watch-text">CES 2026展示，台面式智能碎冰机（Nugget Ice），Google Home联动。碎冰机+Nugget Ice赛道持续升温，$499说明高端市场愿意为"智能"支付溢价</div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    数据来源：Amazon New Releases, HappyFoodGeek, 9to5Toys, People, Kickstarter, David's Been Here, IHA MarketScope<br>
+    仅供选品参考，不构成投资建议
+  </div>
+
+</div>
+</body>
+</html>
