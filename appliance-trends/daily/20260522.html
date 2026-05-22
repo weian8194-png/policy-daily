@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年5月22日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-kitchen { background: #0d9488; }
+    .tag-bbq { background: #dc2626; }
+    .tag-smart { background: #8b5cf6; }
+    .tag-drink { background: #2563eb; }
+    .tag-bake { background: #d97706; }
+    .tag-outdoor { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #0d9488; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #f0fdfa; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #0d9488; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #115e59; line-height: 1.7; }
+    .detail-verdict { background: #fef3c7; border-radius: 6px; margin: 8px 18px 14px; padding: 12px 14px; }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🏠 美国$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">2026年5月22日（周四）</span>
+      <span class="update-hint">每日分析</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="20260521.html" class="nav-arrow">← 前日</a>
+    <span class="nav-center">5月22日</span>
+    <span style="color:#d1d5db;font-size:14px;">最新</span>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">🔥 今日机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">2</div>
+      <div class="stat-label">💜 新兴品类</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">2</div>
+      <div class="stat-label">📈 热门品类</div>
+    </div>
+  </div>
+
+  <!-- ==================== 机会速报 ==================== -->
+  <div class="section-label section-hot">🔥 今日$90+机会速报</div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">玻璃炸锅</span>
+      <span class="urgency-badge">💜 品类确认</span>
+    </div>
+    <div class="card-title">Cuisinart ClearView玻璃篮空气炸锅 — "看得见"空气炸锅新赛道，5月18日Amazon首发</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Cuisinart 5月18日Amazon首发ClearView系列，4Qt玻璃篮$139.95，9Qt$159.95。全玻璃篮+观察窗+内篮照明，PFAS-free。Ninja Crispi玻璃款$159，Yuko智能玻璃款$160。玻璃炸锅从Ninja独大变多品牌混战</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$139-$300</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>玻璃炸锅从"新奇"升级为"品类"。Cuisinart入场验证。痛点：玻璃重/容量小/导热差。做$99-129"轻量玻璃炸锅"：高硼硅玻璃+硅胶保护套+可拆卸设计，主攻"健康无涂层"人群</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$139.95（Cuisinart 4Qt）/ $159.95（9Qt）/ $159（Ninja Crispi促销）/ $300（Ninja Crispi Pro）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://www.prnewswire.com/news-releases/cuisinart-expands-its-air-fryer-lineup-with-the-new-clearview-collection-designed-for-crispy-easy-cooking-302773811.html" style="color:#0d9488;">PRNewswire/Cuisinart</a> / <a href="https://www.foodandwine.com/best-amazon-kitchen-finds-of-may-2026-11980062" style="color:#0d9488;">Food &amp; Wine</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-smart">厨房机器人</span>
+      <span class="urgency-badge">🔥 蓝海品类</span>
+    </div>
+    <div class="card-title">中端厨房机器人$400-650 — Thermomix $1699太贵，"平民版"正在填空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>TOKIT Omni Cook C2约$500（21功能+7寸屏+3000食谱），ChefRobot Ultracook约$650（15+功能+3.5L+内置秤），Cuisinart CompleteChef约$400（12功能+3年保修）。TikTok上Russell Taylors i5月销3.2万台$622，5.0评分。厨房机器人市场2035年达$123.7亿</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$400-$650</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$400-650是"价格可行+功能够用"甜蜜点。当前竞品短板：食谱库小（3000 vs Cookidoo 10万+）/蒸锅另购/APP粗糙。做$399-499"厨房机器人"：10+功能+5寸屏+内置秤+蒸锅含+500西式食谱</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$400（Cuisinart CompleteChef）/ $500（TOKIT C2）/ $650（ChefRobot）/ $1,699（Thermomix TM7标杆）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://davidsbeenhere.com/2026/05/17/best-all-in-one-cooking-appliances-in-2026-tested-and-compared/" style="color:#0d9488;">David's Been Here</a> / <a href="https://www.accio.com/business/best-kitchen-robot" style="color:#0d9488;">Accio</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-outdoor">个人制冷</span>
+      <span class="urgency-badge">📈 夏季爆款</span>
+    </div>
+    <div class="card-title">Shark ChillPill 3合1个人制冷设备 — 非厨房家电但"模块化思路"值得学习</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Shark（SharkNinja）3月首发$150。3合1：10速风扇+干雾喷雾+冷敷板（降皮温16°F）。0.77磅，11h续航，USB-C，8色。The Independent/CNET/Town &amp; Country全线好评。BHG本月Top New Arrival</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$100-$150</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>模块化设计思路可复制到厨房——一个电机底座+搅拌/切碎/研磨多个配件头，$199"模块化厨房助手"。冷敷板技术可集成到"智能制冷搅拌碗"。夏季品类有天然季节红利</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$150（Shark ChillPill）/ $100（Dyson HushJet Mini）/ $76（JisuLife Ultra2）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://www.independent.co.uk/extras/indybest/house-garden/household-appliances/shark-chillpill-review-b2980116.html" style="color:#0d9488;">The Independent</a> / <a href="https://worldwiretimes.com/i-tested-sharks-chillpill-portable-fan-and-am-obsessed-with-one-special-feature/" style="color:#0d9488;">CNET/WorldWireTimes</a> / <a href="https://www.bhg.com/amazon-home-kitchen-new-releases-may-2026-11971501" style="color:#0d9488;">BHG</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-bbq">光烤赛道</span>
+      <span class="urgency-badge">🔥 最后冲刺</span>
+    </div>
+    <div class="card-title">COZYTIME LUMO远红外光烤炉 — Kickstarter明日截止！Trending $350万+</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Kickstarter已筹$3,069,148（目标$39,188，达成率7832%），Trending $3,558,315。5月23日截止仅剩1天。3合1（烤炉+烟熏+煎盘），远红外0.2秒加热+4倍速+真正无烟+AI CookPilot+48dB静音</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$300-400（众筹价/预估零售价）</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>众筹明日截止，最终$350万+将远超预期。首批支持者锁定后进入量产阶段。现在就是布局$150-199简化版"远红外台面烤炉"的最佳窗口——COZYTIME首批发货2026年中，Q3出平替版可提前抢占心智</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$300-400（COZYTIME LUMO众筹）/ $150-199（平替空间）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://www.backerkit.com/projects/cozytime/cozytime-lumo-first-ai-infrared-indoor-grill-smoke-free" style="color:#0d9488;">BackerKit/Kickstarter</a> / <a href="https://bikmantech.com/blogs/blogs/cozytime-lumo-4x-faster-smoke-free-optical-grill" style="color:#0d9488;">BIKMAN TECH</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-drink">冰饮赛道</span>
+      <span class="urgency-badge">📈 营销加码</span>
+    </div>
+    <div class="card-title">Ninja SLUSHi Twist持续断货 — Snooki &amp; JWoww联名"SLUSHi Sundays"5/24启动</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>5/19首发$399.99数小时售罄，Best Buy预定排到6月4日。5/24起Snooki &amp; JWoww联名"SLUSHi Sundays"活动，每周日发新食谱到9/6。前100名在线购买送限定套装。初代SLUSHi eBay炒到$500-$1000</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$399.99</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>Ninja把SLUSHi从"产品"升级为"夏日文化事件"，热度持续到9月。冰饮机热度不是"一波流"。做$149-199单舱冰沙机的窗口收窄中，但Ninja营销为整个品类做了免费教育</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$399.99（Twist）/ $259（原版促销）/ $500（Maxx大容量）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://ir.sharkninja.com/news/news-details/2026/Ninja-Launches-SLUSHi-Twist-the-Dual-Flavor-Frozen-Drink-Maker-Built-for-Summer-Entertaining/default.aspx" style="color:#0d9488;">SharkNinja IR</a> / <a href="https://resellcalendar.com/news/news/ninja-slushi-twist-2-in-1-frozen-drink-maker/" style="color:#0d9488;">Resell Calendar</a>]</span></div>
+  </div>
+
+  <!-- ==================== 重点机会详析 ==================== -->
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">一、中端厨房机器人 — $400-650的"Thermomix平替"蓝海</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$400-$650</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 5月22日最新动态</div>
+      <div class="detail-text">
+        <ul>
+          <li><strong>TOKIT Omni Cook C2</strong>约$500，21功能+7寸触摸屏+2.2L+内置秤+WiFi，3000+食谱</li>
+          <li><strong>ChefRobot Ultracook</strong>约$650，15+功能+3.5L+内置秤5kg+蒸锅含，600+食谱</li>
+          <li><strong>Cuisinart CompleteChef</strong>约$400，12功能+3L+3年保修，200食谱，无WiFi</li>
+          <li>TikTok上Russell Taylors i5月销3.2万台$622，5.0评分</li>
+          <li>Thermomix TM7仍是$1,699标杆：10寸屏+10万食谱+Varoma 6.8L蒸锅</li>
+          <li>据davidsbeenhere.com 5/17评测：真正all-in-one应具备"称重+切+搅+蒸+煮"全流程</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">😣 用户痛点</div>
+      <div class="hl-text">$1,699太贵美国家庭厨房预算$100-500 · 食谱库小（3000 vs 10万）"不知道做什么" · 蒸锅配件另购到手价高于标价 · APP连接不稳定食谱更新慢 · 清洁复杂碗+刀片+蒸锅+密封圈</div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">"食谱即壁垒"：500道极致版>10万粗制版 · "模块化烹饪中心"：$299主机+蒸锅$49+切碎器$39+研磨杯$29，先入门再升级 · "厨房机器人+空气炸锅"二合一$499-599 · 与冰淇淋机关联：电机+温控底座可兼容搅拌/加热/制冷</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">$400-650厨房机器人是2026年确定性最强的蓝海。Thermomix验证了需求但$1,699把95%美国家庭挡在门外。TOKIT/ChefRobot在填空白但有明显短板。关键不是"功能更多"而是"食谱更好+体验更顺"。<strong>窗口期6-12个月，在Thermomix推中端子品牌前抢占市场。</strong></div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">二、玻璃空气炸锅 — "看得见"赛道从Ninja独大到多品牌混战</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$139-$300</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 5月22日最新动态</div>
+      <div class="detail-text">
+        <ul>
+          <li><strong>Cuisinart ClearView 4Qt</strong>$139.95，全玻璃篮+观察窗+照明+PFAS-free+存储盖，5月18日Amazon首发</li>
+          <li><strong>Cuisinart ClearView 9Qt</strong>$159.95，大容量+双观察窗</li>
+          <li><strong>Ninja Crispi</strong>$159（原$180），4Qt+1.2Qt双玻璃容器+存储+微波安全，上月5000+购买</li>
+          <li><strong>Ninja Crispi Pro 6-in-1</strong>$300，6Qt硼硅玻璃+11预设</li>
+          <li>Yuko智能玻璃款$160（原$200），APP控制</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">😣 用户痛点</div>
+      <div class="hl-text">玻璃篮比金属重2-3倍女性单手拿取困难 · 玻璃导热差预热烹饪比金属篮长15-20% · 4Qt容量偏小只适合2人家庭 · 玻璃磕碰碎裂风险 · 可视化"噱头大于实用"</div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">"玻璃+金属"混合：$129-149，玻璃篮体+金属导热底板 · "可拆卸玻璃盖"：金属篮+玻璃顶盖，想看时装上 · 差异化"健康无涂层"：PFAS焦虑升级多州立法禁用 · "存储+烹饪+上桌"三合一减少清洗</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">玻璃空气炸锅从"新奇配件"升级为"品类"。Cuisinart入场+Ninja产品线扩展是双重验证。但"重+慢+小"是真实痛点。最佳切入不是"又一个玻璃炸锅"而是"解决玻璃痛点"——轻量化+导热优化+大容量。<strong>窗口期3-6个月，今夏$100-200区间热门搜索词。</strong></div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">三、Shark ChillPill — "模块化"设计思路的跨品类启示</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$100-$150</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 5月22日最新动态</div>
+      <div class="detail-text">
+        <ul>
+          <li>Shark ChillPill $150，3合1（10速风扇+干雾喷雾+冷敷板），0.77磅，11h续航</li>
+          <li>The Independent 5/20："最通用手持制冷设备"</li>
+          <li>CNET 5/15："干雾喷雾+冷敷板印象深刻，降皮温16°F"</li>
+          <li>Town &amp; Country编辑推荐，BHG本月Top 15 New Arrival</li>
+          <li>对比Dyson HushJet Mini Cool $100（纯风扇，3色，6h续航）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">"模块化"复制到厨房：一个电机底座+搅拌/切碎/研磨头，$199模块化厨房助手 · 冷敷板技术集成到"智能制冷搅拌碗"：夏天做沙拉碗体自动降温 · 夏季品类（便携空调/制冰机/冷饮设备）5-8月天然季节红利</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">Shark ChillPill本身非厨房品类，但"模块化配件系统"设计思路和$150定价验证了消费者愿为多功能模块化设备付溢价。思路可直接复制到厨房小家电。<strong>学习价值大于直接选品价值。</strong></div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <!-- ==================== 其他值得关注 ==================== -->
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">🔥 COZYTIME LUMO Kickstarter明日截止</div>
+    <div class="watch-text">截至5/22已筹$3,069,148，Trending $3,558,315，5/23截止。最终预计$350万+。对中国供应链：远红外光烤赛道已验证，现在布局简化版窗口</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🍹 Ninja SLUSHi Sundays 5/24启动</div>
+    <div class="watch-text">Snooki &amp; JWoww联名，每周日发新食谱到9/6。冰饮机从"首发爆炒"转"长期运营"。前100名在线购Twist送限定套装</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🍚 Our Place Compact Rice Cooker $139</div>
+    <div class="watch-text">陶瓷内胆（无Teflon）+可拆卸电源线+洗碗机安全内盖。Our Place品牌Z世代认知度高，"美学+健康"定位</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🎨 Off-White/Muted家电色彩趋势</div>
+    <div class="watch-text">KitchenAid/Bella/Breville/Smeg推奶白/燕麦色系。GH报道"更大胆厨房色需更中性家电平衡"。可做"多色可换面板"差异化</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">❄️ 家用冻干机仍太贵</div>
+    <div class="watch-text">Harvest Right $2,500-$5,000，VEVOR/HNZXIB替代品评价参差。$800-1,200"入门家用冻干机"有巨大空间但技术门槛高</div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    数据来源：Food &amp; Wine / BHG / CNET / The Independent / Town &amp; Country / PRNewswire (Cuisinart) / SharkNinja IR / BackerKit / Resell Calendar / Hip2Save / David's Been Here / Good Housekeeping<br>
+    仅供选品参考，不构成投资建议
+  </div>
+
+</div>
+</body>
+</html>
