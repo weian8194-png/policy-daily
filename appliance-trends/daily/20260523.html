@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年5月23日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-kitchen { background: #0d9488; }
+    .tag-bbq { background: #dc2626; }
+    .tag-smart { background: #8b5cf6; }
+    .tag-drink { background: #2563eb; }
+    .tag-bake { background: #d97706; }
+    .tag-outdoor { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #0d9488; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #f0fdfa; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #0d9488; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #115e59; line-height: 1.7; }
+    .detail-verdict { background: #fef3c7; border-radius: 6px; margin: 8px 18px 14px; padding: 12px 14px; }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🏠 美国$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">2026年5月23日（周五）</span>
+      <span class="update-hint">每日分析</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="20260522.html" class="nav-arrow">← 前日</a>
+    <span class="nav-center">5月23日</span>
+    <span style="color:#d1d5db;font-size:14px;">最新</span>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">🔥 今日机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">2</div>
+      <div class="stat-label">💜 新兴品类</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">3</div>
+      <div class="stat-label">📈 热门品类</div>
+    </div>
+  </div>
+
+  <!-- ==================== 机会速报 ==================== -->
+  <div class="section-label section-hot">🔥 今日$90+机会速报</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-bbq">光烤赛道</span>
+      <span class="urgency-badge">🔥 今日截止</span>
+    </div>
+    <div class="card-title">COZYTIME LUMO远红外光烤炉 — Kickstarter今日截止！最终$350万+收官</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>截至5/21已筹$3,163,987（目标$39,188，达成率8074%），Trending $3,492,096。5月23日最后一天，预计最终$320-350万+。3合1（烤炉+烟熏+煎盘），远红外0.2秒加热+4倍速+真正无烟+AI CookPilot+48dB静音</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$300-400（众筹价/预估零售价）</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>众筹今日收官$350万+，远红外台面烤炉赛道正式被验证。Q3出$150-199简化版可抢占Amazon搜索心智。远红外加热元件中国供应链成本仅$5-10/片</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$300-400（COZYTIME LUMO众筹）/ $150-199（平替空间）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://www.backerkit.com/projects/cozytime/cozytime-lumo-first-ai-infrared-indoor-grill-smoke-free" style="color:#0d9488;">BackerKit/Kickstarter</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">名人品牌</span>
+      <span class="urgency-badge">💜 全线首发</span>
+    </div>
+    <div class="card-title">Martha Stewart全线进入小家电 — Amazon五月首发，名人品牌+厨房电器"降维打击"</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Martha Stewart 5月Amazon全线首发：Ice Cream Maker $80、Air Fryer $80→$100、Long-Slot Toaster $32→$40、Bakeware Set $89.99。Food &amp; Wine/Eating Well专题报道。名人品牌不再联名而是自建产品线</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$80-$100（单品偏低但品牌策略影响大）</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>名人品牌+Amazon首发模式验证成功，$80-100区间竞争升级。中国品牌需向上走$150+功能深度，或$90-120精品差异化。不跟名人品牌拼价格</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$80（冰淇淋机）/ $100（炸锅促销后）/ $89.99（烘焙套装）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://www.foodandwine.com/best-amazon-kitchen-finds-of-may-2026-11980062" style="color:#0d9488;">Food &amp; Wine</a> / <a href="https://www.eatingwell.com/article/best-amazon-kitchen-deals-may-2026/" style="color:#0d9488;">Eating Well</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-drink">高端制冰</span>
+      <span class="urgency-badge">💜 新细分</span>
+    </div>
+    <div class="card-title">Kenmore 2" Sphere冰球制冰机$360 — 高端制冰新细分：专为威士忌/鸡尾酒设计</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Kenmore冰球机$360（原$400），48颗透明冰球/天。同品类Klaris Clear Ice Maker $549。制冰机正从"通用制冰"裂变为多个细分：nugget/clear/sphere/crushed</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$360-$549</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$199-249"冰球+nugget双模式制冰机"：一个压缩机+两个模具仓，白天nugget冰做饮料，晚上换冰球模具做威士忌。双模式比单功能更有差异化</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$360（Kenmore Sphere）/ $549（Klaris Clear）/ $199-249（双模式平替空间）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://bensbargains.com/" style="color:#0d9488;">Ben's Bargains</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">新品类</span>
+      <span class="urgency-badge">🔥 全新品类</span>
+    </div>
+    <div class="card-title">便携式抽油烟机 — "无管道厨房通风"新品类确认，1.3亿租户刚需</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Shrinluck Portable Range Hood $83（Amazon New Release），CIARRA/AMZCHEF竞品同步出现。Food &amp; Wine专题报道。"无管道厨房通风"新品类，适合公寓/宿舍/RV/室内BBQ</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$83-$130（当前）/ $149-199（升级空间）</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>被忽视的刚需品类——美国1.3亿租户大量没有抽油烟机。当前$83产品功能简陋。升级方向：油烟感应自动启动$149-179、可折叠设计、与COZYTIME LUMO捆绑"无烟烤炉+通风"组合营销</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$83（Shrinluck基础款）/ $90-130（CIARRA/AMZCHEF）/ $149-179（智能升级空间）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://www.foodandwine.com/best-amazon-kitchen-finds-of-may-2026-11980062" style="color:#0d9488;">Food &amp; Wine</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-drink">冰饮赛道</span>
+      <span class="urgency-badge">📈 明日启动</span>
+    </div>
+    <div class="card-title">Ninja SLUSHi Sundays明日5/24启动 — 冰饮机从"首发爆炒"转"长期运营"</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>5/24起Snooki &amp; JWoww联名"SLUSHi Sundays"正式启动，每周日发新食谱到9/6。前100名在线购Twist送限定套装。初代SLUSHi Memorial Day促销$259（原$350），eBay炒到$500-$1000</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$259-$399.99</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>Ninja把SLUSHi运营成"夏日文化IP"，整个夏天持续曝光。做$149-199平替版窗口收窄，但Ninja为品类做了免费教育</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$259（原版促销）/ $399.99（Twist）/ $500-$1000（eBay炒作）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://ir.sharkninja.com/news/news-details/2026/Ninja-Launches-SLUSHi-Twist-the-Dual-Flavor-Frozen-Drink-Maker-Built-for-Summer-Entertaining/default.aspx" style="color:#0d9488;">SharkNinja IR</a> / <a href="https://resellcalendar.com/news/news/ninja-slushi-twist-2-in-1-frozen-drink-maker/" style="color:#0d9488;">Resell Calendar</a>]</span></div>
+  </div>
+
+  <!-- ==================== 重点机会详析 ==================== -->
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">一、便携式抽油烟机 — "无管道厨房通风"全新品类，1.3亿租户的刚需痛点</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$83-$199（升级空间）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 5月23日最新动态</div>
+      <div class="detail-text">
+        <ul>
+          <li><strong>Shrinluck Portable Range Hood</strong> $83，Amazon New Release，活性炭过滤+小风扇+2速</li>
+          <li><strong>CIARRA Desktop Cooker Hood</strong>，台面式设计，$90-120，3速</li>
+          <li><strong>AMZCHEF Mini Cooker Hood</strong>，$100-130，活性炭+HEPA，3速</li>
+          <li>Food &amp; Wine专题报道确认品类存在，评价"适合小空间烹饪"</li>
+          <li>与COZYTIME LUMO"无烟烤炉"形成互补——一个减少油烟产生，一个排出残余</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">😣 用户痛点</div>
+      <div class="hl-text">风量不够煎炒油烟吸不干净"像装饰品" · 噪音大小空间体验差 · 活性炭滤网频繁更换长期成本高 · 外观简陋台面不好看 · 没有油烟感应需手动开关忘记开就满屋油烟</div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">"油烟感应+自动启动"$149-179：内置PM2.5/VOC传感器检测到油烟自动启动人走延时关闭，成本增加仅$5-8 · "可折叠便携设计"：不用时折叠1/3高度墙挂/收纳，当前产品固定高度占地方 · "室内BBQ/火锅伴侣"定位：不打"抽油烟机"而是打"室内烧烤通风伴侣"与COZYTIME LUMO捆绑 · "双模式过滤"：活性炭+水洗不锈钢网减少滤网更换成本</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">2026年最被低估的新品类。美国1.3亿租户、大学生宿舍、RV露营者都是真实用户。当前产品$83功能简陋，升级空间巨大。关键是"有效+好看+智能"，$149-179区间可做差异化。与COZYTIME LUMO形成组合营销。<strong>窗口期3-6个月，现有竞品品牌力弱，先入者定义品类标准。</strong></div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐⭐</span></div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">二、Martha Stewart全线进入小家电 — 名人品牌+Amazon首发，$80-100区间竞争升级</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$80-$100（当前单品偏低，但品牌策略影响更大）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 5月23日最新动态</div>
+      <div class="detail-text">
+        <ul>
+          <li><strong>Ice Cream Maker</strong> 2-Quart $80（低于$90门槛但赛道信号重要）</li>
+          <li><strong>Air Fryer</strong> 6-Quart $80→$100（Memorial Day促销后恢复$100）</li>
+          <li><strong>Long-Slot Toaster</strong> $32→$40（低价入门款）</li>
+          <li><strong>Bakeware Set</strong> 10-Piece $89.99（踩线$90）</li>
+          <li>Food &amp; Wine和Eating Well专题报道，品牌背书力度大</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">📌 行业信号</div>
+      <div class="hl-text">名人品牌不再联名而是自建产品线（Martha Stewart/Paris Hilton/Snoop Dogg） · Amazon成为名人品牌首发渠道不走DTC · $80-100区间竞争将更激烈名人品牌自带流量+信任度 · "厨房生态"策略从烘焙→炸锅→冰淇淋机全覆盖引导买全套</div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 对中国品牌的启示</div>
+      <div class="hl-text">向上走$150+功能深度名人品牌做不到 · 做精品$90-120但设计/材质/体验明显更好 · 差异化场景名人品牌覆盖主流切入细分（户外/专业级/特定饮食） · 速度优势名人品牌1年1更新中国品牌3-6个月迭代</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">Martha Stewart入局不是"多了一个竞品"而是"名人品牌+Amazon首发"模式验证成功后会引来更多模仿者。$80-100区间中国白牌面临更大压力，但$150+和$90-120精品区间仍有空间。<strong>不跟名人品牌拼价格，拼功能深度和体验差异化。长期趋势，需持续监控。</strong></div>
+    </div>
+    <div style="padding:4px 18px 14px;"><span class="stars">⭐⭐⭐⭐</span></div>
+  </div>
+
+  <!-- ==================== 其他值得关注 ==================== -->
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">🧊 Kenmore冰球制冰机$360</div>
+    <div class="watch-text">高端制冰新细分。制冰机从"通用设备"裂变为场景专用（nugget/clear/sphere/crushed）。$199-249"冰球+nugget双模式"有差异化空间 [来源：<a href="https://bensbargains.com/" style="color:#0d9488;">Ben's Bargains</a>]</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🤖 GoveeLife Smart Nugget Ice Maker Pro $450</div>
+    <div class="watch-text">原$500，Amazon New Release，语音控制+60磅/日。Govee从"智能灯"扩展到"智能厨房" [来源：<a href="https://www.foodandwine.com/best-amazon-kitchen-finds-of-may-2026-11980062" style="color:#0d9488;">Food &amp; Wine</a>]</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🔥 Yuko Smart Glass Air Fryer $160</div>
+    <div class="watch-text">原$200，与Ninja Crispi竞争的玻璃炸锅选手，APP控制+可视化 [来源：<a href="https://www.foodandwine.com/best-amazon-kitchen-finds-of-may-2026-11980062" style="color:#0d9488;">Food &amp; Wine</a>]</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">☕ Nespresso Vertuo Up $229</div>
+    <div class="watch-text">Nespresso全新机型，一键萃取冷热咖啡，更紧凑设计。胶囊咖啡机赛道Nespresso仍占主导 [来源：<a href="https://www.foodandwine.com/best-amazon-kitchen-finds-of-may-2026-11980062" style="color:#0d9488;">Food &amp; Wine</a>]</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🍹 Barsys 360自动调酒机$275-375 / Bartesian Premium $399.99</div>
+    <div class="watch-text">家用自动调酒机两个主要玩家。Bartesian胶囊系统4酒槽，Barsys自加酒模式。与SLUSHi不同赛道但同受益于"家庭饮品制作"趋势 [来源：<a href="https://www.bestdealsusa.com/" style="color:#0d9488;">BestDealsUSA</a> / <a href="https://findingdulcinea.com/" style="color:#0d9488;">FindingDulcinea</a>]</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🎯 Memorial Day大促5/22-25</div>
+    <div class="watch-text">Ninja全线42%off（SLUSHi $259/Cooker PRO $130/Combo $250）、KitchenAid Stand Mixer $380（原$500）、De'Longhi Espresso $150（原$250）、Vitamix VX1 $300（原$380）。大促是观察"哪些品类真有需求"的窗口 [来源：<a href="https://bensbargains.com/" style="color:#0d9488;">Ben's Bargains</a> / <a href="https://www.countryliving.com/" style="color:#0d9488;">Country Living</a>]</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🎨 复古/怀旧厨房小家电复兴</div>
+    <div class="watch-text">Vintage KitchenAid Mixers $200-$1000稀有颜色，Pyrex收藏碗$200-$500。品牌推出mid-century外观+现代内核。"复古颜值"是$90+区间重要溢价因素 [来源：<a href="https://toxigon.com/" style="color:#0d9488;">Toxigon</a>]</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🤖 智能厨房2026：离线语音+AI视觉</div>
+    <div class="watch-text">SmartVoice App-Free Air Fryer（离线语音无需APP）、AIChef Ultra（AI视觉烹饪器）、Combustion Inc.预测温度计$129（8传感器）。"无APP依赖"是新方向——消费者对"每个设备都装APP"已疲劳 [来源：<a href="https://singleclickblog.com/" style="color:#0d9488;">SingleClickBlog</a>]</div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    数据来源：Food &amp; Wine / Eating Well / Ben's Bargains / BackerKit / SharkNinja IR / Resell Calendar / Country Living / Toxigon / SingleClickBlog<br>
+    仅供选品参考，不构成投资建议
+  </div>
+
+</div>
+</body>
+</html>
