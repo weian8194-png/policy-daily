@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>跨境出海政策日报</title>
+  <title>跨境政策日报 | 2026年5月23日</title>
   <style>
     /* ========== 全局重置与基础样式 ========== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -55,6 +55,38 @@
       border-radius: 20px;
       margin-left: 8px;
       font-weight: 500;
+    }
+
+    /* ========== 导航栏 ========== */
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 10px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      font-size: 14px;
+    }
+    .nav-bar a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center {
+      font-weight: 700;
+      color: #111827;
+      font-size: 15px;
+    }
+    .nav-bar .nav-arrow {
+      font-size: 16px;
+    }
+    .nav-bar .nav-disabled {
+      color: #d1d5db;
+      pointer-events: none;
+      font-weight: 400;
     }
 
     /* ========== 统计概览条 ========== */
@@ -144,66 +176,13 @@
     .section-watch  { color: #f59e0b; }
     .section-note   { color: #16a34a; }
 
-    /* ========== 历史归档区（首页专用） ========== */
-    .archive-section {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-top: 24px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    }
-    .archive-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #eff6ff;
-    }
-    .archive-list {
-      list-style: none;
-      padding: 0;
-    }
-    .archive-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid #f3f4f6;
-    }
-    .archive-list li:last-child { border-bottom: none; }
-    .archive-list a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-decoration: none;
-      color: #111827;
-      padding: 4px 8px;
-      border-radius: 6px;
-    }
-    .archive-list a:hover { background: #eff6ff; }
-    .archive-date { font-weight: 600; font-size: 15px; }
-    .archive-meta { font-size: 13px; color: #6b7280; }
-    .archive-meta .count { color: #2563eb; font-weight: 600; margin-right: 8px; }
+    .new-tag { display: inline-block; font-size: 10px; background: #dc2626; color: #fff; padding: 1px 5px; border-radius: 3px; margin-left: 6px; vertical-align: middle; font-weight: 600; }
 
     /* ========== 页脚 ========== */
     .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
     .page-footer .footer-divider { width: 40px; height: 2px; background: #e5e7eb; margin: 0 auto 12px; border-radius: 1px; }
     .page-footer a { color: #2563eb; text-decoration: none; }
     .page-footer a:hover { text-decoration: underline; }
-
-    .new-tag { display: inline-block; font-size: 10px; background: #dc2626; color: #fff; padding: 1px 5px; border-radius: 3px; margin-left: 6px; vertical-align: middle; font-weight: 600; }
-
-    /* 首页最新日期标记 */
-    .new-badge {
-      display: inline-block;
-      font-size: 10px;
-      background: #dc2626;
-      color: #fff;
-      padding: 1px 6px;
-      border-radius: 8px;
-      margin-left: 6px;
-      vertical-align: middle;
-      line-height: 1.5;
-      font-weight: 600;
-    }
   </style>
 </head>
 <body>
@@ -216,6 +195,13 @@
       <span class="date">2026年5月23日（周六）</span>
       <span class="update-hint">09:00 更新</span>
     </div>
+  </div>
+
+  <!-- ==================== 导航栏 ==================== -->
+  <div class="nav-bar">
+    <a href="./20260522.html" class="nav-arrow">&#8592; 上一页</a>
+    <span class="nav-center">5月23日</span>
+    <span class="nav-disabled nav-arrow">下一页 &#8594;</span>
   </div>
 
   <!-- ==================== 统计概览条 ==================== -->
@@ -266,14 +252,18 @@
     </div>
     <div class="card-title">F865新规6月2日生效 &#183; HTS与进口商资质强制绑定 &#183; 事前拦截取代事后核查<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>CBP于5月18日发布公告，ACE系统新增F865错误代码。进口商申报HTS税则号必须与注册资质、PGA备案（FDA/CPSC/USDA等）及许可证状态严格匹配，不符则系统直接驳回申报，货物连查验资格都没有</div>
-      <div class="summary-item"><span class="summary-label">高风险品类：</span>食品/药品/医疗器械（FDA，极高）&#183; 儿童玩具/消费品（CPSC，极高）&#183; 动植物产品（USDA，高）</div>
-      <div class="summary-item"><span class="summary-label">影响谁：</span>所有向美国出口的跨境卖家</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>CBP于5月18日发布CSMS #68674937公告，ACE系统新增F865错误代码（HTS NOT ALLOWED FOR IMPORTER）。进口商申报HTS税则号必须与注册资质、PGA备案（FDA/CPSC/USDA等）及许可证状态严格匹配，不符则系统直接驳回申报，货物连查验资格都没有</div>
+      <div class="summary-item"><span class="summary-label">高风险品类：</span>&#9312;食品/药品/医疗器械/化妆品（FDA注册，风险极高）&#9313;儿童玩具/日用消费品（CPSC认证，风险极高）&#9314;动植物产品（USDA许可，风险高）&#9315;涉及301/232/双反品类（配额/反倾销许可，风险高）</div>
+      <div class="summary-item"><span class="summary-label">影响谁：</span>所有向美国出口的跨境卖家，尤其是涉及FDA/CPSC监管品类的卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>6月2日</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>立即自查IOR资质覆盖HTS范围 &#183; 确认FDA/CPSC等备案 &#183; 6月2日前完成资质补齐</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>&#9312;立即自查进口商资质覆盖的HTS编码范围 &#9313;确认IOR已备案FDA/CPSC等相应资质 &#9314;核对申报HTS与供应商商业发票一致 &#9315;6月2日前完成资质补齐</div>
+    </div>
+    <div class="card-background">
+      <div class="bg-title">📋 政策背景</div>
+      <div class="bg-text">旧模式为"先放行后审核"——货物到港缴预估关税后放行，海关随后抽查。新规将校验前置到申报瞬间，系统自动比对HTS+IOR。5月19日CERT测试环境已部署，6月2日生产环境正式上线。此前不符可到港后人工补救，新规后连查验环节的资格都没有。</div>
     </div>
     <div class="card-source">
-      <span class="source-label">来源：</span><a href="https://m.sohu.com/a/1025462904_120987862/" target="_blank">搜狐/联宇物流</a> &#183; <a href="http://m.toutiao.com/group/7642155739535917568/" target="_blank">头条/联宇物流</a>
+      <span class="source-label">来源：</span><a href="https://m.sohu.com/a/1025462904_120987862/" target="_blank">搜狐/联宇物流</a> &#183; <a href="http://m.toutiao.com/group/7642155739535917568/" target="_blank">头条/联宇物流</a> &#183; <a href="https://m.sohu.com/a/1025941663_121337033/" target="_blank">搜狐/小蓝说跨境</a>
     </div>
   </div>
 
@@ -282,12 +272,17 @@
       <span class="platform-tag tag-tax">税务/海关</span>
       <span class="urgency-badge">&#x1F534; 紧急</span>
     </div>
-    <div class="card-title">"0申报"终结 &#183; 广东阳光化+9610无票免税+深圳税务倒查4年<span class="new-tag">NEW</span></div>
+    <div class="card-title">"0申报"终结 &#183; 广东阳光化+9610无票免税+深圳税务倒查4年 &#183; 三记重拳同时砸下<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>三大政策同步落地：广东阳光化试点5/1启动 &#183; B2B退税扩围10地5/20发布 &#183; 9610无票免税5/19首单落地（企业所得税核定4%）。深圳卖家收到稽查通知要求5天提交近4年资料</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>三大政策同步落地：&#9312;广东阳光化试点5/1启动（"一站两仓"全链条服务）&#9313;B2B退税扩围10地5/20发布（覆盖15个跨境平台）&#9314;9610无票免税5/19首单落地（无需进项发票即可免税出口，企业所得税核定征收4%）。同时深圳卖家陆续收到税务稽查通知，要求5天内提交近4年资料</div>
+      <div class="summary-item"><span class="summary-label">合规路径：</span>年销500万以下→9610无票免税（核定4%）| 年销500-5000万→B2B退税+阳光化（退税周期缩至1月）| 年销5000万以上→全链条阳光化（离境即退税）</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有中国跨境电商卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>已生效</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>立即自查私户收款 &#183; 按规模选择合规路径 &#183; 5月底前是最后窗口期</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>&#9312;立即自查收款是否走私人账户 &#9313;按规模选择合规路径 &#9314;对接广东商务部门申请阳光化试点 &#9315;5月底前是最后窗口期</div>
+    </div>
+    <div class="card-background">
+      <div class="bg-title">📋 政策背景</div>
+      <div class="bg-text">金税四期已实现平台销售数据、银行流水、支付机构信息及海关信息四方联网交叉比对。亚马逊已向中国税务机关提交卖家数据。"买单出口+私账收款"模式面临补缴13%增值税+20%分红个税+滞纳金，已有卖家被罚500万+并店铺清退。数据保存要求延长至10年。</div>
     </div>
     <div class="card-source">
       <span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7642549271430840851/" target="_blank">头条/Simba讲海外</a> &#183; <a href="https://m.sohu.com/a/1025604077_122717710/" target="_blank">搜狐/深圳退税</a>
@@ -301,70 +296,70 @@
     <div class="card-top"><span class="platform-tag tag-amazon">亚马逊</span><span class="urgency-badge">&#x1F7E1; 关注</span></div>
     <div class="card-title">Premium A+默认开放 &#183; Quality Score上线 &#183; 取消$5M门槛<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>所有品牌注册卖家可免费使用Premium A+ Content（取消$500万门槛），新增模块级Quality Score。视频轮播/交互热点/对比图表/全宽横幅全部开放</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>5月21日确认，所有品牌注册卖家可免费使用Premium A+ Content（取消$500万销售额门槛和邀请制）。同时新增模块级Quality Score，评估完整性、图片保真度和模块多样性。视频轮播/交互热点/对比图表/全宽横幅全部开放</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有亚马逊品牌注册卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>已生效</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>审计Top 20 ASIN优先升级 &#183; 运行A/B测试 &#183; 提升Quality Score &#183; 6月中旬前锁定Prime Day目录</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>&#9312;审计Top 20 ASIN优先升级Basic→Premium &#9313;运行A/B测试量化转化提升 &#9314;替换低分辨率图片提升Quality Score &#9315;6月中旬前锁定Prime Day目录</div>
     </div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://novadata.io/resources/news/amazon-premium-a-plus-default-quality-score-may-2026" target="_blank">NovaData</a></div>
   </div>
 
   <div class="policy-card card-watch">
     <div class="card-top"><span class="platform-tag tag-customs">APEC</span><span class="urgency-badge">&#x1F7E1; 关注</span></div>
-    <div class="card-title">贸易部长会议6大倡议 &#183; 跨境电商规则统一/电子口岸/无纸贸易<span class="new-tag">NEW</span></div>
+    <div class="card-title">贸易部长会议6大倡议 &#183; 跨境电商规则统一 &#183; 电子口岸/提单/无纸贸易/AI/智慧海关<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>5月22日APEC贸易部长会议苏州开幕，6大倡议：跨境电商规则体系统一/示范电子口岸网络/电子提单法律效力互认/无纸贸易/AI赋能贸易/智慧海关</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>5月22日APEC贸易部长会议在苏州开幕，6大合作倡议：跨境电商规则体系统一/示范电子口岸网络（海关数据互通）/电子提单法律效力互认/无纸贸易（原产地证电子化）/AI赋能贸易全链条/智慧海关（低风险秒放行）</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有亚太区域跨境卖家</div>
-      <div class="summary-item"><span class="summary-label">何时生效：</span>立法推进中（11月深圳峰会形成成果文件）</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>关注5/23贸易部长新闻发布会 &#183; 规则统一意味着合规标准提高，提前布局</div>
+      <div class="summary-item"><span class="summary-label">何时生效：</span>立法推进中（11月深圳领导人峰会形成正式成果文件）</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>&#9312;关注5/23贸易部长新闻发布会 &#9313;跟踪11月深圳APEC峰会成果 &#9314;规则统一也意味着合规标准提高，提前布局</div>
     </div>
     <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7642644848574464575/" target="_blank">头条/易运盈</a></div>
   </div>
 
   <div class="policy-card card-watch">
     <div class="card-top"><span class="platform-tag tag-customs">新西兰</span><span class="urgency-badge">&#x1F7E1; 关注</span></div>
-    <div class="card-title">低值进口边境税5/22生效 &#183; ≤NZD1000包裹自动扣BSF+GST<span class="new-tag">NEW</span></div>
+    <div class="card-title">低值进口边境税5/22生效 &#183; ≤NZD1000包裹自动扣BSF+GST &#183; 部分SKU成本涨12-18%<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>5月22日起≤NZD1000包裹自动扣边境服务费+GST预付费，无手动豁免。低利润SKU到岸成本涨12-18%</div>
-      <div class="summary-item"><span class="summary-label">影响谁：</span>新西兰市场跨境卖家</div>
-      <div class="summary-item"><span class="summary-label">何时生效：</span>已生效</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>重新评估NZ市场SKU级利润率 &#183; 确认平台BSF集成完成 &#183; 考虑本地仓模式</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>新西兰海关自5月22日起对≤NZD1000的低值进口包裹实施自动扣费——边境服务费(BSF)+GST预付费。费用在入境时自动从电商平台或物流服务商账户扣除，无手动豁免</div>
+      <div class="summary-item"><span class="summary-label">影响谁：</span>新西兰市场跨境卖家，尤其是低利润SKU(&lt;NZD30)</div>
+      <div class="summary-item"><span class="summary-label">何时生效：</span>5月22日已生效</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>&#9312;重新评估NZ市场SKU级利润率 &#9313;确认平台/承运商BSF集成完成 &#9314;考虑本地仓模式规避包裹级征税</div>
     </div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.luyiss.com/news/electronics/mobile-parts/NZ-Introduces-New-Border-Tax-for-Low-Value-Imports.html" target="_blank">Luyiss</a></div>
   </div>
 
   <div class="policy-card card-watch">
     <div class="card-top"><span class="platform-tag tag-eu">欧盟</span><span class="urgency-badge">&#x1F7E1; 关注</span></div>
-    <div class="card-title">&#8364;3关税7/1执行细则 &#183; 按品类非按包裹征收 &#183; 意大利&#8364;2处理费已生效<span class="new-tag">更新</span></div>
+    <div class="card-title">&#8364;3关税7/1执行细则 &#183; 按品类非按包裹征收 &#183; 意大利&#8364;2处理费已生效 &#183; 联盟&#8364;2费用11月推出<span class="new-tag">更新</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>&#8364;3关税按品类征收，一个包裹3个品类=&#8364;9。部分国家系统限制同一HS编码每个item也收&#8364;3（建议合并申报）。联盟&#8364;2处理费11月推出</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>&#8364;3关税按品类征收非按包裹，一个包裹含3个不同品类=&#8364;9。IOSS覆盖约93%电商流量。部分国家系统限制：即使同一6位HS编码每个item也收&#8364;3（建议合并申报）。意大利&#8364;2国家处理费已生效，联盟&#8364;2处理费预计11月推出</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有向欧盟直邮的跨境卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>7月1日</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>IOSS卖家将关税纳入结账 &#183; 合并申报避免重复收费 &#183; 高退货率品类计算关税回收成本</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>&#9312;IOSS卖家将关税纳入结账流程避免到门收费 &#9313;合并申报避免同HS编码多次收费 &#9314;时尚等高退货率品类需计算关税回收成本</div>
     </div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://cross-border-magazine.com/eu-e3-import-duty/" target="_blank">Cross Border Magazine</a> &#183; <a href="https://www.aeb.com/en/magazine/articles/eu-customs-reform-3-euro-duty.php" target="_blank">AEB</a></div>
   </div>
 
   <div class="policy-card card-watch">
     <div class="card-top"><span class="platform-tag tag-amazon">亚马逊</span><span class="urgency-badge">&#x1F7E1; 关注</span></div>
-    <div class="card-title">Prime Day倒计时 &#183; 5/24静默期/5/26提报截止/5/27入仓截止 &#183; 费用改为预付+抽成<span class="new-tag">倒计时</span></div>
+    <div class="card-title">Prime Day倒计时 &#183; 5/24静默期/5/26提报截止/5/27入仓截止 &#183; 费用改为预付$100+1.5%抽成<span class="new-tag">倒计时</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>5/24静默期开始 &#183; 5/26促销提报截止 &#183; 5/27标准入仓截止 &#183; 费用改为"预付$100+1.5%抽成"（上限$5000）</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>5/24价格静默期开始（禁止BD/OTD）| 5/26促销提报截止 | 5/27标准入仓和AWD截止 | 6/5优化拆分入仓截止。费用从固定收费改为"预付$100+1.5%销售额抽成"（上限$5000）。折扣门槛升级为"60天最低价+30天再降5%"</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有参加Prime Day的卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>5/24起</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>明天5/24前停止创建BD/OTD &#183; 5/26前完成提报 &#183; 检查已发货货件物流状态</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>&#9312;明天5/24前停止创建BD/OTD &#9313;5/26前完成促销提报 &#9314;检查已发货货件物流状态 &#9315;核查60天+30天最低价合规</div>
     </div>
     <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7642515160904581647/" target="_blank">头条/跨境搬运工</a></div>
   </div>
 
   <div class="policy-card card-watch">
     <div class="card-top"><span class="platform-tag tag-walmart">沃尔玛</span><span class="urgency-badge">&#x1F7E1; 关注</span></div>
-    <div class="card-title">Marketplace跨境扩展至加拿大和墨西哥 &#183; 美国Marketplace Q1同比增50%<span class="new-tag">NEW</span></div>
+    <div class="card-title">Marketplace跨境扩展至加拿大和墨西哥 &#183; 美国Marketplace销售额Q1同比增50%<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>沃尔玛Q1财报确认Marketplace跨境扩展至加拿大和墨西哥，美国Marketplace Q1同比增50%，电商增26%</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>沃尔玛Q1财报确认Marketplace跨境业务已扩展至加拿大和墨西哥。美国Marketplace销售额Q1同比增长近50%，电商销售额同比增长26%。36%美国店铺配送订单3小时内完成</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>沃尔玛平台卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>已上线</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>评估加拿大/墨西哥市场拓展机会 &#183; 利用广告和履约工具提升运营</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>&#9312;评估加拿大/墨西哥市场拓展机会 &#9313;利用广告和履约工具提升运营 &#9314;关注跨境配送流程优化</div>
     </div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://www.benzinga.com/insights/news/26/05/52717461/walmart-reports-q1-2026-results-full-earnings-call-transcript" target="_blank">Benzinga/Walmart Q1</a></div>
   </div>
@@ -374,21 +369,21 @@
 
   <div class="policy-card card-note">
     <div class="card-top"><span class="platform-tag tag-amazon">亚马逊</span><span class="urgency-badge">&#x1F7E2; 留意</span></div>
-    <div class="card-title">赢得皮草关税上诉 &#183; 二审裁定3P卖家承担IOR关税风险<span class="new-tag">NEW</span></div>
+    <div class="card-title">赢得皮草关税上诉 &#183; 二审裁定3P卖家承担IOR关税风险 &#183; 平台不担责<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>5月20日美国第二巡回上诉法院驳回False Claims Act诉讼，再次明确IOR承担关税风险非平台</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>5月20日美国第二巡回上诉法院驳回举报人False Claims Act诉讼，裁定无证据表明亚马逊知道或故意忽视海外卖家低估货物价值逃避关税。再次明确IOR（进口商记录）承担关税风险，非平台</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>所有亚马逊3P卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>已裁决</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>确认供应商合同IOR条款 &#183; 核对申报价值与发票一致 &#183; 将到岸成本纳入SKU级P&amp;L</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>&#9312;确认供应商合同IOR条款清晰 &#9313;核对申报价值与商业发票一致 &#9314;将到岸成本纳入SKU级P&amp;L</div>
     </div>
     <div class="card-source"><span class="source-label">来源：</span><a href="https://novadata.io/resources/news/amazon-fur-tariff-appeal-marketplace-liability-may-2026" target="_blank">NovaData/Reuters</a></div>
   </div>
 
   <div class="policy-card card-note">
     <div class="card-top"><span class="platform-tag tag-customs">海关</span><span class="urgency-badge">&#x1F7E2; 留意</span></div>
-    <div class="card-title">青岛海关40条便利化措施 &#183; "前置监管仓"+"退货中心仓" &#183; 先查验后装运降本30%<span class="new-tag">NEW</span></div>
+    <div class="card-title">青岛海关40条便利化措施 &#183; "前置监管仓"+"退货中心仓"创新 &#183; 跨境先查验后装运降本30%<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>青岛海关"政策工具箱(2026)"：创新跨境电商"前置监管仓""退货中心仓"，推广"先查验后装运"降物流成本30%</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>青岛海关推出"政策工具箱(2026)"，40条措施71项任务：创新跨境电商出口"前置监管仓""退货中心仓"模式，推广"先查验后装运"可降物流成本30%。支持TIR+跨境电商/保税模式。扩大出口拼箱试点</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>青岛/山东地区跨境卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>已发布</div>
       <div class="summary-item"><span class="summary-label">卖家做什么：</span>关注"前置监管仓""退货中心仓"新模式，评估物流成本优化机会</div>
@@ -398,40 +393,22 @@
 
   <div class="policy-card card-note">
     <div class="card-top"><span class="platform-tag tag-temu">Temu</span><span class="urgency-badge">&#x1F7E2; 留意</span></div>
-    <div class="card-title">越南站重启上线 &#183; 正与工贸部门合规申办资质 &#183; 设约$34最低消费门槛<span class="new-tag">NEW</span></div>
+    <div class="card-title">越南站重启上线 &#183; 正与工贸部门合规申办经营资质 &#183; 设最低消费门槛约$34<span class="new-tag">NEW</span></div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">变了什么：</span>经历约一年半封禁后Temu越南站已重启上线，正合规申办电商经营资质，设置约$34最低消费门槛</div>
+      <div class="summary-item"><span class="summary-label">变了什么：</span>经历约一年半封禁后Temu越南站已重启上线。平台表示正与越南工贸部门合规申办电商经营资质。目前设置约34美元最低消费门槛，仅支持银行卡与Apple Pay付款，暂未接入当地主流钱包</div>
       <div class="summary-item"><span class="summary-label">影响谁：</span>越南市场跨境卖家</div>
       <div class="summary-item"><span class="summary-label">何时生效：</span>已上线</div>
-      <div class="summary-item"><span class="summary-label">卖家做什么：</span>关注越南站合规进展，评估重启后市场机会</div>
+      <div class="summary-item"><span class="summary-label">卖家做什么：</span>关注越南站合规进展，评估重启后的市场机会和合规要求</div>
     </div>
     <div class="card-source"><span class="source-label">来源：</span><a href="http://m.ennews.com/News/news_short?tags_id=28077" target="_blank">亿恩网</a></div>
-  </div>
-
-  <!-- ==================== 历史归档 ==================== -->
-  <div class="archive-section">
-    <div class="archive-title">📂 历史归档</div>
-    <ul class="archive-list">
-      <li><a href="./daily/20260523.html"><span class="archive-date">5月23日（周六）<span class="new-badge">NEW</span></span><span class="archive-meta"><span class="count">11条</span>政策</span></a></li>
-      <li><a href="./daily/20260522.html"><span class="archive-date">5月22日（周五）</span><span class="archive-meta"><span class="count">10条</span>政策</span></a></li>
-      <li><a href="./daily/20260521.html"><span class="archive-date">5月21日（周四）</span><span class="archive-meta"><span class="count">10条</span>政策</span></a></li>
-      <li><a href="./daily/20260520.html"><span class="archive-date">5月20日（周三）</span><span class="archive-meta"><span class="count">10条</span>政策</span></a></li>
-      <li><a href="./daily/20260519.html"><span class="archive-date">5月19日（周二）</span><span class="archive-meta"><span class="count">10条</span>政策</span></a></li>
-      <li><a href="./daily/20260518.html"><span class="archive-date">5月18日（周一）</span><span class="archive-meta"><span class="count">11条</span>政策</span></a></li>
-      <li><a href="./daily/20260517.html"><span class="archive-date">5月17日（周日）</span><span class="archive-meta"><span class="count">10条</span>政策</span></a></li>
-      <li><a href="./daily/20260516.html"><span class="archive-date">5月16日（周六）</span><span class="archive-meta"><span class="count">14条</span>政策</span></a></li>
-      <li><a href="./daily/20260515.html"><span class="archive-date">5月15日（周五）</span><span class="archive-meta"><span class="count">18条</span>政策</span></a></li>
-      <li><a href="./daily/20260514.html"><span class="archive-date">5月14日（周四）</span><span class="archive-meta"><span class="count">18条</span>政策</span></a></li>
-      <li><a href="./daily/20260513.html"><span class="archive-date">5月13日（周三）</span><span class="archive-meta"><span class="count">10条</span>政策</span></a></li>
-    </ul>
   </div>
 
   <!-- ==================== 页脚 ==================== -->
   <div class="page-footer">
     <div class="footer-divider"></div>
-    <div>📊 数据来源：搜狐/出海网/头条/ANTARA/CBP等</div>
-    <div>🔄 每日09:00自动更新 · 近24小时跨境政策变化</div>
-    <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI · 纯静态HTML零JS</div>
+    <div>&#128202; 数据来源：搜狐/头条/NovaData/Cross Border Magazine/Benzinga/Luyiss/亿恩网等</div>
+    <div>&#128260; 每日09:00自动更新 &#183; 近24小时跨境政策变化</div>
+    <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> &#183; Powered by Coze AI &#183; 纯静态HTML零JS</div>
   </div>
 
 </div>
