@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年5月25日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-kitchen { background: #0d9488; }
+    .tag-bbq { background: #dc2626; }
+    .tag-smart { background: #8b5cf6; }
+    .tag-drink { background: #2563eb; }
+    .tag-bake { background: #d97706; }
+    .tag-outdoor { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #0d9488; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #f0fdfa; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #0d9488; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #115e59; line-height: 1.7; }
+    .detail-verdict { background: #fef3c7; border-radius: 6px; margin: 8px 18px 14px; padding: 12px 14px; }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🏠 美国$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">2026年5月25日（周日·Memorial Day）</span>
+      <span class="update-hint">每日分析</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="20260524.html" class="nav-arrow">← 前日</a>
+    <span class="nav-center">5月25日</span>
+    <span style="color:#d1d5db;font-size:14px;">最新</span>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">🔥 今日机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">2</div>
+      <div class="stat-label">💜 新兴品类</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">3</div>
+      <div class="stat-label">📈 热门品类</div>
+    </div>
+  </div>
+
+  <!-- ==================== 机会速报 ==================== -->
+  <div class="section-label section-hot">🔥 今日$90+机会速报</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">厨房电器</span>
+      <span class="urgency-badge">🔥 Amazon独家首发</span>
+    </div>
+    <div class="card-title">Martha Stewart全线厨房电器Amazon首发 — $150站立搅拌机"KitchenAid平替"确认</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Martha Stewart全系列10+款Amazon独家，搅拌机$150对标KitchenAid $600，法式门炸烤炉$239.99。People/Food & Wine/Today均报道</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$150（搅拌机）/ $239.99-300（炸烤炉）/ $100（慢炖锅）</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>验证了$100-200"品牌感厨房电器"巨大需求。中国供应链$99-129搅拌机毛利60%+</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$150（搅拌机）/ $239.99-300（法式门炸烤炉）/ $100（慢炖锅/台式搅拌机）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://www.foodandwine.com/martha-stewart-new-kitchen-appliances-amazon-11954807" style="color:#0d9488;">Food & Wine</a> / <a href="https://people.com/martha-stewart-kitchen-appliance-line-amazon-exclusive-11955607" style="color:#0d9488;">People</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">玻璃炸锅</span>
+      <span class="urgency-badge">💜 三品牌验证</span>
+    </div>
+    <div class="card-title">Yuko智能玻璃空气炸锅$160 — 玻璃炸锅品类从Ninja一家独大走向多品牌竞争</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Yuko $160（原$200）五月新品，Ninja Crispi $159同步促销，NutriChef玻璃炸锅$119.99新品5/19上架。三品牌同时验证"玻璃可视炸锅"品类</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$159-160（Yuko/Ninja Crispi）/ $119.99（NutriChef）</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>硼硅酸玻璃+加热组件BOM约$35-45，$129-149零售毛利45-55%。"看得见的烹饪"天然适合TikTok短视频</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$119.99-160（当前市场）/ $129-149（平替甜蜜点）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://www.foodandwine.com/amazon-new-releases-kitchen-home-end-of-may-2026-11978972" style="color:#0d9488;">Food & Wine</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-drink">胶囊咖啡</span>
+      <span class="urgency-badge">🔥 罕见新品</span>
+    </div>
+    <div class="card-title">Nespresso Vertuo Up $229 — Nespresso罕见新品，胶囊咖啡机升级周期启动</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Nespresso推出全新机型Vertuo Up，一键冷/热，奶油色+超薄设计。Food & Wine评价"rarely releases an entirely new coffee maker"</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$229（新品首发）</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>Nespresso新品=用户升级周期。真正机会在于兼容胶囊配件（$0.3-0.5/个 vs 官方$1.2/个）和Nespresso周边配件</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$229（Vertuo Up新品）/ $159-199（旧款Essenza/Vertuo Next）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://www.foodandwine.com/amazon-new-releases-kitchen-home-end-of-may-2026-11978972" style="color:#0d9488;">Food & Wine</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-drink">冰饮赛道</span>
+      <span class="urgency-badge">📈 Memorial Day确认</span>
+    </div>
+    <div class="card-title">Memorial Day后冰饮机价格战确认 — Ninja SLUSHi $259，品类进入"大众化"第二阶段</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Amazon/Best Buy $259，Walmart $249，CamelCamelCamel确认历史最低。NBC/Today/EatingWell/Tribune四大媒体同时推荐。SLUSHi Twist $399.99预售6/4发货</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$249-259（原版促销）/ $399.99（Twist）/ $149-199（平替空间）</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>Memorial Day $259=品类教育最后一公里。促销结束后价格大概率回升$299-349，$149-199单舱压缩机冰饮机平替窗口正在打开</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$249-259（SLUSHi促销）/ $399.99（Twist）/ $149-199（平替空间）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://www.nbcnews.com/select/shopping/ninja-slushi-deal-of-the-day-2026-rcna345892" style="color:#0d9488;">NBC News</a> / <a href="https://www.today.com/shop/memorial-day-deals-2026-rcna346397" style="color:#0d9488;">Today</a>]</span></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-bake">披萨炉</span>
+      <span class="urgency-badge">💜 最被低估</span>
+    </div>
+    <div class="card-title">室内电披萨炉品类爆发 — Ooni Volt 12 + Chefman + Breville三强格局，$100-149空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Ooni Volt 12获评2026 Best Pizza Maker #1，850°F/90秒出饼$399。Chefman 800°F+5触摸预设$200-300。PIEZANO入门$99。品类从户外走向室内</div>
+      <div class="summary-item"><span class="summary-label">参考价格：</span>$399（Ooni高端）/ $200-300（Chefman中端）/ $99（PIEZANO入门）</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$100-149区间是最大空白——"入门级室内披萨炉"600°F+陶瓷石板BOM&lt;$40，$129定价极具竞争力。90秒出饼=TikTok最佳短视频素材</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span>⭐⭐⭐⭐⭐</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$99（PIEZANO入门）/ $200-300（Chefman）/ $399（Ooni Volt 12）/ $900（Breville顶配）</div>
+    </div>
+    <div style="padding:0 18px 12px;"><span class="stars">⭐⭐⭐⭐⭐</span> <span style="font-size:12px;color:#6b7280;">[来源：<a href="https://www.bestreviews.guide/pizza-makers" style="color:#0d9488;">Best Reviews Guide</a> / <a href="https://www.foodnetwork.com/how-to/packages/shopping/sales-and-deals/best-memorial-day-sales" style="color:#0d9488;">Food Network</a>]</span></div>
+  </div>
+
+  <!-- ==================== 重点详析 ==================== -->
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">Martha Stewart全线厨房电器 — Amazon独家策略背后的选品信号</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$80-300（全线）/ $150（核心单品搅拌机）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 5月25日最新动态</div>
+      <div class="detail-text">
+        <ul>
+          <li>Amazon独家发售10+款厨房电器，统一配色：sky blue/caviar gray/honeydew green/linen white</li>
+          <li>法式门炸烤炉34QT/12-in-1降至$239.99（原$300），3.9星</li>
+          <li>站立搅拌机5.3QT/12速/防溅盖+倒料口$150，People评价"mixing power just as solid"</li>
+          <li>Slickdeals社区关注度高，法式门炸烤炉Deal评分Good Deal</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">Martha Stewart验证了"品牌联名+Amazon独家"打法。$150搅拌机真实成本&lt;$50，$99-129定价段毛利60%+。配色策略是关键差异化——"linen white"和"honeydew green"在TikTok出片率极高。套系化打法：搅拌机+电热水壶+烤面包机"三件套"$299比单卖更有吸引力</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">Martha Stewart不是威胁而是信号——证明了$100-200"品牌感厨房电器"的巨大需求。中国品牌机会：做$99的"轻奢版"搅拌机，6-8速+NFC食谱卡+APP联动，用"智能+颜值"差异化。推荐指数：⭐⭐⭐⭐⭐</div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">玻璃空气炸锅品类确认 — 三品牌同时验证趋势</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$119.99-200（当前市场）/ $129-149（平替甜蜜点）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 5月25日最新动态</div>
+      <div class="detail-text">
+        <ul>
+          <li>Yuko Smart Glass Air Fryer $160（原$200），Amazon五月新品推荐</li>
+          <li>Ninja Crispi 4-in-1 $159（原$180），Walmart Memorial Day $134</li>
+          <li>NutriChef 4QT Glass Air Fryer &amp; Grill $119.99，5/19新品上架</li>
+          <li>Food & Wine评价Yuko "to rival the Ninja Crispi"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">玻璃炸锅本质="烹饪+储存+食用"三位一体，核心场景是独居/小家庭meal prep。差异化方向：①NFC标签联动食谱APP ②双层玻璃隔热（防烫手） ③模块化设计：同一加热头配不同容量玻璃杯。TikTok最佳拍摄：从上方45°俯拍玻璃容器内食物变化</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">三个品牌同时入局=品类趋势确认。$129-149做"高硼硅玻璃+更大容量+模块化杯组"，毛利45-55%。关键是玻璃品质——必须用3.3高硼硅，不能用钠钙玻璃。推荐指数：⭐⭐⭐⭐⭐</div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">室内电披萨炉 — 2026夏季最被低估的$90+品类</div>
+    <div class="detail-section">
+      <div class="detail-label">💰 价格区间</div>
+      <div class="detail-text">$99（PIEZANO入门）/ $200-300（Chefman中端）/ $399（Ooni Volt 12高端）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">📊 5月25日最新动态</div>
+      <div class="detail-text">
+        <ul>
+          <li>Ooni Volt 12获评2026 Best Pizza Maker #1，850°F/90秒，室内外两用$399</li>
+          <li>Chefman Indoor Pizza Oven 800°F+5触摸屏预设，60%折扣促销</li>
+          <li>Ninja Artisan Electric Pizza Oven MO201 700°F+5合1</li>
+          <li>Solo Stove Pi Dual-Fuel Pizza Oven Memorial Day $399.99（原$589.99）</li>
+          <li>Food Network/Allrecipes将披萨炉列为Memorial Day热门品类</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 发散思考</div>
+      <div class="hl-text">室内电披萨炉解决"公寓+披萨"刚需——美国3500万公寓住户中披萨排名第一配送食品。$99-149价位段最大空白：PIEZANO $99功能简陋，Chefman $200+太贵。中国供应链做"入门级室内电披萨炉"：600°F陶瓷石板+定时器+观察窗，BOM&lt;$40，$129零售。交叉销售：披萨石板$29.99、披萨铲$19.99、披萨刀$14.99——配件毛利率80%+</div>
+    </div>
+    <div class="detail-verdict">
+      <div class="verdict-label">✅ 机会判断</div>
+      <div class="verdict-text">室内电披萨炉是2026年最被低估的品类。户外披萨炉已教育市场，但$400+定价把公寓用户挡在门外。$99-149"室内入门款"是蓝海。烹饪场景强（90秒出饼=TikTok素材），复购配件多，季节性强（夏秋旺）。目标9月前上架赶上秋季销售季。推荐指数：⭐⭐⭐⭐⭐</div>
+    </div>
+  </div>
+
+  <!-- ==================== 其他值得关注 ==================== -->
+  <div class="section-label section-other">🔍 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">Chef Preserve真空封口机$139 — TikTok爆款，真空封口品类持续走强</div>
+    <div class="watch-text">出现在20 Viral Kitchen Gadgets榜单，Nesco Deluxe VS-12 $234.42同期热销。Meal prep+减少食物浪费双重需求推动。$90-139是真空封口机甜蜜点 [来源：<a href="https://globalnews.ca/the-curator/11324998/viral-kitchen-gadgets/" style="color:#0d9488;">Global News</a>]</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">植物奶机$109.99 — TikTok病毒传播，植物基饮食趋势持续</div>
+    <div class="watch-text">35oz容量+延时定时+自清洁功能，原$139.99。TikTok #nutmilk 持续增长，植物基奶从"极客专属"走向"大众日常" [来源：<a href="https://globalnews.ca/the-curator/11324998/viral-kitchen-gadgets/" style="color:#0d9488;">Global News</a>]</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">Our Place Compact Rice Cooker $139 — 陶瓷内胆+可拆电源线</div>
+    <div class="watch-text">6杯容量+陶瓷不粘内胆+洗碗机可洗内盖+可拆卸电源线。设计导向型厨房小家电趋势——消费者愿意为"好看+安全材料"付溢价 [来源：<a href="https://www.foodandwine.com/amazon-new-releases-kitchen-home-end-of-may-2026-11978972" style="color:#0d9488;">Food & Wine</a>]</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">Shrinluck便携式抽油烟机$83 — 持续出现在五月新品推荐</div>
+    <div class="watch-text">Food & Wine五月新品推荐再次出现。便携式抽油烟机品类持续验证，$149-179升级版（油烟感应+自动调速）仍是最佳切入点 [来源：<a href="https://www.foodandwine.com/amazon-new-releases-kitchen-home-end-of-may-2026-11978972" style="color:#0d9488;">Food & Wine</a>]</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">GoveeLife智能Nugget制冰机Pro $450 — AI静音+语音控制</div>
+    <div class="watch-text">从$500降至$450，60磅/日产+AI静音+语音控制。GoveeLife正在建立智能制冰机第二品牌位（仅次于GE Opal），$250-299简化版仍有空间 [来源：<a href="https://www.foodandwine.com/amazon-new-releases-kitchen-home-end-of-may-2026-11978972" style="color:#0d9488;">Food & Wine</a>]</div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    数据来源：Amazon · Food & Wine · NBC News · Today · EatingWell · Allrecipes · Consumer Reports 等<br>
+    分析时间：2026年5月25日 · <a href="index.html">返回首页</a>
+  </div>
+
+</div>
+</body>
+</html>
