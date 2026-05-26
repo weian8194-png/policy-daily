@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/audit.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/api/audit", "dest": "/api/audit.py" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}

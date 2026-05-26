@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Listing CDQ/LQI 深度审计工具</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.6;min-height:100vh}
+
+/* Header */
+.hero{background:linear-gradient(135deg,#161b22 0%,#0d1117 50%,#161b22 100%);padding:60px 20px 40px;text-align:center;border-bottom:2px solid #FF9900;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 50% 50%,rgba(255,153,0,0.05) 0%,transparent 50%);animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:0.5}50%{opacity:1}}
+.hero h1{font-size:2.2rem;margin-bottom:8px;position:relative}
+.hero h1 span{color:#FF9900}
+.hero .subtitle{color:#8b949e;font-size:1rem;max-width:600px;margin:0 auto 30px}
+
+/* Search */
+.search-box{max-width:600px;margin:0 auto;display:flex;gap:12px;position:relative}
+.search-box input{flex:1;padding:16px 20px;border:2px solid #30363d;border-radius:12px;background:#161b22;color:#e6edf3;font-size:1.1rem;outline:none;transition:border-color 0.3s}
+.search-box input:focus{border-color:#FF9900}
+.search-box input::placeholder{color:#484f58}
+.search-box button{padding:16px 32px;background:linear-gradient(135deg,#FF9900,#e68a00);color:#000;border:none;border-radius:12px;font-size:1rem;font-weight:700;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;white-space:nowrap}
+.search-box button:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(255,153,0,0.3)}
+.search-box button:active{transform:translateY(0)}
+.search-box button:disabled{opacity:0.6;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* Loading */
+.loading{display:none;text-align:center;padding:40px 20px}
+.loading.show{display:block}
+.spinner{width:48px;height:48px;border:4px solid #30363d;border-top-color:#FF9900;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading p{color:#8b949e;font-size:0.95rem}
+
+/* Error */
+.error-msg{display:none;max-width:700px;margin:20px auto;padding:20px;background:#2d1b1b;border:1px solid #e94560;border-radius:12px;text-align:center}
+.error-msg.show{display:block}
+.error-msg h3{color:#e94560;margin-bottom:8px}
+
+/* Report Container */
+.report{display:none;max-width:920px;margin:0 auto;padding:20px}
+.report.show{display:block}
+
+/* Sections */
+.section{background:#161b22;border-radius:12px;padding:25px;margin-bottom:20px;border:1px solid #30363d}
+.section-title{font-size:1.15rem;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid #30363d;display:flex;align-items:center;gap:8px}
+
+/* Meta grid */
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.meta-item{background:#0d1117;padding:12px;border-radius:8px;border:1px solid #21262d}
+.meta-label{color:#8b949e;font-size:0.75rem;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px}
+.meta-value{font-weight:600;font-size:1rem}
+
+/* Title display */
+.title-display{margin-top:15px;color:#8b949e;font-size:0.9rem;line-height:1.6}
+.title-display strong{color:#e6edf3}
+
+/* Scores */
+.scores-row{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin:20px 0}
+.ring-box{text-align:center}
+.ring-wrap{position:relative;width:110px;height:110px;margin:0 auto}
+.ring-wrap svg{width:110px;height:110px}
+.ring-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.6rem;font-weight:800}
+.ring-label{margin-top:8px;font-size:0.85rem;color:#8b949e}
+.grade-badge{display:inline-block;padding:10px 28px;border-radius:20px;font-size:1.2rem;font-weight:700;margin-top:12px}
+.g-optimized{background:#16c79a;color:#111}
+.g-great{background:#4ade80;color:#111}
+.g-good{background:#FF9900;color:#111}
+.g-fair{background:#f59e0b;color:#111}
+.g-poor{background:#e94560;color:#fff}
+
+/* Issues */
+.issue-card{display:flex;gap:12px;padding:14px;border-radius:8px;margin-bottom:10px;align-items:flex-start}
+.cdq-issue{background:#1a1520;border-left:4px solid #e94560}
+.lqi-issue{background:#1a1d15;border-left:4px solid #f59e0b}
+.issue-num{background:#30363d;color:#58a6ff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;flex-shrink:0}
+.issue-title{font-weight:600;margin-bottom:4px;font-size:0.95rem}
+.issue-detail{color:#8b949e;font-size:0.88rem}
+
+/* Title optimization */
+.title-before{background:#1a1520;border:1px solid #e94560;padding:14px;border-radius:8px;line-height:1.5;font-size:0.9rem;margin-bottom:12px}
+.title-after{background:#1a1d15;border:1px solid #16c79a;padding:14px;border-radius:8px;line-height:1.5;font-size:0.9rem}
+.arrow-down{text-align:center;font-size:1.8rem;color:#16c79a;margin:8px 0}
+
+/* Bullets */
+.bullet-item{display:flex;gap:10px;padding:10px;background:#0d1117;border-radius:6px;margin-bottom:8px;align-items:flex-start;font-size:0.9rem}
+.bullet-num{background:#30363d;color:#58a6ff;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0}
+
+/* Specs table */
+.specs-table{width:100%;border-collapse:collapse}
+.specs-table td{padding:10px 12px;border-bottom:1px solid #21262d;font-size:0.88rem}
+.spec-key{color:#8b949e;width:40%}
+.spec-val{color:#e6edf3}
+
+/* Footer */
+.footer{text-align:center;padding:30px;color:#484f58;font-size:0.8rem;border-top:1px solid #21262d;margin-top:20px}
+
+/* Amazon link */
+.amazon-link{display:inline-block;margin-top:12px;color:#FF9900;text-decoration:none;font-size:0.9rem;font-weight:500}
+.amazon-link:hover{text-decoration:underline}
+
+/* New search button */
+.new-search{display:block;margin:0 auto 20px;padding:10px 24px;background:#21262d;color:#e6edf3;border:1px solid #30363d;border-radius:8px;font-size:0.9rem;cursor:pointer;transition:background 0.2s}
+.new-search:hover{background:#30363d}
+
+@media(max-width:600px){
+  .hero h1{font-size:1.5rem}
+  .search-box{flex-direction:column}
+  .search-box button{width:100%}
+  .meta-grid{grid-template-columns:1fr 1fr}
+  .scores-row{gap:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🔍 Listing <span>CDQ/LQI</span> 深度审计</h1>
+  <p class="subtitle">输入ASIN，自动抓取Amazon数据并生成合规性+转化率双维度诊断报告</p>
+  <div class="search-box">
+    <input type="text" id="asinInput" placeholder="输入ASIN，例如 B0DQKPLXMB" maxlength="10" autocomplete="off">
+    <button id="auditBtn" onclick="runAudit()">开始审计</button>
+  </div>
+</div>
+
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+  <p id="loadingText">正在抓取Amazon数据...</p>
+</div>
+
+<div class="error-msg" id="errorMsg">
+  <h3>❌ 审计失败</h3>
+  <p id="errorText"></p>
+</div>
+
+<div class="report" id="report">
+  <button class="new-search" onclick="newSearch()">← 审计新的ASIN</button>
+  <div id="reportContent"></div>
+</div>
+
+<div class="footer">
+  <p>Listing CDQ/LQI Audit Tool · Powered by Vercel · Data fetched from Amazon.com</p>
+</div>
+
+<script>
+const API_URL = '/api/audit';
+
+document.getElementById('asinInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') runAudit();
+});
+
+function newSearch() {
+  document.getElementById('report').classList.remove('show');
+  document.getElementById('asinInput').focus();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+async function runAudit() {
+  const asin = document.getElementById('asinInput').value.trim().toUpperCase();
+  const btn = document.getElementById('auditBtn');
+  const loading = document.getElementById('loading');
+  const errorMsg = document.getElementById('errorMsg');
+  const report = document.getElementById('report');
+
+  if (!asin || asin.length !== 10 || !/^[A-Z0-9]{10}$/.test(asin)) {
+    showError('请输入有效的10位ASIN（字母+数字组合）');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '审计中...';
+  loading.classList.add('show');
+  errorMsg.classList.remove('show');
+  report.classList.remove('show');
+
+  const steps = [
+    '正在抓取Amazon数据...',
+    '解析产品页面...',
+    '执行CDQ合规性检查...',
+    '执行LQI转化率分析...',
+    '生成审计报告...'
+  ];
+  let step = 0;
+  const timer = setInterval(() => {
+    step = (step + 1) % steps.length;
+    document.getElementById('loadingText').textContent = steps[step];
+  }, 2000);
+
+  try {
+    const resp = await fetch(`${API_URL}?asin=${asin}`);
+    const data = await resp.json();
+
+    clearInterval(timer);
+    loading.classList.remove('show');
+
+    if (data.error) {
+      showError(data.error);
+      return;
+    }
+
+    if (!data.audit) {
+      showError('审计引擎未返回有效结果，请稍后重试');
+      return;
+    }
+
+    renderReport(data);
+    report.classList.add('show');
+    window.scrollTo({top: document.querySelector('.hero').offsetHeight, behavior: 'smooth'});
+
+  } catch (err) {
+    clearInterval(timer);
+    loading.classList.remove('show');
+    showError('网络请求失败: ' + err.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '开始审计';
+  }
+}
+
+function showError(msg) {
+  document.getElementById('errorText').textContent = msg;
+  document.getElementById('errorMsg').classList.add('show');
+}
+
+function esc(text) {
+  const d = document.createElement('div');
+  d.textContent = text;
+  return d.innerHTML;
+}
+
+function makeRing(score, color, label) {
+  const circ = 2 * Math.PI * 42;
+  const offset = circ * (1 - score / 100);
+  return `<div class="ring-box">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="42" fill="none" stroke="#30363d" stroke-width="8"/>
+        <circle cx="50" cy="50" r="42" fill="none" stroke="${color}" stroke-width="8"
+          stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${offset.toFixed(1)}"
+          transform="rotate(-90 50 50)" stroke-linecap="round"/>
+      </svg>
+      <div class="ring-num" style="color:${color}">${score}</div>
+    </div>
+    <div class="ring-label">${label}</div>
+  </div>`;
+}
+
+function renderReport(data) {
+  const a = data.audit;
+  const gradeClass = 'g-' + a.grade.toLowerCase();
+  const gradeColors = {Optimized:'#16c79a',Great:'#4ade80',Good:'#FF9900',Fair:'#f59e0b',Poor:'#e94560'};
+  const overallColor = gradeColors[a.grade] || '#8b949e';
+
+  // Meta items
+  const metaItems = [
+    {label:'ASIN', value:data.asin},
+    {label:'品牌', value:esc(data.brand || 'N/A')},
+    {label:'价格', value:'$' + (data.price || 'N/A')},
+    {label:'评分', value:(data.rating || 'N/A') + ' ★'},
+    {label:'评论数', value:data.review_count || 'N/A'},
+    {label:'BSR排名', value:'#' + (data.bsr_rank || 'N/A')},
+    {label:'图片/视频', value:(data.images_count || 0) + '张' + (data.has_video ? '+ 视频' : '')},
+    {label:'A+页面', value:data.has_aplus ? '✅ 有' : '❌ 无'},
+  ];
+
+  let metaHtml = metaItems.map(m =>
+    `<div class="meta-item"><div class="meta-label">${m.label}</div><div class="meta-value">${m.value}</div></div>`
+  ).join('');
+
+  // CDQ issues
+  const levelIcons = {critical:'🔴',high:'⚠️',medium:'🟡',low:'ℹ️'};
+  let cdqHtml = a.cdq_issues.length ? a.cdq_issues.map((iss, i) =>
+    `<div class="issue-card cdq-issue"><div class="issue-num">${i+1}</div><div>
+      <div class="issue-title">${levelIcons[iss.level]||'ℹ️'} ${esc(iss.title)}</div>
+      <div class="issue-detail">${esc(iss.detail)}</div></div></div>`
+  ).join('') : '<p style="color:#16c79a">✅ 未发现明显CDQ降权风险</p>';
+
+  // LQI issues
+  const lqiIcons = {high:'❌',medium:'⚠️',low:'💡'};
+  let lqiHtml = a.lqi_issues.length ? a.lqi_issues.map((iss, i) =>
+    `<div class="issue-card lqi-issue"><div class="issue-num">${i+1}</div><div>
+      <div class="issue-title">${lqiIcons[iss.level]||'ℹ️'} ${esc(iss.title)}</div>
+      <div class="issue-detail">${esc(iss.detail)}</div></div></div>`
+  ).join('') : '<p style="color:#16c79a">✅ 未发现明显LQI转化流失</p>';
+
+  // Bullets
+  let bulletsHtml = (data.bullets || []).map((b, i) =>
+    `<div class="bullet-item"><span class="bullet-num">${i+1}</span><span>${esc(b.substring(0, 150) + (b.length > 150 ? '...' : ''))}</span></div>`
+  ).join('');
+
+  // Specs
+  let specsHtml = '';
+  if (data.tech_specs && Object.keys(data.tech_specs).length) {
+    specsHtml = Object.entries(data.tech_specs).map(([k, v]) =>
+      `<tr><td class="spec-key">${esc(k)}</td><td class="spec-val">${esc(v)}</td></tr>`
+    ).join('');
+  } else {
+    specsHtml = '<tr><td colspan="2" style="color:#8b949e;text-align:center;padding:20px">未抓取到技术规格</td></tr>';
+  }
+
+  const html = `
+    <div class="section">
+      <h2 class="section-title">📋 产品基本信息</h2>
+      <div class="meta-grid">${metaHtml}</div>
+      <div class="title-display"><strong>标题：</strong>${esc(data.title || 'N/A')}</div>
+      ${data.bsr_category ? `<div style="margin-top:8px;color:#8b949e;font-size:0.85rem">类目: ${esc(data.bsr_category)}</div>` : ''}
+      <a href="${data.url || '#'}" target="_blank" class="amazon-link">在Amazon打开 →</a>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">📊 综合评分</h2>
+      <div class="scores-row">
+        ${makeRing(a.cdq_score, '#e94560', 'CDQ 合规')}
+        ${makeRing(a.lqi_score, '#16c79a', 'LQI 转化')}
+        ${makeRing(a.overall_score, overallColor, '综合')}
+      </div>
+      <div style="text-align:center">
+        <span class="grade-badge ${gradeClass}">当前等级: ${a.grade}</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">🔴 CDQ降权风险（${a.cdq_issues.length}项）</h2>
+      ${cdqHtml}
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">🟡 LQI转化流失点（${a.lqi_issues.length}项）</h2>
+      ${lqiHtml}
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">✏️ 标题优化</h2>
+      <div class="title-before"><strong>Before:</strong> ${esc(data.title || 'N/A')}</div>
+      <div class="arrow-down">↓</div>
+      <div class="title-after"><strong>After:</strong> ${esc(a.optimized_title || 'N/A')}</div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">📝 当前五点描述</h2>
+      ${bulletsHtml || '<p style="color:#8b949e">未能抓取五点描述</p>'}
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">⚙️ 技术规格</h2>
+      <table class="specs-table">${specsHtml}</table>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">💡 优化建议总结</h2>
+      <div style="color:#8b949e;font-size:0.9rem;line-height:1.8">
+        <p>1. <strong style="color:#e94560">紧急修复CDQ降权项</strong>：${a.cdq_issues.filter(i=>i.level==='critical'||i.level==='high').length}项高危问题需立即处理</p>
+        <p>2. <strong style="color:#f59e0b">补全缺失后台属性</strong>：提升CDQ字段饱和度，增加系统收录概率</p>
+        <p>3. <strong style="color:#16c79a">优化LQI转化要素</strong>：${a.lqi_issues.filter(i=>i.level==='high').length}项关键转化流失点待修复</p>
+        <p>4. <strong style="color:#58a6ff">标题SEO优化</strong>：去特殊字符+去重+补足150-200字符</p>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('reportContent').innerHTML = html;
+}
+</script>
+</body>
+</html>
