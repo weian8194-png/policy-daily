@@ -1,0 +1,38 @@
+name: Listing CDQ/LQI Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      asin:
+        description: 'Amazon ASIN (10 characters)'
+        required: true
+        type: string
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Fetch and Audit
+        env:
+          ASIN: ${{ github.event.inputs.asin }}
+        run: |
+          python3 listing-audit/audit_engine.py "$ASIN"
+
+      - name: Push report to GitHub Pages
+        run: |
+          git config user.name "能工智人"
+          git config user.email "bot@coze.site"
+          git add -A
+          git diff --staged --quiet || git commit -m "audit: ASIN ${{ github.event.inputs.asin }}"
+          git push origin main
