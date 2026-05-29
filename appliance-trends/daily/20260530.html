@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年5月30日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-kitchen { background: #0d9488; }
+    .tag-bbq { background: #dc2626; }
+    .tag-smart { background: #8b5cf6; }
+    .tag-drink { background: #2563eb; }
+    .tag-bake { background: #d97706; }
+    .tag-outdoor { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-source a:hover { text-decoration: underline; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .detail-verdict { background: #fef3c7; border-radius: 6px; margin: 8px 18px 14px; padding: 12px 14px; }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🧊 美国$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">2026年5月30日（周六）</span>
+      <span class="update-hint">透明冰块机+玻璃炸锅爆发日</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="20260529.html">← 前日</a>
+    <span class="nav-center">5月30日</span>
+    <span style="color:#d1d5db;font-size:14px;">最新</span>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">重点机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">$400</div>
+      <div class="stat-label">🧊 Rock Plus</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">$84B</div>
+      <div class="stat-label">📈 智能厨房</div>
+    </div>
+  </div>
+
+  <div class="section-label section-hot">🔥 今日重点机会</div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-drink">制冰机</span>
+      <span class="urgency-badge" style="color:#8b5cf6;">🆕 5/28首发</span>
+    </div>
+    <div class="card-title">Euhomy Rock Plus/Rock Pro — 透明冰块机新物种</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>Rock Plus $399.99(2寸方冰)，Rock Pro $499.99(2.5寸球冰)，App远程+自清洁，5/28纽约首发</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$150-250区间入门clear ice制冰机完全空白，bullet ice→clear ice品类进化</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> 透明方冰+App+自清洁，$199-249可快速切入</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（bullet ice基础）/ $150-300（clear ice空白）/ $399-500（Euhomy Rock高端）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/euhomy-helps-keep-this-summer-chilled-with-launch-of-rock-plus-and-rock-pro-smart-ice-makers-302785049.html" target="_blank">PRNewswire</a> | <a href="https://www.ofzenandcomputing.com/best-undercounter-ice-makers/" target="_blank">OfZenAndComputing</a></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">玻璃炸锅</span>
+      <span class="urgency-badge" style="color:#0d9488;">🔥 TikTok爆款</span>
+    </div>
+    <div class="card-title">Ninja Crispi Pro玻璃空气炸锅 — "无毒可视"新范式</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>$499.99，1800W，硼硅玻璃PFAS-free，6模式，5.7L+2.3L双容器，CNET两年最佳</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$150-250区间入门玻璃空气炸锅空白，"无毒+可视"双卖点TikTok极易传播</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> 硼硅玻璃+密封盖+洗碗机安全，$179-229切入</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（传统涂层）/ $150-300（入门玻璃空白）/ $400-500（Ninja Crispi Pro高端）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://7news.com.au/7you/home/the-viral-ninja-crispi-pro-glass-air-fryer-is-finally-available-in-australia-and-its-100-off-for-a-limited-time-c-22348222" target="_blank">7News</a> | <a href="https://baby-bangs.com/best-air-fryer-without-teflon/" target="_blank">baby-bangs</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-smart">智能砧板</span>
+      <span class="urgency-badge" style="color:#8b5cf6;">🆕 新品类</span>
+    </div>
+    <div class="card-title">Modern Innovations智能砧板刀具套装 — UV自清洁系统</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>4色砧板+4刀+UV消毒+热风干燥，15.25×4.25寸超薄底座，Amazon 4.6星，SoftPickr 9.0/10</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>食品安全焦虑(交叉污染/细菌)是真实痛点，$90-150入门版空白</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> LED消毒+热风+3色砧板，$99-129切入</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$50-90（传统砧板刀架）/ $90-150（入门智能系统空白）/ $150-200（Modern Innovations全套）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://softpickr.com/product/modern-innovations-smart-cutting-board-knife-set-review/" target="_blank">SoftPickr</a> | <a href="https://www.amazon.com/dp/B0CP31FPGC" target="_blank">Amazon</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-bake">搅拌机</span>
+      <span class="urgency-badge" style="color:#f59e0b;">🍰 70年首升级</span>
+    </div>
+    <div class="card-title">KitchenAid Artisan Plus — 70年来首次大升级</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>碗内照明灯+升级控制系统+hub盖整体拆卸，Serious Eats 17台评测6强赢家</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-150入门智能搅拌机空白（App+定时+自停），搅拌机→台面装饰品趋势</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐</span> KitchenAid品牌壁垒高，但入门智能搅拌机有机会</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（入门智能空白）/ $290-500（KitchenAid Artisan系列）/ $630-800（7Qt/Ankarsrum高端）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.seriouseats.com/best-stand-mixers-7377555" target="_blank">Serious Eats</a> | <a href="https://8legs.app/article/kitchenaid-artisan-plus-stand-mixer-review-highlights-upgraded-controls" target="_blank">8legs</a></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">无毒趋势</span>
+      <span class="urgency-badge" style="color:#0d9488;">🌿 品类重塑</span>
+    </div>
+    <div class="card-title">无毒厨房趋势爆发 — "无毒"从卖点变刚需</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>Food &amp; Wine 5/29专题13款无毒工具，Our Place电饭煲$125，Caraway工具套装$225</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>PFAS/PFOA焦虑达临界点，$90-130入门无毒小家电(电饭煲/水壶/慢炖锅)蓝海</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> 陶瓷涂层+玻璃+不锈钢，所有$90+listing必须标PFAS-free</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-130（入门无毒小家电空白）/ $125-225（Our Place/Caraway中端）/ $295-670（Caraway/Made In高端）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.foodandwine.com/non-toxic-kitchen-gadgets-may-2026-11984676" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Euhomy Rock Plus/Rock Pro透明冰块机】台式clear ice新物种</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-150（bullet ice基础）/ $150-300（clear ice空白）/ $399-500（Euhomy Rock高端）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>PRNewswire 5/28：Euhomy纽约首发Rock Plus($399.99)和Rock Pro($499.99)</li>
+          <li>Rock Plus：2英寸透明方冰，双模式(速度/超清)，App远程，一键自洁，实时彩屏</li>
+          <li>Rock Pro：2.5英寸透明球冰，不锈钢+铝+皮革质感，连续保冷，15分钟深度自洁</li>
+          <li>CEO Paul Shen："消费者追求更高品质的家庭饮品体验，冰的品质是关键"</li>
+          <li>Euhomy已占据Amazon制冰机多品类Best Seller（OfZenAndComputing 5/28）</li>
+          <li>制冰机正从bullet ice→clear ice升级，类似胶囊咖啡→研磨咖啡的品类进化</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$150-300区间"入门透明冰块机"是最大空白。Rock Plus $400太贵，bullet ice $80-150品质感差。$199-249定价，做到：1）1.5-2寸透明方冰（分层冻结）；2）3-4预设(方冰/球冰/碎冰/快速)；3）App定时+自清洁；4）紧凑设计。成本$70-100，毛利35-45%。中国供应链已有clear ice模具技术。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"透明冰+鸡尾酒配方App"：制冰机内置蓝牙，推送当季鸡尾酒配方+冰型推荐</li>
+          <li>桌面冰酒一体机：制冰+红酒/威士忌温控展示柜组合，$300-500</li>
+          <li>与调酒师KOL联名：快速建立"专业级家用制冰"心智</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Ninja Crispi Pro玻璃空气炸锅】"无毒可视"空气炸锅新范式</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-150（传统涂层）/ $150-300（入门玻璃空白）/ $400-500（Ninja Crispi Pro高端）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>CNET两年长期评测：Crispi系列连续"综合最佳空气炸锅"</li>
+          <li>Crispi Pro：1800W硼硅玻璃，100%零PFAS/PTFE/PFOA，6模式，5.7L+2.3L</li>
+          <li>4色可选(Sage Green/Stone/Pink/Cyberspace)，TikTok 40万+浏览</li>
+          <li>烹饪→存储→上桌全在同一个容器，减少碗碟使用</li>
+          <li>Recrisp功能可恢复剩菜至"比新鲜还好"的口感</li>
+          <li>网易转载CNET中文评测5/29："用了两年多，依然是最想推荐的"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$150-300区间"入门玻璃空气炸锅"是第二大空白。$179-229定价，做到：1）硼硅玻璃碗4-5Qt；2）3-4模式(Air Fry/Roast/Bake/Recrisp)；3）密封盖直接存冰箱；4）洗碗机安全。成本$60-85，毛利40-50%。"无毒+可视"双卖点在TikTok/Instagram极易做内容。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"玻璃空气炸锅+真空封口"二合一：烹饪后直接抽真空封口保存</li>
+          <li>户外便携版：USB-C充电+紧凑PowerPod设计，露营/BBQ场景</li>
+          <li>联名配色：与知名设计师/烘焙博主推出限定色，快速建立品牌调性</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Modern Innovations智能砧板刀具套装】自清洁砧板系统新品类</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$50-90（传统砧板刀架）/ $90-150（入门智能系统空白）/ $150-200（Modern Innovations全套）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>SoftPickr 9.0/10评分，Amazon 4.6星，ASIN B0CP31FPGC</li>
+          <li>4色砧板防交叉污染(肉/鱼/禽/蔬)+4专业级不锈钢刀</li>
+          <li>UV消毒+PTC热风干燥，底座仅15.25"W×4.25"D×11"H</li>
+          <li>解决三大痛点：①交叉污染 ②刀架潮湿细菌 ③砧板+刀架堆叠占空间</li>
+          <li>主差评在"缺少chef's knife"和"砧板厚度不够"——升级空间明确</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$90-150区间"入门智能砧板系统"有明确需求。$99-129定价，做到：1）3色砧板(肉/蔬/熟食)+3把刀；2）LED紫外线消毒(非UV-C，降成本)；3）PTC热风干燥；4）LED状态灯+一键启动。成本$35-50，毛利45-55%。食品安全焦虑是真实痛点，差评明确指向升级方向。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"智能砧板+称重"二合一：底座内置称重传感器，切菜同时称量</li>
+          <li>与食材配送服务联名：砧板色标对应食谱包</li>
+          <li>面向RV/小公寓超薄版：8寸宽底座，旅行便携</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 KitchenAid Artisan Plus 70年来首次大升级</div>
+    <div class="watch-text">
+      <strong>Artisan Plus</strong>：碗内照明灯+升级控制系统+hub盖整体拆卸<br>
+      <strong>Serious Eats 5/29</strong>：17台搅拌机评测6强，KitchenAid 7Qt $630获最佳整体<br>
+      <strong>Smeg Forte</strong>：$550，"最时尚且与KitchenAid同样好"<br>
+      <strong>Ooni Halo Pro</strong>：专业面团搅拌机，面包师新选择<br>
+      趋势：搅拌机从"工具"走向"台面装饰品"，色彩+设计是溢价关键
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 无毒厨房趋势全面爆发</div>
+    <div class="watch-text">
+      <strong>Food &amp; Wine 5/29</strong>：13款无毒工具专题，"Put Your Microplastic Worries to Rest"<br>
+      <strong>Our Place无毒电饭煲</strong>：$125，6杯+6预设，陶瓷涂层<br>
+      <strong>Caraway工具套装</strong>：$225，不锈钢全套+桦木托盘<br>
+      <strong>Made In水壶</strong>：$110，不锈钢+温度计<br>
+      关键材质转向：陶瓷涂层→硼硅玻璃→不锈钢→碳钢，告别特氟龙/黑色塑料
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 夏季饮品升级趋势</div>
+    <div class="watch-text">
+      <strong>AllRecipes 5/28</strong>：Fancy Hydration成为"地位象征"<br>
+      <strong>Silonn Nugget制冰机</strong>：$150（原$230），冰球型<br>
+      <strong>Haden Heritage电水壶</strong>：$90，1.7L多色复古，首次进入$90+门槛<br>
+      <strong>Smeg复古滴漏咖啡机</strong>：$260，50年代复古设计<br>
+      饮品制作设备+冰块正从功能性走向社交属性
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 2026全球小家电市场大趋势</div>
+    <div class="watch-text">
+      <strong>智能厨房市场</strong>：2026年$84.4亿→2035年$1268.6亿，CAGR 35.13%<br>
+      <strong>73%新品搭载AI</strong>，61%消费者优先远程监控，47%使用自动烹饪程序<br>
+      <strong>68%智能家居用户</strong>至少运营1台联网厨房设备<br>
+      亚马逊7大核心品类：拒绝低价内卷→$50+差异化→场景视频→合规认证→复购订阅
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>数据来源：PRNewswire、7News、baby-bangs、Food &amp; Wine、AllRecipes、SoftPickr、Serious Eats、OfZenAndComputing、CORE01、Ukiyo Journal、Business Research Insights、IndexBox、Iconic Life、搜狐</p>
+    <p>生成时间：2026年5月30日 | <a href="../index.html">返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
