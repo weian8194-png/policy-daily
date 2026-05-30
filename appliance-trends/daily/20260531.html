@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年5月31日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-kitchen { background: #0d9488; }
+    .tag-bbq { background: #dc2626; }
+    .tag-smart { background: #8b5cf6; }
+    .tag-drink { background: #2563eb; }
+    .tag-bake { background: #d97706; }
+    .tag-outdoor { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-source a:hover { text-decoration: underline; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .detail-verdict { background: #fef3c7; border-radius: 6px; margin: 8px 18px 14px; padding: 12px 14px; }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🤖 美国$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">2026年5月31日（周日）</span>
+      <span class="update-hint">AI烹饪机器人+植物奶机爆发日</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="20260530.html">← 前日</a>
+    <span class="nav-center">5月31日</span>
+    <span style="color:#d1d5db;font-size:14px;">最新</span>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">重点机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">$1,499</div>
+      <div class="stat-label">🤖 NoshOne</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">$119</div>
+      <div class="stat-label">⚖️ Gravitas</div>
+    </div>
+  </div>
+
+  <div class="section-label section-hot">🔥 今日重点机会</div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-smart">AI烹饪</span>
+      <span class="urgency-badge" style="color:#8b5cf6;">🆕 TechCrunch专题</span>
+    </div>
+    <div class="card-title">NoshOne AI烹饪机器人 — "Adulting神器"引爆社交</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>$1,499，AI NoshOS自动切/炒/调味/装盘/自洁，500+菜品，Kickstarter预购夏季发货</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$1,499太贵，$300-500简化版AI炒菜机完全空白，"Adulting焦虑"真实需求</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> AI自主烹饪新物种，$300-500切入可快速占领</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$300-500（入门AI炒菜机空白）/ $1,499（NoshOne）/ $1,750+（Posha机器人臂）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://imp.news/gadgets/six-gadgets-promising-less-work-in-the-kitchen-87701/" target="_blank">IMP News</a> | <a href="https://www.ukiyo-journal.com/en/article/adult-kitchen-life-latest-gadgets-6" target="_blank">Ukiyo Journal</a></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-drink">植物奶</span>
+      <span class="urgency-badge" style="color:#0d9488;">🔥 品类爆发</span>
+    </div>
+    <div class="card-title">Nama M1植物奶机 — 植物奶从"小众"变"刚需"</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>Nome M1 $449离心力制奶，Amazon入门$25-80品质差，植物奶市场CAGR 8.2%</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-200高品质+自清洁+App植物奶机完全空白，自制成本仅为超市1/6</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> 经济账清晰+健康刚需+环保叙事，$99-179切入</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$25-80（Amazon入门品质差）/ $90-200（高品质植物奶机空白）/ $449（Nama M1）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://imp.news/gadgets/six-gadgets-promising-less-work-in-the-kitchen-87701/" target="_blank">IMP News</a> | <a href="https://www.yorkshire.com/marketplace/home-and-garden-536/kitchen-and-dining-638/kitchen-appliances-730/soy-milk-makers-5057/3ddb09a3-46cc-4f88-881f-0839e70215ca" target="_blank">Yorkshire</a></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">搅拌器</span>
+      <span class="urgency-badge" style="color:#0d9488;">🔥 社交病毒</span>
+    </div>
+    <div class="card-title">StirMate GEN3自动搅拌器 — "Hands-Free"趋势先锋</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>$89.99，无绳10h续航，适配6-9寸锅，TechCrunch 5/25专题，TikTok/X病毒传播</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-150智能搅拌助手空白（App定时+温控+LED），"看灶焦虑"真实痛点</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> 简单但击中真实痛点，TikTok极易传播</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$89.99（StirMate GEN3）/ $90-150（智能搅拌助手空白）/ $200+（专业级）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.amazon.com/dp/B0D2RK7PT3" target="_blank">Amazon StirMate</a> | <a href="https://www.ukiyo-journal.com/en/article/adult-kitchen-life-latest-gadgets-6" target="_blank">Ukiyo Journal</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-smart">精准秤</span>
+      <span class="urgency-badge" style="color:#8b5cf6;">🆕 5/28首发</span>
+    </div>
+    <div class="card-title">ThermoWorks Gravitas精准秤 — 专业级家用化新赛道</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>$119首发，NIST认证±0.7g，无线可拆卸显示屏，IP66/67防水，Engadget报道</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>"专业级家用化"品类成立，$90-120温控+称重一体机是方向</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> Thermapen品牌背书，精准秤品类首次被重新定义</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$10-30（普通秤）/ $90-120（专业级精准秤）/ $119（Gravitas）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.engadget.com/2183798/thermoworks-gravitas-scale-has-a-detachable-display-and-a-20-minute-memory/" target="_blank">Engadget</a> | <a href="https://www.thermoworks.com/gravitas/" target="_blank">ThermoWorks</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">不锈钢炸锅</span>
+      <span class="urgency-badge" style="color:#f59e0b;">🍳 无毒路线2.0</span>
+    </div>
+    <div class="card-title">Cosori Iconic不锈钢空气炸锅 — "无毒"路线2.0</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>$249，6.5Qt，1725W DC电机5档风扇，PFAS-free陶瓷，Food &amp; Wine评测推荐</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>区别Ninja Crispi Pro玻璃路线，不锈钢+陶瓷是另一种"无毒"方案，$150-200入门空白</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐</span> 无毒趋势持续，不锈钢方案是对玻璃方案的补充</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（传统涂层）/ $150-200（入门不锈钢空白）/ $249（Cosori Iconic）/ $500（Ninja Crispi Pro）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://baby-bangs.com/best-air-fryer-without-teflon/" target="_blank">baby-bangs</a> | <a href="https://www.foodandwine.com/clever-writer-loved-kitchen-tools-gadgets-amazon-2026-11984688" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">【NoshOne AI烹饪机器人】"Adulting"焦虑催生自主烹饪新品类</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$300-500（入门AI炒菜机空白）/ $1,499（NoshOne）/ $1,750+（Posha机器人臂）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>TechCrunch 5/25专题"6 Kitchen Gadgets That Make Adulting Feel Easier"引爆关注</li>
+          <li>NoshOne：AI驱动NoshOS，自动切菜/炒菜/调味/装盘/自清洁，500+菜品</li>
+          <li>传感器实时监测含水量/食材质地/焦化程度，自动调节火候和调料</li>
+          <li>可识别已有食材推荐菜谱，配备可重复使用调料盒（精确到毫克）</li>
+          <li>Kickstarter预购，2026年夏季发货</li>
+          <li>限制：不能烘焙/烤/蒸</li>
+          <li>TikTok/X反应："电影里的未来终于到了！""丢进食材就有咖喱""考虑外卖成本几个月回本"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$300-500区间"入门AI炒菜机"是最大空白。不需要NoshOne的完整机器人臂和调料盒系统，做到：1）自动翻炒+温控+定时；2）6-8预设菜谱（炒饭/意面/咖喱/牛排等）；3）App远程监控+推送提醒；4）不粘陶瓷内胆PFAS-free；5）自清洁模式。成本$80-120，毛利35-45%。中国供应链已有类似产品（赛米控/膳魔师），需重新设计为美式审美+App+合规。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"AI炒菜机+调料订阅"：每月配送调料包+新菜谱解锁，SaaS模式</li>
+          <li>与meal kit联名：食材包直接适配炒菜机预设</li>
+          <li>面向RV/公寓超紧凑版：3Qt单功能版$199，露营/宿舍场景</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Nama M1植物奶机】植物奶从"小众饮食"变"大众刚需"</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$25-80（Amazon入门品质差）/ $90-200（高品质植物奶机空白）/ $449（Nama M1）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Nama M1 $449：离心力制奶（燕麦/杏仁/大豆/腰果），数分钟完成，TechCrunch专题</li>
+          <li>Amazon入门$25-80（DFJKJUU等品牌），12刀头8-in-1，但品质差口感粗糙</li>
+          <li>植物奶市场2025年$77.9亿，CAGR 8.2%持续至2035</li>
+          <li>超市燕麦奶$3-4/半加仑，自制$0.5-0.75，6-9月回本</li>
+          <li>消费者痛点：入门款"塑料味""口感粗糙""清洗麻烦"；高端款太贵</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-179定价，做到：1）304不锈钢内胆零塑料接触热奶；2）12刀头+高速搅拌细腻口感；3）一键自清洁+可拆洗设计；4）4-6预设（杏仁/燕麦/大豆/腰果/温奶/室温）；5）App菜谱+营养追踪。成本$25-40，毛利50-60%。植物奶从"健康选择"变为"经济选择"，回本周期短是核心卖点。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"植物奶+咖啡"一体机：先制奶再自动萃取，$249-299</li>
+          <li>与Oatly联名：预包装原料包+机器预设</li>
+          <li>B2B2C：与健身房/素食餐厅合作，"自制植物奶站"概念</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【StirMate GEN3自动搅拌器】"Hands-Free"趋势先锋</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$89.99（StirMate GEN3）/ $90-150（智能搅拌助手空白）/ $200+（专业级）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>StirMate GEN3：$89.99，无绳10h续航，1h快充，可插电连续运行</li>
+          <li>适配6-9寸直径、3-9寸深度所有锅</li>
+          <li>可调速+新设计搅拌片适配浓稠食物</li>
+          <li>TechCrunch 5/25专题，X/TikTok病毒传播</li>
+          <li>无障碍辅助价值：帮助行动不便/慢性疼痛用户</li>
+          <li>社交反应："15分钟搅risotto的日子结束了""简单机制最实用""放心离开灶台，育儿必备"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-149定价，做到：1）App蓝牙定时设定搅拌时长+速度曲线；2）3档速度+脉冲模式；3）LED状态灯+低电量提醒；4）温度传感器过高自动加速；5）食品级硅胶搅拌片可拆换。成本$25-35，毛利55-65%。"自动搅拌"看似小功能，但击中"看灶焦虑"真实痛点，且易于TikTok传播。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"智能搅拌+温度探针"二合一：集成温度监测，App推送目标温度到达提醒</li>
+          <li>与铸铁锅品牌联名：搭配Le Creuset/Staub销售</li>
+          <li>扩展到"灶台助手"生态：搅拌器+定时器+温控器，App统一管理</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 EuroCucina 2026：厨房从"机器"变"Spa"</div>
+    <div class="watch-text">
+      <strong>Whirlpool</strong>："Cooking like a session of meditation"<br>
+      <strong>Miele</strong>："Pearl Beige is the new Black"，新品告别纯黑<br>
+      <strong>Bosch</strong>："世界首款隐形清洁机器人"（水槽下充电）<br>
+      <strong>Miele</strong>蒸汽烤箱HydroClean自清洁功能引发围观<br>
+      趋势：AI功能标配化，但话术从"技术"转向"内心平静"
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 ThermoWorks跨界：从温度到重量</div>
+    <div class="watch-text">
+      <strong>Gravitas精准秤</strong>：$119首发，NIST认证±0.7g，无线可拆卸显示屏<br>
+      <strong>Engadget 5/29</strong>：20分钟记忆功能解决"自动关机丢失读数"痛点<br>
+      IP66/67防水，5色可选匹配Thermapen系列<br>
+      启示：专业品牌跨界"家用化"是可复制的品类创新路径
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 户外厨房趋势：从"烤架"到"全厨房"</div>
+    <div class="watch-text">
+      <strong>ELLE Decor 5/27</strong>：业主要求beverage fridges/ice makers/burners/pizza ovens全套<br>
+      覆盖结构（凉棚/遮阳帆）成标配，集成照明/风扇/加热器<br>
+      海洋级五金+特种木材解决耐候问题<br>
+      夏季饮品设备（制冰机/冷萃/冰沙机）是户外厨房标配
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 夏季色彩回归 + 面包机仪式感</div>
+    <div class="watch-text">
+      <strong>AllRecipes 5/28</strong>：大胆色彩回归——饱和绿/番茄红/黄油黄/亮蓝<br>
+      <strong>Le Creuset</strong> Dutch Oven $330（原$435）| <strong>Our Place</strong> Wonder Oven $149（原$185）<br>
+      <strong>Smeg</strong>复古咖啡机$260 | <strong>Haden</strong>电水壶$90<br>
+      <strong>KitchenArm</strong>智能面包机$149.99：29程序，TechCrunch称"被面包香唤醒，成人自尊心提升"<br>
+      趋势：搅拌机→台面装饰品，面包机→生活仪式感载体，色彩+设计是溢价关键
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>数据来源：TechCrunch、Food &amp; Wine、Engadget、AllRecipes、GlobeNewswire、baby-bangs、Ukiyo Journal、Iconic Life、Azure Magazine、ELLE Decor、ThermoWorks</p>
+    <p>生成时间：2026年5月31日 | <a href="../index.html">返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
