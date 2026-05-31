@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年6月1日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-kitchen { background: #0d9488; }
+    .tag-bbq { background: #dc2626; }
+    .tag-smart { background: #8b5cf6; }
+    .tag-drink { background: #2563eb; }
+    .tag-bake { background: #d97706; }
+    .tag-outdoor { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-source a:hover { text-decoration: underline; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .detail-verdict { background: #fef3c7; border-radius: 6px; margin: 8px 18px 14px; padding: 12px 14px; }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🍹 美国$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">2026年6月1日（周一）</span>
+      <span class="update-hint">冰饮机+AI咖啡机爆发日</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="20260531.html">← 前日</a>
+    <span class="nav-center">6月1日</span>
+    <span style="color:#d1d5db;font-size:14px;">最新</span>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">重点机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">$1,500</div>
+      <div class="stat-label">☕ Rivelia</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">$280</div>
+      <div class="stat-label">🍹 SLUSHi</div>
+    </div>
+  </div>
+
+  <div class="section-label section-hot">🔥 今日重点机会</div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-drink">冰饮机</span>
+      <span class="urgency-badge" style="color:#8b5cf6;">🆕 5/28发布</span>
+    </div>
+    <div class="card-title">Ninja SLUSHi Twist双舱冰饮机 — 夏季新品引爆"双口味"趋势</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>5/28全新发布，双48oz独立舱体可同时运行，SlushAssist AI自动感温，支持20%酒精含量</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>SLUSHi系列已成夏季爆款$280-500，$90-200紧凑型冰饮机完全空白</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> 夏季品类爆发+价格空白，半导体制冷可降本</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-200（入门冰饮机空白）/ $280（SLUSHi FS301）/ $500（SLUSHi Max XXL）/ Twist待定价</div>
+    </div>
+    <div class="card-source">来源：<a href="https://bestreviews.com/articles/kitchen/ice-cream-makers/ninja-slushi-twist" target="_blank">BestReviews</a> | <a href="https://www.foodandwine.com/clever-writer-loved-kitchen-tools-gadgets-amazon-2026-11984688" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-drink">AI咖啡</span>
+      <span class="urgency-badge" style="color:#8b5cf6;">🆕 AI学习口味</span>
+    </div>
+    <div class="card-title">De'Longhi Rivelia AI咖啡机 — "AI学习你的口味"开创个性化咖啡</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>$1,499.95，4用户AI档案+CoffeeRoutines按时间推荐饮品，18一键配方，Bean Switch双豆仓</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$1,500太贵，$300-500"AI个性化研磨一体机"是空白，AI学习口味是差异化核心</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> AI个性化咖啡是真实需求，$300-500切入可快速占领</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-200（基础胶囊机）/ $300-500（AI研磨一体机空白）/ $700-1,000（中高端全自动）/ $1,500（Rivelia）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://brickseek.com/p/delonghi-rivelia-automatic-coffee-and/38593917" target="_blank">BrickSeek</a> | <a href="https://vidianews.com/2026/05/25/tech/gadget/6-kitchen-gadgets-that-make-adult-life-easier-techcrunch/" target="_blank">TechCrunch via Vidianews</a></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">无毒电饭煲</span>
+      <span class="urgency-badge" style="color:#0d9488;">🔥 无毒家电升级</span>
+    </div>
+    <div class="card-title">Our Place无毒电饭煲 — "无毒"从锅具进军小家电</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>$125首发，Thermakind陶瓷涂层零PFAS/PTFE/铅/镉，6杯容量+6预设，Food &amp; Wine 5/29专题</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>无毒趋势从涂层→内胆是品类升级，$90-150不锈钢内胆多功能电饭煲空白</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> 内胆安全性是高频痛点，PFAS限制法案倒逼升级</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$30-60（基础涂层）/ $90-150（不锈钢内胆多功能空白）/ $125（Our Place陶瓷）/ $200+（IH高端）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.foodandwine.com/non-toxic-kitchen-gadgets-may-2026-11984676" target="_blank">Food &amp; Wine</a> | <a href="https://www.yorkshire.com/marketplace/home-and-garden-536/747ac1de-7928-4dac-b14a-f7ead2eef1f1" target="_blank">Yorkshire</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-smart">水培花园</span>
+      <span class="urgency-badge" style="color:#f59e0b;">🌿 厨房农场</span>
+    </div>
+    <div class="card-title">智能室内水培花园 — "厨房农场"从边缘变主流</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>LetPot LPH-SE $100（12舱+App+WiFi），Click &amp; Grow SG9 $250，水培比土壤快40%，评测站专题</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-150高品质+美式设计水培花园空白，现有产品外观偏极客/廉价</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> 新鲜香草需求增长+设计升级空间大</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$50-80（入门品质差）/ $90-150（高品质智能水培空白）/ $250（Click &amp; Grow SG9）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://siemens-mobile.com/best-smart-indoor-gardens/" target="_blank">Smart Indoor Gardens Review</a> | <a href="https://www.5-top.co.uk/hydroponics" target="_blank">5-top Hydroponics</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-bake">复古色彩</span>
+      <span class="urgency-badge" style="color:#f59e0b;">🎨 黄油黄今夏</span>
+    </div>
+    <div class="card-title">复古色彩小家电 — "黄油黄"成今夏关键词</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>GH 5/30+AllRecipes 5/28趋势预测，黄油黄/番茄红/饱和绿回归，Haden $105/Smeg $260/Our Place $199</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-150复古色彩品类可中国供应链快速复刻，设计溢价高</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐</span> 趋势明确但竞争门槛低，需品牌+设计差异化</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-105（Haden吐司机）/ $90-150（复古色彩小家电空白）/ $170-260（Smeg品牌溢价区）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.goodhousekeeping.com/home-products/g71444678/vintage-inspired-kitchen-appliances-to-buy/" target="_blank">Good Housekeeping</a> | <a href="https://www.allrecipes.com/summer-ktichen-trend-predictions-amazon-2026-11984902" target="_blank">AllRecipes</a></div>
+  </div>
+
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Ninja SLUSHi Twist双舱冰饮机】"双口味"引爆夏季家用冰饮新品类</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-200（入门冰饮机空白）/ $280（SLUSHi FS301 88oz）/ $500（SLUSHi Max XXL 150oz）/ Twist待定价</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Ninja 5/28发布SLUSHi Twist：双48oz独立舱体可同时运行，可混合双口味倾倒</li>
+          <li>Dual SlushAssist AI技术：传感器自动识别成分并调温，零猜测</li>
+          <li>支持20%酒精含量，10+杯9oz装/批次</li>
+          <li>英国Amazon SLUSHi FS301从£260降至£199，4.7星/3000+评价</li>
+          <li>Food &amp; Wine推荐SLUSHi Max XXL $500，BestReviews 5/28专题报道全系列</li>
+          <li>痛点：需4%以上含糖量才能成冰，出料口偶有堵塞</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$120-180定价，做到：1）单舱48oz容量；2）5预设（鸡尾酒/冰沙/奶昔/果汁/苏打）；3）半导体制冷（无需压缩机，降本$50+）；4）可拆卸舱体洗碗机安全；5）紧凑设计宽度&lt;20cm。成本$40-60，毛利50-60%。Ninja已教育市场但价格门槛高，$120-180捕获"想试但不舍$280+"的用户。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"冰饮机+糖浆订阅"：每月配送风味糖浆包+新配方解锁</li>
+          <li>与酒精品牌联名：龙舌兰/Moscato限定配色+配方卡</li>
+          <li>面向RV/露营12V车载版：$99入门，夏季场景延伸</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【De'Longhi Rivelia AI咖啡机】"AI学习你的口味"开创个性化咖啡</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-200（基础胶囊机）/ $300-500（AI研磨一体机空白）/ $700-1,000（中高端全自动）/ $1,500（Rivelia）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>De'Longhi Rivelia：$1,499.95 MSRP，18一键配方，4用户AI档案</li>
+          <li>CoffeeRoutines：按时间段推荐饮品（早浓espresso，晚温和latte）</li>
+          <li>Bean Adapt Technology：根据咖啡豆自动调节研磨粗细/剂量/水温</li>
+          <li>Bean Switch System：可互换双豆仓，一键切换豆种</li>
+          <li>3.5寸全彩触控屏，LatteCrema Hot自动奶泡</li>
+          <li>社媒反应："不用动脑就喝到最爱的latte""它了解我的偏好有种奇妙感"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$299-449定价，做到：1）2用户AI档案（记住"我的早间double espresso"和"她的晚间oat latte"）；2）内置锥刀研磨+15档调节；3）自动奶泡器；4）App设定冲泡时间→到点自动冲泡；5）单豆仓设计简化成本。成本$100-150，毛利40-50%。核心差异化是"AI记忆口味+定时自动冲泡"，不是比功能全而是比"懂你"。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"AI咖啡+咖啡豆订阅"：每月配送2种豆+新冲泡配方推送</li>
+          <li>与Oatly/Chobani联名：预置植物奶冲泡曲线</li>
+          <li>Office版：8用户档案+RFID杯垫识别，$699企业市场</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Our Place无毒电饭煲】"无毒"从锅具进军小家电</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$30-60（基础涂层电饭煲）/ $90-150（不锈钢内胆多功能空白）/ $125（Our Place陶瓷）/ $200+（IH高端）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Our Place Non-Toxic Rice Cooker：$125（原$139），6杯容量，6预设模式</li>
+          <li>Thermakind®陶瓷涂层：零PFAS/PTFE/铅/镉</li>
+          <li>Our Place Tiny Grain Cooker：£79（1.75Qt小容量版）</li>
+          <li>Food &amp; Wine 5/29专题"Put Your Microplastic Worries to Rest"重点推荐</li>
+          <li>加州/纽约PFAS限制法案倒逼内胆材料升级</li>
+          <li>美国电饭煲市场2026-2035价值CAGR 4-6%，高端机型驱动</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-149定价，做到：1）304/316不锈钢内胆零涂层零争议；2）8预设（白米/糙米/燕麦/粥/蒸/酸奶/慢炖/保温）；3）IH电磁加热均匀口感；4）App远程启动+推送完成提醒；5）可拆洗蒸汽阀+内盖。成本$35-55，毛利50-60%。核心卖点是"内胆安全"——电饭煲高频使用+内胆长期接触食物，PFAS-free比锅具更有说服力。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"电饭煲+有机米订阅"：每月配送当季有机米+新食谱</li>
+          <li>不锈钢+陶瓷双内胆套装：一个煮饭一个炖汤，$179</li>
+          <li>与HelloFresh合作：Meal kit配料直接适配电饭煲预设</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 AWE2026趋势：从"单品智能"到"场景融合"</div>
+    <div class="watch-text">
+      <strong>AWE2026上海展</strong>：17万㎡/25万+观众/80亿直播带货，均创纪录<br>
+      四大趋势：AI重塑智能生活 | 健康场景全面扩展 | 低碳转型势不可挡 | 出行生态崛起<br>
+      "人-家-出行"无缝连接概念引发关注<br>
+      启示：AI不再只是"加个App"，而是"给设备手脚"，机器人化是方向
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 美国电饭煲市场升级：从"煮饭工具"到"智能烹饪中心"</div>
+    <div class="watch-text">
+      2026-2035美国电饭煲市场价值CAGR 4-6%，高端Micom/IH/智能机型驱动<br>
+      美国家庭渗透率60-65%，升级空间大<br>
+      PFAS限制法案可能倒逼内胆材料升级<br>
+      启示：电饭煲是"无毒家电"最容易突破的品类
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 户外厨房市场：$100亿且年增9%</div>
+    <div class="watch-text">
+      美国户外厨房市场2026年达$100亿，年增9%<br>
+      内置烤架$1,500-$12,000+，是户外厨房锚点产品<br>
+      夏季冰饮设备（制冰机/冷萃/冰沙机）是户外厨房标配<br>
+      启示：冰饮机+户外厨房=夏季双重利好
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 智能家电市场2026：$780亿，CAGR 25%</div>
+    <div class="watch-text">
+      2026年智能家电市场规模约$780亿（Statista）<br>
+      63%消费者愿为智能家电多付钱（长期节省+便利）<br>
+      AI互联家电家庭可降能耗30% | 23%家庭使用语音控制<br>
+      启示：AI不是噱头而是消费者愿意付费的功能，关键是"真正学习用户习惯"
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>数据来源：TechCrunch、Food &amp; Wine、Good Housekeeping、AllRecipes、BestReviews、BrickSeek、Appliance Trends、AWE2026、IndexBox、Statista</p>
+    <p>生成时间：2026年6月1日 | <a href="../index.html">返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
