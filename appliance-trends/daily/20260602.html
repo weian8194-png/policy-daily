@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年6月2日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-kitchen { background: #0d9488; }
+    .tag-bbq { background: #dc2626; }
+    .tag-smart { background: #8b5cf6; }
+    .tag-drink { background: #2563eb; }
+    .tag-bake { background: #d97706; }
+    .tag-outdoor { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-source a:hover { text-decoration: underline; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .detail-verdict { background: #fef3c7; border-radius: 6px; margin: 8px 18px 14px; padding: 12px 14px; }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🍳 美国$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">2026年6月2日（周二）</span>
+      <span class="update-hint">玻璃炸锅+AI烹饪机器人日</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="20260601.html">← 前日</a>
+    <span class="nav-center">6月2日</span>
+    <span style="color:#d1d5db;font-size:14px;">最新</span>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">重点机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">$500</div>
+      <div class="stat-label">🤖 Nosh One</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">$399</div>
+      <div class="stat-label">🔥 Crispi Pro</div>
+    </div>
+  </div>
+
+  <div class="section-label section-hot">🔥 今日重点机会</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">玻璃炸锅</span>
+      <span class="urgency-badge" style="color:#0d9488;">🔥 TikTok爆款</span>
+    </div>
+    <div class="card-title">Ninja Crispi Pro玻璃空气炸锅 — "看得见的炸锅"革命</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>TikTok病毒传播，全透明耐热玻璃+模块化双容器，6烹饪模式，PFAS-free陶瓷涂层，可烤3.4kg整鸡</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$399-500旗舰太贵，$90-150小容量玻璃空气炸锅完全空白，"看得见烹饪"是体验级差异化</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> TikTok天然传播素材+无毒材料双热点</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（玻璃空气炸锅空白）/ $160（Crispi 4-in-1便携版）/ $399-500（Crispi Pro旗舰）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://7news.com.au/7you/home/the-viral-ninja-crispi-pro-glass-air-fryer-is-finally-available-in-australia-and-its-100-off-for-a-limited-time-c-22348222.amp" target="_blank">7News Australia</a> | <a href="https://www.foodandwine.com/editor-loved-small-kitchen-appliances-may-2026-11987117" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-smart">AI烹饪</span>
+      <span class="urgency-badge" style="color:#8b5cf6;">🆕 完全免手</span>
+    </div>
+    <div class="card-title">Nosh One AI烹饪机器人 — "完全免手"引爆TikTok成人生活外挂</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>TechCrunch专题推荐，NoshOS AI自动切菜+翻炒+调味（毫克级），Kickstarter预售夏季发货，社媒称"电影未来到现实"</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>Nosh定价$500+，$150-250"AI翻炒+智能调味"简化版空白，"免手烹饪"是2026核心关键词</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> "不用看锅"是真实刚需，简化版切80%市场</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（自动翻炒器空白）/ $150-250（AI翻炒+调味空白）/ $500+（Nosh One全自动）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.ukiyo-journal.com/article/adult-kitchen-life-latest-gadgets-6" target="_blank">Ukiyo Journal via TechCrunch</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">AI洗碗</span>
+      <span class="urgency-badge" style="color:#8b5cf6;">🆕 众筹破纪录</span>
+    </div>
+    <div class="card-title">LISSOME J1 AI超薄洗碗机 — Makuake 1.2亿日元史上最高</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>仅28cm宽（全球最薄之一），10万Pa水压，AI自适应清洁，15分钟快洗，22件餐具，前代R1已出6万+台</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>小户型台面洗碗机需求暴涨，$200-300"AI+超薄"台面洗碗机美国市场空白</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> 美国公寓/租房人群精准匹配</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$200-300（AI超薄台面洗碗机空白）/ $350-500（现有台面洗碗机）/ $600+（嵌入式）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://third-news.com/article/bfd10ace-5a5c-11f1-8c7e-9ca3ba08e13f" target="_blank">Third News (LISSOME J1)</a></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-kitchen">无毒炸锅</span>
+      <span class="urgency-badge" style="color:#0d9488;">🔥 不锈钢+无毒</span>
+    </div>
+    <div class="card-title">Cosori Iconic不锈钢空气炸锅 — "无毒+不锈钢"双击痛点</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>Food &amp; Wine 2026年度推荐，$249，6.5Qt大容量，PFAS-free陶瓷涂层+全不锈钢外壳，强对流风扇</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-150不锈钢+PFAS-free小容量空气炸锅空白，"无毒材料+高级质感"双卖点叠加</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> 不锈钢外壳=一眼区分于塑料竞品</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（不锈钢+PFAS-free空白）/ $129（Cosori TurboBlaze塑料壳）/ $249（Cosori Iconic不锈钢）/ $350+（Breville）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.foodandwine.com/clever-writer-loved-kitchen-tools-gadgets-amazon-2026-11984688" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-drink">高级冰饮</span>
+      <span class="urgency-badge" style="color:#f59e0b;">🧊 水饮=身份</span>
+    </div>
+    <div class="card-title">"高级冰饮"趋势 — 水饮产品成身份符号</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>AllRecipes夏季趋势"Fancy Hydration"，冰块机+冷萃+奶泡器组合热销，"水饮产品已成身份象征"</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-150"冰块+冷萃+奶泡"三合一饮品站空白，夏季水饮品类爆发</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> 三合一减少台面占用+提高客单价</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（三合一饮品站空白）/ $150（Silonn冰块机单品）/ $200+（多品组合）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.allrecipes.com/summer-ktichen-trend-predictions-amazon-2026-11984902" target="_blank">AllRecipes</a></div>
+  </div>
+
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Ninja Crispi Pro玻璃空气炸锅】"看得见的烹饪"颠覆空气炸锅品类</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-150（小容量玻璃空气炸锅空白）/ $160（Crispi 4-in-1便携版）/ $399-500（Crispi Pro 6-in-1旗舰）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Ninja Crispi Pro 6-in-1：Air Fry/Max Crisp/Roast/Bake-Proof/Recrisp/Dehydrate 6模式</li>
+          <li>全透明耐热玻璃容器，实时观看食物酥脆/起泡/烘焙——"不用每5分钟拉开抽屉猜"</li>
+          <li>2,050W功率，5.7L大容器+2.3L小容器，模块化底座自适应，烹饪→储存无缝切换</li>
+          <li>PFAS-free陶瓷涂层，4色可选（Sage Green/Stone/Pink/Cyberspace）</li>
+          <li>澳洲Amazon首发$100折扣售罄，7News专题"TikTok厨房爆款终于来了"</li>
+          <li>痛点：旗舰$399-500价格高，Crispi 4-in-1仅4模式无Dehydrate</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-149定价，做到：1）单3-4Qt透明耐热玻璃容器；2）4核心模式（Air Fry/Roast/Bake/Reheat）；3）PFAS-free陶瓷+不锈钢外壳；4）容器直接进冰箱+洗碗机；5）2-3色可选（黄油黄/鼠尾草绿/奶油白）。成本$40-60，毛利50-60%。核心差异化不是比功能多，而是"看得见烹饪过程"的体验——TikTok传播天然素材。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"玻璃炸锅+食谱卡订阅"：每月3张新食谱卡（含食材清单+温度时间预设QR码）</li>
+          <li>与健康饮食品牌联名：Whole30/Keto限定配色+预设程序</li>
+          <li>露营/房车便携版：12V适配+提手设计，$129户外场景</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Nosh One AI烹饪机器人】"完全免手"烹饪——2026台面电器终极形态</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-150（自动翻炒器空白）/ $150-250（AI翻炒+调味空白）/ $500+（Nosh One全自动烹饪机器人）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Nosh One：AI台面烹饪机器人，NoshOS系统学习数千食谱</li>
+          <li>自动切菜→翻炒→调味（毫克级精度调味盒）→装盘，全程无需人工干预</li>
+          <li>内置传感器实时监测含水量/硬度/焦化程度，自动调节火力和调味</li>
+          <li>Kickstarter预售，2026夏季发货，TikTok/X病毒传播</li>
+          <li>社媒："丢进食材就有咖喱=请了个私厨""最讨厌看锅，设好它炒我刷视频"</li>
+          <li>同系：StirMate GEN3自动翻炒器（$50-100，无线10小时续航）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$149-229定价，做到：1）2-3Qt不粘锅体+自动翻炒叶片（可拆卸清洗）；2）2格调味/酱料自动注入泵；3）温度传感器+WiFi App远程监控；4）20+预设菜谱（一键启动→自动翻炒+自动调味+保温）；5）可拆卸锅体洗碗机安全。成本$50-80，毛利50-60%。核心差异化不是比Nosh功能全，而是"花1/3价格解决80%看锅痛点"。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"AI炒锅+调味包订阅"：每月6种风味调味包（川味/意式/日式等）</li>
+          <li>与HelloFresh合作：Meal kit食材+预设程序一键烹饪</li>
+          <li>大学宿舍版：$99基础版，3预设（炒饭/泡面+蛋/番茄炒蛋）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【LISSOME J1 AI超薄洗碗机】日本众筹破纪录，台面洗碗机信号</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$200-300（AI超薄台面洗碗机空白）/ $350-500（现有台面洗碗机）/ $600+（嵌入式）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>LISSOME J1：仅28cm宽度，10万Pa水压，AI自适应清洁，15分钟快洗</li>
+          <li>Makuake众筹破1.2亿日元（台面洗碗机品类史上最高）</li>
+          <li>可容纳22件餐具，免安装（台面放置+水箱版）</li>
+          <li>前代R1已出货6万+台，J1针对日本消费者优化</li>
+          <li>调研831人：最吸引=超薄+免安装+大容量+强清洁力</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$219-299定价，做到：1）26-28cm超窄宽度；2）AI污渍识别+自适应水压/温度/时间；3）15分钟快洗+60分钟标准洗；4）16-20件餐具容量；5）双模式进水（水箱+龙头）。成本$80-120，毛利45-55%。核心卖点"AI帮你选程序"——不用纠结选哪个洗涤程序。美国家庭洗碗机渗透率80%+但公寓/小户型是空白。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"台面洗碗机+洗碗粉订阅"：每月配送环保洗碗粉+亮碟剂</li>
+          <li>与Apartment List/Zillow合作：租房者入住礼包</li>
+          <li>办公室版：$399大容量版，共享办公空间/小型办公室</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Good Housekeeping 2026厨房大奖：6大趋势信号</div>
+    <div class="watch-text">
+      <strong>空间智慧化</strong>：嵌套式烘焙器具、多功能一体机——"台面不会增长但设备可以更聪明"<br>
+      <strong>更好密封设计</strong>：2026是"更好的盖子"之年——更智能的堆叠+更直觉的分配<br>
+      <strong>实用智能</strong>：智能功能终于不是噱头——远程预热+更好的温控+真正好用的烹饪模式<br>
+      <strong>饮品文化升温</strong>：冷萃/气泡水/奶泡器正在扩展品类<br>
+      启示：不要做"加个WiFi的空气炸锅"，要做"真正解决痛点的智能功能"
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 EuroCucina 2026："厨房如SPA"——Miele宣布"珍珠米色是新的黑色"</div>
+    <div class="watch-text">
+      欧洲顶级厨展信号：厨房从"机器"转向"疗愈空间"<br>
+      Miele："Pearl Beige is the new Black"——暖色调替代冷不锈钢<br>
+      Whirlpool："Cooking like a session of meditation"<br>
+      Bosch：推出"全球首款隐形清洁机器人"——嵌入水槽下方<br>
+      启示：暖色调+疗愈感是2026-2027设计方向，珍珠米色/黄油黄/鼠尾草绿将成主色
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 HousewaresLive "安静的高端"趋势：Gen X是最高消费群体</div>
+    <div class="watch-text">
+      英国SDA市场2025年£28亿→2030年£37亿<br>
+      Gen X（45-60岁）不冲动购买，但更愿为高端升级付费——豆到杯咖啡机/冷压榨汁机/专业搅拌机<br>
+      AI自维护诊断：设备在故障前主动提醒，"自愈技术"建立信任<br>
+      启示：目标客群不是Z世代冲动消费，而是Gen X的"生活方式升级"
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Philips Baristina双豆仓全自动咖啡机 — Costco $330（原$450）</div>
+    <div class="watch-text">
+      双豆仓+内置研磨+自动奶泡器，$330极佳性价比<br>
+      启示：全自动咖啡机价格下探，$300-400竞争加剧，差异化需转向"AI个性化"<br>
+      来源：<a href="https://www.dealcatcher.com/deals/household/kitchen-appliances" target="_blank" style="color:#0d9488;">DealCatcher</a>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>数据来源：TechCrunch、Food &amp; Wine、Good Housekeeping、AllRecipes、7News Australia、Ukiyo Journal、Makuake、HousewaresLive、EuroCucina 2026、Azure Magazine、Appliance Trends、Best Choice</p>
+    <p>生成时间：2026年6月2日 | <a href="../index.html">返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
