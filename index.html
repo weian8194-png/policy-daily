@@ -6,7 +6,13 @@
   <title>跨境合规内参 · Policy Daily</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* Section target highlight */
+    .section-block:target { animation: target-flash 1.5s ease-out; }
+    @keyframes target-flash { 0% { box-shadow: 0 0 0 3px rgba(56,189,248,0.4); } 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); } }
+    .nav-item:active, .nav-item:focus { color: #f1f5f9 !important; background: rgba(56,189,248,0.15) !important; border-left-color: #38bdf8 !important; }
 
     /* ===== Two-Column Layout ===== */
     .layout { display: flex; min-height: 100vh; }
@@ -44,15 +50,6 @@
     .archive-day:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
     .archive-day .day-count { font-size: 10px; color: #475569; margin-left: 4px; }
 
-    /* Sources config in sidebar */
-    details.sources-config { padding: 0; }
-    details.sources-config summary { display: flex; align-items: center; padding: 8px 24px; cursor: pointer; font-size: 11px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; list-style: none; transition: color 0.15s; }
-    details.sources-config summary::-webkit-details-marker { display: none; }
-    details.sources-config summary:hover { color: #94a3b8; }
-    .source-item { padding: 4px 24px 4px 32px; font-size: 11px; color: #64748b; line-height: 1.5; }
-    .source-item .source-name { color: #94a3b8; font-weight: 600; }
-    .source-item a { color: #38bdf8; text-decoration: none; font-size: 10px; }
-    .source-item a:hover { text-decoration: underline; }
 
     /* ===== Main Content ===== */
     .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
@@ -153,18 +150,38 @@
     .card-source a { font-size: 11px; color: #0284c7; text-decoration: none; word-break: break-all; }
     .card-source a:hover { text-decoration: underline; }
 
-    /* ===== Info Sources Panel (main content) ===== */
-    .sources-panel { background: #fff; border-radius: 8px; margin-bottom: 24px; border: 1px solid #e2e8f0; overflow: hidden; }
-    .sources-panel summary { padding: 12px 18px; font-size: 14px; font-weight: 700; color: #0f172a; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; background: #f8fafc; border-bottom: 1px solid #e2e8f0; }
-    .sources-panel summary::-webkit-details-marker { display: none; }
-    .sources-panel summary .toggle-hint { font-size: 11px; color: #94a3b8; font-weight: 400; }
-    .sources-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; padding: 16px 18px; }
-    .source-card { padding: 10px 12px; background: #f8fafc; border-radius: 6px; border: 1px solid #e2e8f0; }
-    .source-card .sc-name { font-size: 12px; font-weight: 700; color: #0f172a; }
-    .source-card .sc-cat { font-size: 10px; color: #64748b; display: inline-block; background: #eff6ff; padding: 1px 6px; border-radius: 3px; margin-left: 4px; }
-    .source-card .sc-url { font-size: 10px; color: #0284c7; word-break: break-all; text-decoration: none; display: block; margin-top: 3px; }
-    .source-card .sc-url:hover { text-decoration: underline; }
-    .source-card .sc-desc { font-size: 11px; color: #64748b; margin-top: 3px; line-height: 1.5; }
+    /* ===== Info Sources Table ===== */
+    .sources-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px 8px 0 0; }
+    .sources-toolbar-hint { font-size: 12px; color: #64748b; }
+    .sources-toolbar-actions { display: flex; gap: 8px; }
+    .btn-reset { padding: 5px 14px; border: 1px solid #cbd5e1; border-radius: 5px; background: #f1f5f9; color: #475569; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+    .btn-reset:hover { background: #e2e8f0; }
+    .btn-add { padding: 5px 14px; border: none; border-radius: 5px; background: #0284c7; color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+    .btn-add:hover { background: #0369a1; }
+    .sources-table-wrap { background: #fff; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 8px 8px; overflow-x: auto; }
+    .sources-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .sources-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; white-space: nowrap; }
+    .sources-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+    .sources-table tr:hover td { background: #f8fafc; }
+    .sources-table .st-channel { white-space: nowrap; }
+    .sc-tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 3px; color: #fff; }
+    .st-name { font-weight: 600; color: #1e293b; }
+    .st-url { color: #0284c7; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .st-url a { color: #0284c7; text-decoration: none; }
+    .st-url a:hover { text-decoration: underline; }
+    .st-domain { color: #94a3b8; font-size: 11px; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .st-enable { text-align: center; }
+    .st-enable input[type="checkbox"] { width: 15px; height: 15px; accent-color: #0284c7; cursor: pointer; }
+    .st-del { text-align: center; }
+    .btn-del { width: 22px; height: 22px; border: none; border-radius: 4px; background: transparent; color: #94a3b8; font-size: 13px; cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; justify-content: center; }
+    .btn-del:hover { background: #fef2f2; color: #dc2626; }
+    /* Add source form row */
+    .add-row td { background: #f0f9ff !important; }
+    .add-row input { width: 100%; padding: 4px 8px; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 12px; font-family: inherit; }
+    .add-row input:focus { outline: none; border-color: #0284c7; box-shadow: 0 0 0 2px rgba(2,132,199,0.15); }
+    .btn-save { padding: 4px 10px; border: none; border-radius: 4px; background: #0284c7; color: #fff; font-size: 11px; font-weight: 600; cursor: pointer; }
+    .btn-save:hover { background: #0369a1; }
+    .btn-cancel { padding: 4px 10px; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff; color: #475569; font-size: 11px; cursor: pointer; }
 
     /* ===== Footer ===== */
     .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
@@ -220,7 +237,7 @@
           <a class="archive-day" href="./daily/20260601.html">2026-06-01 <span class="day-count">10条</span></a>
         </details>
         <details class="archive-month">
-          <summary><span class="month-info">2026年05月</span><span class="month-stats">9天 / 95条</span></summary>
+          <summary><span class="month-info">2026年05月</span><span class="month-stats">19天 / 232条</span></summary>
           <a class="archive-day" href="./daily/20260531.html">2026-05-31 <span class="day-count">12条</span></a>
           <a class="archive-day" href="./daily/20260530.html">2026-05-30 <span class="day-count">15条</span></a>
           <a class="archive-day" href="./daily/20260529.html">2026-05-29 <span class="day-count">12条</span></a>
@@ -230,9 +247,6 @@
           <a class="archive-day" href="./daily/20260525.html">2026-05-25 <span class="day-count">7条</span></a>
           <a class="archive-day" href="./daily/20260524.html">2026-05-24 <span class="day-count">6条</span></a>
           <a class="archive-day" href="./daily/20260523.html">2026-05-23 <span class="day-count">11条</span></a>
-        </details>
-        <details class="archive-month">
-          <summary><span class="month-info">2026年05月(中)</span><span class="month-stats">8天 / 91条</span></summary>
           <a class="archive-day" href="./daily/20260522.html">2026-05-22 <span class="day-count">10条</span></a>
           <a class="archive-day" href="./daily/20260521.html">2026-05-21 <span class="day-count">10条</span></a>
           <a class="archive-day" href="./daily/20260520.html">2026-05-20 <span class="day-count">10条</span></a>
@@ -241,9 +255,6 @@
           <a class="archive-day" href="./daily/20260517.html">2026-05-17 <span class="day-count">10条</span></a>
           <a class="archive-day" href="./daily/20260516.html">2026-05-16 <span class="day-count">14条</span></a>
           <a class="archive-day" href="./daily/20260515.html">2026-05-15 <span class="day-count">18条</span></a>
-        </details>
-        <details class="archive-month">
-          <summary><span class="month-info">2026年05月(初)</span><span class="month-stats">3天 / 46条</span></summary>
           <a class="archive-day" href="./daily/20260514.html">2026-05-14 <span class="day-count">18条</span></a>
           <a class="archive-day" href="./daily/20260513.html">2026-05-13 <span class="day-count">10条</span></a>
         </details>
@@ -252,22 +263,7 @@
       <div class="nav-divider"></div>
 
       <!-- Sources Config -->
-      <details class="sources-config">
-        <summary>📡 信息源配置 / Sources</summary>
-        <div class="source-item"><span class="source-name">Amazon Seller Central</span> <a href="https://sellercentral.amazon.com/news" target="_blank">↗</a><br>平台官方公告</div>
-        <div class="source-item"><span class="source-name">TikTok Shop Policy</span> <a href="https://seller.tiktok.com/university/policy" target="_blank">↗</a><br>平台政策中心</div>
-        <div class="source-item"><span class="source-name">Walmart Marketplace</span> <a href="https://marketplace.walmart.com/news/" target="_blank">↗</a><br>沃尔玛卖家新闻</div>
-        <div class="source-item"><span class="source-name">卖家之家</span> <a href="https://www.mjzj.com" target="_blank">↗</a><br>行业聚合媒体</div>
-        <div class="source-item"><span class="source-name">雨果跨境</span> <a href="https://www.cifnews.com" target="_blank">↗</a><br>跨境资讯门户</div>
-        <div class="source-item"><span class="source-name">亿邦动力</span> <a href="https://www.ebrun.com" target="_blank">↗</a><br>电商行业媒体</div>
-        <div class="source-item"><span class="source-name">积特知识产权</span><br>IP/商标合规</div>
-        <div class="source-item"><span class="source-name">TSL Agency</span><br>TikTok/社交合规</div>
-        <div class="source-item"><span class="source-name">Forest Shipping</span><br>物流航运</div>
-        <div class="source-item"><span class="source-name">CedCommerce</span><br>多平台运营</div>
-        <div class="source-item"><span class="source-name">联宇物流</span><br>航运运价</div>
-        <div class="source-item"><span class="source-name">CBP (美海关)</span> <a href="https://www.cbp.gov/trade" target="_blank">↗</a><br>清关/关税</div>
-        <div class="source-item"><span class="source-name">Amazon Press</span> <a href="https://press.aboutamazon.com" target="_blank">↗</a><br>官方新闻稿</div>
-      </details>
+      <a class="nav-item" href="#sources" style="font-size:12px;">📡 信息源配置 <span class="nav-count">14</span></a>
     </nav>
   </aside>
 
@@ -604,86 +600,132 @@
     </section>
 
     <!-- Info Sources Panel (main content) -->
-    <details class="sources-panel" id="sources">
-      <summary>📡 信息源一览与配置 <span class="toggle-hint">点击展开查看全部来源</span></summary>
-      <div class="sources-grid">
-        <div class="source-card">
-          <div class="sc-name">Amazon Seller Central <span class="sc-cat">平台官方</span></div>
-          <a class="sc-url" href="https://sellercentral.amazon.com/news" target="_blank">sellercentral.amazon.com/news</a>
-          <div class="sc-desc">亚马逊卖家新闻与政策变更公告</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">Amazon Press <span class="sc-cat">官方新闻</span></div>
-          <a class="sc-url" href="https://press.aboutamazon.com" target="_blank">press.aboutamazon.com</a>
-          <div class="sc-desc">亚马逊官方新闻稿，Prime Day等重大活动官宣</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">TikTok Shop Policy <span class="sc-cat">平台官方</span></div>
-          <a class="sc-url" href="https://seller.tiktok.com/university/policy" target="_blank">seller.tiktok.com/university/policy</a>
-          <div class="sc-desc">TikTok Shop政策中心</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">Walmart Marketplace <span class="sc-cat">平台官方</span></div>
-          <a class="sc-url" href="https://marketplace.walmart.com/news/" target="_blank">marketplace.walmart.com/news</a>
-          <div class="sc-desc">沃尔玛卖家新闻</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">CBP (美国海关) <span class="sc-cat">政府机构</span></div>
-          <a class="sc-url" href="https://www.cbp.gov/trade" target="_blank">cbp.gov/trade</a>
-          <div class="sc-desc">美国海关及边境保护局贸易政策</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">卖家之家 <span class="sc-cat">行业媒体</span></div>
-          <a class="sc-url" href="https://www.mjzj.com" target="_blank">mjzj.com</a>
-          <div class="sc-desc">跨境电商行业聚合媒体，政策解读及时</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">雨果跨境 <span class="sc-cat">行业媒体</span></div>
-          <a class="sc-url" href="https://www.cifnews.com" target="_blank">cifnews.com</a>
-          <div class="sc-desc">跨境电商资讯门户，多平台政策追踪</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">亿邦动力 <span class="sc-cat">行业媒体</span></div>
-          <a class="sc-url" href="https://www.ebrun.com" target="_blank">ebrun.com</a>
-          <div class="sc-desc">电商行业媒体，关注平台规则与合规</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">积特知识产权 <span class="sc-cat">专业机构</span></div>
-          <div class="sc-desc">IP/商标/品牌合规，品牌备案与侵权分析</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">TSL Agency <span class="sc-cat">专业机构</span></div>
-          <div class="sc-desc">TikTok/社交媒体合规与营销</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">Forest Shipping <span class="sc-cat">物流机构</span></div>
-          <div class="sc-desc">国际物流航运，运价与清关资讯</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">CedCommerce <span class="sc-cat">专业机构</span></div>
-          <div class="sc-desc">多平台运营工具与政策解读</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">联宇物流 <span class="sc-cat">物流机构</span></div>
-          <div class="sc-desc">航运运价追踪，SCFI指数解读</div>
-        </div>
-        <div class="source-card">
-          <div class="sc-name">MarketplacePulse <span class="sc-cat">数据机构</span></div>
-          <a class="sc-url" href="https://www.marketplacepulse.com" target="_blank">marketplacepulse.com</a>
-          <div class="sc-desc">电商市场动态与平台数据监测</div>
+    <section class="section-block" id="sources">
+      <div class="section-header">
+        <h2>📡 信息源配置</h2>
+        <span class="section-badge" style="background:#eff6ff;color:#0284c7;">14个来源</span>
+      </div>
+      <div class="sources-toolbar">
+        <span class="sources-toolbar-hint">📡 库：仅记录雷达线索</span>
+        <div class="sources-toolbar-actions">
+          <button class="btn-reset" onclick="resetSources()">恢复默认</button>
+          <button class="btn-add" onclick="addSourceRow()">＋ 新增</button>
         </div>
       </div>
-    </details>
+      <div class="sources-table-wrap">
+        <table class="sources-table">
+          <thead>
+            <tr><th>渠道</th><th>名称</th><th>URL</th><th>域名</th><th>启用</th><th></th></tr>
+          </thead>
+          <tbody id="sources-tbody">
+            <tr data-idx="0"><td class="st-channel"><span class="sc-tag tag-amazon">Amazon</span></td><td class="st-name">Amazon Seller Central</td><td class="st-url"><a href="https://sellercentral.amazon.com/news" target="_blank">sellercentral.amazon.com/news</a></td><td class="st-domain">sellercentral.amazon.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="1"><td class="st-channel"><span class="sc-tag tag-amazon">Amazon</span></td><td class="st-name">Amazon Press</td><td class="st-url"><a href="https://press.aboutamazon.com" target="_blank">press.aboutamazon.com</a></td><td class="st-domain">press.aboutamazon.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="2"><td class="st-channel"><span class="sc-tag" style="background:#0071DC;">Walmart</span></td><td class="st-name">Walmart Marketplace</td><td class="st-url"><a href="https://marketplace.walmart.com/news/" target="_blank">marketplace.walmart.com/news</a></td><td class="st-domain">marketplace.walmart.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="3"><td class="st-channel"><span class="sc-tag tag-tiktok">TikTok Shop</span></td><td class="st-name">TikTok Shop Academy</td><td class="st-url"><a href="https://seller.tiktok.com/university/policy" target="_blank">seller.tiktok.com/university/policy</a></td><td class="st-domain">seller.tiktok.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="4"><td class="st-channel"><span class="sc-tag tag-temu">TEMU</span></td><td class="st-name">TEMU Merchant Center</td><td class="st-url"><a href="https://seller.kuajingmaihuo.com" target="_blank">seller.kuajingmaihuo.com</a></td><td class="st-domain">seller.kuajingmaihuo.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="5"><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">CBP CSMS</td><td class="st-url"><a href="https://www.cbp.gov/trade/automated" target="_blank">cbp.gov/trade/automated</a></td><td class="st-domain">cbp.gov</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="6"><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">FDA Food &amp; Supplements</td><td class="st-url"><a href="https://www.fda.gov/food" target="_blank">fda.gov/food</a></td><td class="st-domain">fda.gov</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="7"><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">California Prop 65</td><td class="st-url"><a href="https://oehha.ca.gov/proposition-65" target="_blank">oehha.ca.gov/proposition-65</a></td><td class="st-domain">oehha.ca.gov</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="8"><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">EU Taxation &amp; Customs</td><td class="st-url"><a href="https://taxation-customs.ec.europa.eu" target="_blank">taxation-customs.ec.europa.eu</a></td><td class="st-domain">ec.europa.eu</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="9"><td class="st-channel"><span class="sc-tag" style="background:#7c3aed;">行业媒体</span></td><td class="st-name">卖家之家</td><td class="st-url"><a href="https://www.mjzj.com" target="_blank">mjzj.com</a></td><td class="st-domain">mjzj.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="10"><td class="st-channel"><span class="sc-tag" style="background:#7c3aed;">行业媒体</span></td><td class="st-name">雨果跨境</td><td class="st-url"><a href="https://www.cifnews.com" target="_blank">cifnews.com</a></td><td class="st-domain">cifnews.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="11"><td class="st-channel"><span class="sc-tag" style="background:#7c3aed;">行业媒体</span></td><td class="st-name">亿邦动力</td><td class="st-url"><a href="https://www.ebrun.com" target="_blank">ebrun.com</a></td><td class="st-domain">ebrun.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="12"><td class="st-channel"><span class="sc-tag" style="background:#0d9488;">专业机构</span></td><td class="st-name">积特知识产权</td><td class="st-url">—</td><td class="st-domain">—</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="13"><td class="st-channel"><span class="sc-tag" style="background:#0d9488;">专业机构</span></td><td class="st-name">TSL Agency</td><td class="st-url">—</td><td class="st-domain">—</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="14"><td class="st-channel"><span class="sc-tag" style="background:#0d9488;">物流机构</span></td><td class="st-name">Forest Shipping</td><td class="st-url">—</td><td class="st-domain">—</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="15"><td class="st-channel"><span class="sc-tag" style="background:#0d9488;">专业机构</span></td><td class="st-name">CedCommerce</td><td class="st-url">—</td><td class="st-domain">—</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="16"><td class="st-channel"><span class="sc-tag" style="background:#0d9488;">物流机构</span></td><td class="st-name">联宇物流</td><td class="st-url">—</td><td class="st-domain">—</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr data-idx="17"><td class="st-channel"><span class="sc-tag" style="background:#1d4ed8;">数据机构</span></td><td class="st-name">MarketplacePulse</td><td class="st-url"><a href="https://www.marketplacepulse.com" target="_blank">marketplacepulse.com</a></td><td class="st-domain">marketplacepulse.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <!-- Footer -->
     <div class="page-footer">
       <div class="footer-divider"></div>
       <div>📊 数据来源：卖家之家 / Amazon Press / 雨果跨境 / 积特知识产权 / TSL Agency / Forest Shipping / CedCommerce / 联宇物流</div>
       <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
-      <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI · 纯静态HTML零JS</div>
+      <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
     </div>
 
   </main>
 </div>
+<script>
+// Default sources data for reset
+const DEFAULT_SOURCES = [
+  {ch:'Amazon',chColor:'#FF9900',name:'Amazon Seller Central',url:'https://sellercentral.amazon.com/news',domain:'sellercentral.amazon.com'},
+  {ch:'Amazon',chColor:'#FF9900',name:'Amazon Press',url:'https://press.aboutamazon.com',domain:'press.aboutamazon.com'},
+  {ch:'Walmart',chColor:'#0071DC',name:'Walmart Marketplace',url:'https://marketplace.walmart.com/news/',domain:'marketplace.walmart.com'},
+  {ch:'TikTok Shop',chColor:'#000000',name:'TikTok Shop Academy',url:'https://seller.tiktok.com/university/policy',domain:'seller.tiktok.com'},
+  {ch:'TEMU',chColor:'#E85D2C',name:'TEMU Merchant Center',url:'https://seller.kuajingmaihuo.com',domain:'seller.kuajingmaihuo.com'},
+  {ch:'官方机构',chColor:'#dc2626',name:'CBP CSMS',url:'https://www.cbp.gov/trade/automated',domain:'cbp.gov'},
+  {ch:'官方机构',chColor:'#dc2626',name:'FDA Food & Supplements',url:'https://www.fda.gov/food',domain:'fda.gov'},
+  {ch:'官方机构',chColor:'#dc2626',name:'California Prop 65',url:'https://oehha.ca.gov/proposition-65',domain:'oehha.ca.gov'},
+  {ch:'官方机构',chColor:'#dc2626',name:'EU Taxation & Customs',url:'https://taxation-customs.ec.europa.eu',domain:'ec.europa.eu'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'卖家之家',url:'https://www.mjzj.com',domain:'mjzj.com'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'雨果跨境',url:'https://www.cifnews.com',domain:'cifnews.com'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'亿邦动力',url:'https://www.ebrun.com',domain:'ebrun.com'},
+  {ch:'专业机构',chColor:'#0d9488',name:'积特知识产权',url:'',domain:''},
+  {ch:'专业机构',chColor:'#0d9488',name:'TSL Agency',url:'',domain:''},
+  {ch:'物流机构',chColor:'#0d9488',name:'Forest Shipping',url:'',domain:''},
+  {ch:'专业机构',chColor:'#0d9488',name:'CedCommerce',url:'',domain:''},
+  {ch:'物流机构',chColor:'#0d9488',name:'联宇物流',url:'',domain:''},
+  {ch:'数据机构',chColor:'#1d4ed8',name:'MarketplacePulse',url:'https://www.marketplacepulse.com',domain:'marketplacepulse.com'}
+];
+
+function buildRow(s) {
+  const urlCell = s.url ? '<a href="'+s.url+'" target="_blank">'+s.url.replace(/^https?:\/\//,'')+'</a>' : '—';
+  const domainCell = s.domain || '—';
+  return '<tr><td class="st-channel"><span class="sc-tag" style="background:'+s.chColor+'">'+s.ch+'</span></td><td class="st-name">'+s.name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+domainCell+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>';
+}
+
+function resetSources() {
+  const tbody = document.getElementById('sources-tbody');
+  tbody.innerHTML = DEFAULT_SOURCES.map(buildRow).join('');
+  updateCount();
+}
+
+function delSourceRow(btn) {
+  btn.closest('tr').remove();
+  updateCount();
+}
+
+function addSourceRow() {
+  const tbody = document.getElementById('sources-tbody');
+  if (tbody.querySelector('.add-row')) return;
+  const tr = document.createElement('tr');
+  tr.className = 'add-row';
+  tr.innerHTML = '<td class="st-channel"><input placeholder="渠道" id="new-ch"></td><td class="st-name"><input placeholder="名称" id="new-name"></td><td class="st-url"><input placeholder="URL" id="new-url"></td><td class="st-domain"><input placeholder="域名" id="new-domain"></td><td class="st-enable"><input type="checkbox" checked id="new-enabled"></td><td style="text-align:center"><button class="btn-save" onclick="saveNewSource()">✓</button> <button class="btn-cancel" onclick="cancelNewSource()">✕</button></td>';
+  tbody.appendChild(tr);
+  document.getElementById('new-ch').focus();
+}
+
+function saveNewSource() {
+  const ch = document.getElementById('new-ch').value.trim();
+  const name = document.getElementById('new-name').value.trim();
+  const url = document.getElementById('new-url').value.trim();
+  const domain = document.getElementById('new-domain').value.trim();
+  if (!name) { document.getElementById('new-name').focus(); return; }
+  const row = document.querySelector('.add-row');
+  const urlCell = url ? '<a href="'+url+'" target="_blank">'+url.replace(/^https?:\/\//,'')+'</a>' : '—';
+  row.className = '';
+  row.innerHTML = '<td class="st-channel"><span class="sc-tag" style="background:#64748b">'+(ch||'自定义')+'</span></td><td class="st-name">'+name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+(domain||'—')+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td>';
+  updateCount();
+}
+
+function cancelNewSource() {
+  const row = document.querySelector('.add-row');
+  if (row) row.remove();
+}
+
+function updateCount() {
+  const count = document.querySelectorAll('#sources-tbody tr:not(.add-row)').length;
+  const badge = document.querySelector('#sources .section-badge');
+  if (badge) badge.textContent = count + '个来源';
+  const navCount = document.querySelector('a[href="#sources"] .nav-count');
+  if (navCount) navCount.textContent = count;
+}
+</script>
 </body>
 </html>
