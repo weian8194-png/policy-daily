@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>跨境合规内参 · Policy Daily</title>
+  <title>跨境政策日报 · Policy Daily</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; scroll-padding-top: 16px; }
@@ -182,6 +182,8 @@
     .btn-save { padding: 4px 10px; border: none; border-radius: 4px; background: #0284c7; color: #fff; font-size: 11px; font-weight: 600; cursor: pointer; }
     .btn-save:hover { background: #0369a1; }
     .btn-cancel { padding: 4px 10px; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff; color: #475569; font-size: 11px; cursor: pointer; }
+    /* Group separator row */
+    .st-group-row td { background: #f1f5f9; font-size: 11px; font-weight: 700; color: #475569; padding: 6px 12px; letter-spacing: 0.3px; border-bottom: 1px solid #e2e8f0; }
 
     /* ===== Footer ===== */
     .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
@@ -202,7 +204,7 @@
   <!-- ===== Left Sidebar ===== -->
   <aside class="sidebar">
     <div class="sidebar-brand">
-      <h1>跨境合规内参</h1>
+      <h1>跨境政策日报</h1>
       <div class="version">Policy Daily v2.1</div>
     </div>
     <nav class="sidebar-nav">
@@ -263,7 +265,7 @@
       <div class="nav-divider"></div>
 
       <!-- Sources Config -->
-      <a class="nav-item" href="#sources" style="font-size:12px;">📡 信息源配置 <span class="nav-count">14</span></a>
+      <a class="nav-item" href="#sources" style="font-size:12px;">📡 信息源配置 <span class="nav-count">21</span></a>
     </nav>
   </aside>
 
@@ -272,7 +274,7 @@
 
     <!-- Header -->
     <div class="content-header">
-      <h1>跨境合规内参</h1>
+      <h1>跨境政策日报</h1>
       <div class="date-line">数据日期: <span class="date-val">2026年6月3日（周三）</span> <span class="update-time">08:00 更新</span></div>
     </div>
 
@@ -603,7 +605,7 @@
     <section class="section-block" id="sources">
       <div class="section-header">
         <h2>📡 信息源配置</h2>
-        <span class="section-badge" style="background:#eff6ff;color:#0284c7;">14个来源</span>
+        <span class="section-badge" style="background:#eff6ff;color:#0284c7;">21个来源</span>
       </div>
       <div class="sources-toolbar">
         <span class="sources-toolbar-hint">📡 库：仅记录雷达线索</span>
@@ -618,24 +620,34 @@
             <tr><th>渠道</th><th>名称</th><th>URL</th><th>域名</th><th>启用</th><th></th></tr>
           </thead>
           <tbody id="sources-tbody">
-            <tr data-idx="0"><td class="st-channel"><span class="sc-tag tag-amazon">Amazon</span></td><td class="st-name">Amazon Seller Central</td><td class="st-url"><a href="https://sellercentral.amazon.com/news" target="_blank">sellercentral.amazon.com/news</a></td><td class="st-domain">sellercentral.amazon.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="1"><td class="st-channel"><span class="sc-tag tag-amazon">Amazon</span></td><td class="st-name">Amazon Press</td><td class="st-url"><a href="https://press.aboutamazon.com" target="_blank">press.aboutamazon.com</a></td><td class="st-domain">press.aboutamazon.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="2"><td class="st-channel"><span class="sc-tag" style="background:#0071DC;">Walmart</span></td><td class="st-name">Walmart Marketplace</td><td class="st-url"><a href="https://marketplace.walmart.com/news/" target="_blank">marketplace.walmart.com/news</a></td><td class="st-domain">marketplace.walmart.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="3"><td class="st-channel"><span class="sc-tag tag-tiktok">TikTok Shop</span></td><td class="st-name">TikTok Shop Academy</td><td class="st-url"><a href="https://seller.tiktok.com/university/policy" target="_blank">seller.tiktok.com/university/policy</a></td><td class="st-domain">seller.tiktok.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="4"><td class="st-channel"><span class="sc-tag tag-temu">TEMU</span></td><td class="st-name">TEMU Merchant Center</td><td class="st-url"><a href="https://seller.kuajingmaihuo.com" target="_blank">seller.kuajingmaihuo.com</a></td><td class="st-domain">seller.kuajingmaihuo.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="5"><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">CBP CSMS</td><td class="st-url"><a href="https://www.cbp.gov/trade/automated" target="_blank">cbp.gov/trade/automated</a></td><td class="st-domain">cbp.gov</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="6"><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">FDA Food &amp; Supplements</td><td class="st-url"><a href="https://www.fda.gov/food" target="_blank">fda.gov/food</a></td><td class="st-domain">fda.gov</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="7"><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">California Prop 65</td><td class="st-url"><a href="https://oehha.ca.gov/proposition-65" target="_blank">oehha.ca.gov/proposition-65</a></td><td class="st-domain">oehha.ca.gov</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="8"><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">EU Taxation &amp; Customs</td><td class="st-url"><a href="https://taxation-customs.ec.europa.eu" target="_blank">taxation-customs.ec.europa.eu</a></td><td class="st-domain">ec.europa.eu</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="9"><td class="st-channel"><span class="sc-tag" style="background:#7c3aed;">行业媒体</span></td><td class="st-name">卖家之家</td><td class="st-url"><a href="https://www.mjzj.com" target="_blank">mjzj.com</a></td><td class="st-domain">mjzj.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="10"><td class="st-channel"><span class="sc-tag" style="background:#7c3aed;">行业媒体</span></td><td class="st-name">雨果跨境</td><td class="st-url"><a href="https://www.cifnews.com" target="_blank">cifnews.com</a></td><td class="st-domain">cifnews.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="11"><td class="st-channel"><span class="sc-tag" style="background:#7c3aed;">行业媒体</span></td><td class="st-name">亿邦动力</td><td class="st-url"><a href="https://www.ebrun.com" target="_blank">ebrun.com</a></td><td class="st-domain">ebrun.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="12"><td class="st-channel"><span class="sc-tag" style="background:#0d9488;">专业机构</span></td><td class="st-name">积特知识产权</td><td class="st-url">—</td><td class="st-domain">—</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="13"><td class="st-channel"><span class="sc-tag" style="background:#0d9488;">专业机构</span></td><td class="st-name">TSL Agency</td><td class="st-url">—</td><td class="st-domain">—</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="14"><td class="st-channel"><span class="sc-tag" style="background:#0d9488;">物流机构</span></td><td class="st-name">Forest Shipping</td><td class="st-url">—</td><td class="st-domain">—</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="15"><td class="st-channel"><span class="sc-tag" style="background:#0d9488;">专业机构</span></td><td class="st-name">CedCommerce</td><td class="st-url">—</td><td class="st-domain">—</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="16"><td class="st-channel"><span class="sc-tag" style="background:#0d9488;">物流机构</span></td><td class="st-name">联宇物流</td><td class="st-url">—</td><td class="st-domain">—</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
-            <tr data-idx="17"><td class="st-channel"><span class="sc-tag" style="background:#1d4ed8;">数据机构</span></td><td class="st-name">MarketplacePulse</td><td class="st-url"><a href="https://www.marketplacepulse.com" target="_blank">marketplacepulse.com</a></td><td class="st-domain">marketplacepulse.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <!-- 1. 平台官方 -->
+            <tr class="st-group-row"><td colspan="6">1️⃣ 平台官方公告 / Platform Official</td></tr>
+            <tr><td class="st-channel"><span class="sc-tag tag-amazon">Amazon</span></td><td class="st-name">卖家新闻</td><td class="st-url"><a href="https://sellercentral.amazon.com/news" target="_blank">sellercentral.amazon.com/news</a></td><td class="st-domain">sellercentral.amazon.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag tag-amazon">Amazon</span></td><td class="st-name">官方新闻中心</td><td class="st-url"><a href="https://press.aboutamazon.com" target="_blank">press.aboutamazon.com</a></td><td class="st-domain">press.aboutamazon.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag tag-amazon">Amazon</span></td><td class="st-name">卖家官方论坛（美区 Bug 哨所）</td><td class="st-url"><a href="https://sellercentral.amazon.com/forums" target="_blank">sellercentral.amazon.com/forums</a></td><td class="st-domain">sellercentral.amazon.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#0071DC;">Walmart</span></td><td class="st-name">商家新闻</td><td class="st-url"><a href="https://marketplace.walmart.com/news" target="_blank">marketplace.walmart.com/news</a></td><td class="st-domain">marketplace.walmart.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag tag-tiktok">TikTok Shop</span></td><td class="st-name">官方大学与政策中心</td><td class="st-url"><a href="https://seller.tiktok.com/university/policy" target="_blank">seller.tiktok.com/university/policy</a></td><td class="st-domain">seller.tiktok.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag tag-temu">TEMU</span></td><td class="st-name">跨境卖家中心</td><td class="st-url"><a href="https://seller.kuajingmaihuo.com" target="_blank">seller.kuajingmaihuo.com</a></td><td class="st-domain">seller.kuajingmaihuo.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <!-- 2. 官方合规与安全监管机构 -->
+            <tr class="st-group-row"><td colspan="6">2️⃣ 官方合规与安全监管 / Compliance &amp; Government</td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">美国海关 CBP CSMS 货运消息系统</td><td class="st-url"><a href="https://www.cbp.gov/trade/automated" target="_blank">cbp.gov/trade/automated</a></td><td class="st-domain">cbp.gov</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">美国 FDA 食品与补充剂监管局</td><td class="st-url"><a href="https://www.fda.gov/food" target="_blank">fda.gov/food</a></td><td class="st-domain">fda.gov</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">美国 CPSC 消费品安全委员会（小家电下架杀手）</td><td class="st-url"><a href="https://www.cpsc.gov/Newsroom" target="_blank">cpsc.gov/Newsroom</a></td><td class="st-domain">cpsc.gov</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#dc2626;">官方机构</span></td><td class="st-name">美国加州 Prop 65 环保标签局</td><td class="st-url"><a href="https://oehha.ca.gov/proposition-65" target="_blank">oehha.ca.gov/proposition-65</a></td><td class="st-domain">oehha.ca.gov</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#003399;">欧盟</span></td><td class="st-name">欧盟税务与海关总署（VAT/关税总线）</td><td class="st-url"><a href="https://taxation-customs.ec.europa.eu" target="_blank">taxation-customs.ec.europa.eu</a></td><td class="st-domain">ec.europa.eu</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#003399;">欧盟</span></td><td class="st-name">欧盟 Safety Gate 安全门（欧洲产品安全召回）</td><td class="st-url"><a href="https://ec.europa.eu/consumers/consumers_safety/safety_products/rapex" target="_blank">ec.europa.eu/.../rapex</a></td><td class="st-domain">ec.europa.eu</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#1d4ed8;">德国</span></td><td class="st-name">德国 WEEE 注册局（Stiftung EAR · 带电产品硬合规）</td><td class="st-url"><a href="https://www.stiftung-ear.de" target="_blank">stiftung-ear.de</a></td><td class="st-domain">stiftung-ear.de</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#1d4ed8;">德国</span></td><td class="st-name">德国 LUCID 包装法注册局（Verpackungsregister）</td><td class="st-url"><a href="https://www.verpackungsregister.org" target="_blank">verpackungsregister.org</a></td><td class="st-domain">verpackungsregister.org</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <!-- 3. 供应链运价与技术自动化接口 -->
+            <tr class="st-group-row"><td colspan="6">3️⃣ 供应链运价与开发者接口 / Logistics &amp; Developer</td></tr>
+            <tr><td class="st-channel"><span class="sc-tag tag-amazon">Amazon</span></td><td class="st-name">SP-API 变更日志（防 RPA 脚本断流）</td><td class="st-url"><a href="https://developer-docs.amazon.com/sp-api/changelog" target="_blank">developer-docs.amazon.com/sp-api/changelog</a></td><td class="st-domain">developer-docs.amazon.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#0d9488;">航运</span></td><td class="st-name">上海航运交易所（SCFI/NCFI 头程运价精算）</td><td class="st-url"><a href="https://www.sse.net.cn" target="_blank">sse.net.cn</a></td><td class="st-domain">sse.net.cn</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <!-- 4. 行业深度媒体与一线社区 -->
+            <tr class="st-group-row"><td colspan="6">4️⃣ 行业深度媒体与一线社区 / Media &amp; Community</td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#7c3aed;">行业社区</span></td><td class="st-name">知无不言（一线暗改/黑产/防挨打爆料）</td><td class="st-url"><a href="https://www.wearesellers.com" target="_blank">wearesellers.com</a></td><td class="st-domain">wearesellers.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#7c3aed;">行业媒体</span></td><td class="st-name">卖家之家</td><td class="st-url"><a href="https://mjzj.com" target="_blank">mjzj.com</a></td><td class="st-domain">mjzj.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#7c3aed;">行业媒体</span></td><td class="st-name">雨果跨境</td><td class="st-url"><a href="https://cifnews.com" target="_blank">cifnews.com</a></td><td class="st-domain">cifnews.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
+            <tr><td class="st-channel"><span class="sc-tag" style="background:#7c3aed;">行业媒体</span></td><td class="st-name">亿邦动力</td><td class="st-url"><a href="https://ebrun.com" target="_blank">ebrun.com</a></td><td class="st-domain">ebrun.com</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>
           </tbody>
         </table>
       </div>
@@ -644,7 +656,7 @@
     <!-- Footer -->
     <div class="page-footer">
       <div class="footer-divider"></div>
-      <div>📊 数据来源：卖家之家 / Amazon Press / 雨果跨境 / 积特知识产权 / TSL Agency / Forest Shipping / CedCommerce / 联宇物流</div>
+      <div>📊 数据来源：Amazon Seller Central / Amazon Press / CBP / FDA / CPSC / 卖家之家 / 雨果跨境 / 亿邦动力 / 知无不言 / 上海航运交易所 等21个信息源</div>
       <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
       <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
     </div>
@@ -654,24 +666,26 @@
 <script>
 // Default sources data for reset
 const DEFAULT_SOURCES = [
-  {ch:'Amazon',chColor:'#FF9900',name:'Amazon Seller Central',url:'https://sellercentral.amazon.com/news',domain:'sellercentral.amazon.com'},
-  {ch:'Amazon',chColor:'#FF9900',name:'Amazon Press',url:'https://press.aboutamazon.com',domain:'press.aboutamazon.com'},
-  {ch:'Walmart',chColor:'#0071DC',name:'Walmart Marketplace',url:'https://marketplace.walmart.com/news/',domain:'marketplace.walmart.com'},
-  {ch:'TikTok Shop',chColor:'#000000',name:'TikTok Shop Academy',url:'https://seller.tiktok.com/university/policy',domain:'seller.tiktok.com'},
-  {ch:'TEMU',chColor:'#E85D2C',name:'TEMU Merchant Center',url:'https://seller.kuajingmaihuo.com',domain:'seller.kuajingmaihuo.com'},
-  {ch:'官方机构',chColor:'#dc2626',name:'CBP CSMS',url:'https://www.cbp.gov/trade/automated',domain:'cbp.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'FDA Food & Supplements',url:'https://www.fda.gov/food',domain:'fda.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'California Prop 65',url:'https://oehha.ca.gov/proposition-65',domain:'oehha.ca.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'EU Taxation & Customs',url:'https://taxation-customs.ec.europa.eu',domain:'ec.europa.eu'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'卖家之家',url:'https://www.mjzj.com',domain:'mjzj.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'雨果跨境',url:'https://www.cifnews.com',domain:'cifnews.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'亿邦动力',url:'https://www.ebrun.com',domain:'ebrun.com'},
-  {ch:'专业机构',chColor:'#0d9488',name:'积特知识产权',url:'',domain:''},
-  {ch:'专业机构',chColor:'#0d9488',name:'TSL Agency',url:'',domain:''},
-  {ch:'物流机构',chColor:'#0d9488',name:'Forest Shipping',url:'',domain:''},
-  {ch:'专业机构',chColor:'#0d9488',name:'CedCommerce',url:'',domain:''},
-  {ch:'物流机构',chColor:'#0d9488',name:'联宇物流',url:'',domain:''},
-  {ch:'数据机构',chColor:'#1d4ed8',name:'MarketplacePulse',url:'https://www.marketplacepulse.com',domain:'marketplacepulse.com'}
+  {ch:'Amazon',chColor:'#FF9900',name:'卖家新闻',url:'https://sellercentral.amazon.com/news',domain:'sellercentral.amazon.com'},
+  {ch:'Amazon',chColor:'#FF9900',name:'官方新闻中心',url:'https://press.aboutamazon.com',domain:'press.aboutamazon.com'},
+  {ch:'Amazon',chColor:'#FF9900',name:'卖家官方论坛（美区 Bug 哨所）',url:'https://sellercentral.amazon.com/forums',domain:'sellercentral.amazon.com'},
+  {ch:'Walmart',chColor:'#0071DC',name:'商家新闻',url:'https://marketplace.walmart.com/news',domain:'marketplace.walmart.com'},
+  {ch:'TikTok Shop',chColor:'#000000',name:'官方大学与政策中心',url:'https://seller.tiktok.com/university/policy',domain:'seller.tiktok.com'},
+  {ch:'TEMU',chColor:'#E85D2C',name:'跨境卖家中心',url:'https://seller.kuajingmaihuo.com',domain:'seller.kuajingmaihuo.com'},
+  {ch:'官方机构',chColor:'#dc2626',name:'美国海关 CBP CSMS 货运消息系统',url:'https://www.cbp.gov/trade/automated',domain:'cbp.gov'},
+  {ch:'官方机构',chColor:'#dc2626',name:'美国 FDA 食品与补充剂监管局',url:'https://www.fda.gov/food',domain:'fda.gov'},
+  {ch:'官方机构',chColor:'#dc2626',name:'美国 CPSC 消费品安全委员会（小家电下架杀手）',url:'https://www.cpsc.gov/Newsroom',domain:'cpsc.gov'},
+  {ch:'官方机构',chColor:'#dc2626',name:'美国加州 Prop 65 环保标签局',url:'https://oehha.ca.gov/proposition-65',domain:'oehha.ca.gov'},
+  {ch:'欧盟',chColor:'#003399',name:'欧盟税务与海关总署（VAT/关税总线）',url:'https://taxation-customs.ec.europa.eu',domain:'ec.europa.eu'},
+  {ch:'欧盟',chColor:'#003399',name:'欧盟 Safety Gate 安全门（欧洲产品安全召回）',url:'https://ec.europa.eu/consumers/consumers_safety/safety_products/rapex',domain:'ec.europa.eu'},
+  {ch:'德国',chColor:'#1d4ed8',name:'德国 WEEE 注册局（Stiftung EAR · 带电产品硬合规）',url:'https://www.stiftung-ear.de',domain:'stiftung-ear.de'},
+  {ch:'德国',chColor:'#1d4ed8',name:'德国 LUCID 包装法注册局（Verpackungsregister）',url:'https://www.verpackungsregister.org',domain:'verpackungsregister.org'},
+  {ch:'Amazon',chColor:'#FF9900',name:'SP-API 变更日志（防 RPA 脚本断流）',url:'https://developer-docs.amazon.com/sp-api/changelog',domain:'developer-docs.amazon.com'},
+  {ch:'航运',chColor:'#0d9488',name:'上海航运交易所（SCFI/NCFI 头程运价精算）',url:'https://www.sse.net.cn',domain:'sse.net.cn'},
+  {ch:'行业社区',chColor:'#7c3aed',name:'知无不言（一线暗改/黑产/防挨打爆料）',url:'https://www.wearesellers.com',domain:'wearesellers.com'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'卖家之家',url:'https://mjzj.com',domain:'mjzj.com'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'雨果跨境',url:'https://cifnews.com',domain:'cifnews.com'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'亿邦动力',url:'https://ebrun.com',domain:'ebrun.com'}
 ];
 
 function buildRow(s) {
