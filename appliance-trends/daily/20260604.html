@@ -3,125 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>美国亚马逊$90+小家电市场趋势</title>
+  <title>小家电市场趋势 | 2026年6月4日</title>
   <style>
-    /* ========== 全局重置与基础样式 ========== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      background: #f0fdfa;
-      color: #1a1a1a;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ========== 页面容器 ========== */
-    .page-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px 16px 40px;
-    }
-
-    /* ========== 顶部标题区 ========== */
-    .page-header {
-      text-align: center;
-      padding: 32px 20px 24px;
-      background: #ffffff;
-      border-radius: 12px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    }
-    .page-header h1 {
-      font-size: 24px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 8px;
-      letter-spacing: 0.5px;
-    }
-    .page-header .meta {
-      font-size: 14px;
-      color: #6b7280;
-    }
-    .page-header .meta .date {
-      font-weight: 600;
-      color: #374151;
-    }
-    .page-header .meta .update-hint {
-      display: inline-block;
-      background: #f0fdfa;
-      color: #0d9488;
-      font-size: 12px;
-      padding: 2px 10px;
-      border-radius: 20px;
-      margin-left: 8px;
-      font-weight: 500;
-    }
-
-    /* ========== 统计概览条 ========== */
-    .stats-bar {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-    .stat-item {
-      flex: 1;
-      min-width: 100px;
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 14px 16px;
-      text-align: center;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
     .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
     .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
     .stat-hot .stat-number { color: #0d9488; }
     .stat-new .stat-number { color: #8b5cf6; }
     .stat-trend .stat-number { color: #f59e0b; }
-
-    /* ========== 机会速报卡片 ========== */
-    .opportunity-card {
-      background: #ffffff;
-      border-radius: 10px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-      overflow: hidden;
-    }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
     .card-hot { border-left: 4px solid #0d9488; }
     .card-new { border-left: 4px solid #8b5cf6; }
     .card-trend { border-left: 4px solid #f59e0b; }
-
     .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
     .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
     .tag-kitchen { background: #0d9488; }
-    .tag-bbq { background: #dc2626; }
-    .tag-smart { background: #8b5cf6; }
     .tag-drink { background: #2563eb; }
-    .tag-bake { background: #d97706; }
-    .tag-outdoor { background: #059669; }
-    .tag-pizza { background: #ea580c; }
+    .tag-smart { background: #8b5cf6; }
     .tag-fan { background: #0891b2; }
     .tag-cocktail { background: #be185d; }
     .tag-warm { background: #dc2626; }
     .tag-icecream { background: #d97706; }
     .urgency-badge { font-size: 13px; font-weight: 600; }
-
     .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
-
     .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
     .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
     .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
-
     .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
     .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
     .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
     .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
     .card-source a { color: #0d9488; text-decoration: none; }
     .card-source a:hover { text-decoration: underline; }
-
     .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
-
-    /* ========== 详析卡片 ========== */
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
     .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
     .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
     .detail-section { padding: 8px 18px; }
@@ -132,106 +63,48 @@
     .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
     .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
     .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
-    .section-detail { color: #374151; }
-    .section-other { color: #6b7280; }
-
-    /* ========== 关注项 ========== */
+    .detail-verdict { background: #fef3c7; border-radius: 6px; margin: 8px 18px 14px; padding: 12px 14px; }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
     .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
     .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
     .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
-
-    /* ========== 分隔标题 ========== */
-    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
-    .section-hot { color: #0d9488; }
-    .section-new { color: #8b5cf6; }
-    .section-trend { color: #f59e0b; }
-
-    /* ========== 历史归档区 ========== */
-    .archive-section {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-top: 24px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    }
-    .archive-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #f0fdfa;
-    }
-    .archive-list {
-      list-style: none;
-      padding: 0;
-    }
-    .archive-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid #f3f4f6;
-    }
-    .archive-list li:last-child { border-bottom: none; }
-    .archive-list a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-decoration: none;
-      color: #111827;
-      padding: 4px 8px;
-      border-radius: 6px;
-    }
-    .archive-list a:hover { background: #f0fdfa; }
-    .archive-date { font-weight: 600; font-size: 15px; }
-    .archive-meta { font-size: 13px; color: #6b7280; }
-    .archive-meta .count { color: #0d9488; font-weight: 600; margin-right: 8px; }
-
-    /* ========== NEW徽章 ========== */
-    .new-badge {
-      display: inline-block;
-      font-size: 10px;
-      background: #0d9488;
-      color: #fff;
-      padding: 1px 6px;
-      border-radius: 8px;
-      margin-left: 6px;
-      vertical-align: middle;
-      line-height: 1.5;
-      font-weight: 600;
-    }
-
-    /* ========== 页脚 ========== */
     .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
     .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
     .page-footer a { color: #0d9488; text-decoration: none; }
     .page-footer a:hover { text-decoration: underline; }
-
-    /* ========== 响应式 ========== */
     @media (max-width: 480px) {
       .page-header h1 { font-size: 20px; }
       .stat-item { min-width: 70px; padding: 10px 8px; }
       .stat-item .stat-number { font-size: 22px; }
       .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
       .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
     }
   </style>
 </head>
 <body>
 <div class="page-wrapper">
 
-  <!-- ==================== 顶部标题区 ==================== -->
   <div class="page-header">
-    <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+    <h1>🍳 美国$90+小家电市场趋势</h1>
     <div class="meta">
-      <span class="date">每日选品机会扫描</span>
-      <span class="update-hint">2026年6月4日 更新</span>
+      <span class="date">2026年6月4日（周四）</span>
+      <span class="update-hint">冷饮双功能+智能风扇日</span>
     </div>
   </div>
 
-  <!-- ==================== 统计概览条 ==================== -->
+  <div class="nav-bar">
+    <a href="20260603.html">← 前日</a>
+    <span class="nav-center">6月4日</span>
+    <span style="color:#d1d5db;font-size:14px;">最新</span>
+  </div>
+
   <div class="stats-bar">
     <div class="stat-item stat-hot">
       <div class="stat-number">5</div>
-      <div class="stat-label">🔥 今日机会</div>
+      <div class="stat-label">重点机会</div>
     </div>
     <div class="stat-item stat-new">
       <div class="stat-number">$200</div>
@@ -243,95 +116,97 @@
     </div>
   </div>
 
-  <!-- ==================== 🔥 最新机会速报 ==================== -->
-  <div class="section-label section-hot">🔥 今日机会速报 · 6月4日</div>
+  <div class="section-label section-hot">🔥 今日重点机会</div>
 
   <div class="opportunity-card card-hot">
     <div class="card-top">
       <span class="category-tag tag-icecream">冰淇淋+冰沙</span>
-      <span class="urgency-badge">🍦 Costco首发</span>
+      <span class="urgency-badge" style="color:#0d9488;">🍦 Costco首发</span>
     </div>
     <div class="card-title">Gourmia 2-Quart软冰淇淋+冰沙一体机 — 压缩机双功能$199.99新低价</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">趋势：</span>6/3首发Costco全美，内置压缩机无需预冻，6预设（Soft Serve/Slush/Spiked/Milkshake/Frappe/Sorbet），30分钟出成品，内置配料站+加热盘</div>
-      <div class="summary-item"><span class="summary-label">机会：</span>GreenPan $250→Gourmia $199.99，冷饮双功能价格持续下探，$90-150无压缩机小容量版完全空白</div>
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>6/3首发Costco全美，内置压缩机无需预冻，6预设（Soft Serve/Slush/Spiked/Milkshake/Frappe/Sorbet），30分钟出成品，3小时保冷，内置配料站+加热盘</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>GreenPan $250→Gourmia $199.99，冷饮双功能价格持续下探，$90-150无压缩机小容量版完全空白</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> 冷饮双功能大众化信号强烈，Costco渠道背书</div>
     </div>
     <div class="card-price">
-      <div class="price-title">💰 参考价格区间</div>
-      <div class="price-text">$90-150（无压缩机双功能空白）/ $199.99（Gourmia Costco）/ $250（GreenPan Frost）/ $295（Ninja CREAMi Swirl）</div>
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（无压缩机双功能空白）/ $199.99（Gourmia Costco）/ $250（GreenPan Frost）/ $295（Ninja CREAMi Swirl）/ $340（HiCOZY F3）</div>
     </div>
-    <div class="card-source">来源：<a href="https://www.morningstar.com/news/pr-newswire/20260603ph74354/gourmia-brings-the-ultimate-soft-serve-ice-cream-and-slushy-maker-to-costco-for-endless-summer-fun" target="_blank" style="color:#0d9488;">PR Newswire</a></div>
+    <div class="card-source">来源：<a href="https://www.morningstar.com/news/pr-newswire/20260603ph74354/gourmia-brings-the-ultimate-soft-serve-ice-cream-and-slushy-maker-to-costco-for-endless-summer-fun" target="_blank">PR Newswire</a></div>
   </div>
 
   <div class="opportunity-card card-new">
     <div class="card-top">
       <span class="category-tag tag-fan">智能风扇</span>
-      <span class="urgency-badge">🌀 空净品牌跨界</span>
+      <span class="urgency-badge" style="color:#8b5cf6;">🌀 空净品牌跨界</span>
     </div>
     <div class="card-title">Coway Airmega P50智能风扇 — 18.5dB超静音+语音控制+热感应调温</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">趋势：</span>6/2首发$129.99，800CFM/108英尺风距，18.5dB（WIRED评测最安静），语音控制无需App，热感应自动调温</div>
-      <div class="summary-item"><span class="summary-label">机会：</span>$90-130"厨房专用智能温感风扇"空白——热感应检测灶台温度自动送风排油烟</div>
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>6/2首发$129.99，800CFM/108英尺风距，18.5dB（WIRED评测最安静），语音控制无需App，热感应自动调温，23-41英寸可调高度</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-130"厨房专用智能温感风扇"空白——热感应检测灶台温度自动送风排油烟</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> Coway跨品类信任度高，"厨房专用"定位完全无人做</div>
     </div>
     <div class="card-price">
-      <div class="price-title">💰 参考价格区间</div>
-      <div class="price-text">$90-130（厨房专用智能风扇空白）/ $129.99（Coway P50）/ $200-300（Dyson无叶风扇）</div>
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-130（厨房专用智能风扇空白）/ $129.99（Coway P50）/ $200-300（Dyson无叶风扇）/ $500+（Dyson Purifier Hot+Cool）</div>
     </div>
-    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/coway-launches-its-first-fan-the-airmega-pedestal-fan-p50-expanding-its-smart-home-lineup-with-powerful-quiet-cooling-302785076.html" target="_blank" style="color:#0d9488;">PR Newswire</a> | <a href="https://technewsvision.co.uk/review-coway-airmega-pedestal-fan-p50/" target="_blank" style="color:#0d9488;">WIRED Review</a></div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/coway-launches-its-first-fan-the-airmega-pedestal-fan-p50-expanding-its-smart-home-lineup-with-powerful-quiet-cooling-302785076.html" target="_blank">PR Newswire</a> | <a href="https://technewsvision.co.uk/review-coway-airmega-pedestal-fan-p50/" target="_blank">WIRED Review</a></div>
   </div>
 
   <div class="opportunity-card card-new">
     <div class="card-top">
       <span class="category-tag tag-cocktail">自动调酒</span>
-      <span class="urgency-badge">🍸 胶囊调酒</span>
+      <span class="urgency-badge" style="color:#be185d;">🍸 胶囊调酒</span>
     </div>
     <div class="card-title">Bartesian 55300胶囊调酒机 — "Nespresso模式做鸡尾酒"夏季爆发</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">趋势：</span>$399.99，4.6星5400+评论，5种基酒仓+胶囊系统，20秒出酒，CNN Underscored推荐</div>
-      <div class="summary-item"><span class="summary-label">机会：</span>$90-150"2-3种基酒+糖浆胶囊"简易调酒机空白——Bartesian验证了需求但$399把90%用户挡在门外</div>
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>$399.99，4.6星5400+评论，5种基酒仓+胶囊系统，20秒出酒，CNN Underscored推荐，GizStreet称"家居娱乐最大突破"</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-150"2-3种基酒+糖浆胶囊"简易调酒机空白——Bartesian验证了需求，但$399+体积把90%用户挡在门外</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> "Pod-based luxury"趋势已验证，降维到大众价格是必然</div>
     </div>
     <div class="card-price">
-      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-title">💰 价格区间</div>
       <div class="price-text">$90-150（简易调酒机空白）/ $399.99（Bartesian 55300）/ $500+（专业级）</div>
     </div>
-    <div class="card-source">来源：<a href="https://www.bgr.com/2182018/gadgets-perfect-for-hosting-parties/" target="_blank" style="color:#0d9488;">BGR</a> | <a href="https://cms.gizstreet.com/beyond-the-basics-the-new-wave-of-smart-home-tech-transforming-modern-hosting/" target="_blank" style="color:#0d9488;">GizStreet</a></div>
+    <div class="card-source">来源：<a href="https://www.bgr.com/2182018/gadgets-perfect-for-hosting-parties/" target="_blank">BGR</a> | <a href="https://cms.gizstreet.com/beyond-the-basics-the-new-wave-of-smart-home-tech-transforming-modern-hosting/" target="_blank">GizStreet</a></div>
   </div>
 
   <div class="opportunity-card card-hot">
     <div class="card-top">
       <span class="category-tag tag-drink">软冰淇淋</span>
-      <span class="urgency-badge">🔥 降价$50</span>
+      <span class="urgency-badge" style="color:#0d9488;">🔥 降价$50</span>
     </div>
     <div class="card-title">Ninja CREAMi Scoop &amp; Swirl — 13-in-1软冰淇淋+搅拌，$294.95(-$50)</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">趋势：</span>TikTok爆款，13-in-1程序含软冰淇淋，2个16oz容器，洗碗机安全部件</div>
-      <div class="summary-item"><span class="summary-label">机会：</span>$90-150无压缩机冰淇淋机空白仍然存在，降价进一步刺激需求</div>
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>TikTok爆款，13-in-1程序含软冰淇淋，2个16oz容器，洗碗机安全部件，The Mirror称"夏季必备"</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>同6/3分析，$90-150无压缩机冰淇淋机空白仍然存在</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> 降价进一步刺激需求，无压缩机替代方案窗口更明确</div>
     </div>
     <div class="card-price">
-      <div class="price-title">💰 参考价格区间</div>
-      <div class="price-text">$90-150（无压缩机冰淇淋机空白）/ $199（Ninja Creami基础）/ $295（Ninja CREAMi Swirl降价）</div>
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（无压缩机冰淇淋机空白）/ $199（Ninja Creami基础）/ $295（Ninja CREAMi Swirl降价）/ $350（原价）</div>
     </div>
-    <div class="card-source">来源：<a href="https://www.themirror.com/lifestyle/shopping/amazon-ninja-creami-sale-now-1865891" target="_blank" style="color:#0d9488;">The Mirror</a></div>
+    <div class="card-source">来源：<a href="https://www.themirror.com/lifestyle/shopping/amazon-ninja-creami-sale-now-1865891" target="_blank">The Mirror</a></div>
   </div>
 
   <div class="opportunity-card card-trend">
     <div class="card-top">
       <span class="category-tag tag-warm">食品保温</span>
-      <span class="urgency-badge">🔥 隐形保温</span>
+      <span class="urgency-badge" style="color:#f59e0b;">🔥 隐形保温</span>
     </div>
     <div class="card-title">Feppo WM01食品保温垫 — "隐形保温"新品类，低轮廓+6档温控</div>
     <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">趋势：</span>低轮廓加热垫，6档温控(122-212°F)，边缘冷却防烫，4.7星1200+评论</div>
-      <div class="summary-item"><span class="summary-label">机会：</span>$90-150"厨房温控保温板"——从派对延伸到日常烹饪辅助（低温慢煮/发酵/解冻），品类完全空白</div>
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>低轮廓加热垫，6档温控(122-212°F)，边缘冷却防烫，6小时定时，4.7星1200+评论，BGR"派对神器"推荐</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-150"厨房烹饪温控保温板"——从派对延伸到日常烹饪辅助（低温慢煮/发酵/解冻），品类完全空白</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> "隐形保温"概念可扩展到烹饪场景，不只是派对</div>
     </div>
     <div class="card-price">
-      <div class="price-title">💰 参考价格区间</div>
-      <div class="price-text">$90-120（Feppo WM01）/ $150-200（厨房温控保温板空白——可做低温慢煮+发酵+解冻3合1）</div>
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-120（Feppo WM01）/ $150-200（厨房温控保温板空白——可做低温慢煮+发酵+解冻3合1）/ $250+（专业低温慢煮机）</div>
     </div>
-    <div class="card-source">来源：<a href="https://www.bgr.com/2182018/gadgets-perfect-for-hosting-parties/" target="_blank" style="color:#0d9488;">BGR</a></div>
+    <div class="card-source">来源：<a href="https://www.bgr.com/2182018/gadgets-perfect-for-hosting-parties/" target="_blank">BGR</a></div>
   </div>
-
-  <!-- ==================== 📋 重点机会详析 ==================== -->
 
   <div class="section-label section-detail">📋 重点机会详析</div>
 
@@ -349,7 +224,7 @@
           <li>内置压缩机无需预冻，30分钟出软冰淇淋/冰沙</li>
           <li>6预设：Soft Serve/Slush/Spiked/Milkshake/Frappe/Sorbet</li>
           <li>3小时"Keep Cold"保冷——派对场景核心功能</li>
-          <li>内置配料站（撒糖针/曲奇碎）+ 加热盘（热巧克力/焦糖淋酱）</li>
+          <li>内置配料站（撒糖针/曲奇碎）+ 加热盘（热巧克力/焦糖淋酱）——"甜品店体验在家复刻"</li>
           <li>可拆卸冷冻缸+自清洁循环</li>
           <li>关键信号：GreenPan $250→Gourmia $199.99，冷饮双功能价格持续下探</li>
         </ul>
@@ -357,7 +232,7 @@
     </div>
     <div class="detail-highlight">
       <div class="hl-label">💡 机会判断</div>
-      <div class="hl-text">$99-149定价，做到：1）半导体制冷替代压缩机（降本$50+，体积减半）；2）32oz小容量1-3人份；3）4预设（软冰淇淋/冰沙/奶昔/冻酸奶）；4）可拆卸内胆洗碗机安全；5）暖色外壳。成本$35-55，毛利55-65%。核心卖点"Gourmia/GreenPan体验的一半价格"——大多数家庭不需要2夸脱派对容量，只需要"15分钟一杯软冰淇淋"。</div>
+      <div class="hl-text">$99-149定价，做到：1）半导体制冷替代压缩机（降本$50+，体积减半）；2）32oz小容量1-3人份；3）4预设（软冰淇淋/冰沙/奶昔/冻酸奶）；4）可拆卸内胆洗碗机安全；5）暖色外壳（奶油白/薄荷绿）。成本$35-55，毛利55-65%。核心卖点"Gourmia/GreenPan体验的一半价格"——大多数家庭不需要2夸脱派对容量，只需要"15分钟一杯软冰淇淋"。</div>
     </div>
     <div class="detail-section">
       <div class="detail-label">发散思考</div>
@@ -421,14 +296,14 @@
           <li>5种基酒仓（Vodka/Gin/Rum/Tequila/Whiskey），胶囊系统</li>
           <li>20秒出鸡尾酒，CNN Underscored推荐</li>
           <li>GizStreet深度分析：调酒自动化是"家居娱乐"最大突破，"Pod-based luxury appliances"趋势</li>
-          <li>GoveeLife H717D智能制冰机：Matter支持，Alexa/Google联动——调酒生态配套品</li>
+          <li>GoveeLife H717D智能制冰机：Matter支持，Alexa/Google联动，26磅/24h——调酒生态配套品</li>
           <li>痛点：$399+胶囊持续消耗太贵，5种基酒仓占台面太大</li>
         </ul>
       </div>
     </div>
     <div class="detail-highlight">
       <div class="hl-label">💡 机会判断</div>
-      <div class="hl-text">$99-149定价，做到：1）2-3种基酒仓（Vodka+Tequila最百搭）；2）糖浆胶囊+App食谱模式（不是酒精胶囊——用户自己买酒更便宜）；3）3-5款经典鸡尾酒一键出（Mojito/Margarita/Cosmo/Old Fashioned/Daiquiri）；4）紧凑台面设计；5）可拆卸部件洗碗机安全。成本$40-60，毛利55-65%。核心逻辑"Bartesian验证了需求，但价格和体积把90%用户挡在门外"。</div>
+      <div class="hl-text">$99-149定价，做到：1）2-3种基酒仓（Vodka+Tequila最百搭，或Vodka+Whiskey）；2）糖浆胶囊+App食谱模式（不是酒精胶囊——用户自己买酒更便宜）；3）3-5款经典鸡尾酒一键出（Mojito/Margarita/Cosmo/Old Fashioned/Daiquiri）；4）紧凑台面设计；5）可拆卸部件洗碗机安全。成本$40-60，毛利55-65%。核心逻辑"Bartesian验证了需求，但价格和体积把90%用户挡在门外"。</div>
     </div>
     <div class="detail-section">
       <div class="detail-label">发散思考</div>
@@ -442,15 +317,13 @@
     </div>
   </div>
 
-  <!-- ==================== 👀 其他值得关注 ==================== -->
-
   <div class="section-label section-other">👀 其他值得关注</div>
 
   <div class="watch-item">
     <div class="watch-title">📌 Prime Day 2026早期Deal持续释放——厨房家电价格战提前</div>
     <div class="watch-text">
       Ninja Flip翻转炸锅烤箱$160(-36%)、Ninja Creami $199(-13%)、Ecoself冷压榨汁机$90(-40%)、Chefman室内披萨炉$200(-50%)<br>
-      启示：6/23-26 Prime Day越来越近，6月中下旬是广告投放关键窗口<br>
+      启示：6/23-26 Prime Day越来越近，厨房家电价格战已提前打响，6月中下旬是广告投放关键窗口<br>
       来源：<a href="https://www.foodandwine.com/amazon-prime-day-2026-announcement-early-deals-11987693" target="_blank" style="color:#0d9488;">Food &amp; Wine</a> | <a href="https://www.allrecipes.com/amazon-prime-day-2026-announcement-early-deals-11988435" target="_blank" style="color:#0d9488;">AllRecipes</a>
     </div>
   </div>
@@ -488,20 +361,6 @@
       150 Air Watts吸力(+30%)、60分钟续航、可换电池、未来配自空底座<br>
       启示：$399价位无线吸尘器性能逼近有线，厨房/家居清洁品类智能化不可逆
     </div>
-  </div>
-
-  <!-- ==================== 📅 历史归档 ==================== -->
-  <div class="archive-section">
-    <div class="archive-title">📅 历史归档</div>
-    <ul class="archive-list">
-      <li><a href="daily/20260604.html"><span class="archive-date">6月4日 <span class="new-badge">NEW</span></span><span class="archive-meta"><span class="count">5个机会</span>软冰淇淋+冰沙 · 智能风扇 · 胶囊调酒 · CREAMi降价 · 食品保温垫</span></a></li>
-      <li><a href="daily/20260603.html"><span class="archive-date">6月3日</span><span class="archive-meta"><span class="count">5个机会</span>AI冰饮机 · 冰淇淋双功能 · 披萨炉 · AI烹饪眼镜 · 多功能一体</span></a></li>
-      <li><a href="daily/20260602.html"><span class="archive-date">6月2日</span><span class="archive-meta"><span class="count">5个机会</span>玻璃炸锅 · AI烹饪机器人 · AI洗碗机 · 无毒炸锅 · 高级冰饮</span></a></li>
-      <li><a href="daily/20260531.html"><span class="archive-date">5月31日</span><span class="archive-meta"><span class="count">5个机会</span>AI烹饪机器人 · 植物奶机 · 自动搅拌器 · 精准秤 · 不锈钢炸锅</span></a></li>
-      <li><a href="daily/20260530.html"><span class="archive-date">5月30日</span><span class="archive-meta"><span class="count">5个机会</span>透明冰块机 · 玻璃炸锅 · 智能砧板 · 搅拌机 · 无毒趋势</span></a></li>
-      <li><a href="daily/20260529.html"><span class="archive-date">5月29日</span><span class="archive-meta"><span class="count">5个机会</span>冰沙机 · AI烹饪 · 植物奶 · 咖啡机 · 户外披萨</span></a></li>
-      <li><a href="daily/20260528.html"><span class="archive-date">5月28日</span><span class="archive-meta"><span class="count">5个机会</span>披萨炉 · 制冰机 · 多功能烤箱 · 玻璃炸锅 · 高端化</span></a></li>
-    </ul>
   </div>
 
   <div class="page-footer">
