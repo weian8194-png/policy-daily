@@ -569,6 +569,31 @@
       </div>
     </section>
 
+    <!-- 信息源配置 -->
+    <section class="section-block" id="sources">
+      <div class="section-header">
+        <h2>📡 信息源配置</h2>
+        <span class="section-badge badge-info">28个来源</span>
+      </div>
+      <div class="sources-toolbar">
+        <span class="sources-toolbar-hint">渠道 · 名称 · URL · 域名 · 启用 · 删除</span>
+        <div class="sources-toolbar-actions">
+          <button class="btn-sm" onclick="addSourceRow()">＋ 新增</button>
+          <button class="btn-sm" onclick="resetSources()">↻ 恢复默认</button>
+        </div>
+      </div>
+      <div class="sources-table-wrap">
+        <table class="sources-table">
+          <thead>
+            <tr>
+              <th>渠道</th><th>名称</th><th>URL</th><th>域名</th><th>启用</th><th>删除</th>
+            </tr>
+          </thead>
+          <tbody id="sources-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
     <!-- Footer -->
     <div class="page-footer">
       <div class="footer-divider"></div>
@@ -664,6 +689,9 @@ function updateCount() {
   const navCount = document.querySelector('a[href="#sources"] .nav-count');
   if (navCount) navCount.textContent = count;
 }
+
+// Init sources table on page load
+document.addEventListener('DOMContentLoaded', resetSources);
 </script>
 </body>
 </html>
