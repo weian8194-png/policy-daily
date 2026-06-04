@@ -199,6 +199,31 @@
       font-weight: 600;
     }
 
+    /* ========== 信息源配置 ========== */
+    .sources-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px 8px 0 0; }
+    .sources-toolbar-hint { font-size: 12px; color: #64748b; }
+    .sources-toolbar-actions { display: flex; gap: 8px; }
+    .sources-table-wrap { background: #fff; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 8px 8px; overflow-x: auto; }
+    .sources-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .sources-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; white-space: nowrap; }
+    .sources-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+    .sources-table tr:hover td { background: #f8fafc; }
+    .sources-table .st-channel { white-space: nowrap; }
+    .sc-tag { display: inline-block; font-size: 11px; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+    .sources-table .st-url a { color: #0d9488; text-decoration: none; font-size: 11px; }
+    .sources-table .st-url a:hover { text-decoration: underline; }
+    .sources-table .st-domain { color: #64748b; font-size: 11px; }
+    .sources-table input { font-size: 12px; padding: 3px 6px; border: 1px solid #d1d5db; border-radius: 4px; width: 100%; }
+    .sources-table input[type="checkbox"] { width: auto; }
+    .btn-sm { font-size: 12px; padding: 4px 12px; border: 1px solid #d1d5db; border-radius: 6px; background: #fff; cursor: pointer; color: #374151; }
+    .btn-sm:hover { background: #f0fdfa; border-color: #0d9488; color: #0d9488; }
+    .btn-del { font-size: 14px; color: #ef4444; background: none; border: none; cursor: pointer; padding: 2px 6px; border-radius: 4px; }
+    .btn-del:hover { background: #fef2f2; }
+    .btn-save { font-size: 14px; color: #0d9488; background: none; border: none; cursor: pointer; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+    .btn-save:hover { background: #f0fdfa; }
+    .btn-cancel { font-size: 14px; color: #64748b; background: none; border: none; cursor: pointer; padding: 2px 6px; border-radius: 4px; }
+    .btn-cancel:hover { background: #f8fafc; }
+
     /* ========== 页脚 ========== */
     .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
     .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
@@ -490,6 +515,31 @@
     </div>
   </div>
 
+  <!-- ==================== 📡 信息源配置 ==================== -->
+  <div class="archive-section" id="sources" style="margin-top:8px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #f0fdfa;">
+      <div class="archive-title" style="margin-bottom:0;padding-bottom:0;border-bottom:none;">📡 信息源配置</div>
+      <span class="new-badge" id="sources-count" style="background:#0d9488;font-size:11px;padding:2px 10px;">12个来源</span>
+    </div>
+    <div class="sources-toolbar">
+      <span class="sources-toolbar-hint">渠道 · 名称 · URL · 域名 · 启用 · 删除</span>
+      <div class="sources-toolbar-actions">
+        <button class="btn-sm" onclick="addSourceRow()">＋ 新增</button>
+        <button class="btn-sm" onclick="resetSources()">↻ 恢复默认</button>
+      </div>
+    </div>
+    <div class="sources-table-wrap">
+      <table class="sources-table">
+        <thead>
+          <tr>
+            <th>渠道</th><th>名称</th><th>URL</th><th>域名</th><th>启用</th><th>删除</th>
+          </tr>
+        </thead>
+        <tbody id="sources-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
   <!-- ==================== 📅 历史归档 ==================== -->
   <div class="archive-section">
     <div class="archive-title">📅 历史归档</div>
@@ -506,10 +556,81 @@
 
   <div class="page-footer">
     <div class="footer-divider"></div>
-    <p>数据来源：PR Newswire、WIRED、BGR、GizStreet、The Mirror、Food &amp; Wine、AllRecipes、Serious Eats、Best Choice、MorningStar</p>
+    <p>数据来源：PR Newswire · WIRED · BGR · GizStreet · The Mirror · Food & Wine · AllRecipes · Serious Eats · Techlicious · CNN Underscored · Amazon · MorningStar 等12个信息源</p>
     <p>生成时间：2026年6月4日 | <a href="../index.html">返回首页</a></p>
   </div>
 
 </div>
+<script>
+// Default sources data for reset
+const DEFAULT_SOURCES = [
+  {ch:'新品发布',chColor:'#0d9488',name:'PR Newswire（产品发布新闻稿）',url:'https://www.prnewswire.com',domain:'prnewswire.com'},
+  {ch:'新品发布',chColor:'#0d9488',name:'MorningStar（PR Newswire分发）',url:'https://www.morningstar.com',domain:'morningstar.com'},
+  {ch:'科技评测',chColor:'#8b5cf6',name:'WIRED（科技产品评测）',url:'https://www.wired.com',domain:'wired.com'},
+  {ch:'科技评测',chColor:'#8b5cf6',name:'BGR（数码家电资讯）',url:'https://www.bgr.com',domain:'bgr.com'},
+  {ch:'科技评测',chColor:'#8b5cf6',name:'Techlicious（科技家居产品）',url:'https://www.techlicious.com',domain:'techlicious.com'},
+  {ch:'科技评测',chColor:'#8b5cf6',name:'GizStreet（智能家居分析）',url:'https://www.gizstreet.com',domain:'gizstreet.com'},
+  {ch:'科技评测',chColor:'#8b5cf6',name:'CNN Underscored（产品推荐）',url:'https://www.cnn.com/cnn-underscored',domain:'cnn.com'},
+  {ch:'美食厨房',chColor:'#d97706',name:'Food & Wine（厨房产品新闻）',url:'https://www.foodandwine.com',domain:'foodandwine.com'},
+  {ch:'美食厨房',chColor:'#d97706',name:'AllRecipes（厨房产品比价）',url:'https://www.allrecipes.com',domain:'allrecipes.com'},
+  {ch:'美食厨房',chColor:'#d97706',name:'Serious Eats（厨具深度评测）',url:'https://www.seriouseats.com',domain:'seriouseats.com'},
+  {ch:'购物社媒',chColor:'#dc2626',name:'The Mirror（购物优惠）',url:'https://www.themirror.com',domain:'themirror.com'},
+  {ch:'购物社媒',chColor:'#dc2626',name:'Amazon Best Sellers（产品排名）',url:'https://www.amazon.com/Best-Sellers/zgbs',domain:'amazon.com'}
+]
+
+function buildRow(s) {
+  const urlCell = s.url ? '<a href="'+s.url+'" target="_blank">'+s.url.replace(/^https?:\/\//,'')+'</a>' : '—';
+  const domainCell = s.domain || '—';
+  return '<tr><td class="st-channel"><span class="sc-tag" style="background:'+s.chColor+'">'+s.ch+'</span></td><td class="st-name">'+s.name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+domainCell+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>';
+}
+
+function resetSources() {
+  const tbody = document.getElementById('sources-tbody');
+  tbody.innerHTML = DEFAULT_SOURCES.map(buildRow).join('');
+  updateCount();
+}
+
+function delSourceRow(btn) {
+  btn.closest('tr').remove();
+  updateCount();
+}
+
+function addSourceRow() {
+  const tbody = document.getElementById('sources-tbody');
+  if (tbody.querySelector('.add-row')) return;
+  const tr = document.createElement('tr');
+  tr.className = 'add-row';
+  tr.innerHTML = '<td class="st-channel"><input placeholder="渠道" id="new-ch"></td><td class="st-name"><input placeholder="名称" id="new-name"></td><td class="st-url"><input placeholder="URL" id="new-url"></td><td class="st-domain"><input placeholder="域名" id="new-domain"></td><td class="st-enable"><input type="checkbox" checked id="new-enabled"></td><td style="text-align:center"><button class="btn-save" onclick="saveNewSource()">✓</button> <button class="btn-cancel" onclick="cancelNewSource()">✕</button></td>';
+  tbody.appendChild(tr);
+  document.getElementById('new-ch').focus();
+}
+
+function saveNewSource() {
+  const ch = document.getElementById('new-ch').value.trim();
+  const name = document.getElementById('new-name').value.trim();
+  const url = document.getElementById('new-url').value.trim();
+  const domain = document.getElementById('new-domain').value.trim();
+  if (!name) { document.getElementById('new-name').focus(); return; }
+  const row = document.querySelector('.add-row');
+  const urlCell = url ? '<a href="'+url+'" target="_blank">'+url.replace(/^https?:\/\//,'')+'</a>' : '—';
+  row.className = '';
+  row.innerHTML = '<td class="st-channel"><span class="sc-tag" style="background:#64748b">'+(ch||'自定义')+'</span></td><td class="st-name">'+name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+(domain||'—')+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td>';
+  updateCount();
+}
+
+function cancelNewSource() {
+  const row = document.querySelector('.add-row');
+  if (row) row.remove();
+}
+
+function updateCount() {
+  const count = document.querySelectorAll('#sources-tbody tr:not(.add-row)').length;
+  const badge = document.getElementById('sources-count');
+  if (badge) badge.textContent = count + '个来源';
+}
+
+// Init sources table on page load
+document.addEventListener('DOMContentLoaded', resetSources);
+</script>
 </body>
 </html>
