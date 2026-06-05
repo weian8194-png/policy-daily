@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年6月6日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-cocktail { background: #be185d; }
+    .tag-fan { background: #0891b2; }
+    .tag-coffee { background: #92400e; }
+    .tag-ice { background: #2563eb; }
+    .tag-vacuum { background: #7c3aed; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-source a:hover { text-decoration: underline; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .detail-verdict { background: #fef3c7; border-radius: 6px; margin: 8px 18px 14px; padding: 12px 14px; }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🍳 美国$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">2026年6月6日（周六）</span>
+      <span class="update-hint">胶囊调酒+跨界家电日</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="20260605.html">← 前日</a>
+    <span class="nav-center">6月6日</span>
+    <span style="color:#d1d5db;font-size:14px;">最新</span>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">重点机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">$399</div>
+      <div class="stat-label">🍸 Bartesian</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">$100</div>
+      <div class="stat-label">🌀 Zwilling</div>
+    </div>
+  </div>
+
+  <div class="section-label section-hot">🔥 今日重点机会</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-cocktail">胶囊调酒</span>
+      <span class="urgency-badge" style="color:#be185d;">🍸 Nespresso式调酒</span>
+    </div>
+    <div class="card-title">Bartesian 55300胶囊调酒机 — $399验证"一键调酒"需求，降维到$90-150空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>5个基酒槽+专属胶囊，一键出杯30+种鸡尾酒，强度可调（轻/中/重），GizStreet定位为"家居招待自动化"核心设备</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-150"胶囊调酒机"完全空白——2-3槽精简+可填充胶囊设计，覆盖80%热门鸡尾酒</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> $399验证需求但把95%家庭挡在门外，胶囊降维才能打开市场</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（胶囊调酒降维机空白）/ $399（Bartesian 55300）/ $500+（专业调酒机器人）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://cms.gizstreet.com/beyond-the-basics-the-new-wave-of-smart-home-tech-transforming-modern-hosting/" target="_blank">GizStreet</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-fan">空气管理</span>
+      <span class="urgency-badge" style="color:#0891b2;">🌀 空净品牌跨界</span>
+    </div>
+    <div class="card-title">Coway Airmega P50智能落地扇 — 空净品牌首做风扇，"空气管理一体机"趋势</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>6/2首发，Coway首款智能风扇，Airmega App联动，智能调速+静音，从空净跨入风扇品类</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-130"厨房油烟感应台面扇"空白——集成油烟传感器，检测到烹饪自动加速</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> 空净→风扇的跨界证明"空气管理"正在一体化，厨房是下一个场景</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-130（厨房空气管理扇空白）/ $200-300（Coway Airmega P50预估）/ $400+（Dyson Pure Cool）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/coway-launches-its-first-fan-the-airmega-pedestal-fan-p50-expanding-its-smart-home-lineup-with-powerful-quiet-cooling-302788969.html" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-coffee">冰咖啡</span>
+      <span class="urgency-badge" style="color:#92400e;">☕ 冰咖啡标配</span>
+    </div>
+    <div class="card-title">KitchenAid全自动意式+冰咖啡机 — 冰咖啡功能成夏日标配，降维到$99纯冰咖啡机</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>KitchenAid扩张浓缩咖啡产品线，新增全自动意式+冰咖啡功能，一键浓缩萃取到冰咖啡</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$99-149"冰咖啡专用机"空白——只做冰咖啡简化到极致，6种冰咖啡预设</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> 2026夏季冰咖啡需求首次超过热咖啡，$99纯冰咖啡机无人做</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（冰咖啡专用机空白）/ $500+（KitchenAid全自动预估）/ $800+（Jura/Miele）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/kitchenaid-brand-expands-espresso-collection-with-new-fully-automatic-espresso-machines-with-iced-coffee-302780363.html" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-ice">智能制冰</span>
+      <span class="urgency-badge" style="color:#2563eb;">❄️ Matter协议</span>
+    </div>
+    <div class="card-title">GoveeLife H717D智能制冰机 — Matter协议+26磅/日，制冰进入智能家居生态</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>支持Matter协议（智能家居通用标准），26磅/日制冰量，Alexa/Google语音控制，低冰量推送通知</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$99-129"制冰+净水+冷水三合一"空白——厨房台面制冰站，3种冰型覆盖调酒/冷饮/保鲜</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> Matter协议让制冰从单一功能家电升级为智能家居节点</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-130（厨房智能制冰站空白）/ $150-200（GoveeLife H717D预估）/ $300+（Opal/GE Profile）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://cms.gizstreet.com/beyond-the-basics-the-new-wave-of-smart-home-tech-transforming-modern-hosting/" target="_blank">GizStreet</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-vacuum">厨房清洁</span>
+      <span class="urgency-badge" style="color:#7c3aed;">🧹 厨具品牌跨界</span>
+    </div>
+    <div class="card-title">Zwilling Xtend无线手持吸尘器 — 厨具品牌做清洁，$100验证厨房台面碎屑需求</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>$100，Food &amp; Wine厨房编辑每日使用推荐，2个配件，充电电池与搅拌器/打蛋器通用</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-120"食品级厨房台面吸尘器"空白——食品级集尘盒+3模式+磁吸充电底座</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> Zwilling从刀具跨入清洁电器，证明厨具品牌信任可延展到清洁品类</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-120（厨房台面专用吸尘器空白）/ $100（Zwilling Xtend）/ $200+（Dyson handheld）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.foodandwine.com/best-amazon-finds-kitchen-editor-picks-11989536" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Bartesian 55300胶囊调酒机】"Nespresso式调酒"——$399验证需求，胶囊降维到$90-150打开家庭市场</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-150（胶囊调酒降维机空白）/ $399（Bartesian 55300）/ $500+（专业调酒机器人）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Bartesian 55300：5个基酒槽（伏特加/金酒/朗姆/龙舌兰/威士忌）+ 专属胶囊</li>
+          <li>胶囊包含复杂配方的苦精/糖浆/果汁，一键出杯30+种鸡尾酒</li>
+          <li>强度可调（轻/中/重），类似咖啡机浓度选择</li>
+          <li>GizStreet定位为"家居招待自动化"核心设备</li>
+          <li>痛点：$399太贵，5槽占台面太大，胶囊系统封闭</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-149定价，做到：1）2-3槽精简（朗姆+伏特加+威士忌覆盖80%热门鸡尾酒）；2）可填充胶囊设计——不锁封闭系统，用户可自己调配胶囊；3）4种预设（莫吉托/玛格丽特/金汤力/威士忌酸）；4）冰咖啡/冰沙模式复用（夏冬双季）；5）紧凑台面设计。成本$35-55，毛利55-65%。核心卖点"30秒一杯专业级鸡尾酒"。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"调酒+咖啡"双模式：白天胶囊咖啡，晚上胶囊鸡尾酒</li>
+          <li>与TikTok调酒达人联名胶囊："网红同款"限定口味</li>
+          <li>派对套装：调酒机+6种胶囊+2个调酒杯，$199一站式解决方案</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Coway Airmega P50智能落地扇】空净品牌跨界做风扇——"厨房空气管理扇"降维机会</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-130（厨房空气管理扇空白）/ $200-300（Coway Airmega P50预估）/ $400+（Dyson Pure Cool）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Coway 6/2首发Airmega P50，品牌首款智能落地扇</li>
+          <li>Coway是空净头部品牌，首次从空净跨入风扇品类</li>
+          <li>智能调速+静音设计+与Airmega App联动</li>
+          <li>PR Newswire定位为"扩展智能家居产品线"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$90-130定价，做到：1）"厨房空气管理扇"——集成油烟/异味传感器，检测到烹饪自动加速；2）台面级紧凑设计；3）3模式（通风/排烟/干燥）；4）可拆卸滤网吸附油烟微粒；5）APP联动+空气质量显示。成本$30-50，毛利55-65%。核心差异化"厨房油烟感应台面扇"——Coway做的是客厅风扇，没人做厨房专用。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"空气管理扇+油烟机"互补：小户型没有抽油烟机时的替代方案</li>
+          <li>与烹饪APP联动：检测到开始烹饪→自动启动通风模式</li>
+          <li>宿舍/公寓场景：租房不能装油烟机，$99台面扇解决通风</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【KitchenAid全自动意式+冰咖啡机】冰咖啡功能成夏日标配——$99"纯冰咖啡机"降维空白</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-150（冰咖啡专用机空白）/ $500+（KitchenAid全自动预估）/ $800+（Jura/Miele）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>KitchenAid扩张浓缩咖啡产品线，新增全自动意式+冰咖啡功能</li>
+          <li>冰咖啡功能：一键从浓缩萃取到冰咖啡</li>
+          <li>KitchenAid定位为"at-home coffee category trailblazer"</li>
+          <li>趋势：2026年夏季冰咖啡需求首次超过热咖啡</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-149定价，做到：1）"冰咖啡专用机"——不做全自动浓缩只做冰咖啡，简化到极致；2）6种冰咖啡预设（美式冰/冷萃风格/冰拿铁/冰摩卡/冰香草/原味冰）；3）一键操作：放入咖啡粉→选模式→30秒出冰咖啡；4）可拆卸冰杯+搅拌棒；5）紧凑台面设计。成本$30-50，毛利55-65%。核心差异化"冰咖啡专用"——KitchenAid $500+全能机，没人做$99纯冰咖啡机。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"冰咖啡机+冰沙机"组合：夏天冰咖啡+冰沙双品类覆盖</li>
+          <li>咖啡馆商用版：$199，3秒出杯冰美式</li>
+          <li>与咖啡豆品牌联名：指定咖啡豆→最佳萃取参数智能匹配</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Dyson V16 Piston Animal首发——最强防缠绕无线吸尘器</div>
+    <div class="watch-text">
+      6/2通过PR Newswire发布，"防缠绕"技术验证了"厨房长头发/宠物毛"痛点<br>
+      启示：防缠绕功能从全屋吸尘器延伸，厨房台面是下一个"防缠绕"场景<br>
+      来源：<a href="https://www.prnewswire.com/news-releases/introducing-the-dyson-v16-piston-animal-the-most-powerful-anti-tangle-cordless-vacuum-302789779.html" target="_blank" style="color:#0d9488;">PR Newswire</a>
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 "家居招待自动化"成为新趋势——让主人参与派对而非困在厨房</div>
+    <div class="watch-text">
+      GizStreet深度分析：ThermoMaven WT02多探头肉温计（Wi-Fi远程监控）+ Feppo WM01柔性加热垫（6档温控）+ GoveeLife制冰机，"set-and-forget"是关键词<br>
+      启示：所有$90+厨房家电都应考虑"社交场景"——能让人离开厨房去社交<br>
+      来源：<a href="https://cms.gizstreet.com/beyond-the-basics-the-new-wave-of-smart-home-tech-transforming-modern-hosting/" target="_blank" style="color:#0d9488;">GizStreet</a>
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Matter协议加速厨房电器智能化——制冰机成首批Matter厨房设备</div>
+    <div class="watch-text">
+      GoveeLife H717D制冰机支持Matter协议，可与Apple/Alexa/Google通用联动<br>
+      启示：Matter正在让"单一功能家电"升级为"智能家居节点"，厨房是下一个Matter主战场
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 厨具品牌跨界做家电成趋势——品类边界消融</div>
+    <div class="watch-text">
+      Zwilling做吸尘器、Levoit做吸尘器/加湿器、Coway做风扇——传统品类边界消融<br>
+      启示："品牌信任→品类延伸"是新玩法，$90-150定价区间是跨界最佳切入点
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Amazon Outlet清仓夏季库存——Prime Day前信号</div>
+    <div class="watch-text">
+      AllRecipes报道Amazon Outlet清仓高达74%off，Cuisinart Fondue Pot $99、Joy Pebble Indoor Grill $120<br>
+      启示：中高客单厨房电器折扣力度大，6/23 Prime Day前清库存信号明确<br>
+      来源：<a href="https://www.allrecipes.com/amazon-outlet-overstock-deals-june-2026-11991286" target="_blank" style="color:#0d9488;">AllRecipes</a>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>数据来源：PR Newswire · GizStreet · Food &amp; Wine · AllRecipes · MorningStar 等12个信息源</p>
+    <p>生成时间：2026年6月6日 | <a href="../index.html">返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
