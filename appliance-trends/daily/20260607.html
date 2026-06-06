@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年6月7日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-air { background: #0891b2; }
+    .tag-ice { background: #2563eb; }
+    .tag-humidifier { background: #059669; }
+    .tag-rice { background: #d97706; }
+    .tag-deal { background: #dc2626; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-source a:hover { text-decoration: underline; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #374151; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .detail-verdict { background: #fef3c7; border-radius: 6px; margin: 8px 18px 14px; padding: 12px 14px; }
+    .detail-verdict .verdict-label { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+    .detail-verdict .verdict-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .detail-title { font-size: 16px; }
+      .stats-bar { gap: 8px; }
+      .nav-bar { font-size: 13px; padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🍳 美国$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">2026年6月7日（周日）</span>
+      <span class="update-hint">日本设计+智能制冰日</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="20260606.html">← 前日</a>
+    <span class="nav-center">6月7日</span>
+    <span style="color:#d1d5db;font-size:14px;">最新</span>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">重点机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">$429</div>
+      <div class="stat-label">🌀 BALMUDA</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">$400</div>
+      <div class="stat-label">🍚 KitchenAid</div>
+    </div>
+  </div>
+
+  <div class="section-label section-hot">🔥 今日重点机会</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-air">空气管理</span>
+      <span class="urgency-badge" style="color:#0891b2;">🌀 日式双叶自然风</span>
+    </div>
+    <div class="card-title">BALMUDA NatureWind Studio空气循环扇 — $429验证"自然风感"需求，降维到$90-150厨房空气管理扇空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>6/5 PR Newswire美国上市，双叶结构自然风4倍宽于传统扇，最低9dB，Jet Mode 75ft，全球出货近100万台</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$90-150"厨房油烟感应台面扇"空白——集成PM2.5/油烟传感器，检测到烹饪自动加速</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐⭐</span> 日本设计+功能创新模式在美国有市场空白，BALMUDA $429验证高端需求</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（厨房空气管理扇空白）/ $429（BALMUDA NatureWind Studio）/ $500+（Dyson Pure Cool）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/balmuda-launches-naturewind-studio-in-the-united-states-302792124.html" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-ice">智能制冰</span>
+      <span class="urgency-badge" style="color:#2563eb;">❄️ 制冰机智能升级</span>
+    </div>
+    <div class="card-title">Euhomy Rock Plus/Pro智能制冰机 — 夏季智能制冰机爆发，WiFi+App+多冰型，从"季节小电"升级"全年智能家电"</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>5/28 PR Newswire发布，Euhomy制冰机头部品牌推两款premium smart新品，三款智能制冰机5-6月集中发布</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$99-149"制冰+净水+冷水三合一"空白——Euhomy只做制冰，没人做厨房制冰站整合</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> 制冰机正在经历智能升级浪潮，2026夏天最热智能家居新品类</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（厨房智能制冰站空白）/ $150-200（Euhomy Rock Plus/Pro预估）/ $300+（Opal/GE Profile）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/euhomy-helps-keep-this-summer-chilled-with-launch-of-rock-plus-and-rock-pro-smart-ice-makers-302785972.html" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-humidifier">加湿净化</span>
+      <span class="urgency-badge" style="color:#059669;">💧 2年滤芯颠覆</span>
+    </div>
+    <div class="card-title">Levoit Superior Studio智能蒸发加湿器 — 2年滤芯寿命颠覆品类，"免维护"概念可复制到厨房</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>6/3 PR Newswire发布，Levoit #1加湿器品牌，2年滤芯寿命（传统3-6个月），智能蒸发式无白粉</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$99-149"厨房空气湿度管理器"空白——集成湿度+温度+空气质量三重传感</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> 2年滤芯="免维护"概念可复制到净水器/空净等厨房品类</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（厨房加湿净化一体机空白）/ $150-250（Levoit Superior Studio预估）/ $250+（Levoit 6000S）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/levoit-introduces-the-superior-studio-smart-evaporative-humidifier-with-a-two-year-filter-302787973.html" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-rice">谷物烹饪</span>
+      <span class="urgency-badge" style="color:#d97706;">🍚 全自动注水</span>
+    </div>
+    <div class="card-title">KitchenAid Grain &amp; Rice Cooker — $400验证"全自动谷物烹饪"，称重+自动注水，降维到$99纯谷物机</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>Serious Eats 6/5更新评测，21种全自动功能，集成称重+自动注水，$200紧凑版也上市</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>$99-149"5种谷物全自动"空白——只做5种最常用+全自动注水，"放入谷物→按一键→出饭"</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐⭐</span> KitchenAid $400太贵太复杂，$99极简全自动谷物机无人做</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$90-150（智能谷物米饭机空白）/ $200（KitchenAid Compact）/ $400（KitchenAid全尺寸）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.seriouseats.com/the-best-rice-cookers" target="_blank">Serious Eats</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-deal">清仓信号</span>
+      <span class="urgency-badge" style="color:#dc2626;">🏷️ Prime Day前清仓</span>
+    </div>
+    <div class="card-title">Amazon Outlet清仓信号 — 厨房家电密集打折74%off，清仓价=成本底价参考，新品定价应高于此30-50%</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势数据：</span>AllRecipes 6/5报道，Cuisinart Fondue Pot $99，Joy Pebble Indoor Grill $120，Vacuum Sealer $24→$90（74%off）</div>
+      <div class="summary-item"><span class="summary-label">机会原因：</span>清仓价=市场验证+成本底价参考，$90-120价格带是厨房家电折扣最密集区间</div>
+      <div class="summary-item"><span class="summary-label">推荐指数：</span><span class="stars">⭐⭐⭐</span> 不是直接选品机会，但真空封口机是极高毛利品类（成本$10-15，售价$90+）</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 清仓参考价</div>
+      <div class="price-text">$90-170（清仓价区间）→ 同功能新品定价应高于此30-50%以留足利润空间</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.allrecipes.com/amazon-outlet-overstock-deals-june-2026-11991286" target="_blank">AllRecipes</a></div>
+  </div>
+
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">【BALMUDA NatureWind Studio】日本设计$429验证"自然风感"——降维到$90-150厨房空气管理扇</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-150（厨房空气管理扇空白）/ $429（BALMUDA NatureWind Studio）/ $500+（Dyson Pure Cool）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>BALMUDA 6/5通过PR Newswire宣布NatureWind Studio美国上市</li>
+          <li>专利双叶结构：内叶低速小风量+外叶高速大风量=4倍宽于传统扇的自然风</li>
+          <li>最低档9dB（比呼吸声还轻），Jet Mode风力可达75英尺</li>
+          <li>全球已出货近100万台，日本市场已验证</li>
+          <li>日本设计制造，三脚架金属腿+轻量9磅</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-149定价，做到：1）"厨房空气管理循环扇"——集成PM2.5/油烟传感器，检测到烹饪自动加速；2）台面级紧凑设计（BALMUDA是35.5英寸落地扇，厨房需15英寸以下台面款）；3）3模式（自然风循环/油烟快排/夜间静音）；4）可拆卸前网方便清洗油污；5）APP联动+空气质量显示。成本$30-50，毛利55-65%。核心差异化"厨房空气管家"。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"空气管理扇+制冰机"组合：厨房空气循环+制冰，夏季两大刚需一体化</li>
+          <li>与智能烹饪设备联动：检测到烤箱/炉灶启动→自动开启通风</li>
+          <li>租房场景：不能装油烟机的小户型，$99台面扇解决烹饪通风</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Euhomy Rock Plus/Pro智能制冰机】夏季智能制冰机爆发——制冰机从"季节小电"升级"全年智能家电"</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-150（厨房智能制冰站空白）/ $150-200（Euhomy Rock Plus/Pro预估）/ $300+（Opal/GE Profile）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Euhomy 5/28通过PR Newswire发布Rock Plus和Rock Pro两款智能制冰机</li>
+          <li>Euhomy是制冰机市场头部品牌，此次新品定位"premium smart"</li>
+          <li>此前GoveeLife H717D也推出Matter协议制冰机</li>
+          <li>三款智能制冰机5-6月集中发布=品类升级信号</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-149定价，做到：1）"制冰+净水+冷水三合一"——Euhomy只做制冰，没人做厨房制冰站整合；2）紧凑台面设计；3）3种冰型（子弹冰/碎冰/薄片冰覆盖调酒/冷饮/保鲜）；4）Matter兼容+APP远程；5）自动清洗+紫外线杀菌。成本$35-55，毛利55-65%。核心差异化"制冰+净水+冷水三合一"。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"制冰+调酒"组合：制冰站提供冰块→配合胶囊调酒机，厨房变酒吧</li>
+          <li>与冰箱联动：冰箱冰块用完→自动启动制冰机补冰</li>
+          <li>办公室场景：$129台面制冰站，替代昂贵的制冰机租赁</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Levoit Superior Studio智能蒸发加湿器】2年滤芯颠覆品类——"免维护"概念可复制到厨房</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-150（厨房加湿净化一体机空白）/ $150-250（Levoit Superior Studio预估）/ $250+（Levoit 6000S）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Levoit 6/3通过PR Newswire发布Superior Studio智能蒸发加湿器</li>
+          <li>核心卖点：2年滤芯寿命——加湿器最大痛点是滤芯更换频率（通常3-6个月）</li>
+          <li>Levoit是美国#1加湿器品牌</li>
+          <li>智能蒸发式（非超声波）= 无白粉污染，更健康</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-149定价，做到：1）"厨房空气湿度管理器"——集成湿度+温度+空气质量三重传感；2）台面紧凑设计；3）2年免换滤芯（Levoit验证"超长滤芯"可行）；4）3模式（烹饪排湿/食材保鲜/日常舒适）；5）可拆卸水箱+大口径易清洗。成本$35-55，毛利55-65%。核心差异化"厨房湿度管理"。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"加湿+空气净化"二合一：厨房油烟+干燥双痛点，一台两个功能</li>
+          <li>食材存储场景：干燥环境→食材脱水变质，加湿器保护干货/面包/奶酪新鲜度</li>
+          <li>"免维护"概念复制：2年滤芯思路可推广到净水器/空净等品类</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 "多功能一体机"趋势加速——Philips OneChef 33-in-1验证"一机多用"需求</div>
+    <div class="watch-text">
+      Food &amp; Wine报道Philips OneChef上市，Amazon.in数据显示多功能厨房电器需求增长70%+ YoY<br>
+      启示："一机多用"从印度市场开始验证，美国市场是下一步，$90-150极简多功能机有降维空间<br>
+      来源：<a href="https://www.foodandwine.com/amazon-weekend-kitchen-deals-under-25-june-2026-11991218" target="_blank" style="color:#0d9488;">Food &amp; Wine</a>
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 BALMUDA进入美国市场信号——日本设计+功能创新模式在美国有空白</div>
+    <div class="watch-text">
+      BALMUDA首次进入美国（从NatureWind Studio开始），此前以蒸汽吐司机闻名<br>
+      启示：日本"设计驱动+功能创新"模式在美国$90-150价格带有空白——不是做最便宜，而是做最美+最好用
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 加湿器"超长滤芯"趋势——2年滤芯概念可复制到厨房排风扇等品类</div>
+    <div class="watch-text">
+      Levoit推出2年滤芯，"免维护"概念从空气净化器复制到加湿器品类<br>
+      启示：厨房电器也可借鉴——"2年免换滤网的厨房排风扇"等，免维护是高客单价产品的核心卖点
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 智能制冰机赛道升温——三款新品5-6月集中发布</div>
+    <div class="watch-text">
+      Euhomy Rock Plus/Pro + GoveeLife H717D + COTLIN IMC25BI，制冰机正在成为2026年夏天最热的智能家居新品类<br>
+      启示：制冰机从"季节性小家电"升级为"全年智能家电"，是选品赛道升级信号
+    </div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Lodge搪瓷铸铁锅6qt $100——验证$90-120高端铸铁锅市场</div>
+    <div class="watch-text">
+      Food &amp; Wine厨房编辑推荐，$100是Le Creuset（$300+）的降维替代<br>
+      启示：$90-120价格带是"品牌平替"的黄金区间——用品牌1/3的价格提供80%的品质<br>
+      来源：<a href="https://www.foodandwine.com/amazon-weekend-kitchen-deals-under-25-june-2026-11991218" target="_blank" style="color:#0d9488;">Food &amp; Wine</a>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>数据来源：PR Newswire · AllRecipes · Serious Eats · Food &amp; Wine 等12个信息源</p>
+    <p>生成时间：2026年6月7日 | <a href="../index.html">返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
