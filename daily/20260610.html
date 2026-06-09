@@ -3,23 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>跨境政策日报 · Policy Daily</title>
+  <title>跨境政策日报 · 2026年6月10日</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; scroll-padding-top: 16px; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-
-    /* Section target highlight */
     .section-block:target { animation: target-flash 1.5s ease-out; }
     @keyframes target-flash { 0% { box-shadow: 0 0 0 3px rgba(56,189,248,0.4); } 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); } }
-    .nav-item:active, .nav-item:focus { color: #f1f5f9 !important; background: rgba(56,189,248,0.15) !important; border-left-color: #38bdf8 !important; }
-
-    /* ===== Two-Column Layout ===== */
     .layout { display: flex; min-height: 100vh; }
     .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
     .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f8fafc; }
-
-    /* ===== Sidebar ===== */
     .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
     .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
@@ -33,32 +26,13 @@
     .nav-count.danger { background: rgba(239,68,68,0.15); color: #fca5a5; }
     .nav-count.warn { background: rgba(245,158,11,0.15); color: #fcd34d; }
     .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
-
-    /* Collapsible Archive */
-    .archive-section { padding: 0; }
-    .archive-section-title { display: flex; align-items: center; justify-content: space-between; padding: 8px 24px; font-size: 11px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; }
-    details.archive-month { padding: 0; }
-    details.archive-month summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px 6px 28px; cursor: pointer; font-size: 13px; color: #94a3b8; list-style: none; transition: color 0.15s; border-left: 2px solid transparent; }
-    details.archive-month summary::-webkit-details-marker { display: none; }
-    details.archive-month summary::before { content: "📁"; margin-right: 6px; font-size: 12px; }
-    details.archive-month[open] summary::before { content: "📂"; }
-    details.archive-month summary:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
-    details.archive-month summary .month-info { font-weight: 500; }
-    details.archive-month summary .month-stats { font-size: 11px; color: #475569; }
-    .archive-day { display: block; padding: 3px 24px 3px 48px; color: #64748b; text-decoration: none; font-size: 12px; transition: all 0.15s; border-left: 2px solid transparent; }
-    .archive-day::before { content: "📄 "; font-size: 11px; }
-    .archive-day:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
-    .archive-day .day-count { font-size: 10px; color: #475569; margin-left: 4px; }
-
-
-    /* ===== Main Content ===== */
+    .back-link { display: flex; align-items: center; padding: 8px 24px; color: #38bdf8; text-decoration: none; font-size: 12px; transition: all 0.15s; }
+    .back-link:hover { color: #7dd3fc; }
     .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
     .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
     .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
     .content-header .date-line .date-val { font-weight: 700; color: #334155; }
     .content-header .date-line .update-time { font-size: 11px; background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
-
-    /* ===== Stats Bar ===== */
     .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
     .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
     .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
@@ -66,8 +40,6 @@
     .stat-chip.warn .stat-num { color: #d97706; }
     .stat-chip.info .stat-num { color: #16a34a; }
     .stat-chip.platform .stat-num { color: #0284c7; }
-
-    /* ===== Compliance Banner ===== */
     .compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
     .compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
     .compliance-banner ul { list-style: none; padding: 0; }
@@ -76,8 +48,6 @@
     .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
     .compliance-banner a { color: #2563eb; text-decoration: none; font-size: 11px; }
     .compliance-banner a:hover { text-decoration: underline; }
-
-    /* ===== Section Headers ===== */
     .section-block { margin-bottom: 28px; }
     .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
     .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
@@ -85,8 +55,6 @@
     .section-header .badge-danger { background: #fef2f2; color: #dc2626; }
     .section-header .badge-warn { background: #fffbeb; color: #d97706; }
     .section-header .badge-info { background: #f0fdf4; color: #16a34a; }
-
-    /* ===== Executive Summary ===== */
     .exec-summary { margin-bottom: 24px; }
     .exec-summary .section-header { border-bottom: 2px solid #bfdbfe; }
     .summary-list { display: flex; flex-direction: column; gap: 6px; }
@@ -101,8 +69,6 @@
     .summary-implication { font-size: 12px; color: #64748b; margin-top: 1px; }
     .summary-implication::before { content: "→ 含义："; color: #0284c7; font-weight: 600; }
     .summary-platform { display: inline-block; font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 3px; color: #fff; margin-right: 4px; vertical-align: middle; }
-
-    /* ===== Policy Card (五要素拆解) ===== */
     .policy-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
     .policy-card.card-danger { border-left: 4px solid #dc2626; }
     .policy-card.card-warn { border-left: 4px solid #f59e0b; }
@@ -114,85 +80,32 @@
     .tag-walmart { background: #0071DC; }
     .tag-customs { background: #dc2626; }
     .tag-eu { background: #003399; }
-    .tag-shopee { background: #EE4D2D; }
-    .tag-brazil { background: #059669; }
     .tag-tax { background: #7c3aed; }
-    .tag-temu { background: #E85D2C; }
-    .tag-lazada { background: #0f146d; }
     .tag-trade { background: #1d4ed8; }
-    .tag-vietnam { background: #d41920; }
+    .tag-fx { background: #059669; }
     .urgency-badge { font-size: 12px; font-weight: 600; }
     .urgency-badge.danger { color: #dc2626; }
     .urgency-badge.warn { color: #d97706; }
     .urgency-badge.info { color: #16a34a; }
     .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
     .new-tag { display: inline-block; font-size: 9px; background: #dc2626; color: #fff; padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; font-weight: 600; }
-
-    /* 五要素拆解 */
     .five-elements { padding: 10px 16px; }
     .element-row { display: flex; gap: 6px; padding: 4px 0; font-size: 12px; line-height: 1.7; border-bottom: 1px solid #f1f5f9; }
     .element-row:last-child { border-bottom: none; }
     .element-label { font-weight: 700; white-space: nowrap; min-width: 66px; flex-shrink: 0; }
-    .element-label.el-bg { color: #92400e; }
     .element-label.el-change { color: #1e40af; }
     .element-label.el-who { color: #7c3aed; }
     .element-label.el-when { color: #dc2626; }
     .element-label.el-action { color: #16a34a; }
     .element-content { color: #334155; }
-
-    /* Background section */
-    .card-background { background: #fffbeb; margin: 0 16px 8px; padding: 10px 12px; border-radius: 4px; border: 1px solid #fde68a; }
-    .card-background .bg-label { font-size: 11px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
-    .card-background .bg-text { font-size: 12px; color: #78350f; line-height: 1.7; }
-
-    /* Source */
     .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
     .card-source .source-label { font-size: 11px; color: #94a3b8; }
     .card-source a { font-size: 11px; color: #0284c7; text-decoration: none; word-break: break-all; }
     .card-source a:hover { text-decoration: underline; }
-
-    /* ===== Info Sources Table ===== */
-    .sources-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px 8px 0 0; }
-    .sources-toolbar-hint { font-size: 12px; color: #64748b; }
-    .sources-toolbar-actions { display: flex; gap: 8px; }
-    .btn-reset { padding: 5px 14px; border: 1px solid #cbd5e1; border-radius: 5px; background: #f1f5f9; color: #475569; font-size: 12px; cursor: pointer; transition: all 0.15s; }
-    .btn-reset:hover { background: #e2e8f0; }
-    .btn-add { padding: 5px 14px; border: none; border-radius: 5px; background: #0284c7; color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s; }
-    .btn-add:hover { background: #0369a1; }
-    .sources-table-wrap { background: #fff; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 8px 8px; overflow-x: auto; }
-    .sources-table { width: 100%; border-collapse: collapse; font-size: 12px; }
-    .sources-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; white-space: nowrap; }
-    .sources-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
-    .sources-table tr:hover td { background: #f8fafc; }
-    .sources-table .st-channel { white-space: nowrap; }
-    .sc-tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 3px; color: #fff; }
-    .st-name { font-weight: 600; color: #1e293b; }
-    .st-url { color: #0284c7; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .st-url a { color: #0284c7; text-decoration: none; }
-    .st-url a:hover { text-decoration: underline; }
-    .st-domain { color: #94a3b8; font-size: 11px; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .st-enable { text-align: center; }
-    .st-enable input[type="checkbox"] { width: 15px; height: 15px; accent-color: #0284c7; cursor: pointer; }
-    .st-del { text-align: center; }
-    .btn-del { width: 22px; height: 22px; border: none; border-radius: 4px; background: transparent; color: #94a3b8; font-size: 13px; cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; justify-content: center; }
-    .btn-del:hover { background: #fef2f2; color: #dc2626; }
-    /* Add source form row */
-    .add-row td { background: #f0f9ff !important; }
-    .add-row input { width: 100%; padding: 4px 8px; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 12px; font-family: inherit; }
-    .add-row input:focus { outline: none; border-color: #0284c7; box-shadow: 0 0 0 2px rgba(2,132,199,0.15); }
-    .btn-save { padding: 4px 10px; border: none; border-radius: 4px; background: #0284c7; color: #fff; font-size: 11px; font-weight: 600; cursor: pointer; }
-    .btn-save:hover { background: #0369a1; }
-    .btn-cancel { padding: 4px 10px; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff; color: #475569; font-size: 11px; cursor: pointer; }
-    /* Group separator row */
-    .st-group-row td { background: #f1f5f9; font-size: 11px; font-weight: 700; color: #475569; padding: 6px 12px; letter-spacing: 0.3px; border-bottom: 1px solid #e2e8f0; }
-
-    /* ===== Footer ===== */
     .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
     .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
     .page-footer a { color: #0284c7; text-decoration: none; }
     .page-footer a:hover { text-decoration: underline; }
-
-    /* ===== Responsive ===== */
     @media (max-width: 900px) {
       .sidebar { display: none; }
       .main-content { margin-left: 0; padding: 16px; }
@@ -201,80 +114,35 @@
 </head>
 <body>
 <div class="layout">
-
-  <!-- ===== Left Sidebar ===== -->
   <aside class="sidebar">
     <div class="sidebar-brand">
       <h1>跨境政策日报</h1>
       <div class="version">Policy Daily v2.1</div>
     </div>
     <nav class="sidebar-nav">
+      <a class="back-link" href="../index.html">← 返回首页</a>
+      <div class="nav-divider"></div>
       <div class="nav-section">
-        <div class="nav-section-title">📌 平台政策 / Platforms</div>
-        <a class="nav-item" href="#amazon">Amazon 亚马逊 <span class="nav-count danger">1</span></a>
+        <div class="nav-section-title">📌 本日政策 / Policies</div>
+        <a class="nav-item" href="#amazon">Amazon 亚马逊 <span class="nav-count danger">2</span></a>
         <a class="nav-item" href="#customs">美国海关 <span class="nav-count danger">1</span></a>
         <a class="nav-item" href="#tiktok">TikTok Shop <span class="nav-count warn">1</span></a>
         <a class="nav-item" href="#fx">汇率动态 <span class="nav-count warn">1</span></a>
       </div>
       <div class="nav-divider"></div>
-
-      <!-- Collapsible Archives -->
-      <div class="archive-section">
-        <div class="archive-section-title">📅 历史归档 / Archives</div>
-        <details class="archive-month" open>
-          <summary><span class="month-info">2026年06月</span><span class="month-stats">10天 / 87条</span></summary>
-          <a class="archive-day" href="./daily/20260610.html">2026-06-10 <span class="day-count">8条</span></a>
-          <a class="archive-day" href="./daily/20260609.html">2026-06-09 <span class="day-count">10条</span></a>
-          <a class="archive-day" href="./daily/20260608.html">2026-06-08 <span class="day-count">10条</span></a>
-          <a class="archive-day" href="./daily/20260607.html">2026-06-07 <span class="day-count">7条</span></a>
-          <a class="archive-day" href="./daily/20260606.html">2026-06-06 <span class="day-count">9条</span></a>
-          <a class="archive-day" href="./daily/20260605.html">2026-06-05 <span class="day-count">9条</span></a>
-          <a class="archive-day" href="./daily/20260604.html">2026-06-04 <span class="day-count">18条</span></a>
-          <a class="archive-day" href="./daily/20260603.html">2026-06-03 <span class="day-count">14条</span></a>
-          <a class="archive-day" href="./daily/20260602.html">2026-06-02 <span class="day-count">11条</span></a>
-          <a class="archive-day" href="./daily/20260601.html">2026-06-01 <span class="day-count">10条</span></a>
-        </details>
-        <details class="archive-month">
-          <summary><span class="month-info">2026年05月</span><span class="month-stats">19天 / 232条</span></summary>
-          <a class="archive-day" href="./daily/20260531.html">2026-05-31 <span class="day-count">12条</span></a>
-          <a class="archive-day" href="./daily/20260530.html">2026-05-30 <span class="day-count">15条</span></a>
-          <a class="archive-day" href="./daily/20260529.html">2026-05-29 <span class="day-count">12条</span></a>
-          <a class="archive-day" href="./daily/20260528.html">2026-05-28 <span class="day-count">10条</span></a>
-          <a class="archive-day" href="./daily/20260527.html">2026-05-27 <span class="day-count">9条</span></a>
-          <a class="archive-day" href="./daily/20260526.html">2026-05-26 <span class="day-count">10条</span></a>
-          <a class="archive-day" href="./daily/20260525.html">2026-05-25 <span class="day-count">7条</span></a>
-          <a class="archive-day" href="./daily/20260524.html">2026-05-24 <span class="day-count">6条</span></a>
-          <a class="archive-day" href="./daily/20260523.html">2026-05-23 <span class="day-count">11条</span></a>
-          <a class="archive-day" href="./daily/20260522.html">2026-05-22 <span class="day-count">10条</span></a>
-          <a class="archive-day" href="./daily/20260521.html">2026-05-21 <span class="day-count">10条</span></a>
-          <a class="archive-day" href="./daily/20260520.html">2026-05-20 <span class="day-count">10条</span></a>
-          <a class="archive-day" href="./daily/20260519.html">2026-05-19 <span class="day-count">10条</span></a>
-          <a class="archive-day" href="./daily/20260518.html">2026-05-18 <span class="day-count">11条</span></a>
-          <a class="archive-day" href="./daily/20260517.html">2026-05-17 <span class="day-count">10条</span></a>
-          <a class="archive-day" href="./daily/20260516.html">2026-05-16 <span class="day-count">14条</span></a>
-          <a class="archive-day" href="./daily/20260515.html">2026-05-15 <span class="day-count">18条</span></a>
-          <a class="archive-day" href="./daily/20260514.html">2026-05-14 <span class="day-count">18条</span></a>
-          <a class="archive-day" href="./daily/20260513.html">2026-05-13 <span class="day-count">10条</span></a>
-        </details>
+      <div class="nav-section">
+        <div class="nav-section-title">📊 摘要</div>
+        <a class="nav-item" href="#summary">高管摘要</a>
       </div>
-
-      <div class="nav-divider"></div>
-
-      <!-- Sources Config -->
-      <a class="nav-item" href="#sources" style="font-size:12px;">📡 信息源配置 <span class="nav-count">28</span></a>
     </nav>
   </aside>
 
-  <!-- ===== Main Content ===== -->
   <main class="main-content">
-
-    <!-- Header -->
     <div class="content-header">
       <h1>跨境政策日报</h1>
       <div class="date-line">数据日期: <span class="date-val">2026年6月10日（周三）</span> <span class="update-time">08:00 更新</span></div>
     </div>
 
-    <!-- Stats -->
     <div class="stats-row">
       <div class="stat-chip danger"><span class="stat-num">2</span>🔴 紧急</div>
       <div class="stat-chip warn"><span class="stat-num">4</span>🟡 关注</div>
@@ -282,7 +150,6 @@
       <div class="stat-chip platform"><span class="stat-num">4</span>涉事平台/机构</div>
     </div>
 
-    <!-- Compliance Banner -->
     <div class="compliance-banner">
       <div class="banner-title">⚡ 近期关键时间节点</div>
       <ul>
@@ -300,7 +167,7 @@
       </ul>
     </div>
 
-    <!-- ===== Executive Summary ===== -->
+    <!-- Executive Summary -->
     <section class="exec-summary section-block" id="summary">
       <div class="section-header">
         <h2>📊 今日风险大盘（高管摘要视角）</h2>
@@ -317,7 +184,7 @@
         <div class="summary-row">
           <div class="severity-dot danger"></div>
           <div class="summary-body">
-            <div class="summary-title"><span class="summary-platform tag-customs">CBP🇺🇸</span>《加强海关执法》行政令：IOR合规180天限期，灰色清关全面打击</div>
+            <div class="summary-title"><span class="summary-platform tag-customs">CBP</span>美国《加强海关执法》行政令：IOR合规180天限期，灰色清关全面打击</div>
             <div class="summary-implication">依赖境外IOR、代理报关、双清包税模式的卖家需尽快在美国境内设立合规实体</div>
           </div>
         </div>
@@ -331,8 +198,8 @@
         <div class="summary-row">
           <div class="severity-dot warn"></div>
           <div class="summary-body">
-            <div class="summary-title"><span class="summary-platform tag-amazon">Amazon🇺🇸</span>AI内容严查升级：超2000家店铺被停售，历史回溯扫描+版权风险</div>
-            <div class="summary-implication">AI生成内容必须标注，主图禁AI合成，纯AI图片不受版权保护可被竞品复制</div>
+            <div class="summary-title"><span class="summary-platform tag-amazon">Amazon🇺🇸</span>AI内容严查升级：超2000家店铺被停售，历史回溯扫描</div>
+            <div class="summary-implication">AI生成内容必须标注，主图禁AI合成，历史违规也会被翻查</div>
           </div>
         </div>
         <div class="summary-row">
@@ -352,21 +219,21 @@
       </div>
     </section>
 
-    <!-- ===== Amazon ===== -->
+    <!-- Amazon -->
     <section class="section-block" id="amazon">
       <div class="section-header">
         <h2>🛒 Amazon 亚马逊</h2>
-        <span class="section-badge badge-danger">1紧急 + 2关注 + 1留意</span>
+        <span class="section-badge badge-danger">4条</span>
       </div>
 
       <div class="policy-card card-danger">
         <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇺🇸</span><span class="urgency-badge danger">🔴 紧急</span></div>
         <div class="card-title">关闭联系差评买家功能：Prime Day前灰度落地，卖家无法主动处理差评<span class="new-tag">NEW</span></div>
         <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6月4日起，亚马逊分批测试关闭卖家主动联系差评买家的功能。提示文案为"即刻起，取消针对重要评论主动联系买家的功能"。目前不均匀落地，不同店铺甚至同公司不同店铺状态不同。关闭时机恰在Prime Day前，直接影响卖家处理差评能力</span></div>
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6月4日起，亚马逊分批测试关闭卖家主动联系差评买家的功能。提示文案为"即刻起，取消针对重要评论主动联系买家的功能"。目前不均匀落地，不同店铺甚至同公司不同店铺状态不同。关闭时机恰在Prime Day前，卖家无法主动联系差评买家做售后补救，直接影响listing评分和转化率</span></div>
           <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有依赖主动联系差评买家做售后补救的亚马逊卖家</span></div>
           <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">6月4日起灰度测试，最终全平台推行</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①从"事后补救"转向"事前预防" ②重心移至Product Feedback和Buyer Messaging其他场景 ③Prime Day前加速处理现有差评 ④关注卖家仍可在买家主动联系后回复</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①从"事后补救"转向"事前预防"，强化产品质量和Listing真实性 ②重心移至Product Feedback和Buyer Messaging其他场景 ③Prime Day前加速处理现有差评 ④关注卖家仍可在买家主动联系后回复</span></div>
         </div>
         <div class="card-source"><span class="source-label">来源：</span><a href="https://sellercentral.amazon.com/seller-forums" target="_blank">Amazon Seller Forums</a> · <a href="https://m.ebrun.com/677776.html" target="_blank">亿邦动力</a></div>
       </div>
@@ -375,7 +242,7 @@
         <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇺🇸</span><span class="urgency-badge warn">🟡 关注</span></div>
         <div class="card-title">参考价/Typical Price新规"折上折"：长期跑BD卖家利润被系统压缩<span class="new-tag">NEW</span></div>
         <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">5/18落地的Typical Price算法调整影响持续扩大：①List Price验证收紧，老品须90天内真实成交，新品须占购物车9天以上 ②Typical Price不再取90天非促销价中位数，长期促销(占比>50%)导致"真实价格"偏低 ③跑BD时系统按最低价再打折=折上折 ④大促前2周临时调价来不及验证 ⑤美国站促销价须≤60天最低价且额外5%降价</span></div>
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">5/18落地的Typical Price算法调整影响持续扩大：①List Price验证收紧，老品须90天内真实成交，新品须占购物车9天以上 ②Typical Price不再取90天非促销价中位数，长期促销(占比>50%)导致系统认定"真实价格"偏低 ③跑BD时系统按最低价再打折=折上折 ④大促前2周临时调价来不及验证 ⑤美国站促销价须≤60天最低价且额外5%降价</span></div>
           <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">长期跑BD、List Price乱标虚高、用WOOT多轮BD冲量的卖家</span></div>
           <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">5月18日已生效，影响持续扩大</span></div>
           <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①控制90天内促销天数占比&lt;50% ②重新设置真实可成交的List Price ③多轮BD之间留够间隔 ④大促前2周完成价格布局 ⑤新品至少坚持9天List Price购物车占位</span></div>
@@ -387,10 +254,10 @@
         <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇺🇸</span><span class="urgency-badge warn">🟡 关注</span></div>
         <div class="card-title">AI内容严查升级：超2000家店铺被停售，历史回溯扫描+AI版权风险<span class="new-tag">NEW</span></div>
         <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">AI合规专项稽查全面落地：①AI主导全自动扫号，覆盖面远超人工审核 ②开启历史回溯机制，翻查过去一年甚至更久的历史交易 ③AI生成内容必须后台标注"AI Generated Content Disclosure" ④主图禁止AI合成，必须实物拍摄 ⑤已超2000家店铺被停售 ⑥纯AI生成图片不受版权保护，竞品可合法复制 ⑦违规可能导致Listing权重暴跌45%以上</span></div>
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">AI合规专项稽查全面落地：①AI主导全自动扫号，覆盖面远超人工审核 ②开启历史回溯机制，翻查过去一年甚至更久的历史交易 ③AI生成内容必须后台标注"AI Generated Content Disclosure" ④主图禁止AI合成，必须实物拍摄 ⑤已超2000家店铺被停售 ⑥纯AI生成图片不受版权保护，竞品可合法复制 ⑦违规可能导致Listing权重暴跌45%以上、排名从20名跌至120名</span></div>
           <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">使用AI工具辅助运营的亚马逊卖家，尤其是AI批量生成Listing/图片的卖家</span></div>
           <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">已生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①所有AI生成内容必须标注 ②主图坚持实拍 ③排查历史Listing中的AI内容 ④警惕AI图片版权风险 ⑤杜绝AI批量刷评和全自动化操作</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①所有AI生成内容必须标注 ②主图坚持实拍 ③排查历史Listing中的AI内容 ④警惕AI图片版权风险，纯AI生成图可被竞品合法复制 ⑤杜绝AI批量刷评和全自动化操作 ⑥申诉材料须真实完整</span></div>
         </div>
         <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fokv3e86yk1s" target="_blank">卖家之家</a> · <a href="https://m.ebrun.com/677777.html" target="_blank">亿邦动力</a></div>
       </div>
@@ -399,16 +266,16 @@
         <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇺🇸</span><span class="urgency-badge info">🟢 留意</span></div>
         <div class="card-title">发布9大AI购物功能：Listing优化方向从"关键词"转向"AI可理解"<span class="new-tag">NEW</span></div>
         <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊发布Prime Day期间9项AI购物功能：①Alexa根据购物历史定制个性化优惠 ②搜索栏直接提问 ③价格提醒和自动购买 ④图片风格购物 ⑤视觉搜索升级。核心信号：购物入口从"关键词搜索"升级为"AI购物助手决策"，Listing需覆盖使用场景、用户痛点、用户提问方式</span></div>
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊发布Prime Day期间9项AI购物功能：①Alexa根据购物历史定制个性化优惠 ②搜索栏直接提问 ③价格提醒和自动购买 ④图片风格购物 ⑤视觉搜索升级。核心信号：亚马逊正在把购物入口从"关键词搜索"升级为"AI购物助手决策"，Listing需覆盖使用场景、用户痛点、用户提问方式</span></div>
           <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有亚马逊卖家</span></div>
           <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">Prime Day期间上线</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①优化Listing使其"AI可理解" ②标题采用"品牌+核心功能+使用场景"结构 ③强化场景图和风格标签 ④关注SP视频广告权重提升</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①优化Listing使其"AI可理解" ②标题采用"品牌+核心功能+使用场景"结构 ③强化场景图和风格标签 ④关注SP视频广告权重提升 ⑤提炼评论中高频问题和使用场景埋入文案</span></div>
         </div>
         <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/follgkaiphq8" target="_blank">卖家之家</a></div>
       </div>
     </section>
 
-    <!-- ===== Customs ===== -->
+    <!-- Customs -->
     <section class="section-block" id="customs">
       <div class="section-header">
         <h2>🏛️ 美国海关/合规</h2>
@@ -419,7 +286,7 @@
         <div class="card-top"><span class="platform-tag tag-customs">CBP🇺🇸</span><span class="urgency-badge danger">🔴 紧急</span></div>
         <div class="card-title">《加强海关执法》行政令：IOR合规180天限期，灰色清关全面打击<span class="new-tag">NEW</span></div>
         <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">特朗普签署"Strengthening Customs Enforcement"行政令：①所有IOR须在命令发布后180天内完成合规 ②外国进口商门槛大幅提高，需在美国境内设立实体 ③严厉打击低报货值、隐瞒进口商信息、逃避关税 ④CBP扩大执法团队，加大抽检频率 ⑤进口商需"重资产在美国"防破产跑路 ⑥IEEPA关税退款通过CAPE功能集中处理</span></div>
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">特朗普签署"Strengthening Customs Enforcement"行政令，全面升级海关执法：①所有IOR须在命令发布后180天内完成合规 ②外国进口商门槛大幅提高，需在美国境内设立实体 ③严厉打击低报货值、隐瞒进口商信息、逃避关税 ④CBP扩大执法团队，加大抽检频率 ⑤进口商需"重资产在美国"防破产跑路 ⑥IEEPA关税退款通过CAPE功能集中处理</span></div>
           <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有依赖境外IOR、代理报关、双清包税模式的对美出口卖家</span></div>
           <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">行政令已签署，180天合规限期（约2026年12月初）</span></div>
           <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①立即评估现有IOR合规状态 ②考虑在美国境内设立合规实体 ③排查清关渠道，杜绝灰色清关 ④预留合规改造成本预算 ⑤关注《保障外国进口责任法案》立法进展</span></div>
@@ -428,7 +295,7 @@
       </div>
     </section>
 
-    <!-- ===== TikTok Shop ===== -->
+    <!-- TikTok Shop -->
     <section class="section-block" id="tiktok">
       <div class="section-header">
         <h2>🎵 TikTok Shop</h2>
@@ -442,13 +309,13 @@
           <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">TikTok Shop更新内容质量政策：①禁止AI生成声音和预录音频在直播中使用 ②静态画面覆盖直播屏幕超50%不允许 ③录制购物视频须至少3秒动态画面，真实环境拍摄 ④主播须露脸并实时回应评论 ⑤利用"Pause LIVE"功能处理主播短暂离开 ⑥违规与账户健康评分和佣金权限直接挂钩</span></div>
           <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">TikTok Shop美国站卖家和创作者，尤其是依赖低成本自动化运营的卖家</span></div>
           <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">5月23日发布并生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①立即排查现有直播及视频内容 ②确保使用真人实时解说和动态画面 ③利用"Pause LIVE"功能处理短暂离开 ④避免AI配音和静态产品展示</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①立即排查现有直播及视频内容 ②确保使用真人实时解说和动态画面 ③利用"Pause LIVE"功能处理短暂离开 ④避免AI配音和静态产品展示 ⑤关注主播需逐步展示产品功能</span></div>
         </div>
         <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fokt6gdfupkx" target="_blank">卖家之家</a> · <a href="https://seller.tiktok.com/university/policy" target="_blank">TikTok Shop Seller University</a></div>
       </div>
     </section>
 
-    <!-- ===== FX ===== -->
+    <!-- FX -->
     <section class="section-block" id="fx">
       <div class="section-header">
         <h2>💱 汇率动态</h2>
@@ -459,7 +326,7 @@
         <div class="card-top"><span class="platform-tag tag-fx">汇率</span><span class="urgency-badge warn">🟡 关注</span></div>
         <div class="card-title">美元兑人民币跌破6.77，跨境卖家利润持续压缩<span class="new-tag">NEW</span></div>
         <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">美元兑人民币即期汇率跌破6.77关口，受中国贸易高顺差、人民币资产吸引力提升、外部环境改善三大因素影响，多家机构预判人民币后续还会温和升值。前4个月中国出口保持11.3%高增长，出口已不靠低价竞争力</span></div>
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">美元兑人民币即期汇率跌破6.77关口，受中国贸易高顺差、人民币资产吸引力提升、外部环境改善三大因素影响，多家机构预判人民币后续还会温和升值。汇率持续走低直接压缩以美元结算的跨境卖家利润。前4个月中国出口保持11.3%高增长，出口已不靠低价竞争力</span></div>
           <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有对美出口的跨境卖家</span></div>
           <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">当前持续运行</span></div>
           <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①评估适度提价对订单量的影响 ②关注汇率对冲工具 ③优化成本结构对冲汇率损失 ④提升产品溢价能力 ⑤从低价竞争转向价值竞争</span></div>
@@ -468,104 +335,13 @@
       </div>
     </section>
 
-        <!-- Footer -->
     <div class="page-footer">
       <div class="footer-divider"></div>
       <div>📊 数据来源：Amazon(US) / CBP / TikTok Shop / 卖家之家 / 亿邦动力 等28个配置信息源</div>
       <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
-      <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+      <div style="margin-top:6px;"><a href="../index.html">返回首页</a> · <a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
     </div>
-
   </main>
 </div>
-<script>
-// Default sources data for reset
-const DEFAULT_SOURCES = [
-  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'卖家新闻',url:'https://sellercentral.amazon.com/news',domain:'sellercentral.amazon.com'},
-  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'官方新闻中心',url:'https://press.aboutamazon.com',domain:'press.aboutamazon.com'},
-  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'卖家官方论坛（美区 Bug 哨所）',url:'https://sellercentral.amazon.com/forums',domain:'sellercentral.amazon.com'},
-  {ch:'Amazon🇪🇺',chColor:'#FF9900',name:'卖家中心（德国站）',url:'https://sellercentral.amazon.de',domain:'sellercentral.amazon.de'},
-  {ch:'Amazon🇪🇺',chColor:'#FF9900',name:'卖家中心（英国站）',url:'https://sellercentral.amazon.co.uk',domain:'sellercentral.amazon.co.uk'},
-  {ch:'Amazon🇯🇵',chColor:'#FF9900',name:'卖家中心（日本站）',url:'https://sellercentral.amazon.co.jp',domain:'sellercentral.amazon.co.jp'},
-  {ch:'Amazon',chColor:'#FF9900',name:'全球公告（Sell.amazon）',url:'https://sell.amazon.com/blog/announcements',domain:'sell.amazon.com'},
-  {ch:'Walmart',chColor:'#0071DC',name:'商家新闻',url:'https://marketplace.walmart.com/news',domain:'marketplace.walmart.com'},
-  {ch:'Walmart',chColor:'#0071DC',name:'API 变更日志',url:'https://developer.walmart.com/us-marketplace/page/whats-new',domain:'developer.walmart.com'},
-  {ch:'Target',chColor:'#CC0000',name:'Target Plus 入驻与政策',url:'https://plus.target.com/sell',domain:'plus.target.com'},
-  {ch:'TikTok Shop',chColor:'#000000',name:'官方大学与政策中心',url:'https://seller.tiktok.com/university/policy',domain:'seller.tiktok.com'},
-  {ch:'TikTok Shop',chColor:'#000000',name:'全球新闻中心',url:'https://seller.tiktokglobalshop.com/business/en/newsroom',domain:'seller.tiktokglobalshop.com'},
-  {ch:'TEMU',chColor:'#E85D2C',name:'跨境卖家中心',url:'https://seller.kuajingmaihuo.com',domain:'seller.kuajingmaihuo.com'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国海关 CBP CSMS 货运消息系统',url:'https://www.cbp.gov/trade/automated',domain:'cbp.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国 FDA 食品与补充剂监管局',url:'https://www.fda.gov/food',domain:'fda.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国 CPSC 消费品安全委员会（小家电下架杀手）',url:'https://www.cpsc.gov/Newsroom',domain:'cpsc.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国加州 Prop 65 环保标签局',url:'https://oehha.ca.gov/proposition-65',domain:'oehha.ca.gov'},
-  {ch:'欧盟',chColor:'#003399',name:'欧盟税务与海关总署（VAT/关税总线）',url:'https://taxation-customs.ec.europa.eu',domain:'ec.europa.eu'},
-  {ch:'欧盟',chColor:'#003399',name:'欧盟 Safety Gate 安全门（欧洲产品安全召回）',url:'https://ec.europa.eu/consumers/consumers_safety/safety_products/rapex',domain:'ec.europa.eu'},
-  {ch:'德国',chColor:'#1d4ed8',name:'德国 WEEE 注册局（Stiftung EAR · 带电产品硬合规）',url:'https://www.stiftung-ear.de',domain:'stiftung-ear.de'},
-  {ch:'德国',chColor:'#1d4ed8',name:'德国 LUCID 包装法注册局（Verpackungsregister）',url:'https://www.verpackungsregister.org',domain:'verpackungsregister.org'},
-  {ch:'日本',chColor:'#C41E3A',name:'日本経済産業省 METI（PSE/产品合规）',url:'https://www.meti.go.jp',domain:'meti.go.jp'},
-  {ch:'Amazon',chColor:'#FF9900',name:'SP-API 变更日志（防 RPA 脚本断流）',url:'https://developer-docs.amazon.com/sp-api/changelog',domain:'developer-docs.amazon.com'},
-  {ch:'航运',chColor:'#0d9488',name:'上海航运交易所（SCFI/NCFI 头程运价精算）',url:'https://www.sse.net.cn',domain:'sse.net.cn'},
-  {ch:'行业社区',chColor:'#7c3aed',name:'知无不言（一线暗改/黑产/防挨打爆料）',url:'https://www.wearesellers.com',domain:'wearesellers.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'卖家之家',url:'https://mjzj.com',domain:'mjzj.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'雨果跨境',url:'https://cifnews.com',domain:'cifnews.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'亿邦动力',url:'https://ebrun.com',domain:'ebrun.com'}
-]
-
-function buildRow(s) {
-  const urlCell = s.url ? '<a href="'+s.url+'" target="_blank">'+s.url.replace(/^https?:\/\//,'')+'</a>' : '—';
-  const domainCell = s.domain || '—';
-  return '<tr><td class="st-channel"><span class="sc-tag" style="background:'+s.chColor+'">'+s.ch+'</span></td><td class="st-name">'+s.name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+domainCell+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>';
-}
-
-function resetSources() {
-  const tbody = document.getElementById('sources-tbody');
-  tbody.innerHTML = DEFAULT_SOURCES.map(buildRow).join('');
-  updateCount();
-}
-
-function delSourceRow(btn) {
-  btn.closest('tr').remove();
-  updateCount();
-}
-
-function addSourceRow() {
-  const tbody = document.getElementById('sources-tbody');
-  if (tbody.querySelector('.add-row')) return;
-  const tr = document.createElement('tr');
-  tr.className = 'add-row';
-  tr.innerHTML = '<td class="st-channel"><input placeholder="渠道" id="new-ch"></td><td class="st-name"><input placeholder="名称" id="new-name"></td><td class="st-url"><input placeholder="URL" id="new-url"></td><td class="st-domain"><input placeholder="域名" id="new-domain"></td><td class="st-enable"><input type="checkbox" checked id="new-enabled"></td><td style="text-align:center"><button class="btn-save" onclick="saveNewSource()">✓</button> <button class="btn-cancel" onclick="cancelNewSource()">✕</button></td>';
-  tbody.appendChild(tr);
-  document.getElementById('new-ch').focus();
-}
-
-function saveNewSource() {
-  const ch = document.getElementById('new-ch').value.trim();
-  const name = document.getElementById('new-name').value.trim();
-  const url = document.getElementById('new-url').value.trim();
-  const domain = document.getElementById('new-domain').value.trim();
-  if (!name) { document.getElementById('new-name').focus(); return; }
-  const row = document.querySelector('.add-row');
-  const urlCell = url ? '<a href="'+url+'" target="_blank">'+url.replace(/^https?:\/\//,'')+'</a>' : '—';
-  row.className = '';
-  row.innerHTML = '<td class="st-channel"><span class="sc-tag" style="background:#64748b">'+(ch||'自定义')+'</span></td><td class="st-name">'+name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+(domain||'—')+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td>';
-  updateCount();
-}
-
-function cancelNewSource() {
-  const row = document.querySelector('.add-row');
-  if (row) row.remove();
-}
-
-function updateCount() {
-  const count = document.querySelectorAll('#sources-tbody tr:not(.add-row)').length;
-  const badge = document.querySelector('#sources .section-badge');
-  if (badge) badge.textContent = count + '个来源';
-  const navCount = document.querySelector('a[href="#sources"] .nav-count');
-  if (navCount) navCount.textContent = count;
-}
-
-// Init sources table on page load
-document.addEventListener('DOMContentLoaded', resetSources);
-</script>
 </body>
 </html>
