@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 · 2026年6月11日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .section-block:target { animation: target-flash 1.5s ease-out; }
+    @keyframes target-flash { 0% { box-shadow: 0 0 0 3px rgba(56,189,248,0.4); } 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); } }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f8fafc; }
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(56,189,248,0.06); color: #e2e8f0; border-left-color: #38bdf8; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.danger { background: rgba(239,68,68,0.15); color: #fca5a5; }
+    .nav-count.warn { background: rgba(245,158,11,0.15); color: #fcd34d; }
+    .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
+    .back-link { display: flex; align-items: center; padding: 8px 24px; color: #38bdf8; text-decoration: none; font-size: 12px; transition: all 0.15s; }
+    .back-link:hover { color: #7dd3fc; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.danger .stat-num { color: #dc2626; }
+    .stat-chip.warn .stat-num { color: #d97706; }
+    .stat-chip.info .stat-num { color: #16a34a; }
+    .stat-chip.platform .stat-num { color: #0284c7; }
+    .compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+    .compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .compliance-banner ul { list-style: none; padding: 0; }
+    .compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
+    .compliance-banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
+    .compliance-banner a { color: #2563eb; text-decoration: none; font-size: 11px; }
+    .compliance-banner a:hover { text-decoration: underline; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-danger { background: #fef2f2; color: #dc2626; }
+    .section-header .badge-warn { background: #fffbeb; color: #d97706; }
+    .section-header .badge-info { background: #f0fdf4; color: #16a34a; }
+    .exec-summary { margin-bottom: 24px; }
+    .exec-summary .section-header { border-bottom: 2px solid #bfdbfe; }
+    .summary-list { display: flex; flex-direction: column; gap: 6px; }
+    .summary-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 14px; background: #fff; border-radius: 6px; border: 1px solid #e2e8f0; transition: all 0.15s; }
+    .summary-row:hover { border-color: #bfdbfe; box-shadow: 0 2px 6px rgba(37,99,235,0.08); }
+    .severity-dot { width: 7px; height: 7px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+    .severity-dot.danger { background: #dc2626; }
+    .severity-dot.warn { background: #f59e0b; }
+    .severity-dot.info { background: #16a34a; }
+    .summary-body { flex: 1; min-width: 0; }
+    .summary-title { font-size: 13px; font-weight: 600; color: #1e293b; line-height: 1.5; }
+    .summary-implication { font-size: 12px; color: #64748b; margin-top: 1px; }
+    .summary-implication::before { content: "→ 含义："; color: #0284c7; font-weight: 600; }
+    .summary-platform { display: inline-block; font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 3px; color: #fff; margin-right: 4px; vertical-align: middle; }
+    .policy-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .policy-card.card-danger { border-left: 4px solid #dc2626; }
+    .policy-card.card-warn { border-left: 4px solid #f59e0b; }
+    .policy-card.card-info { border-left: 4px solid #16a34a; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .platform-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-amazon { background: #FF9900; }
+    .tag-tiktok { background: #000000; }
+    .tag-customs { background: #dc2626; }
+    .tag-eu { background: #003399; }
+    .tag-tax { background: #7c3aed; }
+    .tag-trade { background: #1d4ed8; }
+    .tag-ebay { background: #e53238; }
+    .tag-indonesia { background: #059669; }
+    .tag-logistics { background: #0d9488; }
+    .tag-law { background: #7c3aed; }
+    .urgency-badge { font-size: 12px; font-weight: 600; }
+    .urgency-badge.danger { color: #dc2626; }
+    .urgency-badge.warn { color: #d97706; }
+    .urgency-badge.info { color: #16a34a; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .new-tag { display: inline-block; font-size: 9px; background: #dc2626; color: #fff; padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; font-weight: 600; }
+    .five-elements { padding: 10px 16px; }
+    .element-row { display: flex; gap: 6px; padding: 4px 0; font-size: 12px; line-height: 1.7; border-bottom: 1px solid #f1f5f9; }
+    .element-row:last-child { border-bottom: none; }
+    .element-label { font-weight: 700; white-space: nowrap; min-width: 66px; flex-shrink: 0; }
+    .element-label.el-change { color: #1e40af; }
+    .element-label.el-who { color: #7c3aed; }
+    .element-label.el-when { color: #dc2626; }
+    .element-label.el-action { color: #16a34a; }
+    .element-content { color: #334155; }
+    .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
+    .card-source .source-label { font-size: 11px; color: #94a3b8; }
+    .card-source a { font-size: 11px; color: #0284c7; text-decoration: none; word-break: break-all; }
+    .card-source a:hover { text-decoration: underline; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0284c7; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 900px) { .sidebar { display: none; } .main-content { margin-left: 0; padding: 16px; } }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h1>跨境政策日报</h1>
+      <div class="version">Policy Daily v2.1</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">📌 本日政策 / Today</div>
+        <a class="nav-item" href="#amazon">Amazon 亚马逊 <span class="nav-count danger">2</span></a>
+        <a class="nav-item" href="#customs">海关/合规 <span class="nav-count warn">2</span></a>
+        <a class="nav-item" href="#law">法律/监管 <span class="nav-count warn">1</span></a>
+        <a class="nav-item" href="#platform">其他平台 <span class="nav-count warn">2</span></a>
+        <a class="nav-item" href="#logistics">物流/运价 <span class="nav-count">1</span></a>
+      </div>
+      <div class="nav-divider"></div>
+      <a class="back-link" href="../index.html">← 返回首页</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="content-header">
+      <h1>跨境政策日报</h1>
+      <div class="date-line">数据日期: <span class="date-val">2026年6月11日（周四）</span> <span class="update-time">08:00 更新</span></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-chip danger"><span class="stat-num">2</span>🔴 紧急</div>
+      <div class="stat-chip warn"><span class="stat-num">5</span>🟡 关注</div>
+      <div class="stat-chip info"><span class="stat-num">3</span>🟢 留意</div>
+      <div class="stat-chip platform"><span class="stat-num">6</span>涉事平台/机构</div>
+    </div>
+
+    <div class="compliance-banner">
+      <div class="banner-title">⚡ 近期关键时间节点</div>
+      <ul>
+        <li><span class="date-tag">6/15</span> Temu德国站EPR缴费凭证截止</li>
+        <li><span class="date-tag">6/20</span> Temu美区玩具/美妆白名单实验室报告强制执行</li>
+        <li><span class="date-tag">6/23-26</span> 🔴 Amazon Prime Day 2026</li>
+        <li><span class="date-tag">6/28</span> eBay统一配送模式生效</li>
+        <li><span class="date-tag">6/29</span> Amazon自配送处理时间新规生效</li>
+        <li><span class="date-tag">6/30</span> 🔴 海关78号公告无人机出口申报 + COO强制填报 + FBA基础容量制度</li>
+        <li><span class="date-tag">7/1</span> 🔴 欧盟€150免税取消 + 国务院837号令 + 俄SPOT保证金</li>
+        <li><span class="date-tag">7/7</span> 🔴 美国301关税听证会</li>
+        <li><span class="date-tag">7/8</span> 🔴 CPSC eFiling强制电子备案</li>
+        <li><span class="date-tag">7/20</span> Shopee泰国子账户权限核查截止</li>
+        <li><span class="date-tag">7/27</span> 🔴 Amazon产品标题75字符限制强制执行</li>
+        <li><span class="date-tag">8/12</span> 欧盟PPWR包装法强制生效</li>
+        <li><span class="date-tag">~12月</span> 🔴 美国IOR合规180天限期</li>
+      </ul>
+    </div>
+
+    <!-- Executive Summary -->
+    <section class="exec-summary section-block" id="summary">
+      <div class="section-header">
+        <h2>📊 今日风险大盘（高管摘要视角）</h2>
+        <span class="section-badge badge-danger">2项高风险</span>
+      </div>
+      <div class="summary-list">
+        <div class="summary-row">
+          <div class="severity-dot danger"></div>
+          <div class="summary-body">
+            <div class="summary-title"><span class="summary-platform tag-amazon">Amazon🇺🇸</span>产品标题75字符限制7/27强制执行：超长标题由AI自动替换，品牌卖家14天审核期</div>
+            <div class="summary-implication">关键词堆砌型标题策略彻底终结，需将核心信息压缩至75字符内，补充信息迁移至Item Highlights</div>
+          </div>
+        </div>
+        <div class="summary-row">
+          <div class="severity-dot danger"></div>
+          <div class="summary-body">
+            <div class="summary-title"><span class="summary-platform tag-amazon">Amazon🇺🇸</span>变体评论新规全面收网：卖家评论一夜暴跌，Prime Day大促资格受威胁</div>
+            <div class="summary-implication">"老带新"评论继承路径被堵死，新品必须独立积累评论，变体策略需重新设计</div>
+          </div>
+        </div>
+        <div class="summary-row">
+          <div class="severity-dot warn"></div>
+          <div class="summary-body">
+            <div class="summary-title"><span class="summary-platform tag-law">纽约州🇺🇸</span>《合成表演者披露法》6/9生效：AI模特图须标注，违规按次累计罚款</div>
+            <div class="summary-implication">使用AI模特图的卖家需立即标注或替换，listing图片/A+/站外素材均可能落入监管范围</div>
+          </div>
+        </div>
+        <div class="summary-row">
+          <div class="severity-dot warn"></div>
+          <div class="summary-body">
+            <div class="summary-title"><span class="summary-platform tag-customs">海关🇨🇳</span>第78号公告6/30施行：无人机出口申报规范，取消简化申报，五条监管红线</div>
+            <div class="summary-implication">"玩具报关"灰色通道被焊死，跨境电商须填10位HS编码和真实厂家信息</div>
+          </div>
+        </div>
+        <div class="summary-row">
+          <div class="severity-dot warn"></div>
+          <div class="summary-body">
+            <div class="summary-title"><span class="summary-platform tag-ebay">eBay🇺🇸</span>物流新规6/28实施：官方面单强制启用，运费平台直收</div>
+            <div class="summary-implication">卖家发货流程需全面调整，财务核算模型须适配平台统一收运费模式</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amazon -->
+    <section class="section-block" id="amazon">
+      <div class="section-header">
+        <h2>🛒 Amazon 亚马逊</h2>
+        <span class="section-badge badge-danger">2紧急 + 1关注 + 2留意</span>
+      </div>
+
+      <div class="policy-card card-danger">
+        <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇺🇸</span><span class="urgency-badge danger">🔴 紧急</span></div>
+        <div class="card-title">产品标题75字符限制7月27日强制执行：超长标题由AI自动替换<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">7/27起全品类（除媒体类）标题须≤75字符含空格。Item Highlights提供额外125字符。超长标题由AI自动生成推荐替换，品牌卖家有14天审核期。可通过Enhance Listings工具提前查看AI推荐。例：原标题92字符→新标题62字符+Item Highlight 98字符</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有标题超75字符的卖家，尤其是关键词堆砌型标题卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">2026年7月27日</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①立即用Enhance Listings检查AI推荐标题 ②品牌卖家在Review Listings Changes中审核 ③7/27前主动调整所有超长标题 ④将关键词信息迁移至Item Highlights</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://sellercentral.amazon.com/forums" target="_blank">Amazon Seller Forums</a></div>
+      </div>
+
+      <div class="policy-card card-danger">
+        <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇺🇸</span><span class="urgency-badge danger">🔴 紧急</span></div>
+        <div class="card-title">变体评论新规全面收网：卖家评论一夜暴跌，Prime Day大促资格受威胁<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">2/12变体评论共享新规过渡期5/31结束，系统按类目无差别清算。性能参数不同/核心材质不同/功能显著差异的变体评论被强制拆分。卖家反馈2500条评论→287条，星级跌破4.0，丧失Prime Day资格。三类重灾区：老带新型、大杂烩变体型、Vine评论合并型</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有依赖变体评论共享的卖家，尤其是"老带新"和多型号变体卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">5/31过渡期结束，6月初全面执行</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①排查变体结构确认哪些仍可共享 ②新品需独立积累评论 ③控制变体差异在"细微不影响功能"范围 ④关注AI评论摘要对差评的放大效应</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fooa60k343y8" target="_blank">卖家之家</a></div>
+      </div>
+
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇺🇸</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">协议3大规模扫号：视频验证失败直接封号<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊"协议3"验证大规模爆发，视频验证失败将导致账号直接封号。正值Prime Day备战期，封号风险高</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有亚马逊卖家，尤其是近期有账号异常操作的卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">正在进行中</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①检查账号是否有待处理验证 ②确保法人信息/营业执照齐全 ③视频验证前充分准备 ④及时响应绩效通知</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.cifnews.com" target="_blank">雨果跨境</a></div>
+      </div>
+
+      <div class="policy-card card-info">
+        <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇪🇺</span><span class="urgency-badge info">🟢 留意</span></div>
+        <div class="card-title">欧洲上线"途中加购"功能：Prime会员可追加未发货订单商品<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊在欧洲推出"Add to Delivery"功能，Prime会员可在订单未发货时一键追加商品到配送批次，免额外运费。预计今年在德国、英国、西班牙、意大利和法国陆续上线</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">亚马逊欧洲站卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">2026年陆续上线</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①关注AOV提升机会 ②优化连带购买推荐 ③关注对库存管理的潜在影响</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/679009.html" target="_blank">亿邦动力</a></div>
+      </div>
+
+      <div class="policy-card card-info">
+        <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇺🇸</span><span class="urgency-badge info">🟢 留意</span></div>
+        <div class="card-title">"Buy For Me"AI抓取独立站引争议：数百品牌拟起诉侵权<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊"Buy For Me"和"Shop Direct"项目利用AI爬虫抓取未入驻独立站商品信息、自动生成详情页。AI页面存在参数/配图错乱，售后投诉落回实际发货方。数百品牌拟起诉侵权</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">同时运营独立站和亚马逊的卖家</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①定期检索品牌是否被未授权收录 ②检查独立站robots协议 ③及时提交DMCA下架申请</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fop1haawao00" target="_blank">卖家之家</a></div>
+      </div>
+    </section>
+
+    <!-- Customs/Compliance -->
+    <section class="section-block" id="customs">
+      <div class="section-header">
+        <h2>🏛️ 海关/合规</h2>
+        <span class="section-badge badge-warn">2条</span>
+      </div>
+
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-customs">海关🇨🇳</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">第78号公告6/30施行：无人机出口申报规范，五条监管红线<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">海关总署6/9发布公告，6/30起规范无人机及相关物项（含电机、飞控、图传模块、反无人机设备等）跨境电商出口申报。五条红线：①取消简化申报须填10位完整HS编码 ②"生产销售单位"须填真实厂家 ③境外收件人须填中英文全称 ④随附资料与物流不一致触发质疑货物不放行 ⑤接近管制参数须作否定性声明或办出口许可证</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">从事无人机及相关配件跨境出口的卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">2026年6月30日</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①核对工厂能否提供完整参数及溯源资料 ②无法配合的供应链及时更换 ③严禁用泛类词掩盖真实品名 ④完成产品合规分类台账</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/679012.html" target="_blank">亿邦动力</a> · <a href="http://www.customs.gov.cn/customs/2026-06/10/article_2026061010583423455.html" target="_blank">海关总署</a></div>
+      </div>
+    </section>
+
+    <!-- Law -->
+    <section class="section-block" id="law">
+      <div class="section-header">
+        <h2>⚖️ 法律/监管</h2>
+        <span class="section-badge badge-warn">1条</span>
+      </div>
+
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-law">纽约州🇺🇸</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">《合成表演者披露法》6/9生效：AI模特图须标注，违规按次累计罚款<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">纽约州《合成表演者披露法》6/9正式生效。商业广告中使用AI生成的人物形象必须明确标注。首次违规罚$1000，后续每次$5000，按违规次数累计。适用于任何触达纽约州消费者的广告，包括listing图片、A+页面、站外推广等。纯AI图片不受版权保护，竞品可合法复制</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">使用AI模特/场景图的卖家，尤其是服装鞋帽类</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">2026年6月9日</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①排查所有AI人物形象素材 ②图片增加"AI-generated image"标注 ③核心主图优先替换真人实拍 ④建立AI内容审核机制</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fopbaz1fhd6o" target="_blank">卖家之家</a></div>
+      </div>
+    </section>
+
+    <!-- Other Platforms -->
+    <section class="section-block" id="platform">
+      <div class="section-header">
+        <h2>🏪 其他平台</h2>
+        <span class="section-badge badge-warn">2条</span>
+      </div>
+
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-ebay">eBay🇺🇸</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">物流新规6/28实施：官方面单强制启用，运费平台直收<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6/28起eBay执行新版用户协议，全面推行官方配送标签系统。所有卖家必须使用平台指定面单发货，运费由买家直接支付给平台；包邮卖家费用从账户余额扣除。eBay加强交易保障，承诺对丢件/货损进行赔偿</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有eBay卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">2026年6月28日</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①调整财务核算模型 ②更新发货流程适配官方面单 ③关注平台赔偿机制细节</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/679014.html" target="_blank">亿邦动力</a></div>
+      </div>
+
+      <div class="policy-card card-info">
+        <div class="card-top"><span class="platform-tag tag-indonesia">印尼🇮🇩</span><span class="urgency-badge info">🟢 留意</span></div>
+        <div class="card-title">电商监管升级：无证卖家入驻受限，6个月过渡期后强制关停<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">2026年第19号贸易部长条例，电商平台必须拒绝未取得NIB的商户注册。已入驻无证卖家6个月内完成合法化，逾期交易权限终止</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">印尼市场跨境卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">已生效，6个月过渡期</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①加快办理印尼本地证照 ②或与合规本土实体合作</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/679011.html" target="_blank">亿邦动力</a></div>
+      </div>
+    </section>
+
+    <!-- Logistics -->
+    <section class="section-block" id="logistics">
+      <div class="section-header">
+        <h2>🚢 物流/运价</h2>
+        <span class="section-badge badge-info">1条</span>
+      </div>
+
+      <div class="policy-card card-info">
+        <div class="card-top"><span class="platform-tag tag-logistics">航运</span><span class="urgency-badge info">🟢 留意</span></div>
+        <div class="card-title">SCFI六连涨至2726.48，苏伊士附加费7/1上调<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">SCFI综合指数六连涨，美西线周涨9.7%。马士基、达飞等宣布7/1起苏伊士运河通行附加费由$520/TEU上调至$650/TEU。美国6月进口量预计225万TEU为全年最高，但NRF预判抢运仅持续至7月</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有跨境物流使用者</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 何时生效</span><span class="element-content">当前持续运行</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动建议</span><span class="element-content">①把握6-7月舱位窗口期 ②合理规划出货节奏 ③做好三季度后货量回落预案</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fooapj83u9s0" target="_blank">卖家之家</a> · <a href="https://www.sse.net.cn" target="_blank">上海航运交易所</a></div>
+      </div>
+    </section>
+
+    <div class="page-footer">
+      <div class="footer-divider"></div>
+      <div>📊 数据来源：Amazon Seller Forums / 海关总署 / 卖家之家 / 亿邦动力 / 雨果跨境 等28个配置信息源</div>
+      <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
+      <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
