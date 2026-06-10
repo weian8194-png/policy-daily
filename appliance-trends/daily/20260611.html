@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年6月11日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-microwave { background: #dc2626; }
+    .tag-ceramic { background: #059669; }
+    .tag-fridge { background: #2563eb; }
+    .tag-carbon { background: #78350f; }
+    .tag-knife { background: #7c3aed; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-source a:hover { text-decoration: underline; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #8b5cf6; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .watch-item .watch-text a { color: #0d9488; text-decoration: none; }
+    .watch-item .watch-text a:hover { text-decoration: underline; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .stats-bar { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">每日选品机会扫描</span>
+      <span class="update-hint">2026年6月11日 更新</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="../index.html">← 首页</a>
+    <span class="nav-center">6月11日 周三</span>
+    <a href="20260610.html">昨天 →</a>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">🔥 今日机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">$430</div>
+      <div class="stat-label">📡 Panasonic</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">$50</div>
+      <div class="stat-label">🍳 Quince</div>
+    </div>
+  </div>
+
+  <!-- ======== 速报 ======== -->
+  <div class="section-label section-hot">🔥 今日机会速报 · 6月11日</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-microwave">传感微波</span>
+      <span class="urgency-badge">📡 64点传感</span>
+    </div>
+    <div class="card-title">Panasonic日本式微波炉$429.95 — "日式极简+64点传感"高端化，$90-149传感器紧凑型微波炉降维空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>PR Newswire/MorningStar 6/10报道，Genius Sensor 2.0（64点温度传感自动调功率+时间）、无转盘平板、下拉式烤箱门、Inverter持续功率、One Bowl Meals一键碗餐</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-149"传感器紧凑型微波炉"——保留64点传感核心（BOM $8-12），20L紧凑型+15个碗餐预设，"放进去按一下，出来就能吃"</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-149（传感器紧凑微波炉空白）/ $429.95（Panasonic NN-SF57RM）/ $180-250（普通中端微波炉）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/panasonic-announces-the-new-japanese-microwave-designed-for-modern-american-kitchens-302796337.html" target="_blank" style="color:#0d9488;">PR Newswire</a> | <a href="https://www.morningstar.com/news/pr-newswire/20260610ny79615/panasonic-announces-the-new-japanese-microwave-designed-for-modern-american-kitchens" target="_blank" style="color:#0d9488;">MorningStar</a></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-ceramic">陶瓷平替</span>
+      <span class="urgency-badge">🍳 一站式换装</span>
+    </div>
+    <div class="card-title">Quince陶瓷不粘$50"比Caraway更好" — Food &amp; Wine验证"高端平替"需求爆发，$90-99陶瓷3件套+竹配件一站式换装空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Food &amp; Wine 6/10报道，Quince 10寸煎锅$50被消费者评为"比Caraway更好"——PTFE/PFOA-free、500°F烤箱安全、不锈钢手柄。Caraway仍占$125高位</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-99"陶瓷3件套+竹配件一站式换装包"——8寸+10寸煎锅+酱汁锅+竹铲3件+竹砧板，解决"从零换掉所有特氟龙"痛点</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-99（3件套+竹配件空白）/ $50（Quince单品）/ $125（Caraway单品）/ $450（GreenPan 11件套）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.foodandwine.com/ceramic-nonstick-frying-pan-quince-11994111" target="_blank" style="color:#0d9488;">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-fridge">冰箱管理</span>
+      <span class="urgency-badge">🧊 AI食物管家</span>
+    </div>
+    <div class="card-title">Frigidaire推出AI剩菜助手Frankie — 74%美国人每周丢食物，$90-129"智能冰箱食物管理器"独立设备空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>MorningStar 6/10报道，Frigidaire发布AI助手Frankie帮用户把剩菜变新菜谱。调查：74%每周丢食物、22%年浪费$1200、痛点是"忘记有什么"+"不确定是否新鲜"</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"智能冰箱食物管理器"——磁吸电子墨水屏+NFC标签记录+到期提醒LED+菜谱推荐，"冰箱门上的屏幕告诉你什么快过期"</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-129（智能冰箱管理器空白）/ $30-50（NFC标签+App方案）/ $2000+（带智能屏的冰箱）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.morningstar.com/news/pr-newswire/20260610ny80448/c-o-r-r-e-c-t-i-o-n-frigidaire" target="_blank" style="color:#0d9488;">MorningStar</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-carbon">碳钢入门</span>
+      <span class="urgency-badge">🍳 预调味套装</span>
+    </div>
+    <div class="card-title">碳钢锅Serious Eats评测验证$90-150热度 — Mauviel $120/Misen $99获推荐，"预调味碳钢入门套装+护理包"空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Serious Eats 6/9更新17款评测：Mauviel $120最佳传统、Misen预调味$99"开箱即用几乎不粘"、YETI $150最全能氮化。预调味碳钢正成主流——解决"开锅难"痛点</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"预调味碳钢入门套装+护理包"——8寸煎锅+12.5寸炒锅+亚麻籽油+清洁刷+维护指南卡片，解决"从零开始用碳钢"全部需求</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-129（碳钢入门套装空白）/ $99（Misen单锅）/ $120（Mauviel单锅）/ $150（YETI氮化单锅）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.seriouseats.com/best-carbon-steel-pans-7093873" target="_blank" style="color:#0d9488;">Serious Eats</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-knife">日式刀具</span>
+      <span class="urgency-badge">🔪 高端平替</span>
+    </div>
+    <div class="card-title">日本大马士革钢牛排刀$100 — Food &amp; Wine/Quince验证"高端平替"刀具趋势，$90-129"日式刀具3件套+磨刀石"套装空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Food &amp; Wine 6/10推荐Quince日本大马士革钢牛排刀4件套$100——"轻量但锋利"。GizStreet Prime Day泄漏：Wüsthof $99清仓，德国刀品牌壁垒松动</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"日式刀3件套+磨刀石"——三德刀+牛刀+削皮刀+1000/3000目双面磨刀石+磁吸刀架，一站式"专业刀入门"</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-129（日式刀3件套+磨刀石空白）/ $100（Quince牛排刀4件套）/ $99（Wüsthof清仓价）/ $200+（Shun/MAC单品）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.foodandwine.com/affordable-summer-kitchen-essentials-quince-11994345" target="_blank" style="color:#0d9488;">Food &amp; Wine</a> | <a href="https://cms.gizstreet.com/amazon-leaks-early-prime-day-2026-discounts-blink-shark-and-anker-hit-record-lows/" target="_blank" style="color:#0d9488;">GizStreet</a></div>
+  </div>
+
+  <!-- ======== 详析 ======== -->
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Panasonic日本式微波炉NN-SF57RM】$429.95验证"日式极简+传感烹饪"高端化——降维到$90-149传感器紧凑型微波炉</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-149（传感器紧凑微波炉空白）/ $429.95（Panasonic NN-SF57RM）/ $180-250（普通中端微波炉）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>PR Newswire/MorningStar 6/10联合报道，Panasonic发布NN-SF57RM日本式台面微波炉</li>
+          <li>Genius Sensor 2.0：64点温度传感器实时检测食物温度，自动调节烹饪时间和功率水平</li>
+          <li>Inverter Technology：持续功率输出vs传统脉冲式，加热更均匀减少冷热点</li>
+          <li>设计创新：无转盘平板（容量更大+更易清洁）、下拉式烤箱门、软关门铰链</li>
+          <li>"One Bowl Meals"一键碗餐——食材放碗中一键烹饪，预设Chili/Carbonara等菜谱</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$90-149定价，做到：1）保留温度传感自动调节核心（BOM约$8-12），最大差异化"你不用猜时间，传感器帮你算"；2）20L紧凑型覆盖独居/情侣日常；3）保留"One Bowl Meals"概念简化为15个预设碗餐；4）砍掉Inverter Technology（省$15-20 BOM），用普通微波+传感补偿；5）保留平板设计（用户痛点是转盘难清洁）。核心卖点"放进去按一下，出来就能吃"——不是卖微波炉，是卖"不用想"的烹饪体验。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"碗餐订阅"模式：买微波炉送3个月碗餐食材包，$29.99/月续订</li>
+          <li>宿舍场景：$99"学生碗餐微波炉"——20L+传感+15个预设</li>
+          <li>与Panasonic差异化：Panasonic卖"日式设计厨房美学"，做"传感碗餐实用主义"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Quince陶瓷不粘$50 vs Caraway$125】Food &amp; Wine验证"高端平替"——$90-99陶瓷3件套一站式换装空白</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-99（3件套+竹配件空白）/ $50（Quince单锅）/ $125（Caraway单锅）/ $450（GreenPan 11件套）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Food &amp; Wine 6/10专题，Quince陶瓷不粘10寸煎锅$50，消费者"比Caraway更好"</li>
+          <li>"鸡蛋直接滑下来"、"比Caraway更易清洁不留渍"——PTFE/PFOA-free、500°F烤箱安全</li>
+          <li>Quince定位"高端平替"：同品质价格是传统品牌1/2到1/3</li>
+          <li>Caraway仍多次入选Food &amp; Wine最佳无毒炊具榜单</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$90-99定价，做到"一站式从零换无毒"：1）8寸煎锅+10寸煎锅+1.5Qt酱汁锅+竹铲3件套+竹砧板；2）Quince $50只1锅、Caraway $125也只1锅，换全厨房需$150-375；3）套装$90-99覆盖3锅+6配件，均摊单锅$30-33；4）BOM约$40，毛利55%+。核心差异化不是"更便宜的单锅"，而是"一次买齐换掉所有特氟龙"。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"无毒厨房入门包"：加入硅胶铲+食品级储存袋，完整starter kit</li>
+          <li>订阅模式：每年寄一套新陶瓷锅替换旧锅，$49.99/年</li>
+          <li>社交传播：#ZeroTeflon挑战，晒出扔掉旧特氟龙锅的照片</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== 关注项 ======== -->
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 GoveeLife Smart Ice Maker 2 Pro $349.99发布 — 智能制冰品类持续升级</div>
+    <div class="watch-text">PR Newswire 6/8报道，3分钟出冰/47磅每天/双水箱/App控制/3年保修，早期买家送$99.99空气净化器。$90-129紧凑型智能制冰机降维空白仍在<br>来源：<a href="https://www.prnewswire.com/news-releases/goveelife-launches-smart-countertop-ice-maker-2-pro-for-iced-coffee-and-summer-hosting-302792259.html" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 ELEGRP湿度传感器+风扇控制开关发布 — 厨房浴室除湿自动化趋势</div>
+    <div class="watch-text">MorningStar 6/10报道，自动管理室内湿度，UL 60730认证，California Title 24合规，Amazon在售。单品非厨房专用，但除湿自动化值得关注<br>来源：<a href="https://www.morningstar.com/news/pr-newswire/20260610cn78009/elegrp-launches-new-humidity-sensor-and-fan-control-switch-to-improve-indoor-air-quality-and-residential-ventilation" target="_blank">MorningStar</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Aldi制冰机$69.99验证低价市场 — 制冰机从$70到$350全覆盖</div>
+    <div class="watch-text">AllRecipes 6/9报道，Aldi Ambiano台面制冰机$69.99，Igloo同类$140+。高端需靠"智能+传感器"差异化<br>来源：<a href="https://www.allrecipes.com/aldi-ambiano-countertop-ice-maker-back-2026-11993318" target="_blank">AllRecipes</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Food &amp; Wine铸铁锅评测$90-200区间 — 高端铸铁消费升级明显</div>
+    <div class="watch-text">6/9更新25款评测：Lancaster $175最佳、Lodge $30最佳性价比、YETI $200最佳豪华。$90-200高端铸铁消费意愿强<br>来源：<a href="https://www.foodandwine.com/cooking-techniques/cast-iron-pans?banner=logout" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Vitamix 5200降至$425（原$500）— 高端搅拌机Prime Day降价15%</div>
+    <div class="watch-text">Serious Eats 6/9更新30+款搅拌机评测，Vitamix 5200连续10年最佳。$90-129专用配件（智能称重杯/真空杯）有机会<br>来源：<a href="https://www.seriouseats.com/best-blenders-8548162" target="_blank">Serious Eats</a></div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>数据来源：PR Newswire · WIRED · BGR · GizStreet · The Mirror · Food &amp; Wine · AllRecipes · Serious Eats · Techlicious · CNN Underscored · Amazon · MorningStar 等12个信息源</p>
+    <p>生成时间：2026年6月11日 | <a href="../index.html">返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
