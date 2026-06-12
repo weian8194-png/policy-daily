@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年6月13日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-microwave { background: #dc2626; }
+    .tag-drink { background: #2563eb; }
+    .tag-ai { background: #8b5cf6; }
+    .tag-deal { background: #dc2626; }
+    .tag-color { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-source a:hover { text-decoration: underline; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #8b5cf6; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .watch-item .watch-text a { color: #0d9488; text-decoration: none; }
+    .watch-item .watch-text a:hover { text-decoration: underline; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .stats-bar { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">每日选品机会扫描</span>
+      <span class="update-hint">2026年6月13日 更新</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="../index.html">← 首页</a>
+    <span class="nav-center">6月13日 周五</span>
+    <a href="20260612.html">昨天 →</a>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">🔥 今日机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">$430</div>
+      <div class="stat-label">📡 Panasonic</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">$92</div>
+      <div class="stat-label">🍳 Le Creuset</div>
+    </div>
+  </div>
+
+  <!-- ======== 速报 ======== -->
+  <div class="section-label section-hot">🔥 今日机会速报 · 6月13日</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-microwave">智能微波炉</span>
+      <span class="urgency-badge">📡 64点传感</span>
+    </div>
+    <div class="card-title">Panasonic日式微波炉NN-SF57RM $429.95 — Genius Sensor 2.0（64点温感）+无转盘平板+下拉门，$90-149智能传感微波炉降维空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>PR Newswire 6/10报道Panasonic发布$429.95日式极简微波炉——Genius Sensor 2.0内置64点红外温感阵列、Inverter变频均匀加热、无转盘平板设计（空间+30%）、下拉门防烫、One Bowl Meals一键烹饪</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-149"智能传感微波炉"——16-32点红外传感（够用）、保留无转盘平板（最大体验差异化）、砍One Bowl Meals和下拉门（省BOM $25-30）、保留Inverter变频（核心痛点），"再也不会加热过度"</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-149（智能传感微波炉空白）/ $429.95（Panasonic NN-SF57RM）/ $179-249（Panasonic中端变频）/ $79-129（普通转盘微波炉）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/panasonic-introduces-japanese-style-countertop-microwave-with-genius-sensor-2-0-and-flat-design-302799681.html" target="_blank" style="color:#0d9488;">PR Newswire</a></div>
+  </div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-drink">冻饮机</span>
+      <span class="urgency-badge">🥤 自动检测</span>
+    </div>
+    <div class="card-title">Ninja SLUSHi XL/MAX新机型发布 — CNN Underscored 6/12报道冻饮机新品扩展，更大容量+SlushAssist自动检测，$90-149家用冻饮机空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>CNN Underscored 6/12报道Ninja扩展SLUSHi系列——XL 3.7L/MAX 4.4L更大容量，SlushAssist自动检测冻结状态、RapidChill Pro 15-60分钟、WhisperChill静音保持12小时、6种预设。Ninja持续加注=品类验证</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-149"家用冻饮机"——2-3L单杯/双杯容量（vs Ninja 3.7-4.4L够家庭用）、3-4预设（冰沙/奶昔/冻饮）、保留自动检测（核心体验）、无WiFi/App省BOM，"3分钟冰沙，不用等"</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-149（家用冻饮机空白）/ $249.99+（Ninja SLUSHi原款）/ $329-349（Ninja SLUSHi XL/MAX）/ $50-80（手动冰沙机）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.cnn.com/cnn-underscored" target="_blank" style="color:#0d9488;">CNN Underscored</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-ai">AI食材管理</span>
+      <span class="urgency-badge">🤖 消灭浪费</span>
+    </div>
+    <div class="card-title">Frigidaire Frankie AI食物管理助手 — AI剩菜管理+食谱推荐，74%美国人每周扔食物，$90-129独立智能食材管理器降维空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>PR Newswire 6/10报道Frigidaire推出Frankie——AI驱动剩菜变新食谱、食材过期提醒、智能购物清单。74%美国人每周扔食物，22%年浪费$1200+。Frankie集成在$2000+智能冰箱中</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"独立智能食材管理器"——5寸触摸屏+摄像头扫码、AI过期提醒+食谱推荐、磁吸背贴冰箱门（零占地）、与任何冰箱兼容，"冰箱里的AI管家，不挑冰箱"</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-129（独立智能食材管理器空白）/ $2000+（Frigidaire内置Frankie的冰箱）/ $30-50（普通食材标签方案）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/frigidaire-introduces-frankie-ai-food-assistant-302799230.html" target="_blank" style="color:#0d9488;">PR Newswire</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-deal">Prime Day</span>
+      <span class="urgency-badge">🔥 价格战</span>
+    </div>
+    <div class="card-title">Prime Day 6/23-26早鸟折扣密集 — GizStreet/Food &amp; Wine 6/12报道$90-150厨房价格战即将开启，Le Creuset $91.95/Chefman $190</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>GizStreet 6/12更新Prime Day早鸟：Le Creuset Nonstick Pro $91.95（20% off）、Chefman Pizza Oven $190（原$400降52%）、Cuisinart Air Fryer $100、Carote陶瓷套装$60。高端品牌罕见入场=价格天花板下移</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-150区间"Prime Day狙击策略"——"Always $89.99, no waiting for Prime Day"定价钩子、提前2周开Coupon锚定心理价位、高端竞品打折="同品质更低价"广告窗口。流量爆发3-5倍是确定性事件</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-150（Prime Day厨房主战区间）/ $91.95（Le Creuset Nonstick Pro）/ $190（Chefman Pizza Oven原$400）/ $100（Cuisinart Air Fryer）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://cms.gizstreet.com/amazon-triggers-early-prime-day-2026-discounts-airpods-pro-3-and-smart-home-gear-hit-new-lows/" target="_blank" style="color:#0d9488;">GizStreet</a> | <a href="https://www.foodandwine.com" target="_blank" style="color:#0d9488;">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-color">年度色配件</span>
+      <span class="urgency-badge">🎨 Spearmint</span>
+    </div>
+    <div class="card-title">KitchenAid 2026年度色Spearmint发布 — PR Newswire 6/12，配件生态更新+陶瓷不粘加速，$90+品牌替代配色配件机会</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>PR Newswire 6/12报道KitchenAid发布2026年度色Spearmint（薄荷绿），覆盖搅拌机/手动工具/餐具/炊具全产品线。年度色=配件更新潮+收藏驱动+社交晒图驱动。Spearmint淡绿清新=契合无毒/自然趋势</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90+品牌替代配色——Spearmint色调厨房配件套装$49.99（硅胶铲+竹砧板+陶瓷碗）、"KitchenAid Style"配色电水壶$89.99（同色系不同品牌），"你的Spearmint厨房，不需要KitchenAid的价格"</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$89.99（配色入门电水壶）/ $49.99（配色配件套装）/ $399+（KitchenAid搅拌机Spearmint）/ $165-199（Caraway/Our Place同色系炊具）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/kitchenaid-announces-2026-color-of-the-year-spearmint-302800517.html" target="_blank" style="color:#0d9488;">PR Newswire</a></div>
+  </div>
+
+  <!-- ======== 详析 ======== -->
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Panasonic日式微波炉NN-SF57RM $429.95】Genius Sensor 2.0+无转盘平板——降维到$90-149智能传感微波炉</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-149（智能传感微波炉空白）/ $429.95（Panasonic NN-SF57RM）/ $179-249（Panasonic中端变频微波炉）/ $79-129（普通转盘微波炉）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>PR Newswire 6/10报道Panasonic发布NN-SF57RM日式极简微波炉$429.95</li>
+          <li>Genius Sensor 2.0：64点红外温感阵列（vs旧款7-15点），自动检测食物温度并调节功率</li>
+          <li>Inverter变频技术：持续低功率均匀解冻/加热（vs传统开/关循环=外热内冷）</li>
+          <li>无转盘平板设计：底面平坦加热+空间利用率比转盘高约30%（方形容器不用绕圈）</li>
+          <li>下拉门：vs侧开门更安全防烫（开门时热气向上散而非扑面）</li>
+          <li>One Bowl Meals：5种碗装料理一键烹饪（米饭/燕麦/汤/蒸菜/炖菜）</li>
+          <li>日式极简外观：全黑玻璃面板+隐藏式控制+不锈钢拉丝把手</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$90-149定价，做到"再也不会加热过度的微波炉"：1）16-32点红外传感（vs Panasonic 64点——够用，3-5个温区vs 8个温区差异不大，成本降$40+）；2）保留无转盘平板设计（对传统微波炉最大体验升级——方形容器直接放、空间更大、更易清洁，消费者一眼感知差异）；3）砍One Bowl Meals（5种预设太细分，消费者热剩饭远比做碗料理频繁）；4）砍下拉门改侧开门（省BOM $25-30，下拉门铰链+阻尼成本高）；5）保留Inverter变频（均匀加热是消费者最大痛点，核心体验不能砍）。BOM约$55-65，毛利40%+。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"微波炉+空气炸"2合1：$179.99——微波炉顶部集成小容量空气炸篮，"热完再烤一下"</li>
+          <li>办公室场景：$99迷你版——0.5立方英尺+16点传感，"办公室微波炉终于不会把便当热爆了"</li>
+          <li>与Panasonic差异化：Panasonic卖$429.95的"日式极简全功能"，做$129的"智能传感实用主义"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Frigidaire Frankie AI食物管理助手】AI剩菜管理+食谱推荐——$90-129独立智能食材管理器降维空白</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-129（独立智能食材管理器空白）/ $2000+（Frigidaire内置Frankie的冰箱）/ $30-50（普通食材标签/记号笔方案）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>PR Newswire 6/10报道Frigidaire推出Frankie AI食物管理助手</li>
+          <li>核心功能：AI驱动将冰箱剩菜变新食谱、食材过期提醒、智能购物清单生成</li>
+          <li>市场数据：74%美国人每周扔掉食物、22%每年浪费$1200+</li>
+          <li>Frankie集成在Frigidaire Smart Frigidaire App和部分智能冰箱中</li>
+          <li>背景：AI食材管理成为冰箱标配功能趋势（Samsung AI Vision等跟进）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$90-129定价，做到"冰箱里的AI管家，不挑冰箱"：1）独立台面设备（vs Frankie绑定Frigidaire冰箱——美国2.5亿台冰箱中智能冰箱占比&lt;15%，85%+非智能冰箱=巨大TAM）；2）5寸触摸屏+摄像头扫描食材条码/外观（扫码+AI识别双通道）；3）AI过期提醒+食谱推荐（Frankie的2个杀手功能直接复刻）；4）磁吸背贴冰箱门（零台面占地，"冰箱配件"定位关键——每次开冰箱都看到提醒）；5）WiFi连接推送手机通知（冰箱门上提醒+手机推送双重触达）。BOM约$45-55，毛利45%+。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"冰箱皮肤"概念：磁吸+超薄（&lt;1cm），像给冰箱贴了一块智能面板</li>
+          <li>订阅模式：基础版$89.99（过期提醒+食谱）+ Pro $4.99/月（AI购物清单+营养分析+家庭共享）</li>
+          <li>商用版：$149.99餐厅后厨食材管理，FDA合规过期追踪</li>
+          <li>与Frigidaire差异化：Frigidaire把Frankie当冰箱卖点卖$2000+冰箱，做$99独立设备让任何冰箱变"智能冰箱"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== 关注项 ======== -->
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Gourmia 2Qt软冰淇淋+冻饮机Costco渠道 — 冻饮+冰淇淋双功能验证夏季赛道</div>
+    <div class="watch-text">PR Newswire 6/3报道Costco渠道夏季新品。Costco渠道=大批量低利润vs Amazon DTC高利润差异<br>来源：<a href="https://www.prnewswire.com/news-releases/gourmia-2qt-soft-serve-ice-cream-maker-costco-302791556.html" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Serious Eats 6/11荷兰锅评测更新 — 陶瓷不粘持续验证</div>
+    <div class="watch-text">22款荷兰锅评测：Le Creuset $324最佳整体、Caraway $165最佳无毒陶瓷、Lodge $60最佳性价比。陶瓷不粘加速趋势延续<br>来源：<a href="https://www.seriouseats.com/the-best-dutch-ovens" target="_blank">Serious Eats</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Food &amp; Wine：Amazon Top 100厨房产品持续发酵 — 陶瓷+智能+体验三大主线</div>
+    <div class="watch-text">Our Place Dream Cooker $199、Caraway荷兰锅$165、GE Opal 2.0 XL $399、Ninja Creami $230入选。三大主线不变<br>来源：<a href="https://www.foodandwine.com/top-100-amazon-products-2026-11995020" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 陶瓷不粘加速趋势延续 — KitchenAid Spearmint年度色呼应无毒/自然消费心理</div>
+    <div class="watch-text">Caraway/Our Place/Nuwave Lux持续推出陶瓷产品线。Spearmint淡绿审美=无毒/自然趋势视觉化。$90-129陶瓷不粘锅具仍有品类红利<br>来源：<a href="https://www.prnewswire.com" target="_blank">PR Newswire</a> | <a href="https://www.foodandwine.com" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Nugget制冰空白仍未填补 — GE Opal $399 + GoveeLife $349.99，$90-149紧凑型无人做</div>
+    <div class="watch-text">GE Opal 2.0 XL $399 Amazon Top 100 + GoveeLife 2 Pro $349.99。$90-149紧凑型nugget制冰机是持续性空白<br>来源：<a href="https://www.foodandwine.com/top-100-amazon-products-2026-11995020" target="_blank">Food &amp; Wine</a> | <a href="https://www.prnewswire.com/news-releases/goveelife-launches-smart-countertop-ice-maker-2-pro-for-iced-coffee-and-summer-hosting-302792259.html" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>数据来源：PR Newswire · WIRED · BGR · GizStreet · The Mirror · Food &amp; Wine · AllRecipes · Serious Eats · Techlicious · CNN Underscored · Amazon · MorningStar 等12个信息源</p>
+    <p>生成时间：2026年6月13日 | <a href="../index.html">返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
