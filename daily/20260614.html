@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 · 2026年6月14日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 960px; margin: 0 auto; padding: 28px 20px 40px; }
+    .header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+    .header h1 { font-size: 22px; font-weight: 800; color: #0f172a; }
+    .header .date { font-size: 13px; color: #64748b; margin-top: 4px; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.danger .num { color: #dc2626; }
+    .stat-chip.warn .num { color: #d97706; }
+    .stat-chip.info .num { color: #16a34a; }
+
+    .banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+    .banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .banner ul { list-style: none; padding: 0; }
+    .banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; }
+    .banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .banner .dt { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
+    .banner a { color: #2563eb; text-decoration: none; font-size: 11px; }
+
+    .section { margin-bottom: 28px; }
+    .section-hdr { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+    .section-hdr h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-danger { background: #fef2f2; color: #dc2626; }
+    .badge-warn { background: #fffbeb; color: #d97706; }
+    .badge-info { background: #f0fdf4; color: #16a34a; }
+
+    .card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .card.danger { border-left: 4px solid #dc2626; }
+    .card.warn { border-left: 4px solid #f59e0b; }
+    .card.info { border-left: 4px solid #16a34a; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .ptag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; }
+    .tag-amazon { background: #FF9900; }
+    .tag-eu { background: #003399; }
+    .tag-walmart { background: #0071DC; }
+    .tag-shopee { background: #EE4D2D; }
+    .tag-tax { background: #7c3aed; }
+    .tag-trade { background: #1d4ed8; }
+    .urgency { font-size: 12px; font-weight: 600; }
+    .urgency.danger { color: #dc2626; }
+    .urgency.warn { color: #d97706; }
+    .urgency.info { color: #16a34a; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .new-tag { display: inline-block; font-size: 9px; background: #dc2626; color: #fff; padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; font-weight: 600; }
+    .elements { padding: 10px 16px; }
+    .el-row { display: flex; gap: 6px; padding: 4px 0; font-size: 12px; line-height: 1.7; border-bottom: 1px solid #f1f5f9; }
+    .el-row:last-child { border-bottom: none; }
+    .el-label { font-weight: 700; white-space: nowrap; min-width: 66px; flex-shrink: 0; }
+    .el-label.el-change { color: #1e40af; }
+    .el-label.el-who { color: #7c3aed; }
+    .el-label.el-when { color: #dc2626; }
+    .el-label.el-action { color: #16a34a; }
+    .el-content { color: #334155; }
+    .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
+    .card-source .sl { font-size: 11px; color: #94a3b8; }
+    .card-source a { font-size: 11px; color: #0284c7; text-decoration: none; word-break: break-all; }
+    .card-source a:hover { text-decoration: underline; }
+
+    .footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .footer a { color: #0284c7; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>跨境政策日报 · 2026年6月14日</h1>
+    <div class="date">数据日期: <b>2026年6月14日（周日）</b> · 08:00 更新</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip danger"><span class="num">1</span>🔴 紧急</div>
+    <div class="stat-chip warn"><span class="num">4</span>🟡 关注</div>
+    <div class="stat-chip info"><span class="num">2</span>🟢 留意</div>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <div class="banner-title">⚡ 近期关键时间节点</div>
+    <ul>
+      <li><span class="dt">6/19</span> 🔴 欧盟"一键撤销合同"退单新规生效 <a href="https://m.ebrun.com/ebrungo/zb/680439.html" target="_blank">[来源]</a></li>
+      <li><span class="dt">6/22-28</span> 🟡 Walmart Summer Deals大促 <a href="https://marketplace.walmart.com/news" target="_blank">[官方]</a></li>
+      <li><span class="dt">6/23-26</span> 🔴 Amazon Prime Day 2026 <a href="https://press.aboutamazon.com" target="_blank">[官方]</a></li>
+      <li><span class="dt">6/28</span> eBay统一配送模式生效</li>
+      <li><span class="dt">6/29</span> Amazon自配送处理时间新规生效</li>
+      <li><span class="dt">6/30</span> 🔴 海关78号公告无人机出口申报 + COO强制填报 + FBA基础容量制度</li>
+      <li><span class="dt">7/1</span> 🔴 欧盟€150免税取消 + 国务院837号令 + 加州纺织品EPR注册截止</li>
+      <li><span class="dt">7/7</span> 🔴 美国301关税听证会</li>
+      <li><span class="dt">7/8</span> 🔴 CPSC eFiling强制电子备案</li>
+      <li><span class="dt">7/27</span> 🔴 Amazon标题75字符限制强制执行 <a href="https://sellercentral.amazon.com/forums" target="_blank">[官方]</a></li>
+      <li><span class="dt">8/12</span> 欧盟PPWR包装法强制生效</li>
+    </ul>
+  </div>
+
+  <!-- Platform Policies -->
+  <div class="section">
+    <div class="section-hdr">
+      <h2>🛒 平台政策</h2>
+      <span class="badge badge-warn">1关注 + 2留意</span>
+    </div>
+
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-walmart">Walmart</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">Summer Deals 6/22-28与Prime Day正面交锋+向墨西哥开放美国主站<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">Walmart宣布Summer Deals活动6/22-28举行，比Prime Day早1天开始、晚2天结束，持续7天。Walmart+会员享前24小时提前抢购权。同时向墨西哥消费者开放美国主站Walmart.com商品库，满$35免运费跨境购买</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">同时在Amazon和Walmart销售的跨境卖家</span></div>
+        <div class="el-row"><span class="el-label el-when">⏰ 何时生效</span><span class="el-content">6月22日-28日（活动） · 墨西哥站即刻可用</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">①双平台库存分配提前规划 ②Walmart+会员专属商品提前备货 ③关注墨西哥跨境销售新通道</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://marketplace.walmart.com/news" target="_blank">Walmart News</a> · <a href="https://m.ebrun.com/680440.html" target="_blank">亿邦动力</a></div>
+    </div>
+
+    <div class="card info">
+      <div class="card-top"><span class="ptag tag-amazon">Amazon</span><span class="urgency info">🟢 留意</span></div>
+      <div class="card-title">新版Seller Central体验正式上线：7大工作区+行动中心<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">Amazon卖家中心全新界面正式推出，7个目的导向工作区整合了指标、警报和优先行动项。可通过右上角"New Seller Central"切换按钮启用新体验，偏好跨会话保存</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">①尽快切换体验新版 ②熟悉7大工作区布局 ③利用Action Center优先处理高优先级任务</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://sellercentral.amazon.com/forums" target="_blank">Amazon Seller Forums</a></div>
+    </div>
+
+    <div class="card info">
+      <div class="card-top"><span class="ptag tag-shopee">Shopee</span><span class="urgency info">🟢 留意</span></div>
+      <div class="card-title">启动官方服务商招募：覆盖头程/海外仓/ERP/财税/合规<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">Shopee启动官方服务商招募计划，面向头程物流、海外仓、数智化ERP、财税合规、产品认证、代运营、培训机构等，为不同规模出海卖家提供体系化支撑</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">关注官方服务商名录，筛选合规合作方降低运营风险</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://m.ebrun.com/680440.html" target="_blank">亿邦动力</a></div>
+    </div>
+  </div>
+
+  <!-- Compliance / Tax -->
+  <div class="section">
+    <div class="section-hdr">
+      <h2>🏛️ 合规/税务</h2>
+      <span class="badge badge-danger">1紧急 + 1关注</span>
+    </div>
+
+    <div class="card danger">
+      <div class="card-top"><span class="ptag tag-eu">欧盟🇪🇺</span><span class="urgency danger">🔴 紧急</span></div>
+      <div class="card-title">"一键撤销合同"退单新规6/19生效：倒计时5天，跨境卖家退货成本暴增<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">6月19日起，面向欧盟消费者销售商品的线上零售商，需依照欧盟2023/2673号指令要求，在购物流程中直接设置清晰可见的数字退单功能，让合同取消流程和下单流程一样简便。时尚生活类、退货率偏高的电商企业压力最大。非欧盟跨境卖家需全权承担退回商品的国际运费、处理费用</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">所有面向欧盟销售的中国跨境卖家</span></div>
+        <div class="el-row"><span class="el-label el-when">⏰ 何时生效</span><span class="el-content">2026年6月19日（5天后）</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">①检查欧洲站退货流程是否支持数字退单 ②建立本地退货地址/海外仓退货处理能力 ③低客单价商品评估"仅退款不退货"成本</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/680439.html" target="_blank">亿邦动力</a> · <a href="https://taxation-customs.ec.europa.eu" target="_blank">EC TAXUD</a></div>
+    </div>
+
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-tax">合规🇪🇺</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">碳合规服务商CarbonPass获亚马逊SPN认证：CBAM扩展背景下碳合规标准化提速<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">碳合规服务商碳企通（CarbonPass）获批成为亚马逊SPN（Solution Provider Network）认证服务商，为跨境卖家提供标准化碳合规解决方案。CBAM已扩大至下游产品，碳合规需求加速</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">评估碳合规需求，关注CBAM扩展品类对自身产品影响</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://m.ebrun.com/680440.html" target="_blank">亿邦动力</a></div>
+    </div>
+  </div>
+
+  <!-- Industry -->
+  <div class="section">
+    <div class="section-hdr">
+      <h2>📡 行业动态</h2>
+      <span class="badge badge-warn">2条</span>
+    </div>
+
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-trade">知识产权</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">大疆在美起诉影石专利侵权：中国出海企业知识产权风险升级<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">大疆及大疆灵眸6/10-11日向美国得州东区联邦法院对影石创新提起专利侵权诉讼。中国科技企业出海再遇知识产权挑战，TRO风险频发</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">①出海前做好FTO专利排查 ②关注TRO风险，特别是设计类/技术类产品</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://m.ebrun.com/680440.html" target="_blank">亿邦动力</a></div>
+    </div>
+
+    <div class="card info">
+      <div class="card-top"><span class="ptag tag-trade">京东</span><span class="urgency info">🟢 留意</span></div>
+      <div class="card-title">Joybuy计划在欧洲引入第三方卖家：自营+直发混合模式<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">京东旗下Joybuy计划2026年下半年在欧洲测试精选市场模式，引入第三方卖家。部分商品由Joybuy仓存储配送，另一部分由供应商直发，实现自营与直发并存</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">关注Joybuy欧洲站招商进度和入驻条件</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://m.ebrun.com/680440.html" target="_blank">亿邦动力</a></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>📊 数据来源：Amazon / EU TAXUD / CPSC / 亿邦动力 / 卖家之家 / 雨果跨境 等28个配置信息源</div>
+    <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
+    <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+  </div>
+
+</div>
+</body>
+</html>
