@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年6月14日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-coffee { background: #92400e; }
+    .tag-espresso { background: #7c2d12; }
+    .tag-carbonsteel { background: #374151; }
+    .tag-space { background: #0e7490; }
+    .tag-smart { background: #7c3aed; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-source a:hover { text-decoration: underline; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #8b5cf6; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .watch-item .watch-text a { color: #0d9488; text-decoration: none; }
+    .watch-item .watch-text a:hover { text-decoration: underline; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .stats-bar { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">每日选品机会扫描</span>
+      <span class="update-hint">2026年6月14日 更新</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="../index.html">← 首页</a>
+    <span class="nav-center">6月14日 周日</span>
+    <a href="20260613.html">昨天 →</a>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">🔥 今日机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">$99</div>
+      <div class="stat-label">☕ Cosori Juni</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">$119</div>
+      <div class="stat-label">🍳 Made In碳钢</div>
+    </div>
+  </div>
+
+  <!-- ======== 速报 ======== -->
+  <div class="section-label section-hot">🔥 今日机会速报 · 6月14日</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-coffee">自动手冲咖啡</span>
+      <span class="urgency-badge">☕ 品类扩张</span>
+    </div>
+    <div class="card-title">Cosori Juni™自动手冲咖啡机 — PR Newswire 6/13，空气炸锅#1品牌进军精品咖啡，$90-149自动手冲降维空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Cosori 6/13宣布Juni™自动手冲咖啡机，品类路径：空气炸锅→电热水壶→电饭煲→手冲咖啡机。品牌从"厨房电器"向"精品咖啡"升级=高客单价品类验证</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$99.99"一键手冲"——恒温92-96℃出水+模拟手冲脉冲注水+6杯容量，"手冲的仪式感，按一下就搞定"。$90-149目前仅有手动手冲器具，无自动产品</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-149（自动手冲咖啡机空白）/ $199-249（Cosori Juni预估）/ $25-50（手动手冲器具Chemex/Hario）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news/cosori/" target="_blank" style="color:#0d9488;">PR Newswire</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-espresso">迷你浓缩咖啡</span>
+      <span class="urgency-badge">☕ 小厨房</span>
+    </div>
+    <div class="card-title">KitchenAid KF4紧凑型全自动咖啡机$1,299.99 — 比KF6窄30%，Intelligrind+15bar精品浓缩，$90-149迷你浓缩降维空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>TechRadar/Techlicious 6/13评测KF4——$1,299.99紧凑型（7.68 x 6.3 x 18.7英寸），Intelligrind智能研磨+15bar萃取，浓缩一致性优秀+奶泡兼容植物奶，但冰饮功能翻车（低温仍太热→融化冰块→稀释）</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$99.99"迷你浓缩咖啡机"——砍自动奶泡（$15手动奶泡器）、保留15bar核心、0.5L小水箱，"小厨房也能出精品浓缩"。冰饮痛点=冷萃杯$29.99配件附加</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-149（迷你浓缩咖啡机空白）/ $1,299.99（KitchenAid KF4）/ $799.99（KF2）/ $499.99（KitchenAid半自动）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.techlicious.com/guides-reviews/" target="_blank" style="color:#0d9488;">Techlicious</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-carbonsteel">碳钢锅具</span>
+      <span class="urgency-badge">🍳 不粘OUT</span>
+    </div>
+    <div class="card-title">碳钢锅具取代不粘锅 — Food &amp; Wine 6/12年度趋势宣言，编辑部投票：nonstick OUT / carbon steel IN，$90-129碳钢入门套装空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Food &amp; Wine编辑部投票宣布不粘锅OUT碳钢IN——碳钢=铸铁+不锈钢优点集合：耐1200°F、适用所有灶台、3磅轻便、预seasoning即用。Made In碳钢煎锅$119、碳钢Griddle$179、Merten &amp; Storck $57性价比款</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-129碳钢入门套装——10英寸煎锅+14英寸炒锅，"一把锅搞定煎炒烹炸，一辈子不换"。预seasoning+养护油附赠=降低入门焦虑</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-129（碳钢套装空白）/ $119（Made In单锅）/ $179（Made In Griddle）/ $57（Merten &amp; Storck性价比款）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.foodandwine.com/2026-kitchen-product-trends-11996116" target="_blank" style="color:#0d9488;">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-space">小厨房工具</span>
+      <span class="urgency-badge">🏠 省空间</span>
+    </div>
+    <div class="card-title">小公寓省空间厨房工具 — Food &amp; Wine 6/13纽约公寓编辑分享，Our Place Tiny Cookware Duo $125，$90-129小厨房全能套装空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Food &amp; Wine纽约公寓编辑推荐——Our Place Tiny Cookware Duo $125（迷你锅具2件套）、WS可折叠量杯量勺$70、Bella折叠捣碎器+打蛋器$15、磁吸纸巾架$26。城市小户型厨房=持续增长细分</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"小厨房全能套装"——6英寸碳钢迷你煎锅+1.5L小煮锅+可折叠砧板+磁吸调料架，"1平方英尺搞定所有烹饪"</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-129（小厨房全能套装空白）/ $125（Our Place Tiny Duo）/ $70（WS可折叠量杯）/ $15-26（单件工具）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.foodandwine.com/small-apartment-mini-collapsible-kitchen-tools-11997432" target="_blank" style="color:#0d9488;">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-smart">智能水龙头</span>
+      <span class="urgency-badge">🚰 触控下沉</span>
+    </div>
+    <div class="card-title">智能触控/无触厨房水龙头 — Food &amp; Wine 6/12评测14款，触控技术从$534下沉到$181，$89.99智能传感器夹具降维空白</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Food &amp; Wine评测14款厨房水龙头——Delta Leland触控$376（碰触开关+LED温度+ShieldSpray）、Moen Arbor Smart无触$534（语音/手势）、Moen Adler性价比$181。触控/无触技术快速下沉</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$89.99"智能水龙头升级配件"——红外传感器夹具夹在现有水龙头上→挥手出水，"旧水龙头秒变智能，不用请水管工"。安装零门槛+不挑型号=巨大TAM</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$89.99（智能传感器夹具空白）/ $181（Moen Adler基础）/ $376（Delta Leland触控）/ $534（Moen Arbor Smart无触）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.foodandwine.com/lifestyle/kitchen/best-kitchen-faucets" target="_blank" style="color:#0d9488;">Food &amp; Wine</a></div>
+  </div>
+
+  <!-- ======== 详析 ======== -->
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Cosori Juni™自动手冲咖啡机】精品咖啡品类扩张——$90-149自动手冲降维空白</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-149（自动手冲咖啡机空白）/ $199-249（Cosori Juni预估）/ $25-50（手动手冲器具）/ $339-495（Moccamaster/Ratio Six高端自动）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>PR Newswire 6/13报道Cosori推出Juni™自动手冲咖啡机，正式进入精品咖啡赛道</li>
+          <li>Cosori此前品类路径：空气炸锅→电热水壶（5温控）→电饭煲→手冲咖啡机</li>
+          <li>Cosori母公司VeSync拥有Levoit（空气净化#1）、Etekcity等品牌，渠道+供应链复用</li>
+          <li>自动手冲品类目前玩家少：Ratio Six $495、Moccamaster $339，无$90-149价位产品</li>
+          <li>SCA（精品咖啡协会）认证标准：197-205°F出水温度+均匀萃取</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99.99定价，做到"一键手冲"：1）恒温92-96℃出水（SCA标准，vs普通滴滤机90℃）；2）模拟手冲脉冲注水（30秒注水→30秒等待→循环4次，核心差异化）；3）6杯容量（vs Ratio Six 8杯略小但够用）；4）砍WiFi/App（省BOM $15-20，手冲仪式感不需要手机控制）；5）可拆卸不锈钢滤网（免滤纸重复使用）。BOM约$45-55，毛利45%+。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"手冲+冷萃"2合1：$129.99——底部冷萃浸泡模式，8小时自动冷萃，"白天手冲，晚上冷萃"</li>
+          <li>搭配Cosori电热水壶：买咖啡机+鹅颈壶套装$149.99，"从烧水到手冲一站式"</li>
+          <li>与Cosori差异化：Cosori卖$199-249的"全自动手冲"，做$99.99的"一键手冲"——砍到最简</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【KitchenAid KF4 $1,299.99】紧凑型全自动咖啡机——$90-149迷你浓缩降维空白</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-149（迷你浓缩咖啡机空白）/ $1,299.99（KitchenAid KF4）/ $799.99（KF2）/ $499.99（KitchenAid半自动）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>TechRadar/Techlicious 6/13发布KF4深度评测</li>
+          <li>紧凑设计：7.68 x 6.3 x 18.7英寸（比KF6窄30%），专为小厨房</li>
+          <li>Intelligrind智能研磨系统：自动计算咖啡粉量，出杯一致性极高</li>
+          <li>15bar萃取，浓缩品质优秀，奶泡系统兼容植物奶</li>
+          <li>缺点：冰饮功能翻车（低温萃取仍太热，融化冰块→稀释）、每用户仅4个自定义饮品</li>
+          <li>噪音：72dB研磨/60dB萃取（同类最安静之一）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99.99定价，做到"小厨房也能出精品浓缩"：1）15bar泵（核心体验，不能砍）；2）0.5L小水箱（2-3杯够用，vs KF4的1.8L）；3）砍自动奶泡系统（用户花$15买手动奶泡器，体验不差）；4）简单3按钮（单杯/双杯/蒸汽），"按一下就是好浓缩"；5）冷萃附加：$29.99冷萃杯配件（解决KF4冰饮痛点）。BOM约$55-65，毛利40%+。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>办公室场景：$89.99更迷你版——0.3L水箱+单杯按钮，"工位上的咖啡师"</li>
+          <li>冰饮痛点=冷萃配件机会：$29.99冷萃杯（慢滴8小时→倒冰牛奶→冰拿铁）</li>
+          <li>与KitchenAid差异化：KitchenAid卖$1,299.99的"全自动全功能"，做$99.99的"纯粹好浓缩"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== 关注项 ======== -->
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Food &amp; Wine：木制厨具取代塑料厨具 — 塑料OUT/木制IN趋势加速</div>
+    <div class="watch-text">Caraway 5件木制厨具$145、竹制6件套$13、OXO木制铲$9。无毒/自然消费心理持续验证<br>来源：<a href="https://www.foodandwine.com/2026-kitchen-product-trends-11996116" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 家庭冷萃取代$7冰拿铁 — 年省$2,000冷萃趋势</div>
+    <div class="watch-text">Mueller RapidBrew $50、OXO Compact $40、Takeya $25。冷萃器$40-50已成熟，$90+需差异化（如智能温控冷萃）<br>来源：<a href="https://www.foodandwine.com/2026-kitchen-product-trends-11996116" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 碳钢+陶瓷双趋势叠加 — 两条"无毒烹饪"路线并行</div>
+    <div class="watch-text">碳钢取代不粘锅（Food &amp; Wine 6/12）+陶瓷不粘持续验证（Caraway/Our Place）。$90-129碳钢入门+陶瓷煎锅组合=跨材质"无毒厨房升级套装"<br>来源：<a href="https://www.foodandwine.com" target="_blank">Food &amp; Wine</a> | <a href="https://www.prnewswire.com" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 KitchenAid Spearmint年度色持续发酵 — 配件生态更新</div>
+    <div class="watch-text">Spearmint色调厨房配件$49.99-$89.99品牌替代空间仍在<br>来源：<a href="https://www.prnewswire.com" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Nugget制冰空白仍未填补 — $90-149紧凑型无人做</div>
+    <div class="watch-text">GE Opal $399 + GoveeLife $349.99。$90-149紧凑型nugget制冰机是持续性空白<br>来源：<a href="https://www.foodandwine.com" target="_blank">Food &amp; Wine</a> | <a href="https://www.prnewswire.com" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>数据来源：PR Newswire · WIRED · BGR · GizStreet · The Mirror · Food &amp; Wine · AllRecipes · Serious Eats · Techlicious · CNN Underscored · Amazon · MorningStar 等12个信息源</p>
+    <p>生成时间：2026年6月14日 | <a href="../index.html">返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
