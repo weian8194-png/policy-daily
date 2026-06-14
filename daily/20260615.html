@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 · 2026年6月15日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 960px; margin: 0 auto; padding: 28px 20px 40px; }
+    .header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+    .header h1 { font-size: 22px; font-weight: 800; color: #0f172a; }
+    .header .date { font-size: 13px; color: #64748b; margin-top: 4px; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.danger .num { color: #dc2626; }
+    .stat-chip.warn .num { color: #d97706; }
+    .stat-chip.info .num { color: #16a34a; }
+
+    .banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+    .banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .banner ul { list-style: none; padding: 0; }
+    .banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; }
+    .banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .banner .dt { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
+    .banner a { color: #2563eb; text-decoration: none; font-size: 11px; }
+
+    .section { margin-bottom: 28px; }
+    .section-hdr { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+    .section-hdr h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-danger { background: #fef2f2; color: #dc2626; }
+    .badge-warn { background: #fffbeb; color: #d97706; }
+    .badge-info { background: #f0fdf4; color: #16a34a; }
+
+    .card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .card.danger { border-left: 4px solid #dc2626; }
+    .card.warn { border-left: 4px solid #f59e0b; }
+    .card.info { border-left: 4px solid #16a34a; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .ptag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; }
+    .tag-amazon { background: #FF9900; }
+    .tag-eu { background: #003399; }
+    .tag-walmart { background: #0071DC; }
+    .tag-shopee { background: #EE4D2D; }
+    .tag-tax { background: #7c3aed; }
+    .tag-trade { background: #1d4ed8; }
+    .tag-customs { background: #dc2626; }
+    .tag-tiktok { background: #000000; }
+    .tag-temu { background: #E85D2C; }
+    .tag-vietnam { background: #d41920; }
+    .urgency { font-size: 12px; font-weight: 600; }
+    .urgency.danger { color: #dc2626; }
+    .urgency.warn { color: #d97706; }
+    .urgency.info { color: #16a34a; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .new-tag { display: inline-block; font-size: 9px; background: #dc2626; color: #fff; padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; font-weight: 600; }
+    .elements { padding: 10px 16px; }
+    .el-row { display: flex; gap: 6px; padding: 4px 0; font-size: 12px; line-height: 1.7; border-bottom: 1px solid #f1f5f9; }
+    .el-row:last-child { border-bottom: none; }
+    .el-label { font-weight: 700; white-space: nowrap; min-width: 66px; flex-shrink: 0; }
+    .el-label.el-change { color: #1e40af; }
+    .el-label.el-who { color: #7c3aed; }
+    .el-label.el-when { color: #dc2626; }
+    .el-label.el-action { color: #16a34a; }
+    .el-content { color: #334155; }
+    .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
+    .card-source .sl { font-size: 11px; color: #94a3b8; }
+    .card-source a { font-size: 11px; color: #0284c7; text-decoration: none; word-break: break-all; }
+    .card-source a:hover { text-decoration: underline; }
+
+    .sub-cards { margin: 6px 16px; padding: 10px 12px; background: #fef2f2; border-radius: 6px; border: 1px solid #fecaca; }
+    .sub-card { padding: 6px 0; border-bottom: 1px solid #fecaca; }
+    .sub-card:last-child { border-bottom: none; }
+    .sub-card .sub-title { font-size: 12px; font-weight: 700; color: #991b1b; }
+    .sub-card .sub-detail { font-size: 11px; color: #7f1d1d; line-height: 1.7; margin-top: 2px; }
+
+    .footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .footer a { color: #0284c7; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>跨境政策日报 · 2026年6月15日</h1>
+    <div class="date">数据日期: <b>2026年6月15日（周一）</b> · 08:00 更新</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip danger"><span class="num">1</span>🔴 紧急</div>
+    <div class="stat-chip warn"><span class="num">3</span>🟡 关注</div>
+    <div class="stat-chip info"><span class="num">2</span>🟢 留意</div>
+  </div>
+
+  <div class="banner">
+    <div class="banner-title">⚡ 近期关键时间节点</div>
+    <ul>
+      <li><span class="dt">6/19</span> 🔴 欧盟"一键撤销合同"退单新规生效 <a href="https://m.ebrun.com/ebrungo/zb/680439.html" target="_blank">[来源]</a></li>
+      <li><span class="dt">6/22-28</span> 🟡 Walmart Summer Deals大促</li>
+      <li><span class="dt">6/23-26</span> 🔴 Amazon Prime Day 2026 <a href="https://press.aboutamazon.com" target="_blank">[官方]</a></li>
+      <li><span class="dt">6/28</span> eBay统一配送模式生效</li>
+      <li><span class="dt">6/29</span> Amazon自配送处理时间新规生效</li>
+      <li><span class="dt">6/30</span> 🔴 海关78号公告 + COO强制填报 + Temu德国站EPR凭证截止</li>
+      <li><span class="dt">7/1</span> 🔴 欧盟€150免税取消 + 国务院837号令 + 加州纺织品EPR注册截止 <a href="https://m.ebrun.com/677603.html" target="_blank">[来源]</a></li>
+      <li><span class="dt">7/7</span> 🔴 美国301关税听证会</li>
+      <li><span class="dt">7/8</span> 🔴 CPSC eFiling强制电子备案 <a href="https://www.cpsc.gov/Newsroom" target="_blank">[CPSC]</a></li>
+      <li><span class="dt">7/20</span> 美客多墨西哥RFC税号验证截止（未完成预扣税率上调至36%）</li>
+      <li><span class="dt">7/27</span> 🔴 Amazon产品标题75字符限制强制执行 <a href="https://sellercentral.amazon.com/forums" target="_blank">[官方]</a></li>
+    </ul>
+  </div>
+
+  <!-- Safety / Enforcement -->
+  <div class="section">
+    <div class="section-hdr">
+      <h2>🛡️ 安全/执法</h2>
+      <span class="badge badge-danger">1紧急</span>
+    </div>
+
+    <div class="card danger">
+      <div class="card-top"><span class="ptag tag-customs">CPSC</span><span class="urgency danger">🔴 紧急</span></div>
+      <div class="card-title">CPSC密集召回4款产品，全部涉及Amazon销售渠道<span class="new-tag">NEW</span></div>
+      <div class="sub-cards">
+        <div class="sub-card">
+          <div class="sub-title">① Kidisle冷热咖啡机 · 约17,600台</div>
+          <div class="sub-detail">型号KC101B，内部管道堵塞致热水/蒸汽意外喷出。CPSC收到107起报告、27人受伤（一二度烫伤需就医）。2024.6-2026.4在Amazon/Walmart/eBay线上售出，约$49。消费者须立即停用，联系Kidisle全额退款。</div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-title">② Timechee婴儿换尿布台 · 约10,354台</div>
+          <div class="sub-detail">不符合STURDY法案倾倒安全标准，未固定墙面时有严重倾倒致儿童伤亡风险。2023.9-2025.5在Amazon售出，约$190。</div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-title">③ Joyin/Sloosh潜水棒 · 约254,000件</div>
+          <div class="sub-detail">违反联邦潜水棒禁令，超出压缩限制，存在穿刺伤害风险。2019.2-2025.10在Amazon/Temu/Wayfair/SHEIN/Target Plus售出。</div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-title">④ LiKee拉绳磨牙玩具</div>
+          <div class="sub-detail">硅胶绳索可达儿童喉咙后部导致窒息，ChilanTech收到多起呼吸困难和窒息报告。在Amazon售出。</div>
+        </div>
+      </div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">①立即自查亚马逊店铺是否有同款/同类产品 ②确认CPC/GCC合规证书完备 ③7/8 eFiling倒计时23天，须尽早注册CPSC Product Registry ④小家电/母婴/玩具品类重点排查安全认证</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://www.cpsc.gov/Newsroom" target="_blank">CPSC Newsroom</a></div>
+    </div>
+  </div>
+
+  <!-- Platform Policies -->
+  <div class="section">
+    <div class="section-hdr">
+      <h2>🛒 平台政策</h2>
+      <span class="badge badge-warn">2关注 + 1留意</span>
+    </div>
+
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-tiktok">TikTok Shop</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">全托管新增8个欧洲国家入驻，覆盖全球16国市场<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">TikTok Shop全托管正式开放波兰、荷兰、比利时、捷克、奥地利、希腊、葡萄牙和匈牙利8国商家入驻。借助"一商卖全球"功能，商家一盘货覆盖多国市场。美区生意同比翻倍，英/欧四国同比增长71%。</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">有意拓展欧洲市场的跨境卖家</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">①评估8个新站点市场容量与品类匹配度 ②利用"一商卖全球"功能降低多国运营成本 ③关注平台配套流量补贴、物流折扣、入驻减免三重扶持</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://m.ebrun.com/680441.html" target="_blank">亿邦动力</a></div>
+    </div>
+
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-walmart">Walmart</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">裁员1000人聚焦技术转型，Marketplace战略加码<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">Walmart裁减约1000个岗位简化运营架构，过去一年整合全平台统一技术架构。新任CEO John Furner聚焦技术驱动策略，吸引高收入消费者、发展Marketplace和配送业务。Walmart+会员服务向加拿大扩展。</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">①Walmart Marketplace技术投入加码意味着卖家工具和API可能迭代加速 ②关注Walmart+加拿大扩展带来的新增量 ③Summer Deals 6/22-28前完成备货和Listing优化</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://marketplace.walmart.com/news" target="_blank">Walmart News</a></div>
+    </div>
+
+    <div class="card info">
+      <div class="card-top"><span class="ptag tag-temu">AliExpress</span><span class="urgency info">🟢 留意</span></div>
+      <div class="card-title">开放澳洲本地卖家入驻：Local-to-Local模式<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">AliExpress在澳大利亚推出"Local-to-Local"模式，允许本地企业直接上架销售并自行管理库存和履约。此前已在欧洲、韩国、巴西推出类似模式。2026年4月澳洲访问量1097万次。</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">关注平台流量红利与本地化履约效率，可借此测试或补充澳洲市场布局</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://m.mjzj.com/article/fowjold3ao74" target="_blank">卖家之家</a></div>
+    </div>
+  </div>
+
+  <!-- Compliance / Tax -->
+  <div class="section">
+    <div class="section-hdr">
+      <h2>🏛️ 合规/税务</h2>
+      <span class="badge badge-warn">1关注 + 1留意</span>
+    </div>
+
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-vietnam">越南🇻🇳</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">收紧中国货物过境管理：仅限4对口岸、停留不超30天<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">越南工贸部发布《2026年第43号合并文件》，禁限进出口商品一律禁止过境，口岸实施"白名单"制度，仅开放老街-河口、友谊关-友谊关、芒街-东兴、同登-凭祥4对中越边境口岸。货物停留期限30天，严禁拆换加工调换，尚未开放第三国中转通道。</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">经越南中转的跨境卖家及物流服务商</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">①评估越南中转路线是否受影响 ②确认口岸通行证办理 ③30天停留限制需优化物流时效 ④关注第三国中转通道开放进展</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/680365.html" target="_blank">亿邦动力</a></div>
+    </div>
+
+    <div class="card info">
+      <div class="card-top"><span class="ptag tag-shopee">敦煌网</span><span class="urgency info">🟢 留意</span></div>
+      <div class="card-title">纠纷流程调整：协商期延长至15天并新增15天休眠期<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">协商期由10个自然日延长至15天，取消"5天强制升级"机制，改为卖家拒绝退款后买家可随时申请平台介入。新增15天休眠期。处理主动权更偏向买家。</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动建议</span><span class="el-content">敦煌网卖家需适应更长纠纷周期，优化售前品控减少纠纷率</span></div>
+      </div>
+      <div class="card-source"><span class="sl">来源：</span><a href="https://m.ebrun.com/680420.html" target="_blank">亿邦动力</a></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>📊 数据来源：CPSC / Amazon / Walmart / 亿邦动力 / 卖家之家 等28个配置信息源</div>
+    <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
+    <div style="margin-top:6px;"><a href="https://weian8194-png.github.io/policy-daily/">返回首页</a> · <a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a></div>
+  </div>
+
+</div>
+</body>
+</html>
