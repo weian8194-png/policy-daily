@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 · 2026年6月16日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 960px; margin: 0 auto; padding: 28px 20px 40px; }
+    .header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+    .header h1 { font-size: 22px; font-weight: 800; color: #0f172a; }
+    .header .date { font-size: 13px; color: #64748b; margin-top: 4px; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.danger .num { color: #dc2626; }
+    .stat-chip.warn .num { color: #d97706; }
+    .stat-chip.info .num { color: #16a34a; }
+
+    .banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+    .banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .banner ul { list-style: none; padding: 0; }
+    .banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; }
+    .banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .banner .dt { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
+    .banner a { color: #2563eb; text-decoration: none; font-size: 11px; }
+
+    .section { margin-bottom: 28px; }
+    .section-hdr { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+    .section-hdr h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-danger { background: #fef2f2; color: #dc2626; }
+    .badge-warn { background: #fffbeb; color: #d97706; }
+    .badge-info { background: #f0fdf4; color: #16a34a; }
+
+    .card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .card.danger { border-left: 4px solid #dc2626; }
+    .card.warn { border-left: 4px solid #f59e0b; }
+    .card.info { border-left: 4px solid #16a34a; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .ptag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; }
+    .tag-cpsc { background: #dc2626; }
+    .tag-eu { background: #003399; }
+    .tag-amazon { background: #FF9900; }
+    .tag-ftc { background: #7c3aed; }
+    .tag-ozon { background: #005BFF; }
+    .tag-trade { background: #1d4ed8; }
+    .tag-cbp { background: #059669; }
+    .tag-jd { background: #E4393C; }
+    .urgency { font-size: 12px; font-weight: 600; }
+    .urgency.danger { color: #dc2626; }
+    .urgency.warn { color: #d97706; }
+    .urgency.info { color: #16a34a; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .new-tag { display: inline-block; font-size: 9px; background: #dc2626; color: #fff; padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; font-weight: 600; }
+    .elements { padding: 10px 16px; }
+    .el-row { display: flex; gap: 6px; padding: 4px 0; font-size: 12px; line-height: 1.7; border-bottom: 1px solid #f1f5f9; }
+    .el-row:last-child { border-bottom: none; }
+    .el-label { font-weight: 700; white-space: nowrap; min-width: 66px; flex-shrink: 0; }
+    .el-label.el-bg { color: #92400e; }
+    .el-label.el-change { color: #1e40af; }
+    .el-label.el-who { color: #7c3aed; }
+    .el-label.el-when { color: #dc2626; }
+    .el-label.el-action { color: #16a34a; }
+    .el-content { color: #334155; }
+
+    .card-bg { background: #fffbeb; margin: 0 16px 8px; padding: 10px 12px; border-radius: 4px; border: 1px solid #fde68a; }
+    .card-bg .bg-label { font-size: 11px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-bg .bg-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+
+    .card-src { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
+    .card-src .src-label { font-size: 11px; color: #94a3b8; }
+    .card-src a { font-size: 11px; color: #0284c7; text-decoration: none; word-break: break-all; }
+    .card-src a:hover { text-decoration: underline; }
+
+    .footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .footer a { color: #0284c7; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>跨境政策日报 · 2026年6月16日（周二）</h1>
+    <div class="date">数据日期: 2026-06-16 · 扫描28个信息源 · 08:00 更新</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip danger"><span class="num">2</span>🔴 紧急</div>
+    <div class="stat-chip warn"><span class="num">5</span>🟡 关注</div>
+    <div class="stat-chip info"><span class="num">2</span>🟢 留意</div>
+  </div>
+
+  <!-- Compliance Banner -->
+  <div class="banner">
+    <div class="banner-title">⚡ 近期关键时间节点</div>
+    <ul>
+      <li><span class="dt">6/19</span> 🔴 欧盟"一键撤销合同"退单新规生效（倒计时3天） <a href="https://m.ebrun.com/ebrungo/zb/680543.html" target="_blank">[来源]</a></li>
+      <li><span class="dt">6/22</span> 🟡 301关税听证会作证申请截止 + 巴西25%关税听证申请截止</li>
+      <li><span class="dt">6/23-26</span> 🔴 Amazon Prime Day 2026</li>
+      <li><span class="dt">6/28</span> eBay统一配送模式生效</li>
+      <li><span class="dt">6/29</span> Amazon自配送处理时间新规生效 + 永久关闭Contact Buyer</li>
+      <li><span class="dt">6/30</span> 🔴 海关78号公告 + COO强制填报 + FBA基础容量制度 + Temu德国站EPR凭证截止</li>
+      <li><span class="dt">7/1</span> 🔴 欧盟€150免税取消 + 国务院837号令 + 加州纺织品EPR注册截止 + OZON佣金三档调整</li>
+      <li><span class="dt">7/7</span> 🔴 美国301关税公开听证会</li>
+      <li><span class="dt">7/8</span> 🔴 CPSC eFiling强制电子备案</li>
+      <li><span class="dt">7/20</span> 美客多墨西哥RFC税号验证截止</li>
+      <li><span class="dt">7/27</span> 🔴 Amazon产品标题75字符限制强制执行</li>
+    </ul>
+  </div>
+
+  <!-- 🔴 紧急 -->
+  <div class="section">
+    <div class="section-hdr"><h2>🔴 紧急</h2><span class="badge badge-danger">2项</span></div>
+
+    <div class="card danger">
+      <div class="card-top"><span class="ptag tag-cpsc">CPSC</span><span class="urgency danger">🔴 紧急</span></div>
+      <div class="card-title">婴儿颈圈安全标准6/15正式生效 + Vive Health成人床栏召回（2人死亡）<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">①联邦婴儿颈圈(infant neck floats)安全标准6/15正式生效，适用于6/15后制造的产品，针对充气/非充气滑出、约束系统失效、儿童淹没四大风险。2019-2024年间CPSC收到115起事故报告（2死2伤）。CPSC同时更新Otteroo LUMI和MINI"请勿使用"警告 ②Vive Health召回成人便携式床栏，夹陷/窒息风险，已报告2人死亡</span></div>
+        <div class="el-row"><span class="el-label el-when">⏰ 时间</span><span class="el-content">颈圈标准已生效(6/15)；Vive Health召回即时生效</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">小家电/母婴/老年护理品类卖家</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①7/8 eFiling倒计时22天，紧急自查CPC/GCC合规证书完备性 ②确保7项核心数据可在ACE系统电子提交 ③颈圈/床栏品类立即下架不合规产品</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://www.cpsc.gov/Newsroom/News-Releases/2026/As-CPSCs-First-Federal-Neck-Floats-Safety-Standard-Takes-Effect-Agency-Renews-Do-Not-Use-Warnings-for-Otteroo-LUMI-and-MINI-nfant-Neck-Floats" target="_blank">cpsc.gov</a></div>
+    </div>
+
+    <div class="card danger">
+      <div class="card-top"><span class="ptag tag-eu">欧盟</span><span class="urgency danger">🔴 紧急</span></div>
+      <div class="card-title">"一键撤销"退单新规6/19生效（倒计时3天），违规最高罚全球营收4%<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">欧盟指令(EU) 2023/2673于6/19强制生效。核心要求：①一键撤销按钮全程可见，标识清晰(如"Withdraw from contract here") ②撤销流程最多两步完成 ③自动发送带精确时间戳的确认回执，记录保存≥12个月 ④违规最高罚全球年营收4%，法定冷静期自动延长至12个月+14天 ⑤八类豁免(定制/易腐/已履行数字内容/纯B2B等)</span></div>
+        <div class="el-row"><span class="el-label el-when">⏰ 时间</span><span class="el-content">2026年6月19日生效（倒计时3天）</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">所有面向欧盟消费者的远程销售（亚马逊欧洲站/速卖通/Temu/SHEIN/独立站），非欧盟企业同等适用</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①平台卖家核查平台是否已自动上线撤回功能 ②独立站卖家立即与技术团队对接，确保按钮文案清晰+两步完成+自动时间戳回执+12个月保存 ③准备客服培训 ④评估退货率上升对物流及税务成本影响</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/680543.html" target="_blank">亿邦动力</a> | <a href="https://m.ebrun.com/680649.html" target="_blank">亿邦动力</a></div>
+    </div>
+  </div>
+
+  <!-- 🟡 关注 -->
+  <div class="section">
+    <div class="section-hdr"><h2>🟡 关注</h2><span class="badge badge-warn">5项</span></div>
+
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-ftc">FTC</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">AI模特图披露新规6/15正式生效，每张未标注图最高罚$5,000<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">FTC关于AI生成内容在商业场景的披露要求6/15全面生效。①禁止AI生成/深伪人物图像对消费者构成误导 ②AI模特图必须配备"AI Generated"等效标识，直接叠加在图片上 ③标识需与背景有足够对比度，移动端缩略图可辨识 ④每张未标注图最高$5,000罚款(按ASIN×图片计) ⑤亚马逊已同步更新A+页面及主图上传政策，后台新增"AI生成内容披露"复选框 ⑥已有美亚鞋子类目卖家收到绩效通知</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">服装/首饰/假发/美妆/家居品类使用AI模特图的卖家（重灾区）</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①全店AI人物图盘点 ②添加合规标识(白色/黄色圆角标签，占图片宽度≥10%) ③后台勾选"AI生成内容披露"复选框 ④日/欧站点也有类似AI披露要求，全球店铺统一规范 ⑤核心ASIN考虑回归真人实拍</span></div>
+      </div>
+      <div class="card-bg"><div class="bg-label">⚠️ 注意</div><div class="bg-text">此信息来源为卖家之家(🟡中权重)，未在FTC官网找到原始公告。建议卖家交叉核实，但亚马逊平台已同步更新审核机制，合规行动不宜延迟。</div></div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.mjzj.com/article/fp68ridkzf9c" target="_blank">卖家之家</a></div>
+    </div>
+
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-amazon">Amazon</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">USITC正式对亚马逊智能设备启动337调查(337-TA-1504)，语音技术专利侵权<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">6/5 USITC投票立案，Cerence指控亚马逊Echo智能音箱/Fire TV/智能显示器/平板/流媒体设备侵犯语音技术专利(语音识别/自然语言处理/AI语音控制)。Cerence双轨并行：337调查+得州东区法院诉讼。若ITC发布有限排除令→侵权产品禁止进口；若发布普遍排除令→同类产品无论制造商均被禁止</span></div>
+        <div class="el-row"><span class="el-label el-when">⏰ 时间</span><span class="el-content">调查周期12-18个月，目前尚未裁定</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">智能音箱/带语音唤醒设备/车载智能设备/蓝牙车载设备卖家</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①自查产品是否使用类似语音交互方案 ②关注案件进展，若发布普遍排除令将波及第三方产品 ③提前准备替代技术方案或供应链调整</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.mjzj.com/article/fp6uf42z86ww" target="_blank">卖家之家</a></div>
+    </div>
+
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-ozon">OZON</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">7/1佣金调整：六个价格区间压缩为三档，300卢布以上统一较高费率<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">OZON自7/1起将销售佣金计算规则从六个价格区间压缩为"100卢布以下、100-300卢布、300卢布以上"三档。300卢布以上商品原先多层级低费率被合并为统一较高费率。同时realFBS取消价格分级费率</span></div>
+        <div class="el-row"><span class="el-label el-when">⏰ 时间</span><span class="el-content">2026年7月1日生效</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">OZON平台卖家，尤其是300卢布以上中高客单价商品</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①7/1前核算各SKU在新费率下的利润变化 ②评估是否需要调价或优化品类结构 ③关注FAS反垄断局对Wildberries/OZON佣金调查进展</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/680544.html" target="_blank">亿邦动力</a></div>
+    </div>
+
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-trade">301关税</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">301关税听证会6/22申请截止，中国被列入12.5%最高档<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">USTR依据《1974年贸易法》第301条，拟对60个经济体加征10%或12.5%额外关税(理由：未禁止进口强迫劳动产品)。中国内地/香港被列入12.5%最高档(与日韩印越等46个经济体并列)。关税覆盖美国进口总量99%以上，但钢铝铜/部分汽车零部件/食品/药品/基础工业原料/部分电子元器件等品类有豁免</span></div>
+        <div class="el-row"><span class="el-label el-when">⏰ 时间</span><span class="el-content">6/22听证会申请截止 → 7/6书面意见截止 → 7/7公开听证 → 最快7月下旬落地</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①排查产品是否在豁免清单内 ②6/22前通过USTR官网提交听证会申请或书面意见 ③评估关税落地对成本的影响及备选供应链</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.ebrun.com/680649.html" target="_blank">亿邦动力</a></div>
+    </div>
+
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-amazon">Amazon UK</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">英国站Add Products工具升级 + Customer Service Quality Insights对标功能<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">①Add Products工具升级：三面板布局+自适应屏幕+简化变体管理(可在初始创建阶段直接创建变体) ②Customer Service Quality Insights新增对标功能：自配送卖家可将客服指标(买家联系率/平均响应时间/买家不满意率)与同店铺头部卖家对比</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①英国站卖家尝试新版Add Products工具提效 ②自配送卖家关注客服指标对标数据，优化响应速度</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://sellercentral.amazon.co.uk/seller-forums/discussions/t/46f503d1-b196-4abf-abc1-27bfce2207f5" target="_blank">Amazon UK Forums</a> | <a href="https://sellercentral.amazon.co.uk/seller-forums/discussions/t/1b7295bf-2d9f-4c89-bd23-0b7395a85fe0" target="_blank">Amazon UK Forums</a></div>
+    </div>
+  </div>
+
+  <!-- 🟢 留意 -->
+  <div class="section">
+    <div class="section-hdr"><h2>🟢 留意</h2><span class="badge badge-info">2项</span></div>
+
+    <div class="card info">
+      <div class="card-top"><span class="ptag tag-cbp">CBP</span><span class="urgency info">🟢 留意</span></div>
+      <div class="card-title">查获2026世界杯假冒商品：1,578件，MSRP总值$134,594<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">CBP印第安纳波利斯执行"Operation Winner's Circle"(6/1-5)，拦截18批FIFA世界杯假冒商品。包括530件球衣、380顶针织帽、349件Puma/Adidas/Nike赛事T恤、319件其他周边。多数货物来自香港</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">世界杯期间IPR执法升级，涉及体育周边/品牌授权品的卖家确保供应链合规</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://www.cbp.gov/newsroom/local-media-release/cbp-officers-indianapolis-seize-counterfeit-fifa-world-cup-2026" target="_blank">cbp.gov</a></div>
+    </div>
+
+    <div class="card info">
+      <div class="card-top"><span class="ptag tag-jd">京东Joybuy</span><span class="urgency info">🟢 留意</span></div>
+      <div class="card-title">欧洲向第三方卖家开放，从自营零售向平台化转型<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">京东Joybuy计划2026下半年在欧洲推出"精选市场"试点，引入第三方卖家。部分商品仍由Joybuy仓库配送，部分供应商直发。已覆盖英/德/法/荷/比/卢六国</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">关注欧洲新渠道机会，评估入驻成本与流量红利</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.ebrun.com/680681.html" target="_blank">亿邦动力</a></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>跨境政策日报 · Policy Daily v2.1 | 扫描28个信息源 | 仅从配置信息源获取资讯</p>
+    <p>信息源权重：🔴高(平台官方/政府机构) → 🟡中(行业媒体，需交叉验证) → 🟢低(需双重验证)</p>
+    <p><a href="./index.html">← 返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
