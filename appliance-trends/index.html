@@ -5,94 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>美国亚马逊$90+小家电市场趋势</title>
   <style>
-    /* ========== 全局重置与基础样式 ========== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      background: #f0fdfa;
-      color: #1a1a1a;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-    /* ========== 页面容器 ========== */
-    .page-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px 16px 40px;
-    }
+    /* Section target highlight */
+    .section-block:target { animation: target-flash 1.5s ease-out; }
+    @keyframes target-flash { 0% { box-shadow: 0 0 0 3px rgba(13,148,136,0.4); } 100% { box-shadow: 0 0 0 0 rgba(13,148,136,0); } }
+    .nav-item:active, .nav-item:focus { color: #f1f5f9 !important; background: rgba(13,148,136,0.15) !important; border-left-color: #0d9488 !important; }
 
-    /* ========== 顶部标题区 ========== */
-    .page-header {
-      text-align: center;
-      padding: 32px 20px 24px;
-      background: #ffffff;
-      border-radius: 12px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    }
-    .page-header h1 {
-      font-size: 24px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 8px;
-      letter-spacing: 0.5px;
-    }
-    .page-header .meta {
-      font-size: 14px;
-      color: #6b7280;
-    }
-    .page-header .meta .date {
-      font-weight: 600;
-      color: #374151;
-    }
-    .page-header .meta .update-hint {
-      display: inline-block;
-      background: #f0fdfa;
-      color: #0d9488;
-      font-size: 12px;
-      padding: 2px 10px;
-      border-radius: 20px;
-      margin-left: 8px;
-      font-weight: 500;
-    }
+    /* ===== Two-Column Layout ===== */
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f0fdfa; }
 
-    /* ========== 统计概览条 ========== */
-    .stats-bar {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-    .stat-item {
-      flex: 1;
-      min-width: 100px;
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 14px 16px;
-      text-align: center;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    }
-    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
-    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
-    .stat-hot .stat-number { color: #0d9488; }
-    .stat-new .stat-number { color: #8b5cf6; }
-    .stat-trend .stat-number { color: #f59e0b; }
+    /* ===== Sidebar ===== */
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(13,148,136,0.06); color: #e2e8f0; border-left-color: #0d9488; }
+    .nav-item.active { color: #f1f5f9; background: rgba(13,148,136,0.1); border-left-color: #0d9488; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.hot { background: rgba(13,148,136,0.15); color: #5eead4; }
+    .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
 
-    /* ========== 机会速报卡片 ========== */
-    .opportunity-card {
-      background: #ffffff;
-      border-radius: 10px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-      overflow: hidden;
-    }
-    .card-hot { border-left: 4px solid #0d9488; }
-    .card-new { border-left: 4px solid #8b5cf6; }
-    .card-trend { border-left: 4px solid #f59e0b; }
+    /* Collapsible Archive */
+    .archive-section { padding: 0; }
+    .archive-section-title { display: flex; align-items: center; justify-content: space-between; padding: 8px 24px; font-size: 11px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; }
+    details.archive-month { padding: 0; }
+    details.archive-month summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px 6px 28px; cursor: pointer; font-size: 13px; color: #94a3b8; list-style: none; transition: color 0.15s; border-left: 2px solid transparent; }
+    details.archive-month summary::-webkit-details-marker { display: none; }
+    details.archive-month summary::before { content: "📁"; margin-right: 6px; font-size: 12px; }
+    details.archive-month[open] summary::before { content: "📂"; }
+    details.archive-month summary:hover { color: #e2e8f0; background: rgba(13,148,136,0.06); border-left-color: #0d9488; }
+    details.archive-month summary .month-info { font-weight: 500; }
+    details.archive-month summary .month-stats { font-size: 11px; color: #475569; }
+    .archive-day { display: block; padding: 3px 24px 3px 48px; color: #64748b; text-decoration: none; font-size: 12px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .archive-day::before { content: "📄 "; font-size: 11px; }
+    .archive-day:hover { color: #e2e8f0; background: rgba(13,148,136,0.06); border-left-color: #0d9488; }
+    .archive-day .day-count { font-size: 10px; color: #475569; margin-left: 4px; }
 
-    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
-    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    /* ===== Main Content ===== */
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #f0fdfa; color: #0d9488; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+
+    /* ===== Stats Bar ===== */
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+
+    /* ===== Section Headers ===== */
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .section-header .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .section-header .badge-trend { background: #fffbeb; color: #d97706; }
+
+    /* ===== Opportunity Card ===== */
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
+    .opportunity-card.card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
     .tag-microwave { background: #dc2626; }
     .tag-drink { background: #2563eb; }
     .tag-ai { background: #8b5cf6; }
@@ -108,403 +95,382 @@
     .tag-carbonsteel { background: #374151; }
     .tag-space { background: #0e7490; }
     .tag-smart { background: #7c3aed; }
-    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .tag-thermometer { background: #dc2626; }
+    .tag-aikitchen { background: #8b5cf6; }
+    .tag-bread { background: #d97706; }
+    .tag-smarthome { background: #2563eb; }
+    .tag-scale { background: #059669; }
+    .urgency-badge { font-size: 12px; font-weight: 600; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .new-tag { display: inline-block; font-size: 9px; background: #0d9488; color: #fff; padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; font-weight: 600; }
 
-    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
-
-    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
-    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-summary .summary-item { font-size: 12px; color: #115e59; padding: 3px 0; line-height: 1.6; }
     .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
 
-    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
-    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
-    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
-    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
-    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 16px 8px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-price .price-title { font-size: 11px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+
+    .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
+    .card-source .source-label { font-size: 11px; color: #94a3b8; }
+    .card-source a { font-size: 11px; color: #0d9488; text-decoration: none; word-break: break-all; }
     .card-source a:hover { text-decoration: underline; }
 
-    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
-
-    /* ========== 详析卡片 ========== */
-    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
-    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
-    .detail-section { padding: 8px 18px; }
-    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
-    .detail-section .detail-text ul { padding-left: 18px; }
+    /* ===== Detail Card ===== */
+    .detail-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 16px; font-weight: 700; color: #0f172a; padding: 14px 16px 6px; }
+    .detail-section { padding: 6px 16px; }
+    .detail-section .detail-label { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .detail-section .detail-text { font-size: 13px; color: #334155; line-height: 1.7; }
+    .detail-section .detail-text ul { padding-left: 16px; }
     .detail-section .detail-text li { padding: 2px 0; }
-    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
-    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
-    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
-    .section-detail { color: #374151; }
-    .section-other { color: #6b7280; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #e9d5ff; }
+    .detail-highlight .hl-label { font-size: 11px; font-weight: 700; color: #7c3aed; margin-bottom: 4px; }
+    .detail-highlight .hl-text { font-size: 12px; color: #4c1d95; line-height: 1.7; }
 
-    /* ========== 关注项 ========== */
-    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
-    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
-    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    /* ===== Watch Item ===== */
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .watch-item a { color: #0d9488; text-decoration: none; }
+    .watch-item a:hover { text-decoration: underline; }
 
-    /* ========== 分隔标题 ========== */
-    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
-    .section-hot { color: #0d9488; }
-    .section-new { color: #8b5cf6; }
-    .section-trend { color: #f59e0b; }
-
-    /* ========== 历史归档区 ========== */
-    .archive-section {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-top: 24px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    }
-    .archive-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #f0fdfa;
-    }
-    .archive-list {
-      list-style: none;
-      padding: 0;
-    }
-    .archive-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid #f3f4f6;
-    }
-    .archive-list li:last-child { border-bottom: none; }
-    .archive-list a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-decoration: none;
-      color: #111827;
-      padding: 4px 8px;
-      border-radius: 6px;
-    }
-    .archive-list a:hover { background: #f0fdfa; }
-    .archive-date { font-weight: 600; font-size: 15px; }
-    .archive-meta { font-size: 13px; color: #6b7280; }
-    .archive-meta .count { color: #0d9488; font-weight: 600; margin-right: 8px; }
-
-    /* ========== NEW徽章 ========== */
-    .new-badge {
-      display: inline-block;
-      font-size: 10px;
-      background: #0d9488;
-      color: #fff;
-      padding: 1px 6px;
-      border-radius: 8px;
-      margin-left: 6px;
-      vertical-align: middle;
-      line-height: 1.5;
-      font-weight: 600;
-    }
-
-    /* ========== 信息源配置 ========== */
+    /* ===== Info Sources Table ===== */
     .sources-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px 8px 0 0; }
     .sources-toolbar-hint { font-size: 12px; color: #64748b; }
     .sources-toolbar-actions { display: flex; gap: 8px; }
+    .btn-reset { padding: 5px 14px; border: 1px solid #cbd5e1; border-radius: 5px; background: #f1f5f9; color: #475569; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+    .btn-reset:hover { background: #e2e8f0; }
+    .btn-add { padding: 5px 14px; border: none; border-radius: 5px; background: #0d9488; color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+    .btn-add:hover { background: #0f766e; }
     .sources-table-wrap { background: #fff; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 8px 8px; overflow-x: auto; }
     .sources-table { width: 100%; border-collapse: collapse; font-size: 12px; }
     .sources-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; white-space: nowrap; }
     .sources-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
     .sources-table tr:hover td { background: #f8fafc; }
     .sources-table .st-channel { white-space: nowrap; }
-    .sc-tag { display: inline-block; font-size: 11px; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
-    .sources-table .st-url a { color: #0d9488; text-decoration: none; font-size: 11px; }
-    .sources-table .st-url a:hover { text-decoration: underline; }
-    .sources-table .st-domain { color: #64748b; font-size: 11px; }
-    .sources-table input { font-size: 12px; padding: 3px 6px; border: 1px solid #d1d5db; border-radius: 4px; width: 100%; }
-    .sources-table input[type="checkbox"] { width: auto; }
-    .btn-sm { font-size: 12px; padding: 4px 12px; border: 1px solid #d1d5db; border-radius: 6px; background: #fff; cursor: pointer; color: #374151; }
-    .btn-sm:hover { background: #f0fdfa; border-color: #0d9488; color: #0d9488; }
-    .btn-del { font-size: 14px; color: #ef4444; background: none; border: none; cursor: pointer; padding: 2px 6px; border-radius: 4px; }
-    .btn-del:hover { background: #fef2f2; }
-    .btn-save { font-size: 14px; color: #0d9488; background: none; border: none; cursor: pointer; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
-    .btn-save:hover { background: #f0fdfa; }
-    .btn-cancel { font-size: 14px; color: #64748b; background: none; border: none; cursor: pointer; padding: 2px 6px; border-radius: 4px; }
-    .btn-cancel:hover { background: #f8fafc; }
+    .sc-tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 3px; color: #fff; }
+    .st-name { font-weight: 600; color: #1e293b; }
+    .st-url { color: #0d9488; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .st-url a { color: #0d9488; text-decoration: none; }
+    .st-url a:hover { text-decoration: underline; }
+    .st-domain { color: #94a3b8; font-size: 11px; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .st-enable { text-align: center; }
+    .st-enable input[type="checkbox"] { width: 15px; height: 15px; accent-color: #0d9488; cursor: pointer; }
+    .st-del { text-align: center; }
+    .btn-del { width: 22px; height: 22px; border: none; border-radius: 4px; background: transparent; color: #94a3b8; font-size: 13px; cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; justify-content: center; }
+    .btn-del:hover { background: #fef2f2; color: #dc2626; }
+    /* Add source form row */
+    .add-row td { background: #f0fdfa !important; }
+    .add-row input { width: 100%; padding: 4px 8px; border: 1px solid #99f6e4; border-radius: 4px; font-size: 12px; font-family: inherit; }
+    .add-row input:focus { outline: none; border-color: #0d9488; box-shadow: 0 0 0 2px rgba(13,148,136,0.15); }
+    .btn-save { padding: 4px 10px; border: none; border-radius: 4px; background: #0d9488; color: #fff; font-size: 11px; font-weight: 600; cursor: pointer; }
+    .btn-save:hover { background: #0f766e; }
+    .btn-cancel { padding: 4px 10px; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff; color: #475569; font-size: 11px; cursor: pointer; }
 
-    /* ========== 页脚 ========== */
-    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
-    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    /* ===== Footer ===== */
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
     .page-footer a { color: #0d9488; text-decoration: none; }
     .page-footer a:hover { text-decoration: underline; }
 
-    /* ========== 响应式 ========== */
-    @media (max-width: 480px) {
-      .page-header h1 { font-size: 20px; }
-      .stat-item { min-width: 70px; padding: 10px 8px; }
-      .stat-item .stat-number { font-size: 22px; }
-      .card-title { font-size: 15px; }
-      .stats-bar { gap: 8px; }
+    /* ===== Responsive ===== */
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .main-content { margin-left: 0; padding: 16px; }
     }
   </style>
 </head>
 <body>
-<div class="page-wrapper">
+<div class="layout">
 
-  <!-- ==================== 顶部标题区 ==================== -->
-  <div class="page-header">
-    <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
-    <div class="meta">
-      <span class="date">每日选品机会扫描</span>
-      <span class="update-hint">2026年6月15日 更新</span>
+  <!-- ===== Left Sidebar ===== -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h1>🏠 小家电趋势</h1>
+      <div class="version">Appliance Trends v2.1</div>
     </div>
-  </div>
-
-  <!-- ==================== 统计概览条 ==================== -->
-  <div class="stats-bar">
-    <div class="stat-item stat-hot">
-      <div class="stat-number">5</div>
-      <div class="stat-label">🔥 今日机会</div>
-    </div>
-    <div class="stat-item stat-new">
-      <div class="stat-number">$130</div>
-      <div class="stat-label">🌡️ 智能温度计</div>
-    </div>
-    <div class="stat-item stat-trend">
-      <div class="stat-number">$149</div>
-      <div class="stat-label">🤖 AI厨房中枢</div>
-    </div>
-  </div>
-
-  
-  <div class="section-label section-hot">🔥 今日机会速报 · 6月15日</div>
-
-  <div class="opportunity-card card-hot">
-    <div class="card-top">
-      <span class="category-tag tag-thermometer">智能温度计</span>
-      <span class="urgency-badge">🌡️ 大牌验证</span>
-    </div>
-    <div class="card-title">KitchenAid智能烹饪温度计 — PR Newswire 5/13，厨房电器#1品牌入场验证品类，$90-149双探头降维空白</div>
-    <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">趋势：</span>KitchenAid 5/13发布Smart Thermometer，首次进入智能温度计品类。Meater Plus $99.95已是Amazon Best Seller，KitchenAid入场=品类从"极客小众"进入"主流品牌认可"</div>
-      <div class="summary-item"><span class="summary-label">机会：</span>$129.99"智能双探头烹饪温度计"——KitchenAid仅单探头，做双探头（肉心+环境温度）+App预设30种肉类USDA目标温度+到达前5°F预警，"闭眼烤出完美牛排"</div>
-    </div>
-    <div class="card-price">
-      <div class="price-title">💰 参考价格区间</div>
-      <div class="price-text">$90-149（智能双探头温度计空白）/ $99.95（Meater Plus单探头）/ $129.99（Yummly Smart单探头）/ $249.99（Meater Block四探头）</div>
-    </div>
-    <div class="card-source">来源：<a href="https://www.prnewswire.com" target="_blank" style="color:#0d9488;">PR Newswire</a></div>
-  </div>
-
-  <div class="opportunity-card card-new">
-    <div class="card-top">
-      <span class="category-tag tag-aikitchen">AI厨房中枢</span>
-      <span class="urgency-badge">🤖 降维AI</span>
-    </div>
-    <div class="card-title">Samsung AI厨房生态→智能厨房中枢 — WFT26展示$4,000 AI冰箱+Gemini+24万菜谱，$149中枢降维空白</div>
-    <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">趋势：</span>Samsung 6/9-12在World Food Tech Confex 2026展示Bespoke AI Family Hub——32英寸触屏+Google Gemini+AI Vision食材识别+SmartThings Food 24万菜谱。Bespoke AI Fest 6/12-7/19推广AI家电全家桶</div>
-      <div class="summary-item"><span class="summary-label">机会：</span>$149"智能厨房中枢"——10英寸IPX4防水触屏+三协议Hub+食谱API聚合+摄像头食材识别，"$4,000 AI冰箱的核心功能，$149搬到台面上"</div>
-    </div>
-    <div class="card-price">
-      <div class="price-title">💰 参考价格区间</div>
-      <div class="price-text">$90-149（智能厨房中枢空白）/ $4,000+（Samsung Bespoke AI Family Hub冰箱）/ $89（Echo Show 5通用）/ $129（Google Nest Hub通用）</div>
-    </div>
-    <div class="card-source">来源：<a href="https://www.prnewswire.com" target="_blank" style="color:#0d9488;">PR Newswire</a> | <a href="https://www.gizstreet.com" target="_blank" style="color:#0d9488;">GizStreet</a></div>
-  </div>
-
-  <div class="opportunity-card card-trend">
-    <div class="card-top">
-      <span class="category-tag tag-bread">横式面包机</span>
-      <span class="urgency-badge">🍞 中端空白</span>
-    </div>
-    <div class="card-title">面包机中端空白 — Food &amp; Wine推荐Breville $400，$90-129横式双桨降维空白</div>
-    <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">趋势：</span>Food &amp; Wine 6/13专业测试员推荐Breville Custom Loaf $400（原$600）。面包机市场CAGR 5.29%，消费者强烈偏好横式双桨（三明治形状），但仅Zojirushi $380-460和Breville $400-600两个高端选择</div>
-      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"紧凑型横式双桨面包机"——保留双桨+顶底双加热器核心+砍WiFi/App，"Zojirushi的面包品质，1/4的价格"。竖式单桨"高而畸形"是消费者最大吐槽</div>
-    </div>
-    <div class="card-price">
-      <div class="price-title">💰 参考价格区间</div>
-      <div class="price-text">$90-129（横式双桨面包机空白）/ $380-460（Zojirushi Virtuoso Plus）/ $400-600（Breville Custom Loaf）/ $70-90（竖式单桨入门款）</div>
-    </div>
-    <div class="card-source">来源：<a href="https://www.foodandwine.com" target="_blank" style="color:#0d9488;">Food &amp; Wine</a></div>
-  </div>
-
-  <div class="opportunity-card card-new">
-    <div class="card-top">
-      <span class="category-tag tag-smarthome">厨房智能套装</span>
-      <span class="urgency-badge">🔌 换新周期</span>
-    </div>
-    <div class="card-title">智能家居厨房升级→厨房智能插座+传感器套装 — BGR 6/13换新周期报道，$90-129厨房专用智能套装空白</div>
-    <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">趋势：</span>BGR 6/13报道5个过时智能家居需升级——Philips Hue灯泡15,000小时到2026年到期、智能插座5年淘汰、智能锁7年更换。Korea University研究：配备智能插座家庭节能5%</div>
-      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"厨房智能升级套装"——4个智能插座（带功率监测）+1个漏水传感器+1个烟雾传感器+App一键场景，"5个设备让老厨房变智能，不用换一件家电"</div>
-    </div>
-    <div class="card-price">
-      <div class="price-title">💰 参考价格区间</div>
-      <div class="price-text">$90-129（厨房智能套装空白）/ $25-35（单个智能插座）/ $20-30（单个漏水传感器）/ $40-50（单个烟雾传感器）</div>
-    </div>
-    <div class="card-source">来源：<a href="https://www.bgr.com" target="_blank" style="color:#0d9488;">BGR</a></div>
-  </div>
-
-  <div class="opportunity-card card-trend">
-    <div class="card-top">
-      <span class="category-tag tag-scale">精准烹饪秤</span>
-      <span class="urgency-badge">⚖️ 精准趋势</span>
-    </div>
-    <div class="card-title">精准烹饪趋势→智能双平台厨房秤+营养数据库 — Food &amp; Wine 6/13验证"数字测量取代量杯"，$90-149智能烹饪秤空白</div>
-    <div class="card-summary">
-      <div class="summary-item"><span class="summary-label">趋势：</span>Food &amp; Wine推荐KitchenAid双平台秤$55+发布"技术增强厨房效率"专题——数字测量取代量杯是家庭烹饪工业化趋势。精准称量从"烘焙爱好"变成"日常烹饪标配"</div>
-      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"智能精准烹饪秤"——双平台（5kg/0.1g + 500g/0.01g）+蓝牙App+内置USDA营养数据库，"称一下就知道这顿饭多少卡路里"。与MyFitnessPal API打通=健身人群利器</div>
-    </div>
-    <div class="card-price">
-      <div class="price-title">💰 参考价格区间</div>
-      <div class="price-text">$90-129（智能精准烹饪秤空白）/ $55（KitchenAid双平台秤无智能功能）/ $30-50（普通数字秤）/ $200+（实验室级精密天平）</div>
-    </div>
-    <div class="card-source">来源：<a href="https://www.foodandwine.com" target="_blank" style="color:#0d9488;">Food &amp; Wine</a></div>
-  </div>
-
-  <div class="section-label section-detail">📋 重点机会详析</div>
-
-  <div class="detail-card">
-    <div class="detail-title">【KitchenAid智能烹饪温度计】大牌入场验证——$90-149双探头降维空白</div>
-    <div class="detail-section">
-      <div class="detail-label">价格区间</div>
-      <div class="detail-text">$90-149（智能双探头温度计空白）/ $99.95（Meater Plus单探头）/ $129.99（Yummly Smart单探头）/ $249.99（Meater Block四探头）</div>
-    </div>
-    <div class="detail-section">
-      <div class="detail-label">趋势数据</div>
-      <div class="detail-text">
-        <ul>
-          <li>PR Newswire 5/13报道KitchenAid发布Smart Thermometer，正式进入智能烹饪温度计品类</li>
-          <li>KitchenAid是厨房电器第一品牌，其入场=品类从"极客玩具"进入"主流认可"</li>
-          <li>Meater Plus $99.95已是Amazon Best Seller，市场需求已验证</li>
-          <li>Good Housekeeping 2026 Kitchen Awards将"双功能温度计"列为趋势品类</li>
-          <li>Prime Day 6/23-26预计将带来烹饪温度计促销潮</li>
-        </ul>
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">📊 今日数据</div>
+        <a class="nav-item" href="#hot">🔥 机会速报 <span class="nav-count hot">5</span></a>
+        <a class="nav-item" href="#detail">📋 重点详析 <span class="nav-count hot">2</span></a>
+        <a class="nav-item" href="#watch">👀 值得关注 <span class="nav-count">5</span></a>
       </div>
-    </div>
-    <div class="detail-highlight">
-      <div class="hl-label">💡 机会判断</div>
-      <div class="hl-text">$129.99定价，做到"双探头智能温度计"：1）肉心探针（无线，监测内部温度）；2）环境探针（监测烤箱空气温度）；3）App预设30种肉类USDA安全温度+自定义；4）到达目标温度前5°F推送提醒；5）砍4探头（家庭用户1-2头足够）。BOM约$40-50，毛利60%+。</div>
-    </div>
-    <div class="detail-section">
-      <div class="detail-label">发散思考</div>
-      <div class="detail-text">
-        <ul>
-          <li>"温度计+计时器"2合1：$149.99——加入倒计时功能，"烤肉的同时同步管理3个配菜计时"</li>
-          <li>与Samsung SmartThings/Apple HomeKit兼容：成为AI厨房生态的传感器节点</li>
-          <li>与KitchenAid差异化：KitchenAid卖"品牌信任+单探头简单"，做"双探头+App智能"=功能升级</li>
-        </ul>
+      <div class="nav-divider"></div>
+
+      <!-- Collapsible Archives -->
+      <div class="archive-section">
+        <div class="archive-section-title">📅 历史归档 / Archives</div>
+        <details class="archive-month" open>
+          <summary><span class="month-info">2026年06月</span><span class="month-stats">13天</span></summary>
+          <a class="archive-day" href="./daily/20260615.html">2026-06-15 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260614.html">2026-06-14 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260613.html">2026-06-13 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260612.html">2026-06-12 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260611.html">2026-06-11 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260610.html">2026-06-10 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260608.html">2026-06-08 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260607.html">2026-06-07 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260606.html">2026-06-06 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260605.html">2026-06-05 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260604.html">2026-06-04 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260603.html">2026-06-03 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260602.html">2026-06-02 <span class="day-count">5个</span></a>
+        </details>
+        <details class="archive-month">
+          <summary><span class="month-info">2026年05月</span><span class="month-stats">4天</span></summary>
+          <a class="archive-day" href="./daily/20260531.html">2026-05-31 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260530.html">2026-05-30 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260529.html">2026-05-29 <span class="day-count">5个</span></a>
+          <a class="archive-day" href="./daily/20260528.html">2026-05-28 <span class="day-count">5个</span></a>
+        </details>
       </div>
-    </div>
-  </div>
 
-  <div class="detail-card">
-    <div class="detail-title">【Samsung AI厨房生态】智能厨房中枢——$4,000 AI冰箱核心功能$149搬到台面</div>
-    <div class="detail-section">
-      <div class="detail-label">价格区间</div>
-      <div class="detail-text">$90-149（智能厨房中枢空白）/ $4,000+（Samsung Bespoke AI Family Hub冰箱）/ $89（Echo Show 5通用）/ $129（Google Nest Hub通用）</div>
+      <div class="nav-divider"></div>
+
+      <!-- Sources Config -->
+      <a class="nav-item" href="#sources" style="font-size:12px;">📡 信息源配置 <span class="nav-count">12</span></a>
+    </nav>
+  </aside>
+
+  <!-- ===== Main Content ===== -->
+  <main class="main-content">
+
+    <!-- Header -->
+    <div class="content-header">
+      <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+      <div class="date-line">数据日期: <span class="date-val">2026年6月15日（周一）</span> <span class="update-time">08:00 更新</span></div>
     </div>
-    <div class="detail-section">
-      <div class="detail-label">趋势数据</div>
-      <div class="detail-text">
-        <ul>
-          <li>Samsung 6/9-12在World Food Tech Confex 2026展示Bespoke AI Family Hub</li>
-          <li>32英寸触屏+Google Gemini+AI Vision食材识别+SmartThings Food 24万菜谱</li>
-          <li>Samsung VP Yang提出"Active Kitchen"愿景：从被动执行→主动读取上下文</li>
-          <li>食谱App市场2026年$16亿，13.1% CAGR，49%用户使用AI推荐</li>
-          <li>SmartThings Food已覆盖101个国家/地区</li>
-        </ul>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-chip hot"><span class="stat-num">5</span>🔥 今日机会</div>
+      <div class="stat-chip new"><span class="stat-num">$130</span>🌡️ 智能温度计</div>
+      <div class="stat-chip trend"><span class="stat-num">$149</span>🤖 AI厨房中枢</div>
+    </div>
+
+    <!-- ===== Opportunity Quick Report ===== -->
+    <section class="section-block" id="hot">
+      <div class="section-header">
+        <h2>🔥 今日机会速报</h2>
+        <span class="section-badge badge-hot">5个机会</span>
       </div>
-    </div>
-    <div class="detail-highlight">
-      <div class="hl-label">💡 机会判断</div>
-      <div class="hl-text">$149定价，做到"厨房专用智能中枢"：1）10英寸IPX4防水触屏（vs Echo Show 5不防水）；2）内置SmartThings/HomeKit/Alexa三协议Hub；3）食谱App聚合（不绑定Samsung生态）；4）摄像头+AI食材识别；5）厨房专用UI大按钮+油污易清洁表面。BOM约$60-75，毛利50%+。</div>
-    </div>
-    <div class="detail-section">
-      <div class="detail-label">发散思考</div>
-      <div class="detail-text">
-        <ul>
-          <li>"厨房中枢+智能插座"套装：$179.99——中枢+2插座+1漏水传感器</li>
-        <div class="section-label section-other">👀 其他值得关注</div>
 
-  <div class="watch-item">
-    <div class="watch-title">📌 BGR：智能家居进入第一个换新周期</div>
-    <div class="watch-text">2012年首批Philips Hue灯泡15,000小时寿命到2026年到期，智能插座5年淘汰，智能锁7年更换。厨房智能设备升级需求真实<br>来源：<a href="https://www.bgr.com" target="_blank">BGR</a></div>
-  </div>
-
-  <div class="watch-item">
-    <div class="watch-title">📌 Food &amp; Wine：精准烹饪取代"凭感觉"</div>
-    <div class="watch-text">数字秤取代量杯、自动搅拌器取代手动搅拌、电动研磨取代手动胡椒罐，家庭烹饪"工业化"趋势明确。$90+智能厨房工具市场扩容<br>来源：<a href="https://www.foodandwine.com" target="_blank">Food &amp; Wine</a></div>
-  </div>
-
-  <div class="watch-item">
-    <div class="watch-title">📌 Prime Day 6/23-26厨房升级潮</div>
-    <div class="watch-text">Breville面包机$400（原$600）、Vitamix Ascent X3 $399（原$650）促销。Prime Day前是厨房电器升级高峰，$90-149产品可搭"升级替代"营销<br>来源：<a href="https://www.foodandwine.com" target="_blank">Food &amp; Wine</a> | <a href="https://www.bgr.com" target="_blank">BGR</a></div>
-  </div>
-
-  <div class="watch-item">
-    <div class="watch-title">📌 Samsung SmartThings Food平台开放</div>
-    <div class="watch-text">101国覆盖+24万菜谱+FoodNote周报+Samsung Health营养联动。平台化意味着第三方配件机会（智能秤、温度计等接入生态）<br>来源：<a href="https://www.prnewswire.com" target="_blank">PR Newswire</a> | <a href="https://www.gizstreet.com" target="_blank">GizStreet</a></div>
-  </div>
-
-  <div class="watch-item">
-    <div class="watch-title">📌 碳钢+智能双趋势交叉</div>
-    <div class="watch-text">碳钢取代不粘锅（Food &amp; Wine趋势持续）+智能温度计品类验证（KitchenAid入场）。$90-149碳钢锅+智能温度计套装="专业厨房入门包"<br>来源：<a href="https://www.foodandwine.com" target="_blank">Food &amp; Wine</a> | <a href="https://www.prnewswire.com" target="_blank">PR Newswire</a></div>
-  </div>
-
-  <!-- ==================== 📡 信息源配置 ==================== -->
-  <div class="archive-section" id="sources" style="margin-top:8px;">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #f0fdfa;">
-      <div class="archive-title" style="margin-bottom:0;padding-bottom:0;border-bottom:none;">📡 信息源配置</div>
-      <span class="new-badge" id="sources-count" style="background:#0d9488;font-size:11px;padding:2px 10px;">12个来源</span>
-    </div>
-    <div class="sources-toolbar">
-      <span class="sources-toolbar-hint">渠道 · 名称 · URL · 域名 · 启用 · 删除</span>
-      <div class="sources-toolbar-actions">
-        <button class="btn-sm" onclick="addSourceRow()">＋ 新增</button>
-        <button class="btn-sm" onclick="resetSources()">↻ 恢复默认</button>
+      <div class="opportunity-card card-hot">
+        <div class="card-top"><span class="category-tag tag-thermometer">智能温度计</span><span class="urgency-badge">🌡️ 大牌验证</span></div>
+        <div class="card-title">KitchenAid智能烹饪温度计 — PR Newswire 5/13，厨房电器#1品牌入场验证品类，$90-149双探头降维空白<span class="new-tag">NEW</span></div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">趋势：</span>KitchenAid 5/13发布Smart Thermometer，首次进入智能温度计品类。Meater Plus $99.95已是Amazon Best Seller，KitchenAid入场=品类从"极客小众"进入"主流品牌认可"</div>
+          <div class="summary-item"><span class="summary-label">机会：</span>$129.99"智能双探头烹饪温度计"——KitchenAid仅单探头，做双探头（肉心+环境温度）+App预设30种肉类USDA目标温度+到达前5°F预警</div>
+        </div>
+        <div class="card-price">
+          <div class="price-title">💰 参考价格区间</div>
+          <div class="price-text">$90-149（智能双探头温度计空白）/ $99.95（Meater Plus单探头）/ $129.99（Yummly Smart单探头）/ $249.99（Meater Block四探头）</div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://www.prnewswire.com" target="_blank">PR Newswire</a></div>
       </div>
+
+      <div class="opportunity-card card-new">
+        <div class="card-top"><span class="category-tag tag-aikitchen">AI厨房中枢</span><span class="urgency-badge">🤖 降维AI</span></div>
+        <div class="card-title">Samsung AI厨房生态→智能厨房中枢 — WFT26展示$4,000 AI冰箱+Gemini+24万菜谱，$149中枢降维空白<span class="new-tag">NEW</span></div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">趋势：</span>Samsung 6/9-12在World Food Tech Confex 2026展示Bespoke AI Family Hub——32英寸触屏+Google Gemini+AI Vision食材识别+SmartThings Food 24万菜谱</div>
+          <div class="summary-item"><span class="summary-label">机会：</span>$149"智能厨房中枢"——10英寸IPX4防水触屏+三协议Hub+食谱API聚合+摄像头食材识别，"$4,000 AI冰箱的核心功能，$149搬到台面上"</div>
+        </div>
+        <div class="card-price">
+          <div class="price-title">💰 参考价格区间</div>
+          <div class="price-text">$90-149（智能厨房中枢空白）/ $4,000+（Samsung Bespoke AI Family Hub冰箱）/ $89（Echo Show 5通用）/ $129（Google Nest Hub通用）</div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://www.prnewswire.com" target="_blank">PR Newswire</a> | <a href="https://www.gizstreet.com" target="_blank">GizStreet</a></div>
+      </div>
+
+      <div class="opportunity-card card-trend">
+        <div class="card-top"><span class="category-tag tag-bread">横式面包机</span><span class="urgency-badge">🍞 中端空白</span></div>
+        <div class="card-title">面包机中端空白 — Food &amp; Wine推荐Breville $400，$90-129横式双桨降维空白<span class="new-tag">NEW</span></div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">趋势：</span>Food &amp; Wine 6/13专业测试员推荐Breville Custom Loaf $400（原$600）。面包机市场CAGR 5.29%，消费者强烈偏好横式双桨，但仅Zojirushi $380-460和Breville $400-600两个高端选择</div>
+          <div class="summary-item"><span class="summary-label">机会：</span>$90-129"紧凑型横式双桨面包机"——保留双桨+顶底双加热器核心+砍WiFi/App，"Zojirushi的面包品质，1/4的价格"</div>
+        </div>
+        <div class="card-price">
+          <div class="price-title">💰 参考价格区间</div>
+          <div class="price-text">$90-129（横式双桨面包机空白）/ $380-460（Zojirushi Virtuoso Plus）/ $400-600（Breville Custom Loaf）/ $70-90（竖式单桨入门款）</div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://www.foodandwine.com" target="_blank">Food &amp; Wine</a></div>
+      </div>
+
+      <div class="opportunity-card card-new">
+        <div class="card-top"><span class="category-tag tag-smarthome">厨房智能套装</span><span class="urgency-badge">🔌 换新周期</span></div>
+        <div class="card-title">智能家居厨房升级→厨房智能插座+传感器套装 — BGR 6/13换新周期报道，$90-129厨房专用智能套装空白<span class="new-tag">NEW</span></div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">趋势：</span>BGR 6/13报道5个过时智能家居需升级——Philips Hue灯泡15,000小时到2026年到期、智能插座5年淘汰、智能锁7年更换</div>
+          <div class="summary-item"><span class="summary-label">机会：</span>$90-129"厨房智能升级套装"——4个智能插座（带功率监测）+1个漏水传感器+1个烟雾传感器+App一键场景</div>
+        </div>
+        <div class="card-price">
+          <div class="price-title">💰 参考价格区间</div>
+          <div class="price-text">$90-129（厨房智能套装空白）/ $25-35（单个智能插座）/ $20-30（单个漏水传感器）/ $40-50（单个烟雾传感器）</div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://www.bgr.com" target="_blank">BGR</a></div>
+      </div>
+
+      <div class="opportunity-card card-trend">
+        <div class="card-top"><span class="category-tag tag-scale">精准烹饪秤</span><span class="urgency-badge">⚖️ 精准趋势</span></div>
+        <div class="card-title">精准烹饪趋势→智能双平台厨房秤+营养数据库 — Food &amp; Wine 6/13验证"数字测量取代量杯"，$90-129智能烹饪秤空白<span class="new-tag">NEW</span></div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">趋势：</span>Food &amp; Wine推荐KitchenAid双平台秤$55+发布"技术增强厨房效率"专题——数字测量取代量杯是家庭烹饪工业化趋势</div>
+          <div class="summary-item"><span class="summary-label">机会：</span>$90-129"智能精准烹饪秤"——双平台（5kg/0.1g + 500g/0.01g）+蓝牙App+内置USDA营养数据库，与MyFitnessPal API打通=健身人群利器</div>
+        </div>
+        <div class="card-price">
+          <div class="price-title">💰 参考价格区间</div>
+          <div class="price-text">$90-129（智能精准烹饪秤空白）/ $55（KitchenAid双平台秤无智能功能）/ $30-50（普通数字秤）/ $200+（实验室级精密天平）</div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://www.foodandwine.com" target="_blank">Food &amp; Wine</a></div>
+      </div>
+    </section>
+
+    <!-- ===== Detail Analysis ===== -->
+    <section class="section-block" id="detail">
+      <div class="section-header">
+        <h2>📋 重点机会详析</h2>
+        <span class="section-badge badge-new">2个深度</span>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-title">【KitchenAid智能烹饪温度计】大牌入场验证——$90-149双探头降维空白</div>
+        <div class="detail-section">
+          <div class="detail-label">价格区间</div>
+          <div class="detail-text">$90-149（智能双探头温度计空白）/ $99.95（Meater Plus单探头）/ $129.99（Yummly Smart单探头）/ $249.99（Meater Block四探头）</div>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">趋势数据</div>
+          <div class="detail-text">
+            <ul>
+              <li>PR Newswire 5/13报道KitchenAid发布Smart Thermometer，正式进入智能烹饪温度计品类</li>
+              <li>KitchenAid是厨房电器第一品牌，其入场=品类从"极客玩具"进入"主流认可"</li>
+              <li>Meater Plus $99.95已是Amazon Best Seller，市场需求已验证</li>
+              <li>Good Housekeeping 2026 Kitchen Awards将"双功能温度计"列为趋势品类</li>
+              <li>Prime Day 6/23-26预计将带来烹饪温度计促销潮</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-highlight">
+          <div class="hl-label">💡 机会判断</div>
+          <div class="hl-text">$129.99定价，做到"双探头智能温度计"：1）肉心探针（无线，监测内部温度）；2）环境探针（监测烤箱空气温度）；3）App预设30种肉类USDA安全温度+自定义；4）到达目标温度前5°F推送提醒；5）砍4探头（家庭用户1-2头足够）。BOM约$40-50，毛利60%+。</div>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">发散思考</div>
+          <div class="detail-text">
+            <ul>
+              <li>"温度计+计时器"2合1：$149.99——加入倒计时功能，"烤肉的同时同步管理3个配菜计时"</li>
+              <li>与Samsung SmartThings/Apple HomeKit兼容：成为AI厨房生态的传感器节点</li>
+              <li>与KitchenAid差异化：KitchenAid卖"品牌信任+单探头简单"，做"双探头+App智能"=功能升级</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-title">【Samsung AI厨房生态】智能厨房中枢——$4,000 AI冰箱核心功能$149搬到台面</div>
+        <div class="detail-section">
+          <div class="detail-label">价格区间</div>
+          <div class="detail-text">$90-149（智能厨房中枢空白）/ $4,000+（Samsung Bespoke AI Family Hub冰箱）/ $89（Echo Show 5通用）/ $129（Google Nest Hub通用）</div>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">趋势数据</div>
+          <div class="detail-text">
+            <ul>
+              <li>Samsung 6/9-12在World Food Tech Confex 2026展示Bespoke AI Family Hub</li>
+              <li>32英寸触屏+Google Gemini+AI Vision食材识别+SmartThings Food 24万菜谱</li>
+              <li>Samsung VP Yang提出"Active Kitchen"愿景：从被动执行→主动读取上下文</li>
+              <li>食谱App市场2026年$16亿，13.1% CAGR，49%用户使用AI推荐</li>
+              <li>SmartThings Food已覆盖101个国家/地区</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-highlight">
+          <div class="hl-label">💡 机会判断</div>
+          <div class="hl-text">$149定价，做到"厨房专用智能中枢"：1）10英寸IPX4防水触屏（vs Echo Show 5不防水）；2）内置SmartThings/HomeKit/Alexa三协议Hub；3）食谱App聚合（不绑定Samsung生态）；4）摄像头+AI食材识别；5）厨房专用UI大按钮+油污易清洁表面。BOM约$60-75，毛利50%+。</div>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">发散思考</div>
+          <div class="detail-text">
+            <ul>
+              <li>"厨房中枢+智能插座"套装：$179.99——中枢+2插座+1漏水传感器</li>
+              <li>与Cookpad/下厨房等食谱社区API打通，做"开放厨房OS"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Watch Items ===== -->
+    <section class="section-block" id="watch">
+      <div class="section-header">
+        <h2>👀 其他值得关注</h2>
+        <span class="section-badge badge-trend">5项</span>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">📌 BGR：智能家居进入第一个换新周期</div>
+        <div class="watch-text">2012年首批Philips Hue灯泡15,000小时寿命到2026年到期，智能插座5年淘汰，智能锁7年更换。厨房智能设备升级需求真实<br>来源：<a href="https://www.bgr.com" target="_blank">BGR</a></div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">📌 Food &amp; Wine：精准烹饪取代"凭感觉"</div>
+        <div class="watch-text">数字秤取代量杯、自动搅拌器取代手动搅拌、电动研磨取代手动胡椒罐，家庭烹饪"工业化"趋势明确。$90+智能厨房工具市场扩容<br>来源：<a href="https://www.foodandwine.com" target="_blank">Food &amp; Wine</a></div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">📌 Prime Day 6/23-26厨房升级潮</div>
+        <div class="watch-text">Breville面包机$400（原$600）、Vitamix Ascent X3 $399（原$650）促销。Prime Day前是厨房电器升级高峰，$90-149产品可搭"升级替代"营销<br>来源：<a href="https://www.foodandwine.com" target="_blank">Food &amp; Wine</a> | <a href="https://www.bgr.com" target="_blank">BGR</a></div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">📌 Samsung SmartThings Food平台开放</div>
+        <div class="watch-text">101国覆盖+24万菜谱+FoodNote周报+Samsung Health营养联动。平台化意味着第三方配件机会（智能秤、温度计等接入生态）<br>来源：<a href="https://www.prnewswire.com" target="_blank">PR Newswire</a> | <a href="https://www.gizstreet.com" target="_blank">GizStreet</a></div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">📌 碳钢+智能双趋势交叉</div>
+        <div class="watch-text">碳钢取代不粘锅（Food &amp; Wine趋势持续）+智能温度计品类验证（KitchenAid入场）。$90-149碳钢锅+智能温度计套装="专业厨房入门包"<br>来源：<a href="https://www.foodandwine.com" target="_blank">Food &amp; Wine</a> | <a href="https://www.prnewswire.com" target="_blank">PR Newswire</a></div>
+      </div>
+    </section>
+
+    <!-- ===== Info Sources ===== -->
+    <section class="section-block" id="sources">
+      <div class="section-header">
+        <h2>📡 信息源配置</h2>
+        <span class="section-badge badge-hot" id="sources-badge">12个来源</span>
+      </div>
+      <div class="sources-toolbar">
+        <span class="sources-toolbar-hint">渠道 · 名称 · URL · 域名 · 启用 · 删除</span>
+        <div class="sources-toolbar-actions">
+          <button class="btn-add" onclick="addSourceRow()">＋ 新增</button>
+          <button class="btn-reset" onclick="resetSources()">↻ 恢复默认</button>
+        </div>
+      </div>
+      <div class="sources-table-wrap">
+        <table class="sources-table">
+          <thead>
+            <tr>
+              <th>渠道</th><th>名称</th><th>URL</th><th>域名</th><th>启用</th><th>删除</th>
+            </tr>
+          </thead>
+          <tbody id="sources-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="page-footer">
+      <div class="footer-divider"></div>
+      <div>📊 数据来源：PR Newswire · WIRED · BGR · GizStreet · Food &amp; Wine · AllRecipes · Serious Eats · Techlicious · CNN Underscored · The Mirror · Amazon · MorningStar 等12个信息源</div>
+      <div>⏰ 每日08:00自动更新 · $90+中高客单价选品机会</div>
+      <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
     </div>
-    <div class="sources-table-wrap">
-      <table class="sources-table">
-        <thead>
-          <tr>
-            <th>渠道</th><th>名称</th><th>URL</th><th>域名</th><th>启用</th><th>删除</th>
-          </tr>
-        </thead>
-        <tbody id="sources-tbody"></tbody>
-      </table>
-    </div>
-  </div>
 
-  <!-- ==================== 📅 历史归档 ==================== -->
-  <div class="archive-section">
-    <div class="archive-title">📅 历史归档</div>
-    <ul class="archive-list">
-      <li><a href="daily/20260615.html"><span class="archive-date">6月15日 <span class="new-badge">NEW</span></span><span class="archive-meta"><span class="count">5个机会</span>智能温度计 · AI厨房中枢 · 横式面包机 · 智能插座套装 · 精准烹饪秤</span></a></li>
-      <li><a href="daily/20260614.html"><span class="archive-date">6月14日</span><span class="archive-meta"><span class="count">5个机会</span>自动手冲咖啡 · 迷你浓缩 · 碳钢锅具 · 小厨房工具 · 智能水龙头</span></a></li>
-      <li><a href="daily/20260613.html"><span class="archive-date">6月13日</span><span class="archive-meta"><span class="count">5个机会</span>智能微波炉 · 冻饮机 · AI食材管理 · Prime Day · Spearmint配件</span></a></li>
-      <li><a href="daily/20260612.html"><span class="archive-date">6月12日</span><span class="archive-meta"><span class="count">5个机会</span>智能电烤盘 · 陶瓷2合1 · 无毒套装 · Nugget制冰 · 安全认证</span></a></li>
-      <li><a href="daily/20260611.html"><span class="archive-date">6月11日</span><span class="archive-meta"><span class="count">5个机会</span>传感微波炉 · 陶瓷3件套 · 冰箱管理器 · 碳钢套装 · 日式刀具</span></a></li>
-      <li><a href="daily/20260610.html"><span class="archive-date">6月10日</span><span class="archive-meta"><span class="count">5个机会</span>蒸汽烤箱 · 智能垃圾桶 · 陶瓷不粘套 · AI迷你烤箱 · 厨房机器人</span></a></li>
-      <li><a href="daily/20260608.html"><span class="archive-date">6月8日</span><span class="archive-meta"><span class="count">5个机会</span>软冰淇淋一体机 · 台面烤箱 · 台面净水 · 厨房吸尘器 · 无毒炊具</span></a></li>
-      <li><a href="daily/20260607.html"><span class="archive-date">6月7日</span><span class="archive-meta"><span class="count">5个机会</span>空气循环扇 · 智能制冰 · 加湿净化 · 谷物烹饪 · 清仓信号</span></a></li>
-      <li><a href="daily/20260606.html"><span class="archive-date">6月6日</span><span class="archive-meta"><span class="count">5个机会</span>胶囊调酒 · 智能风扇 · 冰咖啡机 · 智能制冰 · 厨房吸尘器</span></a></li>
-      <li><a href="daily/20260605.html"><span class="archive-date">6月5日</span><span class="archive-meta"><span class="count">5个机会</span>食物残渣回收 · 可视化吸尘 · 免维护加湿 · 感应垃圾桶 · 定时水壶</span></a></li>
-      <li><a href="daily/20260604.html"><span class="archive-date">6月4日</span><span class="archive-meta"><span class="count">5个机会</span>软冰淇淋+冰沙 · 智能风扇 · 胶囊调酒 · CREAMi降价 · 食品保温垫</span></a></li>
-      <li><a href="daily/20260603.html"><span class="archive-date">6月3日</span><span class="archive-meta"><span class="count">5个机会</span>AI冰饮机 · 冰淇淋双功能 · 披萨炉 · AI烹饪眼镜 · 多功能一体</span></a></li>
-      <li><a href="daily/20260602.html"><span class="archive-date">6月2日</span><span class="archive-meta"><span class="count">5个机会</span>玻璃炸锅 · AI烹饪机器人 · AI洗碗机 · 无毒炸锅 · 高级冰饮</span></a></li>
-      <li><a href="daily/20260531.html"><span class="archive-date">5月31日</span><span class="archive-meta"><span class="count">5个机会</span>AI烹饪机器人 · 植物奶机 · 自动搅拌器 · 精准秤 · 不锈钢炸锅</span></a></li>
-      <li><a href="daily/20260530.html"><span class="archive-date">5月30日</span><span class="archive-meta"><span class="count">5个机会</span>透明冰块机 · 玻璃炸锅 · 智能砧板 · 搅拌机 · 无毒趋势</span></a></li>
-      <li><a href="daily/20260529.html"><span class="archive-date">5月29日</span><span class="archive-meta"><span class="count">5个机会</span>冰沙机 · AI烹饪 · 植物奶 · 咖啡机 · 户外披萨</span></a></li>
-      <li><a href="daily/20260528.html"><span class="archive-date">5月28日</span><span class="archive-meta"><span class="count">5个机会</span>披萨炉 · 制冰机 · 多功能烤箱 · 玻璃炸锅 · 高端化</span></a></li>
-    </ul>
-  </div>
-
-  <div class="page-footer">
-    <div class="footer-divider"></div>
-    <p>数据来源：PR Newswire · WIRED · BGR · GizStreet · The Mirror · Food &amp; Wine · AllRecipes · Serious Eats · Techlicious · CNN Underscored · Amazon · MorningStar 等12个信息源</p>
-    <p>生成时间：2026年6月15日 | <a href="../index.html">返回首页</a></p>
-  </div>
-
+  </main>
 </div>
 <script>
 // Default sources data for reset
@@ -570,8 +536,10 @@ function cancelNewSource() {
 
 function updateCount() {
   const count = document.querySelectorAll('#sources-tbody tr:not(.add-row)').length;
-  const badge = document.getElementById('sources-count');
+  const badge = document.getElementById('sources-badge');
   if (badge) badge.textContent = count + '个来源';
+  const navCount = document.querySelector('a[href="#sources"] .nav-count');
+  if (navCount) navCount.textContent = count;
 }
 
 // Init sources table on page load
