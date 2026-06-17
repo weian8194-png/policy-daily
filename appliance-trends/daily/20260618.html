@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年6月18日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-ice { background: #0e7490; }
+    .tag-water { background: #2563eb; }
+    .tag-smartice { background: #7c3aed; }
+    .tag-food { background: #059669; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-source a:hover { text-decoration: underline; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #8b5cf6; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .watch-item .watch-text a { color: #0d9488; text-decoration: none; }
+    .watch-item .watch-text a:hover { text-decoration: underline; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .stats-bar { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">每日选品机会扫描</span>
+      <span class="update-hint">2026年6月18日 更新</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="../index.html">← 首页</a>
+    <span class="nav-center">6月18日 周四</span>
+    <a href="20260617.html">昨天 →</a>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">🔥 今日机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">$99</div>
+      <div class="stat-label">🧊 入门块冰制冰机</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">$99</div>
+      <div class="stat-label">💧 模块化RO+即热</div>
+    </div>
+  </div>
+
+  <!-- ======== 速报 ======== -->
+  <div class="section-label section-hot">🔥 今日机会速报 · 6月18日</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-ice">制冰机</span>
+      <span class="urgency-badge">🧊 爆品降维</span>
+    </div>
+    <div class="card-title">Euhomy Nugget制冰机$152 → $90-129 "入门块冰制冰机" — Food &amp; Wine 6/14推荐，月销4000+，nugget ice降到入门价</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Euhomy Nugget $152（原$190），月销4000+台，11000条五星好评。nugget ice（软咀嚼冰）+5-8分钟出冰+34磅/日+自清洁+超静音。GE Opal 2.0 $450验证高端nugget有市场</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"入门块冰制冰机"——基础nugget冰+自清洁+静音压缩机。砍产量/WiFi/侧水箱。$90-129只有bullet ice制冰机，nugget ice在$150+才出现</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-129（空白）/ $152（Euhomy Nugget）/ $450（GE Opal 2.0 WiFi）/ $80-90（Frigidaire/Igloo bullet ice）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.foodandwine.com/best-kitchen-tools-11996912" target="_blank" style="color:#0d9488;">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-water">模块化水处理</span>
+      <span class="urgency-badge">💧 新品降维</span>
+    </div>
+    <div class="card-title">JIMMY Matrix M9 Pro → $90-149 "模块化台面RO+即热饮水机" — PR Newswire 6/15新品，零安装+模块化气泡水/制冰扩展，"Home Bar"概念</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>JIMMY Matrix M9 Pro：7级RO+UV+矿物质还原+即热+可拆S9气泡水模块+I9制冰碎冰模块。零安装即插即用。AquaLink滑动抽屉一键加装。"Home Bar"概念</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-149"模块化台面RO+即热饮水机"——核心RO+即热底座，气泡水/制冰模块单独卖。零安装设计是关键差异化。$90-149只有滤水壶和基础RO无即热</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-149（RO+即热空白）/ $150+（JIMMY Matrix全套）/ $60-80（基础RO无即热）/ $25-40（滤水壶无RO）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.morningstar.com/news/pr-newswire/20260615ny82907/sub-zero-introduces-new-designer-undercounter-15-ice-maker" target="_blank" style="color:#0d9488;">MorningStar</a> | <a href="https://www.prnewswire.com/news-releases/jimmy-launches-matrix-series-the-countertop-ro-water-purifier-that-does-hot-cold-sparkling-and-ice---building-your-home-bar-302798999.html" target="_blank" style="color:#0d9488;">PR Newswire</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-ice">静音制冰机</span>
+      <span class="urgency-badge">🔇 痛点降维</span>
+    </div>
+    <div class="card-title">Sub-Zero Designer 15"制冰机 → $90-129 "超静音自清洁台面制冰机" — PR Newswire 6/15，MaxQuiet™超静音+引导式自清洁，解决制冰机两大痛点</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Sub-Zero Designer嵌入式制冰机：MaxQuiet™近无声+引导式两步自清洁+超声波冰位+漏水检测+自动关机+Wi-Fi提醒。CEO："最好的创新始于倾听消费者"——噪音和清洁是最大痛点</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"超静音自清洁台面制冰机"——静音压缩机（&lt;45dB）+一键自清洁+漏水自动关机。砍嵌入式/WiFi/65磅日产能。$90-129制冰机大多噪音大且无自清洁</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-129（静音自清洁空白）/ $3000+（Sub-Zero Designer嵌入式）/ $152（Euhomy Nugget）/ $80-90（Frigidaire/Igloo噪音大）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/sub-zero-introduces-new-designer-undercounter-15-ice-maker-302799459.html" target="_blank" style="color:#0d9488;">PR Newswire</a> | <a href="https://www.morningstar.com/news/pr-newswire/20260615ny82907/sub-zero-introduces-new-designer-undercounter-15-ice-maker" target="_blank" style="color:#0d9488;">MorningStar</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-smartice">智能制冰机</span>
+      <span class="urgency-badge">📱 功能降维</span>
+    </div>
+    <div class="card-title">GE Opal 2.0 $450 → $90-149 "智能WiFi制冰机" — Food &amp; Wine 6/14推荐，WiFi+App+侧水箱降到入门价</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>GE Profile Opal 2.0 Ultra $450（原$499）——WiFi连接+侧水箱+App控制（制冰计划+冰量监控+滤芯提醒）+nugget ice。Euhomy $152验证基础nugget有市场但无智能</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-149"智能WiFi制冰机"——基础制冰+WiFi模块（冰量/清洁提醒/定时开关机）+LED冰量指示灯。砍GE品牌溢价+侧水箱。$90-149制冰机无智能功能，WiFi在$450+才出现</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-149（智能制冰机空白）/ $450（GE Opal 2.0 WiFi+侧水箱）/ $152（Euhomy无智能）/ $80-90（Frigidaire无智能）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.foodandwine.com/best-kitchen-tools-11996912" target="_blank" style="color:#0d9488;">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-food">食材管理</span>
+      <span class="urgency-badge">🥬 跨界降维</span>
+    </div>
+    <div class="card-title">Frigidaire食品浪费调查+Sub-Zero Wi-Fi提醒 → $90-129 "智能冰箱收纳+食材管理伴侣" — PR Newswire，食品浪费30-40%+提醒式智能趋势</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Frigidaire全美调查：杂货成本上升+食品浪费严重；USDA估计30-40%食品供应被浪费。Sub-Zero制冰机加Wi-Fi提醒验证"提醒式智能"趋势</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"智能冰箱收纳+食材管理伴侣"——LED显示+温度/湿度传感器+App食材过期提醒+购物清单生成。独立放置模块，不需换冰箱。$90-129只有基础收纳盒无智能</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-129（智能食材管理空白）/ $200+（智能冰箱内置）/ $15-30（基础收纳盒无智能）/ $1000+（带屏幕的智能冰箱）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.prnewswire.com/news-releases/sub-zero-introduces-new-designer-undercounter-15-ice-maker-302799459.html" target="_blank" style="color:#0d9488;">PR Newswire</a></div>
+  </div>
+
+  <!-- ======== 详析 ======== -->
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Euhomy Nugget制冰机】$152热门款核心功能降到$90-129</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-129（nugget冰空白）/ $152（Euhomy Nugget）/ $450（GE Opal 2.0）/ $3000+（Sub-Zero Designer）/ $80-90（Frigidaire/Igloo bullet ice）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Food &amp; Wine 6/14专题推荐Euhomy Nugget Countertop Ice Maker $152</li>
+          <li>月销4000+台，近11000条五星好评</li>
+          <li>核心：nugget ice（软咀嚼冰/sonic ice，消费者最爱的冰型）+5-8分钟出冰+34磅/日+自清洁+超静音</li>
+          <li>编辑评价："so quiet it's unbelievable"</li>
+          <li>GE Profile Opal 2.0 Ultra $450（原$499）——WiFi+侧水箱验证高端nugget有市场</li>
+          <li>Sub-Zero Designer $3000+——验证"静音+自清洁"是制冰机核心痛点</li>
+          <li>Frigidaire $80-90——bullet ice，噪音大，无自清洁</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-129定价：1）nugget ice（vs bullet ice，决定消费者体验的第一要素——软咀嚼、口感好、吸饮料味）；2）自清洁循环（vs手洗，解决第二大痛点）；3）静音压缩机（&lt;45dB vs传统50-60dB）；4）砍WiFi/App+砍侧水箱+砍34磅日产能（15-20磅足够家用）；5）砍1.8磅储冰篮（改为1.2磅减小体积）。BOM约$40-55，毛利50%+。关键差异化：$90-149价格带唯一nugget ice+自清洁+静音的制冰机。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"nugget冰制冰+即热饮水"2合1：$149.99——加即热模块，vs GE Opal $450+nutriChef $60两个设备</li>
+          <li>与JIMMY Matrix I9制冰模块联动：nugget冰+RO净水器，"好水+好冰"套装$199.99</li>
+          <li>Prime Day 6/23-26窗口：Euhomy $152打折→$119.99=抢占"入门nugget"客群</li>
+          <li>制冰机爆发信号：Food &amp; Wine月销4000+ + Sub-Zero新品 + GE Opal降价 = 三源验证</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【JIMMY Matrix模块化水处理】台面RO+即热+模块化扩展降到$90-149</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-149（RO+即热空白）/ $150+（JIMMY Matrix M9 Pro全套）/ $60-80（基础RO无即热）/ $25-40（滤水壶无RO）/ $200+（零安装RO+即热全功能）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>PR Newswire/MorningStar 6/15：JIMMY在柏林推出Matrix Series</li>
+          <li>模块化设计：M9 Pro RO主机+可拆S9气泡水模块+I9制冰碎冰模块，AquaLink滑动抽屉一键加装</li>
+          <li>零安装即插即用——无需管道连接，无需专业安装</li>
+          <li>7级RO+UV+0.0001微米膜+矿物质还原——去除99.9%污染物含重金属/细菌/PFAS</li>
+          <li>实时TDS监测+滤芯寿命追踪——每天能看到水质数据</li>
+          <li>即热出水——精确温控+容量选择，冲奶/泡茶/冲咖啡一按即出</li>
+          <li>"Home Bar"概念——一个系统搞定热水/气泡水/冰块</li>
+          <li>已在Amazon DE/FR/ES和欧洲多平台发售</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-149定价：1）RO+即热核心底座（$99-149）——5级RO+即热+TDS显示+自清洁；2）S9气泡水模块（$39.99单独卖）；3）I9制冰模块（$49.99单独卖）。零安装设计是关键差异化（快速接头+内置水箱，砍专业安装费）。BOM约$45-65，毛利50%+。关键差异化：$90-149价格带唯一"RO+即热+零安装+模块化"饮水系统。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"RO+即热+nugget制冰"3合1：$179.99——加小型nugget制冰模块（5磅/日），vs JIMMY全套$250+</li>
+          <li>与咖啡机联动：RO纯水→精准温控滴漏，"好水出好咖啡"套装$199.99</li>
+          <li>模块化策略：先卖底座$99低门槛获客，后续卖气泡/制冰模块（高毛利配件）</li>
+          <li>水处理赛道爆发：JIMMY Matrix + Kinetico HYDRO ECO + 全球水净化市场2035年翻倍 = 多源验证</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== 关注项 ======== -->
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Sub-Zero Designer 15"嵌入式制冰机$3000+：超静音+自清洁是制冰机核心痛点</div>
+    <div class="watch-text">MaxQuiet™声学技术近无声运行；引导式两步自清洁+Wi-Fi提醒；超声波冰位传感器+专利均匀布冰；漏水检测+自动关机。CEO Jim Bakke："最好的创新始于倾听消费者"<br>来源：<a href="https://www.prnewswire.com/news-releases/sub-zero-introduces-new-designer-undercounter-15-ice-maker-302799459.html" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 BGR Prime Day早期折扣信号持续：厨房品类是重点</div>
+    <div class="watch-text">Chefman Air Fryer $59.99（50% off）、Roborock Q7扫地机$139.99（44% off）、Google Nest智能恒温器$0（能源补贴）。Prime Day 6/23-26前折扣已启动，选品定价需考虑Prime Day价格竞争<br>来源：<a href="https://www.bgr.com/2193977/amazon-early-prime-day-best-deals-june/" target="_blank">BGR</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Frigidaire食品浪费调查：食材管理是跨品类痛点</div>
+    <div class="watch-text">PR Newswire 6/10 Frigidaire全美调查：杂货成本持续上升；USDA估计30-40%美国食品供应被浪费。食品保鲜+食材管理是冰箱品类的延伸机会点<br>来源：<a href="https://www.prnewswire.com/news-releases/" target="_blank">PR Newswire</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 全球水净化市场2035年翻倍至$809亿</div>
+    <div class="watch-text">Market Research Future报告：水净化市场2024年$374.8亿→2035年$809.2亿，CAGR 7.26%。RO系统$100-150入门级到高端全覆盖。美国EPA首次PFAS饮用水标准推动RO需求<br>来源：<a href="https://www.morningstar.com/news/pr-newswire" target="_blank">MorningStar</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Food &amp; Wine制冰机购买指南验证台面制冰机爆发</div>
+    <div class="watch-text">Euhomy $152月销4000+、GE Opal $450、Frigidaire $80-90、Kismile $150、Silonn $100——从$80到$499全覆盖。台面制冰机不再是小众，是夏季爆品<br>来源：<a href="https://www.foodandwine.com/best-kitchen-tools-11996912" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>数据来源：PR Newswire · WIRED · BGR · GizStreet · The Mirror · Food &amp; Wine · AllRecipes · Serious Eats · Techlicious · CNN Underscored · Amazon · MorningStar（12个信息源）</p>
+    <p>生成时间：2026年6月18日 | <a href="../index.html">返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
