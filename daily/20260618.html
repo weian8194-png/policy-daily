@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 · 2026年6月18日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 960px; margin: 0 auto; padding: 28px 20px 40px; }
+    .header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+    .header h1 { font-size: 22px; font-weight: 800; color: #0f172a; }
+    .header .date { font-size: 13px; color: #64748b; margin-top: 4px; }
+    .header .date a { color: #0284c7; text-decoration: none; font-size: 12px; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.danger .num { color: #dc2626; }
+    .stat-chip.warn .num { color: #d97706; }
+    .stat-chip.info .num { color: #16a34a; }
+
+    .banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+    .banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .banner ul { list-style: none; padding: 0; }
+    .banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; }
+    .banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .banner .dt { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
+    .banner a { color: #2563eb; text-decoration: none; font-size: 11px; }
+
+    .section { margin-bottom: 28px; }
+    .section-hdr { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+    .section-hdr h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-danger { background: #fef2f2; color: #dc2626; }
+    .badge-warn { background: #fffbeb; color: #d97706; }
+    .badge-info { background: #f0fdf4; color: #16a34a; }
+
+    .card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .card.danger { border-left: 4px solid #dc2626; }
+    .card.warn { border-left: 4px solid #f59e0b; }
+    .card.info { border-left: 4px solid #16a34a; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .ptag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; }
+    .tag-amazon { background: #FF9900; }
+    .tag-tiktok { background: #000000; }
+    .tag-walmart { background: #0071DC; }
+    .tag-shopee { background: #EE4D2D; }
+    .tag-cpsc { background: #dc2626; }
+    .tag-mercadole { background: #FFE600; color: #000; }
+    .tag-trade { background: #0d9488; }
+    .tag-lazada { background: #0f146d; }
+    .urgency { font-size: 12px; font-weight: 600; }
+    .urgency.danger { color: #dc2626; }
+    .urgency.warn { color: #d97706; }
+    .urgency.info { color: #16a34a; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .new-tag { display: inline-block; font-size: 9px; background: #dc2626; color: #fff; padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; font-weight: 600; }
+    .elements { padding: 10px 16px; }
+    .el-row { display: flex; gap: 6px; padding: 4px 0; font-size: 12px; line-height: 1.7; border-bottom: 1px solid #f1f5f9; }
+    .el-row:last-child { border-bottom: none; }
+    .el-label { font-weight: 700; white-space: nowrap; min-width: 66px; flex-shrink: 0; }
+    .el-label.el-change { color: #1e40af; }
+    .el-label.el-who { color: #7c3aed; }
+    .el-label.el-when { color: #dc2626; }
+    .el-label.el-action { color: #16a34a; }
+    .el-content { color: #334155; }
+
+    .action-box { background: #f0fdf4; margin: 0 16px 8px; padding: 10px 12px; border-radius: 4px; border: 1px solid #bbf7d0; }
+    .action-box .ab-label { font-size: 11px; font-weight: 700; color: #15803d; margin-bottom: 4px; }
+    .action-box .ab-text { font-size: 12px; color: #14532d; line-height: 1.7; }
+
+    .card-src { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
+    .card-src .src-label { font-size: 11px; color: #94a3b8; }
+    .card-src a { font-size: 11px; color: #0284c7; text-decoration: none; word-break: break-all; }
+    .card-src a:hover { text-decoration: underline; }
+
+    .footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .footer a { color: #0284c7; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    @media (max-width: 600px) { .container { padding: 16px 12px; } }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>跨境政策日报 · 2026年6月18日（周四）</h1>
+    <div class="date">数据日期：2026年6月18日 · 08:00 更新 · <a href="../index.html">← 返回首页</a></div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip danger"><span class="num">0</span>🔴 紧急</div>
+    <div class="stat-chip warn"><span class="num">7</span>🟡 关注</div>
+    <div class="stat-chip info"><span class="num">2</span>🟢 留意</div>
+  </div>
+
+  <div class="banner">
+    <div class="banner-title">⚡ 近期关键时间节点</div>
+    <ul>
+      <li><span class="dt">6/19</span> 🔴 欧盟"一键撤销"退单新规生效（倒计时1天） <a href="https://m.ebrun.com/ebrungo/zb/680543.html" target="_blank">[来源]</a></li>
+      <li><span class="dt">6/23-26</span> 🔴 Amazon Prime Day 2026 + 大促IP合规"史上最严"升级</li>
+      <li><span class="dt">6/25</span> 🟡 Lazada泰国站服务费上调</li>
+      <li><span class="dt">6/26</span> 🟡 美客多RFC验证截止 | TikTok Shop拍卖日</li>
+      <li><span class="dt">6/30</span> 🔴 Amazon欧洲站COO合规+EUDR + 海关78号公告 + FBA基础容量 + Temu德国EPR + TikTok泰国TISI</li>
+      <li><span class="dt">7/1</span> 🔴 欧盟€150免税取消 + 837号令 + 加州纺织品EPR + Shopee台湾PIF + Shopee越南1%税 + OZON佣金</li>
+      <li><span class="dt">7/6</span> 🟡 Amazon SFP配送速度指标更新</li>
+      <li><span class="dt">7/7</span> 🔴 美国301关税公开听证会</li>
+      <li><span class="dt">7/8</span> 🔴 CPSC eFiling强制电子备案 <a href="https://m.mjzj.com/article/fp5ywgtdr7k0" target="_blank">[来源]</a></li>
+      <li><span class="dt">7/10</span> 🟡 Lazada金币折扣商家成长计划上线</li>
+      <li><span class="dt">7/20</span> 🟡 美客多墨西哥RFC未完成预扣税率36%</li>
+      <li><span class="dt">7/27</span> 🔴 Amazon产品标题75字符限制强制执行</li>
+      <li><span class="dt">6/28</span> 🟡 eBay统一配送模式生效</li>
+      <li><span class="dt">6/29</span> 🟡 Amazon自配送处理时间新规 + 永久关闭Contact Buyer</li>
+      <li><span class="dt">8/12</span> 🟡 欧盟PPWR包装法强制生效</li>
+      <li><span class="dt">~9月</span> 🔴 CBP"加强海关执法"IOR新规细则落地</li>
+    </ul>
+  </div>
+
+  <!-- Platform Policies -->
+  <div class="section">
+    <div class="section-hdr">
+      <h2>🛒 平台政策</h2>
+      <span class="badge badge-warn">5关注 + 1留意</span>
+    </div>
+
+    <!-- 1. CPSC Recall -->
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-cpsc">CPSC</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">紧急召回1.76万台中国产咖啡机，已致27人受伤，涉亚马逊/沃尔玛/eBay<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">CPSC紧急召回约1.76万台冷热两用咖啡机（型号KC101B，品牌Kidisle，制造商长沙梦启思电子商贸）。安全隐患：使用中可能因堵塞导致高温液体/蒸汽突然喷射。已收到107起事故报告，27人受伤含一度及二度烧伤。2024年6月至2026年4月在亚马逊/沃尔玛/eBay以约$49销售。召回编号26-557</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">厨房小家电类目卖家（尤其咖啡机/饮品机），高温液体类产品需重点关注安全合规</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①立即排查在售产品是否存在类似安全隐患 ②完善供应链质检流程（高温液体类需做堵塞测试） ③关注CPSC eFiling 7/8强制电子备案 ④准备产品安全合规文件备查</span></div>
+      </div>
+      <div class="action-box">
+        <div class="ab-label">🎯 3步行动清单</div>
+        <div class="ab-text">①自查库存KC101B型号 → ②排查同类产品安全测试报告 → ③7/8前完成CPSC eFiling注册</div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.mjzj.com/article/fpd3khrmhzi8" target="_blank">卖家之家（CPSC召回编号26-557）</a></div>
+    </div>
+
+    <!-- 2. Amazon EU COO -->
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-amazon">Amazon EU</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">欧洲站COO原产国合规6/30强制执行 + EUDR零毁林宽限期同日届满<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">6/30起Amazon欧洲站COO（Country of Origin/原产国）合规强制执行：未填写COO的Listing将被限制跨境配送销售，欧盟海关侧要求必须有原产地信息。同日EUDR零毁林法规小企业宽限期届满：相关木质/纸包装/农产品类需提供溯源文件。本周（6/18-6/24）为欧站卖家最后合规窗口</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">Amazon欧洲站（DE/UK/FR/IT/ES等）所有跨境卖家，尤其涉及木质包装/木制品/农产品的卖家</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①本周内完成所有Listing的COO字段填写 ②排查木质/纸类包装是否触发EUDR ③准备原产地证明及供应链溯源文件</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.mjzj.com/article/fpd88rky4jy8" target="_blank">卖家之家</a></div>
+    </div>
+
+    <!-- 3. TikTok AHR -->
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-tiktok">TikTok Shop</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">AHR账户健康评级7月取代违规积分体系：从"有没有违规"到"是不是优质卖家"<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">TikTok Shop推动全球卖家治理体系统一：东南亚和英国卖家AHR将于7月正式取代违规积分体系（美国已采用）。考核维度升级为综合评估商品合规、物流履约、售后服务、用户体验。关键变化：不违规≠高健康度（发货延迟/退款率高也影响评级）；老店≠更安全（关注当前表现）。AHR将影响店铺流量、活动资格、达人合作</span></div>
+        <div class="el-row"><span class="el-label el-who">👤 影响谁</span><span class="el-content">TikTok Shop东南亚和英国站所有卖家</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①7月前检查商品标题/主图/详情页合规性 ②排查品牌侵权风险 ③确保发货时效达标 ④控制退款率/投诉率 ⑤定期查看后台AHR数据</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.mjzj.com/article/fpdelm4k0buo" target="_blank">卖家之家</a></div>
+    </div>
+
+    <!-- 4. Shopee Vietnam Tax -->
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-shopee">Shopee</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">越南站7/1起对企业卖家代扣1%所得税 + 店铺权益升级（4h纠纷处理+100%赔付）<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">根据越南第320/2025/ND-CP号法令，7/1起Shopee对企业法人身份跨境卖家强制代扣1%企业所得税（CIT），仅适用"已完成"订单。个体工商户及个人卖家不受影响。同步：7/1起越南站优选体系升级——商城/优选/优选+店铺新增4小时纠纷处理+退换货质检破损100%赔付，优选入驻新增"店铺经营时长""有效成交额"考核指标</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①评估1%税负对利润影响并调整定价 ②确认后台主体类型设置 ③利用优选新权益优化售后流程 ④关注新增考核指标</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.mjzj.com/article/fpd33skrruv6" target="_blank">卖家之家（1%税）</a> / <a href="https://m.mjzj.com/article/fpdrod1ir6kg" target="_blank">卖家之家（权益升级）</a></div>
+    </div>
+
+    <!-- 5. TikTok US Sale -->
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-tiktok">TikTok Shop</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">美区年中大促今日6/18启动→7/3，首推直播拍卖，6/26专属拍卖日3%佣金减免<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">TikTok Shop美区年中大促今日正式启动，定位"全年顶级节点，量级比肩黑五"。6/18-7/3，首推直播拍卖(Live Auction)纳入大促体系，跨境POP商家已可开通。6/26专属"拍卖日"提供3%佣金减免及大场激励。英国/欧盟四国6月下旬-7月上旬夏季促销最高30%补贴。日本站6月中-6月底周年庆。节点与世界杯/父亲节/美国国庆250周年重叠</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①开通直播拍卖功能备战6/26拍卖日 ②优化直播间互动与爆品打造 ③准备充足库存 ④注意大促合规排查（直播画面侵权直接断流）</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.mjzj.com/article/fpapclbh4bgg" target="_blank">卖家之家</a> / <a href="https://m.mjzj.com/article/fpd88rky4jy8" target="_blank">卖家之家</a></div>
+    </div>
+
+    <!-- 6. TikTok Europe Expansion -->
+    <div class="card info">
+      <div class="card-top"><span class="ptag tag-tiktok">TikTok Shop</span><span class="urgency info">🟢 留意</span></div>
+      <div class="card-title">欧洲再扩四国：波兰/荷兰/比利时/奥地利已上线，单次注册覆盖10国<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">6/15正式上线波兰、荷兰、比利时、奥地利，同步推出"Sell Across Europe"一键覆盖工具。与既有英国/爱尔兰/法国/德国/意大利/西班牙打通，卖家单次注册可覆盖10个欧洲市场。平台正加大本地卖家招募与流量补贴</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①评估欧洲10国市场机会 ②通过"Sell Across Europe"工具一键开通 ③关注平台本地卖家扶持政策</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.mjzj.com/article/fpd88rky4jy8" target="_blank">卖家之家</a></div>
+    </div>
+  </div>
+
+  <!-- Compliance / Tax -->
+  <div class="section">
+    <div class="section-hdr">
+      <h2>🏛️ 合规/税务</h2>
+      <span class="badge badge-warn">2项</span>
+    </div>
+
+    <!-- 7. Mercado Libre RFC -->
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-mercadole">美客多</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">墨西哥RFC验证6/26前完成，7/20未完成预扣税率升至36%<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">美客多正式启动墨西哥RFC税号主体一致性验证。针对店铺主体与绑定RFC不一致的卖家（含第三方/代持税号）。验证流程：收DocuSign邮件→签署店铺归属/使用/税务授权→填写RFC主体联系人信息。6/26前完成验证流程，7/20正式管控：未完成RFC将被移除，预扣税率上调至36%</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①检查是否收到验证邮件（含垃圾邮件） ②6/26前完成DocuSign签署 ③准备RFC主体联系人信息 ④预留与RFC持有人沟通时间</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.mjzj.com/article/fpd7qzcgj85c" target="_blank">卖家之家</a></div>
+    </div>
+
+    <!-- 8. Lazada Thailand -->
+    <div class="card info">
+      <div class="card-top"><span class="ptag tag-lazada">Lazada</span><span class="urgency info">🟢 留意</span></div>
+      <div class="card-title">泰国站6/25上调商家服务费 + 7/10金币折扣商家成长计划上线<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">6/25起：Lazada泰国本土店上调普通商家市场服务费及LazMall店铺服务费，LazMall同步获得扶持措施（优惠权益/营销资源/折扣促销）。7/10起：上线金币折扣（LazCoins Discount）商家成长计划，非商城商家默认激活1%折扣</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①评估服务费上调对利润影响 ②利用LazMall扶持政策优化运营 ③关注7/10金币折扣对引流转化的影响</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.mjzj.com/article/fp9ulo8zwgsi" target="_blank">卖家之家</a> / <a href="https://m.ebrun.com/ebrungo/zb/680710.html" target="_blank">亿邦动力</a></div>
+    </div>
+  </div>
+
+  <!-- Logistics -->
+  <div class="section">
+    <div class="section-hdr">
+      <h2>🚢 供应链/运价</h2>
+      <span class="badge badge-warn">1关注</span>
+    </div>
+
+    <!-- 9. SCFI -->
+    <div class="card warn">
+      <div class="card-top"><span class="ptag tag-trade">航运</span><span class="urgency warn">🟡 关注</span></div>
+      <div class="card-title">SCFI七连涨：欧线周涨17.6%破3000美元/TEU，美西突破5100美元/FEU<span class="new-tag">NEW</span></div>
+      <div class="elements">
+        <div class="el-row"><span class="el-label el-change">🔄 变了什么</span><span class="el-content">上海航运交易所最新数据：SCFI报2985.22点周涨9.49%，连续第七周上涨。欧洲航线3064美元/TEU周涨17.6%（涨幅居首）；地中海4172美元/TEU涨8.9%；美西5101美元/FEU涨12.1%；美东6321美元/FEU涨10.1%；南美破7500美元。马士基欧线报价3630美元/TEU。6月底前提柜基本锁定，预计亚欧运价或冲击4000美元/TEU。苏伊士运河7月中旬起加征附加费：集装箱船首征12%</span></div>
+        <div class="el-row"><span class="el-label el-action">✅ 行动</span><span class="el-content">①立即核算在手订单运费风险 ②加快高周转品类出货节奏 ③锁定2026长约价对冲长期成本 ④关注7月中旬苏伊士附加费对欧线运价的叠加影响</span></div>
+      </div>
+      <div class="card-src"><span class="src-label">来源：</span><a href="https://m.mjzj.com/article/fp9ildvyjev6" target="_blank">卖家之家（数据：上海航运交易所 sse.net.cn）</a> / <a href="https://m.mjzj.com/article/fpd88rky4jy8" target="_blank">卖家之家</a></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>📊 数据来源：卖家之家 / 亿邦动力 / 上海航运交易所 / CPSC （28个配置信息源）</div>
+    <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
+    <div style="margin-top:6px;"><a href="../index.html">← 返回首页</a> · Powered by Coze AI</div>
+  </div>
+
+</div>
+</body>
+</html>
