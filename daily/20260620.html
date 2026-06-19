@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 · 2026年6月20日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f8fafc; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; max-width: 860px; margin: 0 auto; padding: 28px 24px 40px; }
+    a { color: #0284c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back-link { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #64748b; margin-bottom: 16px; }
+    .back-link:hover { color: #0284c7; }
+    .header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+    .header h1 { font-size: 24px; font-weight: 800; color: #0f172a; }
+    .header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .header .date-line .date-val { font-weight: 700; color: #334155; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.warn .stat-num { color: #d97706; }
+    .stat-chip.info .stat-num { color: #16a34a; }
+    .stat-chip.platform .stat-num { color: #0284c7; }
+    .compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+    .compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .compliance-banner ul { list-style: none; padding: 0; }
+    .compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
+    .compliance-banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-warn { background: #fffbeb; color: #d97706; }
+    .badge-info { background: #f0fdf4; color: #16a34a; }
+    .summary-list { display: flex; flex-direction: column; gap: 6px; }
+    .summary-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 14px; background: #fff; border-radius: 6px; border: 1px solid #e2e8f0; }
+    .severity-dot { width: 7px; height: 7px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+    .severity-dot.warn { background: #f59e0b; }
+    .severity-dot.info { background: #16a34a; }
+    .summary-body { flex: 1; min-width: 0; }
+    .summary-title { font-size: 13px; font-weight: 600; color: #1e293b; line-height: 1.5; }
+    .summary-platform { display: inline-block; font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 3px; color: #fff; margin-right: 4px; vertical-align: middle; }
+    .summary-implication { font-size: 12px; color: #64748b; margin-top: 1px; }
+    .summary-implication::before { content: "→ 含义："; color: #0284c7; font-weight: 600; }
+    .policy-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .policy-card.card-warn { border-left: 4px solid #f59e0b; }
+    .policy-card.card-info { border-left: 4px solid #16a34a; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .platform-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; }
+    .tag-amazon { background: #FF9900; }
+    .tag-tiktok { background: #000000; }
+    .tag-customs { background: #dc2626; }
+    .urgency-badge { font-size: 12px; font-weight: 600; }
+    .urgency-badge.warn { color: #d97706; }
+    .urgency-badge.info { color: #16a34a; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .new-tag { display: inline-block; font-size: 9px; background: #dc2626; color: #fff; padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; font-weight: 600; }
+    .five-elements { padding: 10px 16px; }
+    .element-row { display: flex; gap: 6px; padding: 4px 0; font-size: 12px; line-height: 1.7; border-bottom: 1px solid #f1f5f9; }
+    .element-row:last-child { border-bottom: none; }
+    .element-label { font-weight: 700; white-space: nowrap; min-width: 66px; flex-shrink: 0; }
+    .element-label.el-change { color: #1e40af; }
+    .element-label.el-who { color: #7c3aed; }
+    .element-label.el-action { color: #16a34a; }
+    .element-content { color: #334155; }
+    .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
+    .card-source .source-label { font-size: 11px; color: #94a3b8; }
+    .card-source a { font-size: 11px; color: #0284c7; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="../index.html">← 返回首页</a>
+  <div class="header">
+    <h1>跨境政策日报</h1>
+    <div class="date-line">数据日期: <span class="date-val">2026年6月20日（周六）</span> <span style="font-size:11px;background:#eff6ff;color:#2563eb;padding:2px 8px;border-radius:4px;margin-left:8px;font-weight:500;">08:00 更新</span></div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip warn"><span class="stat-num">3</span>🟡 关注</div>
+    <div class="stat-chip info"><span class="stat-num">2</span>🟢 留意</div>
+    <div class="stat-chip platform"><span class="stat-num">4</span>涉事平台/机构</div>
+  </div>
+
+  <div class="compliance-banner">
+    <div class="banner-title">⚡ 近期关键时间节点</div>
+    <ul>
+      <li><span class="date-tag">6/22</span> 🟡 TikTok Shop墨西哥运费下调 | Walmart Summer Deals</li>
+      <li><span class="date-tag">6/23-26</span> 🔴 Amazon Prime Day 2026</li>
+      <li><span class="date-tag">6/29</span> 🟡 Amazon自配送处理时间新规生效 + 永久关闭Contact Buyer</li>
+      <li><span class="date-tag">6/30</span> 🔴 Amazon欧洲站COO合规 + EUDR + 海关78号公告 + FBA基础容量 + Temu德国EPR + TikTok Shop泰国TISI</li>
+      <li><span class="date-tag">7/1</span> 🔴 欧盟€150免税取消 + 22€免税取消+€3征税 + 837号令 + 加州纺织品EPR + Shopee越南1%税</li>
+      <li><span class="date-tag">7/7</span> 🔴 美国301关税公开听证会</li>
+      <li><span class="date-tag">7/8</span> 🔴 CPSC eFiling强制电子备案</li>
+      <li><span class="date-tag">7/23</span> 🟡 CPSC第三方实验室审查最终规定生效</li>
+      <li><span class="date-tag">7/27</span> 🔴 Amazon产品标题75字符限制强制执行</li>
+      <li><span class="date-tag">8/2</span> 🟡 欧盟AI新规：电商Deepfake须标注</li>
+      <li><span class="date-tag">8/12</span> 🟡 欧盟PPWR包装法强制生效</li>
+      <li><span class="date-tag">8/26</span> 🟡 TikTok Shop共资包邮计划(CFFS)启动</li>
+      <li><span class="date-tag">~9月</span> 🔴 CBP"加强海关执法"IOR新规细则落地</li>
+    </ul>
+  </div>
+
+  <section class="section-block" id="summary">
+    <div class="section-header">
+      <h2>📊 今日风险大盘（高管摘要视角）</h2>
+      <span class="section-badge badge-warn">3项关注</span>
+    </div>
+    <div class="summary-list">
+      <div class="summary-row">
+        <div class="severity-dot warn"></div>
+        <div class="summary-body">
+          <div class="summary-title"><span class="summary-platform" style="background:#FF9900">Amazon</span>正式开征FBA/MCF燃油附加费：美国站3.5%、欧洲站1.5%，4/17起生效</div>
+          <div class="summary-implication">所有FBA/MCF卖家履约成本直接上升，低毛利大件品类受冲击最大</div>
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="severity-dot warn"></div>
+        <div class="summary-body">
+          <div class="summary-title"><span class="summary-platform" style="background:#dc2626">CPSC</span>发布第三方实验室定期审查最终规定，7/23生效，不合规实验室将被撤销认可</div>
+          <div class="summary-implication">依赖第三方实验室合规报告的卖家须确保实验室持续持有CPSC认可资质</div>
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="severity-dot warn"></div>
+        <div class="summary-body">
+          <div class="summary-title"><span class="summary-platform" style="background:#000">TikTok Shop</span>美区新规：买家责任退货运费改由商家全额承担</div>
+          <div class="summary-implication">退货成本大幅增加，低客单价高退货率品类需重新核算利润</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block" id="platform">
+    <div class="section-header">
+      <h2>🛒 平台政策</h2>
+      <span class="section-badge badge-warn">2关注</span>
+    </div>
+
+    <div class="policy-card card-warn">
+      <div class="card-top"><span class="platform-tag tag-amazon">Amazon</span><span class="urgency-badge warn">🟡 关注</span></div>
+      <div class="card-title">正式开征FBA/MCF燃油附加费：美国站3.5%、欧洲站1.5%<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊正式向FBA及MCF（多渠道配送）卖家开征"燃油附加费"(Fuel Surcharge)。美国站加收3.5%、欧洲站加收1.5%，4月17日起生效，已在卖家后台账单中体现。此费用叠加在原有配送费之上，直接推高履约成本</span></div>
+        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有使用FBA和MCF服务的亚马逊卖家，尤其低毛利、高配送费率品类（大件/重货）影响显著</span></div>
+        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①立即核算燃油附加费对单品利润的影响 ②重新评估FBA与第三方海外仓的成本对比 ③考虑FBA+海外仓混合备货模式降低综合履约成本 ④关注后续费率是否有进一步调整</span></div>
+      </div>
+      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com" target="_blank">亿邦动力（原始来源：Amazon sellercentral.amazon.com）</a></div>
+    </div>
+
+    <div class="policy-card card-warn">
+      <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge warn">🟡 关注</span></div>
+      <div class="card-title">美区新规：买家责任退货运费改由商家全额承担<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">TikTok Shop美区发布退货政策更新：原本由买家承担的退货运费，现改为商家全额承担，适用于买家责任退货（如"不想要了"、"买错了"等）。此举大幅增加商家退货成本，尤其对低客单价商品影响更大</span></div>
+        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">TikTok Shop美区所有卖家，尤其低客单价、高退货率品类</span></div>
+        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①重新核算退货成本对利润的影响 ②优化产品描述和尺码指南减少退货率 ③考虑提高售价覆盖新增退货成本 ④设置合理的退货政策降低非必要退货</span></div>
+      </div>
+      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com" target="_blank">亿邦动力（原始来源：TikTok Shop seller.tiktok.com）</a></div>
+    </div>
+  </section>
+
+  <section class="section-block" id="compliance">
+    <div class="section-header">
+      <h2>🏛️ 合规/监管</h2>
+      <span class="section-badge badge-warn">1关注</span>
+    </div>
+
+    <div class="policy-card card-warn">
+      <div class="card-top"><span class="platform-tag tag-customs">CPSC</span><span class="urgency-badge warn">🟡 关注</span></div>
+      <div class="card-title">发布第三方实验室定期审查最终规定，7/23生效<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">CPSC发布最终规定，明确第三方实验室定期审查要求作为继续认可的条件。执行CPSA 14(i)(1)部分及CPSIA 102(b)修订。审查包括管理与技术要求，确保实验室独立性。不合规实验室须限期整改，否则CPSC将撤销认可。7月23日正式生效</span></div>
+        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有依赖第三方实验室出具CPC/GCC合规报告的跨境卖家；实验室认可资质变动可能影响合规文件有效性</span></div>
+        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①确认目前使用的检测实验室是否持有有效CPSC认可 ②关注7/23后实验室资质变动 ③确保合规报告来自持续受认可的实验室 ④CPSC eFiling 7/8强制执行在先，两项政策需同步关注</span></div>
+      </div>
+      <div class="card-source"><span class="source-label">来源：</span><a href="https://www.cpsc.gov/Newsroom" target="_blank">CPSC (cpsc.gov)</a></div>
+    </div>
+  </section>
+
+  <section class="section-block" id="dynamic">
+    <div class="section-header">
+      <h2>📦 平台动态</h2>
+      <span class="section-badge badge-info">2留意</span>
+    </div>
+
+    <div class="policy-card card-info">
+      <div class="card-top"><span class="platform-tag tag-amazon">Amazon</span><span class="urgency-badge info">🟢 留意</span></div>
+      <div class="card-title">欧洲站推出FBA多国库存智能调拨功能<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊欧洲站推出FBA多国库存智能调拨功能：系统依据德、法、意、西四国实时销量自动调配现货库存，缓解区域性断货与积压并存的结构性难题。与欧洲站家居品类佣金下调红利(20€以内从15%降至8%)形成组合利好</span></div>
+        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①关注后台智能调拨功能入口 ②评估库存分布优化效果 ③利用佣金下调+智能调拨组合提升欧洲站利润 ④Prime Day期间关注FBA库存动态</span></div>
+      </div>
+      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com" target="_blank">亿邦动力（原始来源：Amazon sellercentral.amazon.com）</a></div>
+    </div>
+
+    <div class="policy-card card-info">
+      <div class="card-top"><span class="platform-tag tag-amazon">Amazon</span><span class="urgency-badge info">🟢 留意</span></div>
+      <div class="card-title">Prime Day欧洲站秒杀/折扣提报通道6/19已关闭<span class="new-tag">截止</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">Prime Day 2026欧洲站点的秒杀与折扣提报通道已于6月19日正式关闭。大促期间流量资源将大幅向FBA及本土海外仓现货倾斜，纯自发货(FBM)商品的活动曝光配额将显著缩减。Prime Day定档6/23-6/26（PDT时区）</span></div>
+        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①已提报卖家关注审核结果 ②未提报卖家专注SP广告和站外引流 ③确保FBA库存充足备战Prime Day ④FBM卖家需调整预期</span></div>
+      </div>
+      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com" target="_blank">亿邦动力（原始来源：Amazon sellercentral.amazon.com）</a></div>
+    </div>
+  </section>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <div>📊 数据来源：亿邦动力 / CPSC （28个配置信息源）</div>
+    <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
+    <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+  </div>
+</body>
+</html>
