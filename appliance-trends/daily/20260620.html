@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年6月20日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .page-header .meta .update-hint { display: inline-block; background: #f0fdfa; color: #0d9488; font-size: 12px; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 500; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-coffee { background: #7c2d12; }
+    .tag-dualcoffee { background: #2563eb; }
+    .tag-dripgrind { background: #059669; }
+    .tag-icecream { background: #d97706; }
+    .tag-prime { background: #dc2626; }
+    .urgency-badge { font-size: 13px; font-weight: 600; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .card-source a { color: #0d9488; text-decoration: none; }
+    .card-source a:hover { text-decoration: underline; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #8b5cf6; }
+    .section-other { color: #6b7280; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-section .detail-text ul { padding-left: 18px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .watch-item .watch-text a { color: #0d9488; text-decoration: none; }
+    .watch-item .watch-text a:hover { text-decoration: underline; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .page-header h1 { font-size: 20px; }
+      .stat-item { min-width: 70px; padding: 10px 8px; }
+      .stat-item .stat-number { font-size: 22px; }
+      .card-title { font-size: 15px; }
+      .stats-bar { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="meta">
+      <span class="date">每日选品机会扫描</span>
+      <span class="update-hint">2026年6月20日 更新</span>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="../index.html">← 首页</a>
+    <span class="nav-center">6月20日 周六</span>
+    <a href="20260619.html">昨天 →</a>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">🔥 今日机会</div>
+    </div>
+    <div class="stat-item stat-new">
+      <div class="stat-number">$99</div>
+      <div class="stat-label">☕ 入门研磨一体咖啡机</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">$99</div>
+      <div class="stat-label">🍦 Soft serve冰淇淋机</div>
+    </div>
+  </div>
+
+  <!-- ======== 速报 ======== -->
+  <div class="section-label section-hot">🔥 今日机会速报 · 6月20日</div>
+
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-coffee">研磨一体咖啡机</span>
+      <span class="urgency-badge">☕ 降维窗口</span>
+    </div>
+    <div class="card-title">Breville Barista Express史低$499.95 + Prime Day倒计时3天 → $90-129 "入门研磨一体咖啡机"降维窗口 — BGR+Amazon验证，$500-700利润空间巨大</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Breville Barista Express意式咖啡机降至史上最低$499.95（原$699.95，省$200），验证$500-700价格带利润空间巨大（可降价28%仍盈利）。BGR确认Prime Day 6/23-26，咖啡机赛道全面开战：De'Longhi三款同时降价</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-129"入门研磨一体咖啡机"——锥刀研磨12档+15bar萃取+蒸汽棒打奶。砍PID温控+砍不锈钢外壳→PP材质+砍压力表+砍大容量豆仓。BOM约$35-50，毛利55%+。$90-129只有胶囊机（Keurig $89/Nespresso $99）或纯泵压机（Mr. Coffee $49），"研磨+萃取+蒸汽"三合一只有$200+才有</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-129（研磨一体空白）/ $499.95（Breville史低）/ $699.95（Breville常规）/ $89-99（胶囊机无研磨无蒸汽）/ $200+（入门研磨一体最低价）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.bgr.com/2193977/amazon-early-prime-day-best-deals-june/" target="_blank" style="color:#0d9488;">BGR</a> | <a href="https://www.amazon.com/Best-Sellers/zgbs" target="_blank" style="color:#0d9488;">Amazon</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-dualcoffee">双萃咖啡站</span>
+      <span class="urgency-badge">☕ 组合创新</span>
+    </div>
+    <div class="card-title">Ninja Luxe Café Pro 4合1降维 → $149-199 "双萃咖啡饮料站" — Amazon 6/16，4合1+自动奶泡+Barista Assist，$479 Prime Day前价</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Ninja Luxe Café Pro降价20%至$479（原$599）。核心创新：4合1（5种意式+3种滴滤+2种冷萃+独立热水线）+Hands-Free双奶泡系统（自动蒸汽+打发5档）+Barista Assist技术+内置秤+锥刀25档研磨。"全自动化家庭咖啡站"需求被验证</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$149-199"双萃咖啡饮料站"——保留意式萃取+滴滤咖啡+自动奶泡三核心，砍冷萃+砍Barista Assist AI+砍内置秤→定时研磨+砍25档→12档。$149-199目前只有单功能意式机，"意式+滴滤+自动奶泡"三合一只在$400+出现</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$149-199（意式+滴滤+自动奶泡空白）/ $479（Ninja Prime Day价）/ $599（Ninja常规）/ $249.95（De'Longhi All-in-One无冷萃无滴滤）/ $99（GE Café纯滴滤）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.bgr.com/2193977/amazon-early-prime-day-best-deals-june/" target="_blank" style="color:#0d9488;">BGR</a> | <a href="https://www.amazon.com/Best-Sellers/zgbs" target="_blank" style="color:#0d9488;">Amazon</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-dripgrind">精品滴滤</span>
+      <span class="urgency-badge">🌿 设计驱动</span>
+    </div>
+    <div class="card-title">GE Café滴滤$99(67% off) + Food &amp; Wine Smeg评测 → $90-149 "精品滴滤+研磨一体机" — 设计驱动型厨房电器趋势持续，Smeg验证设计溢价</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>GE Café Specialty滴滤咖啡机从$298.95降至$99（67% off），验证精品滴滤赛道从$200+下探。Food &amp; Wine深度评测Smeg Classico Stand Mixer，验证"设计驱动型厨房电器"持续走高——设计感是溢价核心</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-149"精品滴滤+研磨一体机"——精准温控滴滤（85-96°C 6档可调）+内置锥刀研磨+保温thermal carafe+Smeg级设计感外壳。砍WiFi/App+砍精密温控→NTC热敏电阻。$90-149只有纯滴滤无研磨($40-80)或纯研磨机($50-90)，滴滤+研磨一体只在$180+出现</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-149（滴滤+研磨一体空白）/ $99（GE Café 滴滤67% off无研磨）/ $298.95（GE Café常规价）/ $180+（Cuisinart DGB-850滴滤+研磨最低）/ $50-90（独立研磨机）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.amazon.com/Best-Sellers/zgbs" target="_blank" style="color:#0d9488;">Amazon</a> | <a href="https://www.foodandwine.com/smeg-classico-stand-mixer-review-11971789" target="_blank" style="color:#0d9488;">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-icecream">Soft Serve冰淇淋</span>
+      <span class="urgency-badge">🍦 新细分</span>
+    </div>
+    <div class="card-title">Ninja CREAMi Scoop &amp; Swirl $249.99 → $90-149 "入门soft serve冰淇淋+冷饮站" — Amazon 6/18，12种冷冻甜品+soft serve功能，Food &amp; Wine验证压缩机趋势</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Ninja CREAMi Scoop &amp; Swirl降价至$249.99（省$100），6种CREAMi+6种soft serve=12种冷冻甜点。Food &amp; Wine评测Whynter压缩机冰淇淋机验证"压缩机式免预冻"是高端方向。Soft serve功能是Ninja独创差异化——"在家做软冰淇淋"未被满足</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>$90-149"入门soft serve冰淇淋+冷饮站"——冻碗式(双预冻碗)+soft serve功能+5种核心模式(冰淇淋/雪葩/冰沙/经典soft/酸奶soft)。砍压缩机→预冻碗替代+砍12种→5种+砍WiFi。$90-149只有基础冻碗式($30-60)无soft serve</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$90-149（soft serve冰淇淋机空白）/ $249.99（Ninja CREAMi）/ $349.99（Ninja常规）/ $30-60（基础冻碗式无soft serve）/ $300+（压缩机式）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.amazon.com/Best-Sellers/zgbs" target="_blank" style="color:#0d9488;">Amazon</a> | <a href="https://www.foodandwine.com/whynter-compressor-ice-cream-maker-review-11969404" target="_blank" style="color:#0d9488;">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-prime">Prime Day窗口</span>
+      <span class="urgency-badge">⚡ 定价策略</span>
+    </div>
+    <div class="card-title">BGR Prime Day倒计时3天 + 咖啡机全面降价 → 咖啡机赛道"价格战前最后窗口" — Breville/De'Longhi/Ninja三大品牌同时降价，$90-149降维切入</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Prime Day 6/23-26倒计时3天，咖啡机全面开战：Breville $499.95(省$200)/De'Longhi Arte Evo $399.95(省$300)/De'Longhi All-in-One $249.95(省$150)/Nespresso $99(省$30.95)。$500+跌至$400，$250+跌至$200区间</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>Prime Day前(6/20-22)抢跑$99-129"入门研磨一体咖啡机"——用"Prime Day前最低价"标签获客。比$200+机型更便宜+比$89胶囊机更专业(研磨+蒸汽)+比$49纯泵压机更多功能。$99-129是"唯一低于$200的研磨+萃取+蒸汽三合一"</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 参考价格区间</div>
+      <div class="price-text">$99-129（比所有研磨一体机更低空白）/ $200-250（Prime Day后De'Longhi预估折扣价）/ $399.95（Arte Evo Prime Day价）/ $499.95（Breville史低）</div>
+    </div>
+    <div class="card-source">来源：<a href="https://www.bgr.com/2193977/amazon-early-prime-day-best-deals-june/" target="_blank" style="color:#0d9488;">BGR</a> | <a href="https://www.bgr.com/2196884/streaming-deals-worth-grabbing-before-amazon-prime-day-starts/" target="_blank" style="color:#0d9488;">BGR</a></div>
+  </div>
+
+  <!-- ======== 详析 ======== -->
+  <div class="section-label section-detail">📋 重点机会详析</div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Breville Barista Express史低+研磨一体降维】$499.95降到$90-129 "入门研磨一体咖啡机"</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-129（研磨一体空白）/ $499.95（Breville史低）/ $699.95（Breville常规）/ $89-99（胶囊机无研磨无蒸汽）/ $200+（入门研磨一体最低）/ $249.95（De'Longhi All-in-One）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>BGR 6/15确认Prime Day 6/23-26，Breville Barista Express降至史上最低$499.95</li>
+          <li>Amazon 6/18：De'Longhi All-in-One $249.95（省$150）、La Specialista Arte Evo $399.95（省$300）</li>
+          <li>Amazon 6/18：GE Café Specialty Drip Coffee Maker $99（原$298.95，67% off）</li>
+          <li>Amazon 6/18：Nespresso Vertuo Pop+ $99（原$129.95）、Keurig K-Mini Mate $89</li>
+          <li>BGR 6/17：Prime Day前streaming deals已上线，平台折扣气氛浓厚</li>
+          <li>Breville $499.95史低价验证：$500-700利润空间巨大（可降价28%仍盈利）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-129定价：1）15bar意式泵压（够用级vs Breville意大利泵）；2）锥刀研磨12档（vs 25档→12档足够）；3）单孔蒸汽棒（vs双孔→新手更好控制）；4）PP外壳（vs不锈钢→成本降$30+）；5）无PID→简易NTC热敏电阻（±3°C够用）；6）无压力表→LED指示灯。BOM约$35-50，毛利55%+。关键差异化：$90-129唯一"研磨+萃取+蒸汽"三合一咖啡机。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"研磨一体+冷萃"组合：$149.99——加冷水浸泡管，夏天冰咖啡一站式。vs Ninja $479贵3倍</li>
+          <li>"设计驱动型"策略：参考Smeg/Food &amp; Wine验证的"设计溢价"路线，复古色系(奶油白/薄荷绿)→"ins风咖啡机"→溢价$20-30</li>
+          <li>Prime Day定价策略：$99基础版(研磨+萃取+蒸汽)+$149设计版(同功能+复古外壳+冷萃管)双SKU</li>
+          <li>与胶囊机错位：Keurig $89只有胶囊→我们$99有研磨→"比胶囊机贵$10但新鲜研磨咖啡"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-card">
+    <div class="detail-title">【Ninja CREAMi Scoop &amp; Swirl降维】$249.99降到$90-149 "入门soft serve冰淇淋+冷饮站"</div>
+    <div class="detail-section">
+      <div class="detail-label">价格区间</div>
+      <div class="detail-text">$90-149（soft serve冰淇淋机空白）/ $249.99（Ninja CREAMi Scoop &amp; Swirl）/ $349.99（Ninja常规）/ $30-60（基础冻碗式无soft serve）/ $300+（Whynter压缩机式）</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        <ul>
+          <li>Amazon 6/18：Ninja CREAMi Scoop &amp; Swirl降价至$249.99（原$349.99，省$100）</li>
+          <li>Ninja核心功能：6种CREAMi功能+6种soft serve功能=12种冷冻甜点模式</li>
+          <li>Food &amp; Wine评测Whynter压缩机冰淇淋机："Instantly Solved the Frustrating Part"</li>
+          <li>冰淇淋机从"冻碗式→压缩机式"和"基础→soft serve"两个方向同时升级</li>
+          <li>夏季窗口：6-8月冰淇淋机销售旺季，与制冰机形成"冰饮+冰品"双赛道</li>
+        </ul>
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">💡 机会判断</div>
+      <div class="hl-text">$99-149定价：1）冻碗式冰淇淋（双预冻碗→一个冷冻一个使用）；2）Soft serve功能（低压挤出软冰淇淋→Ninja验证的核心差异化）；3）3种冰淇淋模式+2种soft serve模式；4）砍压缩机→预冻碗替代（成本降$40-60）；5）砍12种→5种核心模式+砍WiFi/App。BOM约$30-45，毛利60%+。关键差异化：$90-149唯一"soft serve功能"的冰淇淋机。</div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">发散思考</div>
+      <div class="detail-text">
+        <ul>
+          <li>"冰淇淋+制冰"2合1：$169.99——夏季"冰品+冰饮"双赛道。冰淇淋模块+小型制冰模块(10磅/日)同压缩机复用</li>
+          <li>"soft serve+酸奶机"组合：$129.99——soft serve天然适配冻酸奶，加发酵程序→"健康冻酸奶站"</li>
+          <li>B2C内容营销：TikTok "在家做麦当劳级soft serve" 短视频→夏季爆款逻辑</li>
+          <li>与Ninja差异化：Ninja走"全功能12种"→我们走"5种核心+设计感+轻量化"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== 关注项 ======== -->
+  <div class="section-label section-other">👀 其他值得关注</div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 BGR Prime Day倒计时3天：厨房品类降价全面启动</div>
+    <div class="watch-text">BGR 6/15-17持续报道Early Prime Day deals，Chefman Air Fryer $59.99（50% off）、Roborock Q7 L5 $139.99（44% off）。Prime Day 6/23-26，4天大促。厨房品类折扣力度最大，选品定价需考虑Prime Day竞争环境<br>来源：<a href="https://www.bgr.com/2193977/amazon-early-prime-day-best-deals-june/" target="_blank">BGR</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 De'Longhi三款咖啡机同时降价：意式咖啡赛道价格战加速</div>
+    <div class="watch-text">Amazon 6/18显示De'Longhi All-in-One $249.95（省$150）、La Specialista Arte Evo $399.95（省$300），加上Breville Barista Express $499.95（省$200）。三大品牌同时降价→意式咖啡机赛道Prime Day价格战已提前开打。$200-500价格带将成红海<br>来源：<a href="https://www.amazon.com/Best-Sellers/zgbs" target="_blank">Amazon</a> | <a href="https://www.bgr.com/2193977/amazon-early-prime-day-best-deals-june/" target="_blank">BGR</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Food &amp; Wine Our Place Dream Cooker评测：无毒多功能锅趋势持续</div>
+    <div class="watch-text">Food &amp; Wine评测Our Place Dream Cooker（无毒多功能锅）"Cooks Food to 'Perfection' Every Time"。无毒炊具从炒锅扩展到多功能锅，"无毒"成为厨房电器的溢价标签。$90-149价格带可以做"无毒材质多功能锅"<br>来源：<a href="https://www.foodandwine.com/ourplace-dream-cooker-non-toxic-multicooker-11964380" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">📌 Food &amp; Wine智能水龙头趋势：智能厨房从家电扩展到水暖配件</div>
+    <div class="watch-text">Food &amp; Wine报道"The New Era of Kitchen Faucets Is All About Style and Smart Tech"——智能厨房水龙头（触控/语音控制出水温度+流量）。厨房智能化从"大电器"向"水暖配件"渗透，验证厨房智能化的深度需求<br>来源：<a href="https://www.foodandwine.com/stylish-new-kitchen-faucets-11934294" target="_blank">Food &amp; Wine</a></div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>数据来源：PR Newswire · WIRED · BGR · GizStreet · The Mirror · Food &amp; Wine · AllRecipes · Serious Eats · Techlicious · CNN Underscored · Amazon · MorningStar（12个信息源）</p>
+    <p>生成时间：2026年6月20日 | <a href="../index.html">返回首页</a></p>
+  </div>
+
+</div>
+</body>
+</html>
