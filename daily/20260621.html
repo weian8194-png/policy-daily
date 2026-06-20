@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 · 2026年6月21日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f8fafc; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; max-width: 860px; margin: 0 auto; padding: 28px 24px 40px; }
+    a { color: #0284c7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back-link { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #64748b; margin-bottom: 16px; }
+    .back-link:hover { color: #0284c7; }
+    .header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+    .header h1 { font-size: 24px; font-weight: 800; color: #0f172a; }
+    .header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .header .date-line .date-val { font-weight: 700; color: #334155; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.warn .stat-num { color: #d97706; }
+    .stat-chip.info .stat-num { color: #16a34a; }
+    .stat-chip.platform .stat-num { color: #0284c7; }
+    .compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+    .compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .compliance-banner ul { list-style: none; padding: 0; }
+    .compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
+    .compliance-banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-warn { background: #fffbeb; color: #d97706; }
+    .badge-info { background: #f0fdf4; color: #16a34a; }
+    .summary-list { display: flex; flex-direction: column; gap: 6px; }
+    .summary-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 14px; background: #fff; border-radius: 6px; border: 1px solid #e2e8f0; }
+    .severity-dot { width: 7px; height: 7px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+    .severity-dot.warn { background: #f59e0b; }
+    .severity-dot.info { background: #16a34a; }
+    .summary-body { flex: 1; min-width: 0; }
+    .summary-title { font-size: 13px; font-weight: 600; color: #1e293b; line-height: 1.5; }
+    .summary-platform { display: inline-block; font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 3px; color: #fff; margin-right: 4px; vertical-align: middle; }
+    .summary-implication { font-size: 12px; color: #64748b; margin-top: 1px; }
+    .summary-implication::before { content: "→ 含义："; color: #0284c7; font-weight: 600; }
+    .policy-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .policy-card.card-warn { border-left: 4px solid #f59e0b; }
+    .policy-card.card-info { border-left: 4px solid #16a34a; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .platform-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; }
+    .tag-amazon { background: #FF9900; }
+    .tag-tiktok { background: #000000; }
+    .tag-walmart { background: #0071DC; }
+    .tag-customs { background: #dc2626; }
+    .tag-eu { background: #003399; }
+    .tag-tax { background: #7c3aed; }
+    .tag-logistics { background: #0891b2; }
+    .tag-brand { background: #6d28d9; }
+    .tag-aliexpress { background: #e62e04; }
+    .urgency-badge { font-size: 12px; font-weight: 600; }
+    .urgency-badge.warn { color: #d97706; }
+    .urgency-badge.info { color: #16a34a; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .new-tag { display: inline-block; font-size: 9px; background: #dc2626; color: #fff; padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; font-weight: 600; }
+    .five-elements { padding: 10px 16px; }
+    .element-row { display: flex; gap: 6px; padding: 4px 0; font-size: 12px; line-height: 1.7; border-bottom: 1px solid #f1f5f9; }
+    .element-row:last-child { border-bottom: none; }
+    .element-label { font-weight: 700; white-space: nowrap; min-width: 66px; flex-shrink: 0; }
+    .element-label.el-change { color: #1e40af; }
+    .element-label.el-who { color: #7c3aed; }
+    .element-label.el-action { color: #16a34a; }
+    .element-content { color: #334155; }
+    .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
+    .card-source .source-label { font-size: 11px; color: #94a3b8; }
+    .card-source a { font-size: 11px; color: #0284c7; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="../index.html">← 返回首页</a>
+  <div class="header">
+    <h1>跨境政策日报</h1>
+    <div class="date-line">数据日期: <span class="date-val">2026年6月21日（周日）</span> <span style="font-size:11px;background:#eff6ff;color:#2563eb;padding:2px 8px;border-radius:4px;margin-left:8px;font-weight:500;">08:00 更新</span></div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip warn"><span class="stat-num">3</span>🟡 关注</div>
+    <div class="stat-chip info"><span class="stat-num">4</span>🟢 留意</div>
+    <div class="stat-chip platform"><span class="stat-num">6</span>涉事平台/机构</div>
+  </div>
+
+  <div class="compliance-banner">
+    <div class="banner-title">⚡ 近期关键时间节点</div>
+    <ul>
+      <li><span class="date-tag">6/23-26</span> 🔴 Amazon Prime Day 2026（含9大AI功能上线）</li>
+      <li><span class="date-tag">6/29</span> 🟡 Amazon自配送处理时间新规 + 永久关闭Contact Buyer</li>
+      <li><span class="date-tag">6/30</span> 🔴 Amazon欧洲站COO合规 + EUDR + 海关78号公告 + FBA基础容量 + Temu德国EPR + TikTok Shop泰国TISI</li>
+      <li><span class="date-tag">7/1</span> 🔴 欧盟€150免税取消 + 22€免税取消+€3征税 + 非欧盟FBA/FBM完整海关数据 + 837号令 + 加州纺织品EPR + Shopee越南1%税</li>
+      <li><span class="date-tag">7/7</span> 🔴 美国301关税公开听证会</li>
+      <li><span class="date-tag">7/8</span> 🔴 CPSC eFiling强制电子备案</li>
+      <li><span class="date-tag">7/27</span> 🔴 Amazon产品标题75字符限制强制执行</li>
+      <li><span class="date-tag">~9月</span> 🔴 CBP"加强海关执法"IOR新规细则落地</li>
+      <li><span class="date-tag">6/25</span> 🟡 Lazada泰国站服务费上调</li>
+      <li><span class="date-tag">6/26</span> 🟡 美客多RFC验证截止 | TikTok Shop拍卖日</li>
+      <li><span class="date-tag">6/28</span> 🟡 eBay统一配送模式生效</li>
+      <li><span class="date-tag">7/6</span> 🟡 Amazon SFP配送速度指标更新</li>
+      <li><span class="date-tag">2027/1</span> 🟡 耐克取消全部线上经销商授权</li>
+    </ul>
+  </div>
+
+  <!-- 高管摘要 -->
+  <div class="section-block">
+    <div class="section-header">
+      <h2>📋 高管摘要</h2>
+      <span class="section-badge badge-warn">7条</span>
+    </div>
+    <div class="summary-list">
+      <div class="summary-row">
+        <div class="severity-dot warn"></div>
+        <div class="summary-body">
+          <div class="summary-title"><span class="summary-platform" style="background:#0071DC;">Walmart</span>Walmart美国主站向墨西哥开放：满$35免运费跨境购物<span class="new-tag">NEW</span></div>
+          <div class="summary-implication">Walmart首次将美国站转为跨境平台，在墨西哥市场与Amazon/MercadoLibre直接竞争</div>
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="severity-dot warn"></div>
+        <div class="summary-body">
+          <div class="summary-title"><span class="summary-platform" style="background:#FF9900;">Amazon</span>Prime Day 2026上线9大AI功能：搜索逻辑从关键词转向AI助手<span class="new-tag">NEW</span></div>
+          <div class="summary-implication">Listing优化逻辑从"关键词SEO"转向"意图SEO"，AI无法看懂的Listing将失去推荐池资格</div>
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="severity-dot warn"></div>
+        <div class="summary-body">
+          <div class="summary-title"><span class="summary-platform" style="background:#003399;">EU海关</span>7/1新海关要求细节：非欧盟FBA/FBM订单须提供完整HS编码/原产地/申报价值</div>
+          <div class="summary-implication">与€150免税取消+€3征税形成组合拳，低值轻小件利润空间进一步压缩</div>
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="severity-dot info"></div>
+        <div class="summary-body">
+          <div class="summary-title"><span class="summary-platform" style="background:#e62e04;">AliExpress</span>速卖通推出美国招商"赛亚计划"：零成本开店+$1000广告金</div>
+          <div class="summary-implication">Brand+战略延伸，平台海外托管模式降低品牌出海门槛</div>
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="severity-dot info"></div>
+        <div class="summary-body">
+          <div class="summary-title"><span class="summary-platform" style="background:#0891b2;">物流</span>马士基暂停中东多国新订舱+加收最高$3800/柜紧急运费</div>
+          <div class="summary-implication">SCFI七连涨+苏伊士附加费叠加，头程运价持续上行</div>
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="severity-dot info"></div>
+        <div class="summary-body">
+          <div class="summary-title"><span class="summary-platform" style="background:#6d28d9;">品牌</span>耐克2027年1月取消全部线上经销商授权<span class="new-tag">NEW</span></div>
+          <div class="summary-implication">品牌直营化趋势加速，授权型卖家生存空间持续收窄</div>
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="severity-dot info"></div>
+        <div class="summary-body">
+          <div class="summary-title"><span class="summary-platform" style="background:#FF9900;">Amazon</span>SHEIN在爱尔兰接手新物流中心：应对欧盟7/1政策</div>
+          <div class="summary-implication">跨境电商本地化趋势加速，平台自建仓应对免税取消</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 平台政策 -->
+  <div class="section-block">
+    <div class="section-header">
+      <h2>🛒 平台政策</h2>
+      <span class="section-badge badge-warn">3条</span>
+    </div>
+
+    <!-- Card 1: Walmart Mexico -->
+    <div class="policy-card card-warn">
+      <div class="card-top">
+        <span class="platform-tag tag-walmart">Walmart</span>
+        <span class="urgency-badge warn">🟡 关注</span>
+      </div>
+      <div class="card-title">Walmart美国主站向墨西哥消费者开放：满$35免运费跨境购物<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">变了什么</span><span class="element-content">沃尔玛向墨西哥消费者开放美国主站Walmart.com商品库，满$35免运费，覆盖服装/家居/电子品类，首次将美国站转为跨境平台</span></div>
+        <div class="element-row"><span class="element-label el-who">影响谁</span><span class="element-content">Walmart美国站卖家（商品自动获得墨西哥曝光）；Amazon墨西哥站和美客多卖家（新增跨境竞争）</span></div>
+        <div class="element-row"><span class="element-label el-action">怎么办</span><span class="element-content">①检查商品是否纳入墨西哥可购范围 ②评估墨西哥订单物流/退换货成本 ③优化西语Listing翻译 ④Prime Day前对比Walmart与Amazon墨西哥策略</span></div>
+      </div>
+      <div class="card-source">
+        <span class="source-label">来源：</span><a href="https://m.ebrun.com/681194.html" target="_blank">亿邦动力(ebrun.com)</a>
+      </div>
+    </div>
+
+    <!-- Card 2: Amazon Prime Day AI -->
+    <div class="policy-card card-warn">
+      <div class="card-top">
+        <span class="platform-tag tag-amazon">Amazon</span>
+        <span class="urgency-badge warn">🟡 关注</span>
+      </div>
+      <div class="card-title">Amazon Prime Day 2026上线9大AI功能：搜索逻辑转向AI推荐<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">变了什么</span><span class="element-content">Alexa个性化推荐+自然语言搜索+价格提醒自动购买+Amazon Lens视觉搜索+AI生图+风格购物。全年价格历史可见，"先涨后折"失效。流量分配权从搜索排名转向AI理解能力</span></div>
+        <div class="element-row"><span class="element-label el-who">影响谁</span><span class="element-content">所有亚马逊卖家，尤其依赖关键词排名的卖家。AI无法"看懂"的Listing将失去推荐池资格</span></div>
+        <div class="element-row"><span class="element-label el-action">怎么办</span><span class="element-content">①Listing五点描述覆盖使用场景和用户痛点（AI理解优先）②优化产品图片：清晰表达使用场景/目标人群/核心功能 ③检查过去60天定价历史确保符合规则</span></div>
+      </div>
+      <div class="card-source">
+        <span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fphka0pvz9xc" target="_blank">卖家之家(mjzj.com)</a>
+      </div>
+    </div>
+
+    <!-- Card 3: EU Customs -->
+    <div class="policy-card card-warn">
+      <div class="card-top">
+        <span class="platform-tag tag-eu">EU海关</span>
+        <span class="urgency-badge warn">🟡 关注</span>
+      </div>
+      <div class="card-title">欧盟7/1新海关要求细节：非欧盟FBA/FBM订单须提供完整HS编码/原产地/申报价值</div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">变了什么</span><span class="element-content">7/1起非欧盟FBA/FBM订单须提供完整HS编码、原产地信息、申报价值。FBA须6/30前完成COO标注，FBM须每票附完整海关文件。不合规货物面临扣留/退运</span></div>
+        <div class="element-row"><span class="element-label el-who">影响谁</span><span class="element-content">所有向欧盟站点发货的跨境卖家（FBA和FBM均受影响），尤其低值轻小件（€3包裹税+清关成本压缩利润）</span></div>
+        <div class="element-row"><span class="element-label el-action">怎么办</span><span class="element-content">①6/30前完成所有FBA ASIN原产地标注 ②确保FBM发货包裹附完整海关文件 ③评估€3包裹税对低客单价商品利润影响 ④联系货代确认7/1后清关流程变化</span></div>
+      </div>
+      <div class="card-source">
+        <span class="source-label">来源：</span><a href="https://m.cifnews.com" target="_blank">雨果跨境(cifnews.com)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 平台动态 -->
+  <div class="section-block">
+    <div class="section-header">
+      <h2>📦 平台动态</h2>
+      <span class="section-badge badge-info">3条</span>
+    </div>
+
+    <!-- Card 4: AliExpress -->
+    <div class="policy-card card-info">
+      <div class="card-top">
+        <span class="platform-tag tag-aliexpress">AliExpress</span>
+        <span class="urgency-badge info">🟢 留意</span>
+      </div>
+      <div class="card-title">速卖通推出美国招商"赛亚计划"：零成本开店+$1000广告金<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">变了什么</span><span class="element-content">速卖通面向美国市场推出"赛亚计划"：3天极速开店、$1000广告金激励、入仓即预付款。是Brand+出海计划延伸，已汇聚超1500个认证品牌</span></div>
+        <div class="element-row"><span class="element-label el-who">影响谁</span><span class="element-content">品牌出海卖家（可考虑亚马逊+速卖通双平台布局）；速卖通在澳也开放本地卖家入驻</span></div>
+        <div class="element-row"><span class="element-label el-action">怎么办</span><span class="element-content">①评估"赛亚计划"与亚马逊运营成本对比 ②考虑双平台布局分散风险 ③关注速卖通美国站流量增长趋势</span></div>
+      </div>
+      <div class="card-source">
+        <span class="source-label">来源：</span><a href="https://m.ebrun.com/681194.html" target="_blank">亿邦动力(ebrun.com)</a>
+      </div>
+    </div>
+
+    <!-- Card 5: SHEIN -->
+    <div class="policy-card card-info">
+      <div class="card-top">
+        <span class="platform-tag tag-amazon" style="background:#000;">SHEIN</span>
+        <span class="urgency-badge info">🟢 留意</span>
+      </div>
+      <div class="card-title">SHEIN在爱尔兰接手新物流中心：应对欧盟7/1免税取消</div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">变了什么</span><span class="element-content">SHEIN在都柏林接手新物流中心（直营管理），此前已在波兰弗罗茨瓦夫建欧洲主仓、在英国自建物流中心。核心应对欧盟7/1取消小额包裹免税</span></div>
+        <div class="element-row"><span class="element-label el-who">影响谁</span><span class="element-content">SHEIN平台卖家（欧洲履约能力提升）；反映跨境电商本地化趋势</span></div>
+        <div class="element-row"><span class="element-label el-action">怎么办</span><span class="element-content">①关注SHEIN欧洲本地仓入仓政策 ②对比自建仓vs平台仓成本 ③欧盟7/1政策对所有跨境平台均有影响，本地仓模式是趋势</span></div>
+      </div>
+      <div class="card-source">
+        <span class="source-label">来源：</span><a href="https://m.ebrun.com/681194.html" target="_blank">亿邦动力(ebrun.com)</a>
+      </div>
+    </div>
+
+    <!-- Card 6: Maersk -->
+    <div class="policy-card card-info">
+      <div class="card-top">
+        <span class="platform-tag tag-logistics">物流</span>
+        <span class="urgency-badge info">🟢 留意</span>
+      </div>
+      <div class="card-title">马士基暂停中东多国新订舱+加收最高$3800/柜紧急运费</div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">变了什么</span><span class="element-content">马士基暂停中东多国新订舱，加收最高$3800/柜紧急运费。叠加SCFI七连涨+苏伊士运河7月中旬12%附加费，头程运价持续上行</span></div>
+        <div class="element-row"><span class="element-label el-who">影响谁</span><span class="element-content">依赖欧亚航线（苏伊士运河）的海运卖家；大件/重货卖家受影响更大</span></div>
+        <div class="element-row"><span class="element-label el-action">怎么办</span><span class="element-content">①评估Prime Day后补货物流成本变化 ②考虑提前备货或切换航线 ③关注SCFI运价走势 ④对比空运vs海运性价比</span></div>
+      </div>
+      <div class="card-source">
+        <span class="source-label">来源：</span><a href="https://m.mjzj.com" target="_blank">卖家之家(mjzj.com)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 品牌合规 -->
+  <div class="section-block">
+    <div class="section-header">
+      <h2>🏷️ 品牌合规</h2>
+      <span class="section-badge badge-info">1条</span>
+    </div>
+
+    <!-- Card 7: Nike -->
+    <div class="policy-card card-info">
+      <div class="card-top">
+        <span class="platform-tag tag-brand">Nike</span>
+        <span class="urgency-badge info">🟢 留意</span>
+      </div>
+      <div class="card-title">耐克2027年1月起取消全部线上经销商授权<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">变了什么</span><span class="element-content">耐克计划2027/1/1起取消所有线上经销商授权，经销商无权在任何线上平台售卖，仅限官方旗舰店。滔搏/胜道等大型经销商已知晓</span></div>
+        <div class="element-row"><span class="element-label el-who">影响谁</span><span class="element-content">在亚马逊/Walmart等平台销售耐克产品的第三方卖家（2027年后无法合法销售）</span></div>
+        <div class="element-row"><span class="element-label el-action">怎么办</span><span class="element-content">①如在售耐克产品，提前规划清仓和转型 ②关注其他品牌是否跟进直营化策略 ③品牌授权型卖家生存空间持续收窄</span></div>
+      </div>
+      <div class="card-source">
+        <span class="source-label">来源：</span><a href="https://m.ebrun.com/681194.html" target="_blank">亿邦动力(ebrun.com)</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <p>跨境政策日报 · 2026年6月21日</p>
+    <p>数据来源：亿邦动力(ebrun.com) / 卖家之家(mjzj.com) / 雨果跨境(cifnews.com)（28个配置信息源）</p>
+    <p>本站仅供信息参考，不构成任何法律或商业建议</p>
+  </div>
+</body>
+</html>
