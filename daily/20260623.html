@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 · 2026年6月23日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 820px; margin: 0 auto; padding: 28px 24px 40px; }
+    .back-link { display: inline-block; margin-bottom: 16px; font-size: 13px; color: #0284c7; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    .page-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+    .page-header h1 { font-size: 24px; font-weight: 800; color: #0f172a; }
+    .page-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.warn .stat-num { color: #d97706; }
+    .stat-chip.info .stat-num { color: #16a34a; }
+    .stat-chip.platform .stat-num { color: #0284c7; }
+    .compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+    .compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .compliance-banner ul { list-style: none; padding: 0; }
+    .compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
+    .compliance-banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-warn { background: #fffbeb; color: #d97706; }
+    .badge-info { background: #f0fdf4; color: #16a34a; }
+    .policy-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .policy-card.card-warn { border-left: 4px solid #f59e0b; }
+    .policy-card.card-info { border-left: 4px solid #16a34a; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .platform-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-amazon { background: #FF9900; }
+    .tag-lazada { background: #0f146d; }
+    .urgency-badge { font-size: 12px; font-weight: 600; }
+    .urgency-badge.warn { color: #d97706; }
+    .urgency-badge.info { color: #16a34a; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .new-tag { display: inline-block; font-size: 9px; background: #dc2626; color: #fff; padding: 1px 4px; border-radius: 3px; margin-left: 4px; vertical-align: middle; font-weight: 600; }
+    .five-elements { padding: 10px 16px; }
+    .element-row { display: flex; gap: 6px; padding: 4px 0; font-size: 12px; line-height: 1.7; border-bottom: 1px solid #f1f5f9; }
+    .element-row:last-child { border-bottom: none; }
+    .element-label { font-weight: 700; white-space: nowrap; min-width: 66px; flex-shrink: 0; }
+    .element-label.el-change { color: #1e40af; }
+    .element-label.el-who { color: #7c3aed; }
+    .element-label.el-when { color: #dc2626; }
+    .element-label.el-action { color: #16a34a; }
+    .element-content { color: #334155; }
+    .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
+    .card-source .source-label { font-size: 11px; color: #94a3b8; }
+    .card-source a { font-size: 11px; color: #0284c7; text-decoration: none; word-break: break-all; }
+    .card-source a:hover { text-decoration: underline; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0284c7; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 600px) { .container { padding: 16px; } .page-header h1 { font-size: 20px; } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+  <div class="page-header">
+    <h1>跨境政策日报</h1>
+    <div class="date-line">2026年6月23日（周二） · 近24小时跨境政策变化</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip warn"><span class="stat-num">4</span>🟡 关注</div>
+    <div class="stat-chip info"><span class="stat-num">2</span>🟢 留意</div>
+    <div class="stat-chip platform"><span class="stat-num">4</span>涉事平台/机构</div>
+  </div>
+
+  <div class="compliance-banner">
+    <div class="banner-title">⚡ 近期关键时间节点</div>
+    <ul>
+    <li><span class="date-tag">6/23-26</span> 🔴 Amazon Prime Day 2026</li>
+    <li><span class="date-tag">6/29</span> 🟡 Amazon自配送处理时间新规 + 关闭Contact Buyer</li>
+    <li><span class="date-tag">6/30</span> 🔴 Amazon COO原产地强制填报 + EUDR + 海关78号 + FBA容量 + Temu德国EPR + TikTok泰国TISI</li>
+    <li><span class="date-tag">7/1</span> 🔴 欧盟€150免税取消 + €3统一征税 + 非欧盟海关数据 + 837号令 + 加州纺织品EPR</li>
+    <li><span class="date-tag">7/7</span> 🔴 美国301关税公开听证会</li>
+    <li><span class="date-tag">7/8</span> 🔴 CPSC eFiling强制电子备案（罚款上限$12万）</li>
+    <li><span class="date-tag">7/27</span> 🔴 Amazon标题75字符限制强制执行</li>
+    <li><span class="date-tag">~9月</span> 🔴 CBP"加强海关执法"IOR新规细则落地</li>
+    <li><span class="date-tag">6/25</span> 🟡 Lazada泰国站服务费上调</li>
+    <li><span class="date-tag">6/26</span> 🟡 美客多RFC验证截止</li>
+    <li><span class="date-tag">6/28</span> 🟡 eBay统一配送模式生效</li>
+    <li><span class="date-tag">7/23</span> 🟡 CPSC第三方实验室审查最终规定生效</li>
+    <li><span class="date-tag">8/12</span> 🟡 欧盟PPWR包装法强制生效</li>
+    <li><span class="date-tag">11/1</span> 🟡 欧盟FBA货件额外加收€2海关手续费</li>
+    </ul>
+  </div>
+
+  <!-- Platform Policies -->
+  <section class="section-block">
+    <div class="section-header">
+      <h2>🛒 平台政策</h2>
+      <span class="section-badge badge-warn">4关注</span>
+    </div>
+
+    <div class="policy-card card-warn">
+      <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇺🇸</span><span class="urgency-badge warn">🟡 关注</span></div>
+      <div class="card-title">6/30强制补全原产地(COO)信息，逾期FBA无法创建货件/Listing下架<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊美国站要求所有FBA商品必须在6/30前在后台补全"Country/Region of Origin"信息，逾期将导致：①无法创建FBA货件（已有卖家创建发往ONT8货件时被系统拦截）②入库被拒 ③Listing下架。欧洲站部分类目同步推进</span></div>
+        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有FBA卖家；未填写COO的ASIN将直接影响发货和销售</span></div>
+        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①下载库存文件，在"country_of_origin"字段填写标准英文国家名（如China/Vietnam/United States，禁止填"Made in China"）②单个商品通过"管理所有库存"页面下拉选择 ③填写后在Product Details栏核验 ④已合并变体老ASIN需重新编辑触发刷新 ⑤实物包装补充永久性原产地标识</span></div>
+      </div>
+      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpvzl0uq0feo" target="_blank">卖家之家</a> · <a href="https://m.ebrun.com/683354.html" target="_blank">亿邦动力</a></div>
+    </div>
+
+    <div class="policy-card card-warn">
+      <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇺🇸</span><span class="urgency-badge warn">🟡 关注</span></div>
+      <div class="card-title">账户评级清零机制底层变更：绩效清零≠高枕无忧<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊对"账户评级滑动窗口"逻辑进行底层调整：从"稀释式滚动"变为"硬清零"。但三类违规后果截然不同：①常规违规：真清零，180天后彻底移除 ②中度违规（刷单/首次操控评论）：分数清了但有90-180天观察期，再犯激活旧记录加重处罚 ③严重违规（虚假评论多条/知识产权品牌下架/多账户关联）：分数可能清零但账户永久标记，后续同类型直接封号跳过警告</span></div>
+        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有有过违规记录的卖家；清零后分数上涨≠安全上岸</span></div>
+        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①立即去"绩效通知"和"账户状况"页面逐条检查清零违规类型编号 ②判断自己属于哪类 ③中度违规观察期内绝不再犯同类型 ④新违规处罚速度从3-5天压缩到24-48小时，从现在开始犯错成本更高</span></div>
+      </div>
+      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpv2ulu9ybk0" target="_blank">卖家之家</a></div>
+    </div>
+
+    <div class="policy-card card-warn">
+      <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇺🇸</span><span class="urgency-badge warn">🟡 关注</span></div>
+      <div class="card-title">6月下旬系统性风险异动：误判关联封号/FCC ID消失/库存锁定<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6/21卖家社群高频反馈系统性异常：①"欺骗/欺诈/非法活动"理由误判关联封号 ②INF验证显示完成但库存被锁不可售 ③FCC ID编辑字段消失导致无线设备批量下架 ④申诉被同一机器人理由循环驳回。属于平台系统级Bug</span></div>
+        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">遭遇上述异常的卖家；无线设备/电子产品品类受FCC ID消失影响最大</span></div>
+        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①遇到异常立即截图留证 ②开Case明确要求人工审核 ③关联号不动不拖，不要用同网络反复试探 ④FCC ID消失的无线设备卖家关注字段恢复进度 ⑤Prime Day期间保持高度警惕</span></div>
+      </div>
+      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpv2ix8txtds" target="_blank">卖家之家</a></div>
+    </div>
+
+    <div class="policy-card card-warn">
+      <div class="card-top"><span class="platform-tag tag-lazada">Lazada</span><span class="urgency-badge warn">🟡 关注</span></div>
+      <div class="card-title">推进"一主体一店"准入原则，多店矩阵玩法受冲击<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">Lazada开始落实单公司/单身份证号仅限一店的准入原则。已有老多店"暂不追溯"，但新入驻必须走单主体单店。本质是冲多店欺诈/代持店的合规收口</span></div>
+        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">做东南亚本土店矩阵玩法的团队；依赖多店运营策略的卖家需重新评估架构</span></div>
+        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①评估现有Lazada多店架构风险 ②新入驻需遵循单主体单店规则 ③关注是否后续对老多店追溯 ④多店矩阵策略需调整合规方向</span></div>
+      </div>
+      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpv2ix8txtds" target="_blank">卖家之家</a></div>
+    </div>
+  </section>
+
+  <!-- Compliance / Brand -->
+  <section class="section-block">
+    <div class="section-header">
+      <h2>🏷️ 合规/品牌</h2>
+      <span class="section-badge badge-info">2留意</span>
+    </div>
+
+    <div class="policy-card card-info">
+      <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇪🇺</span><span class="urgency-badge info">🟢 留意</span></div>
+      <div class="card-title">欧洲站推出FBA多国库存智能调拨，Pan-EU能力升级免费启用<span class="new-tag">NEW</span></div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊欧洲站正式推出FBA多国库存智能调拨功能：基于DE/FR/IT/ES四国实时销售数据自动调配库存，缓解断货与积压并存难题。Pan-EU能力升级，卖家无需额外付费即可启用</span></div>
+        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Pan-EU欧洲站卖家；Prime Day欧洲站大促期间尤其受益</span></div>
+        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①Pan-EU卖家检查后台是否已自动启用 ②关注自动调拨跨境转运的增值税申报义务 ③提前与税务代理确认 ④注意转运费承担方细则</span></div>
+      </div>
+      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpv2ix8txtds" target="_blank">卖家之家</a></div>
+    </div>
+
+    <div class="policy-card card-info">
+      <div class="card-top"><span class="platform-tag tag-amazon">Amazon</span><span class="urgency-badge info">🟢 留意</span></div>
+      <div class="card-title">Prime Day 2026今日(6/23)正式开打，6/23-26覆盖26国</div>
+      <div class="five-elements">
+        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">Amazon Prime Day 2026于6/23-26正式开打，覆盖26国，首次提前至6月举办。促销费改为"预付+抽成"模式，含9大AI功能上线。大促期间侵权排查力度翻倍，TRO冻结往往集中在大促资金峰值期</span></div>
+        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有亚马逊卖家；大促期间需注意合规自查</span></div>
+        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①确认参与SKU的库存和定价 ②优先完成版权素材自查，尤其是插画/印花类 ③账户资金分批提现降低TRO冻结风险 ④Prime Day后立即检查自配送处理时间合规</span></div>
+      </div>
+      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/682251.html" target="_blank">亿邦动力</a> · <a href="https://m.cifnews.com/primeday" target="_blank">雨果跨境</a></div>
+    </div>
+  </section>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <div>📊 数据来源：卖家之家 / 亿邦动力 / 雨果跨境（28个配置信息源）</div>
+    <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
+    <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+  </div>
+</div>
+</body>
+</html>
