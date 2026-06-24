@@ -6,13 +6,45 @@
   <title>跨境政策日报 · 2026年6月24日</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    .container { max-width: 820px; margin: 0 auto; padding: 28px 24px 40px; }
-    .back-link { display: inline-block; margin-bottom: 16px; font-size: 13px; color: #0284c7; text-decoration: none; }
-    .back-link:hover { text-decoration: underline; }
-    .page-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
-    .page-header h1 { font-size: 24px; font-weight: 800; color: #0f172a; }
-    .page-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .section-block:target { animation: target-flash 1.5s ease-out; }
+    @keyframes target-flash { 0% { box-shadow: 0 0 0 3px rgba(56,189,248,0.4); } 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); } }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f8fafc; }
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(56,189,248,0.06); color: #e2e8f0; border-left-color: #38bdf8; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.danger { background: rgba(239,68,68,0.15); color: #fca5a5; }
+    .nav-count.warn { background: rgba(245,158,11,0.15); color: #fcd34d; }
+    .nav-count.info { background: rgba(22,163,74,0.15); color: #86efac; }
+    .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
+    .archive-section { padding: 0; }
+    .archive-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    details.archive-month { padding: 0; }
+    details.archive-month summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px 6px 28px; cursor: pointer; font-size: 13px; color: #94a3b8; list-style: none; transition: color 0.15s; border-left: 2px solid transparent; }
+    details.archive-month summary::-webkit-details-marker { display: none; }
+    details.archive-month summary::before { content: "📁"; margin-right: 6px; font-size: 12px; }
+    details.archive-month[open] summary::before { content: "📂"; }
+    details.archive-month summary:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
+    details.archive-month summary .month-info { font-weight: 500; }
+    details.archive-month summary .month-stats { font-size: 11px; color: #475569; }
+    .archive-day { display: block; padding: 3px 24px 3px 48px; color: #64748b; text-decoration: none; font-size: 12px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .archive-day::before { content: "📄 "; font-size: 11px; }
+    .archive-day:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
+    .archive-day .day-count { font-size: 10px; color: #475569; margin-left: 4px; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
     .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
     .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
     .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
@@ -29,10 +61,22 @@
     .section-block { margin-bottom: 28px; }
     .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
     .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
-    .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
-    .badge-danger { background: #fef2f2; color: #dc2626; }
-    .badge-warn { background: #fffbeb; color: #d97706; }
-    .badge-info { background: #f0fdf4; color: #16a34a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-danger { background: #fef2f2; color: #dc2626; }
+    .section-header .badge-warn { background: #fffbeb; color: #d97706; }
+    .section-header .badge-info { background: #f0fdf4; color: #16a34a; }
+    .exec-summary { margin-bottom: 24px; }
+    .exec-summary .section-header { border-bottom: 2px solid #bfdbfe; }
+    .summary-list { display: flex; flex-direction: column; gap: 6px; }
+    .summary-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 14px; background: #fff; border-radius: 6px; border: 1px solid #e2e8f0; transition: all 0.15s; }
+    .summary-row:hover { border-color: #bfdbfe; box-shadow: 0 2px 6px rgba(37,99,235,0.08); }
+    .severity-dot { width: 7px; height: 7px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+    .severity-dot.danger { background: #dc2626; }
+    .severity-dot.warn { background: #f59e0b; }
+    .severity-dot.info { background: #16a34a; }
+    .summary-body { flex: 1; min-width: 0; }
+    .summary-title { font-size: 13px; font-weight: 600; color: #1e293b; line-height: 1.5; }
+    .summary-platform { display: inline-block; font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 3px; color: #fff; margin-right: 4px; vertical-align: middle; }
     .policy-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
     .policy-card.card-danger { border-left: 4px solid #dc2626; }
     .policy-card.card-warn { border-left: 4px solid #f59e0b; }
@@ -40,12 +84,21 @@
     .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
     .platform-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
     .tag-amazon { background: #FF9900; }
-    .tag-tiktok { background: #000; }
+    .tag-tiktok { background: #000000; }
     .tag-lazada { background: #0f146d; }
     .tag-shopee { background: #EE4D2D; }
     .tag-logistics { background: #dc2626; }
     .tag-tax { background: #7c3aed; }
-    .tag-vietnam { background: #da251d; }
+    .tag-vietnam { background: #d41920; }
+    .tag-temu { background: #E85D2C; }
+    .tag-eu { background: #003399; }
+    .tag-shopify { background: #96bf48; }
+    .tag-aliexpress { background: #e43225; }
+    .tag-indonesia { background: #ff0000; }
+    .tag-netherlands { background: #f36c21; }
+    .tag-southafrica { background: #007749; }
+    .tag-walmart { background: #0071DC; }
+    .tag-cpsc { background: #1a4480; }
     .urgency-badge { font-size: 12px; font-weight: 600; }
     .urgency-badge.danger { color: #dc2626; }
     .urgency-badge.warn { color: #d97706; }
@@ -65,127 +118,678 @@
     .element-label.el-when { color: #dc2626; }
     .element-label.el-action { color: #16a34a; }
     .element-content { color: #334155; }
+    .card-background { background: #fffbeb; margin: 0 16px 8px; padding: 10px 12px; border-radius: 4px; border: 1px solid #fde68a; }
+    .card-background .bg-label { font-size: 11px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-background .bg-text { font-size: 12px; color: #78350f; line-height: 1.7; }
     .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
     .card-source .source-label { font-size: 11px; color: #94a3b8; }
     .card-source a { font-size: 11px; color: #0284c7; text-decoration: none; word-break: break-all; }
     .card-source a:hover { text-decoration: underline; }
+    .compliance-reminders { background: #fff; border: 1px solid #fed7aa; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+    .compliance-reminders .reminders-title { font-size: 13px; font-weight: 700; color: #d97706; margin-bottom: 8px; }
+    .compliance-reminders ul { list-style: none; padding: 0; }
+    .compliance-reminders li { font-size: 12px; color: #78350f; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
+    .compliance-reminders li::before { content: "⚠️"; position: absolute; left: 0; font-size: 10px; top: 3px; }
+    .sources-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px 8px 0 0; }
+    .sources-toolbar-hint { font-size: 12px; color: #64748b; }
+    .sources-toolbar-actions { display: flex; gap: 8px; }
+    .btn-reset { padding: 5px 14px; border: 1px solid #cbd5e1; border-radius: 5px; background: #f1f5f9; color: #475569; font-size: 12px; cursor: pointer; }
+    .btn-reset:hover { background: #e2e8f0; }
+    .btn-add { padding: 5px 14px; border: none; border-radius: 5px; background: #0284c7; color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; }
+    .btn-add:hover { background: #0369a1; }
+    .sources-table-wrap { background: #fff; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 8px 8px; overflow-x: auto; }
+    .sources-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .sources-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; white-space: nowrap; }
+    .sources-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+    .sources-table tr:hover td { background: #f8fafc; }
+    .sources-table .st-channel { white-space: nowrap; }
+    .sc-tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 3px; color: #fff; }
+    .st-name { font-weight: 600; color: #1e293b; }
+    .st-url { color: #0284c7; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .st-url a { color: #0284c7; text-decoration: none; }
+    .st-url a:hover { text-decoration: underline; }
+    .st-domain { color: #94a3b8; font-size: 11px; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .st-enable { text-align: center; }
+    .st-enable input[type="checkbox"] { width: 15px; height: 15px; accent-color: #0284c7; cursor: pointer; }
+    .st-del { text-align: center; }
+    .btn-del { width: 22px; height: 22px; border: none; border-radius: 4px; background: transparent; color: #94a3b8; font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+    .btn-del:hover { background: #fef2f2; color: #dc2626; }
+    .add-row td { background: #f0f9ff !important; }
+    .add-row input { width: 100%; padding: 4px 8px; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 12px; font-family: inherit; }
+    .add-row input:focus { outline: none; border-color: #0284c7; box-shadow: 0 0 0 2px rgba(2,132,199,0.15); }
+    .btn-save { padding: 4px 10px; border: none; border-radius: 4px; background: #0284c7; color: #fff; font-size: 11px; font-weight: 600; cursor: pointer; }
+    .btn-save:hover { background: #0369a1; }
+    .btn-cancel { padding: 4px 10px; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff; color: #475569; font-size: 11px; cursor: pointer; }
     .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
     .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
     .page-footer a { color: #0284c7; text-decoration: none; }
     .page-footer a:hover { text-decoration: underline; }
-    @media (max-width: 600px) { .container { padding: 16px; } .page-header h1 { font-size: 20px; } }
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .main-content { margin-left: 0; padding: 16px; }
+    }
   </style>
 </head>
 <body>
-<div class="container">
-  <a class="back-link" href="../index.html">← 返回首页</a>
-  <div class="page-header">
-    <h1>跨境政策日报</h1>
-    <div class="date-line">2026年6月24日（周三） · 近24小时跨境政策变化</div>
-  </div>
+<div class="layout">
 
-  <div class="stats-row">
-    <div class="stat-chip danger"><span class="stat-num">3</span>🔴 紧急</div>
-    <div class="stat-chip warn"><span class="stat-num">4</span>🟡 关注</div>
-    <div class="stat-chip platform"><span class="stat-num">6</span>涉事平台/机构</div>
-  </div>
+  <!-- ===== Left Sidebar ===== -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h1>跨境政策日报</h1>
+      <div class="version">Policy Daily v2.1</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">📌 今日概览</div>
+        <a class="nav-item" href="#platform">平台政策 <span class="nav-count danger">3🔴</span></a>
+        <a class="nav-item" href="#compliance">合规/税务 <span class="nav-count warn">9🟡</span></a>
+        <a class="nav-item" href="#market">物流/市场 <span class="nav-count info">7🟢</span></a>
+        <a class="nav-item" href="#reminders">合规提醒 <span class="nav-count danger">6</span></a>
+      </div>
+      <div class="nav-divider"></div>
 
-  <div class="compliance-banner">
-    <div class="banner-title">⚡ 近期关键时间节点</div>
-    <ul>
-    <li><span class="date-tag">6/25</span> 🟡 Lazada泰国站市场服务费上调</li>
-    <li><span class="date-tag">6/26</span> 🟡 TikTok Shop拍卖日(3%佣金减免)</li>
-    <li><span class="date-tag">6/28</span> 🟡 eBay统一配送模式生效</li>
-    <li><span class="date-tag">6/29</span> 🟡 Amazon自配送处理时间新规 + 关闭Contact Buyer</li>
-    <li><span class="date-tag">6/30</span> 🔴 Amazon美站/欧洲站COO原产地强制填报 + EUDR + 海关78号 + FBA容量 + Temu德国EPR + TikTok泰国TISI + 🟡 SHEIN美区限制自发货</li>
-    <li><span class="date-tag">7/1</span> 🔴 欧盟€150免税取消 + €3统一征税 + 非欧盟海关数据 + 837号令 + 加州纺织品EPR + Shopee越南1%所得税代扣</li>
-    <li><span class="date-tag">7/6</span> 🟡 Amazon SFP配送速度指标更新</li>
-    <li><span class="date-tag">7/7</span> 🔴 美国301关税公开听证会</li>
-    <li><span class="date-tag">7/8</span> 🔴 CPSC eFiling强制电子备案（罚款上限$12万）</li>
-    <li><span class="date-tag">7/10</span> 🟡 Lazada非商城商家默认激活1%平台金币折扣</li>
-    <li><span class="date-tag">7/27</span> 🔴 Amazon标题75字符限制强制执行</li>
-    <li><span class="date-tag">7/20</span> 🟡 美客多墨西哥RFC未完成预扣税率36%</li>
-    <li><span class="date-tag">7/23</span> 🟡 CPSC第三方实验室审查最终规定生效</li>
-    <li><span class="date-tag">8/2</span> 🟡 欧盟AI新规：电商Deepfake须标注</li>
-    <li><span class="date-tag">8/12</span> 🟡 欧盟PPWR包装法强制生效</li>
-    <li><span class="date-tag">8/26</span> 🟡 TikTok Shop共资包邮计划(CFFS)启动</li>
-    <li><span class="date-tag">11/1</span> 🟡 欧盟FBA货件额外加收€2海关手续费</li>
-    <li><span class="date-tag">~9月</span> 🔴 CBP"加强海关执法"IOR新规细则落地</li>
-    </ul>
-  </div>
+      <div class="archive-section">
+        <div class="archive-section-title">📅 历史归档 / Archives</div>
+        <details class="archive-month" open>
+          <summary><span class="month-info">2026年06月</span><span class="month-stats">24天 / 204条</span></summary>
+          <a class="archive-day" href="./20260624.html">2026-06-24 <span class="day-count">22条</span></a>
+          <a class="archive-day" href="./20260623.html">2026-06-23 <span class="day-count">6条</span></a>
+          <a class="archive-day" href="./20260622.html">2026-06-22 <span class="day-count">6条</span></a>
+          <a class="archive-day" href="./20260621.html">2026-06-21 <span class="day-count">7条</span></a>
+          <a class="archive-day" href="./20260620.html">2026-06-20 <span class="day-count">5条</span></a>
+          <a class="archive-day" href="./20260619.html">2026-06-19 <span class="day-count">7条</span></a>
+          <a class="archive-day" href="./20260618.html">2026-06-18 <span class="day-count">9条</span></a>
+          <a class="archive-day" href="./20260617.html">2026-06-17 <span class="day-count">8条</span></a>
+          <a class="archive-day" href="./20260616.html">2026-06-16 <span class="day-count">9条</span></a>
+          <a class="archive-day" href="./20260615.html">2026-06-15 <span class="day-count">6条</span></a>
+          <a class="archive-day" href="./20260614.html">2026-06-14 <span class="day-count">7条</span></a>
+          <a class="archive-day" href="./20260613.html">2026-06-13 <span class="day-count">11条</span></a>
+          <a class="archive-day" href="./20260612.html">2026-06-12 <span class="day-count">9条</span></a>
+          <a class="archive-day" href="./20260611.html">2026-06-11 <span class="day-count">9条</span></a>
+          <a class="archive-day" href="./20260610.html">2026-06-10 <span class="day-count">8条</span></a>
+          <a class="archive-day" href="./20260609.html">2026-06-09 <span class="day-count">10条</span></a>
+          <a class="archive-day" href="./20260608.html">2026-06-08 <span class="day-count">10条</span></a>
+          <a class="archive-day" href="./20260607.html">2026-06-07 <span class="day-count">7条</span></a>
+          <a class="archive-day" href="./20260606.html">2026-06-06 <span class="day-count">9条</span></a>
+          <a class="archive-day" href="./20260605.html">2026-06-05 <span class="day-count">9条</span></a>
+          <a class="archive-day" href="./20260604.html">2026-06-04 <span class="day-count">18条</span></a>
+          <a class="archive-day" href="./20260603.html">2026-06-03 <span class="day-count">14条</span></a>
+          <a class="archive-day" href="./20260602.html">2026-06-02 <span class="day-count">11条</span></a>
+          <a class="archive-day" href="./20260601.html">2026-06-01 <span class="day-count">10条</span></a>
+        </details>
+        <details class="archive-month">
+          <summary><span class="month-info">2026年05月</span><span class="month-stats">19天 / 232条</span></summary>
+          <a class="archive-day" href="./20260531.html">2026-05-31 <span class="day-count">12条</span></a>
+          <a class="archive-day" href="./20260530.html">2026-05-30 <span class="day-count">15条</span></a>
+          <a class="archive-day" href="./20260529.html">2026-05-29 <span class="day-count">12条</span></a>
+          <a class="archive-day" href="./20260528.html">2026-05-28 <span class="day-count">10条</span></a>
+          <a class="archive-day" href="./20260527.html">2026-05-27 <span class="day-count">9条</span></a>
+          <a class="archive-day" href="./20260526.html">2026-05-26 <span class="day-count">10条</span></a>
+          <a class="archive-day" href="./20260525.html">2026-05-25 <span class="day-count">7条</span></a>
+          <a class="archive-day" href="./20260524.html">2026-05-24 <span class="day-count">6条</span></a>
+          <a class="archive-day" href="./20260523.html">2026-05-23 <span class="day-count">11条</span></a>
+          <a class="archive-day" href="./20260522.html">2026-05-22 <span class="day-count">10条</span></a>
+          <a class="archive-day" href="./20260521.html">2026-05-21 <span class="day-count">10条</span></a>
+          <a class="archive-day" href="./20260520.html">2026-05-20 <span class="day-count">10条</span></a>
+          <a class="archive-day" href="./20260519.html">2026-05-19 <span class="day-count">10条</span></a>
+          <a class="archive-day" href="./20260518.html">2026-05-18 <span class="day-count">11条</span></a>
+          <a class="archive-day" href="./20260517.html">2026-05-17 <span class="day-count">10条</span></a>
+          <a class="archive-day" href="./20260516.html">2026-05-16 <span class="day-count">14条</span></a>
+          <a class="archive-day" href="./20260515.html">2026-05-15 <span class="day-count">18条</span></a>
+          <a class="archive-day" href="./20260514.html">2026-05-14 <span class="day-count">18条</span></a>
+          <a class="archive-day" href="./20260513.html">2026-05-13 <span class="day-count">10条</span></a>
+        </details>
+      </div>
 
-  <!-- Platform Policies -->
-  <section class="section-block">
-    <div class="section-header">
-      <h2>🛒 平台政策</h2>
-      <span class="section-badge badge-danger">3紧急</span><span class="section-badge badge-warn">3关注</span>
+      <div class="nav-divider"></div>
+      <a class="nav-item" href="#sources" style="font-size:12px;">📡 信息源配置 <span class="nav-count">33</span></a>
+      <div style="padding:12px 24px;">
+        <a href="../index.html" style="color:#38bdf8;font-size:12px;text-decoration:none;">← 返回首页</a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ===== Main Content ===== -->
+  <main class="main-content">
+
+    <div class="content-header">
+      <h1>跨境政策日报</h1>
+      <div class="date-line">数据日期: <span class="date-val">2026年6月24日（周三）</span> <span class="update-time">08:00 更新</span></div>
     </div>
 
-    <div class="policy-card card-danger">
-      <div class="card-top"><span class="platform-tag tag-logistics">DHL/物流</span><span class="urgency-badge danger">🔴 紧急</span></div>
-      <div class="card-title">DHL宣布6/24起暂停发往欧盟Globalmail含商品运单<span class="new-tag">NEW</span></div>
-      <div class="five-elements">
-        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">DHL因欧盟7/1取消€150以下低值包裹关税豁免并要求DDP模式，Globalmail服务暂不具备DDP能力，6/24起暂停发往欧盟含商品运单；6/23为最后收件日；文件及印刷品不受影响；DHL Express正常承运。DDP解决方案开发中，上线时间未公布</span></div>
-        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">使用DHL Globalmail发往欧盟的跨境卖家；依赖邮政小包直邮欧洲的中小卖家</span></div>
-        <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/24起暂停（6/23最后收件日）</span></div>
-        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①立即检查在途DHL Globalmail运单状态 ②改用DHL Express或其他具备DDP能力的物流渠道 ③关注DHL后续DDP解决方案开发进度 ④评估替代物流方案成本和时效</span></div>
-      </div>
-      <div class="action-checklist">
-        <div class="checklist-title">🎯 3步行动清单</div>
-        <div class="checklist-item">今天：检查所有在途/待发DHL Globalmail运单，6/23为最后收件日</div>
-        <div class="checklist-item">明天前：联系DHL或货代确认替代方案（DHL Express/其他DDP渠道）</div>
-        <div class="checklist-item">本周内：完成物流渠道切换测试，确保7/1前全部改用DDP合规渠道</div>
-      </div>
-      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/684418.html" target="_blank">亿邦动力</a></div>
+    <div class="stats-row">
+      <div class="stat-chip danger"><span class="stat-num">3</span>🔴 紧急</div>
+      <div class="stat-chip warn"><span class="stat-num">12</span>🟡 关注</div>
+      <div class="stat-chip info"><span class="stat-num">7</span>🟢 参考</div>
+      <div class="stat-chip platform"><span class="stat-num">14</span>涉事平台/机构</div>
     </div>
 
-    <div class="policy-card card-danger">
-      <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇪🇺</span><span class="urgency-badge danger">🔴 紧急</span></div>
-      <div class="card-title">欧洲站FBM直邮7/1起仅限授权物流+IOSS校验强化+DDP强制<span class="new-tag">NEW</span></div>
-      <div class="five-elements">
-        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊欧洲站7/1起：①FBM直邮小包必须通过授权承运商名录内渠道履约 ②自由文本承运商输入不再可用 ③发货须绑定ASIN与IOSS税号完成系统校验 ④不合规订单消费者被重复征税，关税赔付失效，损失卖家承担 ⑤所有订单必须DDP方式发货，DDU属政策违规 ⑥FBA远程配送前台售价自动叠加€3关税+增值税。关税按商品类别(非包裹)征收，多品类包裹成本更高(3品类=€9)；11/1再加€2处理费</span></div>
-        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有非欧盟国家向欧洲站直邮的FBM卖家；使用远程配送的FBA卖家</span></div>
-        <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">7/1正式生效，距仅7天</span></div>
-        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①确认物流商是否在授权承运商名单内 ②更新发货流程绑定ASIN与IOSS税号 ③改用DDP发货(禁用DDU) ④FBA远程配送ASIN用收入计算器查看含税售价 ⑤评估本地入仓vs直邮成本差异(本地可省€3+获更优配送费率) ⑥低客单价产品重新核算利润</span></div>
-      </div>
-      <div class="action-checklist">
-        <div class="checklist-title">🎯 3步行动清单</div>
-        <div class="checklist-item">今天：登录卖家后台→管理订单→查看跨境订单授权承运商列表，确认现有物流商</div>
-        <div class="checklist-item">明天前：联系物流商确认IOSS/ASIN数据传输方式和DDP能力，不满足的立即切换</div>
-        <div class="checklist-item">6/28前：完成所有欧洲站FBM SKU发货流程更新测试，确保7/1正常确认发货</div>
-      </div>
-      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpzqrvwf7k00" target="_blank">卖家之家</a> · <a href="https://m.ebrun.com/ebrungo/zb/684414.html" target="_blank">亿邦动力</a> · <a href="https://m.mjzj.com/article/fpyljp88j08w" target="_blank">卖家之家</a></div>
+    <!-- Compliance Banner: Timeline sorted 🔴 first then 🟡, by date ascending -->
+    <div class="compliance-banner">
+      <div class="banner-title">⚡ 近期关键时间节点</div>
+      <ul>
+        <li><span class="date-tag">6/30</span> 🔴 Amazon美站/欧洲站COO原产地强制填报 + EUDR零毁林宽限期 + 海关78号公告 + FBA基础容量制度 + Temu德国站EPR + TikTok Shop泰国TISI</li>
+        <li><span class="date-tag">7/1</span> 🔴 欧盟€150免税取消 + €3统一征税 + 非欧盟FBA/FBM订单须提供完整海关数据 + 国务院837号令 + 加州纺织品EPR + Shopee越南1%所得税代扣</li>
+        <li><span class="date-tag">7/7</span> 🔴 美国301关税公开听证会</li>
+        <li><span class="date-tag">7/8</span> 🔴 CPSC eFiling强制电子备案（单次违规罚款上限$12万）</li>
+        <li><span class="date-tag">7/27</span> 🔴 Amazon产品标题75字符限制强制执行（AI自动替换）</li>
+        <li><span class="date-tag">~9月</span> 🔴 CBP"加强海关执法"行政令IOR新规细则落地</li>
+        <li><span class="date-tag">6/25</span> 🟡 Lazada泰国站市场服务费上调</li>
+        <li><span class="date-tag">6/26</span> 🟡 TikTok Shop拍卖日(3%佣金减免)</li>
+        <li><span class="date-tag">6/28</span> 🟡 eBay统一配送模式生效</li>
+        <li><span class="date-tag">6/29</span> 🟡 Amazon自配送处理时间新规生效 + 永久关闭Contact Buyer</li>
+        <li><span class="date-tag">7/2</span> 🟡 Lazada收取退货运费</li>
+        <li><span class="date-tag">7/6</span> 🟡 Amazon SFP配送速度指标更新</li>
+        <li><span class="date-tag">7/10</span> 🟡 Lazada非商城商家默认激活1%平台金币折扣</li>
+        <li><span class="date-tag">7/20</span> 🟡 美客多墨西哥RFC未完成预扣税率36%</li>
+        <li><span class="date-tag">7/23</span> 🟡 CPSC第三方实验室审查最终规定生效</li>
+        <li><span class="date-tag">8/2</span> 🟡 欧盟AI新规：电商Deepfake须标注</li>
+        <li><span class="date-tag">8/12</span> 🟡 欧盟PPWR包装法强制生效</li>
+        <li><span class="date-tag">8/26</span> 🟡 TikTok Shop共资包邮计划(CFFS)启动</li>
+        <li><span class="date-tag">11/1</span> 🟡 欧盟FBA货件额外加收€2海关手续费</li>
+      </ul>
     </div>
 
-    <div class="policy-card card-danger">
-      <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge danger">🔴 紧急</span></div>
-      <div class="card-title">英国站店铺休眠管理规则生效：120天限曝光/180天限上架/365天永久关店<span class="new-tag">NEW</span></div>
-      <div class="five-elements">
-        <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">TikTok Shop英国站6/11起实施非活跃及休眠店铺政策：①>120天无有效活动→限制曝光 ②>180天→休眠状态，无法接收新订单 ③>365天→永久停用。平台在90/120/150天发送提醒。内容质量规则同步收紧：禁止AI配音与静态画面，直播静态画面≤50%，可购物视频≥3秒真实动态场景，主播须露脸演示</span></div>
-        <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有TikTok Shop英国站卖家；做直播/短视频带货的卖家</span></div>
-        <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/11已生效</span></div>
-        <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①检查所有英国站店铺活跃状态 ②建立定期运营日历确保120天内有有效操作 ③调整直播/视频素材策略符合内容质量新规 ④长期不用店铺提前做关店或转让决策</span></div>
+    <!-- Executive Summary -->
+    <section class="exec-summary section-block" id="summary">
+      <div class="section-header">
+        <h2>🔥 今日风险大盘（高管摘要视角）</h2>
+        <span class="section-badge badge-danger">22项</span>
       </div>
-      <div class="action-checklist">
-        <div class="checklist-title">🎯 3步行动清单</div>
-        <div class="checklist-item">今天：盘点所有TikTok Shop英国站店铺的最后活跃日期</div>
-        <div class="checklist-item">本周内：为超过60天未操作的店铺安排至少一次登录/编辑/发帖操作</div>
-        <div class="checklist-item">持续：将店铺活跃度检查纳入周运营流程，确保每120天内有有效活动</div>
+      <div class="summary-list">
+        <div class="summary-row"><div class="severity-dot danger"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#dc2626">DHL/物流</span>DHL暂停欧盟Globalmail含商品运单，6/24起生效</div></div></div>
+        <div class="summary-row"><div class="severity-dot danger"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#FF9900">Amazon🇪🇺</span>欧洲站FBM直邮7/1起仅限授权物流+DDP强制</div></div></div>
+        <div class="summary-row"><div class="severity-dot danger"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#000">TikTok Shop</span>英国站休眠管理规则：120天限曝光/365天永久关店</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#000">TikTok Shop</span>智能推广6/22起按GMV抽3.5%收费</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#000">TikTok Shop</span>东南亚准入放宽（单执照25店）+强制极兔仓配</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#0f146d">Lazada</span>泰国站6/25起按品类差异化上调市场服务费至5.5%–14%</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#d41920">越南/Shopee</span>电商法修订7/1生效+Shopee代扣1%企业所得税</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#E85D2C">Temu/欧盟</span>欧盟2亿欧元DSA罚单，首次对超大型在线平台重大处罚</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#000">TikTok Shop</span>东南亚跨境直发履约时效：48h打包+3天交寄</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#000">TikTok Shop</span>美国站限制可购物内容：每日30条视频+60条图文</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#0f146d">Lazada</span>7/2起收取退货运费</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#96bf48">Shopify</span>全面停售电子烟+开放AI代理购物</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#e43225">AliExpress</span>新版用户协议7/1生效</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#EE4D2D">Shopee</span>强化跨境尖锐易碎品包装规范</div></div></div>
+        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#ff0000">印尼</span>NIB准入强制+7月起电商平台代扣0.5%所得税</div></div></div>
+        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#FF9900">Amazon/税务</span>报税新规：中国卖家强制申报，平台每季度向税局报送</div></div></div>
+        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#f36c21">荷兰/欧盟</span>放弃对华包裹2欧元征税，等待欧盟统一税制</div></div></div>
+        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#007749">南非</span>9/20起对中国25类商品PVoC验证</div></div></div>
+        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#FF9900">Amazon</span>Prime Day 6/23-26正式开启，预计线上销售263亿美元</div></div></div>
+        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#dc2626">物流</span>美线货量环比+26%，运价突破5100美元/FEU</div></div></div>
+        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#0071DC">Walmart</span>收购CTV广告平台Vibe.co</div></div></div>
+        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#1a4480">CPSC</span>eFiling 7/8强制电子备案，无备案无法清关</div></div></div>
       </div>
-      <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/684413.html" target="_blank">亿邦动力</a></div>
-    </div>
-      <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7654430484776124928/" target="_blank">VioMall</a></div>
-    </div>
-      <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">网易跨境电商日报</a></div>
-    </div>
-  </section>
+    </section>
 
-  <div class="page-footer">
-    <div class="footer-divider"></div>
-    <div>📊 数据来源：卖家之家 / 亿邦动力 / 雨果跨境（28个配置信息源）</div>
-    <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
-    <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
-  </div>
+    <!-- ===== Platform Policies ===== -->
+    <section class="section-block" id="platform">
+      <div class="section-header">
+        <h2>🛒 平台政策</h2>
+        <span class="section-badge badge-danger">3紧急</span><span class="section-badge badge-warn">3关注</span>
+      </div>
+
+      <!-- 🔴 DHL -->
+      <div class="policy-card card-danger">
+        <div class="card-top"><span class="platform-tag tag-logistics">DHL/物流</span><span class="urgency-badge danger">🔴 紧急</span></div>
+        <div class="card-title">DHL宣布6/24起暂停发往欧盟Globalmail含商品运单<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">DHL因欧盟7/1取消€150以下低值包裹关税豁免并要求DDP模式，Globalmail暂不具备DDP能力，6/24起暂停发往欧盟含商品运单；6/23为最后收件日，此后创建的运单将被退回；文件及印刷品不受影响；DHL Express国际快递产品正常承运欧盟货物</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">使用DHL Globalmail发往欧盟的跨境卖家；依赖邮政小包直邮欧洲的中小卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/24起暂停（6/23最后收件日）</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①立即检查在途DHL Globalmail运单状态 ②改用DHL Express或其他具备DDP能力的物流渠道 ③关注DHL后续DDP解决方案开发进度 ④评估其他物流替代方案的成本和时效</span></div>
+        </div>
+        <div class="action-checklist">
+          <div class="checklist-title">🎯 3步行动清单</div>
+          <div class="checklist-item">今天：检查所有在途/待发DHL Globalmail运单，6/23为最后收件日</div>
+          <div class="checklist-item">明天前：联系DHL或货代确认替代方案（DHL Express/其他DDP渠道）</div>
+          <div class="checklist-item">本周内：完成物流渠道切换测试，确保7/1前全部改用DDP合规渠道</div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/684418.html" target="_blank">亿邦动力</a></div>
+      </div>
+
+      <!-- 🔴 Amazon EU FBM -->
+      <div class="policy-card card-danger">
+        <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇪🇺</span><span class="urgency-badge danger">🔴 紧急</span></div>
+        <div class="card-title">欧洲站FBM直邮7/1起仅限授权物流承运商+IOSS校验强化+DDP强制<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊欧洲站7/1起：①FBM直邮小包必须通过授权承运商名录内渠道 ②自由文本承运商输入功能不再可用 ③发货须绑定ASIN与IOSS税号完成系统校验 ④不合规订单消费者被重复征税，关税赔付失效，损失卖家全额承担 ⑤所有订单必须DDP方式发货，DDU属政策违规 ⑥FBA远程配送前台售价自动叠加€3关税+增值税。关税按商品类别(非包裹)征收，多品类包裹成本更高(3品类=€9)；11/1再加€2处理费</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有非欧盟国家向欧洲站直邮的FBM卖家；使用远程配送的FBA卖家（消费者看到的价格将更高）</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">7/1正式生效，距仅7天</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①确认物流商是否在授权承运商名单内 ②更新发货流程绑定ASIN与IOSS税号 ③改用DDP发货(禁用DDU) ④FBA远程配送ASIN用收入计算器查看含税售价 ⑤评估本地入仓vs直邮成本差异(本地可省€3+获更优配送费率) ⑥低客单价产品重新核算利润模型</span></div>
+        </div>
+        <div class="action-checklist">
+          <div class="checklist-title">🎯 3步行动清单</div>
+          <div class="checklist-item">今天：登录卖家后台→管理订单→选择跨境订单→查看最新授权承运商列表，确认现有物流商是否在列</div>
+          <div class="checklist-item">明天前：联系物流商确认IOSS/ASIN数据传输方式和DDP能力，不满足要求的立即切换</div>
+          <div class="checklist-item">6/28前：完成所有欧洲站FBM SKU的发货流程更新测试，确保7/1能正常确认发货</div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpzqrvwf7k00" target="_blank">卖家之家</a> · <a href="https://m.ebrun.com/ebrungo/zb/684414.html" target="_blank">亿邦动力</a> · <a href="https://m.mjzj.com/article/fpyljp88j08w" target="_blank">卖家之家</a></div>
+      </div>
+
+      <!-- 🔴 TikTok Shop UK -->
+      <div class="policy-card card-danger">
+        <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge danger">🔴 紧急</span></div>
+        <div class="card-title">英国站店铺休眠管理规则：120天限曝光/180天限上架/365天永久关店<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6/11起正式实施非活跃及休眠店铺政策：①超过120天无任何有效活动→限制曝光 ②超过180天→进入休眠状态，无法接收新订单 ③超过365天→永久停用。平台在最后登录后第90/120/150天发送提醒通知。同时内容质量规则收紧：禁止AI配音与静态画面，直播静态画面不能超50%，可购物视频至少3秒真实动态场景，主播须露脸演示</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有TikTok Shop英国站卖家；做直播/短视频带货的卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/11已生效</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①立即检查所有TikTok Shop英国站店铺的活跃状态 ②建立定期运营日历确保120天内有有效操作 ③调整直播/视频素材策略，确保符合内容质量新规 ④对可能长期不用的店铺提前做关店或转让决策</span></div>
+        </div>
+        <div class="action-checklist">
+          <div class="checklist-title">🎯 3步行动清单</div>
+          <div class="checklist-item">今天：盘点所有TikTok Shop英国站店铺的最后活跃日期</div>
+          <div class="checklist-item">本周内：为超过60天未操作的店铺安排至少一次登录/编辑/发帖操作</div>
+          <div class="checklist-item">持续：将店铺活跃度检查纳入周运营流程，确保每120天内有有效活动</div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/684413.html" target="_blank">亿邦动力</a></div>
+      </div>
+
+      <!-- 🟡 TikTok Shop Smart Promotion -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">智能推广(Smart Promotion)6/22起正式收费，按店铺全部GMV抽3.5%<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6/22起从免费转正式收费，按店铺全部GMV抽3.5%。卖家可随时退出(当月折扣保障失效)，也可通过AM把特定商品加入"黑名单"剔除出计费基数。月GMV 10万美元店铺月增成本约$3,500，白牌/铺货冲击最大。叠加Account Health Rating 7月全面取代违规积分制</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有使用TikTok Shop智能推广的卖家；白牌铺货型卖家冲击最大</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/22已生效</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①评估智能推广带来的实际增量是否覆盖3.5%抽佣成本 ②考虑退出并将预算转向自主投放广告 ③将低毛利SKU加入黑名单剔除计费基数 ④关注7月AHR全面实施的影响</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpyogggiafpc" target="_blank">卖家之家</a></div>
+      </div>
+
+      <!-- 🟡 TikTok Shop SE Asia -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">东南亚放宽准入：单执照最多开25家店+新店90天保证金豁免；强制接入极兔官方仓配<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">两重调整：①放宽准入：单一营业执照最多可开设25家东南亚店铺，新店享90天保证金豁免 ②强制履约：商家须强制接入极兔七国官方仓配体系，非官方物流自发货模式店铺流量持续被压缩，采用本土仓配的商家获定向流量扶持。同时平台强化虚假标价治理，违规行为按全年销售额10%扣除保证金</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">东南亚跨境卖家；计划拓展东南亚多店运营的卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已生效</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①评估多店运营机会(单执照最多25家) ②尽快对接极兔官方仓配体系避免流量损失 ③核实所有商品标价合规性避免10%保证金扣除 ④关注90天保证金豁免窗口期</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/684413.html" target="_blank">亿邦动力</a></div>
+      </div>
+
+      <!-- 🟡 Lazada Thailand -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-lazada">Lazada</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">泰国站6/25起按品类差异化上调市场服务费(5.5%–14%)<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6/25零点起按品类差异化上调市场服务费至5.5%–14%区间；7/10起非商城商家默认激活1%平台金币折扣(可自主提至2%解锁额外权益，不影响LazMall身份但直接改写定价模型)</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Lazada泰国站所有卖家；FMCG/时尚/电子低溢价SKU最容易无声亏</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/25生效（剩1天）</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①今天把各SKU"毛利-服务费-退率"重跑一次 ②非Mall店本周末前调整定价 ③评估金币折扣对利润的影响</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpyogggiafpc" target="_blank">卖家之家</a></div>
+      </div>
+    </section>
+
+    <!-- ===== Compliance / Tax ===== -->
+    <section class="section-block" id="compliance">
+      <div class="section-header">
+        <h2>🏷️ 合规/税务</h2>
+        <span class="section-badge badge-warn">6关注</span><span class="section-badge badge-info">3参考</span>
+      </div>
+
+      <!-- 🟡 Vietnam -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-vietnam">越南/Shopee</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">越南《电子商务法》修订版7/1生效：Shopee越南站同步代扣1%企业所得税<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">修订版7/1生效：①直播带货须实名认证+内容存证一年 ②Shopee越南站同步代扣代缴1%企业所得税。同时印尼7月起由Shopee/Tokopedia等平台代扣商家成交额0.5%所得税</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">越南站/Shopee越南卖家；东南亚多国运营的卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">7/1生效</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①越南站卖家核实税务登记状态 ②直播带货卖家确保实名认证完成 ③了解1%代扣对利润影响并调整定价</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/682213.html" target="_blank">亿邦动力</a></div>
+      </div>
+
+      <!-- 🟡 Temu DSA -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-temu">Temu/欧盟</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">Temu欧盟2亿欧元DSA罚单—首次对超大型在线平台重大行政处罚<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">欧盟委员会依据《数字服务法》(DSA)对Temu处以2亿欧元罚款，理由是平台未能尽职尽责地识别、分析和评估平台上销售的非法产品所带来的系统性风险。这是DSA生效以来对超大型在线平台的首次重大行政处罚。Temu在欧洲定价约为亚马逊30%至50%</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Temu欧洲站卖家；依赖Temu低价路径的跨境卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已生效</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①评估Temu欧洲站运营合规风险 ②准备产品合规认证材料 ③考虑多平台分散风险</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a> · <a href="http://m.toutiao.com/group/7654736389845615114/" target="_blank">跨境大发哥</a></div>
+      </div>
+
+      <!-- 🟡 TikTok Shop SE Asia Fulfillment -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">东南亚跨境直发履约时效更新：6/22起48h打包+3天交寄<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6/18更新中国直发订单履约规则：揽收/仓库投递模式均需48h内完成打包+后台更新状态，3个日历日内完成交寄。6/22至7/19为过渡降标期，达标门槛临时放宽至原标准的60%</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">TikTok Shop东南亚跨境直发卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/22过渡期开始，7/19正式考核</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①调整ERP自动同步规则及拣货作业节奏 ②测试48h打包+3天交寄流程 ③关注新旧时效计算方式差异避免合规误判</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
+      </div>
+
+      <!-- 🟡 TikTok Shop US Shopping Content -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">美国站限制可购物内容：每日30条视频+60条图文<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">已实施可购物内容发布限制：商家及达人每日最多发布30条可购物短视频和60条可购物图文，平台进一步强化内容质量及合规审核</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">TikTok Shop美国站商家及达人</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已生效</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①优化内容发布策略，注重单条质量而非数量 ②调整达人合作brief中的每日发布上限 ③关注内容审核标准变化</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
+      </div>
+
+      <!-- 🟡 AliExpress -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-aliexpress">AliExpress</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">新版用户协议7/1生效<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">新版《Terms of Use》将于7/1正式生效。平台已于6月初发布更新内容，涉及条款变化及合规要求</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">速卖通跨境卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">7/1生效</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①提前阅读新版条款变化 ②评估对店铺运营的影响 ③关注合规要求调整</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
+      </div>
+
+      <!-- 🟡 Indonesia NIB -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-indonesia">印尼</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">NIB准入强制+7月起电商平台代扣0.5%所得税<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">依据印尼2026年第19号贸易部长条例，Shopee/TikTok Shop等平台商家必须持有NIB方可入驻，平台需对无证商户执行拒绝准入。存量商户18个月整改期，新入驻6个月宽限期。同时7月起由平台代扣商家成交额0.5%所得税，年营收5亿盾以下零税率</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">印尼市场跨境卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">NIB已生效，代扣税7/1起</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①协助本地供应链伙伴尽快完成NIB注册 ②评估0.5%代扣对利润影响 ③关注6个月宽限期</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a> · <a href="http://m.toutiao.com/group/7654736389845615114/" target="_blank">跨境大发哥</a></div>
+      </div>
+
+      <!-- 🟢 Amazon Tax -->
+      <div class="policy-card card-info">
+        <div class="card-top"><span class="platform-tag tag-amazon">Amazon/税务</span><span class="urgency-badge info">🟢 参考</span></div>
+        <div class="card-title">报税新规：中国卖家强制申报，平台每季度向税局报送<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">2026年新规则：中国境内注册卖家全部纳入强制申报范围，平台每季度向中国税务机关报送卖家信息（身份/交易/费用明细），收入确认改为发货时间而非回款时间，计税基数为买家实际支付订单总额</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有中国境内注册的亚马逊卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">2025年7月起已开始按季度报送</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①核对过去两年订单总额与申报数 ②放弃私卡收款/买单出口等灰色操作 ③申请9610或9810模式合规报关</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7654430484776124928/" target="_blank">亿邦动力</a> · <a href="http://m.toutiao.com/group/7654736389845615114/" target="_blank">跨境大发哥</a></div>
+      </div>
+
+      <!-- 🟢 Netherlands -->
+      <div class="policy-card card-info">
+        <div class="card-top"><span class="platform-tag tag-netherlands">荷兰/欧盟</span><span class="urgency-badge info">🟢 参考</span></div>
+        <div class="card-title">荷兰放弃对华包裹2欧元征税，等待欧盟统一税制<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">荷兰政府正式放弃此前拟对中国包裹征收2欧元/件手续费的方案，将等待欧盟统一进口税落地后再执行。目前仅法国落地全国包裹税，其余欧盟国家暂缓单独征税</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">经荷兰中转的跨境小包卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已宣布</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①荷兰直邮短期利好，无需额外2欧元 ②关注欧盟统一税制进展 ③法国站仍需叠加2欧元</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7654783635777667619/" target="_blank">跨境物流百晓生</a> · <a href="http://m.toutiao.com/group/7654736389845615114/" target="_blank">白鲸出海</a></div>
+      </div>
+
+      <!-- 🟢 South Africa -->
+      <div class="policy-card card-info">
+        <div class="card-top"><span class="platform-tag tag-southafrica">南非</span><span class="urgency-badge info">🟢 参考</span></div>
+        <div class="card-title">9/20起对中国25类商品PVoC验证<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">南非政府宣布自9/20起，对家具、建材、汽车零部件等25类中国进口商品实施装运前符合性验证(PVoC)制度</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">出口南非的跨境卖家（家具/建材/汽配品类）</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">9/20生效</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①核实产品是否在25类清单内 ②联系检测机构办理PVoC认证 ③预留认证时间避免清关延误</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
+      </div>
+    </section>
+
+    <!-- ===== Logistics / Market ===== -->
+    <section class="section-block" id="market">
+      <div class="section-header">
+        <h2>📦 物流/市场</h2>
+        <span class="section-badge badge-warn">3关注</span><span class="section-badge badge-info">4参考</span>
+      </div>
+
+      <!-- 🟡 Lazada Return -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-lazada">Lazada</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">7/2起收取退货运费<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">7/2起，针对东南亚跨境站点所有已完成确认收货、买家成功发起退货退款且商品实际退回平台质检仓或商家的订单，向商家收取对应的买家退货运费。费用明细可在卖家后台"退回订单"或"财务-我的收入"中查询</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Lazada东南亚跨境卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">7/2生效</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①提前优化商品质量把控与售后响应机制 ②减少非必要退货以控制逆向物流成本 ③评估退货运费对利润的影响</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7654783635777667619/" target="_blank">跨境物流百晓生</a></div>
+      </div>
+
+      <!-- 🟡 Shopify -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-shopify">Shopify</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">全面停售电子烟+开放AI代理购物<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">禁止平台销售所有电子烟及相关Vape产品（无论是否获FDA授权），与美国监管部门持续打击非法电子烟销售有关。同时开放AI代理购物功能，支持AI助手直接完成商品搜索、比价及下单流程</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Shopify电子烟卖家；使用Shopify建站的所有卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已生效</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①电子烟卖家立即迁移至其他渠道 ②关注AI代理购物对流量和转化率的影响 ③评估AI购物功能对独立站运营的机遇</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
+      </div>
+
+      <!-- 🟡 Shopee Packaging -->
+      <div class="policy-card card-warn">
+        <div class="card-top"><span class="platform-tag tag-shopee">Shopee</span><span class="urgency-badge warn">🟡 关注</span></div>
+        <div class="card-title">强化跨境尖锐易碎品包装规范<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">强化跨境直邮订单中尖锐及易碎类商品包装规范，涵盖餐刀、帐篷桩、修枝剪等品类。要求卖家按标准做防刺穿加固包装，未合规订单或被拦截</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Shopee跨境店尖锐/易碎品类卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已生效</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①核实所有尖锐/易碎品SKU的包装是否符合新规 ②采购防刺穿包装材料 ③关注平台拦截标准避免订单损失</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
+      </div>
+
+      <!-- 🟢 Prime Day -->
+      <div class="policy-card card-info">
+        <div class="card-top"><span class="platform-tag tag-amazon">Amazon</span><span class="urgency-badge info">🟢 参考</span></div>
+        <div class="card-title">Prime Day 6/23-26正式开启，预计线上销售263亿美元<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">第12届Prime Day 6/23-26举行，首次提前至6月。Adobe预测线上销售263亿美元同比+9%，美银预计亚马逊GMV约216亿美元同比+5%。沃尔玛Walmart Deals 6/22-28、Target Circle Deal Days 6/23-26同步促销</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有亚马逊卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/23-26进行中</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①监控竞品BSR变化调整PPC ②Day 2-3检查Coupon效果 ③厨房品类搜索量Day 1-2最高</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7654736389845615114/" target="_blank">跨境大发哥</a> · <a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
+      </div>
+
+      <!-- 🟢 Freight -->
+      <div class="policy-card card-info">
+        <div class="card-top"><span class="platform-tag tag-logistics">物流</span><span class="urgency-badge info">🟢 参考</span></div>
+        <div class="card-title">美线货量环比+26%，运价突破5100美元/FEU<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">FreightWaves数据显示6月上半月中国至美国集装箱货量环比增长26%，创春节以来最大半月增幅。SCFI综合指数升至3121.69点，美西/美东航线即期运价分别突破5100/6300美元/FEU</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">美线FBA补货卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">当前</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①评估当前运价对补货成本影响 ②考虑提前锁定舱位 ③关注后续运价走势</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
+      </div>
+
+      <!-- 🟢 Walmart -->
+      <div class="policy-card card-info">
+        <div class="card-top"><span class="platform-tag tag-walmart">Walmart</span><span class="urgency-badge info">🟢 参考</span></div>
+        <div class="card-title">收购CTV广告平台Vibe.co<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">沃尔玛宣布收购联网电视广告平台Vibe.co，以增强Walmart Connect广告业务能力，进一步拓展中小商家及品牌广告市场</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Walmart卖家；使用Walmart Connect的广告主</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已宣布</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①关注Walmart Connect广告产品更新 ②评估CTV广告对品牌曝光的价值 ③对比Amazon DSP/Walmart Connect广告效率</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
+      </div>
+
+      <!-- 🟢 CPSC -->
+      <div class="policy-card card-info">
+        <div class="card-top"><span class="platform-tag tag-cpsc">CPSC</span><span class="urgency-badge info">🟢 参考</span></div>
+        <div class="card-title">eFiling 7/8强制电子备案，无备案无法清关<span class="new-tag">NEW</span></div>
+        <div class="five-elements">
+          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">7/8起，受监管的进口消费品必须在清关前完成官方系统电子备案(eFiling)，彻底淘汰纸质证书模式。CPC(儿童产品)和GCC(通用消费品)两大证书均需在线申报，无电子备案=无法清关。2027/1/8起自贸区商品同步执行</span></div>
+          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有输美消费品卖家</span></div>
+          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">7/8强制执行</span></div>
+          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①使用CPSC Regulatory Robot完成产品判定 ②补齐CPC/GCC检测资质 ③对接报关行确认eFiling流程 ④建立合规资料台账</span></div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span><a href="https://cpsc.gov/eFiling" target="_blank">CPSC官网</a> · <a href="https://m.sohu.com/a/1040472608_121455366/" target="_blank">搜狐</a></div>
+      </div>
+    </section>
+
+    <!-- ===== Compliance Reminders ===== -->
+    <section class="section-block" id="reminders">
+      <div class="section-header">
+        <h2>⚠️ 近期需注意的合规事项</h2>
+      </div>
+      <div class="compliance-reminders">
+        <ul>
+          <li>DHL Globalmail暂停欧盟商品运单，使用该渠道的卖家需立即切换物流方案</li>
+          <li>欧盟7/1关税新政倒计时7天，FBM卖家必须确认授权承运商+DDP能力+IOSS绑定</li>
+          <li>COO原产地信息6/30截止，距仅6天，未填写的Listing将被限制销售</li>
+          <li>自配送6/29处理时间新规生效，必须开启AHT或确保手动设置与实际一致</li>
+          <li>TikTok Shop英国站休眠规则已生效，长期不活跃店铺将被逐步关停</li>
+          <li>CPSC eFiling 7/8强制实施，输美消费品需提前准备CPC/GCC+ACE系统申报</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Info Sources Config ===== -->
+    <section class="section-block" id="sources">
+      <div class="section-header">
+        <h2>📡 信息源配置</h2>
+        <span class="section-badge badge-warn" id="sources-count">33个来源</span>
+      </div>
+      <div class="sources-toolbar">
+        <div class="sources-toolbar-hint">管理数据采集源，启用/禁用后下次更新生效</div>
+        <div class="sources-toolbar-actions">
+          <button class="btn-reset" onclick="resetSources()">重置默认</button>
+          <button class="btn-add" onclick="addSourceRow()">+ 新增源</button>
+        </div>
+      </div>
+      <div class="sources-table-wrap">
+        <table class="sources-table">
+          <thead><tr><th>渠道</th><th>名称</th><th>URL</th><th>域名</th><th>启用</th><th></th></tr></thead>
+          <tbody id="sources-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="page-footer">
+      <div class="footer-divider"></div>
+      <div>📊 数据来源：卖家之家 / 亿邦动力 / 雨果跨境（33个信息源）</div>
+      <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
+      <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+    </div>
+
+  </main>
 </div>
+<script>
+const DEFAULT_SOURCES = [
+  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'卖家新闻',url:'https://sellercentral.amazon.com/news',domain:'sellercentral.amazon.com'},
+  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'官方新闻中心',url:'https://press.aboutamazon.com',domain:'press.aboutamazon.com'},
+  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'卖家官方论坛（美区 Bug 哨所）',url:'https://sellercentral.amazon.com/forums',domain:'sellercentral.amazon.com'},
+  {ch:'Amazon🇪🇺',chColor:'#FF9900',name:'卖家中心（德国站）',url:'https://sellercentral.amazon.de',domain:'sellercentral.amazon.de'},
+  {ch:'Amazon🇪🇺',chColor:'#FF9900',name:'卖家中心（英国站）',url:'https://sellercentral.amazon.co.uk',domain:'sellercentral.amazon.co.uk'},
+  {ch:'Amazon🇯🇵',chColor:'#FF9900',name:'卖家中心（日本站）',url:'https://sellercentral.amazon.co.jp',domain:'sellercentral.amazon.co.jp'},
+  {ch:'Amazon',chColor:'#FF9900',name:'全球公告（Sell.amazon）',url:'https://sell.amazon.com/blog/announcements',domain:'sell.amazon.com'},
+  {ch:'Walmart',chColor:'#0071DC',name:'商家新闻',url:'https://marketplace.walmart.com/news',domain:'marketplace.walmart.com'},
+  {ch:'Walmart',chColor:'#0071DC',name:'API 变更日志',url:'https://developer.walmart.com/us-marketplace/page/whats-new',domain:'developer.walmart.com'},
+  {ch:'Target',chColor:'#CC0000',name:'Target Plus 入驻与政策',url:'https://plus.target.com/sell',domain:'plus.target.com'},
+  {ch:'TikTok Shop',chColor:'#000000',name:'官方大学与政策中心',url:'https://seller.tiktok.com/university/policy',domain:'seller.tiktok.com'},
+  {ch:'TikTok Shop',chColor:'#000000',name:'全球新闻中心',url:'https://seller.tiktokglobalshop.com/business/en/newsroom',domain:'seller.tiktokglobalshop.com'},
+  {ch:'TEMU',chColor:'#E85D2C',name:'跨境卖家中心',url:'https://seller.kuajingmaihuo.com',domain:'seller.kuajingmaihuo.com'},
+  {ch:'官方机构',chColor:'#dc2626',name:'美国海关 CBP CSMS 货运消息系统',url:'https://www.cbp.gov/trade/automated',domain:'cbp.gov'},
+  {ch:'官方机构',chColor:'#dc2626',name:'美国 FDA 食品与补充剂监管局',url:'https://www.fda.gov/food',domain:'fda.gov'},
+  {ch:'官方机构',chColor:'#dc2626',name:'美国 CPSC 消费品安全委员会',url:'https://www.cpsc.gov/Newsroom',domain:'cpsc.gov'},
+  {ch:'官方机构',chColor:'#dc2626',name:'美国加州 Prop 65 环保标签局',url:'https://oehha.ca.gov/proposition-65',domain:'oehha.ca.gov'},
+  {ch:'欧盟',chColor:'#003399',name:'欧盟税务与海关总署',url:'https://taxation-customs.ec.europa.eu',domain:'ec.europa.eu'},
+  {ch:'欧盟',chColor:'#003399',name:'欧盟 Safety Gate 安全门',url:'https://ec.europa.eu/consumers/consumers_safety/safety_products/rapex',domain:'ec.europa.eu'},
+  {ch:'德国',chColor:'#1d4ed8',name:'德国 WEEE 注册局（Stiftung EAR）',url:'https://www.stiftung-ear.de',domain:'stiftung-ear.de'},
+  {ch:'德国',chColor:'#1d4ed8',name:'德国 LUCID 包装法注册局',url:'https://www.verpackungsregister.org',domain:'verpackungsregister.org'},
+  {ch:'日本',chColor:'#C41E3A',name:'日本経済産業省 METI',url:'https://www.meti.go.jp',domain:'meti.go.jp'},
+  {ch:'Amazon',chColor:'#FF9900',name:'SP-API 变更日志',url:'https://developer-docs.amazon.com/sp-api/changelog',domain:'developer-docs.amazon.com'},
+  {ch:'航运',chColor:'#0d9488',name:'上海航运交易所',url:'https://www.sse.net.cn',domain:'sse.net.cn'},
+  {ch:'行业社区',chColor:'#7c3aed',name:'知无不言',url:'https://www.wearesellers.com',domain:'wearesellers.com'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'卖家之家',url:'https://mjzj.com',domain:'mjzj.com'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'雨果跨境',url:'https://cifnews.com',domain:'cifnews.com'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'亿邦动力',url:'https://ebrun.com',domain:'ebrun.com'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'至美通（北美/欧盟政策+物流）',url:'https://www.chinatotop.com',domain:'chinatotop.com'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'跨境大发哥（全平台政策+税务）',url:'https://m.toutiao.com/search/?keyword=跨境大发哥',domain:'toutiao.com'},
+  {ch:'航运',chColor:'#0d9488',name:'WL123跨境导航（物流+关税+清关）',url:'https://www.wl123.com',domain:'wl123.com'},
+  {ch:'行业媒体',chColor:'#7c3aed',name:'白鲸出海（东南亚+欧洲政策）',url:'https://www.baijingapp.com',domain:'baijingapp.com'},
+  {ch:'航运',chColor:'#0d9488',name:'跨境物流百晓生（运价+航线+物流）',url:'https://m.toutiao.com/search/?keyword=跨境物流百晓生',domain:'toutiao.com'}
+]
+
+function buildRow(s) {
+  const urlCell = s.url ? '<a href="'+s.url+'" target="_blank">'+s.url.replace(/^https?:\/\//,'')+'</a>' : '—';
+  const domainCell = s.domain || '—';
+  return '<tr><td class="st-channel"><span class="sc-tag" style="background:'+s.chColor+'">'+s.ch+'</span></td><td class="st-name">'+s.name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+domainCell+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>';
+}
+
+function resetSources() {
+  const tbody = document.getElementById('sources-tbody');
+  tbody.innerHTML = DEFAULT_SOURCES.map(buildRow).join('');
+  updateCount();
+}
+
+function delSourceRow(btn) {
+  btn.closest('tr').remove();
+  updateCount();
+}
+
+function addSourceRow() {
+  const tbody = document.getElementById('sources-tbody');
+  if (tbody.querySelector('.add-row')) return;
+  const tr = document.createElement('tr');
+  tr.className = 'add-row';
+  tr.innerHTML = '<td class="st-channel"><input placeholder="渠道" id="new-ch"></td><td class="st-name"><input placeholder="名称" id="new-name"></td><td class="st-url"><input placeholder="URL" id="new-url"></td><td class="st-domain"><input placeholder="域名" id="new-domain"></td><td class="st-enable"><input type="checkbox" checked id="new-enabled"></td><td style="text-align:center"><button class="btn-save" onclick="saveNewSource()">✓</button> <button class="btn-cancel" onclick="cancelNewSource()">✕</button></td>';
+  tbody.appendChild(tr);
+  document.getElementById('new-ch').focus();
+}
+
+function saveNewSource() {
+  const ch = document.getElementById('new-ch').value.trim();
+  const name = document.getElementById('new-name').value.trim();
+  const url = document.getElementById('new-url').value.trim();
+  const domain = document.getElementById('new-domain').value.trim();
+  if (!name) { document.getElementById('new-name').focus(); return; }
+  const row = document.querySelector('.add-row');
+  const urlCell = url ? '<a href="'+url+'" target="_blank">'+url.replace(/^https?:\/\//,'')+'</a>' : '—';
+  row.className = '';
+  row.innerHTML = '<td class="st-channel"><span class="sc-tag" style="background:#64748b">'+(ch||'自定义')+'</span></td><td class="st-name">'+name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+(domain||'—')+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td>';
+  updateCount();
+}
+
+function cancelNewSource() {
+  const row = document.querySelector('.add-row');
+  if (row) row.remove();
+}
+
+function updateCount() {
+  const count = document.querySelectorAll('#sources-tbody tr:not(.add-row)').length;
+  const badge = document.getElementById('sources-count');
+  if (badge) badge.textContent = count + '个来源';
+  const navCount = document.querySelector('a[href="#sources"] .nav-count');
+  if (navCount) navCount.textContent = count;
+}
+
+document.addEventListener('DOMContentLoaded', resetSources);
+</script>
 </body>
 </html>
