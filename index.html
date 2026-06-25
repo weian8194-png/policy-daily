@@ -211,10 +211,10 @@
     <nav class="sidebar-nav">
       <div class="nav-section">
         <div class="nav-section-title">📌 今日概览</div>
-        <a class="nav-item" href="#platform">平台政策 <span class="nav-count danger">3🔴</span></a>
+        <a class="nav-item" href="#platform">平台政策 <span class="nav-count danger">3🔴</span><span class="nav-count warn">5🟡</span></a>
         <a class="nav-item" href="#compliance">合规/税务 <span class="nav-count warn">9🟡</span></a>
         <a class="nav-item" href="#market">物流/市场 <span class="nav-count info">7🟢</span></a>
-        <a class="nav-item" href="#reminders">合规提醒 <span class="nav-count danger">6</span></a>
+        <a class="nav-item" href="#reminders">合规提醒 <span class="nav-count danger">8</span></a>
       </div>
       <div class="nav-divider"></div>
 
@@ -222,8 +222,8 @@
       <div class="archive-section">
         <div class="archive-section-title">📅 历史归档 / Archives</div>
         <details class="archive-month" open>
-          <summary><span class="month-info">2026年06月</span><span class="month-stats">24天 / 217条</span></summary>
-          <a class="archive-day" href="./daily/20260625.html">2026-06-25 <span class="day-count">22条</span></a>
+          <summary><span class="month-info">2026年06月</span><span class="month-stats">24天 / 219条</span></summary>
+          <a class="archive-day" href="./daily/20260625.html">2026-06-25 <span class="day-count">24条</span></a>
           <a class="archive-day" href="./daily/20260623.html">2026-06-23 <span class="day-count">6条</span></a>
           <a class="archive-day" href="./daily/20260622.html">2026-06-22 <span class="day-count">6条</span></a>
           <a class="archive-day" href="./daily/20260621.html">2026-06-21 <span class="day-count">7条</span></a>
@@ -275,457 +275,369 @@
       <div class="nav-divider"></div>
 
       <!-- Sources Config -->
-      <a class="nav-item" href="#sources" style="font-size:12px;">📡 信息源配置 <span class="nav-count">33</span></a>
+      <a class="nav-item" href="#sources" style="font-size:12px;">📡 信息源配置 <span class="nav-count">34</span></a>
     </nav>
   </aside>
 
   <!-- ===== Main Content ===== -->
   <main class="main-content">
-
     <div class="content-header">
       <h1>跨境政策日报</h1>
-      <div class="date-line">数据日期: <span class="date-val">2026年6月25日（周三）</span> <span class="update-time">08:00 更新</span></div>
+      <div class="date-line">
+        <span class="date-val">2026年6月25日 周四</span>
+        <span class="update-time">08:00 更新</span>
+      </div>
     </div>
-
     <div class="stats-row">
-      <div class="stat-chip danger"><span class="stat-num">3</span>🔴 紧急</div>
-      <div class="stat-chip warn"><span class="stat-num">12</span>🟡 关注</div>
-      <div class="stat-chip info"><span class="stat-num">7</span>🟢 参考</div>
-      <div class="stat-chip platform"><span class="stat-num">14</span>涉事平台/机构</div>
+      <div class="stat-chip danger"><span class="stat-num">5</span>紧急</div>
+      <div class="stat-chip warn"><span class="stat-num">5</span>关注</div>
+      <div class="stat-chip info"><span class="stat-num">1</span>参考</div>
+      <div class="stat-chip platform"><span class="stat-num">11</span>政策条目</div>
     </div>
 
-    <!-- Compliance Banner: Timeline sorted 🔴 first then 🟡, by date ascending -->
-    <div class="compliance-banner">
-      <div class="banner-title">⚡ 近期关键时间节点</div>
+    <div id="compliance" class="compliance-banner section-block">
+      <div class="banner-title">⚠️ 近期需注意的合规事项</div>
       <ul>
-        <li><span class="date-tag">6/30</span> 🔴 Amazon美站/欧洲站COO原产地强制填报 + EUDR零毁林宽限期 + 海关78号公告 + FBA基础容量制度 + Temu德国站EPR + TikTok Shop泰国TISI</li>
-        <li><span class="date-tag">7/1</span> 🔴 欧盟€150免税取消 + €3统一征税 + 非欧盟FBA/FBM订单须提供完整海关数据 + 国务院837号令 + 加州纺织品EPR + Shopee越南1%所得税代扣</li>
-        <li><span class="date-tag">7/7</span> 🔴 美国301关税公开听证会</li>
-        <li><span class="date-tag">7/8</span> 🔴 CPSC eFiling强制电子备案（单次违规罚款上限$12万）</li>
-        <li><span class="date-tag">7/27</span> 🔴 Amazon产品标题75字符限制强制执行（AI自动替换）</li>
-        <li><span class="date-tag">~9月</span> 🔴 CBP"加强海关执法"行政令IOR新规细则落地</li>
-        <li><span class="date-tag">6/25</span> 🟡 Lazada泰国站市场服务费上调</li>
-        <li><span class="date-tag">6/26</span> 🟡 TikTok Shop拍卖日(3%佣金减免)</li>
-        <li><span class="date-tag">6/28</span> 🟡 eBay统一配送模式生效</li>
-        <li><span class="date-tag">6/29</span> 🟡 Amazon自配送处理时间新规生效 + 永久关闭Contact Buyer</li>
-        <li><span class="date-tag">7/2</span> 🟡 Lazada收取退货运费</li>
-        <li><span class="date-tag">7/6</span> 🟡 Amazon SFP配送速度指标更新</li>
-        <li><span class="date-tag">7/10</span> 🟡 Lazada非商城商家默认激活1%平台金币折扣</li>
-        <li><span class="date-tag">7/20</span> 🟡 美客多墨西哥RFC未完成预扣税率36%</li>
-        <li><span class="date-tag">7/23</span> 🟡 CPSC第三方实验室审查最终规定生效</li>
-        <li><span class="date-tag">8/2</span> 🟡 欧盟AI新规：电商Deepfake须标注</li>
-        <li><span class="date-tag">8/12</span> 🟡 欧盟PPWR包装法强制生效</li>
-        <li><span class="date-tag">8/26</span> 🟡 TikTok Shop共资包邮计划(CFFS)启动</li>
-        <li><span class="date-tag">11/1</span> 🟡 欧盟FBA货件额外加收€2海关手续费</li>
+        <li><span class="date-tag">6/24</span> DHL Globalmail已暂停欧盟商品运单，使用该渠道的卖家需立即切换物流方案</li>
+        <li><span class="date-tag">7/1</span> 欧盟关税新政倒计时6天，FBM卖家必须确认授权承运商+DDP能力+IOSS绑定</li>
+        <li><span class="date-tag">6/30</span> COO原产地信息截止，未填写的Listing将被限制销售</li>
+        <li><span class="date-tag">6/29</span> 自配送处理时间新规生效，必须开启AHT或确保手动设置与实际一致</li>
+        <li><span class="date-tag">6/29</span> FBM处理时间强制匹配+Premium Shipping准时率93.5%改周考，虚标将被系统接管SKU</li>
+        <li><span class="date-tag">6/1</span> VCS增值税已改为按整订单/包裹计算，德国站混税率订单需重点核对税额差异</li>
+        <li><span class="date-tag">8/24</span> BSA第18条禁止店铺转让，买来的/代持的店铺需在60天内迁移</li>
+        <li><span class="date-tag">即日</span> Temu全托管零佣金终结+电子烟全局禁售，全托管卖家需评估转型</li>
+        <li><span class="date-tag">7/8</span> CPSC eFiling强制实施，输美消费品需提前准备CPC/GCC+ACE系统申报</li>
+        <li><span class="date-tag">当前</span> 美线运价持续暴涨，FBA补货需提前锁舱错峰出货</li>
       </ul>
     </div>
 
-    <!-- Executive Summary -->
-    <section class="exec-summary section-block" id="summary">
+    <div id="summary" class="exec-summary section-block">
       <div class="section-header">
-        <h2>🔥 今日风险大盘（高管摘要视角）</h2>
-        <span class="section-badge badge-danger">22项</span>
+        <h2>📊 高管摘要</h2>
+        <span class="section-badge badge-danger">5紧急 · 5关注 · 1参考</span>
       </div>
       <div class="summary-list">
-        <div class="summary-row"><div class="severity-dot danger"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#dc2626">DHL/物流</span>DHL暂停欧盟Globalmail含商品运单，6/24起生效</div></div></div>
-        <div class="summary-row"><div class="severity-dot danger"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#FF9900">Amazon🇪🇺</span>欧洲站FBM直邮7/1起仅限授权物流+DDP强制</div></div></div>
-        <div class="summary-row"><div class="severity-dot danger"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#000">TikTok Shop</span>英国站休眠管理规则：120天限曝光/365天永久关店</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#000">TikTok Shop</span>智能推广6/22起按GMV抽3.5%收费</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#000">TikTok Shop</span>东南亚准入放宽（单执照25店）+强制极兔仓配</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#0f146d">Lazada</span>泰国站6/25起按品类差异化上调市场服务费至5.5%–14%</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#d41920">越南/Shopee</span>电商法修订7/1生效+Shopee代扣1%企业所得税</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#E85D2C">Temu/欧盟</span>欧盟2亿欧元DSA罚单，首次对超大型在线平台重大处罚</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#000">TikTok Shop</span>东南亚跨境直发履约时效：48h打包+3天交寄</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#000">TikTok Shop</span>美国站限制可购物内容：每日30条视频+60条图文</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#0f146d">Lazada</span>7/2起收取退货运费</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#96bf48">Shopify</span>全面停售电子烟+开放AI代理购物</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#e43225">AliExpress</span>新版用户协议7/1生效</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#EE4D2D">Shopee</span>强化跨境尖锐易碎品包装规范</div></div></div>
-        <div class="summary-row"><div class="severity-dot warn"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#ff0000">印尼</span>NIB准入强制+7月起电商平台代扣0.5%所得税</div></div></div>
-        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#FF9900">Amazon/税务</span>报税新规：中国卖家强制申报，平台每季度向税局报送</div></div></div>
-        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#f36c21">荷兰/欧盟</span>放弃对华包裹2欧元征税，等待欧盟统一税制</div></div></div>
-        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#007749">南非</span>9/20起对中国25类商品PVoC验证</div></div></div>
-        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#FF9900">Amazon</span>Prime Day 6/23-26正式开启，预计线上销售263亿美元</div></div></div>
-        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#dc2626">物流</span>美线货量环比+26%，运价突破5100美元/FEU</div></div></div>
-        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#0071DC">Walmart</span>收购CTV广告平台Vibe.co</div></div></div>
-        <div class="summary-row"><div class="severity-dot info"></div><div class="summary-body"><div class="summary-title"><span class="summary-platform" style="background:#1a4480">CPSC</span>eFiling 7/8强制电子备案，无备案无法清关</div></div></div>
-      </div>
-    </section>
-
-    <!-- ===== Platform Policies ===== -->
-    <section class="section-block" id="platform">
-      <div class="section-header">
-        <h2>🛒 平台政策</h2>
-        <span class="section-badge badge-danger">3紧急</span><span class="section-badge badge-warn">3关注</span>
-      </div>
-
-      <!-- 🔴 DHL -->
-      <div class="policy-card card-danger">
-        <div class="card-top"><span class="platform-tag tag-logistics">DHL/物流</span><span class="urgency-badge danger">🔴 紧急</span></div>
-        <div class="card-title">DHL宣布6/24起暂停发往欧盟Globalmail含商品运单<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">DHL因欧盟7/1取消€150以下低值包裹关税豁免并要求DDP模式，Globalmail暂不具备DDP能力，6/24起暂停发往欧盟含商品运单；6/23为最后收件日，此后创建的运单将被退回；文件及印刷品不受影响；DHL Express国际快递产品正常承运欧盟货物</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">使用DHL Globalmail发往欧盟的跨境卖家；依赖邮政小包直邮欧洲的中小卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/24起暂停（6/23最后收件日）</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①立即检查在途DHL Globalmail运单状态 ②改用DHL Express或其他具备DDP能力的物流渠道 ③关注DHL后续DDP解决方案开发进度 ④评估其他物流替代方案的成本和时效</span></div>
+        <div class="summary-row">
+          <span class="severity-dot danger"></span>
+          <div class="summary-body"><span class="summary-platform pl-uk">英国</span><span class="summary-title">提前6个月关闭135英镑免税直邮至2028年10月，按2%–12%征关税+20%VAT</span></div>
         </div>
-        <div class="action-checklist">
-          <div class="checklist-title">🎯 3步行动清单</div>
-          <div class="checklist-item">今天：检查所有在途/待发DHL Globalmail运单，6/23为最后收件日</div>
-          <div class="checklist-item">明天前：联系DHL或货代确认替代方案（DHL Express/其他DDP渠道）</div>
-          <div class="checklist-item">本周内：完成物流渠道切换测试，确保7/1前全部改用DDP合规渠道</div>
+        <div class="summary-row">
+          <span class="severity-dot danger"></span>
+          <div class="summary-body"><span class="summary-platform pl-amazon">Amazon</span><span class="summary-title">BSA第18条8/24生效：全球站点全面禁止店铺转让/质押/代持</span></div>
         </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/684418.html" target="_blank">亿邦动力</a></div>
-      </div>
-
-      <!-- 🔴 Amazon EU FBM -->
-      <div class="policy-card card-danger">
-        <div class="card-top"><span class="platform-tag tag-amazon">Amazon🇪🇺</span><span class="urgency-badge danger">🔴 紧急</span></div>
-        <div class="card-title">欧洲站FBM直邮7/1起仅限授权物流承运商+IOSS校验强化+DDP强制<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">亚马逊欧洲站7/1起：①FBM直邮小包必须通过授权承运商名录内渠道 ②自由文本承运商输入功能不再可用 ③发货须绑定ASIN与IOSS税号完成系统校验 ④不合规订单消费者被重复征税，关税赔付失效，损失卖家全额承担 ⑤所有订单必须DDP方式发货，DDU属政策违规 ⑥FBA远程配送前台售价自动叠加€3关税+增值税。关税按商品类别(非包裹)征收，多品类包裹成本更高(3品类=€9)；11/1再加€2处理费</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有非欧盟国家向欧洲站直邮的FBM卖家；使用远程配送的FBA卖家（消费者看到的价格将更高）</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">7/1正式生效，距仅7天</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①确认物流商是否在授权承运商名单内 ②更新发货流程绑定ASIN与IOSS税号 ③改用DDP发货(禁用DDU) ④FBA远程配送ASIN用收入计算器查看含税售价 ⑤评估本地入仓vs直邮成本差异(本地可省€3+获更优配送费率) ⑥低客单价产品重新核算利润模型</span></div>
+        <div class="summary-row">
+          <span class="severity-dot danger"></span>
+          <div class="summary-body"><span class="summary-platform pl-temu">Temu</span><span class="summary-title">V26政策：电子烟全局禁售+全托管零佣金终结(5%–11%)+美国直邮关闭</span></div>
         </div>
-        <div class="action-checklist">
-          <div class="checklist-title">🎯 3步行动清单</div>
-          <div class="checklist-item">今天：登录卖家后台→管理订单→选择跨境订单→查看最新授权承运商列表，确认现有物流商是否在列</div>
-          <div class="checklist-item">明天前：联系物流商确认IOSS/ASIN数据传输方式和DDP能力，不满足要求的立即切换</div>
-          <div class="checklist-item">6/28前：完成所有欧洲站FBM SKU的发货流程更新测试，确保7/1能正常确认发货</div>
+        <div class="summary-row">
+          <span class="severity-dot danger"></span>
+          <div class="summary-body"><span class="summary-platform pl-logistics">物流</span><span class="summary-title">DHL暂停欧盟Globalmail商品运单（6/24已生效）</span></div>
         </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpzqrvwf7k00" target="_blank">卖家之家</a> · <a href="https://m.ebrun.com/ebrungo/zb/684414.html" target="_blank">亿邦动力</a> · <a href="https://m.mjzj.com/article/fpyljp88j08w" target="_blank">卖家之家</a></div>
-      </div>
-
-      <!-- 🔴 TikTok Shop UK -->
-      <div class="policy-card card-danger">
-        <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge danger">🔴 紧急</span></div>
-        <div class="card-title">英国站店铺休眠管理规则：120天限曝光/180天限上架/365天永久关店<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6/11起正式实施非活跃及休眠店铺政策：①超过120天无任何有效活动→限制曝光 ②超过180天→进入休眠状态，无法接收新订单 ③超过365天→永久停用。平台在最后登录后第90/120/150天发送提醒通知。同时内容质量规则收紧：禁止AI配音与静态画面，直播静态画面不能超50%，可购物视频至少3秒真实动态场景，主播须露脸演示</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有TikTok Shop英国站卖家；做直播/短视频带货的卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/11已生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①立即检查所有TikTok Shop英国站店铺的活跃状态 ②建立定期运营日历确保120天内有有效操作 ③调整直播/视频素材策略，确保符合内容质量新规 ④对可能长期不用的店铺提前做关店或转让决策</span></div>
+        <div class="summary-row">
+          <span class="severity-dot danger"></span>
+          <div class="summary-body"><span class="summary-platform pl-amazon">Amazon🇪🇺</span><span class="summary-title">欧洲站FBM直邮7/1起仅限授权物流+IOSS校验强化（倒计时6天）</span></div>
         </div>
-        <div class="action-checklist">
-          <div class="checklist-title">🎯 3步行动清单</div>
-          <div class="checklist-item">今天：盘点所有TikTok Shop英国站店铺的最后活跃日期</div>
-          <div class="checklist-item">本周内：为超过60天未操作的店铺安排至少一次登录/编辑/发帖操作</div>
-          <div class="checklist-item">持续：将店铺活跃度检查纳入周运营流程，确保每120天内有有效活动</div>
+        <div class="summary-row">
+          <span class="severity-dot warn"></span>
+          <div class="summary-body"><span class="summary-platform pl-logistics">物流</span><span class="summary-title">美线运价暴涨：CMA CGM PSS达4000美元/柜+SCFI八连涨突破3121点</span></div>
         </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/684413.html" target="_blank">亿邦动力</a></div>
-      </div>
-
-      <!-- 🟡 TikTok Shop Smart Promotion -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">智能推广(Smart Promotion)6/22起正式收费，按店铺全部GMV抽3.5%<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6/22起从免费转正式收费，按店铺全部GMV抽3.5%。卖家可随时退出(当月折扣保障失效)，也可通过AM把特定商品加入"黑名单"剔除出计费基数。月GMV 10万美元店铺月增成本约$3,500，白牌/铺货冲击最大。叠加Account Health Rating 7月全面取代违规积分制</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有使用TikTok Shop智能推广的卖家；白牌铺货型卖家冲击最大</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/22已生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①评估智能推广带来的实际增量是否覆盖3.5%抽佣成本 ②考虑退出并将预算转向自主投放广告 ③将低毛利SKU加入黑名单剔除计费基数 ④关注7月AHR全面实施的影响</span></div>
+        <div class="summary-row">
+          <span class="severity-dot warn"></span>
+          <div class="summary-body"><span class="summary-platform pl-china">中国税务</span><span class="summary-title">深圳商务局宣讲：店铺公司是纳税主体+全面查账征收+0110空壳模式作废</span></div>
         </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpyogggiafpc" target="_blank">卖家之家</a></div>
-      </div>
-
-      <!-- 🟡 TikTok Shop SE Asia -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">东南亚放宽准入：单执照最多开25家店+新店90天保证金豁免；强制接入极兔官方仓配<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">两重调整：①放宽准入：单一营业执照最多可开设25家东南亚店铺，新店享90天保证金豁免 ②强制履约：商家须强制接入极兔七国官方仓配体系，非官方物流自发货模式店铺流量持续被压缩，采用本土仓配的商家获定向流量扶持。同时平台强化虚假标价治理，违规行为按全年销售额10%扣除保证金</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">东南亚跨境卖家；计划拓展东南亚多店运营的卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①评估多店运营机会(单执照最多25家) ②尽快对接极兔官方仓配体系避免流量损失 ③核实所有商品标价合规性避免10%保证金扣除 ④关注90天保证金豁免窗口期</span></div>
+        <div class="summary-row">
+          <span class="severity-dot warn"></span>
+          <div class="summary-body"><span class="summary-platform pl-uk">英国</span><span class="summary-title">16家零售巨头联名呼吁对所有跨境小包裹征2.6英镑统一关税</span></div>
         </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/ebrungo/zb/684413.html" target="_blank">亿邦动力</a></div>
-      </div>
-
-      <!-- 🟡 Lazada Thailand -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-lazada">Lazada</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">泰国站6/25起按品类差异化上调市场服务费(5.5%–14%)<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6/25零点起按品类差异化上调市场服务费至5.5%–14%区间；7/10起非商城商家默认激活1%平台金币折扣(可自主提至2%解锁额外权益，不影响LazMall身份但直接改写定价模型)</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Lazada泰国站所有卖家；FMCG/时尚/电子低溢价SKU最容易无声亏</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/25生效（剩1天）</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①今天把各SKU"毛利-服务费-退率"重跑一次 ②非Mall店本周末前调整定价 ③评估金币折扣对利润的影响</span></div>
+        <div class="summary-row">
+          <span class="severity-dot warn"></span>
+          <div class="summary-body"><span class="summary-platform pl-amazon">Amazon</span><span class="summary-title">FBM自配送6/29新规：处理时间强制匹配+Premium准时率93.5%改周考+SFP门槛上调</span></div>
         </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.mjzj.com/article/fpyogggiafpc" target="_blank">卖家之家</a></div>
-      </div>
-    </section>
-
-    <!-- ===== Compliance / Tax ===== -->
-    <section class="section-block" id="compliance">
-      <div class="section-header">
-        <h2>🏷️ 合规/税务</h2>
-        <span class="section-badge badge-warn">6关注</span><span class="section-badge badge-info">3参考</span>
-      </div>
-
-      <!-- 🟡 Vietnam -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-vietnam">越南/Shopee</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">越南《电子商务法》修订版7/1生效：Shopee越南站同步代扣1%企业所得税<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">修订版7/1生效：①直播带货须实名认证+内容存证一年 ②Shopee越南站同步代扣代缴1%企业所得税。同时印尼7月起由Shopee/Tokopedia等平台代扣商家成交额0.5%所得税</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">越南站/Shopee越南卖家；东南亚多国运营的卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">7/1生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①越南站卖家核实税务登记状态 ②直播带货卖家确保实名认证完成 ③了解1%代扣对利润影响并调整定价</span></div>
+        <div class="summary-row">
+          <span class="severity-dot warn"></span>
+          <div class="summary-body"><span class="summary-platform pl-amazon">Amazon🇪🇺</span><span class="summary-title">VCS增值税6/1起从按单品→按整订单/包裹计算，德国站混税率订单最直接</span></div>
         </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://m.ebrun.com/682213.html" target="_blank">亿邦动力</a></div>
-      </div>
-
-      <!-- 🟡 Temu DSA -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-temu">Temu/欧盟</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">Temu欧盟2亿欧元DSA罚单—首次对超大型在线平台重大行政处罚<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">欧盟委员会依据《数字服务法》(DSA)对Temu处以2亿欧元罚款，理由是平台未能尽职尽责地识别、分析和评估平台上销售的非法产品所带来的系统性风险。这是DSA生效以来对超大型在线平台的首次重大行政处罚。Temu在欧洲定价约为亚马逊30%至50%</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Temu欧洲站卖家；依赖Temu低价路径的跨境卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①评估Temu欧洲站运营合规风险 ②准备产品合规认证材料 ③考虑多平台分散风险</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a> · <a href="http://m.toutiao.com/group/7654736389845615114/" target="_blank">跨境大发哥</a></div>
-      </div>
-
-      <!-- 🟡 TikTok Shop SE Asia Fulfillment -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">东南亚跨境直发履约时效更新：6/22起48h打包+3天交寄<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">6/18更新中国直发订单履约规则：揽收/仓库投递模式均需48h内完成打包+后台更新状态，3个日历日内完成交寄。6/22至7/19为过渡降标期，达标门槛临时放宽至原标准的60%</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">TikTok Shop东南亚跨境直发卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/22过渡期开始，7/19正式考核</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①调整ERP自动同步规则及拣货作业节奏 ②测试48h打包+3天交寄流程 ③关注新旧时效计算方式差异避免合规误判</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
-      </div>
-
-      <!-- 🟡 TikTok Shop US Shopping Content -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-tiktok">TikTok Shop</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">美国站限制可购物内容：每日30条视频+60条图文<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">已实施可购物内容发布限制：商家及达人每日最多发布30条可购物短视频和60条可购物图文，平台进一步强化内容质量及合规审核</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">TikTok Shop美国站商家及达人</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①优化内容发布策略，注重单条质量而非数量 ②调整达人合作brief中的每日发布上限 ③关注内容审核标准变化</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
-      </div>
-
-      <!-- 🟡 AliExpress -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-aliexpress">AliExpress</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">新版用户协议7/1生效<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">新版《Terms of Use》将于7/1正式生效。平台已于6月初发布更新内容，涉及条款变化及合规要求</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">速卖通跨境卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">7/1生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①提前阅读新版条款变化 ②评估对店铺运营的影响 ③关注合规要求调整</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
-      </div>
-
-      <!-- 🟡 Indonesia NIB -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-indonesia">印尼</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">NIB准入强制+7月起电商平台代扣0.5%所得税<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">依据印尼2026年第19号贸易部长条例，Shopee/TikTok Shop等平台商家必须持有NIB方可入驻，平台需对无证商户执行拒绝准入。存量商户18个月整改期，新入驻6个月宽限期。同时7月起由平台代扣商家成交额0.5%所得税，年营收5亿盾以下零税率</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">印尼市场跨境卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">NIB已生效，代扣税7/1起</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①协助本地供应链伙伴尽快完成NIB注册 ②评估0.5%代扣对利润影响 ③关注6个月宽限期</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a> · <a href="http://m.toutiao.com/group/7654736389845615114/" target="_blank">跨境大发哥</a></div>
-      </div>
-
-      <!-- 🟢 Amazon Tax -->
-      <div class="policy-card card-info">
-        <div class="card-top"><span class="platform-tag tag-amazon">Amazon/税务</span><span class="urgency-badge info">🟢 参考</span></div>
-        <div class="card-title">报税新规：中国卖家强制申报，平台每季度向税局报送<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">2026年新规则：中国境内注册卖家全部纳入强制申报范围，平台每季度向中国税务机关报送卖家信息（身份/交易/费用明细），收入确认改为发货时间而非回款时间，计税基数为买家实际支付订单总额</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有中国境内注册的亚马逊卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">2025年7月起已开始按季度报送</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①核对过去两年订单总额与申报数 ②放弃私卡收款/买单出口等灰色操作 ③申请9610或9810模式合规报关</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7654430484776124928/" target="_blank">亿邦动力</a> · <a href="http://m.toutiao.com/group/7654736389845615114/" target="_blank">跨境大发哥</a></div>
-      </div>
-
-      <!-- 🟢 Netherlands -->
-      <div class="policy-card card-info">
-        <div class="card-top"><span class="platform-tag tag-netherlands">荷兰/欧盟</span><span class="urgency-badge info">🟢 参考</span></div>
-        <div class="card-title">荷兰放弃对华包裹2欧元征税，等待欧盟统一税制<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">荷兰政府正式放弃此前拟对中国包裹征收2欧元/件手续费的方案，将等待欧盟统一进口税落地后再执行。目前仅法国落地全国包裹税，其余欧盟国家暂缓单独征税</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">经荷兰中转的跨境小包卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已宣布</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①荷兰直邮短期利好，无需额外2欧元 ②关注欧盟统一税制进展 ③法国站仍需叠加2欧元</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7654783635777667619/" target="_blank">跨境物流百晓生</a> · <a href="http://m.toutiao.com/group/7654736389845615114/" target="_blank">白鲸出海</a></div>
-      </div>
-
-      <!-- 🟢 South Africa -->
-      <div class="policy-card card-info">
-        <div class="card-top"><span class="platform-tag tag-southafrica">南非</span><span class="urgency-badge info">🟢 参考</span></div>
-        <div class="card-title">9/20起对中国25类商品PVoC验证<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">南非政府宣布自9/20起，对家具、建材、汽车零部件等25类中国进口商品实施装运前符合性验证(PVoC)制度</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">出口南非的跨境卖家（家具/建材/汽配品类）</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">9/20生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①核实产品是否在25类清单内 ②联系检测机构办理PVoC认证 ③预留认证时间避免清关延误</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
-      </div>
-    </section>
-
-    <!-- ===== Logistics / Market ===== -->
-    <section class="section-block" id="market">
-      <div class="section-header">
-        <h2>📦 物流/市场</h2>
-        <span class="section-badge badge-warn">3关注</span><span class="section-badge badge-info">4参考</span>
-      </div>
-
-      <!-- 🟡 Lazada Return -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-lazada">Lazada</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">7/2起收取退货运费<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">7/2起，针对东南亚跨境站点所有已完成确认收货、买家成功发起退货退款且商品实际退回平台质检仓或商家的订单，向商家收取对应的买家退货运费。费用明细可在卖家后台"退回订单"或"财务-我的收入"中查询</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Lazada东南亚跨境卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">7/2生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①提前优化商品质量把控与售后响应机制 ②减少非必要退货以控制逆向物流成本 ③评估退货运费对利润的影响</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7654783635777667619/" target="_blank">跨境物流百晓生</a></div>
-      </div>
-
-      <!-- 🟡 Shopify -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-shopify">Shopify</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">全面停售电子烟+开放AI代理购物<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">禁止平台销售所有电子烟及相关Vape产品（无论是否获FDA授权），与美国监管部门持续打击非法电子烟销售有关。同时开放AI代理购物功能，支持AI助手直接完成商品搜索、比价及下单流程</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Shopify电子烟卖家；使用Shopify建站的所有卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①电子烟卖家立即迁移至其他渠道 ②关注AI代理购物对流量和转化率的影响 ③评估AI购物功能对独立站运营的机遇</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
-      </div>
-
-      <!-- 🟡 Shopee Packaging -->
-      <div class="policy-card card-warn">
-        <div class="card-top"><span class="platform-tag tag-shopee">Shopee</span><span class="urgency-badge warn">🟡 关注</span></div>
-        <div class="card-title">强化跨境尖锐易碎品包装规范<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">强化跨境直邮订单中尖锐及易碎类商品包装规范，涵盖餐刀、帐篷桩、修枝剪等品类。要求卖家按标准做防刺穿加固包装，未合规订单或被拦截</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Shopee跨境店尖锐/易碎品类卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已生效</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①核实所有尖锐/易碎品SKU的包装是否符合新规 ②采购防刺穿包装材料 ③关注平台拦截标准避免订单损失</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
-      </div>
-
-      <!-- 🟢 Prime Day -->
-      <div class="policy-card card-info">
-        <div class="card-top"><span class="platform-tag tag-amazon">Amazon</span><span class="urgency-badge info">🟢 参考</span></div>
-        <div class="card-title">Prime Day 6/23-26正式开启，预计线上销售263亿美元<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">第12届Prime Day 6/23-26举行，首次提前至6月。Adobe预测线上销售263亿美元同比+9%，美银预计亚马逊GMV约216亿美元同比+5%。沃尔玛Walmart Deals 6/22-28、Target Circle Deal Days 6/23-26同步促销</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有亚马逊卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">6/23-26进行中</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①监控竞品BSR变化调整PPC ②Day 2-3检查Coupon效果 ③厨房品类搜索量Day 1-2最高</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="http://m.toutiao.com/group/7654736389845615114/" target="_blank">跨境大发哥</a> · <a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
-      </div>
-
-      <!-- 🟢 Freight -->
-      <div class="policy-card card-info">
-        <div class="card-top"><span class="platform-tag tag-logistics">物流</span><span class="urgency-badge info">🟢 参考</span></div>
-        <div class="card-title">美线货量环比+26%，运价突破5100美元/FEU<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">FreightWaves数据显示6月上半月中国至美国集装箱货量环比增长26%，创春节以来最大半月增幅。SCFI综合指数升至3121.69点，美西/美东航线即期运价分别突破5100/6300美元/FEU</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">美线FBA补货卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">当前</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①评估当前运价对补货成本影响 ②考虑提前锁定舱位 ③关注后续运价走势</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
-      </div>
-
-      <!-- 🟢 Walmart -->
-      <div class="policy-card card-info">
-        <div class="card-top"><span class="platform-tag tag-walmart">Walmart</span><span class="urgency-badge info">🟢 参考</span></div>
-        <div class="card-title">收购CTV广告平台Vibe.co<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">沃尔玛宣布收购联网电视广告平台Vibe.co，以增强Walmart Connect广告业务能力，进一步拓展中小商家及品牌广告市场</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">Walmart卖家；使用Walmart Connect的广告主</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">已宣布</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①关注Walmart Connect广告产品更新 ②评估CTV广告对品牌曝光的价值 ③对比Amazon DSP/Walmart Connect广告效率</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a></div>
-      </div>
-
-      <!-- 🟢 CPSC -->
-      <div class="policy-card card-info">
-        <div class="card-top"><span class="platform-tag tag-cpsc">CPSC</span><span class="urgency-badge info">🟢 参考</span></div>
-        <div class="card-title">eFiling 7/8强制电子备案，无备案无法清关<span class="new-tag">NEW</span></div>
-        <div class="five-elements">
-          <div class="element-row"><span class="element-label el-change">🔄 变了什么</span><span class="element-content">7/8起，受监管的进口消费品必须在清关前完成官方系统电子备案(eFiling)，彻底淘汰纸质证书模式。CPC(儿童产品)和GCC(通用消费品)两大证书均需在线申报，无电子备案=无法清关。2027/1/8起自贸区商品同步执行</span></div>
-          <div class="element-row"><span class="element-label el-who">👤 影响谁</span><span class="element-content">所有输美消费品卖家</span></div>
-          <div class="element-row"><span class="element-label el-when">⏰ 关键时间</span><span class="element-content">7/8强制执行</span></div>
-          <div class="element-row"><span class="element-label el-action">✅ 行动</span><span class="element-content">①使用CPSC Regulatory Robot完成产品判定 ②补齐CPC/GCC检测资质 ③对接报关行确认eFiling流程 ④建立合规资料台账</span></div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span><a href="https://cpsc.gov/eFiling" target="_blank">CPSC官网</a> · <a href="https://m.sohu.com/a/1040472608_121455366/" target="_blank">搜狐</a></div>
-      </div>
-    </section>
-
-    <!-- ===== Compliance Reminders ===== -->
-    <section class="section-block" id="reminders">
-      <div class="section-header">
-        <h2>⚠️ 近期需注意的合规事项</h2>
-      </div>
-      <div class="compliance-reminders">
-        <ul>
-          <li>DHL Globalmail暂停欧盟商品运单，使用该渠道的卖家需立即切换物流方案</li>
-          <li>欧盟7/1关税新政倒计时7天，FBM卖家必须确认授权承运商+DDP能力+IOSS绑定</li>
-          <li>COO原产地信息6/30截止，距仅6天，未填写的Listing将被限制销售</li>
-          <li>自配送6/29处理时间新规生效，必须开启AHT或确保手动设置与实际一致</li>
-          <li>TikTok Shop英国站休眠规则已生效，长期不活跃店铺将被逐步关停</li>
-          <li>CPSC eFiling 7/8强制实施，输美消费品需提前准备CPC/GCC+ACE系统申报</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== Info Sources Config ===== -->
-    <section class="section-block" id="sources">
-      <div class="section-header">
-        <h2>📡 信息源配置</h2>
-        <span class="section-badge badge-warn" id="sources-count">33个来源</span>
-      </div>
-      <div class="sources-toolbar">
-        <div class="sources-toolbar-hint">管理数据采集源，启用/禁用后下次更新生效</div>
-        <div class="sources-toolbar-actions">
-          <button class="btn-reset" onclick="resetSources()">重置默认</button>
-          <button class="btn-add" onclick="addSourceRow()">+ 新增源</button>
+        <div class="summary-row">
+          <span class="severity-dot info"></span>
+          <div class="summary-body"><span class="summary-platform pl-amazon">Amazon</span><span class="summary-title">Prime Day 2026首日：冰火两重天，21%卖家零单、仅8%爆单</span></div>
         </div>
       </div>
-      <div class="sources-table-wrap">
-        <table class="sources-table">
-          <thead><tr><th>渠道</th><th>名称</th><th>URL</th><th>域名</th><th>启用</th><th></th></tr></thead>
-          <tbody id="sources-tbody"></tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <div class="page-footer">
-      <div class="footer-divider"></div>
-      <div>📊 数据来源：卖家之家 / 亿邦动力 / 雨果跨境（33个信息源）</div>
-      <div>⏰ 每日08:00自动更新 · 近24小时跨境政策变化</div>
-      <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
     </div>
 
+    <div id="p-uk-tax" class="section-block">
+      <div class="policy-card danger">
+        <div class="policy-card-header">
+          <span class="card-platform pl-uk">英国</span>
+          <span class="card-title">提前关闭135英镑免税直邮通道至2028年10月</span>
+          <span class="card-urgency urgency-high">🔴 紧急</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">英国财政部6/23宣布将LVIs取消时间从最晚2029年3月提前6个月至2028年10月。届时135英镑及以下境外直邮包裹不再享受关税豁免，需按2%–12%(视HS编码)缴纳进口关税+20%增值税。政府同步审查电商平台VAT征收机制</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">依赖小包直邮英国的跨境卖家；Temu/SHEIN/AliExpress等低价直邮平台卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">2028年10月正式生效，约2年3个月缓冲期</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">玛莎百货、Next、Primark等16家零售商5月联名施压；BRC称"提前半年不够"；海关需从零搭建新征税系统；全球三大市场同步收紧低值免税</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①评估2%–12%关税+20%VAT对定价影响 ②高周转SKU转英国海外仓 ③提前注册英国VAT ④关注平台英国路向策略调整</span></div>
+          </div>
+          <div class="action-list">
+            <div class="action-title">3步行动清单</div>
+            <ol>
+              <li>本周：核算英国路向SKU在2%–12%关税+20%VAT下的利润变化，识别受冲击最大的品类</li>
+              <li>下月：对接英国海外仓服务商，将TOP 20高周转SKU前置备货</li>
+              <li>3个月内：完成英国VAT注册+EORI号申请，规范货值申报流程</li>
+            </ol>
+          </div>
+          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fq2ff7ofjo5c" target="_blank">卖家之家</a> · <a href="https://www.cifnews.com/article/186992" target="_blank">雨果跨境</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-bsa18" class="section-block">
+      <div class="policy-card danger">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon</span>
+          <span class="card-title">BSA第18条8/24生效：全面禁止店铺转让/质押/代持</span>
+          <span class="card-urgency urgency-high">🔴 紧急</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">8/24更新BSA第18条：①全球站点禁止店铺转让，身份永久绑定原始注册主体 ②禁止抵押回款权/收款账户/品牌授权 ③禁止第三方代持。此前平台执行宽松，新规堵死所有灰色过户通道</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">买过现成店铺的新卖家；店群模式铺货卖家(代持双方法律风险)；准备出售店铺退出的卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">8/24生效，距仅60天</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">店铺买卖年交易规模估计超10亿；下半年或大面积扫号；不合规主体变更极易触发二审封店</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①8/24前迁移品牌/库存/资金至自有合规主体 ②代持店铺逐一回收或注销 ③店群从量多转向精简 ④新注册走合规路径</span></div>
+          </div>
+          <div class="action-list">
+            <div class="action-title">3步行动清单</div>
+            <ol>
+              <li>本周：盘点所有店铺注册主体身份，标注哪些是买来的/代持的</li>
+              <li>7月底前：完成迁移——将买来店铺的品牌备案、FBA库存、资金账户转移至自有合规主体</li>
+              <li>8/24前：关闭或注销所有代持店铺，确保每个运营中店铺的主体100%可控</li>
+            </ol>
+          </div>
+          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fq28fjvdzbwg" target="_blank">卖家之家</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-temu-v26" class="section-block">
+      <div class="policy-card danger">
+        <div class="policy-card-header">
+          <span class="card-platform pl-temu">Temu</span>
+          <span class="card-title">V26政策：电子烟全局禁售+全托管零佣金终结</span>
+          <span class="card-urgency urgency-high">🔴 紧急</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">V26《商品安全与合规政策》三重调整：①电子烟从区域限制升级为全局禁售(电子雪茄/水烟/烟弹/烟油/雾化器及配件) ②全托管零佣金终结，按销售额5%–11%+负佣金 ③美国直邮通道事实关闭，强推本地仓/半托管</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">Temu全托管卖家；电子烟品类卖家；依赖低价直邮铺货模式的卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">已生效</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">全托管退潮半托管普及是行业趋势——SHEIN已开放半托管美/欧五国，行业从"谁供货更便宜"转向"谁能自己运营"</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①电子烟卖家立即下架全平台相关SKU ②全托管卖家评估佣金冲击，考虑转半托管 ③布局美国本地仓/半托管</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fq28fjvdzbwg" target="_blank">卖家之家</a> · <a href="https://m.ebrun.com/684608.html" target="_blank">亿邦动力</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-dhl" class="section-block">
+      <div class="policy-card danger">
+        <div class="policy-card-header">
+          <span class="card-platform pl-logistics">物流</span>
+          <span class="card-title">DHL暂停欧盟Globalmail商品运单</span>
+          <span class="card-urgency urgency-high">🔴 紧急</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">DHL因欧盟7/1取消€150免税并要求DDP模式，Globalmail服务6/24起暂停发往欧盟含商品运单，6/23为最后收件日。文件/印刷品不受影响，DHL Express正常承运</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">使用DHL Globalmail发往欧盟的跨境卖家；依赖邮政小包直邮欧洲的中小卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/24已暂停</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">欧盟7/1关税新政，DHL Globalmail作为邮政渠道产品无法满足DDP要求</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①检查在途运单状态 ②改用DHL Express或其他DDP渠道 ③关注DHL后续DDP方案</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.ebrun.com/ebrungo/zb/684418.html" target="_blank">亿邦动力</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-eu-fbm" class="section-block">
+      <div class="policy-card danger">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon🇪🇺</span>
+          <span class="card-title">欧洲站FBM直邮7/1起仅限授权物流+IOSS校验强化</span>
+          <span class="card-urgency urgency-high">🔴 紧急</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">7/1起所有FBM直邮必须通过授权承运商，自由文本输入不再可用；发货须绑定ASIN+IOSS税号；不合规订单关税赔付失效损失卖家全额承担；必须DDP方式发货</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">非欧盟向欧洲站消费者直邮的FBM卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">7/1生效，倒计时6天</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">欧盟海关改革取消€150免税，按品类征收€3关税；11/1再加€2处理费</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①确认物流商在授权名单内 ②更新发货流程绑定ASIN+IOSS ③改用DDP发货 ④评估本地入仓vs直邮成本</span></div>
+          </div>
+          <div class="action-list">
+            <div class="action-title">3步行动清单</div>
+            <ol>
+              <li>今天：登录卖家后台查看最新授权承运商列表，确认现有物流商是否在列</li>
+              <li>明天前：联系物流商确认IOSS/ASIN数据传输和DDP能力，不满足的立即切换</li>
+              <li>6/28前：完成所有欧洲站FBM SKU的发货流程更新测试</li>
+            </ol>
+          </div>
+          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fpzqrvwf7k00" target="_blank">卖家之家</a> · <a href="https://m.ebrun.com/ebrungo/zb/684414.html" target="_blank">亿邦动力</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-shipping" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-logistics">物流</span>
+          <span class="card-title">美线运价暴涨：PSS达4000美元/柜+SCFI八连涨</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">CMA CGM 7/10起美线PSS上调至3600$/20GP、4000$/40GP/HC；SCFI报3121.69八连涨；宁波至美西2900→6300$/FEU，美东3900→7500$/FEU；6-7月初舱位基本售罄</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">美线FBA补货卖家；海外仓备货卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">7/10 PSS生效；7/24美国新一轮关税窗口</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">红海绕行拉长周转(20天→45天)+油价推升燃油成本(占30-40%)+CPSC新规提前抢运+巴拿马运河拥堵+旺季附加费快速抬升</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①评估运价对补货成本影响 ②提前锁舱错峰出货 ③策略从降本增效转向安全冗余 ④关注7月中下旬运价回落机会</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a> · <a href="http://m.toutiao.com/group/7654783635777667619/" target="_blank">跨境物流百晓生</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-shenzhen-tax" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-china">中国税务</span>
+          <span class="card-title">深圳商务局宣讲：店铺公司是纳税主体+0110空壳模式作废</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">6/22深圳商务局联合亚马逊全球开店宣讲四大红线：①店铺公司必须是纳税主体，平台GMV直接认定为营业收入依据 ②2026全面查账征收 ③增值税"四流合一"成硬门槛 ④0110+境外空壳架构归集报税被正式否定</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">多店铺运营的亚马逊卖家；使用0110模式退税的海外仓卖家；买单出口的卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">7/1起837号令正式施行</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">深圳一个月内连续两场官方会议；9810出口通道已畅通；退税辅助系统计划年内上线；金税四期数据穿透核查常态化</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①每店铺独立开户做账报税 ②放弃买单出口走合规报关 ③评估0110架构转9810 ④了解9810三重红利</span></div>
+          </div>
+          <div class="source-link">来源：<a href="http://m.toutiao.com/group/7654900421755994659/" target="_blank">跨境大发哥</a> · <a href="http://m.toutiao.com/group/7654430484776124928/" target="_blank">亿邦动力</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-uk-retailers" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-uk">英国</span>
+          <span class="card-title">16家零售巨头联名呼吁征2.6英镑统一关税</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">ASOS/Next/M&S等16家英国零售商联名致信首相，呼吁对所有跨境小额包裹征2.6英镑统一关税。继美/欧后英国税改箭在弦上</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">英国路向跨境卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">已呼吁，立法进程待观察</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">英国零售业持续施压政府堵"免税洼地"漏洞，认为现行制度损害英国商业街</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①关注英国关税立法进展 ②英向卖家做税费转嫁预算 ③提前布局英国海外仓</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fq28fjvdzbwg" target="_blank">卖家之家</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-fbm-new" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon</span>
+          <span class="card-title">FBM自配送6/29新规：处理时间强制匹配+Premium改周考</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">6/29起三大变化同时生效：①处理时间必须与实际发货速度一致，虚标将被系统接管SKU设置180天；两条合规路径：开启AHT自动模式(推荐)或手动设置(30天监测期)②Premium Shipping准时送达率从97%降至93.5%但考核从月度改为周度，连续3周不达标清退 ③SFP配送速度门槛7/6起上调：标准件1日达30%→40%、2日达70%→75%</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">所有FBM自配送卖家；Premium Shipping参与卖家；SFP自配送Prime卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/29处理时间+Premium改周考生效；7/6 SFP门槛上调</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①立即在卖家后台开启AHT自动备货时间 ②导出近30天各SKU发货时效，6/29前批量修正 ③Premium Shipping卖家重点监控周度准时率 ④SFP卖家评估7/6新门槛是否可达</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.toutiao.com/search/?keyword=卖家之家" target="_blank">卖家之家(头条号)</a> · <a href="https://www.eci-tech.com" target="_blank">易仓</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-vcs-tax" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon🇪🇺</span>
+          <span class="card-title">VCS增值税6/1起从按单品→按整订单/包裹计算</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">VCS增值税计算服务6/1起从按单品计税改为按整订单/包裹计算，欧洲站尤其德国站混税率订单受影响最直接</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">使用VCS服务的欧洲站卖家；德国站混税率订单卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/1已生效</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①抽查6月以来混税率订单核对税额 ②德国站重点排查19%+7%混税率订单 ③季度申报前完成差异汇总</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://www.jiyikj.com" target="_blank">吉易跨境</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-pd2026" class="section-block">
+      <div class="policy-card info">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon</span>
+          <span class="card-title">Prime Day 2026首日：冰火两重天</span>
+          <span class="card-urgency urgency-low">🟢 参考</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">Adobe预测美国在线销售263亿美元同比+9%，但21%卖家零单、仅8%爆单、超五成未增长；欧洲站远好于美国站(不少两三倍增长)；美国站秒杀改为100$固定费+1.5%抽成压缩利润</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">所有亚马逊卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/23-26进行中</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">通胀4.2%+多平台分流+AI比价工具使消费者更理性；消费者倾向低客单价刚需品</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①Day 2-3抓住后半段高峰 ②关注ACOS和利润质量 ③评估加大欧洲站投入</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.ebrun.com/684608.html" target="_blank">亿邦动力</a> · <a href="https://m.mjzj.com/article/fq31yvugvh1c" target="_blank">卖家之家</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="timeline" class="timeline-section section-block">
+      <div class="section-header">
+        <h2>⏰ 近期关键时间线</h2>
+      </div>
+      <div class="timeline-list">
+        <div class="timeline-row danger"><span class="tl-date">6/30</span><span class="tl-sev">🔴</span><span class="tl-text">Amazon COO原产地强制填报 + EUDR宽限期 + 海关78号 + FBA基础容量 + Temu德国EPR + TTS泰国TISI</span></div>
+        <div class="timeline-row danger"><span class="tl-date">7/1</span><span class="tl-sev">🔴</span><span class="tl-text">欧盟€150免税取消 + €3统一征税 + FBA/FBM完整海关数据 + 837号令 + 加州纺织品EPR + Shopee越南1%税</span></div>
+        <div class="timeline-row danger"><span class="tl-date">7/7</span><span class="tl-sev">🔴</span><span class="tl-text">美国301关税公开听证会</span></div>
+        <div class="timeline-row danger"><span class="tl-date">7/8</span><span class="tl-sev">🔴</span><span class="tl-text">CPSC eFiling强制电子备案</span></div>
+        <div class="timeline-row danger"><span class="tl-date">7/27</span><span class="tl-sev">🔴</span><span class="tl-text">Amazon产品标题75字符限制强制执行</span></div>
+        <div class="timeline-row danger"><span class="tl-date">8/24</span><span class="tl-sev">🔴</span><span class="tl-text">Amazon BSA第18条禁止店铺转让/质押生效</span></div>
+        <div class="timeline-row danger"><span class="tl-date">~9月</span><span class="tl-sev">🔴</span><span class="tl-text">CBP"加强海关执法"行政令IOR新规细则落地</span></div>
+        <div class="timeline-row danger"><span class="tl-date">2028/10</span><span class="tl-sev">🔴</span><span class="tl-text">英国135英镑免税直邮通道正式关闭</span></div>
+        <div class="timeline-row warn"><span class="tl-date">6/25</span><span class="tl-sev">🟡</span><span class="tl-text">Lazada泰国站市场服务费上调</span></div>
+        <div class="timeline-row warn"><span class="tl-date">6/26</span><span class="tl-sev">🟡</span><span class="tl-text">TikTok Shop拍卖日(3%佣金减免)</span></div>
+        <div class="timeline-row warn"><span class="tl-date">6/28</span><span class="tl-sev">🟡</span><span class="tl-text">eBay统一配送模式生效</span></div>
+        <div class="timeline-row warn"><span class="tl-date">6/29</span><span class="tl-sev">🟡</span><span class="tl-text">Amazon自配送处理时间新规生效 + FBM处理时间强制匹配+Premium准时率93.5%改周考 + 永久关闭Contact Buyer</span></div>
+        <div class="timeline-row warn"><span class="tl-date">7/2</span><span class="tl-sev">🟡</span><span class="tl-text">Lazada收取退货运费</span></div>
+        <div class="timeline-row warn"><span class="tl-date">7/6</span><span class="tl-sev">🟡</span><span class="tl-text">Amazon SFP配送速度指标更新</span></div>
+        <div class="timeline-row warn"><span class="tl-date">7/10</span><span class="tl-sev">🟡</span><span class="tl-text">Lazada非商城1%金币折扣 + CMA CGM美线PSS上调至4000$/柜</span></div>
+        <div class="timeline-row warn"><span class="tl-date">7/20</span><span class="tl-sev">🟡</span><span class="tl-text">美客多墨西哥RFC未完成预扣税率36%</span></div>
+        <div class="timeline-row warn"><span class="tl-date">7/23</span><span class="tl-sev">🟡</span><span class="tl-text">CPSC第三方实验室审查最终规定生效</span></div>
+        <div class="timeline-row warn"><span class="tl-date">8/12</span><span class="tl-sev">🟡</span><span class="tl-text">欧盟PPWR包装法强制生效</span></div>
+        <div class="timeline-row warn"><span class="tl-date">8/26</span><span class="tl-sev">🟡</span><span class="tl-text">TikTok Shop共资包邮计划(CFFS)启动</span></div>
+        <div class="timeline-row warn"><span class="tl-date">11/1</span><span class="tl-sev">🟡</span><span class="tl-text">欧盟FBA货件额外加收€2海关手续费 + PID强制申报</span></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      📊 数据来源：卖家之家 / 亿邦动力 / 雨果跨境 / 至美通 / 跨境大发哥 / 跨境物流百晓生 / 白鲸出海 / WL123（34个信息源）<br>
+      ⏰ 每日08:00自动更新 · 近24小时跨境政策变化
+    </div>
   </main>
 </div>
 <script>
@@ -763,7 +675,8 @@ const DEFAULT_SOURCES = [
   {ch:'行业媒体',chColor:'#7c3aed',name:'跨境大发哥（全平台政策+税务）',url:'https://m.toutiao.com/search/?keyword=跨境大发哥',domain:'toutiao.com'},
   {ch:'航运',chColor:'#0d9488',name:'WL123跨境导航（物流+关税+清关）',url:'https://www.wl123.com',domain:'wl123.com'},
   {ch:'行业媒体',chColor:'#7c3aed',name:'白鲸出海（东南亚+欧洲政策）',url:'https://www.baijingapp.com',domain:'baijingapp.com'},
-  {ch:'航运',chColor:'#0d9488',name:'跨境物流百晓生（运价+航线+物流）',url:'https://m.toutiao.com/search/?keyword=跨境物流百晓生',domain:'toutiao.com'}
+  {ch:'航运',chColor:'#0d9488',name:'跨境物流百晓生（运价+航线+物流）',url:'https://m.toutiao.com/search/?keyword=跨境物流百晓生',domain:'toutiao.com'},
+  {ch:'行业媒体',chColor:'#f59e0b',name:'吉易跨境',url:'https://www.jiyikj.com',domain:'jiyikj.com'}
 ]
 
 function buildRow(s) {

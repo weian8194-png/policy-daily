@@ -95,7 +95,8 @@
     .five-el-label { font-size: 11px; font-weight: 700; color: #64748b; min-width: 60px; flex-shrink: 0; }
     .five-el-value { font-size: 12px; color: #334155; line-height: 1.6; }
     .action-list { margin-top: 10px; padding: 10px 14px; background: #eff6ff; border-radius: 6px; border: 1px solid #bfdbfe; }
-    .action-list .action-title { font-size: 12px; font-weight: 700; color: #1d4ed8; margin-bottom: 6px; }
+    .action-list .action-title { font-size: 13px; font-weight: 700; color: #1d4ed8; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .action-list .action-title::before { content: "▸▸▸"; font-size: 9px; letter-spacing: 1px; color: #dc2626; }
     .action-list ol { padding-left: 18px; }
     .action-list li { font-size: 12px; color: #1e40af; padding: 2px 0; line-height: 1.6; }
     .source-link { margin-top: 10px; font-size: 11px; color: #64748b; }
@@ -133,8 +134,8 @@
     <div class="sidebar-nav">
       <div class="nav-section">
         <div class="nav-section-title">今日概览</div>
-        <a class="nav-item" href="#summary"><span>高管摘要</span><span class="nav-count">8</span></a>
-        <a class="nav-item" href="#compliance"><span>合规提醒</span><span class="nav-count danger">8</span></a>
+        <a class="nav-item" href="#summary"><span>高管摘要</span><span class="nav-count">10</span></a>
+        <a class="nav-item" href="#compliance"><span>合规提醒</span><span class="nav-count danger">10</span></a>
         <a class="nav-item" href="#timeline"><span>关键时间线</span><span class="nav-count">21</span></a>
       </div>
       <div class="nav-divider"></div>
@@ -152,6 +153,8 @@
         <a class="nav-item" href="#p-shipping"><span>美线运价暴涨</span><span class="nav-count warn">1</span></a>
         <a class="nav-item" href="#p-shenzhen-tax"><span>深圳商务局宣讲</span><span class="nav-count warn">1</span></a>
         <a class="nav-item" href="#p-uk-retailers"><span>英国零售商呼吁2.6£关税</span><span class="nav-count warn">1</span></a>
+        <a class="nav-item" href="#p-fbm-new"><span>FBM自配送6/29新规</span><span class="nav-count warn">1</span></a>
+        <a class="nav-item" href="#p-vcs-tax"><span>VCS增值税改按订单计</span><span class="nav-count warn">1</span></a>
       </div>
       <div class="nav-divider"></div>
       <div class="nav-section">
@@ -210,9 +213,9 @@
     </div>
     <div class="stats-row">
       <div class="stat-chip danger"><span class="stat-num">5</span>紧急</div>
-      <div class="stat-chip warn"><span class="stat-num">3</span>关注</div>
+      <div class="stat-chip warn"><span class="stat-num">5</span>关注</div>
       <div class="stat-chip info"><span class="stat-num">1</span>参考</div>
-      <div class="stat-chip platform"><span class="stat-num">9</span>政策条目</div>
+      <div class="stat-chip platform"><span class="stat-num">11</span>政策条目</div>
     </div>
 
     <div id="compliance" class="compliance-banner section-block">
@@ -222,6 +225,8 @@
         <li><span class="date-tag">7/1</span> 欧盟关税新政倒计时6天，FBM卖家必须确认授权承运商+DDP能力+IOSS绑定</li>
         <li><span class="date-tag">6/30</span> COO原产地信息截止，未填写的Listing将被限制销售</li>
         <li><span class="date-tag">6/29</span> 自配送处理时间新规生效，必须开启AHT或确保手动设置与实际一致</li>
+        <li><span class="date-tag">6/29</span> FBM处理时间强制匹配+Premium Shipping准时率93.5%改周考，虚标将被系统接管SKU</li>
+        <li><span class="date-tag">6/1</span> VCS增值税已改为按整订单/包裹计算，德国站混税率订单需重点核对税额差异</li>
         <li><span class="date-tag">8/24</span> BSA第18条禁止店铺转让，买来的/代持的店铺需在60天内迁移</li>
         <li><span class="date-tag">即日</span> Temu全托管零佣金终结+电子烟全局禁售，全托管卖家需评估转型</li>
         <li><span class="date-tag">7/8</span> CPSC eFiling强制实施，输美消费品需提前准备CPC/GCC+ACE系统申报</li>
@@ -232,7 +237,7 @@
     <div id="summary" class="exec-summary section-block">
       <div class="section-header">
         <h2>📊 高管摘要</h2>
-        <span class="section-badge badge-danger">5紧急 · 3关注 · 1参考</span>
+        <span class="section-badge badge-danger">5紧急 · 5关注 · 1参考</span>
       </div>
       <div class="summary-list">
         <div class="summary-row">
@@ -268,6 +273,14 @@
           <div class="summary-body"><span class="summary-platform pl-uk">英国</span><span class="summary-title">16家零售巨头联名呼吁对所有跨境小包裹征2.6英镑统一关税</span></div>
         </div>
         <div class="summary-row">
+          <span class="severity-dot warn"></span>
+          <div class="summary-body"><span class="summary-platform pl-amazon">Amazon</span><span class="summary-title">FBM自配送6/29新规：处理时间强制匹配+Premium准时率93.5%改周考+SFP门槛上调</span></div>
+        </div>
+        <div class="summary-row">
+          <span class="severity-dot warn"></span>
+          <div class="summary-body"><span class="summary-platform pl-amazon">Amazon🇪🇺</span><span class="summary-title">VCS增值税6/1起从按单品→按整订单/包裹计算，德国站混税率订单最直接</span></div>
+        </div>
+        <div class="summary-row">
           <span class="severity-dot info"></span>
           <div class="summary-body"><span class="summary-platform pl-amazon">Amazon</span><span class="summary-title">Prime Day 2026首日：冰火两重天，21%卖家零单、仅8%爆单</span></div>
         </div>
@@ -290,7 +303,7 @@
             <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①评估2%–12%关税+20%VAT对定价影响 ②高周转SKU转英国海外仓 ③提前注册英国VAT ④关注平台英国路向策略调整</span></div>
           </div>
           <div class="action-list">
-            <div class="action-title">🎯 3步行动清单</div>
+            <div class="action-title">3步行动清单</div>
             <ol>
               <li>本周：核算英国路向SKU在2%–12%关税+20%VAT下的利润变化，识别受冲击最大的品类</li>
               <li>下月：对接英国海外仓服务商，将TOP 20高周转SKU前置备货</li>
@@ -318,7 +331,7 @@
             <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①8/24前迁移品牌/库存/资金至自有合规主体 ②代持店铺逐一回收或注销 ③店群从量多转向精简 ④新注册走合规路径</span></div>
           </div>
           <div class="action-list">
-            <div class="action-title">🎯 3步行动清单</div>
+            <div class="action-title">3步行动清单</div>
             <ol>
               <li>本周：盘点所有店铺注册主体身份，标注哪些是买来的/代持的</li>
               <li>7月底前：完成迁移——将买来店铺的品牌备案、FBA库存、资金账户转移至自有合规主体</li>
@@ -386,7 +399,7 @@
             <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①确认物流商在授权名单内 ②更新发货流程绑定ASIN+IOSS ③改用DDP发货 ④评估本地入仓vs直邮成本</span></div>
           </div>
           <div class="action-list">
-            <div class="action-title">🎯 3步行动清单</div>
+            <div class="action-title">3步行动清单</div>
             <ol>
               <li>今天：登录卖家后台查看最新授权承运商列表，确认现有物流商是否在列</li>
               <li>明天前：联系物流商确认IOSS/ASIN数据传输和DDP能力，不满足的立即切换</li>
@@ -458,6 +471,44 @@
       </div>
     </div>
 
+    <div id="p-fbm-new" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon</span>
+          <span class="card-title">FBM自配送6/29新规：处理时间强制匹配+Premium改周考</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">6/29起三大变化同时生效：①处理时间必须与实际发货速度一致，虚标将被系统接管SKU设置180天；两条合规路径：开启AHT自动模式(推荐)或手动设置(30天监测期)②Premium Shipping准时送达率从97%降至93.5%但考核从月度改为周度，连续3周不达标清退 ③SFP配送速度门槛7/6起上调：标准件1日达30%→40%、2日达70%→75%</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">所有FBM自配送卖家；Premium Shipping参与卖家；SFP自配送Prime卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/29处理时间+Premium改周考生效；7/6 SFP门槛上调</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①立即在卖家后台开启AHT自动备货时间 ②导出近30天各SKU发货时效，6/29前批量修正 ③Premium Shipping卖家重点监控周度准时率 ④SFP卖家评估7/6新门槛是否可达</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.toutiao.com/search/?keyword=卖家之家" target="_blank">卖家之家(头条号)</a> · <a href="https://www.eci-tech.com" target="_blank">易仓</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-vcs-tax" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon🇪🇺</span>
+          <span class="card-title">VCS增值税6/1起从按单品→按整订单/包裹计算</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">VCS增值税计算服务6/1起从按单品计税改为按整订单/包裹计算，欧洲站尤其德国站混税率订单受影响最直接</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">使用VCS服务的欧洲站卖家；德国站混税率订单卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/1已生效</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①抽查6月以来混税率订单核对税额 ②德国站重点排查19%+7%混税率订单 ③季度申报前完成差异汇总</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://www.jiyikj.com" target="_blank">吉易跨境</a></div>
+        </div>
+      </div>
+    </div>
+
     <div id="p-pd2026" class="section-block">
       <div class="policy-card info">
         <div class="policy-card-header">
@@ -494,7 +545,7 @@
         <div class="timeline-row warn"><span class="tl-date">6/25</span><span class="tl-sev">🟡</span><span class="tl-text">Lazada泰国站市场服务费上调</span></div>
         <div class="timeline-row warn"><span class="tl-date">6/26</span><span class="tl-sev">🟡</span><span class="tl-text">TikTok Shop拍卖日(3%佣金减免)</span></div>
         <div class="timeline-row warn"><span class="tl-date">6/28</span><span class="tl-sev">🟡</span><span class="tl-text">eBay统一配送模式生效</span></div>
-        <div class="timeline-row warn"><span class="tl-date">6/29</span><span class="tl-sev">🟡</span><span class="tl-text">Amazon自配送处理时间新规生效 + 永久关闭Contact Buyer</span></div>
+        <div class="timeline-row warn"><span class="tl-date">6/29</span><span class="tl-sev">🟡</span><span class="tl-text">Amazon自配送处理时间新规生效 + FBM处理时间强制匹配+Premium准时率93.5%改周考 + 永久关闭Contact Buyer</span></div>
         <div class="timeline-row warn"><span class="tl-date">7/2</span><span class="tl-sev">🟡</span><span class="tl-text">Lazada收取退货运费</span></div>
         <div class="timeline-row warn"><span class="tl-date">7/6</span><span class="tl-sev">🟡</span><span class="tl-text">Amazon SFP配送速度指标更新</span></div>
         <div class="timeline-row warn"><span class="tl-date">7/10</span><span class="tl-sev">🟡</span><span class="tl-text">Lazada非商城1%金币折扣 + CMA CGM美线PSS上调至4000$/柜</span></div>
