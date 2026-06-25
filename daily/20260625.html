@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 · 2026年6月25日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .section-block:target { animation: target-flash 1.5s ease-out; }
+    @keyframes target-flash { 0% { box-shadow: 0 0 0 3px rgba(56,189,248,0.4); } 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); } }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f8fafc; }
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(56,189,248,0.06); color: #e2e8f0; border-left-color: #38bdf8; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.danger { background: rgba(239,68,68,0.15); color: #fca5a5; }
+    .nav-count.warn { background: rgba(245,158,11,0.15); color: #fcd34d; }
+    .nav-count.info { background: rgba(22,163,74,0.15); color: #86efac; }
+    .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
+    .archive-section { padding: 0; }
+    .archive-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    details.archive-month { padding: 0; }
+    details.archive-month summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px 6px 28px; cursor: pointer; font-size: 13px; color: #94a3b8; list-style: none; transition: color 0.15s; border-left: 2px solid transparent; }
+    details.archive-month summary::-webkit-details-marker { display: none; }
+    details.archive-month summary::before { content: "📁"; margin-right: 6px; font-size: 12px; }
+    details.archive-month[open] summary::before { content: "📂"; }
+    details.archive-month summary:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
+    details.archive-month summary .month-info { font-weight: 500; }
+    details.archive-month summary .month-stats { font-size: 11px; color: #475569; }
+    .archive-day { display: block; padding: 3px 24px 3px 48px; color: #64748b; text-decoration: none; font-size: 12px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .archive-day::before { content: "📄 "; font-size: 11px; }
+    .archive-day:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
+    .archive-day .day-count { font-size: 10px; color: #475569; margin-left: 4px; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.danger .stat-num { color: #dc2626; }
+    .stat-chip.warn .stat-num { color: #d97706; }
+    .stat-chip.info .stat-num { color: #16a34a; }
+    .stat-chip.platform .stat-num { color: #0284c7; }
+    .compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+    .compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .compliance-banner ul { list-style: none; padding: 0; }
+    .compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
+    .compliance-banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-danger { background: #fef2f2; color: #dc2626; }
+    .section-header .badge-warn { background: #fffbeb; color: #d97706; }
+    .section-header .badge-info { background: #f0fdf4; color: #16a34a; }
+    .exec-summary { margin-bottom: 24px; }
+    .exec-summary .section-header { border-bottom: 2px solid #bfdbfe; }
+    .summary-list { display: flex; flex-direction: column; gap: 6px; }
+    .summary-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 14px; background: #fff; border-radius: 6px; border: 1px solid #e2e8f0; transition: all 0.15s; }
+    .summary-row:hover { border-color: #bfdbfe; box-shadow: 0 2px 6px rgba(37,99,235,0.08); }
+    .severity-dot { width: 7px; height: 7px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+    .severity-dot.danger { background: #dc2626; }
+    .severity-dot.warn { background: #f59e0b; }
+    .severity-dot.info { background: #16a34a; }
+    .summary-body { flex: 1; min-width: 0; }
+    .summary-title { font-size: 13px; font-weight: 600; color: #1e293b; line-height: 1.5; }
+    .summary-platform { display: inline-block; font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 3px; color: #fff; margin-right: 4px; vertical-align: middle; }
+    .policy-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .policy-card.danger { border-left: 4px solid #dc2626; }
+    .policy-card.warn { border-left: 4px solid #f59e0b; }
+    .policy-card.info { border-left: 4px solid #16a34a; }
+    .policy-card-header { padding: 14px 18px 10px; }
+    .policy-card-header .card-platform { display: inline-block; font-size: 10px; font-weight: 600; padding: 1px 7px; border-radius: 3px; color: #fff; margin-right: 6px; vertical-align: middle; }
+    .policy-card-header .card-title { font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.5; }
+    .policy-card-header .card-urgency { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-left: 8px; vertical-align: middle; }
+    .policy-card-header .urgency-high { background: #fef2f2; color: #dc2626; }
+    .policy-card-header .urgency-mid { background: #fffbeb; color: #d97706; }
+    .policy-card-header .urgency-low { background: #f0fdf4; color: #16a34a; }
+    .policy-card-body { padding: 0 18px 16px; }
+    .five-elements { display: grid; grid-template-columns: 1fr; gap: 8px; }
+    .five-el-item { display: flex; align-items: flex-start; gap: 8px; padding: 8px 12px; background: #f8fafc; border-radius: 6px; border: 1px solid #f1f5f9; }
+    .five-el-icon { font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+    .five-el-label { font-size: 11px; font-weight: 700; color: #64748b; min-width: 60px; flex-shrink: 0; }
+    .five-el-value { font-size: 12px; color: #334155; line-height: 1.6; }
+    .action-list { margin-top: 10px; padding: 10px 14px; background: #eff6ff; border-radius: 6px; border: 1px solid #bfdbfe; }
+    .action-list .action-title { font-size: 12px; font-weight: 700; color: #1d4ed8; margin-bottom: 6px; }
+    .action-list ol { padding-left: 18px; }
+    .action-list li { font-size: 12px; color: #1e40af; padding: 2px 0; line-height: 1.6; }
+    .source-link { margin-top: 10px; font-size: 11px; color: #64748b; }
+    .source-link a { color: #2563eb; text-decoration: none; }
+    .source-link a:hover { text-decoration: underline; }
+    .timeline-section { margin-bottom: 24px; }
+    .timeline-list { display: flex; flex-direction: column; gap: 2px; }
+    .timeline-row { display: flex; align-items: flex-start; gap: 10px; padding: 5px 12px; background: #fff; border-radius: 4px; border: 1px solid #e2e8f0; font-size: 12px; }
+    .timeline-row.danger { border-left: 3px solid #dc2626; }
+    .timeline-row.warn { border-left: 3px solid #f59e0b; }
+    .timeline-row .tl-date { font-weight: 700; color: #334155; min-width: 70px; flex-shrink: 0; }
+    .timeline-row .tl-sev { flex-shrink: 0; }
+    .timeline-row .tl-text { color: #475569; }
+    .footer { margin-top: 40px; padding: 16px 0; border-top: 1px solid #e2e8f0; text-align: center; font-size: 11px; color: #94a3b8; }
+    .pl-amazon { background: #FF9900; }
+    .pl-tiktok { background: #000; }
+    .pl-walmart { background: #0071DC; }
+    .pl-customs { background: #dc2626; }
+    .pl-eu { background: #003399; }
+    .pl-shopee { background: #EE4D2D; }
+    .pl-temu { background: #E85D2D; }
+    .pl-tax { background: #7c3aed; }
+    .pl-uk { background: #012169; }
+    .pl-logistics { background: #0891b2; }
+    .pl-china { background: #c2410c; }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-brand">
+      <h1>📋 跨境政策日报</h1>
+      <div class="version">DAILY POLICY BRIEF</div>
+    </div>
+    <div class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">今日概览</div>
+        <a class="nav-item" href="#summary"><span>高管摘要</span><span class="nav-count">8</span></a>
+        <a class="nav-item" href="#compliance"><span>合规提醒</span><span class="nav-count danger">8</span></a>
+        <a class="nav-item" href="#timeline"><span>关键时间线</span><span class="nav-count">21</span></a>
+      </div>
+      <div class="nav-divider"></div>
+      <div class="nav-section">
+        <div class="nav-section-title">🔴 紧急</div>
+        <a class="nav-item" href="#p-uk-tax"><span>英国135英镑免税关闭</span><span class="nav-count danger">1</span></a>
+        <a class="nav-item" href="#p-bsa18"><span>BSA第18条禁转让</span><span class="nav-count danger">1</span></a>
+        <a class="nav-item" href="#p-temu-v26"><span>Temu电子烟禁售+零佣终结</span><span class="nav-count danger">1</span></a>
+        <a class="nav-item" href="#p-dhl"><span>DHL暂停欧盟运单</span><span class="nav-count danger">1</span></a>
+        <a class="nav-item" href="#p-eu-fbm"><span>欧洲站FBM授权物流</span><span class="nav-count danger">1</span></a>
+      </div>
+      <div class="nav-divider"></div>
+      <div class="nav-section">
+        <div class="nav-section-title">🟡 关注</div>
+        <a class="nav-item" href="#p-shipping"><span>美线运价暴涨</span><span class="nav-count warn">1</span></a>
+        <a class="nav-item" href="#p-shenzhen-tax"><span>深圳商务局宣讲</span><span class="nav-count warn">1</span></a>
+        <a class="nav-item" href="#p-uk-retailers"><span>英国零售商呼吁2.6£关税</span><span class="nav-count warn">1</span></a>
+      </div>
+      <div class="nav-divider"></div>
+      <div class="nav-section">
+        <div class="nav-section-title">🟢 参考</div>
+        <a class="nav-item" href="#p-pd2026"><span>Prime Day 2026战报</span><span class="nav-count info">1</span></a>
+      </div>
+      <div class="nav-divider"></div>
+      <div class="archive-section">
+        <div class="archive-section-title">归档</div>
+        <details class="archive-month">
+          <summary><span class="month-info">2026年6月</span><span class="month-stats">25篇</span></summary>
+          <a class="archive-day" href="daily/20260625.html">6/25 今日</a>
+          <a class="archive-day" href="daily/20260624.html">6/24</a>
+          <a class="archive-day" href="daily/20260623.html">6/23</a>
+          <a class="archive-day" href="daily/20260622.html">6/22</a>
+          <a class="archive-day" href="daily/20260621.html">6/21</a>
+          <a class="archive-day" href="daily/20260620.html">6/20</a>
+          <a class="archive-day" href="daily/20260619.html">6/19</a>
+          <a class="archive-day" href="daily/20260618.html">6/18</a>
+          <a class="archive-day" href="daily/20260617.html">6/17</a>
+          <a class="archive-day" href="daily/20260616.html">6/16</a>
+          <a class="archive-day" href="daily/20260615.html">6/15</a>
+          <a class="archive-day" href="daily/20260614.html">6/14</a>
+          <a class="archive-day" href="daily/20260613.html">6/13</a>
+          <a class="archive-day" href="daily/20260612.html">6/12</a>
+          <a class="archive-day" href="daily/20260611.html">6/11</a>
+          <a class="archive-day" href="daily/20260610.html">6/10</a>
+          <a class="archive-day" href="daily/20260609.html">6/9</a>
+          <a class="archive-day" href="daily/20260608.html">6/8</a>
+          <a class="archive-day" href="daily/20260607.html">6/7</a>
+          <a class="archive-day" href="daily/20260606.html">6/6</a>
+          <a class="archive-day" href="daily/20260605.html">6/5</a>
+          <a class="archive-day" href="daily/20260604.html">6/4</a>
+          <a class="archive-day" href="daily/20260603.html">6/3</a>
+          <a class="archive-day" href="daily/20260602.html">6/2</a>
+          <a class="archive-day" href="daily/20260601.html">6/1</a>
+        </details>
+        <details class="archive-month">
+          <summary><span class="month-info">2026年5月</span><span class="month-stats">29篇</span></summary>
+          <a class="archive-day" href="daily/20260531.html">5/31</a>
+          <a class="archive-day" href="daily/20260530.html">5/30</a>
+          <a class="archive-day" href="daily/20260529.html">5/29</a>
+          <a class="archive-day" href="daily/20260528.html">5/28</a>
+          <a class="archive-day" href="daily/20260527.html">5/27</a>
+        </details>
+      </div>
+    </div>
+  </nav>
+  <main class="main-content">
+    <div class="content-header">
+      <h1>跨境政策日报</h1>
+      <div class="date-line">
+        <span class="date-val">2026年6月25日 周四</span>
+        <span class="update-time">08:00 更新</span>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-chip danger"><span class="stat-num">5</span>紧急</div>
+      <div class="stat-chip warn"><span class="stat-num">3</span>关注</div>
+      <div class="stat-chip info"><span class="stat-num">1</span>参考</div>
+      <div class="stat-chip platform"><span class="stat-num">9</span>政策条目</div>
+    </div>
+
+    <div id="compliance" class="compliance-banner section-block">
+      <div class="banner-title">⚠️ 近期需注意的合规事项</div>
+      <ul>
+        <li><span class="date-tag">6/24</span> DHL Globalmail已暂停欧盟商品运单，使用该渠道的卖家需立即切换物流方案</li>
+        <li><span class="date-tag">7/1</span> 欧盟关税新政倒计时6天，FBM卖家必须确认授权承运商+DDP能力+IOSS绑定</li>
+        <li><span class="date-tag">6/30</span> COO原产地信息截止，未填写的Listing将被限制销售</li>
+        <li><span class="date-tag">6/29</span> 自配送处理时间新规生效，必须开启AHT或确保手动设置与实际一致</li>
+        <li><span class="date-tag">8/24</span> BSA第18条禁止店铺转让，买来的/代持的店铺需在60天内迁移</li>
+        <li><span class="date-tag">即日</span> Temu全托管零佣金终结+电子烟全局禁售，全托管卖家需评估转型</li>
+        <li><span class="date-tag">7/8</span> CPSC eFiling强制实施，输美消费品需提前准备CPC/GCC+ACE系统申报</li>
+        <li><span class="date-tag">当前</span> 美线运价持续暴涨，FBA补货需提前锁舱错峰出货</li>
+      </ul>
+    </div>
+
+    <div id="summary" class="exec-summary section-block">
+      <div class="section-header">
+        <h2>📊 高管摘要</h2>
+        <span class="section-badge badge-danger">5紧急 · 3关注 · 1参考</span>
+      </div>
+      <div class="summary-list">
+        <div class="summary-row">
+          <span class="severity-dot danger"></span>
+          <div class="summary-body"><span class="summary-platform pl-uk">英国</span><span class="summary-title">提前6个月关闭135英镑免税直邮至2028年10月，按2%–12%征关税+20%VAT</span></div>
+        </div>
+        <div class="summary-row">
+          <span class="severity-dot danger"></span>
+          <div class="summary-body"><span class="summary-platform pl-amazon">Amazon</span><span class="summary-title">BSA第18条8/24生效：全球站点全面禁止店铺转让/质押/代持</span></div>
+        </div>
+        <div class="summary-row">
+          <span class="severity-dot danger"></span>
+          <div class="summary-body"><span class="summary-platform pl-temu">Temu</span><span class="summary-title">V26政策：电子烟全局禁售+全托管零佣金终结(5%–11%)+美国直邮关闭</span></div>
+        </div>
+        <div class="summary-row">
+          <span class="severity-dot danger"></span>
+          <div class="summary-body"><span class="summary-platform pl-logistics">物流</span><span class="summary-title">DHL暂停欧盟Globalmail商品运单（6/24已生效）</span></div>
+        </div>
+        <div class="summary-row">
+          <span class="severity-dot danger"></span>
+          <div class="summary-body"><span class="summary-platform pl-amazon">Amazon🇪🇺</span><span class="summary-title">欧洲站FBM直邮7/1起仅限授权物流+IOSS校验强化（倒计时6天）</span></div>
+        </div>
+        <div class="summary-row">
+          <span class="severity-dot warn"></span>
+          <div class="summary-body"><span class="summary-platform pl-logistics">物流</span><span class="summary-title">美线运价暴涨：CMA CGM PSS达4000美元/柜+SCFI八连涨突破3121点</span></div>
+        </div>
+        <div class="summary-row">
+          <span class="severity-dot warn"></span>
+          <div class="summary-body"><span class="summary-platform pl-china">中国税务</span><span class="summary-title">深圳商务局宣讲：店铺公司是纳税主体+全面查账征收+0110空壳模式作废</span></div>
+        </div>
+        <div class="summary-row">
+          <span class="severity-dot warn"></span>
+          <div class="summary-body"><span class="summary-platform pl-uk">英国</span><span class="summary-title">16家零售巨头联名呼吁对所有跨境小包裹征2.6英镑统一关税</span></div>
+        </div>
+        <div class="summary-row">
+          <span class="severity-dot info"></span>
+          <div class="summary-body"><span class="summary-platform pl-amazon">Amazon</span><span class="summary-title">Prime Day 2026首日：冰火两重天，21%卖家零单、仅8%爆单</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-uk-tax" class="section-block">
+      <div class="policy-card danger">
+        <div class="policy-card-header">
+          <span class="card-platform pl-uk">英国</span>
+          <span class="card-title">提前关闭135英镑免税直邮通道至2028年10月</span>
+          <span class="card-urgency urgency-high">🔴 紧急</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">英国财政部6/23宣布将LVIs取消时间从最晚2029年3月提前6个月至2028年10月。届时135英镑及以下境外直邮包裹不再享受关税豁免，需按2%–12%(视HS编码)缴纳进口关税+20%增值税。政府同步审查电商平台VAT征收机制</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">依赖小包直邮英国的跨境卖家；Temu/SHEIN/AliExpress等低价直邮平台卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">2028年10月正式生效，约2年3个月缓冲期</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">玛莎百货、Next、Primark等16家零售商5月联名施压；BRC称"提前半年不够"；海关需从零搭建新征税系统；全球三大市场同步收紧低值免税</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①评估2%–12%关税+20%VAT对定价影响 ②高周转SKU转英国海外仓 ③提前注册英国VAT ④关注平台英国路向策略调整</span></div>
+          </div>
+          <div class="action-list">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>本周：核算英国路向SKU在2%–12%关税+20%VAT下的利润变化，识别受冲击最大的品类</li>
+              <li>下月：对接英国海外仓服务商，将TOP 20高周转SKU前置备货</li>
+              <li>3个月内：完成英国VAT注册+EORI号申请，规范货值申报流程</li>
+            </ol>
+          </div>
+          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fq2ff7ofjo5c" target="_blank">卖家之家</a> · <a href="https://www.cifnews.com/article/186992" target="_blank">雨果跨境</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-bsa18" class="section-block">
+      <div class="policy-card danger">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon</span>
+          <span class="card-title">BSA第18条8/24生效：全面禁止店铺转让/质押/代持</span>
+          <span class="card-urgency urgency-high">🔴 紧急</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">8/24更新BSA第18条：①全球站点禁止店铺转让，身份永久绑定原始注册主体 ②禁止抵押回款权/收款账户/品牌授权 ③禁止第三方代持。此前平台执行宽松，新规堵死所有灰色过户通道</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">买过现成店铺的新卖家；店群模式铺货卖家(代持双方法律风险)；准备出售店铺退出的卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">8/24生效，距仅60天</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">店铺买卖年交易规模估计超10亿；下半年或大面积扫号；不合规主体变更极易触发二审封店</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①8/24前迁移品牌/库存/资金至自有合规主体 ②代持店铺逐一回收或注销 ③店群从量多转向精简 ④新注册走合规路径</span></div>
+          </div>
+          <div class="action-list">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>本周：盘点所有店铺注册主体身份，标注哪些是买来的/代持的</li>
+              <li>7月底前：完成迁移——将买来店铺的品牌备案、FBA库存、资金账户转移至自有合规主体</li>
+              <li>8/24前：关闭或注销所有代持店铺，确保每个运营中店铺的主体100%可控</li>
+            </ol>
+          </div>
+          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fq28fjvdzbwg" target="_blank">卖家之家</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-temu-v26" class="section-block">
+      <div class="policy-card danger">
+        <div class="policy-card-header">
+          <span class="card-platform pl-temu">Temu</span>
+          <span class="card-title">V26政策：电子烟全局禁售+全托管零佣金终结</span>
+          <span class="card-urgency urgency-high">🔴 紧急</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">V26《商品安全与合规政策》三重调整：①电子烟从区域限制升级为全局禁售(电子雪茄/水烟/烟弹/烟油/雾化器及配件) ②全托管零佣金终结，按销售额5%–11%+负佣金 ③美国直邮通道事实关闭，强推本地仓/半托管</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">Temu全托管卖家；电子烟品类卖家；依赖低价直邮铺货模式的卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">已生效</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">全托管退潮半托管普及是行业趋势——SHEIN已开放半托管美/欧五国，行业从"谁供货更便宜"转向"谁能自己运营"</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①电子烟卖家立即下架全平台相关SKU ②全托管卖家评估佣金冲击，考虑转半托管 ③布局美国本地仓/半托管</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fq28fjvdzbwg" target="_blank">卖家之家</a> · <a href="https://m.ebrun.com/684608.html" target="_blank">亿邦动力</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-dhl" class="section-block">
+      <div class="policy-card danger">
+        <div class="policy-card-header">
+          <span class="card-platform pl-logistics">物流</span>
+          <span class="card-title">DHL暂停欧盟Globalmail商品运单</span>
+          <span class="card-urgency urgency-high">🔴 紧急</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">DHL因欧盟7/1取消€150免税并要求DDP模式，Globalmail服务6/24起暂停发往欧盟含商品运单，6/23为最后收件日。文件/印刷品不受影响，DHL Express正常承运</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">使用DHL Globalmail发往欧盟的跨境卖家；依赖邮政小包直邮欧洲的中小卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/24已暂停</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">欧盟7/1关税新政，DHL Globalmail作为邮政渠道产品无法满足DDP要求</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①检查在途运单状态 ②改用DHL Express或其他DDP渠道 ③关注DHL后续DDP方案</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.ebrun.com/ebrungo/zb/684418.html" target="_blank">亿邦动力</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-eu-fbm" class="section-block">
+      <div class="policy-card danger">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon🇪🇺</span>
+          <span class="card-title">欧洲站FBM直邮7/1起仅限授权物流+IOSS校验强化</span>
+          <span class="card-urgency urgency-high">🔴 紧急</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">7/1起所有FBM直邮必须通过授权承运商，自由文本输入不再可用；发货须绑定ASIN+IOSS税号；不合规订单关税赔付失效损失卖家全额承担；必须DDP方式发货</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">非欧盟向欧洲站消费者直邮的FBM卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">7/1生效，倒计时6天</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">欧盟海关改革取消€150免税，按品类征收€3关税；11/1再加€2处理费</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①确认物流商在授权名单内 ②更新发货流程绑定ASIN+IOSS ③改用DDP发货 ④评估本地入仓vs直邮成本</span></div>
+          </div>
+          <div class="action-list">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>今天：登录卖家后台查看最新授权承运商列表，确认现有物流商是否在列</li>
+              <li>明天前：联系物流商确认IOSS/ASIN数据传输和DDP能力，不满足的立即切换</li>
+              <li>6/28前：完成所有欧洲站FBM SKU的发货流程更新测试</li>
+            </ol>
+          </div>
+          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fpzqrvwf7k00" target="_blank">卖家之家</a> · <a href="https://m.ebrun.com/ebrungo/zb/684414.html" target="_blank">亿邦动力</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-shipping" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-logistics">物流</span>
+          <span class="card-title">美线运价暴涨：PSS达4000美元/柜+SCFI八连涨</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">CMA CGM 7/10起美线PSS上调至3600$/20GP、4000$/40GP/HC；SCFI报3121.69八连涨；宁波至美西2900→6300$/FEU，美东3900→7500$/FEU；6-7月初舱位基本售罄</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">美线FBA补货卖家；海外仓备货卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">7/10 PSS生效；7/24美国新一轮关税窗口</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">红海绕行拉长周转(20天→45天)+油价推升燃油成本(占30-40%)+CPSC新规提前抢运+巴拿马运河拥堵+旺季附加费快速抬升</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①评估运价对补货成本影响 ②提前锁舱错峰出货 ③策略从降本增效转向安全冗余 ④关注7月中下旬运价回落机会</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a> · <a href="http://m.toutiao.com/group/7654783635777667619/" target="_blank">跨境物流百晓生</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-shenzhen-tax" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-china">中国税务</span>
+          <span class="card-title">深圳商务局宣讲：店铺公司是纳税主体+0110空壳模式作废</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">6/22深圳商务局联合亚马逊全球开店宣讲四大红线：①店铺公司必须是纳税主体，平台GMV直接认定为营业收入依据 ②2026全面查账征收 ③增值税"四流合一"成硬门槛 ④0110+境外空壳架构归集报税被正式否定</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">多店铺运营的亚马逊卖家；使用0110模式退税的海外仓卖家；买单出口的卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">7/1起837号令正式施行</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">深圳一个月内连续两场官方会议；9810出口通道已畅通；退税辅助系统计划年内上线；金税四期数据穿透核查常态化</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①每店铺独立开户做账报税 ②放弃买单出口走合规报关 ③评估0110架构转9810 ④了解9810三重红利</span></div>
+          </div>
+          <div class="source-link">来源：<a href="http://m.toutiao.com/group/7654900421755994659/" target="_blank">跨境大发哥</a> · <a href="http://m.toutiao.com/group/7654430484776124928/" target="_blank">亿邦动力</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-uk-retailers" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-uk">英国</span>
+          <span class="card-title">16家零售巨头联名呼吁征2.6英镑统一关税</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">ASOS/Next/M&S等16家英国零售商联名致信首相，呼吁对所有跨境小额包裹征2.6英镑统一关税。继美/欧后英国税改箭在弦上</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">英国路向跨境卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">已呼吁，立法进程待观察</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">英国零售业持续施压政府堵"免税洼地"漏洞，认为现行制度损害英国商业街</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①关注英国关税立法进展 ②英向卖家做税费转嫁预算 ③提前布局英国海外仓</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fq28fjvdzbwg" target="_blank">卖家之家</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p-pd2026" class="section-block">
+      <div class="policy-card info">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon</span>
+          <span class="card-title">Prime Day 2026首日：冰火两重天</span>
+          <span class="card-urgency urgency-low">🟢 参考</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">Adobe预测美国在线销售263亿美元同比+9%，但21%卖家零单、仅8%爆单、超五成未增长；欧洲站远好于美国站(不少两三倍增长)；美国站秒杀改为100$固定费+1.5%抽成压缩利润</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">所有亚马逊卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/23-26进行中</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">通胀4.2%+多平台分流+AI比价工具使消费者更理性；消费者倾向低客单价刚需品</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①Day 2-3抓住后半段高峰 ②关注ACOS和利润质量 ③评估加大欧洲站投入</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.ebrun.com/684608.html" target="_blank">亿邦动力</a> · <a href="https://m.mjzj.com/article/fq31yvugvh1c" target="_blank">卖家之家</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="timeline" class="timeline-section section-block">
+      <div class="section-header">
+        <h2>⏰ 近期关键时间线</h2>
+      </div>
+      <div class="timeline-list">
+        <div class="timeline-row warn"><span class="tl-date">6/25</span><span class="tl-sev">🟡</span><span class="tl-text">Lazada泰国站市场服务费上调</span></div>
+        <div class="timeline-row warn"><span class="tl-date">6/26</span><span class="tl-sev">🟡</span><span class="tl-text">TikTok Shop拍卖日(3%佣金减免)</span></div>
+        <div class="timeline-row warn"><span class="tl-date">6/28</span><span class="tl-sev">🟡</span><span class="tl-text">eBay统一配送模式生效</span></div>
+        <div class="timeline-row warn"><span class="tl-date">6/29</span><span class="tl-sev">🟡</span><span class="tl-text">Amazon自配送处理时间新规生效 + 永久关闭Contact Buyer</span></div>
+        <div class="timeline-row danger"><span class="tl-date">6/30</span><span class="tl-sev">🔴</span><span class="tl-text">Amazon COO原产地强制填报 + EUDR宽限期 + 海关78号 + FBA基础容量 + Temu德国EPR + TTS泰国TISI</span></div>
+        <div class="timeline-row danger"><span class="tl-date">7/1</span><span class="tl-sev">🔴</span><span class="tl-text">欧盟€150免税取消 + €3统一征税 + FBA/FBM完整海关数据 + 837号令 + 加州纺织品EPR + Shopee越南1%税</span></div>
+        <div class="timeline-row warn"><span class="tl-date">7/2</span><span class="tl-sev">🟡</span><span class="tl-text">Lazada收取退货运费</span></div>
+        <div class="timeline-row warn"><span class="tl-date">7/6</span><span class="tl-sev">🟡</span><span class="tl-text">Amazon SFP配送速度指标更新</span></div>
+        <div class="timeline-row danger"><span class="tl-date">7/7</span><span class="tl-sev">🔴</span><span class="tl-text">美国301关税公开听证会</span></div>
+        <div class="timeline-row danger"><span class="tl-date">7/8</span><span class="tl-sev">🔴</span><span class="tl-text">CPSC eFiling强制电子备案</span></div>
+        <div class="timeline-row warn"><span class="tl-date">7/10</span><span class="tl-sev">🟡</span><span class="tl-text">Lazada非商城1%金币折扣 + CMA CGM美线PSS上调至4000$/柜</span></div>
+        <div class="timeline-row warn"><span class="tl-date">7/20</span><span class="tl-sev">🟡</span><span class="tl-text">美客多墨西哥RFC未完成预扣税率36%</span></div>
+        <div class="timeline-row warn"><span class="tl-date">7/23</span><span class="tl-sev">🟡</span><span class="tl-text">CPSC第三方实验室审查最终规定生效</span></div>
+        <div class="timeline-row danger"><span class="tl-date">7/27</span><span class="tl-sev">🔴</span><span class="tl-text">Amazon产品标题75字符限制强制执行</span></div>
+        <div class="timeline-row warn"><span class="tl-date">8/12</span><span class="tl-sev">🟡</span><span class="tl-text">欧盟PPWR包装法强制生效</span></div>
+        <div class="timeline-row danger"><span class="tl-date">8/24</span><span class="tl-sev">🔴</span><span class="tl-text">Amazon BSA第18条禁止店铺转让/质押生效</span></div>
+        <div class="timeline-row warn"><span class="tl-date">8/26</span><span class="tl-sev">🟡</span><span class="tl-text">TikTok Shop共资包邮计划(CFFS)启动</span></div>
+        <div class="timeline-row warn"><span class="tl-date">11/1</span><span class="tl-sev">🟡</span><span class="tl-text">欧盟FBA货件额外加收€2海关手续费 + PID强制申报</span></div>
+        <div class="timeline-row danger"><span class="tl-date">2028/10</span><span class="tl-sev">🔴</span><span class="tl-text">英国135英镑免税直邮通道正式关闭</span></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      📊 数据来源：卖家之家 / 亿邦动力 / 雨果跨境 / 至美通 / 跨境大发哥 / 跨境物流百晓生 / 白鲸出海 / WL123（33个信息源）<br>
+      ⏰ 每日08:00自动更新 · 近24小时跨境政策变化
+    </div>
+  </main>
+</div>
+</body>
+</html>
