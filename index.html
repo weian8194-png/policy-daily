@@ -265,10 +265,11 @@
     <nav class="sidebar-nav">
       <div class="nav-section">
         <div class="nav-section-title">📌 今日概览</div>
-        <a class="nav-item" href="#platform">平台政策 <span class="nav-count danger">3🔴</span><span class="nav-count warn">5🟡</span></a>
-        <a class="nav-item" href="#compliance">合规/税务 <span class="nav-count warn">9🟡</span></a>
-        <a class="nav-item" href="#market">物流/市场 <span class="nav-count info">7🟢</span></a>
-        <a class="nav-item" href="#reminders">合规提醒 <span class="nav-count danger">8</span></a>
+        <a class="nav-item" href="#summary">速报概览</a>
+        <a class="nav-item" href="#platform">平台政策 <span class="nav-count danger">3🔴</span><span class="nav-count warn">5🟡</span><span class="nav-count info">1🟢</span></a>
+        <a class="nav-item" href="#compliance-cards">合规/税务 <span class="nav-count danger">2🔴</span></a>
+        <a class="nav-item" href="#reminders">合规提醒 <span class="nav-count danger">8🔴</span><span class="nav-count warn">7🟡</span></a>
+        <a class="nav-item" href="#timeline">⏰ 时间线</a>
       </div>
       <div class="nav-divider"></div>
 
@@ -349,7 +350,7 @@
       <div class="stat-chip platform"><span class="stat-num">11</span>政策条目</div>
     </div>
 
-    <div id="compliance" class="compliance-banner section-block">
+    <div id="reminders" class="compliance-banner section-block">
       <div class="banner-title">🔴 近期需注意的合规事项（含历史未过期）</div>
       <ul>
         <li><span class="date-tag">6/29</span> 🔴 Amazon自配送处理时间新规生效：必须开启AHT或确保手动设置与实际一致；Premium准时率93.5%改周考，虚标将被系统接管SKU</li>
@@ -423,6 +424,15 @@
       </div>
     </div>
 
+
+    <div id="platform" class="section-block" style="margin-bottom:8px;">
+      <div class="section-header">
+        <h2>🛒 平台政策</h2>
+        <span class="section-badge badge-danger">3🔴 紧急</span>
+        <span class="section-badge badge-warn">5🟡 关注</span>
+        <span class="section-badge badge-info">1🟢 参考</span>
+      </div>
+    </div>
     <div id="p-uk-tax" class="section-block">
       <div class="policy-card danger">
         <div class="policy-card-header">
@@ -450,7 +460,6 @@
         </div>
       </div>
     </div>
-
     <div id="p-bsa18" class="section-block">
       <div class="policy-card danger">
         <div class="policy-card-header">
@@ -478,7 +487,6 @@
         </div>
       </div>
     </div>
-
     <div id="p-temu-v26" class="section-block">
       <div class="policy-card danger">
         <div class="policy-card-header">
@@ -498,7 +506,125 @@
         </div>
       </div>
     </div>
+    <div id="p-shipping" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-logistics">物流</span>
+          <span class="card-title">美线运价暴涨：PSS达4000美元/柜+SCFI八连涨</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">CMA CGM 7/10起美线PSS上调至3600$/20GP、4000$/40GP/HC；SCFI报3121.69八连涨；宁波至美西2900→6300$/FEU，美东3900→7500$/FEU；6-7月初舱位基本售罄</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">美线FBA补货卖家；海外仓备货卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">7/10 PSS生效；7/24美国新一轮关税窗口</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">红海绕行拉长周转(20天→45天)+油价推升燃油成本(占30-40%)+CPSC新规提前抢运+巴拿马运河拥堵+旺季附加费快速抬升</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①评估运价对补货成本影响 ②提前锁舱错峰出货 ③策略从降本增效转向安全冗余 ④关注7月中下旬运价回落机会</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a> · <a href="http://m.toutiao.com/group/7654783635777667619/" target="_blank">跨境物流百晓生</a></div>
+        </div>
+      </div>
+    </div>
+    <div id="p-shenzhen-tax" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-china">中国税务</span>
+          <span class="card-title">深圳商务局宣讲：店铺公司是纳税主体+0110空壳模式作废</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">6/22深圳商务局联合亚马逊全球开店宣讲四大红线：①店铺公司必须是纳税主体，平台GMV直接认定为营业收入依据 ②2026全面查账征收 ③增值税"四流合一"成硬门槛 ④0110+境外空壳架构归集报税被正式否定</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">多店铺运营的亚马逊卖家；使用0110模式退税的海外仓卖家；买单出口的卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">7/1起837号令正式施行</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">深圳一个月内连续两场官方会议；9810出口通道已畅通；退税辅助系统计划年内上线；金税四期数据穿透核查常态化</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①每店铺独立开户做账报税 ②放弃买单出口走合规报关 ③评估0110架构转9810 ④了解9810三重红利</span></div>
+          </div>
+          <div class="source-link">来源：<a href="http://m.toutiao.com/group/7654900421755994659/" target="_blank">跨境大发哥</a> · <a href="http://m.toutiao.com/group/7654430484776124928/" target="_blank">亿邦动力</a></div>
+        </div>
+      </div>
+    </div>
+    <div id="p-uk-retailers" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-uk">英国</span>
+          <span class="card-title">16家零售巨头联名呼吁征2.6英镑统一关税</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">ASOS/Next/M&S等16家英国零售商联名致信首相，呼吁对所有跨境小额包裹征2.6英镑统一关税。继美/欧后英国税改箭在弦上</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">英国路向跨境卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">已呼吁，立法进程待观察</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">英国零售业持续施压政府堵"免税洼地"漏洞，认为现行制度损害英国商业街</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①关注英国关税立法进展 ②英向卖家做税费转嫁预算 ③提前布局英国海外仓</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fq28fjvdzbwg" target="_blank">卖家之家</a></div>
+        </div>
+      </div>
+    </div>
+    <div id="p-fbm-new" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon</span>
+          <span class="card-title">FBM自配送6/29新规：处理时间强制匹配+Premium改周考</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">6/29起三大变化同时生效：①处理时间必须与实际发货速度一致，虚标将被系统接管SKU设置180天；两条合规路径：开启AHT自动模式(推荐)或手动设置(30天监测期)②Premium Shipping准时送达率从97%降至93.5%但考核从月度改为周度，连续3周不达标清退 ③SFP配送速度门槛7/6起上调：标准件1日达30%→40%、2日达70%→75%</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">所有FBM自配送卖家；Premium Shipping参与卖家；SFP自配送Prime卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/29处理时间+Premium改周考生效；7/6 SFP门槛上调</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①立即在卖家后台开启AHT自动备货时间 ②导出近30天各SKU发货时效，6/29前批量修正 ③Premium Shipping卖家重点监控周度准时率 ④SFP卖家评估7/6新门槛是否可达</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.toutiao.com/search/?keyword=卖家之家" target="_blank">卖家之家(头条号)</a> · <a href="https://www.eci-tech.com" target="_blank">易仓</a></div>
+        </div>
+      </div>
+    </div>
+    <div id="p-vcs-tax" class="section-block">
+      <div class="policy-card warn">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon🇪🇺</span>
+          <span class="card-title">VCS增值税6/1起从按单品→按整订单/包裹计算</span>
+          <span class="card-urgency urgency-mid">🟡 关注</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">VCS增值税计算服务6/1起从按单品计税改为按整订单/包裹计算，欧洲站尤其德国站混税率订单受影响最直接</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">使用VCS服务的欧洲站卖家；德国站混税率订单卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/1已生效</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①抽查6月以来混税率订单核对税额 ②德国站重点排查19%+7%混税率订单 ③季度申报前完成差异汇总</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://www.jiyikj.com" target="_blank">吉易跨境</a></div>
+        </div>
+      </div>
+    </div>
+    <div id="p-pd2026" class="section-block">
+      <div class="policy-card info">
+        <div class="policy-card-header">
+          <span class="card-platform pl-amazon">Amazon</span>
+          <span class="card-title">Prime Day 2026首日：冰火两重天</span>
+          <span class="card-urgency urgency-low">🟢 参考</span>
+        </div>
+        <div class="policy-card-body">
+          <div class="five-elements">
+            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">Adobe预测美国在线销售263亿美元同比+9%，但21%卖家零单、仅8%爆单、超五成未增长；欧洲站远好于美国站(不少两三倍增长)；美国站秒杀改为100$固定费+1.5%抽成压缩利润</span></div>
+            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">所有亚马逊卖家</span></div>
+            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/23-26进行中</span></div>
+            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">通胀4.2%+多平台分流+AI比价工具使消费者更理性；消费者倾向低客单价刚需品</span></div>
+            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①Day 2-3抓住后半段高峰 ②关注ACOS和利润质量 ③评估加大欧洲站投入</span></div>
+          </div>
+          <div class="source-link">来源：<a href="https://m.ebrun.com/684608.html" target="_blank">亿邦动力</a> · <a href="https://m.mjzj.com/article/fq31yvugvh1c" target="_blank">卖家之家</a></div>
+        </div>
+      </div>
+    </div>
 
+    <div id="compliance-cards" class="section-block" style="margin-bottom:8px;">
+      <div class="section-header">
+        <h2>🏷️ 合规/税务</h2>
+        <span class="section-badge badge-danger">2🔴 紧急</span>
+      </div>
+    </div>
     <div id="p-dhl" class="section-block">
       <div class="policy-card danger">
         <div class="policy-card-header">
@@ -518,7 +644,6 @@
         </div>
       </div>
     </div>
-
     <div id="p-eu-fbm" class="section-block">
       <div class="policy-card danger">
         <div class="policy-card-header">
@@ -543,124 +668,6 @@
             </ol>
           </div>
           <div class="source-link">来源：<a href="https://m.mjzj.com/article/fpzqrvwf7k00" target="_blank">卖家之家</a> · <a href="https://m.ebrun.com/ebrungo/zb/684414.html" target="_blank">亿邦动力</a></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="p-shipping" class="section-block">
-      <div class="policy-card warn">
-        <div class="policy-card-header">
-          <span class="card-platform pl-logistics">物流</span>
-          <span class="card-title">美线运价暴涨：PSS达4000美元/柜+SCFI八连涨</span>
-          <span class="card-urgency urgency-mid">🟡 关注</span>
-        </div>
-        <div class="policy-card-body">
-          <div class="five-elements">
-            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">CMA CGM 7/10起美线PSS上调至3600$/20GP、4000$/40GP/HC；SCFI报3121.69八连涨；宁波至美西2900→6300$/FEU，美东3900→7500$/FEU；6-7月初舱位基本售罄</span></div>
-            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">美线FBA补货卖家；海外仓备货卖家</span></div>
-            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">7/10 PSS生效；7/24美国新一轮关税窗口</span></div>
-            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">红海绕行拉长周转(20天→45天)+油价推升燃油成本(占30-40%)+CPSC新规提前抢运+巴拿马运河拥堵+旺季附加费快速抬升</span></div>
-            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①评估运价对补货成本影响 ②提前锁舱错峰出货 ③策略从降本增效转向安全冗余 ④关注7月中下旬运价回落机会</span></div>
-          </div>
-          <div class="source-link">来源：<a href="https://c.m.163.com/news/a/L063M1470538BNYC.html" target="_blank">至美通</a> · <a href="http://m.toutiao.com/group/7654783635777667619/" target="_blank">跨境物流百晓生</a></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="p-shenzhen-tax" class="section-block">
-      <div class="policy-card warn">
-        <div class="policy-card-header">
-          <span class="card-platform pl-china">中国税务</span>
-          <span class="card-title">深圳商务局宣讲：店铺公司是纳税主体+0110空壳模式作废</span>
-          <span class="card-urgency urgency-mid">🟡 关注</span>
-        </div>
-        <div class="policy-card-body">
-          <div class="five-elements">
-            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">6/22深圳商务局联合亚马逊全球开店宣讲四大红线：①店铺公司必须是纳税主体，平台GMV直接认定为营业收入依据 ②2026全面查账征收 ③增值税"四流合一"成硬门槛 ④0110+境外空壳架构归集报税被正式否定</span></div>
-            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">多店铺运营的亚马逊卖家；使用0110模式退税的海外仓卖家；买单出口的卖家</span></div>
-            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">7/1起837号令正式施行</span></div>
-            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">深圳一个月内连续两场官方会议；9810出口通道已畅通；退税辅助系统计划年内上线；金税四期数据穿透核查常态化</span></div>
-            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①每店铺独立开户做账报税 ②放弃买单出口走合规报关 ③评估0110架构转9810 ④了解9810三重红利</span></div>
-          </div>
-          <div class="source-link">来源：<a href="http://m.toutiao.com/group/7654900421755994659/" target="_blank">跨境大发哥</a> · <a href="http://m.toutiao.com/group/7654430484776124928/" target="_blank">亿邦动力</a></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="p-uk-retailers" class="section-block">
-      <div class="policy-card warn">
-        <div class="policy-card-header">
-          <span class="card-platform pl-uk">英国</span>
-          <span class="card-title">16家零售巨头联名呼吁征2.6英镑统一关税</span>
-          <span class="card-urgency urgency-mid">🟡 关注</span>
-        </div>
-        <div class="policy-card-body">
-          <div class="five-elements">
-            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">ASOS/Next/M&S等16家英国零售商联名致信首相，呼吁对所有跨境小额包裹征2.6英镑统一关税。继美/欧后英国税改箭在弦上</span></div>
-            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">英国路向跨境卖家</span></div>
-            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">已呼吁，立法进程待观察</span></div>
-            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">英国零售业持续施压政府堵"免税洼地"漏洞，认为现行制度损害英国商业街</span></div>
-            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①关注英国关税立法进展 ②英向卖家做税费转嫁预算 ③提前布局英国海外仓</span></div>
-          </div>
-          <div class="source-link">来源：<a href="https://m.mjzj.com/article/fq28fjvdzbwg" target="_blank">卖家之家</a></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="p-fbm-new" class="section-block">
-      <div class="policy-card warn">
-        <div class="policy-card-header">
-          <span class="card-platform pl-amazon">Amazon</span>
-          <span class="card-title">FBM自配送6/29新规：处理时间强制匹配+Premium改周考</span>
-          <span class="card-urgency urgency-mid">🟡 关注</span>
-        </div>
-        <div class="policy-card-body">
-          <div class="five-elements">
-            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">6/29起三大变化同时生效：①处理时间必须与实际发货速度一致，虚标将被系统接管SKU设置180天；两条合规路径：开启AHT自动模式(推荐)或手动设置(30天监测期)②Premium Shipping准时送达率从97%降至93.5%但考核从月度改为周度，连续3周不达标清退 ③SFP配送速度门槛7/6起上调：标准件1日达30%→40%、2日达70%→75%</span></div>
-            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">所有FBM自配送卖家；Premium Shipping参与卖家；SFP自配送Prime卖家</span></div>
-            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/29处理时间+Premium改周考生效；7/6 SFP门槛上调</span></div>
-            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①立即在卖家后台开启AHT自动备货时间 ②导出近30天各SKU发货时效，6/29前批量修正 ③Premium Shipping卖家重点监控周度准时率 ④SFP卖家评估7/6新门槛是否可达</span></div>
-          </div>
-          <div class="source-link">来源：<a href="https://m.toutiao.com/search/?keyword=卖家之家" target="_blank">卖家之家(头条号)</a> · <a href="https://www.eci-tech.com" target="_blank">易仓</a></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="p-vcs-tax" class="section-block">
-      <div class="policy-card warn">
-        <div class="policy-card-header">
-          <span class="card-platform pl-amazon">Amazon🇪🇺</span>
-          <span class="card-title">VCS增值税6/1起从按单品→按整订单/包裹计算</span>
-          <span class="card-urgency urgency-mid">🟡 关注</span>
-        </div>
-        <div class="policy-card-body">
-          <div class="five-elements">
-            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">VCS增值税计算服务6/1起从按单品计税改为按整订单/包裹计算，欧洲站尤其德国站混税率订单受影响最直接</span></div>
-            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">使用VCS服务的欧洲站卖家；德国站混税率订单卖家</span></div>
-            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/1已生效</span></div>
-            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①抽查6月以来混税率订单核对税额 ②德国站重点排查19%+7%混税率订单 ③季度申报前完成差异汇总</span></div>
-          </div>
-          <div class="source-link">来源：<a href="https://www.jiyikj.com" target="_blank">吉易跨境</a></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="p-pd2026" class="section-block">
-      <div class="policy-card info">
-        <div class="policy-card-header">
-          <span class="card-platform pl-amazon">Amazon</span>
-          <span class="card-title">Prime Day 2026首日：冰火两重天</span>
-          <span class="card-urgency urgency-low">🟢 参考</span>
-        </div>
-        <div class="policy-card-body">
-          <div class="five-elements">
-            <div class="five-el-item"><span class="five-el-icon">🔄</span><span class="five-el-label">变了什么</span><span class="five-el-value">Adobe预测美国在线销售263亿美元同比+9%，但21%卖家零单、仅8%爆单、超五成未增长；欧洲站远好于美国站(不少两三倍增长)；美国站秒杀改为100$固定费+1.5%抽成压缩利润</span></div>
-            <div class="five-el-item"><span class="five-el-icon">👤</span><span class="five-el-label">影响谁</span><span class="five-el-value">所有亚马逊卖家</span></div>
-            <div class="five-el-item"><span class="five-el-icon">⏰</span><span class="five-el-label">关键时间</span><span class="five-el-value">6/23-26进行中</span></div>
-            <div class="five-el-item"><span class="five-el-icon">📋</span><span class="five-el-label">背景</span><span class="five-el-value">通胀4.2%+多平台分流+AI比价工具使消费者更理性；消费者倾向低客单价刚需品</span></div>
-            <div class="five-el-item"><span class="five-el-icon">✅</span><span class="five-el-label">行动</span><span class="five-el-value">①Day 2-3抓住后半段高峰 ②关注ACOS和利润质量 ③评估加大欧洲站投入</span></div>
-          </div>
-          <div class="source-link">来源：<a href="https://m.ebrun.com/684608.html" target="_blank">亿邦动力</a> · <a href="https://m.mjzj.com/article/fq31yvugvh1c" target="_blank">卖家之家</a></div>
         </div>
       </div>
     </div>
