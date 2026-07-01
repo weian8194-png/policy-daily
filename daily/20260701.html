@@ -6,10 +6,9 @@
   <title>跨境政策日报 · 2026年7月1日</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+    html { }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    .section-block:target { animation: target-flash 1.5s ease-out; }
-    @keyframes target-flash { 0% { box-shadow: 0 0 0 3px rgba(56,189,248,0.4); } 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); } }
+    100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); } }
     .nav-item:active, .nav-item:focus { color: #f1f5f9 !important; background: rgba(56,189,248,0.15) !important; border-left-color: #38bdf8 !important; }
     .layout { display: flex; min-height: 100vh; }
     .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
@@ -51,8 +50,6 @@
     .stat-chip.warn .stat-num { color: #d97706; }
     .stat-chip.info .stat-num { color: #16a34a; }
     .stat-chip.platform .stat-num { color: #0284c7; }
-    a.stat-chip { text-decoration: none; color: inherit; cursor: pointer; transition: box-shadow 0.15s; }
-    a.stat-chip:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); transform: translateY(-1px); }
     .stat-chip a { text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 2px; }
     .stat-chip:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,0.1); cursor: pointer; }
     .compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
@@ -220,10 +217,10 @@
       </div>
 
       <div class="stats-row">
-        <a href="#sev-danger" class="stat-chip danger"><span class="stat-num">4</span>🔴紧急</a>
-        <a href="#sev-warning" class="stat-chip warn"><span class="stat-num">5</span>🟡关注</a>
-        <a href="#sev-info" class="stat-chip info"><span class="stat-num">0</span>🟢参考</a>
-        <a href="#today-effective" class="stat-chip platform"><span class="stat-num">6</span>项今日生效</a>
+        <div class="stat-chip danger"><span class="stat-num">4</span>🔴紧急</div>
+        <div class="stat-chip warn"><span class="stat-num">5</span>🟡关注</div>
+        <div class="stat-chip info"><span class="stat-num">0</span>🟢参考</div>
+        <div class="stat-chip platform"><span class="stat-num">6</span>项今日生效</div>
       </div>
 
       <div class="compliance-banner" id="today-effective">
@@ -268,7 +265,7 @@
           <h2>平台政策</h2>
         </div>
 
-        <div class="policy-card" id="sev-danger">
+        <div class="policy-card">
           <div class="card-header">
             <div class="card-title-row"><span class="severity-badge danger">紧急</span><span class="platform-tag eu">欧盟</span><span class="card-title">欧盟€150免税今日正式终结：每类商品征€3固定关税，低价直邮利润归零</span></div>
             <span class="card-deadline">7/1今日生效</span>
@@ -333,7 +330,7 @@
           </div>
         </div>
 
-        <div class="policy-card" id="sev-warning">
+        <div class="policy-card">
           <div class="card-header">
             <div class="card-title-row"><span class="severity-badge warning">关注</span><span class="platform-tag temu">Temu</span><span class="card-title">Temu全域ROAS强制切换：单品推广计划6/30已下线</span></div>
             <span class="card-deadline">已生效</span>
