@@ -32,8 +32,8 @@
     details.archive-month { padding: 0; }
     details.archive-month summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px 6px 28px; cursor: pointer; font-size: 13px; color: #94a3b8; list-style: none; transition: color 0.15s; border-left: 2px solid transparent; }
     details.archive-month summary::-webkit-details-marker { display: none; }
-    details.archive-month summary::before { content: "\1F4C1"; margin-right: 6px; font-size: 12px; }
-    details.archive-month[open] summary::before { content: "\1F4C2"; }
+    details.archive-month summary::before { content: "📁"; margin-right: 6px; font-size: 12px; }
+    details.archive-month[open] summary::before { content: "📂"; }
     details.archive-month summary:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
     details.archive-month summary .month-info { font-weight: 500; }
     details.archive-month summary .month-stats { font-size: 11px; color: #475569; }
@@ -55,7 +55,7 @@
     .compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
     .compliance-banner ul { list-style: none; padding: 0; }
     .compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
-    .compliance-banner li::before { content: "\25B8"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .compliance-banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
     .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
     .section-block { margin-bottom: 28px; }
     .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
@@ -213,75 +213,75 @@
       </div>
 
       <div class="stats-row">
-        <div class="stat-chip danger"><span class="stat-num">6</span>\1F534紧急</div>
-        <div class="stat-chip warn"><span class="stat-num">7</span>\1F7E1关注</div>
-        <div class="stat-chip info"><span class="stat-num">1</span>\1F7E2参考</div>
+        <div class="stat-chip danger"><span class="stat-num">6</span>🔴紧急</div>
+        <div class="stat-chip warn"><span class="stat-num">7</span>🟡关注</div>
+        <div class="stat-chip info"><span class="stat-num">1</span>🟢参考</div>
         <div class="stat-chip platform"><span class="stat-num">9</span>项今日生效</div>
       </div>
 
       <div class="compliance-banner">
-        <div class="banner-title">\26A0\FE0F 7/1超级生效日 — 9项政策今日落地</div>
+        <div class="banner-title">⚠️ 7/1超级生效日 — 9项政策今日落地</div>
         <ul>
-          <li><span class="date-tag">7/1</span> \1F534 欧盟\u20AC150免税取消 + \u20AC3统一征税 + 完整海关数据要求</li>
-          <li><span class="date-tag">7/1</span> \1F534 国务院837号令：穿透式监管终结代持+ODI备案强制</li>
-          <li><span class="date-tag">7/1</span> \1F534 亚马逊欧洲站FBM仅限授权物流+IOSS校验强化</li>
-          <li><span class="date-tag">7/1</span> \1F534 Shopee越南代扣1%所得税+电商法直播强监管</li>
-          <li><span class="date-tag">7/1</span> \1F534 TikTok Shop东南亚佣金上调6%+虚假挂载封号</li>
-          <li><span class="date-tag">7/1</span> \1F534 eBay欧盟直邮须DDP清关</li>
-          <li><span class="date-tag">7/1</span> \1F7E1 英国钢铁配额新规：配额砍51%+关税翻倍</li>
-          <li><span class="date-tag">7/1</span> \1F7E1 加州纺织品EPR注册截止</li>
-          <li><span class="date-tag">7/1</span> \1F7E1 越南电商法生效：直播带货纳入强监管</li>
+          <li><span class="date-tag">7/1</span> 🔴 欧盟€150免税取消 + €3统一征税 + 完整海关数据要求</li>
+          <li><span class="date-tag">7/1</span> 🔴 国务院837号令：穿透式监管终结代持+ODI备案强制</li>
+          <li><span class="date-tag">7/1</span> 🔴 亚马逊欧洲站FBM仅限授权物流+IOSS校验强化</li>
+          <li><span class="date-tag">7/1</span> 🔴 Shopee越南代扣1%所得税+电商法直播强监管</li>
+          <li><span class="date-tag">7/1</span> 🔴 TikTok Shop东南亚佣金上调6%+虚假挂载封号</li>
+          <li><span class="date-tag">7/1</span> 🔴 eBay欧盟直邮须DDP清关</li>
+          <li><span class="date-tag">7/1</span> 🟡 英国钢铁配额新规：配额砍51%+关税翻倍</li>
+          <li><span class="date-tag">7/1</span> 🟡 加州纺织品EPR注册截止</li>
+          <li><span class="date-tag">7/1</span> 🟡 越南电商法生效：直播带货纳入强监管</li>
         </ul>
       </div>
 
       <div class="timeline-section" id="timeline">
-        <h3>\23F0 近期关键时间节点</h3>
+        <h3>⏰ 近期关键时间节点</h3>
         <ul class="timeline-list">
-          <li class="timeline-item"><span class="tl-date">7/1</span><span class="tl-sev danger">\1F534</span><span class="tl-text">欧盟\u20AC150免税取消+\u20AC3统一征税+837号令+加州纺织品EPR+Shopee越南1%+eBay欧盟DDP+TikTok东南亚佣金6%+英国钢铁配额+越南电商法（今日生效）</span></li>
-          <li class="timeline-item"><span class="tl-date">7/2</span><span class="tl-sev warn">\1F7E1</span><span class="tl-text">Lazada退货运费新规 + TikTok Shop美区大促截止</span></li>
-          <li class="timeline-item"><span class="tl-date">7/6</span><span class="tl-sev warn">\1F7E1</span><span class="tl-text">Amazon SFP配送指标更新（一日达40%/二日达75%）</span></li>
-          <li class="timeline-item"><span class="tl-date">7/7</span><span class="tl-sev danger">\1F534</span><span class="tl-text">美国301关税公开听证会</span></li>
-          <li class="timeline-item"><span class="tl-date">7/8</span><span class="tl-sev danger">\1F534</span><span class="tl-text">CPSC eFiling强制电子备案 + Amazon MCF费率上调</span></li>
-          <li class="timeline-item"><span class="tl-date">7/17</span><span class="tl-sev danger">\1F534</span><span class="tl-text">Amazon欧洲站FBA包装尺寸认证截止</span></li>
-          <li class="timeline-item"><span class="tl-date">7/20</span><span class="tl-sev warn">\1F7E1</span><span class="tl-text">美客多墨西哥RFC + USPTO新规</span></li>
-          <li class="timeline-item"><span class="tl-date">7/27</span><span class="tl-sev danger">\1F534</span><span class="tl-text">Amazon标题75字符限制强制执行</span></li>
-          <li class="timeline-item"><span class="tl-date">8/2</span><span class="tl-sev warn">\1F7E1</span><span class="tl-text">欧盟AI生成内容披露规定落地</span></li>
-          <li class="timeline-item"><span class="tl-date">8/12</span><span class="tl-sev warn">\1F7E1</span><span class="tl-text">欧盟PPWR包装法强制生效</span></li>
-          <li class="timeline-item"><span class="tl-date">8/24</span><span class="tl-sev danger">\1F534</span><span class="tl-text">Amazon BSA第18条禁止店铺转让/质押生效</span></li>
-          <li class="timeline-item"><span class="tl-date">8/28</span><span class="tl-sev warn">\1F7E1</span><span class="tl-text">Temu须向欧盟提交DSA整改方案</span></li>
-          <li class="timeline-item"><span class="tl-date">8/30</span><span class="tl-sev danger">\1F534</span><span class="tl-text">Amazon美国站锂电池家电不合规产品下架</span></li>
-          <li class="timeline-item"><span class="tl-date">9/1</span><span class="tl-sev danger">\1F534</span><span class="tl-text">Amazon MFN系统自动接管AHT锁180天</span></li>
-          <li class="timeline-item"><span class="tl-date">~9月</span><span class="tl-sev danger">\1F534</span><span class="tl-text">CBP"加强海关执法"行政令IOR新规细则落地</span></li>
-          <li class="timeline-item"><span class="tl-date">11/1</span><span class="tl-sev warn">\1F7E1</span><span class="tl-text">欧盟FBA货件加收\u20AC2海关手续费 + PID强制申报</span></li>
-          <li class="timeline-item"><span class="tl-date">2028/10</span><span class="tl-sev danger">\1F534</span><span class="tl-text">英国135英镑免税直邮通道正式关闭</span></li>
+          <li class="timeline-item"><span class="tl-date">7/1</span><span class="tl-sev danger">🔴</span><span class="tl-text">欧盟€150免税取消+€3统一征税+837号令+加州纺织品EPR+Shopee越南1%+eBay欧盟DDP+TikTok东南亚佣金6%+英国钢铁配额+越南电商法（今日生效）</span></li>
+          <li class="timeline-item"><span class="tl-date">7/2</span><span class="tl-sev warn">🟡</span><span class="tl-text">Lazada退货运费新规 + TikTok Shop美区大促截止</span></li>
+          <li class="timeline-item"><span class="tl-date">7/6</span><span class="tl-sev warn">🟡</span><span class="tl-text">Amazon SFP配送指标更新（一日达40%/二日达75%）</span></li>
+          <li class="timeline-item"><span class="tl-date">7/7</span><span class="tl-sev danger">🔴</span><span class="tl-text">美国301关税公开听证会</span></li>
+          <li class="timeline-item"><span class="tl-date">7/8</span><span class="tl-sev danger">🔴</span><span class="tl-text">CPSC eFiling强制电子备案 + Amazon MCF费率上调</span></li>
+          <li class="timeline-item"><span class="tl-date">7/17</span><span class="tl-sev danger">🔴</span><span class="tl-text">Amazon欧洲站FBA包装尺寸认证截止</span></li>
+          <li class="timeline-item"><span class="tl-date">7/20</span><span class="tl-sev warn">🟡</span><span class="tl-text">美客多墨西哥RFC + USPTO新规</span></li>
+          <li class="timeline-item"><span class="tl-date">7/27</span><span class="tl-sev danger">🔴</span><span class="tl-text">Amazon标题75字符限制强制执行</span></li>
+          <li class="timeline-item"><span class="tl-date">8/2</span><span class="tl-sev warn">🟡</span><span class="tl-text">欧盟AI生成内容披露规定落地</span></li>
+          <li class="timeline-item"><span class="tl-date">8/12</span><span class="tl-sev warn">🟡</span><span class="tl-text">欧盟PPWR包装法强制生效</span></li>
+          <li class="timeline-item"><span class="tl-date">8/24</span><span class="tl-sev danger">🔴</span><span class="tl-text">Amazon BSA第18条禁止店铺转让/质押生效</span></li>
+          <li class="timeline-item"><span class="tl-date">8/28</span><span class="tl-sev warn">🟡</span><span class="tl-text">Temu须向欧盟提交DSA整改方案</span></li>
+          <li class="timeline-item"><span class="tl-date">8/30</span><span class="tl-sev danger">🔴</span><span class="tl-text">Amazon美国站锂电池家电不合规产品下架</span></li>
+          <li class="timeline-item"><span class="tl-date">9/1</span><span class="tl-sev danger">🔴</span><span class="tl-text">Amazon MFN系统自动接管AHT锁180天</span></li>
+          <li class="timeline-item"><span class="tl-date">~9月</span><span class="tl-sev danger">🔴</span><span class="tl-text">CBP"加强海关执法"行政令IOR新规细则落地</span></li>
+          <li class="timeline-item"><span class="tl-date">11/1</span><span class="tl-sev warn">🟡</span><span class="tl-text">欧盟FBA货件加收€2海关手续费 + PID强制申报</span></li>
+          <li class="timeline-item"><span class="tl-date">2028/10</span><span class="tl-sev danger">🔴</span><span class="tl-text">英国135英镑免税直邮通道正式关闭</span></li>
         </ul>
       </div>
 
       <!-- 平台政策 -->
       <div class="section-block" id="platform">
         <div class="section-header">
-          <span class="section-icon">\1F6D2</span>
+          <span class="section-icon">🛒</span>
           <h2>平台政策</h2>
         </div>
 
         <div class="policy-card">
           <div class="card-header">
-            <div class="card-title-row"><span class="severity-badge danger">紧急</span><span class="platform-tag eu">欧盟</span><span class="card-title">欧盟\u20AC150免税今日正式终结：每类商品征\u20AC3固定关税，低价直邮利润归零</span></div>
+            <div class="card-title-row"><span class="severity-badge danger">紧急</span><span class="platform-tag eu">欧盟</span><span class="card-title">欧盟€150免税今日正式终结：每类商品征€3固定关税，低价直邮利润归零</span></div>
             <span class="card-deadline">7/1今日生效</span>
           </div>
           <div class="card-body">
             <table class="detail-table">
-              <tr><th>变了什么</th><td>7/1起欧盟正式取消150欧元以下跨境包裹关税豁免：\u2460按HS编码分类，每类商品征收\u20AC3固定关税 \u2461同一包裹含多类商品分别计税 \u2462所有进口货物须提供完整清关文件+客户身份识别信息 \u2463非IOSS货件须在收件人所在国清关 \u2464B2C类货件须提供产品标识码 \u2465PID编码7月起自愿申报、11月起强制 \u246611月起额外加收\u20AC2/件清关处理费 \u2467过渡期至2028/7/1</td></tr>
+              <tr><th>变了什么</th><td>7/1起欧盟正式取消150欧元以下跨境包裹关税豁免：①按HS编码分类，每类商品征收€3固定关税 ②同一包裹含多类商品分别计税 ③所有进口货物须提供完整清关文件+客户身份识别信息 ④非IOSS货件须在收件人所在国清关 ⑤B2C类货件须提供产品标识码 ⑥PID编码7月起自愿申报、11月起强制 ⑦11月起额外加收€2/件清关处理费 ⑧过渡期至2028/7/1</td></tr>
               <tr><th>影响谁</th><td>所有面向欧盟市场的跨境卖家；低毛利轻小件直邮卖家影响最严重</td></tr>
-              <tr><th>关键时间</th><td>7/1今日生效，11月加收\u20AC2操作费</td></tr>
+              <tr><th>关键时间</th><td>7/1今日生效，11月加收€2操作费</td></tr>
               <tr><th>背景</th><td>2024年欧盟入境低值跨境小包46亿件，91%源自中国。单价20欧元以下商品面临利润归零</td></tr>
-              <tr><th>行动</th><td>\u2460今天完成低客单价SKU含税利润核算 \u2461确认IOSS编号有效+DDP清关渠道就绪 \u2462评估海外仓布局 \u2463优化发货结构</td></tr>
-              <tr><th>来源</th><td><a href="https://m.mjzj.com/article/fqksxak58u80">卖家之家</a> \u00B7 <a href="http://m.toutiao.com/group/7656655464150712883/">联宇物流</a> \u00B7 <a href="https://m.sohu.com/a/1043175771_120987862/">联宇物流(搜狐)</a></td></tr>
+              <tr><th>行动</th><td>①今天完成低客单价SKU含税利润核算 ②确认IOSS编号有效+DDP清关渠道就绪 ③评估海外仓布局 ④优化发货结构</td></tr>
+              <tr><th>来源</th><td><a href="https://m.mjzj.com/article/fqksxak58u80">卖家之家</a> · <a href="http://m.toutiao.com/group/7656655464150712883/">联宇物流</a> · <a href="https://m.sohu.com/a/1043175771_120987862/">联宇物流(搜狐)</a></td></tr>
             </table>
             <div class="action-list">
-              <div class="action-title">\1F3AF 3步行动清单</div>
+              <div class="action-title">🎯 3步行动清单</div>
               <ol>
-                <li>今天：核算欧洲站主力SKU在+\u20AC3关税后的盈亏平衡，利润率&lt;8%的列入提价或切换海外仓名单</li>
+                <li>今天：核算欧洲站主力SKU在+€3关税后的盈亏平衡，利润率&lt;8%的列入提价或切换海外仓名单</li>
                 <li>今天：与物流商确认7/1起最新DDP报价，明确成本边界</li>
                 <li>本周：加速欧盟海外仓布局，以"大宗报关+本土配送"规避直邮高额税费</li>
               </ol>
@@ -296,18 +296,18 @@
           </div>
           <div class="card-body">
             <table class="detail-table">
-              <tr><th>变了什么</th><td>\u2460FBM自发货\u2264150欧订单只能选用亚马逊官方批准承运商 \u2461必须完整上传IOSS税号 \u2462FBA远程配送商品：前台售价自动叠加\u20AC3关税+对应VAT \u2463豁免：欧盟本土仓发货、海外货件提前入欧盟FBA仓</td></tr>
+              <tr><th>变了什么</th><td>①FBM自发货≤150欧订单只能选用亚马逊官方批准承运商 ②必须完整上传IOSS税号 ③FBA远程配送商品：前台售价自动叠加€3关税+对应VAT ④豁免：欧盟本土仓发货、海外货件提前入欧盟FBA仓</td></tr>
               <tr><th>影响谁</th><td>亚马逊欧洲站所有FBM跨境卖家；使用远程配送的FBA卖家</td></tr>
               <tr><th>关键时间</th><td>7/1今日生效</td></tr>
-              <tr><th>行动</th><td>\u2460FBM统一切换云途、燕文、顺丰国际等合作物流 \u2461核对IOSS税号有效期 \u2462低价小商品调价分摊关税成本</td></tr>
-              <tr><th>来源</th><td><a href="https://www.cnblogs.com/amzseller/p/20959177">易派</a> \u00B7 <a href="https://m.mjzj.com/article/fqksxak58u80">卖家之家</a></td></tr>
+              <tr><th>行动</th><td>①FBM统一切换云途、燕文、顺丰国际等合作物流 ②核对IOSS税号有效期 ③低价小商品调价分摊关税成本</td></tr>
+              <tr><th>来源</th><td><a href="https://www.cnblogs.com/amzseller/p/20959177">易派</a> · <a href="https://m.mjzj.com/article/fqksxak58u80">卖家之家</a></td></tr>
             </table>
             <div class="action-list">
-              <div class="action-title">\1F3AF 3步行动清单</div>
+              <div class="action-title">🎯 3步行动清单</div>
               <ol>
                 <li>今天：登录卖家后台确认所有欧洲站FBM订单已切换至批准承运商</li>
                 <li>今天：核对IOSS识别号在"税务设置"中状态正常</li>
-                <li>本周：导出欧洲站在售SKU，按HS编码核算含\u20AC3关税后新到手价</li>
+                <li>本周：导出欧洲站在售SKU，按HS编码核算含€3关税后新到手价</li>
               </ol>
             </div>
           </div>
@@ -315,16 +315,16 @@
 
         <div class="policy-card">
           <div class="card-header">
-            <div class="card-title-row"><span class="severity-badge danger">紧急</span><span class="platform-tag ebay">eBay</span><span class="card-title">eBay欧盟直邮7/1起\u2264150欧订单必须DDP清关</span></div>
+            <div class="card-title-row"><span class="severity-badge danger">紧急</span><span class="platform-tag ebay">eBay</span><span class="card-title">eBay欧盟直邮7/1起≤150欧订单必须DDP清关</span></div>
             <span class="card-deadline">7/1今日生效</span>
           </div>
           <div class="card-body">
             <table class="detail-table">
-              <tr><th>变了什么</th><td>\u2460所有从中国内地及香港直邮发往欧盟且单价\u2264150欧元的货件必须采用DDP物流服务 \u2461未按要求使用DDP\u2192纠纷由卖家承担 \u2462平台保留限制违规账户权利 \u2463SpeedPAK同日开通香港始发至欧盟23国服务</td></tr>
+              <tr><th>变了什么</th><td>①所有从中国内地及香港直邮发往欧盟且单价≤150欧元的货件必须采用DDP物流服务 ②未按要求使用DDP→纠纷由卖家承担 ③平台保留限制违规账户权利 ④SpeedPAK同日开通香港始发至欧盟23国服务</td></tr>
               <tr><th>影响谁</th><td>eBay面向欧盟的中国大陆及香港直邮卖家</td></tr>
               <tr><th>关键时间</th><td>7/1今日生效</td></tr>
-              <tr><th>行动</th><td>\u2460确认合作货代是否支持DDP双清包税 \u2461提前核算关税成本纳入售价 \u2462评估SpeedPAK香港\u2014欧盟通道</td></tr>
-              <tr><th>来源</th><td><a href="https://m.mjzj.com/article/fqjw6tgs86ps">卖家之家</a> \u00B7 <a href="https://www.ebay.cn/">eBay中国</a></td></tr>
+              <tr><th>行动</th><td>①确认合作货代是否支持DDP双清包税 ②提前核算关税成本纳入售价 ③评估SpeedPAK香港—欧盟通道</td></tr>
+              <tr><th>来源</th><td><a href="https://m.mjzj.com/article/fqjw6tgs86ps">卖家之家</a> · <a href="https://www.ebay.cn/">eBay中国</a></td></tr>
             </table>
           </div>
         </div>
@@ -336,10 +336,10 @@
           </div>
           <div class="card-body">
             <table class="detail-table">
-              <tr><th>变了什么</th><td>\u2460存量单品推广计划6/30正式下线 \u2461新建计划只能选"全域ROAS" \u2462卖家只设一个ROAS数值，平台AI算法自动分配流量 \u2463需计算保本ROAS+10%-20%安全垫</td></tr>
+              <tr><th>变了什么</th><td>①存量单品推广计划6/30正式下线 ②新建计划只能选"全域ROAS" ③卖家只设一个ROAS数值，平台AI算法自动分配流量 ④需计算保本ROAS+10%-20%安全垫</td></tr>
               <tr><th>影响谁</th><td>所有Temu卖家，尤其是依赖单品推广精细化运营的卖家</td></tr>
               <tr><th>关键时间</th><td>6/30已生效</td></tr>
-              <tr><th>行动</th><td>\u2460主动在后台升级全域ROAS \u2461计算每个产品保本ROAS+安全垫 \u2462跑3天看数据调整</td></tr>
+              <tr><th>行动</th><td>①主动在后台升级全域ROAS ②计算每个产品保本ROAS+安全垫 ③跑3天看数据调整</td></tr>
               <tr><th>来源</th><td><a href="http://m.toutiao.com/group/7657113934125646388/">外贸跨境搬运工</a></td></tr>
             </table>
           </div>
@@ -352,11 +352,11 @@
           </div>
           <div class="card-body">
             <table class="detail-table">
-              <tr><th>变了什么</th><td>\u2460AI生成产品主体/模特/场景图须在后台勾选AI内容标识 \u2461漏报\u2192限流+广告曝光腰斩 \u2462纽约州违规附民事罚款 \u2463主图必须实拍实物，仅允许AI做调色/局部修图</td></tr>
+              <tr><th>变了什么</th><td>①AI生成产品主体/模特/场景图须在后台勾选AI内容标识 ②漏报→限流+广告曝光腰斩 ③纽约州违规附民事罚款 ④主图必须实拍实物，仅允许AI做调色/局部修图</td></tr>
               <tr><th>影响谁</th><td>所有使用AI生成素材的亚马逊卖家</td></tr>
               <tr><th>关键时间</th><td>7月起生效</td></tr>
-              <tr><th>行动</th><td>\u2460排查A+页面是否使用AI模特/场景图 \u2461主图确保实拍 \u2462后台勾选AI内容标识</td></tr>
-              <tr><th>来源</th><td><a href="https://m.weibo.cn/detail/5315442342102350">跨境前沿</a> \u00B7 <a href="https://www.cnblogs.com/amzseller/p/20959177">易派</a></td></tr>
+              <tr><th>行动</th><td>①排查A+页面是否使用AI模特/场景图 ②主图确保实拍 ③后台勾选AI内容标识</td></tr>
+              <tr><th>来源</th><td><a href="https://m.weibo.cn/detail/5315442342102350">跨境前沿</a> · <a href="https://www.cnblogs.com/amzseller/p/20959177">易派</a></td></tr>
             </table>
           </div>
         </div>
@@ -368,11 +368,11 @@
           </div>
           <div class="card-body">
             <table class="detail-table">
-              <tr><th>变了什么</th><td>\u2460佣金上调至6% \u2461虚假挂载直接封号 \u2462中国直发订单履约时效收紧：48小时内完成打包，3日内完成揽收 \u2463新商家享90天佣金减免+保证金豁免 \u2464英国站休眠店铺管理（90天降曝光/180天停单/365天关店）</td></tr>
+              <tr><th>变了什么</th><td>①佣金上调至6% ②虚假挂载直接封号 ③中国直发订单履约时效收紧：48小时内完成打包，3日内完成揽收 ④新商家享90天佣金减免+保证金豁免 ⑤英国站休眠店铺管理（90天降曝光/180天停单/365天关店）</td></tr>
               <tr><th>影响谁</th><td>TikTok Shop东南亚跨境卖家；英国站卖家</td></tr>
               <tr><th>关键时间</th><td>7/1今日生效</td></tr>
-              <tr><th>行动</th><td>\u2460校准ERP自动同步规则适配新时效 \u2461优化打包流程确保48小时内完成 \u2462与物流商确认周末揽收安排</td></tr>
-              <tr><th>来源</th><td><a href="https://m.sohu.com/a/1043626329_121990322/">锦品出海</a> \u00B7 <a href="https://m.ebrun.com/684979.html">亿邦动力</a></td></tr>
+              <tr><th>行动</th><td>①校准ERP自动同步规则适配新时效 ②优化打包流程确保48小时内完成 ③与物流商确认周末揽收安排</td></tr>
+              <tr><th>来源</th><td><a href="https://m.sohu.com/a/1043626329_121990322/">锦品出海</a> · <a href="https://m.ebrun.com/684979.html">亿邦动力</a></td></tr>
             </table>
           </div>
         </div>
@@ -381,7 +381,7 @@
       <!-- 合规/税务 -->
       <div class="section-block" id="compliance-cards">
         <div class="section-header">
-          <span class="section-icon">\1F3F7</span>
+          <span class="section-icon">🏷</span>
           <h2>合规/税务</h2>
         </div>
 
@@ -392,14 +392,14 @@
           </div>
           <div class="card-body">
             <table class="detail-table">
-              <tr><th>变了什么</th><td>\u2460将个人投资者纳入适用范围 \u2461"间接获得"条款终结代持\u2014\u2014实质控制就须ODI备案+37号文登记 \u2462"核准备案+信息报告+安全审查+反制措施"四重监管 \u2463处罚与投资额挂钩 \u2464技术/数据跨境红线：涉管制技术+跨境数据须前置双重专项审查</td></tr>
+              <tr><th>变了什么</th><td>①将个人投资者纳入适用范围 ②"间接获得"条款终结代持——实质控制就须ODI备案+37号文登记 ③"核准备案+信息报告+安全审查+反制措施"四重监管 ④处罚与投资额挂钩 ⑤技术/数据跨境红线：涉管制技术+跨境数据须前置双重专项审查</td></tr>
               <tr><th>影响谁</th><td>通过香港/BVI壳公司运营的卖家；多层SPV架构的跨境卖家；所有有境外收入的中国卖家</td></tr>
               <tr><th>关键时间</th><td>7/1今日施行</td></tr>
-              <tr><th>行动</th><td>\u2460梳理海外公司及个人名下海外银行账户 \u2461代持/SPV架构逐层申报ODI备案和37号文登记 \u2462终止无法合规化的代持安排 \u2463确保报关单/销售订单/收汇记录一一对应</td></tr>
-              <tr><th>来源</th><td><a href="https://news.cctv.cn/2026/06/28/ARTIpGQOswEQ6EA6yhHQRCg7260628.shtml">央视新闻</a> \u00B7 <a href="http://m.toutiao.com/group/7656620410196279827/">环球网</a> \u00B7 <a href="https://www.163.com/dy/article/L0N2TELS0519APOB.html">财资一家</a></td></tr>
+              <tr><th>行动</th><td>①梳理海外公司及个人名下海外银行账户 ②代持/SPV架构逐层申报ODI备案和37号文登记 ③终止无法合规化的代持安排 ④确保报关单/销售订单/收汇记录一一对应</td></tr>
+              <tr><th>来源</th><td><a href="https://news.cctv.cn/2026/06/28/ARTIpGQOswEQ6EA6yhHQRCg7260628.shtml">央视新闻</a> · <a href="http://m.toutiao.com/group/7656620410196279827/">环球网</a> · <a href="https://www.163.com/dy/article/L0N2TELS0519APOB.html">财资一家</a></td></tr>
             </table>
             <div class="action-list">
-              <div class="action-title">\1F3AF 3步行动清单</div>
+              <div class="action-title">🎯 3步行动清单</div>
               <ol>
                 <li>本周：梳理所有海外公司及银行账户，启动ODI备案+37号文登记</li>
                 <li>本月：终止无法合规化的代持/壳公司安排，确保四流一致</li>
@@ -416,14 +416,14 @@
           </div>
           <div class="card-body">
             <table class="detail-table">
-              <tr><th>变了什么</th><td>\u2460Shopee等平台代扣企业卖家1%所得税 \u2461新版《电子商务法》正式实施：直播带货须实名认证+商家须提前提交经营资质+平台须将直播内容存档至少1年 \u2462匿名直播、先播后补材料全部失效</td></tr>
+              <tr><th>变了什么</th><td>①Shopee等平台代扣企业卖家1%所得税 ②新版《电子商务法》正式实施：直播带货须实名认证+商家须提前提交经营资质+平台须将直播内容存档至少1年 ③匿名直播、先播后补材料全部失效</td></tr>
               <tr><th>影响谁</th><td>面向越南市场的跨境卖家；Shopee/Lazada/TikTok Shop越南站卖家</td></tr>
               <tr><th>关键时间</th><td>7/1今日生效</td></tr>
-              <tr><th>行动</th><td>\u2460确认越南站店铺税务登记已完成 \u2461直播带货团队完成实名认证 \u2462评估1%所得税对利润的影响</td></tr>
-              <tr><th>来源</th><td><a href="http://m.toutiao.com/group/7657139836155707942/">出海观察哨</a> \u00B7 <a href="https://m.sohu.com/a/1043057594_121080595/">苏莱美海外仓</a></td></tr>
+              <tr><th>行动</th><td>①确认越南站店铺税务登记已完成 ②直播带货团队完成实名认证 ③评估1%所得税对利润的影响</td></tr>
+              <tr><th>来源</th><td><a href="http://m.toutiao.com/group/7657139836155707942/">出海观察哨</a> · <a href="https://m.sohu.com/a/1043057594_121080595/">苏莱美海外仓</a></td></tr>
             </table>
             <div class="action-list">
-              <div class="action-title">\1F3AF 3步行动清单</div>
+              <div class="action-title">🎯 3步行动清单</div>
               <ol>
                 <li>今天：确认Shopee越南站店铺已完税登记，1%所得税已纳入成本核算</li>
                 <li>本周：直播带货团队完成实名认证，确保内容存档合规</li>
@@ -440,11 +440,11 @@
           </div>
           <div class="card-body">
             <table class="detail-table">
-              <tr><th>变了什么</th><td>\u2460年度免税进口配额削减51%至约320万吨 \u2461超额关税从25%翻倍至50% \u2462覆盖20大类钢铁产品 \u2463配额按季度先到先得 \u2464乌克兰产品豁免</td></tr>
+              <tr><th>变了什么</th><td>①年度免税进口配额削减51%至约320万吨 ②超额关税从25%翻倍至50% ③覆盖20大类钢铁产品 ④配额按季度先到先得 ⑤乌克兰产品豁免</td></tr>
               <tr><th>影响谁</th><td>向英国出口钢材/五金建材/含钢制成品的卖家</td></tr>
               <tr><th>关键时间</th><td>7/1今日生效</td></tr>
-              <tr><th>行动</th><td>\u2460核查在途订单HS编码 \u2461评估英国本地采购或提前锁定配额 \u2462含钢产品成本传导压力评估</td></tr>
-              <tr><th>来源</th><td><a href="http://m.toutiao.com/group/7656715345490625074/">联宇物流</a> \u00B7 <a href="http://m.toutiao.com/group/7657321177656721939/">每日财讯</a></td></tr>
+              <tr><th>行动</th><td>①核查在途订单HS编码 ②评估英国本地采购或提前锁定配额 ③含钢产品成本传导压力评估</td></tr>
+              <tr><th>来源</th><td><a href="http://m.toutiao.com/group/7656715345490625074/">联宇物流</a> · <a href="http://m.toutiao.com/group/7657321177656721939/">每日财讯</a></td></tr>
             </table>
           </div>
         </div>
@@ -459,7 +459,7 @@
               <tr><th>变了什么</th><td>纺织品生产商/进口商须加入经州政府批准的生产者责任组织（PRO），未加入的纺织品将在加州禁售</td></tr>
               <tr><th>影响谁</th><td>面向加州市场销售纺织品/服装/鞋类的跨境卖家</td></tr>
               <tr><th>关键时间</th><td>7/1今日截止</td></tr>
-              <tr><th>行动</th><td>\u2460确认已加入合规PRO \u2461排查在售纺织品品类 \u2462关注其他州EPR立法动态</td></tr>
+              <tr><th>行动</th><td>①确认已加入合规PRO ②排查在售纺织品品类 ③关注其他州EPR立法动态</td></tr>
               <tr><th>来源</th><td><a href="https://www.chwang.com/ebay">出海网</a></td></tr>
             </table>
           </div>
@@ -469,7 +469,7 @@
       <!-- 物流 -->
       <div class="section-block" id="logistics">
         <div class="section-header">
-          <span class="section-icon">\1F4E6</span>
+          <span class="section-icon">📦</span>
           <h2>物流/航运</h2>
         </div>
         <div class="policy-card">
@@ -482,8 +482,8 @@
               <tr><th>变了什么</th><td>6/26 SCFI报3239.64点（周涨3.8%），连续九周上涨但涨幅三连降。船公司计划7/1上调美线GRI，但马士基线上美西仅5200-5600美元——"喊涨实跌"。美线远东周运力上周+10.5%。7/4美国独立日假期码头放假，7/24美国10%临时关税到期</td></tr>
               <tr><th>影响谁</th><td>所有美线头程备货的跨境卖家</td></tr>
               <tr><th>关键时间</th><td>当前运价高位+7/4假期+7/24关税到期</td></tr>
-              <tr><th>行动</th><td>\u2460无需恐慌追高订舱，多方比价 \u2461优先锁定长协价 \u2462密切关注7/24关税政策变化，暂缓大批量补货</td></tr>
-              <tr><th>来源</th><td><a href="http://m.toutiao.com/group/7656714635793449499/">联宇物流</a> \u00B7 <a href="https://m.sohu.com/a/1043545263_121868448/">脉速跨境</a></td></tr>
+              <tr><th>行动</th><td>①无需恐慌追高订舱，多方比价 ②优先锁定长协价 ③密切关注7/24关税政策变化，暂缓大批量补货</td></tr>
+              <tr><th>来源</th><td><a href="http://m.toutiao.com/group/7656714635793449499/">联宇物流</a> · <a href="https://m.sohu.com/a/1043545263_121868448/">脉速跨境</a></td></tr>
             </table>
           </div>
         </div>
@@ -491,48 +491,48 @@
 
       <!-- 合规提醒 -->
       <div class="compliance-section" id="reminders">
-        <h3>\1F6A1 近期需注意的合规事项（含历史未过期）</h3>
+        <h3>🚡 近期需注意的合规事项（含历史未过期）</h3>
         <ul class="compliance-list">
-          <li class="sev-danger">\1F534 Amazon欧洲站FBA包装尺寸7/17认证截止</li>
-          <li class="sev-danger">\1F534 Amazon高退货率附加费6月已启用</li>
-          <li class="sev-danger">\1F534 Amazon自配送6/29新规已生效：SFP门槛7/6上调，9/1系统自动接管AHT</li>
-          <li class="sev-danger">\1F534 Amazon欧洲站FBM直邮7/1起仅限授权物流+IOSS校验强化</li>
-          <li class="sev-danger">\1F534 Amazon BSA第18条8/24生效禁止店铺转让/质押/代持</li>
-          <li class="sev-danger">\1F534 Amazon产品标题7/27起75字符限制强制执行</li>
-          <li class="sev-danger">\1F534 Amazon VCS增值税6/1已改为按整单/包裹计税</li>
-          <li class="sev-danger">\1F534 Amazon美国站锂电池家电新规6/30已生效，8/30不合规下架</li>
-          <li class="sev-danger">\1F534 DHL暂停欧盟Globalmail商品运单（6/24已生效）</li>
-          <li class="sev-danger">\1F534 eBay统一配送6/28已生效：强制指定面单+运费平台直收</li>
-          <li class="sev-danger">\1F534 eBay欧盟直邮7/1起须走DDP清关</li>
-          <li class="sev-warn">\1F7E1 国务院837号令7/1正式施行：穿透式监管终结代持</li>
-          <li class="sev-warn">\1F7E1 欧盟7/1关税新政：非欧盟FBA/FBM订单须提供完整海关数据+\u20AC3统一征税</li>
-          <li class="sev-warn">\1F7E1 英国钢铁配额7/1生效：配额砍51%+超额关税翻倍至50%</li>
-          <li class="sev-warn">\1F7E1 加州纺织品EPR 7/1截止注册</li>
-          <li class="sev-warn">\1F7E1 越南电商法7/1生效：直播带货纳入强监管+Shopee代扣1%所得税</li>
-          <li class="sev-warn">\1F7E1 TikTok Shop东南亚7/1佣金上调6%+履约时效收紧</li>
-          <li class="sev-warn">\1F7E1 Lazada跨境站点7/2起收取退货运费</li>
-          <li class="sev-warn">\1F7E1 Temu全域ROAS强制切换，单品推广已下线</li>
-          <li class="sev-warn">\1F7E1 Temu强制要求CPC更新美代信息，与7/8 CPSC eFiling衔接</li>
-          <li class="sev-warn">\1F7E1 跨境财税合规强化：平台数据直连税务+CRS2.0+增值税法回溯追责</li>
-          <li class="sev-warn">\1F7E1 CPSC eFiling 7/8强制实施，输美消费品需提前准备CPC/GCC+ACE系统申报</li>
-          <li class="sev-warn">\1F7E1 美国301关税7/7公开听证会</li>
-          <li class="sev-warn">\1F7E1 亚马逊7月起AI素材强制披露，漏报限流+广告腰斩</li>
-          <li class="sev-warn">\1F7E1 CBP"加强海关执法"行政令IOR新规细则~9月落地</li>
-          <li class="sev-warn">\1F7E1 欧盟AI生成内容披露规定8/2落地</li>
-          <li class="sev-warn">\1F7E1 欧盟PPWR包装法8/12强制生效</li>
-          <li class="sev-warn">\1F7E1 Temu须8/28前向欧盟提交DSA整改方案</li>
-          <li class="sev-warn">\1F7E1 美线运价高位震荡（SCFI九连涨但涨幅三连降），7月GRI喊涨实跌</li>
-          <li class="sev-warn">\1F7E1 法国议会通过快时尚法案，拟对SHEIN/Temu征收环境附加费</li>
-          <li class="sev-warn">\1F7E1 Shopee泰国本土店7/20前完成子账户权限核查</li>
-          <li class="sev-warn">\1F7E1 印尼收紧进口管控：100美元以下禁令+100%-200%保障关税</li>
-          <li class="sev-warn">\1F7E1 中国《网络销售重点工业产品清单（2026年版）》12/1实施</li>
-          <li class="sev-warn">\1F7E1 跨境财税四大变局：核定征收喊停+假0110被堵+9810强制+主体独立纳税</li>
+          <li class="sev-danger">🔴 Amazon欧洲站FBA包装尺寸7/17认证截止</li>
+          <li class="sev-danger">🔴 Amazon高退货率附加费6月已启用</li>
+          <li class="sev-danger">🔴 Amazon自配送6/29新规已生效：SFP门槛7/6上调，9/1系统自动接管AHT</li>
+          <li class="sev-danger">🔴 Amazon欧洲站FBM直邮7/1起仅限授权物流+IOSS校验强化</li>
+          <li class="sev-danger">🔴 Amazon BSA第18条8/24生效禁止店铺转让/质押/代持</li>
+          <li class="sev-danger">🔴 Amazon产品标题7/27起75字符限制强制执行</li>
+          <li class="sev-danger">🔴 Amazon VCS增值税6/1已改为按整单/包裹计税</li>
+          <li class="sev-danger">🔴 Amazon美国站锂电池家电新规6/30已生效，8/30不合规下架</li>
+          <li class="sev-danger">🔴 DHL暂停欧盟Globalmail商品运单（6/24已生效）</li>
+          <li class="sev-danger">🔴 eBay统一配送6/28已生效：强制指定面单+运费平台直收</li>
+          <li class="sev-danger">🔴 eBay欧盟直邮7/1起须走DDP清关</li>
+          <li class="sev-warn">🟡 国务院837号令7/1正式施行：穿透式监管终结代持</li>
+          <li class="sev-warn">🟡 欧盟7/1关税新政：非欧盟FBA/FBM订单须提供完整海关数据+€3统一征税</li>
+          <li class="sev-warn">🟡 英国钢铁配额7/1生效：配额砍51%+超额关税翻倍至50%</li>
+          <li class="sev-warn">🟡 加州纺织品EPR 7/1截止注册</li>
+          <li class="sev-warn">🟡 越南电商法7/1生效：直播带货纳入强监管+Shopee代扣1%所得税</li>
+          <li class="sev-warn">🟡 TikTok Shop东南亚7/1佣金上调6%+履约时效收紧</li>
+          <li class="sev-warn">🟡 Lazada跨境站点7/2起收取退货运费</li>
+          <li class="sev-warn">🟡 Temu全域ROAS强制切换，单品推广已下线</li>
+          <li class="sev-warn">🟡 Temu强制要求CPC更新美代信息，与7/8 CPSC eFiling衔接</li>
+          <li class="sev-warn">🟡 跨境财税合规强化：平台数据直连税务+CRS2.0+增值税法回溯追责</li>
+          <li class="sev-warn">🟡 CPSC eFiling 7/8强制实施，输美消费品需提前准备CPC/GCC+ACE系统申报</li>
+          <li class="sev-warn">🟡 美国301关税7/7公开听证会</li>
+          <li class="sev-warn">🟡 亚马逊7月起AI素材强制披露，漏报限流+广告腰斩</li>
+          <li class="sev-warn">🟡 CBP"加强海关执法"行政令IOR新规细则~9月落地</li>
+          <li class="sev-warn">🟡 欧盟AI生成内容披露规定8/2落地</li>
+          <li class="sev-warn">🟡 欧盟PPWR包装法8/12强制生效</li>
+          <li class="sev-warn">🟡 Temu须8/28前向欧盟提交DSA整改方案</li>
+          <li class="sev-warn">🟡 美线运价高位震荡（SCFI九连涨但涨幅三连降），7月GRI喊涨实跌</li>
+          <li class="sev-warn">🟡 法国议会通过快时尚法案，拟对SHEIN/Temu征收环境附加费</li>
+          <li class="sev-warn">🟡 Shopee泰国本土店7/20前完成子账户权限核查</li>
+          <li class="sev-warn">🟡 印尼收紧进口管控：100美元以下禁令+100%-200%保障关税</li>
+          <li class="sev-warn">🟡 中国《网络销售重点工业产品清单（2026年版）》12/1实施</li>
+          <li class="sev-warn">🟡 跨境财税四大变局：核定征收喊停+假0110被堵+9810强制+主体独立纳税</li>
         </ul>
       </div>
 
       <div class="footer">
-        <p>\1F4CA 数据来源：卖家之家 / 亿邦动力 / 雨果跨境 / 至美通 / 上海航运交易所 / AMZ123 / 亚马逊全球开店 / 出海网 / TikTok Shop官方大学 / TEMU跨境卖家中心 / 跨境大发哥 / 跨境物流百晓生 / 白鲸出海 / WL123 / 吉易跨境（34个配置信息源）</p>
-        <p>\23F0 每日08:30自动更新 \u00B7 近24小时跨境政策变化</p>
+        <p>📊 数据来源：卖家之家 / 亿邦动力 / 雨果跨境 / 至美通 / 上海航运交易所 / AMZ123 / 亚马逊全球开店 / 出海网 / TikTok Shop官方大学 / TEMU跨境卖家中心 / 跨境大发哥 / 跨境物流百晓生 / 白鲸出海 / WL123 / 吉易跨境（34个配置信息源）</p>
+        <p>⏰ 每日08:30自动更新 · 近24小时跨境政策变化</p>
       </div>
     </main>
 </div>
