@@ -213,31 +213,32 @@
       </div>
 
       <div class="stats-row">
-        <div class="stat-chip danger"><span class="stat-num">6</span>🔴紧急</div>
+        <a href="#sev-danger" class="stat-chip danger"><span class="stat-num">4</span>🔴紧急</a>
+        <a href="#sev-warning" class="stat-chip warn"><span class="stat-num">5</span>🟡关注</a>
+        <a href="#sev-info" class="stat-chip info"><span class="stat-num">0</span>🟢参考</a>
+        <a href="#today-effective" class="stat-chip platform"><span class="stat-num">6</span>项今日生效</a>
+      </div>
         <div class="stat-chip warn"><span class="stat-num">7</span>🟡关注</div>
         <div class="stat-chip info"><span class="stat-num">1</span>🟢参考</div>
         <div class="stat-chip platform"><span class="stat-num">9</span>项今日生效</div>
       </div>
 
-      <div class="compliance-banner">
-        <div class="banner-title">⚠️ 7/1超级生效日 — 9项政策今日落地</div>
+      <div class="compliance-banner" id="today-effective">
+        <div class="banner-title">⚠️ 7/1超级生效日 — 6项政策今日落地</div>
         <ul>
           <li><span class="date-tag">7/1</span> 🔴 欧盟€150免税取消 + €3统一征税 + 完整海关数据要求</li>
           <li><span class="date-tag">7/1</span> 🔴 国务院837号令：穿透式监管终结代持+ODI备案强制</li>
           <li><span class="date-tag">7/1</span> 🔴 亚马逊欧洲站FBM仅限授权物流+IOSS校验强化</li>
-          <li><span class="date-tag">7/1</span> 🔴 Shopee越南代扣1%所得税+电商法直播强监管</li>
-          <li><span class="date-tag">7/1</span> 🔴 TikTok Shop东南亚佣金上调6%+虚假挂载封号</li>
           <li><span class="date-tag">7/1</span> 🔴 eBay欧盟直邮须DDP清关</li>
           <li><span class="date-tag">7/1</span> 🟡 英国钢铁配额新规：配额砍51%+关税翻倍</li>
           <li><span class="date-tag">7/1</span> 🟡 加州纺织品EPR注册截止</li>
-          <li><span class="date-tag">7/1</span> 🟡 越南电商法生效：直播带货纳入强监管</li>
         </ul>
       </div>
 
       <div class="timeline-section" id="timeline">
         <h3>⏰ 近期关键时间节点</h3>
         <ul class="timeline-list">
-          <li class="timeline-item"><span class="tl-date">7/1</span><span class="tl-sev danger">🔴</span><span class="tl-text">欧盟€150免税取消+€3统一征税+837号令+加州纺织品EPR+Shopee越南1%+eBay欧盟DDP+TikTok东南亚佣金6%+英国钢铁配额+越南电商法（今日生效）</span></li>
+          <li class="timeline-item"><span class="tl-date">7/1</span><span class="tl-sev danger">🔴</span><span class="tl-text">欧盟€150免税取消+€3统一征税+837号令+加州纺织品EPR+eBay欧盟DDP+英国钢铁配额（今日生效）</span></li>
           <li class="timeline-item"><span class="tl-date">7/2</span><span class="tl-sev warn">🟡</span><span class="tl-text">Lazada退货运费新规 + TikTok Shop美区大促截止</span></li>
           <li class="timeline-item"><span class="tl-date">7/6</span><span class="tl-sev warn">🟡</span><span class="tl-text">Amazon SFP配送指标更新（一日达40%/二日达75%）</span></li>
           <li class="timeline-item"><span class="tl-date">7/7</span><span class="tl-sev danger">🔴</span><span class="tl-text">美国301关税公开听证会</span></li>
@@ -264,7 +265,7 @@
           <h2>平台政策</h2>
         </div>
 
-        <div class="policy-card">
+        <div class="policy-card" id="sev-danger">
           <div class="card-header">
             <div class="card-title-row"><span class="severity-badge danger">紧急</span><span class="platform-tag eu">欧盟</span><span class="card-title">欧盟€150免税今日正式终结：每类商品征€3固定关税，低价直邮利润归零</span></div>
             <span class="card-deadline">7/1今日生效</span>
@@ -329,7 +330,7 @@
           </div>
         </div>
 
-        <div class="policy-card">
+        <div class="policy-card" id="sev-warning">
           <div class="card-header">
             <div class="card-title-row"><span class="severity-badge warning">关注</span><span class="platform-tag temu">Temu</span><span class="card-title">Temu全域ROAS强制切换：单品推广计划6/30已下线</span></div>
             <span class="card-deadline">已生效</span>
@@ -361,23 +362,6 @@
           </div>
         </div>
 
-        <div class="policy-card">
-          <div class="card-header">
-            <div class="card-title-row"><span class="severity-badge warning">关注</span><span class="platform-tag tiktok">TikTok</span><span class="card-title">TikTok Shop东南亚7/1佣金上调6%+履约时效收紧</span></div>
-            <span class="card-deadline">7/1今日生效</span>
-          </div>
-          <div class="card-body">
-            <table class="detail-table">
-              <tr><th>变了什么</th><td>①佣金上调至6% ②虚假挂载直接封号 ③中国直发订单履约时效收紧：48小时内完成打包，3日内完成揽收 ④新商家享90天佣金减免+保证金豁免 ⑤英国站休眠店铺管理（90天降曝光/180天停单/365天关店）</td></tr>
-              <tr><th>影响谁</th><td>TikTok Shop东南亚跨境卖家；英国站卖家</td></tr>
-              <tr><th>关键时间</th><td>7/1今日生效</td></tr>
-              <tr><th>行动</th><td>①校准ERP自动同步规则适配新时效 ②优化打包流程确保48小时内完成 ③与物流商确认周末揽收安排</td></tr>
-              <tr><th>来源</th><td><a href="https://m.sohu.com/a/1043626329_121990322/">锦品出海</a> · <a href="https://m.ebrun.com/684979.html">亿邦动力</a></td></tr>
-            </table>
-          </div>
-        </div>
-      </div>
-
       <!-- 合规/税务 -->
       <div class="section-block" id="compliance-cards">
         <div class="section-header">
@@ -404,30 +388,6 @@
                 <li>本周：梳理所有海外公司及银行账户，启动ODI备案+37号文登记</li>
                 <li>本月：终止无法合规化的代持/壳公司安排，确保四流一致</li>
                 <li>持续：确认报关单/销售订单/收汇记录一一对应</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <div class="policy-card">
-          <div class="card-header">
-            <div class="card-title-row"><span class="severity-badge danger">紧急</span><span class="platform-tag" style="background:#0f136d">Shopee</span><span class="card-title">Shopee越南7/1起代扣企业卖家1%所得税+电商法生效</span></div>
-            <span class="card-deadline">7/1今日生效</span>
-          </div>
-          <div class="card-body">
-            <table class="detail-table">
-              <tr><th>变了什么</th><td>①Shopee等平台代扣企业卖家1%所得税 ②新版《电子商务法》正式实施：直播带货须实名认证+商家须提前提交经营资质+平台须将直播内容存档至少1年 ③匿名直播、先播后补材料全部失效</td></tr>
-              <tr><th>影响谁</th><td>面向越南市场的跨境卖家；Shopee/Lazada/TikTok Shop越南站卖家</td></tr>
-              <tr><th>关键时间</th><td>7/1今日生效</td></tr>
-              <tr><th>行动</th><td>①确认越南站店铺税务登记已完成 ②直播带货团队完成实名认证 ③评估1%所得税对利润的影响</td></tr>
-              <tr><th>来源</th><td><a href="http://m.toutiao.com/group/7657139836155707942/">出海观察哨</a> · <a href="https://m.sohu.com/a/1043057594_121080595/">苏莱美海外仓</a></td></tr>
-            </table>
-            <div class="action-list">
-              <div class="action-title">🎯 3步行动清单</div>
-              <ol>
-                <li>今天：确认Shopee越南站店铺已完税登记，1%所得税已纳入成本核算</li>
-                <li>本周：直播带货团队完成实名认证，确保内容存档合规</li>
-                <li>本月：评估越南市场整体税务合规体系是否完善</li>
               </ol>
             </div>
           </div>
@@ -508,9 +468,6 @@
           <li class="sev-warn">🟡 欧盟7/1关税新政：非欧盟FBA/FBM订单须提供完整海关数据+€3统一征税</li>
           <li class="sev-warn">🟡 英国钢铁配额7/1生效：配额砍51%+超额关税翻倍至50%</li>
           <li class="sev-warn">🟡 加州纺织品EPR 7/1截止注册</li>
-          <li class="sev-warn">🟡 越南电商法7/1生效：直播带货纳入强监管+Shopee代扣1%所得税</li>
-          <li class="sev-warn">🟡 TikTok Shop东南亚7/1佣金上调6%+履约时效收紧</li>
-          <li class="sev-warn">🟡 Lazada跨境站点7/2起收取退货运费</li>
           <li class="sev-warn">🟡 Temu全域ROAS强制切换，单品推广已下线</li>
           <li class="sev-warn">🟡 Temu强制要求CPC更新美代信息，与7/8 CPSC eFiling衔接</li>
           <li class="sev-warn">🟡 跨境财税合规强化：平台数据直连税务+CRS2.0+增值税法回溯追责</li>
@@ -523,7 +480,6 @@
           <li class="sev-warn">🟡 Temu须8/28前向欧盟提交DSA整改方案</li>
           <li class="sev-warn">🟡 美线运价高位震荡（SCFI九连涨但涨幅三连降），7月GRI喊涨实跌</li>
           <li class="sev-warn">🟡 法国议会通过快时尚法案，拟对SHEIN/Temu征收环境附加费</li>
-          <li class="sev-warn">🟡 Shopee泰国本土店7/20前完成子账户权限核查</li>
           <li class="sev-warn">🟡 印尼收紧进口管控：100美元以下禁令+100%-200%保障关税</li>
           <li class="sev-warn">🟡 中国《网络销售重点工业产品清单（2026年版）》12/1实施</li>
           <li class="sev-warn">🟡 跨境财税四大变局：核定征收喊停+假0110被堵+9810强制+主体独立纳税</li>
