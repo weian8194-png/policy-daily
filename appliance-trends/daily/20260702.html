@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场趋势 | 2026年7月2日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page-wrapper { max-width: 800px; margin: 0 auto; padding: 20px 16px 40px; }
+    .page-header { text-align: center; padding: 32px 20px 24px; background: #ffffff; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .page-header h1 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-header .meta { font-size: 14px; color: #6b7280; }
+    .page-header .meta .date { font-weight: 600; color: #374151; }
+    .nav-bar { display: flex; align-items: center; justify-content: space-between; background: #ffffff; border-radius: 10px; padding: 10px 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); font-size: 14px; }
+    .nav-bar a { color: #0d9488; text-decoration: none; font-weight: 500; }
+    .nav-bar a:hover { text-decoration: underline; }
+    .nav-bar .nav-center { font-weight: 700; color: #111827; font-size: 15px; }
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-item { flex: 1; min-width: 100px; background: #ffffff; border-radius: 10px; padding: 14px 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .stat-item .stat-number { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .stat-item .stat-label { font-size: 12px; color: #6b7280; margin-top: 2px; }
+    .stat-hot .stat-number { color: #0d9488; }
+    .stat-new .stat-number { color: #8b5cf6; }
+    .stat-trend .stat-number { color: #f59e0b; }
+    .section-label { font-size: 13px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin: 24px 0 12px; padding-left: 4px; }
+    .section-hot { color: #0d9488; }
+    .section-detail { color: #8b5cf6; }
+    .section-other { color: #6b7280; }
+    .opportunity-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 0; }
+    .category-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 4px; color: #ffffff; letter-spacing: 0.3px; }
+    .tag-ice { background: #2563eb; }
+    .tag-griddle { background: #dc2626; }
+    .tag-airfryer { background: #ea580c; }
+    .tag-steam { background: #059669; }
+    .tag-coffee { background: #92400e; }
+    .stars { font-size: 14px; color: #f59e0b; }
+    .card-title { font-size: 16px; font-weight: 700; color: #111827; padding: 10px 18px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 18px; padding: 12px 14px; }
+    .card-summary .summary-item { font-size: 13px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 18px 12px; padding: 10px 14px; }
+    .card-price .price-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 13px; color: #78350f; line-height: 1.7; }
+    .card-source { font-size: 12px; color: #6b7280; padding: 0 18px 12px; }
+    .detail-card { background: #ffffff; border-radius: 10px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 18px; font-weight: 700; color: #111827; padding: 16px 18px 8px; }
+    .detail-section { padding: 8px 18px; }
+    .detail-section .detail-label { font-size: 12px; font-weight: 700; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .detail-section .detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 18px; padding: 12px 14px; }
+    .detail-highlight .hl-label { font-size: 12px; font-weight: 700; color: #7c3aed; margin-bottom: 6px; }
+    .detail-highlight .hl-text { font-size: 13px; color: #4c1d95; line-height: 1.7; }
+    .watch-item { background: #ffffff; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border-left: 3px solid #d1d5db; }
+    .watch-item .watch-title { font-size: 14px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 13px; color: #6b7280; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 24px 20px; font-size: 12px; color: #9ca3af; line-height: 1.8; }
+    .page-footer .footer-divider { width: 40px; height: 2px; background: #d1d5db; margin: 0 auto 12px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-header">
+    <h1>🔥 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="meta"><span class="date">2026年7月2日（周三）</span></div>
+  </div>
+
+  <div class="nav-bar">
+    <a href="../index.html">← 首页</a>
+    <span class="nav-center">7月2日 趋势日报</span>
+    <a href="20260701.html">前一日 →</a>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item stat-hot">
+      <div class="stat-number">5</div>
+      <div class="stat-label">机会点</div>
+    </div>
+    <div class="stat-item stat-hot">
+      <div class="stat-number">2</div>
+      <div class="stat-label">重点详析</div>
+    </div>
+    <div class="stat-item stat-trend">
+      <div class="stat-number">5</div>
+      <div class="stat-label">其他动向</div>
+    </div>
+  </div>
+
+  <!-- 速报 -->
+  <div class="section-label section-hot">🔥 速报 · 5个机会点</div>
+
+  <!-- 机会1: 制冰机 -->
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-ice">制冰机</span>
+      <span class="stars">⭐⭐⭐⭐⭐</span>
+    </div>
+    <div class="card-title">$100-149 "静音+方冰+UV杀菌"台式制冰机</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>全球消暑品类爆发 · 美的PortaSplit欧洲售罄 · 7/4独立日倒计时2天 · 渗透率8.7%→20.1%</div>
+      <div class="summary-item"><span class="summary-label">痛点：</span>$50-80噪音>50dB · 子弹冰5分钟化 · 压缩机1年坏 · 无杀菌</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>消暑刚需品质升级 · 7/4用冰量峰值 · KitchenAid冷泡咖啡机$139.95验证$100+厨房电器</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$100-149 静音品质空白 | $50-80 低端红海噪音大 | $200+ Scotsman商用级 | $150-180 GE基础台式</div>
+    </div>
+    <div class="card-source">来源：央视财经 · 36kr · 奥维云网 · Amazon</div>
+  </div>
+
+  <!-- 机会2: 电烤盘 -->
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-griddle">电烤盘</span>
+      <span class="stars">⭐⭐⭐⭐⭐</span>
+    </div>
+    <div class="card-title">$100-129 "实体旋钮+精准温控"电烤盘/室内烧烤炉</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>机械旋钮厨电+41% · 7/4 BBQ倒计时2天 · 全球高温→室内BBQ Plan B</div>
+      <div class="summary-item"><span class="summary-label">痛点：</span>触屏沾油失灵 · 维修$300+ · 断电罢工 · 全域一个温度</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>实体旋钮+PID精准温控+分区控温=天然操控升级 · 高温BBQ Plan B需求更强</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$100-129 旋钮+温控空白 | $60-80 触屏红海 | $200+ Breville旗舰 | $70-90 基础旋钮无温控</div>
+    </div>
+    <div class="card-source">来源：奥维云网 · 时差岛 · 央视财经 · Amazon</div>
+  </div>
+
+  <!-- 机会3: 蒸烤炸一体 -->
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-airfryer">蒸烤炸一体</span>
+      <span class="stars">⭐⭐⭐⭐⭐</span>
+    </div>
+    <div class="card-title">$100-149 "蒸烤炸一体机"</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>空气炸锅+12%领跑 · 空炸烤箱社交渠道黑马 · 全球高温→"不站灶台"烹饪刚需</div>
+      <div class="summary-item"><span class="summary-label">痛点：</span>$70空气炸锅温控±10-15℃ · 无蒸功能 · "外焦里生"</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>PID精准温控±3℃+蒸功能 · "不开火+不站灶台"消暑烹饪 · VIOMI验证$100-200可行</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$100-149 蒸烤炸一体空白 | $50-80 基础空气炸锅红海 | $200-300 Breville旗舰 | $70-90 无蒸功能</div>
+    </div>
+    <div class="card-source">来源：奥维云网 · 央视财经 · Amazon VIOMI</div>
+  </div>
+
+  <!-- 机会4: 蒸汽清洁 -->
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-steam">蒸汽清洁</span>
+      <span class="stars">⭐⭐⭐⭐</span>
+    </div>
+    <div class="card-title">$100-149 "蒸汽+吸尘+除螨"三合一手持清洁机</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>TikTok爆卖1600万美元 · 全球高温"不开窗"消毒刚需 · 66%美国家庭养宠物</div>
+      <div class="summary-item"><span class="summary-label">痛点：</span>$42-80单一蒸汽 · 压力不够 · 深层污渍打不透 · 化学剂消毒污染室内空气</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>三合一=功能组合刚需 · "不开窗也能消毒"核心卖点更强</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$100-149 三合一空白 | $42-80 单一蒸汽红海 | $200+ Duplex专业级 | $150-180 BISSELL无除螨</div>
+    </div>
+    <div class="card-source">来源：大数跨境 · Amazon数据 · Fortune Business Insights · 央视财经</div>
+  </div>
+
+  <!-- 机会5: 咖啡机 -->
+  <div class="opportunity-card card-trend">
+    <div class="card-top">
+      <span class="category-tag tag-coffee">咖啡机</span>
+      <span class="stars">⭐⭐⭐⭐</span>
+    </div>
+    <div class="card-title">$100-129 "冷萃+热萃双模式"紧凑咖啡机</div>
+    <div class="card-summary">
+      <div class="summary-item"><span class="summary-label">趋势：</span>Nespresso $99封顶 · $100-200豆到杯完全空白 · 全球高温→冷萃需求暴增</div>
+      <div class="summary-item"><span class="summary-label">痛点：</span>胶囊机只做胶囊 · $300-500价位太贵 · 热咖啡夏季需求下降</div>
+      <div class="summary-item"><span class="summary-label">机会：</span>豆到杯+冷热双萃天然$100+ · 夏季冰咖啡刚需+冬季不过时 · 全年可用</div>
+    </div>
+    <div class="card-price">
+      <div class="price-title">💰 价格区间</div>
+      <div class="price-text">$100-129 冷萃+热萃豆到杯空白 | $50-99 胶囊机红海 | $300-500 Breville/Ninja | $200-300 半自动入门</div>
+    </div>
+    <div class="card-source">来源：WIRED · Amazon VIOMI · KitchenAid</div>
+  </div>
+
+  <!-- 详析 -->
+  <div class="section-label section-detail">📋 详析 · 2个重点机会</div>
+
+  <!-- 详析1: 制冰机 -->
+  <div class="detail-card">
+    <div class="detail-title">全球消暑品类爆发+7/4独立日倒计时+渗透率翻倍</div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        · 央视财经7/1：义乌1-4月跨境电商520亿元+17%·腰挂风扇订单排到8月·AI智能台扇欧美市场欢迎<br>
+        · 36kr7/1：美的PortaSplit便携分体空调欧洲售罄·二手价从599欧元炒至1484欧元·全球消暑品类"一机难求"<br>
+        · 36kr6/29：英国制冰机年同比涨幅达10倍·速卖通移动空调在多国全面售罄<br>
+        · 奥维云网6/29：618制冰机渗透率8.7%→20.1%·品类从小众到大众身份转变<br>
+        · 中国家电协会：全球制冰机2019-2024年CAGR 8.0%·2028年预计272亿元
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">竞争情况</div>
+      <div class="detail-text">
+        · 头部玩家：GE($150-180)·Igloo($80-120)·Scotsman($200+)·NewAir($100-150噪音大)·EUHOMY(月牙冰+TikTok爆款)<br>
+        · $100-149静音品质制冰空白：所有$100以下噪音>50dB·$100-149无静音+方冰+UV杀菌品牌<br>
+        · EUHOMY"月牙冰"验证冰型创新方向→方冰+UV杀菌是下一个差异化
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">用户痛点</div>
+      <div class="detail-text">
+        · 噪音>50dB→半夜制冰吵醒全家→厨房/客厅无法使用<br>
+        · 子弹冰5分钟融化→无法用于冷饮<br>
+        · 压缩机1年坏→故障率极高<br>
+        · 无杀菌功能→冰块入口安全存疑
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">机会判断</div>
+      <div class="hl-text">全球消暑品类爆发=制冰机需求从"可选"升级为"刚需"确认→欧洲空调售罄/英国制冰机+10倍→"消暑=刚需"全球确认→制冰机作为消暑品类中价格敏感度最低的品类→$50-80品质本身就是痛点→$100+做静音+方冰+UV杀菌=天然品质升级。7/4独立日倒计时2天→美国全年最大用冰日→销售高峰正在此刻</div>
+    </div>
+  </div>
+
+  <!-- 详析2: 电烤盘 -->
+  <div class="detail-card">
+    <div class="detail-title">机械旋钮+41%+7/4 BBQ倒计时+全球高温烹饪刚需</div>
+    <div class="detail-section">
+      <div class="detail-label">趋势数据</div>
+      <div class="detail-text">
+        · 奥维云网6/29：2026年1-5月复古款家电成交额+37%·618五大复古品类全部翻倍<br>
+        · 京东618：带机械旋钮厨电销量+41%·燃气灶/热水器/波轮洗衣机涨幅最高<br>
+        · 时差岛6/29：从业16年销售"客户第一句话=不要WiFi/全屏触控"<br>
+        · 央视财经7/1：全球极端高温→户外BBQ太热→室内电烤盘需求比往年更强
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">竞争情况</div>
+      <div class="detail-text">
+        · 头部玩家：Breville($200-400触屏旗舰)·Cuisinart($80-150触屏为主)·Ninja($100-180混合)·Presto($50-80基础旋钮无温控)<br>
+        · $100-129"实体旋钮+精准温控"空白：Cuisinart/Breville全面触屏化·Presto有旋钮无精准温控<br>
+        · Prime Day触屏款30-50%折扣→库存积压·vs机械旋钮款仅10-15%→供不应求
+      </div>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">用户痛点</div>
+      <div class="detail-text">
+        · 触屏沾油失灵→"手上沾油一碰面板就乱跳程序"<br>
+        · 触屏维修$300+→"接近新机三分之一价格"<br>
+        · 断电/断网罢工→"停电连基础模式都无法调节"<br>
+        · 全域一个温度→"牛排和蔬菜同一温度→焦生不一"
+      </div>
+    </div>
+    <div class="detail-highlight">
+      <div class="hl-label">机会判断</div>
+      <div class="hl-text">7/4独立日倒计时2天=BBQ需求最高峰→全球高温→户外BBQ太热→室内电烤盘是"高温BBQ Plan B"→需求比往年更强。机械旋钮+41%确认跨品类趋势→触屏款大量清库存vs机械款供不应求→$100+做实体旋钮+PID精准温控+分区控温=天然操控升级</div>
+    </div>
+  </div>
+
+  <!-- 其他动向 -->
+  <div class="section-label section-other">🔍 其他动向</div>
+
+  <div class="watch-item">
+    <div class="watch-title">全球消暑品类爆发（7/1央视+36kr）</div>
+    <div class="watch-text">欧洲极端高温→美的PortaSplit售罄/追觅移动空调单周破千台/格力移动空调全渠道断货→"消暑=刚需"全球确认→$100+品质制冰机/电烤盘/蒸烤炸一体机持续受益</div>
+  </div>
+  <div class="watch-item">
+    <div class="watch-title">义乌降温神器全球热卖（7/1央视）</div>
+    <div class="watch-text">1-4月跨境电商520亿元+17%+腰挂风扇订单排到8月+AI智能台扇欧美市场受欢迎→验证中国消暑产品出海时机成熟→供应链产能充足→利好$100+品质定位</div>
+  </div>
+  <div class="watch-item">
+    <div class="watch-title">0涂层/钛材质继续渗透</div>
+    <div class="watch-text">电饭煲0涂层份额近50%+含钛电压力锅增速超2倍+全钢空气炸锅畅销→健康材质升级→$100+价位段天然溢价点→验证"品质升级"是跨品类趋势</div>
+  </div>
+  <div class="watch-item">
+    <div class="watch-title">年轻人厨电回归理性</div>
+    <div class="watch-text">近7成"不会再为闲置功能买单"→"小而精"替代"多而全"→验证"一机多用"$100+逻辑→Moccamaster WIRED首推验证"品质+简单"比"智能+复杂"更受欢迎</div>
+  </div>
+  <div class="watch-item">
+    <div class="watch-title">VIOMI咖啡机新品榜验证（7/1云米）</div>
+    <div class="watch-text">T1A Pro/T1A Prime Day新品榜第3/4名→验证中国品牌$100-200价位段Amazon可行→$100-200豆到杯空白→供应链成熟→开品周期3-4个月</div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    美国亚马逊$90+小家电市场趋势 · 每日分析<br>
+    <a href="../index.html">返回首页</a> · <a href="20260701.html">前一日</a><br>
+    （5个信息源）
+  </div>
+
+</div>
+</body>
+</html>
