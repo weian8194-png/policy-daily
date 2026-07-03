@@ -6,10 +6,7 @@
   <title>跨境政策日报 · 2026年7月3日</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); } }
-    .nav-item:active, .nav-item:focus { color: #f1f5f9 !important; background: rgba(56,189,248,0.15) !important; border-left-color: #38bdf8 !important; }
     .layout { display: flex; min-height: 100vh; }
     .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
     .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f8fafc; }
@@ -31,8 +28,8 @@
     details.archive-month { padding: 0; }
     details.archive-month summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px 6px 28px; cursor: pointer; font-size: 13px; color: #94a3b8; list-style: none; transition: color 0.15s; border-left: 2px solid transparent; }
     details.archive-month summary::-webkit-details-marker { display: none; }
-    details.archive-month summary::before { content: "📁"; margin-right: 6px; font-size: 12px; }
-    details.archive-month[open] summary::before { content: "📂"; }
+    details.archive-month summary::before { content: "\01F4C1"; margin-right: 6px; font-size: 12px; }
+    details.archive-month[open] summary::before { content: "\01F4C2"; }
     details.archive-month summary:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
     details.archive-month summary .month-info { font-weight: 500; }
     details.archive-month summary .month-stats { font-size: 11px; color: #475569; }
@@ -50,11 +47,13 @@
     .stat-chip.warn .stat-num { color: #d97706; }
     .stat-chip.info .stat-num { color: #16a34a; }
     .stat-chip.platform .stat-num { color: #0284c7; }
+    .stat-chip a { text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 2px; }
+    .stat-chip:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,0.1); cursor: pointer; }
     .compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
     .compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
     .compliance-banner ul { list-style: none; padding: 0; }
     .compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
-    .compliance-banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .compliance-banner li::before { content: "\25B8"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
     .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
     .section-block { margin-bottom: 28px; }
     .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
@@ -69,149 +68,95 @@
     .severity-badge.info { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
     .platform-tag { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; color: #fff; }
     .platform-tag.amazon { background: #FF9900; }
-    .platform-tag.ebay { background: #e53238; }
-    .platform-tag.tiktok { background: #000; }
-    .platform-tag.temu { background: #E85D2D; }
-    .platform-tag.shein { background: #000; }
+    .platform-tag.cpsc { background: #003087; }
+    .platform-tag.ustr { background: #dc2626; }
+    .platform-tag.cbp { background: #003399; }
     .platform-tag.eu { background: #003399; }
+    .platform-tag.tiktok { background: #000; }
+    .platform-tag.shopee { background: #EE4D2D; }
+    .platform-tag.suez { background: #0284c7; }
+    .platform-tag.logistics { background: #7c3aed; }
     .platform-tag.china { background: #dc2626; }
-    .platform-tag.tax { background: #7c3aed; }
-    .platform-tag.logistics { background: #0369a1; }
     .card-title { font-size: 14px; font-weight: 700; color: #0f172a; line-height: 1.5; }
-    .card-deadline { font-size: 12px; color: #64748b; white-space: nowrap; font-weight: 600; }
     .card-body { padding: 0 18px 16px; }
-    .detail-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    .detail-table th { width: 72px; text-align: left; padding: 6px 8px 6px 0; color: #64748b; font-weight: 600; vertical-align: top; white-space: nowrap; }
-    .detail-table td { padding: 6px 0; color: #334155; line-height: 1.6; }
-    .detail-table td a { color: #2563eb; text-decoration: none; font-size: 12px; }
-    .detail-table td a:hover { text-decoration: underline; }
-    .action-list { background: #f8fafc; border-radius: 6px; padding: 10px 14px; margin-top: 10px; border: 1px solid #e2e8f0; }
-    .action-list .action-title { font-size: 12px; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
-    .action-list ol { margin: 0; padding-left: 18px; }
-    .action-list li { font-size: 12px; color: #334155; padding: 2px 0; line-height: 1.6; }
-    .timeline-section { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 18px 20px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-    .timeline-section h3 { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 14px; }
+    .detail-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px; }
+    .detail-table td { padding: 6px 0; vertical-align: top; border-bottom: 1px solid #f1f5f9; }
+    .detail-table td:first-child { width: 80px; color: #64748b; font-weight: 600; white-space: nowrap; }
+    .detail-table td:last-child { color: #334155; line-height: 1.6; }
+    .detail-table tr:last-child td { border-bottom: none; }
+    .source-line { font-size: 11px; color: #94a3b8; margin-top: 4px; }
+    .source-line a { color: #2563eb; text-decoration: none; }
+    .source-line a:hover { text-decoration: underline; }
+    .action-checklist { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 14px; margin-top: 10px; }
+    .action-checklist .checklist-title { font-size: 12px; font-weight: 700; color: #166534; margin-bottom: 6px; }
+    .action-checklist ol { margin: 0; padding-left: 18px; }
+    .action-checklist li { font-size: 12px; color: #166534; padding: 2px 0; line-height: 1.6; }
+    .timeline-section { margin-bottom: 28px; }
+    .timeline-section h2 { font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
     .timeline-list { list-style: none; padding: 0; }
-    .timeline-item { display: flex; gap: 12px; padding: 6px 0; font-size: 13px; line-height: 1.5; }
-    .timeline-item .tl-date { min-width: 56px; font-weight: 700; color: #334155; white-space: nowrap; }
-    .timeline-item .tl-sev { font-size: 11px; font-weight: 700; }
-    .timeline-item .tl-sev.danger { color: #dc2626; }
-    .timeline-item .tl-sev.warn { color: #d97706; }
-    .timeline-item .tl-text { color: #475569; }
-    .compliance-section { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 18px 20px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-    .compliance-section h3 { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 14px; }
-    .compliance-list { list-style: none; padding: 0; }
-    .compliance-list li { font-size: 13px; padding: 4px 0 4px 16px; position: relative; line-height: 1.6; color: #334155; }
-    .compliance-list li::before { content: ""; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; }
-    .compliance-list li.sev-danger::before { background: #dc2626; }
-    .compliance-list li.sev-warn::before { background: #d97706; }
-    .compliance-list li.sev-danger { color: #991b1b; }
-    .compliance-list li.sev-warn { color: #92400e; }
-    .footer { text-align: center; padding: 20px 0 10px; border-top: 1px solid #e2e8f0; margin-top: 20px; }
-    .footer p { font-size: 12px; color: #94a3b8; line-height: 1.8; }
-    @media (max-width: 768px) {
-      .sidebar { display: none; }
-      .main-content { margin-left: 0; padding: 16px; }
-    }
+    .timeline-item { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0; border-bottom: 1px dashed #e2e8f0; font-size: 13px; }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-date { min-width: 80px; font-weight: 700; color: #334155; white-space: nowrap; }
+    .timeline-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+    .timeline-dot.danger { background: #dc2626; }
+    .timeline-dot.warn { background: #d97706; }
+    .timeline-dot.info { background: #16a34a; }
+    .timeline-text { color: #475569; line-height: 1.5; }
+    .footer { text-align: center; padding: 24px 0 16px; border-top: 1px solid #e2e8f0; margin-top: 32px; color: #94a3b8; font-size: 12px; }
   </style>
 </head>
 <body>
-<div class="layout">
-
-  <!-- ===== Left Sidebar ===== -->
-  <aside class="sidebar">
-
-    <div class="sidebar-brand">
-      <h1>跨境政策日报</h1>
-      <div class="version">Policy Daily v2.1</div>
-    </div>
-    <nav class="sidebar-nav">
-      <div class="nav-section">
-        <div class="nav-section-title">📌 今日概览</div>
-        <a class="nav-item" href="#summary">速报概览</a>
-        <a class="nav-item" href="#platform">平台政策 <span class="nav-count danger">3🔴</span><span class="nav-count warn">2🟡</span></a>
-        <a class="nav-item" href="#compliance-cards">合规/税务 <span class="nav-count danger">1🔴</span><span class="nav-count warn">2🟡</span></a>
-        <a class="nav-item" href="#logistics">物流/航运 <span class="nav-count warn">1🟡</span></a>
-        <a class="nav-item" href="#reminders">合规提醒 <span class="nav-count danger">11🔴</span><span class="nav-count warn">19🟡</span></a>
-        <a class="nav-item" href="#timeline">⏰ 时间线</a>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h1>跨境政策日报</h1>
+        <div class="version">DAILY POLICY BRIEF</div>
       </div>
-      <div class="nav-divider"></div>
-      <div class="archive-section">
-        <div class="archive-section-title">📅 历史归档 / Archives</div>
-        <details class="archive-month" open>
-          <summary><span class="month-info">2026年07月</span><span class="month-stats">2天</span></summary>
-          <a class="archive-day" href="./daily/20260702.html">2026-07-02</a>
-          <a class="archive-day" href="./daily/20260701.html">2026-07-01</a>
-        </details>
-        <details class="archive-month" open>
-          <summary><span class="month-info">2026年06月</span><span class="month-stats">25天</span></summary>
-          <a class="archive-day" href="./daily/20260630.html">2026-06-30</a>
-          <a class="archive-day" href="./daily/20260629.html">2026-06-29</a>
-          <a class="archive-day" href="./daily/20260628.html">2026-06-28</a>
-          <a class="archive-day" href="./daily/20260627.html">2026-06-27</a>
-          <a class="archive-day" href="./daily/20260626.html">2026-06-26</a>
-          <a class="archive-day" href="./daily/20260625.html">2026-06-25</a>
-          <a class="archive-day" href="./daily/20260624.html">2026-06-24</a>
-          <a class="archive-day" href="./daily/20260623.html">2026-06-23</a>
-          <a class="archive-day" href="./daily/20260622.html">2026-06-22</a>
-          <a class="archive-day" href="./daily/20260621.html">2026-06-21</a>
-          <a class="archive-day" href="./daily/20260620.html">2026-06-20</a>
-          <a class="archive-day" href="./daily/20260619.html">2026-06-19</a>
-          <a class="archive-day" href="./daily/20260618.html">2026-06-18</a>
-          <a class="archive-day" href="./daily/20260617.html">2026-06-17</a>
-          <a class="archive-day" href="./daily/20260616.html">2026-06-16</a>
-          <a class="archive-day" href="./daily/20260615.html">2026-06-15</a>
-          <a class="archive-day" href="./daily/20260614.html">2026-06-14</a>
-          <a class="archive-day" href="./daily/20260613.html">2026-06-13</a>
-          <a class="archive-day" href="./daily/20260612.html">2026-06-12</a>
-          <a class="archive-day" href="./daily/20260611.html">2026-06-11</a>
-          <a class="archive-day" href="./daily/20260610.html">2026-06-10</a>
-          <a class="archive-day" href="./daily/20260609.html">2026-06-09</a>
-          <a class="archive-day" href="./daily/20260608.html">2026-06-08</a>
-          <a class="archive-day" href="./daily/20260607.html">2026-06-07</a>
-          <a class="archive-day" href="./daily/20260606.html">2026-06-06</a>
-          <a class="archive-day" href="./daily/20260605.html">2026-06-05</a>
-          <a class="archive-day" href="./daily/20260604.html">2026-06-04</a>
-          <a class="archive-day" href="./daily/20260603.html">2026-06-03</a>
-          <a class="archive-day" href="./daily/20260602.html">2026-06-02</a>
-          <a class="archive-day" href="./daily/20260601.html">2026-06-01</a>
-        </details>
-        <details class="archive-month">
-          <summary><span class="month-info">2026年05月</span></summary>
-          <a class="archive-day" href="./daily/20260531.html">2026-05-31</a>
-          <a class="archive-day" href="./daily/20260530.html">2026-05-30</a>
-          <a class="archive-day" href="./daily/20260529.html">2026-05-29</a>
-          <a class="archive-day" href="./daily/20260528.html">2026-05-28</a>
-          <a class="archive-day" href="./daily/20260527.html">2026-05-27</a>
-          <a class="archive-day" href="./daily/20260524.html">2026-05-24</a>
-          <a class="archive-day" href="./daily/20260523.html">2026-05-23</a>
-          <a class="archive-day" href="./daily/20260522.html">2026-05-22</a>
-          <a class="archive-day" href="./daily/20260521.html">2026-05-21</a>
-          <a class="archive-day" href="./daily/20260520.html">2026-05-20</a>
-          <a class="archive-day" href="./daily/20260519.html">2026-05-19</a>
-          <a class="archive-day" href="./daily/20260518.html">2026-05-18</a>
-          <a class="archive-day" href="./daily/20260517.html">2026-05-17</a>
-          <a class="archive-day" href="./daily/20260516.html">2026-05-16</a>
-          <a class="archive-day" href="./daily/20260514.html">2026-05-14</a>
-          <a class="archive-day" href="./daily/20260513.html">2026-05-13</a>
-          <a class="archive-day" href="./daily/20260512.html">2026-05-12</a>
-          <a class="archive-day" href="./daily/20260511.html">2026-05-11</a>
-          <a class="archive-day" href="./daily/20260510.html">2026-05-10</a>
-          <a class="archive-day" href="./daily/20260509.html">2026-05-09</a>
-          <a class="archive-day" href="./daily/20260508.html">2026-05-08</a>
-          <a class="archive-day" href="./daily/20260506.html">2026-05-06</a>
-          <a class="archive-day" href="./daily/20260505.html">2026-05-05</a>
-          <a class="archive-day" href="./daily/20260504.html">2026-05-04</a>
-          <a class="archive-day" href="./daily/20260503.html">2026-05-03</a>
-          <a class="archive-day" href="./daily/20260502.html">2026-05-02</a>
-        </details>
-      </div>
-    </nav>
-    
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-title">今日概览</div>
+          <a href="#summary" class="nav-item active">高管摘要 <span class="nav-count danger">7</span></a>
+          <a href="#compliance" class="nav-item">合规提醒 <span class="nav-count danger">25</span></a>
+        </div>
+        <div class="nav-divider"></div>
+        <div class="nav-section">
+          <div class="nav-section-title">政策板块</div>
+          <a href="#platform" class="nav-item">平台政策 <span class="nav-count">8</span></a>
+          <a href="#compliance-tax" class="nav-item">合规/税务 <span class="nav-count">1</span></a>
+          <a href="#logistics" class="nav-item">物流/航运 <span class="nav-count">3</span></a>
+        </div>
+        <div class="nav-divider"></div>
+        <div class="nav-section">
+          <div class="nav-section-title">时间线</div>
+          <a href="#timeline" class="nav-item">关键节点</a>
+        </div>
+        <div class="nav-divider"></div>
+        <div class="archive-section">
+          <div class="archive-section-title">归档</div>
+          <details class="archive-month">
+            <summary><span class="month-info">2026年7月</span> <span class="month-stats">3篇</span></summary>
+            <a href="daily/20260703.html" class="archive-day">7月3日（周五）</a>
+            <a href="daily/20260702.html" class="archive-day">7月2日（周四）</a>
+            <a href="daily/20260701.html" class="archive-day">7月1日（周三）</a>
+          </details>
+          <details class="archive-month">
+            <summary><span class="month-info">2026年6月</span> <span class="month-stats">8篇</span></summary>
+            <a href="daily/20260630.html" class="archive-day">6月30日</a>
+            <a href="daily/20260629.html" class="archive-day">6月29日</a>
+            <a href="daily/20260628.html" class="archive-day">6月28日</a>
+            <a href="daily/20260627.html" class="archive-day">6月27日</a>
+            <a href="daily/20260626.html" class="archive-day">6月26日</a>
+            <a href="daily/20260625.html" class="archive-day">6月25日</a>
+            <a href="daily/20260624.html" class="archive-day">6月24日</a>
+            <a href="daily/20260623.html" class="archive-day">6月23日</a>
+          </details>
+        </div>
+      </nav>
     </aside>
 
-  <!-- ===== Main Content ===== -->
-  <main class="main-content">
+    <!-- Main Content -->
+    <main class="main-content">
       <div class="content-header">
         <h1>跨境政策日报</h1>
         <div class="date-line">
@@ -607,101 +552,6 @@
         <p>⏰ 每日08:30自动更新 · 近24小时跨境政策变化</p>
       </div>
     </main>
-</div>
-<script>
-// Default sources data for reset
-const DEFAULT_SOURCES = [
-  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'卖家新闻',url:'https://sellercentral.amazon.com/news',domain:'sellercentral.amazon.com'},
-  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'官方新闻中心',url:'https://press.aboutamazon.com',domain:'press.aboutamazon.com'},
-  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'卖家官方论坛（美区 Bug 哨所）',url:'https://sellercentral.amazon.com/forums',domain:'sellercentral.amazon.com'},
-  {ch:'Amazon🇪🇺',chColor:'#FF9900',name:'卖家中心（德国站）',url:'https://sellercentral.amazon.de',domain:'sellercentral.amazon.de'},
-  {ch:'Amazon🇪🇺',chColor:'#FF9900',name:'卖家中心（英国站）',url:'https://sellercentral.amazon.co.uk',domain:'sellercentral.amazon.co.uk'},
-  {ch:'Amazon🇯🇵',chColor:'#FF9900',name:'卖家中心（日本站）',url:'https://sellercentral.amazon.co.jp',domain:'sellercentral.amazon.co.jp'},
-  {ch:'Amazon',chColor:'#FF9900',name:'全球公告（Sell.amazon）',url:'https://sell.amazon.com/blog/announcements',domain:'sell.amazon.com'},
-  {ch:'Walmart',chColor:'#0071DC',name:'商家新闻',url:'https://marketplace.walmart.com/news',domain:'marketplace.walmart.com'},
-  {ch:'Walmart',chColor:'#0071DC',name:'API 变更日志',url:'https://developer.walmart.com/us-marketplace/page/whats-new',domain:'developer.walmart.com'},
-  {ch:'Target',chColor:'#CC0000',name:'Target Plus 入驻与政策',url:'https://plus.target.com/sell',domain:'plus.target.com'},
-  {ch:'TikTok Shop',chColor:'#000000',name:'官方大学与政策中心',url:'https://seller.tiktok.com/university/policy',domain:'seller.tiktok.com'},
-  {ch:'TikTok Shop',chColor:'#000000',name:'全球新闻中心',url:'https://seller.tiktokglobalshop.com/business/en/newsroom',domain:'seller.tiktokglobalshop.com'},
-  {ch:'TEMU',chColor:'#E85D2C',name:'跨境卖家中心',url:'https://seller.kuajingmaihuo.com',domain:'seller.kuajingmaihuo.com'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国海关 CBP CSMS 货运消息系统',url:'https://www.cbp.gov/trade/automated',domain:'cbp.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国 FDA 食品与补充剂监管局',url:'https://www.fda.gov/food',domain:'fda.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国 CPSC 消费品安全委员会（小家电下架杀手）',url:'https://www.cpsc.gov/Newsroom',domain:'cpsc.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国加州 Prop 65 环保标签局',url:'https://oehha.ca.gov/proposition-65',domain:'oehha.ca.gov'},
-  {ch:'欧盟',chColor:'#003399',name:'欧盟税务与海关总署（VAT/关税总线）',url:'https://taxation-customs.ec.europa.eu',domain:'ec.europa.eu'},
-  {ch:'欧盟',chColor:'#003399',name:'欧盟 Safety Gate 安全门（欧洲产品安全召回）',url:'https://ec.europa.eu/consumers/consumers_safety/safety_products/rapex',domain:'ec.europa.eu'},
-  {ch:'德国',chColor:'#1d4ed8',name:'德国 WEEE 注册局（Stiftung EAR · 带电产品硬合规）',url:'https://www.stiftung-ear.de',domain:'stiftung-ear.de'},
-  {ch:'德国',chColor:'#1d4ed8',name:'德国 LUCID 包装法注册局（Verpackungsregister）',url:'https://www.verpackungsregister.org',domain:'verpackungsregister.org'},
-  {ch:'日本',chColor:'#C41E3A',name:'日本経済産業省 METI（PSE/产品合规）',url:'https://www.meti.go.jp',domain:'meti.go.jp'},
-  {ch:'Amazon',chColor:'#FF9900',name:'SP-API 变更日志（防 RPA 脚本断流）',url:'https://developer-docs.amazon.com/sp-api/changelog',domain:'developer-docs.amazon.com'},
-  {ch:'航运',chColor:'#0d9488',name:'上海航运交易所（SCFI/NCFI 头程运价精算）',url:'https://www.sse.net.cn',domain:'sse.net.cn'},
-  {ch:'行业社区',chColor:'#7c3aed',name:'知无不言（一线暗改/黑产/防挨打爆料）',url:'https://www.wearesellers.com',domain:'wearesellers.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'卖家之家',url:'https://mjzj.com',domain:'mjzj.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'雨果跨境',url:'https://cifnews.com',domain:'cifnews.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'亿邦动力',url:'https://ebrun.com',domain:'ebrun.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'至美通（北美/欧盟政策+物流）',url:'https://www.chinatotop.com',domain:'chinatotop.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'跨境大发哥（全平台政策+税务）',url:'https://m.toutiao.com/search/?keyword=跨境大发哥',domain:'toutiao.com'},
-  {ch:'航运',chColor:'#0d9488',name:'WL123跨境导航（物流+关税+清关）',url:'https://www.wl123.com',domain:'wl123.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'白鲸出海（东南亚+欧洲政策）',url:'https://www.baijingapp.com',domain:'baijingapp.com'},
-  {ch:'航运',chColor:'#0d9488',name:'跨境物流百晓生（运价+航线+物流）',url:'https://m.toutiao.com/search/?keyword=跨境物流百晓生',domain:'toutiao.com'},
-  {ch:'行业媒体',chColor:'#f59e0b',name:'吉易跨境',url:'https://www.jiyikj.com',domain:'jiyikj.com'}
-]
-
-function buildRow(s) {
-  const urlCell = s.url ? '<a href="'+s.url+'" target="_blank">'+s.url.replace(/^https?:\/\//,'')+'</a>' : '—';
-  const domainCell = s.domain || '—';
-  return '<tr><td class="st-channel"><span class="sc-tag" style="background:'+s.chColor+'">'+s.ch+'</span></td><td class="st-name">'+s.name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+domainCell+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>';
-}
-
-function resetSources() {
-  const tbody = document.getElementById('sources-tbody');
-  tbody.innerHTML = DEFAULT_SOURCES.map(buildRow).join('');
-  updateCount();
-}
-
-function delSourceRow(btn) {
-  btn.closest('tr').remove();
-  updateCount();
-}
-
-function addSourceRow() {
-  const tbody = document.getElementById('sources-tbody');
-  if (tbody.querySelector('.add-row')) return;
-  const tr = document.createElement('tr');
-  tr.className = 'add-row';
-  tr.innerHTML = '<td class="st-channel"><input placeholder="渠道" id="new-ch"></td><td class="st-name"><input placeholder="名称" id="new-name"></td><td class="st-url"><input placeholder="URL" id="new-url"></td><td class="st-domain"><input placeholder="域名" id="new-domain"></td><td class="st-enable"><input type="checkbox" checked id="new-enabled"></td><td style="text-align:center"><button class="btn-save" onclick="saveNewSource()">✓</button> <button class="btn-cancel" onclick="cancelNewSource()">✕</button></td>';
-  tbody.appendChild(tr);
-  document.getElementById('new-ch').focus();
-}
-
-function saveNewSource() {
-  const ch = document.getElementById('new-ch').value.trim();
-  const name = document.getElementById('new-name').value.trim();
-  const url = document.getElementById('new-url').value.trim();
-  const domain = document.getElementById('new-domain').value.trim();
-  if (!name) { document.getElementById('new-name').focus(); return; }
-  const row = document.querySelector('.add-row');
-  const urlCell = url ? '<a href="'+url+'" target="_blank">'+url.replace(/^https?:\/\//,'')+'</a>' : '—';
-  row.className = '';
-  row.innerHTML = '<td class="st-channel"><span class="sc-tag" style="background:#64748b">'+(ch||'自定义')+'</span></td><td class="st-name">'+name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+(domain||'—')+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td>';
-  updateCount();
-}
-
-function cancelNewSource() {
-  const row = document.querySelector('.add-row');
-  if (row) row.remove();
-}
-
-function updateCount() {
-  const count = document.querySelectorAll('#sources-tbody tr:not(.add-row)').length;
-  const badge = document.querySelector('#sources .section-badge');
-  if (badge) badge.textContent = count + '个来源';
-  const navCount = document.querySelector('a[href="#sources"] .nav-count');
-  if (navCount) navCount.textContent = count;
-}
-
-// Init sources table on page load
-document.addEventListener('DOMContentLoaded', resetSources);
-</script>
+  </div>
 </body>
 </html>
