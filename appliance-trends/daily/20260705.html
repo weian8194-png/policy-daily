@@ -66,22 +66,25 @@
     .card-price .price-text { font-size: 12px; color: #78350f; line-height: 1.7; }
     .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
     .card-source .source-label { font-size: 11px; color: #94a3b8; }
+    .card-source a { font-size: 11px; color: #0d9488; text-decoration: none; word-break: break-all; }
     .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 8px 12px; border: 1px solid #fde68a; }
     .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #92400e; margin-bottom: 2px; }
     .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.6; }
-    .detail-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; border-top: 3px solid #0d9488; }
+    .detail-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; border-top: 3px solid #d97706; }
     .detail-title { font-size: 16px; font-weight: 700; color: #0f172a; padding: 14px 16px 6px; }
     .detail-section { padding: 6px 16px; }
     .detail-section .detail-label { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
     .detail-section .detail-text { font-size: 13px; color: #334155; line-height: 1.7; }
     .detail-section .detail-text ul { padding-left: 16px; }
     .detail-section .detail-text li { padding: 2px 0; }
-    .detail-highlight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
-    .detail-highlight .hl-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
-    .detail-highlight .hl-text { font-size: 12px; color: #134e4a; line-height: 1.7; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #e9d5ff; }
+    .detail-highlight .hl-label { font-size: 11px; font-weight: 700; color: #7c3aed; margin-bottom: 4px; }
+    .detail-highlight .hl-text { font-size: 12px; color: #4c1d95; line-height: 1.7; }
     .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
     .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
     .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .watch-item a { color: #0d9488; text-decoration: none; }
+    .watch-item a:hover { text-decoration: underline; }
     .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
     .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
     .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
@@ -106,8 +109,8 @@
       <div class="nav-section">
         <div class="nav-section-title">📊 今日数据</div>
         <a class="nav-item" href="#hot">🔥 机会速报 <span class="nav-count hot">6</span></a>
-        <a class="nav-item" href="#detail">📋 重点详析 <span class="nav-count hot">1</span></a>
-        <a class="nav-item" href="#continue">🔄 延续中机会 <span class="nav-count">5</span></a>
+        <a class="nav-item" href="#detail">📋 变化详析 <span class="nav-count hot">1</span></a>
+        <a class="nav-item" href="#continue">🔄 延续中机会 <span class="nav-count">6</span></a>
         <a class="nav-item" href="#watch">👀 其他动向 <span class="nav-count">5</span></a>
       </div>
       <div class="nav-divider"></div>
@@ -120,7 +123,7 @@
 
     <div class="content-header">
       <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
-      <div class="date-line">数据日期: <span class="date-val">2026年7月5日（周六·独立日后）</span> <span class="update-time">补跑更新</span></div>
+      <div class="date-line">数据日期: <span class="date-val">2026年7月5日（周六·独立日后首日）</span> <span class="update-time">08:30 更新</span></div>
     </div>
 
     <div class="stats-row">
@@ -136,24 +139,6 @@
         <span class="section-badge badge-hot">6个机会</span>
       </div>
 
-      <!-- 延续·有变化：制冰机 -->
-      <div class="opportunity-card card-hot">
-        <div class="card-top">
-          <span class="category-tag tag-ice">🧊 制冰机</span>
-          <span class="status-badge status-changed">🔄 有变化</span>
-        </div>
-        <div class="card-title">静音+方冰+UV杀菌台式制冰机 · $100-149 · ⭐⭐⭐⭐⭐</div>
-        <div class="card-change-note">
-          <div class="change-label">📅 今日变化</div>
-          <div class="change-text">速卖通6月英国制冰机同比暴涨10倍→EUHOMY靠制冰机年入14亿→从"趋势判断"升级为"营收验证"→确定性大幅提升。7/5独立日后→制冰≠BBQ一次性品类→日常刚需→7-8月持续高温仍有需求→时间敏感度从"极高"降为"高"</div>
-        </div>
-        <div class="card-price">
-          <div class="price-title">💰 参考价格区间</div>
-          <div class="price-text">$100-149 静音品质制冰空白 | $50-80 低端红海噪音大 | $200+ Scotsman商用级 | $150-180 GE基础台式</div>
-        </div>
-        <div class="card-source"><span class="source-label">来源：</span>36kr7/3科创板日报、TT123跨境电商7/2、CSDN7/3、宁波海关</div>
-      </div>
-
       <!-- 延续·有变化：冰淇淋机 -->
       <div class="opportunity-card card-hot">
         <div class="card-top">
@@ -163,17 +148,35 @@
         <div class="card-title">压缩机冰淇淋机 · $100-149 · ⭐⭐⭐⭐⭐</div>
         <div class="card-change-note">
           <div class="change-label">📅 今日变化</div>
-          <div class="change-text">宁波海关1-5月出口数据补充→宁波清凉家电5700万台+6.5%→冰淇淋机/制冰机深受欢迎→从"企业个案"升级为"区域产业集群验证"。7/5独立日后→冰淇淋机属冰品刚需→7-8月需求不会断崖</div>
+          <div class="change-text">Ninja CREAMi连续3天（7/2-7/4）获得中国主流媒体密集曝光（搜狐7/2、7/3、7/4各发1-2篇专题）→冰淇淋机品类消费者认知持续提升→间接验证$100+冰淇淋机需求真实且认知正在扩大。7/4独立日已过→冰品峰值已过→但美国夏季持续至9月→需求仍在但非峰值</div>
         </div>
         <div class="card-price">
           <div class="price-title">💰 参考价格区间</div>
           <div class="price-text">$100-149 压缩机紧凑款空白 | $30-60 冷冻碗红海体验差 | $199-249 Ninja CREAMi冻杯搅拌 | $200+ Whynter压缩机大容量 | $150-180 Breville基础压缩机</div>
         </div>
-        <div class="card-source"><span class="source-label">来源：</span>宁波海关1-5月、央视财经7/3、财联社7/3、北仑发布7/3</div>
+        <div class="card-source"><span class="source-label">来源：</span>搜狐7/2-7/4（Ninja CREAMi系列专题）、央视财经7/3、财联社7/3、北仑发布7/3</div>
+      </div>
+
+      <!-- 延续·有变化：制冰机 -->
+      <div class="opportunity-card card-hot">
+        <div class="card-top">
+          <span class="category-tag tag-ice">🧊 制冰机</span>
+          <span class="status-badge status-changed">🔄 有变化</span>
+        </div>
+        <div class="card-title">静音+方冰+UV杀菌台式制冰机 · $100-149 · ⭐⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">📅 今日变化</div>
+          <div class="change-text">7/4独立日已过→"全年最大销售窗口"已关闭→需求将从峰值逐步回落→7-8月美国持续高温→制冰机仍有一定需求但紧迫感显著下降→从"紧急抢购"转为"常规夏季需求"</div>
+        </div>
+        <div class="card-price">
+          <div class="price-title">💰 参考价格区间</div>
+          <div class="price-text">$100-149 静音品质制冰空白 | $50-80 低端红海噪音大 | $200+ Scotsman商用级 | $150-180 GE基础台式</div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span>时间节点变化（7/4独立日已过）</div>
       </div>
 
       <!-- 延续·有变化：电烤盘 -->
-      <div class="opportunity-card card-trend">
+      <div class="opportunity-card card-hot">
         <div class="card-top">
           <span class="category-tag tag-griddle">🍳 电烤盘</span>
           <span class="status-badge status-changed">🔄 有变化</span>
@@ -181,13 +184,13 @@
         <div class="card-title">实体旋钮+精准温控电烤盘/室内烧烤炉 · $100-129 · ⭐⭐⭐⭐⭐</div>
         <div class="card-change-note">
           <div class="change-label">📅 今日变化</div>
-          <div class="change-text">7/5独立日后→BBQ峰值已过→户外炭烤需求快速回落→室内电烤盘从"Plan B救急"回归"日常室内烤肉刚需"→时间敏感度从"极高"降为"中"→$100-129旋钮+温控空白逻辑延续</div>
+          <div class="change-text">①7/4独立日已过→BBQ需求峰值已过→紧迫感下降；②Dealmoon 7/4显示Zojirushi日式电热煎烤盘Amazon促销$147.99（原$169.99）→验证$100+价位电烤盘有头部品牌且消费者愿意买单→但Zojirushi偏日式→美式BBQ/grill场景仍有差异化空间</div>
         </div>
         <div class="card-price">
           <div class="price-title">💰 参考价格区间</div>
-          <div class="price-text">$100-129 旋钮+温控空白 | $60-80 触屏红海 | $200+ Breville旗舰 | $70-90 基础旋钮无温控</div>
+          <div class="price-text">$100-129 旋钮+温控空白 | $60-80 触屏红海 | $200+ Breville旗舰 | $147.99 Zojirushi日式煎烤盘(促销) | $70-90 基础旋钮无温控</div>
         </div>
-        <div class="card-source"><span class="source-label">来源：</span>时间节点变化，无新信息源</div>
+        <div class="card-source"><span class="source-label">来源：</span>Dealmoon 7/4（Zojirushi促销）、时间节点变化（7/4独立日已过）</div>
       </div>
 
       <!-- 延续·无变化：蒸烤炸一体机 -->
@@ -221,29 +224,52 @@
     <!-- ===== 详析 ===== -->
     <section class="section-block" id="detail">
       <div class="section-header">
-        <h2>📋 重点机会详析</h2>
-        <span class="section-badge badge-hot">制冰机验证升级</span>
+        <h2>📋 延续项变化详析</h2>
+        <span class="section-badge badge-trend">3项有变化</span>
       </div>
 
       <div class="detail-card">
-        <div class="detail-title">🧊 制冰机从"趋势判断"升级为"营收验证" — 速卖通10倍+EUHOMY年入14亿</div>
+        <div class="detail-title">📉 制冰机 &amp; 电烤盘：独立日峰值已过，需求转向常态化</div>
         <div class="detail-section">
-          <div class="detail-label">新增量化数据</div>
+          <div class="detail-label">核心变化</div>
+          <div class="detail-text">7/4独立日是美国全年最大的BBQ+用冰日。昨日报告强调"峰值正在发生"→今日峰值已过。这对选品节奏的影响：</div>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">节奏判断</div>
           <div class="detail-text">
             <ul>
-              <li>速卖通6月英国制冰机销量同比暴涨10倍（36kr7/3科创板日报）：欧洲移动空调一机难求→消费者转向细分清凉品类→制冰机首当其冲→精确平台数据</li>
-              <li>EUHOMY家用便携制冰机年入14亿（TT123跨境电商7/2+CSDN7/3）：宁波灏米科技旗下品牌→靠制冰机建立海外品牌→年入14亿=单品类营收神话→$100+制冰机真金白银验证</li>
-              <li>宁波海关1-5月数据：宁波出口清凉家电5700万台+6.5%货值82.9亿→制冰机明确列入"深受欢迎"品类→区域产业级验证</li>
+              <li>已入场的卖家：7/4前可能是全年最佳上架窗口→已过→但7-8月仍有夏季基础需求</li>
+              <li>未入场的卖家：不必为"抢峰值"而急迫上架→可从容优化Listing→在7-8月高温期自然获量</li>
+              <li>制冰机：消暑刚需仍在（7-8月持续高温）→但"紧急抢购"心态已过→消费者更理性比价→差异化（自清洁、静音、快速出冰）比纯价格竞争更重要</li>
             </ul>
           </div>
         </div>
         <div class="detail-section">
-          <div class="detail-label">验证升级意义</div>
-          <div class="detail-text">7/4及之前制冰机机会=基于"消暑趋势+$100-149空白+用户痛点"的推导→7/5增加"速卖通10倍暴增+EUHOMY年入14亿"→从"趋势判断"升级为"有量化营收验证"→$100-149品质制冰机空白逻辑不变→但确定性大幅提升</div>
+          <div class="detail-label">电烤盘新验证</div>
+          <div class="detail-text">Zojirushi电热煎烤盘Amazon促销$147.99（原$169.99）→Zojirushi是日本高端厨电品牌→$147.99促销价验证$100+电烤盘不是价格空白而是有真实消费者愿意买单→但Zojirushi偏日式料理场景→美式BBQ/室内grill场景仍有差异化空间</div>
         </div>
-        <div class="detail-highlight">
-          <div class="hl-label">💡 时间节点判断</div>
-          <div class="hl-text">7/5独立日后→BBQ类回落→但制冰≠BBQ→制冰是日常刚需→美国人均年消耗181公斤冰块→7-8月持续高温→制冰机需求不会断崖→时间敏感度从"极高"降为"高"→$100-149品质制冰机建议加速推进</div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-title">🍦 压缩机冰淇淋机：品类认知持续扩大</div>
+        <div class="detail-section">
+          <div class="detail-label">新增信号</div>
+          <div class="detail-text">Ninja CREAMi连续3天获得中国主流媒体密集报道→这不是偶然的→反映冰淇淋机品类正处于"认知爆发期"：</div>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">媒体曝光时间线</div>
+          <div class="detail-text">
+            <ul>
+              <li>搜狐7/2：《NINJA忍者奶油冰淇淋机&amp;爱丽思酸奶机》</li>
+              <li>搜狐7/3（2篇）：《NINJA多功能冰淇淋机》《NINJA冰淇淋机&amp;小熊酸奶机》</li>
+              <li>搜狐7/4：《WMF冰淇淋机》</li>
+              <li>搜狐7/4：《家用冰淇淋机选购指南》</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">判断</div>
+          <div class="detail-text">Ninja CREAMi 11种一键程序+大容量→但仍是"冻杯搅拌"非压缩机→$199-249定价→消费者开始认知"家用冰淇淋机"品类→但尚未意识到"压缩机 vs 冻杯搅拌"的本质差异→这正是$100-149压缩机冰淇淋机的差异化切入点→媒体曝光=品类认知扩大→利好新品上市后的教育成本降低</div>
         </div>
       </div>
     </section>
@@ -258,9 +284,9 @@
           <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
         </thead>
         <tbody>
-          <tr><td>🧊 制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/5 速卖通10倍+EUHOMY年入14亿</td><td style="color:#d97706;font-weight:600;">延续·有变化</td></tr>
-          <tr><td>🍦 压缩机冰淇淋机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>7/5 宁波海关产业验证</td><td style="color:#d97706;font-weight:600;">延续·有变化</td></tr>
-          <tr><td>🍳 电烤盘/室内烧烤炉</td><td>$100-129</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/5 独立日后BBQ回落</td><td style="color:#d97706;font-weight:600;">延续·有变化</td></tr>
+          <tr><td>🍦 压缩机冰淇淋机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>7/5 Ninja CREAMi密集曝光+品类认知扩大</td><td style="color:#d97706;font-weight:600;">延续·有变化</td></tr>
+          <tr><td>🧊 制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/5 独立日峰值已过</td><td style="color:#d97706;font-weight:600;">延续·有变化</td></tr>
+          <tr><td>🍳 电烤盘/室内烧烤炉</td><td>$100-129</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/5 Zojirushi$147.99促销+BBQ峰值已过</td><td style="color:#d97706;font-weight:600;">延续·有变化</td></tr>
           <tr><td>🍟 蒸烤炸一体机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 蒸功能上市验证</td><td style="color:#64748b;">延续·无变化</td></tr>
           <tr><td>💨 蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td style="color:#64748b;">延续·无变化</td></tr>
           <tr><td>☕ 冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 冷萃技术验证</td><td style="color:#64748b;">延续·无变化</td></tr>
@@ -275,18 +301,18 @@
       </div>
 
       <div class="watch-item">
-        <div class="watch-title">📉 7/5独立日后：消暑+BBQ峰值已过，冰品刚需持续</div>
-        <div class="watch-text">7/4是全年最大BBQ日→7/5后BBQ/电烤盘需求快速回落→但制冰机/冰淇淋机≠BBQ一次性品类→制冰是日常刚需（美国人均年消耗181公斤冰块）→7-8月持续高温→冰品品类需求不会断崖→时间窗口延续至8月底</div>
+        <div class="watch-title">📉 7/4独立日峰值已过，消暑品类进入常态化阶段</div>
+        <div class="watch-text">7/4是美国全年最大BBQ+用冰日→今日峰值已过→制冰机/电烤盘/冰淇淋机等消暑+冰品品类从"紧急抢购"转为"常规夏季需求"→7-8月美国持续高温→需求仍在但紧迫感下降→选品节奏可更从容</div>
       </div>
 
       <div class="watch-item">
-        <div class="watch-title">📊 制冰机从"趋势"升级为"验证"（速卖通10倍+EUHOMY年入14亿）</div>
-        <div class="watch-text">速卖通6月英国制冰机同比暴涨10倍→EUHOMY靠制冰机年入14亿→宁波海关1-5月+6.5%→三重验证→$100+制冰机确定性大幅提升→从"值得追踪"升级为"建议加速推进"</div>
+        <div class="watch-title">🍦 Ninja CREAMi密集媒体曝光验证冰淇淋机品类认知扩大</div>
+        <div class="watch-text">7/2-7/4连续3天搜狐多篇专题→消费者开始认知"家用冰淇淋机"品类→但多数仍不知道"压缩机 vs 冻杯搅拌"差异→$100-149压缩机冰淇淋机的差异化教育成本会随品类认知扩大而降低</div>
       </div>
 
       <div class="watch-item">
-        <div class="watch-title">🏭 宁波清凉家电产业集群验证</div>
-        <div class="watch-text">宁波出口清凉家电5700万台+6.5%货值82.9亿元→冰淇淋机/制冰机/移动空调深受欢迎→博菱2万+台不是孤例→整个出口体系在系统增长→供应链基础扎实</div>
+        <div class="watch-title">📊 消暑品类品牌化升级信号（36kr 7/4）</div>
+        <div class="watch-text">手持小风扇品类正从白牌走向品牌化→格力/小米/戴森/徕芬入场→618增长+160%→50亿规模→3-5年增至70亿→品牌化=品质溢价→验证$100+品质消暑品类逻辑→但手持风扇$90+价位不适用，品牌化趋势对制冰机/冰淇淋机$100+有间接参考价值</div>
       </div>
 
       <div class="watch-item">
