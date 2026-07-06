@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨境政策日报 · 2026年7月6日</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f8fafc; }
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(56,189,248,0.06); color: #e2e8f0; border-left-color: #38bdf8; }
+    .nav-item.active { color: #f1f5f9; background: rgba(56,189,248,0.1); border-left-color: #38bdf8; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.danger { background: rgba(239,68,68,0.15); color: #fca5a5; }
+    .nav-count.warn { background: rgba(245,158,11,0.15); color: #fcd34d; }
+    .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
+    .archive-section { padding: 0; }
+    .archive-section-title { display: flex; align-items: center; justify-content: space-between; padding: 8px 24px; font-size: 11px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; }
+    details.archive-month { padding: 0; }
+    details.archive-month summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px 6px 28px; cursor: pointer; font-size: 13px; color: #94a3b8; list-style: none; transition: color 0.15s; border-left: 2px solid transparent; }
+    details.archive-month summary::-webkit-details-marker { display: none; }
+    details.archive-month summary::before { content: "\01F4C1"; margin-right: 6px; font-size: 12px; }
+    details.archive-month[open] summary::before { content: "\01F4C2"; }
+    details.archive-month summary:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
+    details.archive-month summary .month-info { font-weight: 500; }
+    details.archive-month summary .month-stats { font-size: 11px; color: #475569; }
+    .archive-day { display: block; padding: 3px 24px 3px 48px; color: #64748b; text-decoration: none; font-size: 12px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .archive-day:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.danger .stat-num { color: #dc2626; }
+    .stat-chip.warn .stat-num { color: #d97706; }
+    .stat-chip.info .stat-num { color: #16a34a; }
+    .stat-chip.platform .stat-num { color: #0284c7; }
+    .stat-chip a { text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 2px; }
+    .stat-chip:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,0.1); cursor: pointer; }
+    .compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+    .compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+    .compliance-banner ul { list-style: none; padding: 0; }
+    .compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
+    .compliance-banner li::before { content: "\25B8"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
+    .section-header h2 { font-size: 18px; font-weight: 700; color: #0f172a; }
+    .section-header .section-icon { font-size: 20px; }
+    .policy-card { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 14px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .card-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px 10px; }
+    .card-title-row { display: flex; align-items: center; gap: 8px; flex: 1; }
+    .severity-badge { font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+    .severity-badge.danger { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+    .severity-badge.warning { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+    .severity-badge.info { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+    .platform-tag { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; color: #fff; }
+    .platform-tag.amazon { background: #FF9900; }
+    .platform-tag.cpsc { background: #003087; }
+    .platform-tag.ustr { background: #dc2626; }
+    .platform-tag.cbp { background: #003399; }
+    .platform-tag.eu { background: #003399; }
+    .platform-tag.tiktok { background: #000; }
+    .platform-tag.shopee { background: #EE4D2D; }
+    .platform-tag.suez { background: #0284c7; }
+    .platform-tag.logistics { background: #7c3aed; }
+    .platform-tag.china { background: #dc2626; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; line-height: 1.5; }
+    .card-body { padding: 0 18px 16px; }
+    .detail-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px; }
+    .detail-table td { padding: 6px 0; vertical-align: top; border-bottom: 1px solid #f1f5f9; }
+    .detail-table td:first-child { width: 80px; color: #64748b; font-weight: 600; white-space: nowrap; }
+    .detail-table td:last-child { color: #334155; line-height: 1.6; }
+    .detail-table tr:last-child td { border-bottom: none; }
+    .source-line { font-size: 11px; color: #94a3b8; margin-top: 4px; }
+    .source-line a { color: #2563eb; text-decoration: none; }
+    .source-line a:hover { text-decoration: underline; }
+    .action-checklist { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 14px; margin-top: 10px; }
+    .action-checklist .checklist-title { font-size: 12px; font-weight: 700; color: #166534; margin-bottom: 6px; }
+    .action-checklist ol { margin: 0; padding-left: 18px; }
+    .action-checklist li { font-size: 12px; color: #166534; padding: 2px 0; line-height: 1.6; }
+    .timeline-section { margin-bottom: 28px; }
+    .timeline-section h2 { font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
+    .timeline-list { list-style: none; padding: 0; }
+    .timeline-item { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0; border-bottom: 1px dashed #e2e8f0; font-size: 13px; }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-date { min-width: 80px; font-weight: 700; color: #334155; white-space: nowrap; }
+    .timeline-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+    .timeline-dot.danger { background: #dc2626; }
+    .timeline-dot.warn { background: #d97706; }
+    .timeline-dot.info { background: #16a34a; }
+    .timeline-text { color: #475569; line-height: 1.5; }
+    .footer { text-align: center; padding: 24px 0 16px; border-top: 1px solid #e2e8f0; margin-top: 32px; color: #94a3b8; font-size: 12px; }
+  </style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+      <div class="sidebar-brand">
+        <h1>跨境政策日报</h1>
+        <div class="version">DAILY POLICY BRIEF</div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-title">今日概览</div>
+          <a href="#summary" class="nav-item active">高管摘要 <span class="nav-count danger">7</span></a>
+          <a href="#compliance" class="nav-item">合规提醒 <span class="nav-count danger">25</span></a>
+        </div>
+        <div class="nav-divider"></div>
+        <div class="nav-section">
+          <div class="nav-section-title">政策板块</div>
+          <a href="#platform" class="nav-item">平台政策 <span class="nav-count">8</span></a>
+          <a href="#compliance-tax" class="nav-item">合规/税务 <span class="nav-count">1</span></a>
+          <a href="#logistics" class="nav-item">物流/航运 <span class="nav-count">3</span></a>
+        </div>
+        <div class="nav-divider"></div>
+        <div class="nav-section">
+          <div class="nav-section-title">时间线</div>
+          <a href="#timeline" class="nav-item">关键节点</a>
+        </div>
+        <div class="nav-divider"></div>
+        <div class="archive-section">
+          <div class="archive-section-title">归档</div>
+          <details class="archive-month">
+            <summary><span class="month-info">2026年7月</span> <span class="month-stats">3篇</span></summary>
+            <a href="daily/20260703.html" class="archive-day">7月3日（周五）</a>
+            <a href="daily/20260702.html" class="archive-day">7月2日（周四）</a>
+            <a href="daily/20260701.html" class="archive-day">7月1日（周三）</a>
+          
+      <a class="archive-day" href="daily/20260705.html">7月5日（周日）</a>
+    </details>
+          <details class="archive-month">
+            <summary><span class="month-info">2026年6月</span> <span class="month-stats">8篇</span></summary>
+            <a href="daily/20260630.html" class="archive-day">6月30日</a>
+            <a href="daily/20260629.html" class="archive-day">6月29日</a>
+            <a href="daily/20260628.html" class="archive-day">6月28日</a>
+            <a href="daily/20260627.html" class="archive-day">6月27日</a>
+            <a href="daily/20260626.html" class="archive-day">6月26日</a>
+            <a href="daily/20260625.html" class="archive-day">6月25日</a>
+            <a href="daily/20260624.html" class="archive-day">6月24日</a>
+            <a href="daily/20260623.html" class="archive-day">6月23日</a>
+          </details>
+        </div>
+      </nav>
+    </aside>
+<main class="main-content">
+
+<div class="content-header">
+  <h1>跨境政策日报</h1>
+  <div class="date-line">
+    <span class="date-val">2026年7月6日 周一</span>
+    <span class="update-time">08:30 更新</span>
+  </div>
+</div>
+
+<div class="stats-row">
+  <div class="stat-chip danger"><span class="stat-num">10</span>🔴紧急</div>
+  <div class="stat-chip warn"><span class="stat-num">14</span>🟡关注</div>
+  <div class="stat-chip info"><span class="stat-num">1</span>🟢参考</div>
+  <div class="stat-chip platform"><span class="stat-num">5</span>今日生效/截止</div>
+</div>
+
+<div class="compliance-banner">
+  <div class="banner-title">🔴 合规提醒 · 今日关键截止</div>
+  <ul>
+    <li><span class="date-tag">7/6</span> Amazon新加坡站永久停售（23:59最后接单日）</li>
+    <li><span class="date-tag">7/6</span> Amazon SFP配送速度新规生效（一日达30%→40%）</li>
+    <li><span class="date-tag">7/6</span> Amazon Passkeys免密登录全站开放</li>
+    <li><span class="date-tag">7/6</span> Shopee新加坡站NFR未完成订单罚分新规生效</li>
+    <li><span class="date-tag">7/6</span> UPS/FedEx国际及偏远地区附加费上调</li>
+    <li><span class="date-tag">7/6</span> 美国301关税书面意见提交截止</li>
+    <li><span class="date-tag">7/7</span> 美国301关税公开听证会</li>
+    <li><span class="date-tag">7/7</span> TikTok Shop东南亚体重管理内容政策生效</li>
+    <li><span class="date-tag">7/7</span> Wildberries佣金上调（部分品类最高22%）</li>
+    <li><span class="date-tag">7/8</span> CPSC eFiling强制电子备案（倒计时2天）</li>
+    <li><span class="date-tag">7/8</span> Amazon MCF费率上调约8%</li>
+    <li><span class="date-tag">7/10</span> 中美对等降税清单预计公布</li>
+    <li><span class="date-tag">7/15</span> Amazon OTDR准时送达率90%门槛生效</li>
+    <li><span class="date-tag">7/17</span> Amazon欧洲站FBA包装尺寸认证截止</li>
+    <li><span class="date-tag">7/21-23</span> Amazon停用Google Shopping比价广告</li>
+    <li><span class="date-tag">7/24</span> 美国10%临时关税到期（301关税无缝接替）</li>
+    <li><span class="date-tag">7/27</span> Amazon产品标题75字符限制强制执行</li>
+    <li><span class="date-tag">8/4</span> 电子商务法修正草案征求意见截止</li>
+    <li><span class="date-tag">8/12</span> 欧盟PPWR包装法强制生效</li>
+    <li><span class="date-tag">8/24</span> Amazon BSA第18条禁止店铺转让/质押生效</li>
+    <li><span class="date-tag">9/1</span> Amazon MFN备货时间系统自动接管AHT锁180天</li>
+  </ul>
+</div>
+
+<!-- ====== 平台政策 ====== -->
+<div class="section-block">
+  <div class="section-header">
+    <span class="section-icon">🛒</span>
+    <h2>平台政策</h2>
+  </div>
+
+  <div class="policy-card">
+    <div class="card-header">
+      <div class="card-title-row">
+        <span class="severity-badge danger">🔴紧急</span>
+        <span class="platform-tag amazon">Amazon</span>
+        <span class="card-title">亚马逊Passkeys免密登录今日全站开放</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="detail-table">
+        <tr><td class="label">🔄变了什么</td><td>亚马逊7/6起全站点Seller Central正式开放Passkeys（通行密钥）免密登录：①支持指纹识别/面容识别/设备PIN码三种生物认证方式 ②取代传统用户名+密码登录方式 ③年底按风险等级分批强制停用传统密码，未设置通行密钥账户将无法登录 ④Passkeys基于FIDO2/WebAuthn标准，密钥存储在用户本地设备 ⑤单设备绑定，换设备需重新注册 ⑥与账户健康/品牌备案等高权限操作强绑定</td></tr>
+        <tr><td class="label">👤影响谁</td><td>所有亚马逊卖家；多设备/多账号运营卖家</td></tr>
+        <tr><td class="label">⏰关键时间</td><td>7/6全站开放，年底分批强制停用传统密码</td></tr>
+        <tr><td class="label">📋背景</td><td>亚马逊持续加强账户安全，Passkeys是全球通行的新一代身份认证标准</td></tr>
+        <tr><td class="label">✅行动</td><td>①今天立即在Seller Central设置Passkeys ②所有运营设备逐一注册通行密钥 ③更新团队操作SOP</td></tr>
+      </table>
+      <div class="source-line">来源：<a href="https://m.weibo.cn/detail/5317250195128814" target="_blank">跨境前沿(微博)</a> · <a href="https://m.ebrun.com/685758.html" target="_blank">亿邦动力</a></div>
+      <div class="action-list">🎯3步行动清单：<br>1. 今天：登录Seller Central → 账户设置 → 安全性 → 启用Passkeys，在所有运营设备注册通行密钥<br>2. 本周：更新团队操作SOP，将密码登录流程替换为Passkeys流程<br>3. 年底前：确认所有团队成员已完成Passkeys注册</div>
+    </div>
+  </div>
+
+  <div class="policy-card">
+    <div class="card-header">
+      <div class="card-title-row">
+        <span class="severity-badge danger">🔴紧急</span>
+        <span class="platform-tag amazon">Amazon</span>
+        <span class="card-title">亚马逊MCF多渠道配送费率7/8上调约8%</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="detail-table">
+        <tr><td class="label">🔄变了什么</td><td>亚马逊美国站7/8起上调MCF（Multi-Channel Fulfillment）多渠道配送费率：①整体费率平均上调约8% ②标准尺寸和大件同步上涨 ③Prime服务费不增加 ④1磅以下标准配送速度MCF费用保持不变 ⑤超过1磅的单位费用涨幅因大小和重量而异 ⑥AWD仓储和配送费用同步降低</td></tr>
+        <tr><td class="label">👤影响谁</td><td>使用MCF多渠道配送的亚马逊卖家；独立站+亚马逊双渠道运营卖家</td></tr>
+        <tr><td class="label">⏰关键时间</td><td>7/8生效</td></tr>
+        <tr><td class="label">📋背景</td><td>此次调整幅度仍低于其他承运商5.9%的平均增幅</td></tr>
+        <tr><td class="label">✅行动</td><td>①7/8前重新核算MCF配送成本 ②对比第三方物流费率 ③评估切换可行性</td></tr>
+      </table>
+      <div class="source-line">来源：<a href="https://m.weibo.cn/detail/5317250195128814" target="_blank">跨境前沿(微博)</a> · <a href="https://m.ebrun.com/685758.html" target="_blank">亿邦动力</a></div>
+      <div class="action-list">🎯3步行动清单：<br>1. 7/8前：导出MCF配送报告，按SKU重新核算配送成本占比<br>2. 本周：对比FedEx/USPS/UPS第三方物流费率<br>3. 持续：关注AWD费用降低红利，优化入仓节奏</div>
+    </div>
+  </div>
+
+  <div class="policy-card">
+    <div class="card-header">
+      <div class="card-title-row">
+        <span class="severity-badge danger">🔴紧急</span>
+        <span class="platform-tag amazon">Amazon</span>
+        <span class="card-title">亚马逊SFP新规今日生效：配送速度要求全面提升</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="detail-table">
+        <tr><td class="label">🔄变了什么</td><td>亚马逊7/6起提高SFP卖家最低配送速度要求：①标准尺寸——一日达页面浏览量占比从30%提升至40%，两日达从70%提升至75% ②大件——一日达从10%提升至15% ③超大件——两日达从15%提升至25% ④无法持续满足要求将面临Prime资格取消 ⑤9/1起持续30天偏差超1天将自动启用AHT</td></tr>
+        <tr><td class="label">👤影响谁</td><td>亚马逊SFP卖家；大件/超大件海外仓发货卖家</td></tr>
+        <tr><td class="label">⏰关键时间</td><td>7/6生效</td></tr>
+        <tr><td class="label">📋背景</td><td>亚马逊不断提高自配送卖家的履约标准</td></tr>
+        <tr><td class="label">✅行动</td><td>①检查SFP绩效面板确认达标 ②调整仓库发货时效 ③评估海外仓布局</td></tr>
+      </table>
+      <div class="source-line">来源：<a href="http://m.toutiao.com/group/7658214427933819428/" target="_blank">乐歌海外仓(头条号)</a> · <a href="https://www.163.com/dy/article/L0O5AU5K0538BNYC.html" target="_blank">至美通</a></div>
+      <div class="action-list">🎯3步行动清单：<br>1. 今天：登录SFP绩效面板，确认各尺寸段配送占比满足新门槛<br>2. 本周：对未达标SKU评估海外仓布局<br>3. 持续：监控AHT自动接管风险</div>
+    </div>
+  </div>
+
+  <div class="policy-card">
+    <div class="card-header">
+      <div class="card-title-row">
+        <span class="severity-badge warning">🟡关注</span>
+        <span class="platform-tag tiktok">TikTok</span>
+        <span class="card-title">TikTok Shop美区正式上线"图文挂车"+全球AHR评级体系+NFC验真</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="detail-table">
+        <tr><td class="label">🔄变了什么</td><td>TikTok Shop三项重要更新：①美区正式上线"图文挂车"功能——支持定时发布并自动同步Instagram图文，战略卖家及T3+等级开放 ②全球AHR账户健康评级体系（满分1000分）全面取代旧版积分制——低于200分将限单或封店 ③新卖家注册7月起强制NFC芯片证件验真——严打虚拟身份及套壳本土店</td></tr>
+        <tr><td class="label">👤影响谁</td><td>TikTok Shop美区卖家；新注册卖家；所有TikTok Shop卖家</td></tr>
+        <tr><td class="label">⏰关键时间</td><td>已上线/已生效</td></tr>
+        <tr><td class="label">📋背景</td><td>TikTok Shop持续提升平台规范化程度，从卖家准入到运营管理全面收紧</td></tr>
+        <tr><td class="label">✅行动</td><td>①美区卖家申请图文挂车内测资格 ②所有卖家查看AHR评级了解当前分数 ③新注册卖家准备NFC芯片验证材料</td></tr>
+      </table>
+      <div class="source-line">来源：<a href="https://m.weibo.cn/detail/5317591524182114" target="_blank">跨境前沿(微博)</a> · <a href="https://m.ebrun.com/685758.html" target="_blank">亿邦动力</a></div>
+      <div class="action-list">🎯3步行动清单：<br>1. 本周：美区卖家申请图文挂车功能开放资格，优化Instagram图文同步策略<br>2. 本周：所有卖家查看AHR评级分数，确保>200安全线<br>3. 新注册：准备NFC芯片验真所需证件材料</div>
+    </div>
+  </div>
+
+  <div class="policy-card">
+    <div class="card-header">
+      <div class="card-title-row">
+        <span class="severity-badge warning">🟡关注</span>
+        <span class="platform-tag" style="background:#7c3aed;">Wildberries</span>
+        <span class="card-title">Wildberries 7/7上调卖家佣金：部分品类最高22%</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="detail-table">
+        <tr><td class="label">🔄变了什么</td><td>Wildberries宣布7/7起调整卖家佣金：①应对燃油价格上涨带来的物流成本增加 ②不同经营模式下佣金增幅预计5%-20% ③采取差异化策略——部分品类下调、部分维持、部分提高 ④部分品类最高佣金率达22% ⑤与Ozon同步落实俄罗斯《平台经济法》要求，重大条款变更提前45天通知</td></tr>
+        <tr><td class="label">👤影响谁</td><td>Wildberries平台卖家；俄罗斯市场跨境卖家</td></tr>
+        <tr><td class="label">⏰关键时间</td><td>7/7生效</td></tr>
+        <tr><td class="label">📋背景</td><td>燃油价格持续上涨，物流成本增加；俄罗斯《平台经济法》2026/10生效要求平台提升透明度</td></tr>
+        <tr><td class="label">✅行动</td><td>①确认自身品类佣金变化 ②重新核算定价利润 ③评估是否调整产品结构</td></tr>
+      </table>
+      <div class="source-line">来源：<a href="https://m.ebrun.com/685754.html" target="_blank">亿邦动力</a> · <a href="http://m.163.com/dy/article/L14220H805118A6A.html" target="_blank">亿邦动力周报</a></div>
+      <div class="action-list">🎯3步行动清单：<br>1. 今天：查看Wildberries后台确认自身品类佣金调整方向<br>2. 本周：对上调品类重新核算定价利润率，考虑提价或调品<br>3. 持续：关注俄罗斯《平台经济法》10月生效后的进一步规则变化</div>
+    </div>
+  </div>
+
+  <div class="policy-card">
+    <div class="card-header">
+      <div class="card-title-row">
+        <span class="severity-badge warning">🟡关注</span>
+        <span class="platform-tag eu">欧盟</span>
+        <span class="card-title">SHEIN被欧盟DSA正式立案调查：聚焦儿童安全+成瘾性设计</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="detail-table">
+        <tr><td class="label">🔄变了什么</td><td>欧盟委员会根据《数字服务法》(DSA)正式对SHEIN立案调查：①调查焦点为儿童安全保护与成瘾性设计问题 ②SHEIN此前已被欧盟认定为VLOP（超大型在线平台），须遵守更严格DSA义务 ③调查结果可能导致巨额罚款（最高全球营业额6%） ④对在SHEIN上运营的卖家可能产生连带影响</td></tr>
+        <tr><td class="label">👤影响谁</td><td>SHEIN平台卖家；所有在欧盟运营的跨境电商平台</td></tr>
+        <tr><td class="label">⏰关键时间</td><td>已立案，调查进行中</td></tr>
+        <tr><td class="label">📋背景</td><td>欧盟持续加大对超大型在线平台的监管力度，Temu此前也面临类似调查</td></tr>
+        <tr><td class="label">✅行动</td><td>①SHEIN卖家关注调查进展 ②确保产品符合儿童安全标准 ③多平台分散风险</td></tr>
+      </table>
+      <div class="source-line">来源：<a href="https://m.weibo.cn/detail/5317250195128814" target="_blank">跨境前沿(微博)</a> · <a href="https://m.ebrun.com/685758.html" target="_blank">亿邦动力</a></div>
+      <div class="action-list">🎯3步行动清单：<br>1. 本周：SHEIN卖家自查儿童品类合规，确保CE认证/安全标签齐全<br>2. 持续：关注调查结果，评估是否需要多平台分散运营风险<br>3. 持续：所有欧盟运营卖家关注DSA合规趋势，提前布局</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 合规/税务 ====== -->
+<div class="section-block">
+  <div class="section-header">
+    <span class="section-icon">🏷️</span>
+    <h2>合规/税务</h2>
+  </div>
+
+  <div class="policy-card">
+    <div class="card-header">
+      <div class="card-title-row">
+        <span class="severity-badge danger">🔴紧急</span>
+        <span class="platform-tag ustr">USTR</span>
+        <span class="card-title">美国301关税7/7听证会倒计时1天：书面意见今日截止</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="detail-table">
+        <tr><td class="label">🔄变了什么</td><td>美国301关税7/7-9公开听证会倒计时1天：①书面意见7/6（今日）截止提交 ②中国内地+香港锁定最高档12.5%额外附加税 ③3C/家居/玩具主流品类综合税率将拉到37.5% ④10%临时关税7/24到期，301关税无缝接替 ⑤中美对等降税框架同步推进——降税清单7/10后公布 ⑥产能过剩301调查预计7月中下旬公布 ⑦抢出口需求前置，7月下旬订单可能显著回落15%-25%</td></tr>
+        <tr><td class="label">👤影响谁</td><td>所有美线跨境卖家；家电/家具/纺织品类关注降税利好；3C/小家电/户外品类关注新税冲击</td></tr>
+        <tr><td class="label">⏰关键时间</td><td>7/6书面意见截止 + 7/7-9听证会 + 7/10降税清单 + 7/24旧关税到期</td></tr>
+        <tr><td class="label">📋背景</td><td>美国最高法院2/20裁定IEEPA不可大范围加征关税，USTR转用1974年贸易法122条+301条款双轨推进</td></tr>
+        <tr><td class="label">✅行动</td><td>①抓紧提交书面意见 ②精准归类HS编码匹配豁免/降税 ③区分受益与受冲击品类</td></tr>
+      </table>
+      <div class="source-line">来源：<a href="https://m.mjzj.com/article/fqqw69uzknpc" target="_blank">卖家之家</a> · <a href="http://m.hibor.com.cn/wap_detail.aspx?id=94bdb91d0ae9ece375b3827bb7842024" target="_blank">招商证券</a> · <a href="http://finance.sina.cn/2026-07-06/detail-inifvkki1804186.d.html" target="_blank">新浪财经/船务资讯</a></div>
+      <div class="action-list">🎯3步行动清单：<br>1. 今天：如需提交书面意见，抓紧7/6截止前完成<br>2. 7/10后：密切关注USTR降税清单，确认受益品类后重新核算成本定价<br>3. 持续：产能过剩301调查7月中下旬出炉，3C/小家电/户外品类评估双重301叠加风险</div>
+    </div>
+  </div>
+
+  <div class="policy-card">
+    <div class="card-header">
+      <div class="card-title-row">
+        <span class="severity-badge danger">🔴紧急</span>
+        <span class="platform-tag cpsc">CPSC</span>
+        <span class="card-title">CPSC eFiling 7/8倒计时2天：合规模式从事后抽查升级为事前强制准入</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="detail-table">
+        <tr><td class="label">🔄变了什么</td><td>CPSC eFiling 7/8强制执行倒计时2天：①由"事后抽查"转变为"事前强制准入、系统自动核验" ②覆盖600+海关税号 ③CPC进口商须与IOR三方100%匹配 ④双清包税模式直接被ACE系统拦截 ⑤货代拒收范围扩大 ⑥无货值豁免 ⑦两种申报路径：直连申报+引用申报</td></tr>
+        <tr><td class="label">👤影响谁</td><td>所有出口美国儿童/母婴/带电产品卖家；双清包税渠道卖家</td></tr>
+        <tr><td class="label">⏰关键时间</td><td>7/8强制执行</td></tr>
+        <tr><td class="label">📋背景</td><td>7项核心数据：产品ID+法规条款+生产日期+工厂信息+检测日期+实验室信息+POC联系人</td></tr>
+        <tr><td class="label">✅行动</td><td>①7/8前完成CPC/GCC在线申报 ②确认IOR与CPC证书进口商100%匹配 ③评估备选物流渠道</td></tr>
+      </table>
+      <div class="source-line">来源：<a href="https://m.mjzj.com/article/fqupg1nkexa8" target="_blank">卖家之家</a> · <a href="https://shenzhen0916226.11467.com/m/news/17702983.asp" target="_blank">SQS绿标(11467)</a> · <a href="http://finance.sina.cn/2026-07-06/detail-inifvkki1804186.d.html" target="_blank">新浪财经/船务资讯</a></div>
+      <div class="action-list">🎯3步行动清单：<br>1. 7/8前：全SKU自查，联合报关行完成电子申报全流程测试<br>2. 7/8前：与货代确认是否仍收CPSC监管品类，备选AGL/自备IOR+Bond渠道<br>3. 持续：建立产品合规档案（7项核心数据），确保零偏差</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 物流/航运 ====== -->
+<div class="section-block">
+  <div class="section-header">
+    <span class="section-icon">📦</span>
+    <h2>物流/航运</h2>
+  </div>
+
+  <div class="policy-card">
+    <div class="card-header">
+      <div class="card-title-row">
+        <span class="severity-badge warning">🟡关注</span>
+        <span class="platform-tag logistics">物流</span>
+        <span class="card-title">UPS/FedEx今日7/6起上调国际及偏远地区附加费</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="detail-table">
+        <tr><td class="label">🔄变了什么</td><td>UPS和FedEx自7/6起上调国际及偏远地区附加费：①偏远地区最低每票61美元 ②国际附加费同步调整 ③与美线抢运潮叠加，头程物流成本进一步上行 ④FedEx此前已将约8亿美元IEEPA关税退款全额返还受影响客户</td></tr>
+        <tr><td class="label">👤影响谁</td><td>所有使用UPS/FedEx国际物流的跨境卖家</td></tr>
+        <tr><td class="label">⏰关键时间</td><td>7/6生效</td></tr>
+        <tr><td class="label">📋背景</td><td>燃油价格持续上涨叠加国际物流需求激增</td></tr>
+        <tr><td class="label">✅行动</td><td>①核算偏远地区附加费对利润影响 ②对比USPS/区域性承运商 ③优化发货地址策略</td></tr>
+      </table>
+      <div class="source-line">来源：<a href="https://m.weibo.cn/detail/5317250195128814" target="_blank">跨境前沿(微博)</a></div>
+      <div class="action-list">🎯3步行动清单：<br>1. 本周：核算偏远地区附加费对利润影响，评估是否调整发货方式<br>2. 本周：对比USPS/区域性承运商费率<br>3. 持续：优化发货地址策略，避开偏远地区附加费触发</div>
+    </div>
+  </div>
+
+  <div class="policy-card">
+    <div class="card-header">
+      <div class="card-title-row">
+        <span class="severity-badge warning">🟡关注</span>
+        <span class="platform-tag logistics">物流</span>
+        <span class="card-title">关税大切换：抢出口需求前置，7月下旬订单或大幅回落</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="detail-table">
+        <tr><td class="label">🔄变了什么</td><td>美线物流关税切换期全景：①10%临时关税7/24到期后301关税无缝接替 ②采购商抢在7月中下旬前完成补货 ③抢出口需求本质是采购商将未来季度库存提前补充 ④7月两项301关税落地后美线订单可能回落15%-25% ⑤7月全月ACE系统AI全面稽核，灰清/包税查验率翻倍</td></tr>
+        <tr><td class="label">👤影响谁</td><td>所有美线头程备货的跨境卖家</td></tr>
+        <tr><td class="label">⏰关键时间</td><td>7月上旬运价高峰+7月下旬回落</td></tr>
+        <tr><td class="label">📋背景</td><td>301关税+对等降税并行，呈现"部分放宽+部分新增"格局</td></tr>
+        <tr><td class="label">✅行动</td><td>①刚需货锁定7月上旬舱位 ②统一IOR/Bond/产品证书主体 ③密切跟踪7/7听证会和7/24关税切换</td></tr>
+      </table>
+      <div class="source-line">来源：<a href="http://finance.sina.cn/2026-07-06/detail-inifvkki1804186.d.html" target="_blank">新浪财经/船务资讯</a> · <a href="http://m.hibor.com.cn/wap_detail.aspx?id=94bdb91d0ae9ece375b3827bb7842024" target="_blank">招商证券</a></div>
+      <div class="action-list">🎯3步行动清单：<br>1. 本周：刚需货锁定7月上旬长协舱，散货延后至7月下旬<br>2. 持续：统一IOR/Bond/产品证书主体<br>3. 持续：密切跟踪7/7听证会和7/24关税政策变化</div>
+    </div>
+  </div>
+
+  <div class="policy-card">
+    <div class="card-header">
+      <div class="card-title-row">
+        <span class="severity-badge warning">🟡关注</span>
+        <span class="platform-tag logistics">物流</span>
+        <span class="card-title">SCFI十连涨拐点信号确认：涨幅收窄至2.69%，7月中下旬运价大概率回调</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="detail-table">
+        <tr><td class="label">🔄变了什么</td><td>SCFI 7/3报3326.87点，连续10周上涨但涨幅收窄至2.69%：①较4/24低点累计涨幅77.4% ②马士基/达飞征收旺季附加费 ③PA联盟/MSC大幅降价 ④7月中下旬关税抢运红利消退，SCFI大概率回调至2800-3100点区间</td></tr>
+        <tr><td class="label">👤影响谁</td><td>所有美线/欧线头程备货的跨境卖家</td></tr>
+        <tr><td class="label">⏰关键时间</td><td>7月上旬运价高位，7月中下旬回调</td></tr>
+        <tr><td class="label">📋背景</td><td>关税切换+Prime Day补货+返校季多重需求集中释放</td></tr>
+        <tr><td class="label">✅行动</td><td>①多方比价确认实际成交价 ②刚需锁定长协舱，散货延后 ③密切关注关税政策变化</td></tr>
+      </table>
+      <div class="source-line">来源：<a href="https://m.sohu.com/a/1045378331_121010226/" target="_blank">深圳商报</a> · <a href="http://m.toutiao.com/group/7657860830750409268/" target="_blank">常温(头条号)</a></div>
+      <div class="action-list">🎯3步行动清单：<br>1. 本周：多方比价确认实际成交价，勿恐慌追高<br>2. 7月中下旬：散货延后出货，锁定回调后更低运价<br>3. 持续：密切关注7/7听证会和7/24关税政策变化</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 时间线 ====== -->
+<div class="section-block">
+  <div class="section-header">
+    <span class="section-icon">⏰</span>
+    <h2>近期关键时间节点</h2>
+  </div>
+  <div class="timeline">
+    <div class="tl-item today"><span class="tl-date">7/6</span><span class="tl-badge danger">🔴</span><span class="tl-text">Amazon Passkeys全站开放 + 新加坡站停售 + SFP升级 + Shopee新加坡NFR新规 + UPS/FedEx附加费上调 + 301关税书面意见截止</span></div>
+    <div class="tl-item"><span class="tl-date">7/7</span><span class="tl-badge danger">🔴</span><span class="tl-text">美国301关税公开听证会</span></div>
+    <div class="tl-item"><span class="tl-date">7/7</span><span class="tl-badge warn">🟡</span><span class="tl-text">TikTok Shop东南亚体重管理内容政策生效 + Wildberries佣金上调</span></div>
+    <div class="tl-item"><span class="tl-date">7/8</span><span class="tl-badge danger">🔴</span><span class="tl-text">CPSC eFiling强制电子备案 + Amazon MCF费率上调约8%</span></div>
+    <div class="tl-item"><span class="tl-date">7/8</span><span class="tl-badge warn">🟡</span><span class="tl-text">Shopee越南银行账户核验启动 + 多站点汽车/摩托车类目整合</span></div>
+    <div class="tl-item"><span class="tl-date">7/10</span><span class="tl-badge warn">🟡</span><span class="tl-text">中美对等降税清单预计公布</span></div>
+    <div class="tl-item"><span class="tl-date">7/13</span><span class="tl-badge warn">🟡</span><span class="tl-text">Lazada跨境店升级类目错放治理机制</span></div>
+    <div class="tl-item"><span class="tl-date">7/15</span><span class="tl-badge warn">🟡</span><span class="tl-text">Amazon德国站备货时间简化 + OTDR 90%门槛生效 + Buy Shipping折扣截止</span></div>
+    <div class="tl-item"><span class="tl-date">7/15</span><span class="tl-badge danger">🔴</span><span class="tl-text">苏伊士运河通行附加费大幅上调</span></div>
+    <div class="tl-item"><span class="tl-date">7/17</span><span class="tl-badge danger">🔴</span><span class="tl-text">Amazon欧洲站FBA包装尺寸认证截止</span></div>
+    <div class="tl-item"><span class="tl-date">7/21-23</span><span class="tl-badge danger">🔴</span><span class="tl-text">Amazon多站点停用Google Shopping比价广告</span></div>
+    <div class="tl-item"><span class="tl-date">7/24</span><span class="tl-badge danger">🔴</span><span class="tl-text">美国10%临时关税到期（301关税无缝接替）</span></div>
+    <div class="tl-item"><span class="tl-date">7/27</span><span class="tl-badge danger">🔴</span><span class="tl-text">Amazon产品标题75字符限制强制执行</span></div>
+    <div class="tl-item"><span class="tl-date">8/2</span><span class="tl-badge warn">🟡</span><span class="tl-text">欧盟AI生成内容披露规定落地</span></div>
+    <div class="tl-item"><span class="tl-date">8/4</span><span class="tl-badge danger">🔴</span><span class="tl-text">电子商务法修正草案征求意见截止</span></div>
+    <div class="tl-item"><span class="tl-date">8/12</span><span class="tl-badge warn">🟡</span><span class="tl-text">欧盟PPWR包装法强制生效</span></div>
+    <div class="tl-item"><span class="tl-date">8/24</span><span class="tl-badge danger">🔴</span><span class="tl-text">Amazon BSA第18条禁止店铺转让/质押生效</span></div>
+    <div class="tl-item"><span class="tl-date">9/1</span><span class="tl-badge danger">🔴</span><span class="tl-text">Amazon MFN备货时间系统自动接管AHT锁180天 + OTDR违规处罚</span></div>
+    <div class="tl-item"><span class="tl-date">9/30</span><span class="tl-badge warn">🟡</span><span class="tl-text">Amazon BHDR企业单营业时间送达率≥90%考核执行</span></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>📊 数据来源：卖家之家 / 亿邦动力 / 雨果跨境 / 至美通 / 上海航运交易所 / AMZ123 / 亚马逊全球开店 / 出海网 / TikTok Shop官方大学 / TEMU跨境卖家中心 / 跨境大发哥 / 跨境物流百晓生 / 白鲸出海 / WL123 / 吉易跨境（34个配置信息源）</p>
+  <p>⏰ 每日08:30自动更新 · 近24小时跨境政策变化</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

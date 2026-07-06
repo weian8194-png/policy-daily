@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-07-06 小家电市场趋势</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f0fdfa; }
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(13,148,136,0.06); color: #e2e8f0; border-left-color: #0d9488; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.hot { background: rgba(13,148,136,0.15); color: #5eead4; }
+    .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #f0fdfa; color: #0d9488; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .section-header .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .section-header .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
+    .opportunity-card.card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-icecream { background: #d97706; }
+    .tag-ice { background: #0e7490; }
+    .tag-griddle { background: #dc2626; }
+    .tag-airfryer { background: #ea580c; }
+    .tag-steam { background: #2563eb; }
+    .tag-coffee { background: #7c2d12; }
+    .tag-clean { background: #059669; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-summary .summary-item { font-size: 12px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 8px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #92400e; margin-bottom: 2px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.6; }
+    .detail-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; border-top: 3px solid #d97706; }
+    .detail-title { font-size: 16px; font-weight: 700; color: #0f172a; padding: 14px 16px 6px; }
+    .detail-section { padding: 6px 16px; }
+    .detail-section .detail-label { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .detail-section .detail-text { font-size: 13px; color: #334155; line-height: 1.7; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #e9d5ff; }
+    .detail-highlight .hl-label { font-size: 11px; font-weight: 700; color: #7c3aed; margin-bottom: 4px; }
+    .detail-highlight .hl-text { font-size: 12px; color: #4c1d95; line-height: 1.7; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .watch-item a { color: #0d9488; text-decoration: none; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .back-link { display: inline-block; margin-bottom: 16px; font-size: 13px; color: #0d9488; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 900px) { .sidebar { display: none; } .main-content { margin-left: 0; padding: 16px; } }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h1>🏠 小家电趋势</h1>
+      <div class="version">Appliance Trends v2.1</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">📊 今日数据</div>
+        <a class="nav-item" href="#hot">🔥 机会速报 <span class="nav-count hot">6</span></a>
+        <a class="nav-item" href="#detail">📋 变化详析 <span class="nav-count hot">2</span></a>
+        <a class="nav-item" href="#continue">🔄 延续中机会 <span class="nav-count">6</span></a>
+        <a class="nav-item" href="#watch">👀 其他动向 <span class="nav-count">5</span></a>
+      </div>
+      <div class="nav-divider"></div>
+      <a class="nav-item" href="../index.html" style="font-size:12px;">🏠 返回首页</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <a class="back-link" href="../index.html">← 返回首页</a>
+
+    <div class="content-header">
+      <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+      <div class="date-line">数据日期: <span class="date-val">2026年7月6日（周一）</span> <span class="update-time">08:30 更新</span></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-chip hot"><span class="stat-num">6</span>🔥 追踪机会</div>
+      <div class="stat-chip new"><span class="stat-num">0</span>🆕 今日新增</div>
+      <div class="stat-chip trend"><span class="stat-num">2</span>🔄 有变化</div>
+    </div>
+
+    <!-- ===== 速报 ===== -->
+    <section class="section-block" id="hot">
+      <div class="section-header">
+        <h2>🔥 今日机会速报</h2>
+        <span class="section-badge badge-hot">6个机会</span>
+      </div>
+
+      <!-- 延续·有变化：冰淇淋机 -->
+      <div class="opportunity-card card-hot">
+        <div class="card-top">
+          <span class="category-tag tag-icecream">🍦 冰淇淋机</span>
+          <span class="status-badge status-changed">🔄 有变化</span>
+        </div>
+        <div class="card-title">压缩机冰淇淋机 · $100-149 · ⭐⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">今日新增</div>
+          <div class="change-text">宁波博菱电器2026新款冰淇淋机获央视专题报道→3月至今累计出口4.8万台（出口额约2200万元），下半年已承接10万+台订单（德国/英国/西班牙）→品类需求被供应链端硬数据验证</div>
+        </div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">关键参数：</span>360°双搅浆叶片+双向旋转→5分钟出冰淇淋（传统1小时）；耗能仅300W→节能90%；可拆卸配件可放洗碗机清洗；5项预设程序+LED显示屏</div>
+          <div class="summary-item"><span class="summary-label">企业背景：</span>博菱拥有600+项专利+省级智能家电研发中心→非白牌小厂</div>
+          <div class="summary-item"><span class="summary-label">核心判断：</span>博菱是冻杯搅拌型（非压缩机），其欧洲热销验证"家用冰淇淋机"品类认知爆发→$100-149压缩机紧凑款处于"认知已建立但竞品空白"的最佳卡位</div>
+        </div>
+      </div>
+
+      <!-- 延续·有变化：制冰机 -->
+      <div class="opportunity-card card-hot">
+        <div class="card-top">
+          <span class="category-tag tag-ice">🧊 制冰机</span>
+          <span class="status-badge status-changed">🔄 有变化</span>
+        </div>
+        <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">今日新增</div>
+          <div class="change-text">①速卖通数据：6月英国制冰机销量同比暴涨10倍→量化验证需求爆发；②冰箱新国标6/1实施→TCL冰箱差异化集成"制冰+储冰"功能→大品牌将制冰作为冰箱差异化卖点→消费者制冰认知提升</div>
+        </div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">欧洲10倍增长：</span>移动空调售罄→消费者转向制冰机→制冰机成为消暑"第二选择"但需求真实</div>
+          <div class="summary-item"><span class="summary-label">冰箱品牌跟进：</span>TCL集成制冰+储冰→制冰从"加分项"变"必选项"→独立制冰机$100-149逻辑更顺</div>
+          <div class="summary-item"><span class="summary-label">核心判断：</span>7/4峰值已过→从"紧急抢购"转"常规夏季需求"→7-8月持续高温→差异化（自清洁/静音/快速出冰）比纯价格竞争更重要</div>
+        </div>
+      </div>
+
+      <!-- 延续·无变化：电烤盘 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-griddle">🍽️ 电烤盘</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">电烤盘/室内烧烤炉 · $100-129 · ⭐⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：蒸烤炸一体机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-steam">♨️ 蒸烤炸</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸烤炸一体机 · $100-149 · ⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：清洁机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-clean">🧹 清洁机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸汽+吸尘+除螨三合一清洁机 · $100-149 · ⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：咖啡机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-coffee">☕ 咖啡机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">冷萃+热萃双模式咖啡机 · $100-129 · ⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+    </section>
+
+    <!-- ===== 详析 ===== -->
+    <section class="section-block" id="detail">
+      <div class="section-header">
+        <h2>📋 今日变化详析</h2>
+        <span class="section-badge badge-trend">2项有变化</span>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-title">🍦 冰淇淋机：供应链端硬数据验证品类需求</div>
+        <div class="detail-section">
+          <div class="detail-label">验证信号链</div>
+          <div class="detail-text">
+            <ul>
+              <li>① Ninja CREAMi连续3天中国媒体密集曝光（7/2-7/4）→消费者认知正在扩大</li>
+              <li>② 宁波博菱央视专题+4.8万台出口数据（7/3-7/5）→供应链端用真金白银验证需求</li>
+              <li>③ 博菱下半年10万+台订单→品牌客户判断"持续增长"非"一次性爆发"</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-highlight">
+          <div class="hl-label">💎 核心判断</div>
+          <div class="hl-text">博菱/CREAMi是冻杯搅拌型→验证品类认知但不是竞品→压缩机型的"免预冻"差异化在品类认知建立后更易被教育→美国夏季持续至9月→冰淇淋机需求仍在</div>
+        </div>
+      </div>
+
+      <div class="detail-card" style="border-top-color: #0e7490;">
+        <div class="detail-title">🧊 制冰机：欧洲10倍增长+冰箱品牌跟进双重验证</div>
+        <div class="detail-section">
+          <div class="detail-label">量化验证</div>
+          <div class="detail-text">
+            <ul>
+              <li>速卖通6月英国制冰机同比暴涨10倍→欧洲移动空调售罄后消费者转向制冰机→量化验证制冰机消暑刚需属性</li>
+              <li>冰箱新国标下TCL差异化集成"制冰+储冰"功能→大品牌将制冰视为消费者重视的功能→正在从"冰箱加分项"变"冰箱必选项"</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-highlight">
+          <div class="hl-label">💎 对独立制冰机$100-149的影响</div>
+          <div class="hl-text">消费者对制冰功能认知提升→"冰箱没有制冰？买个独立制冰机"逻辑更顺→冰箱自带制冰通常日产量2-3kg→独立制冰机日产量12-15kg→差异化空间仍在</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 延续中机会点 ===== -->
+    <section class="section-block" id="continue">
+      <div class="section-header">
+        <h2>🔄 延续中机会点</h2>
+      </div>
+      <table class="continue-table">
+        <thead>
+          <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>压缩机冰淇淋机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>7/6 博菱4.8万台出口+下半年10万+订单</td><td>延续·有变化</td></tr>
+          <tr><td>制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/6 欧洲6月同比暴涨10倍+冰箱品牌跟进</td><td>延续·有变化</td></tr>
+          <tr><td>电烤盘/室内烧烤炉</td><td>$100-129</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/5 Zojirushi促销+BBQ峰值已过</td><td>延续·无变化</td></tr>
+          <tr><td>蒸烤炸一体机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 蒸功能上市验证</td><td>延续·无变化</td></tr>
+          <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td>延续·无变化</td></tr>
+          <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 冷萃技术验证</td><td>延续·无变化</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== 其他动向 ===== -->
+    <section class="section-block" id="watch">
+      <div class="section-header">
+        <h2>👀 其他动向</h2>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🍦 宁波博菱冰淇淋机获央视专题报道</div>
+        <div class="watch-text">央视《天下财经》7/3+北仑发布7/3跟进→2026新款3月至今出口4.8万台（2200万元），下半年10万+台订单→360°双搅浆+5分钟制冰+90%节能+洗碗机可洗→验证家用冰淇淋机品类需求爆发→博菱产品为冻杯搅拌型，出口市场为欧洲→对美站$100-149压缩机冰淇淋机为间接验证</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🧊 欧洲6月制冰机同比暴涨10倍</div>
+        <div class="watch-text">据科创板日报/36kr→速卖通6月英国制冰机销量同比暴涨10倍→欧洲移动空调售罄后消费者转向制冰机等替代方案→量化验证制冰机消暑刚需属性</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🧊 冰箱能效新国标6/1实施</div>
+        <div class="watch-text">据人民网7/6→GB 12021.2—2025正式实施→约20%高耗能产品退出→TCL冰箱差异化集成"制冰+储冰"功能→大品牌将制冰作为冰箱差异化卖点→消费者制冰认知提升→利好独立制冰机$100-149</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🌡️ 欧洲消暑需求全面爆发</div>
+        <div class="watch-text">美的PortaSplit欧洲脱销被黄牛炒至7倍溢价→格力法国+50%→海尔东欧份额34%→中国品牌欧洲空调份额从2023年27%升至2025年41%→全球高温常态化→消暑品类从"季节性"变"长期需求"</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🌀 手持小风扇品牌化升级</div>
+        <div class="watch-text">据天下网商/36kr→品类从白牌走向品牌化→格力/小米/戴森/徕芬入场→618增长+160%→50亿规模→戴森799元手持小风扇→价格带打开→但$90+价位手持小风扇不适用→品牌化趋势对制冰机/冰淇淋机$100+有间接参考</div>
+      </div>
+    </section>
+
+    <div class="page-footer">
+      <div class="footer-divider"></div>
+      美国亚马逊$90+小家电市场趋势分析 · 每日更新<br>
+      数据来源：Amazon Best Sellers / 36kr / 央视网 / 科创板日报 / 北仑发布 / 人民网<br>
+      <a href="../index.html">返回首页</a>
+    </div>
+  </main>
+</div>
+</body>
+</html>
