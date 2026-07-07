@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-07-07 小家电市场趋势</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f0fdfa; }
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(13,148,136,0.06); color: #e2e8f0; border-left-color: #0d9488; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.hot { background: rgba(13,148,136,0.15); color: #5eead4; }
+    .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #f0fdfa; color: #0d9488; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .section-header .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .section-header .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
+    .opportunity-card.card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-icecream { background: #d97706; }
+    .tag-ice { background: #0e7490; }
+    .tag-griddle { background: #dc2626; }
+    .tag-airfryer { background: #ea580c; }
+    .tag-steam { background: #2563eb; }
+    .tag-coffee { background: #7c2d12; }
+    .tag-clean { background: #059669; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-summary .summary-item { font-size: 12px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 8px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #92400e; margin-bottom: 2px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.6; }
+    .detail-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; border-top: 3px solid #d97706; }
+    .detail-title { font-size: 16px; font-weight: 700; color: #0f172a; padding: 14px 16px 6px; }
+    .detail-section { padding: 6px 16px; }
+    .detail-section .detail-label { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .detail-section .detail-text { font-size: 13px; color: #334155; line-height: 1.7; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #e9d5ff; }
+    .detail-highlight .hl-label { font-size: 11px; font-weight: 700; color: #7c3aed; margin-bottom: 4px; }
+    .detail-highlight .hl-text { font-size: 12px; color: #4c1d95; line-height: 1.7; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .watch-item a { color: #0d9488; text-decoration: none; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .back-link { display: inline-block; margin-bottom: 16px; font-size: 13px; color: #0d9488; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 900px) { .sidebar { display: none; } .main-content { margin-left: 0; padding: 16px; } }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h1>🏠 小家电趋势</h1>
+      <div class="version">Appliance Trends v2.1</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">📊 今日数据</div>
+        <a class="nav-item" href="#hot">🔥 机会速报 <span class="nav-count hot">6</span></a>
+        <a class="nav-item" href="#detail">📋 变化详析 <span class="nav-count hot">2</span></a>
+        <a class="nav-item" href="#continue">🔄 延续中机会 <span class="nav-count">6</span></a>
+        <a class="nav-item" href="#watch">👀 其他动向 <span class="nav-count">4</span></a>
+      </div>
+      <div class="nav-divider"></div>
+      <a class="nav-item" href="../index.html" style="font-size:12px;">🏠 返回首页</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <a class="back-link" href="../index.html">← 返回首页</a>
+
+    <div class="content-header">
+      <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+      <div class="date-line">数据日期: <span class="date-val">2026年7月7日（周二）</span> <span class="update-time">08:30 更新</span></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-chip hot"><span class="stat-num">6</span>🔥 追踪机会</div>
+      <div class="stat-chip new"><span class="stat-num">0</span>🆕 今日新增</div>
+      <div class="stat-chip trend"><span class="stat-num">2</span>🔄 有变化</div>
+    </div>
+
+    <!-- ===== 速报 ===== -->
+    <section class="section-block" id="hot">
+      <div class="section-header">
+        <h2>🔥 今日机会速报</h2>
+        <span class="section-badge badge-hot">6个机会</span>
+      </div>
+
+      <!-- 延续·有变化：咖啡机 -->
+      <div class="opportunity-card card-hot">
+        <div class="card-top">
+          <span class="category-tag tag-coffee">☕ 咖啡机</span>
+          <span class="status-badge status-changed">🔄 有变化</span>
+        </div>
+        <div class="card-title">冷萃+热萃双模式咖啡机 · $100-129 · ⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">今日新增</div>
+          <div class="change-text">据中信证券Q2前瞻+美的咖啡机京东数据——美的冷热双萃60秒鲜萃全自动咖啡机稳居京东2000元内咖啡机热卖榜TOP1，搭载60秒极速冷萃（常温加压萃取）+15Bar高压热萃35秒出杯+PID精准控温±1℃+防残留鲜萃专利→国内消费端硬数据验证冷萃+热萃双模式品类真实需求</div>
+        </div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">关键信号：</span>美的2019年切入咖啡机赛道，6年技术攻坚，每年研发投入超1000万元→非跟风入场而是长期押注→品类生命力被品牌方确认</div>
+          <div class="summary-item"><span class="summary-label">Amazon侧：</span>国内冷萃+热萃热卖→美区冰咖啡文化更强→需求逻辑更硬→差异化切入点"全自动冷萃"（Keurig不做冷萃，Ninja CREAMi不做咖啡）→$100-129价位几乎是空白</div>
+          <div class="summary-item"><span class="summary-label">风险：</span>美区咖啡机品牌忠诚度高→新品牌进入需强内容种草</div>
+        </div>
+      </div>
+
+      <!-- 延续·有变化：蒸烤炸一体机 -->
+      <div class="opportunity-card card-hot">
+        <div class="card-top">
+          <span class="category-tag tag-steam">♨️ 蒸烤炸</span>
+          <span class="status-badge status-changed">🔄 有变化</span>
+        </div>
+        <div class="card-title">蒸烤炸一体机 · $100-149 · ⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">今日新增</div>
+          <div class="change-text">据中信证券2026Q2家电前瞻，26M4-M5厨房小家电线上销额分化，电蒸锅延续表现较好，受新品类渗透及结构升级带动→蒸功能品类在消费端持续获验证</div>
+        </div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">逻辑：</span>电蒸锅单品热销→消费者对"蒸"功能需求真实→蒸烤炸一体机以"蒸+烤+炸"三合一提供更高性价比→$100-149一台覆盖三台功能</div>
+          <div class="summary-item"><span class="summary-label">风险：</span>美区消费者对"蒸"认知度低于亚洲市场→需内容教育→TikTok/社媒种草成本是关键变量</div>
+        </div>
+      </div>
+
+      <!-- 延续·无变化：冰淇淋机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-icecream">🍦 冰淇淋机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">压缩机冰淇淋机 · $100-149 · ⭐⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：制冰机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-ice">🧊 制冰机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：电烤盘 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-griddle">🍽️ 电烤盘</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">电烤盘/室内烧烤炉 · $100-129 · ⭐⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：清洁机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-clean">🧹 清洁机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸汽+吸尘+除螨三合一清洁机 · $100-149 · ⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+    </section>
+
+    <!-- ===== 详析 ===== -->
+    <section class="section-block" id="detail">
+      <div class="section-header">
+        <h2>📋 今日变化详析</h2>
+        <span class="section-badge badge-trend">2项有变化</span>
+      </div>
+
+      <div class="detail-card" style="border-top-color: #7c2d12;">
+        <div class="detail-title">☕ 冷萃+热萃咖啡机：国内TOP1数据验证品类需求</div>
+        <div class="detail-section">
+          <div class="detail-label">美的冷热双萃咖啡机核心卖点</div>
+          <div class="detail-text">
+            <ul>
+              <li>① 60秒极速冷萃：常温加压萃取，告别传统12-24小时冷萃等待→消费者感知强</li>
+              <li>② 15Bar高压热萃35秒出杯+PID精准控温±1℃→符合SCAA金杯标准</li>
+              <li>③ 防残留鲜萃专利：管路反吸排空残液，0.1秒清空管路→解决"串味"痛点→复购友好</li>
+              <li>④ 京东2000元内咖啡机热卖榜TOP1→消费端硬数据验证</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-highlight">
+          <div class="hl-label">💎 Amazon机会判断</div>
+          <div class="hl-text">品类需求已被国内数据验证✅ →"全自动冷萃"是Keurig/Ninja未覆盖的差异化点✅ →美区咖啡机品牌忠诚度高⚠️ →新品牌进入需强内容种草⚠️ →$100-129差异化聚焦"冷萃"一个功能点即可，不堆料</div>
+        </div>
+      </div>
+
+      <div class="detail-card" style="border-top-color: #2563eb;">
+        <div class="detail-title">♨️ 蒸烤炸一体机：电蒸锅热销间接验证"蒸"功能需求</div>
+        <div class="detail-section">
+          <div class="detail-label">中信证券Q2前瞻数据</div>
+          <div class="detail-text">
+            <ul>
+              <li>26M4-M5厨房小家电线上销额分化：传统品类承压，新兴品类（电蒸锅/电煮火锅/暖菜板/空气炸锅/电炒锅）延续表现较好</li>
+              <li>均价多数品类同比提升→消费升级而非降级逻辑</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-highlight">
+          <div class="hl-label">💎 对蒸烤炸一体机的启示</div>
+          <div class="hl-text">"蒸"功能不是伪需求，消费端在用购买行为投票✅ →蒸烤炸一体机以"蒸"为核心卖点+烤/炸为附加→逻辑可成立✅ →但美区消费者对"蒸"认知度低→需内容教育⚠️ →选品方向做新兴品类不做传统品类</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 延续中机会点 ===== -->
+    <section class="section-block" id="continue">
+      <div class="section-header">
+        <h2>🔄 延续中机会点</h2>
+      </div>
+      <table class="continue-table">
+        <thead>
+          <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>压缩机冰淇淋机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>7/6 博菱4.8万台出口+下半年10万+订单验证</td><td>延续·无变化</td></tr>
+          <tr><td>制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/6 欧洲6月同比暴涨10倍+冰箱品牌跟进</td><td>延续·无变化</td></tr>
+          <tr><td>电烤盘/室内烧烤炉</td><td>$100-129</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/5 Zojirushi促销+BBQ峰值已过</td><td>延续·无变化</td></tr>
+          <tr><td>蒸烤炸一体机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/7 中信Q2前瞻电蒸锅延续表现较好</td><td>延续·有变化</td></tr>
+          <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td>延续·无变化</td></tr>
+          <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/7 美的冷热双萃京东TOP1+60秒冷萃技术验证</td><td>延续·有变化</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== 其他动向 ===== -->
+    <section class="section-block" id="watch">
+      <div class="section-header">
+        <h2>👀 其他动向</h2>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">📊 中信证券2026Q2家电前瞻</div>
+        <div class="watch-text">据金融界7/6：厨房小家电分化明显——传统刚需品类（电饭煲/电磁炉/电水壶/榨汁机/破壁机）4-5月销额同比多数为负；新兴品类（电蒸锅/电煮火锅/暖菜板/空气炸锅/电炒锅）延续表现较好→受新品类渗透及结构升级带动→均价多数品类同比提升→消费升级而非降级→对$100+小家电选品方向指导：做新兴品类不做传统品类</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🧹 蒸汽洗地机/清洁机密集发布</div>
+        <div class="watch-text">7/4-7/6多源：石头A30Pro Steam2.0（180℃蒸汽+90℃热水双效，售价2969元）、追觅T60 Steam（25kPa吸力+蒸汽，续航90分钟）、Shark Steam &amp; Scrub等→国内蒸汽清洁赛道竞争白热化→但均为洗地机形态（$200+价位）→与$100-149蒸汽+吸尘+除螨三合一清洁机机会定位不同</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🤖 AI家电"新瓶装旧酒"现象</div>
+        <div class="watch-text">据36kr/雷科技7/6：空气炸锅、小型烤箱等品类大量产品在APP里接入大模型就敢叫"AI智能"→设备本身无AI能力→消费者开始分辨真假AI→对$100+小家电产品定义启示：不要堆AI噱头，回归核心功能差异化</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">⚠️ 膳魔师召回事件</div>
+        <div class="watch-text">据央视7/4：高真空不锈钢食物罐密封塞弹出伤人，涉及近400万件，美国27例伤害报告含3例永久失明→消费品安全警示→对Amazon卖家：产品安全合规不可忽视，$100+产品更需严格品控</div>
+      </div>
+    </section>
+
+    <div class="page-footer">
+      <div class="footer-divider"></div>
+      美国亚马逊$90+小家电市场趋势分析 · 每日更新<br>
+      数据来源：Amazon Best Sellers / 中信证券 / 36kr / 雷科技 / 央视网<br>
+      <a href="../index.html">返回首页</a>
+    </div>
+  </main>
+</div>
+</body>
+</html>
