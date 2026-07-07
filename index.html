@@ -57,10 +57,11 @@
     .compliance-banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
     .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
     .section-block { margin-bottom: 28px; }
-    .summary-card { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 16px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-    .summary-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f1f5f9; }
+    .summary-card { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.04); overflow: hidden; }
+    .summary-item { display: flex; align-items: flex-start; gap: 10px; padding: 12px 18px; border-bottom: 1px solid #f1f5f9; }
     .summary-item:last-child { border-bottom: none; }
-    .summary-text { font-size: 13px; color: #334155; line-height: 1.6; flex: 1; }
+    .summary-item:hover { background: #f8fafc; }
+    .summary-text { font-size: 14px; color: #334155; line-height: 1.6; flex: 1; }
     .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
     .section-header h2 { font-size: 18px; font-weight: 700; color: #0f172a; }
     .section-header .section-icon { font-size: 20px; }
@@ -85,14 +86,18 @@
     .card-deadline { font-size: 12px; color: #64748b; white-space: nowrap; font-weight: 600; }
     .card-body { padding: 0 18px 16px; }
     .detail-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    .detail-table th { width: 72px; text-align: left; padding: 6px 8px 6px 0; color: #64748b; font-weight: 600; vertical-align: top; white-space: nowrap; }
+    .detail-table th { width: 88px; text-align: left; padding: 6px 8px 6px 0; color: #64748b; font-weight: 600; vertical-align: top; white-space: nowrap; }
     .detail-table td { padding: 6px 0; color: #334155; line-height: 1.6; }
     .detail-table td a { color: #2563eb; text-decoration: none; font-size: 12px; }
     .detail-table td a:hover { text-decoration: underline; }
+    .detail-table td.label { width: 88px; text-align: left; padding: 6px 8px 6px 0; color: #64748b; font-weight: 600; vertical-align: top; white-space: nowrap; font-size: 13px; }
     .action-list { background: #f8fafc; border-radius: 6px; padding: 10px 14px; margin-top: 10px; border: 1px solid #e2e8f0; }
     .action-list .action-title { font-size: 12px; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
     .action-list ol { margin: 0; padding-left: 18px; }
     .action-list li { font-size: 12px; color: #334155; padding: 2px 0; line-height: 1.6; }
+    .source-line { font-size: 12px; color: #94a3b8; margin-top: 10px; padding-top: 6px; border-top: 1px dashed #e2e8f0; }
+    .source-line a { color: #2563eb; text-decoration: none; }
+    .source-line a:hover { text-decoration: underline; }
     .timeline-section { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 18px 20px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
     .timeline-section h3 { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 14px; }
     .timeline-list { list-style: none; padding: 0; }
