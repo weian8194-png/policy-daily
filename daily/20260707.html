@@ -57,6 +57,10 @@
     .compliance-banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
     .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
     .section-block { margin-bottom: 28px; }
+    .summary-card { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 16px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .summary-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f1f5f9; }
+    .summary-item:last-child { border-bottom: none; }
+    .summary-text { font-size: 13px; color: #334155; line-height: 1.6; flex: 1; }
     .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
     .section-header h2 { font-size: 18px; font-weight: 700; color: #0f172a; }
     .section-header .section-icon { font-size: 20px; }
@@ -128,7 +132,7 @@
       <nav class="sidebar-nav">
         <div class="nav-section">
           <div class="nav-section-title">今日概览</div>
-          <a href="#summary" class="nav-item active">高管摘要 <span class="nav-count danger">13</span></a>
+          <a href="#executive-summary" class="nav-item active">高管摘要 <span class="nav-count danger">13</span></a>
           <a href="#compliance" class="nav-item">合规提醒 <span class="nav-count danger">27</span></a>
         </div>
         <div class="nav-divider"></div>
@@ -189,24 +193,45 @@
   <div class="stat-chip platform"><span class="stat-num">4</span>今日生效/截止</div>
 </div>
 
+<!-- ====== 高管摘要 ====== -->
+<div class="section-block" id="executive-summary">
+  <div class="section-header">
+    <span class="section-icon">📋</span>
+    <h2>高管摘要</h2>
+  </div>
+  <div class="summary-card">
+    <div class="summary-item">
+      <span class="severity-badge danger">🔴紧急</span>
+      <div class="summary-text"><strong>美国301关税听证会今日7/7-9举行</strong>：中国内地+香港锁定12.5%最高档，10%临时关税7/24到期无缝接替</div>
+    </div>
+    <div class="summary-item">
+      <span class="severity-badge danger">🔴紧急</span>
+      <div class="summary-text"><strong>CPSC eFiling明日7/8强制执行</strong>：CPC进口商须与IOR 100%匹配，双清包税模式直接拦截</div>
+    </div>
+    <div class="summary-item">
+      <span class="severity-badge danger">🔴紧急</span>
+      <div class="summary-text"><strong>Amazon MCF多渠道配送费率明日7/8上调约8%</strong>：标准尺寸/大件同步上涨，Prime服务费不变</div>
+    </div>
+    <div class="summary-item">
+      <span class="severity-badge warning">🟡关注</span>
+      <div class="summary-text"><strong>中美300亿对等降税框架敲定</strong>：降税清单7/10后公布，家电/家具/纺织等301关税有望降至最惠国税率</div>
+    </div>
+  </div>
+</div>
+
 <div class="compliance-banner" id="compliance">
-  <div class="banner-title">🔴 合规提醒 · 今日关键截止</div>
+  <div class="banner-title">🔴 合规提醒 · 近期关键截止</div>
   <ul>
-    <li><span class="date-tag">7/7</span> 美国301关税7/7-9公开听证会首日</li>
-    <li><span class="date-tag">7/7</span> Wildberries佣金上调生效（部分品类最高22%）</li>
-    <li><span class="date-tag">7/7</span> TikTok Shop东南亚体重管理内容政策生效</li>
-    <li><span class="date-tag">7/7</span> 亚马逊巴西Prime Day第七届开启</li>
-    <li><span class="date-tag">7/8</span> CPSC eFiling强制电子备案（倒计时1天！）</li>
-    <li><span class="date-tag">7/8</span> Amazon MCF费率上调约8%</li>
+    <li><span class="date-tag">7/7</span> 美国301关税7/7-9公开听证会</li>
+    <li><span class="date-tag">7/8</span> CPSC eFiling强制电子备案 + Amazon MCF费率上调约8%</li>
     <li><span class="date-tag">7/10</span> 中美对等降税清单预计公布</li>
     <li><span class="date-tag">7/15</span> Amazon OTDR准时送达率90%门槛生效</li>
-    <li><span class="date-tag">7/17</span> Amazon欧洲站FBA包装尺寸认证截止</li>
     <li><span class="date-tag">7/21-23</span> Amazon停用Google Shopping比价广告</li>
     <li><span class="date-tag">7/24</span> 美国10%临时关税到期（301关税无缝接替）</li>
     <li><span class="date-tag">7/27</span> Amazon产品标题75字符限制强制执行</li>
     <li><span class="date-tag">8/4</span> 电子商务法修正草案征求意见截止</li>
-    <li><span class="date-tag">8/12</span> 欧盟PPWR包装法强制生效</li>
     <li><span class="date-tag">8/24</span> Amazon BSA第18条禁止店铺转让/质押生效</li>
+    <li><span class="date-tag">8/30</span> Amazon美国站锂电池家电不合规产品下架</li>
     <li><span class="date-tag">9/1</span> Amazon MFN备货时间系统自动接管AHT锁180天</li>
   </ul>
 </div>
