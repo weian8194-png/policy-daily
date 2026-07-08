@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-07-08 小家电市场趋势</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f0fdfa; }
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(13,148,136,0.06); color: #e2e8f0; border-left-color: #0d9488; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.hot { background: rgba(13,148,136,0.15); color: #5eead4; }
+    .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #f0fdfa; color: #0d9488; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .section-header .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .section-header .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
+    .opportunity-card.card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-icecream { background: #d97706; }
+    .tag-ice { background: #0e7490; }
+    .tag-griddle { background: #dc2626; }
+    .tag-airfryer { background: #ea580c; }
+    .tag-steam { background: #2563eb; }
+    .tag-coffee { background: #7c2d12; }
+    .tag-clean { background: #059669; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-summary .summary-item { font-size: 12px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 8px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #92400e; margin-bottom: 2px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.6; }
+    .detail-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; border-top: 3px solid #d97706; }
+    .detail-title { font-size: 16px; font-weight: 700; color: #0f172a; padding: 14px 16px 6px; }
+    .detail-section { padding: 6px 16px; }
+    .detail-section .detail-label { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .detail-section .detail-text { font-size: 13px; color: #334155; line-height: 1.7; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #e9d5ff; }
+    .detail-highlight .hl-label { font-size: 11px; font-weight: 700; color: #7c3aed; margin-bottom: 4px; }
+    .detail-highlight .hl-text { font-size: 12px; color: #4c1d95; line-height: 1.7; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .watch-item a { color: #0d9488; text-decoration: none; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .back-link { display: inline-block; margin-bottom: 16px; font-size: 13px; color: #0d9488; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 900px) { .sidebar { display: none; } .main-content { margin-left: 0; padding: 16px; } }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h1>🏠 小家电趋势</h1>
+      <div class="version">Appliance Trends v2.1</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">📊 今日数据</div>
+        <a class="nav-item" href="#hot">🔥 机会速报 <span class="nav-count hot">6</span></a>
+        <a class="nav-item" href="#detail">📋 变化详析 <span class="nav-count hot">2</span></a>
+        <a class="nav-item" href="#continue">🔄 延续中机会 <span class="nav-count">6</span></a>
+        <a class="nav-item" href="#watch">👀 其他动向 <span class="nav-count">3</span></a>
+      </div>
+      <div class="nav-divider"></div>
+      <a class="nav-item" href="../index.html" style="font-size:12px;">🏠 返回首页</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <a class="back-link" href="../index.html">← 返回首页</a>
+
+    <div class="content-header">
+      <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+      <div class="date-line">数据日期: <span class="date-val">2026年7月8日（周三）</span> <span class="update-time">08:30 更新</span></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-chip hot"><span class="stat-num">6</span>🔥 追踪机会</div>
+      <div class="stat-chip new"><span class="stat-num">0</span>🆕 今日新增</div>
+      <div class="stat-chip trend"><span class="stat-num">2</span>🔄 有变化</div>
+    </div>
+
+    <!-- ===== 速报 ===== -->
+    <section class="section-block" id="hot">
+      <div class="section-header">
+        <h2>🔥 今日机会速报</h2>
+        <span class="section-badge badge-hot">6个机会</span>
+      </div>
+
+      <!-- 延续·有变化：制冰机 -->
+      <div class="opportunity-card card-hot">
+        <div class="card-top">
+          <span class="category-tag tag-ice">🧊 制冰机</span>
+          <span class="status-badge status-changed">🔄 有变化</span>
+        </div>
+        <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">今日新增</div>
+          <div class="change-text">Amazon Prime Day（7/8起）驱动制冰机品类集中放量——Kismile 35lb/day Nugget Ice Maker降至$119.98（原$199.89，40% off），EUHOMY Nugget Ice Maker位居bestchoice.com制冰机榜#1（7/7更新），Igloo Self-Cleaning Countertop Ice Maker以$69.99成为Amazon Best Seller（原$114.99）→Prime Day大促将制冰机推至流量峰值</div>
+        </div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">关键信号：</span>nugget ice（可咀嚼冰/sonic ice）子品类在$100-149价位快速起量→Kismile $119.98、EUHOMY $130-160区间→nugget ice比bullet ice溢价明显→消费者为"咀嚼口感"付钱的意愿验证</div>
+          <div class="summary-item"><span class="summary-label">判断：</span>Prime Day脉冲+暑期刚需双因素叠加→7月是制冰机全年峰值→$100-149 nugget ice maker是当前最佳切入点</div>
+          <div class="summary-item"><span class="summary-label">风险：</span>品牌集中度低→白牌居多→有品牌化差异化空间；制冰机退换率偏高（品控问题）→产品需严格测试</div>
+        </div>
+      </div>
+
+      <!-- 延续·有变化：冰淇淋机 -->
+      <div class="opportunity-card card-hot">
+        <div class="card-top">
+          <span class="category-tag tag-icecream">🍦 冰淇淋机</span>
+          <span class="status-badge status-changed">🔄 有变化</span>
+        </div>
+        <div class="card-title">压缩机冰淇淋机 · $100-149 · ⭐⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">今日新增</div>
+          <div class="change-text">据EatingWell（7/7）评测，Cuisinart FastFreeze 5-in-1冰淇淋机（$80促销/$100原价）获编辑推荐——"smaller, quieter and less expensive than the Ninja Creami, and the perfect summer gadget"→$100价位段冰淇淋制作需求被非压缩机入门款验证→压缩机款$100-149为自然升级路径</div>
+        </div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">需求层次：</span>非压缩机款（Cuisinart FastFreeze $80-100）解决"能不能做"→压缩机款解决"想什么时候做就什么时候做（不用预冻）"→升级逻辑通顺</div>
+          <div class="summary-item"><span class="summary-label">Prime Day佐证：</span>澳洲Ninja CREAMi降至$227.8（原$299），Ninja SLUSHi Professional降至$236.55（原$599.99）→冰淇淋/冷冻饮品品类是大促重点→消费者关注度确认</div>
+        </div>
+      </div>
+
+      <!-- 延续·无变化：咖啡机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-coffee">☕ 咖啡机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">冷萃+热萃双模式咖啡机 · $100-129 · ⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：蒸烤炸 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-steam">♨️ 蒸烤炸</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸烤炸一体机 · $100-149 · ⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：电烤盘 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-griddle">🍽️ 电烤盘</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">电烤盘/室内烧烤炉 · $100-129 · ⭐⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：清洁机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-clean">🧹 清洁机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸汽+吸尘+除螨三合一清洁机 · $100-149 · ⭐⭐⭐⭐ · 延续，无新增变化</div>
+      </div>
+    </section>
+
+    <!-- ===== 详析 ===== -->
+    <section class="section-block" id="detail">
+      <div class="section-header">
+        <h2>📋 今日变化详析</h2>
+        <span class="section-badge badge-trend">2项有变化</span>
+      </div>
+
+      <div class="detail-card" style="border-top-color: #0e7490;">
+        <div class="detail-title">🧊 制冰机：Prime Day放量+nugget ice子品类起势</div>
+        <div class="detail-section">
+          <div class="detail-label">Amazon Prime Day驱动数据</div>
+          <div class="detail-text">
+            <ul>
+              <li>① Kismile 35lb/day Nugget Ice Maker $119.98（原$199.89，40% off）→1.1L水箱，7分钟出首批冰，日产35磅→nugget ice制冰机首次进入$100-149价位段促销</li>
+              <li>② EUHOMY Nugget Ice Maker位居bestchoice.com制冰机榜#1（7/7更新）→34lb/天，6分钟出冰→nugget ice在对比榜单中超越传统bullet ice</li>
+              <li>③ Igloo Self-Cleaning Countertop Ice Maker $69.99 Amazon Best Seller（原$114.99）→bullet ice在低价位仍有巨大走量</li>
+              <li>④ 消费者对冰型偏好正在从bullet→nugget迁移→nugget ice获得更高溢价</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-highlight">
+          <div class="hl-label">💎 $100-149制冰机机会判断</div>
+          <div class="hl-text">nugget ice子品类在$100-149快速起量✅ →Prime Day脉冲+暑期刚需双因素叠加→7月全年峰值✅ →品牌集中度低→白牌居多→有品牌化差异化空间✅ →制冰机退换率偏高→品控是关键⚠️</div>
+        </div>
+      </div>
+
+      <div class="detail-card" style="border-top-color: #d97706;">
+        <div class="detail-title">🍦 压缩机冰淇淋机：$100入门款验证→压缩机款为升级路径</div>
+        <div class="detail-section">
+          <div class="detail-label">EatingWell编辑评测Cuisinart FastFreeze</div>
+          <div class="detail-text">
+            <ul>
+              <li>① 产品定位精准：$80(促销)/$100(原价)，4.5英寸宽×16英寸高，不到5磅→"looks more like an immersion blender than an ice cream maker"→解决小厨房空间痛点</li>
+              <li>② 使用体验：5分钟调配base+30秒处理=一杯冰淇淋→"easy to try new flavor combinations"→反复使用率高</li>
+              <li>③ 对比明确："smaller, quieter and less expensive than the Ninja Creami"→Cuisinart在$80-100做轻量入门→Ninja CREAMi在$200-300做功能进阶</li>
+              <li>④ 需求层次：非压缩机款→"能不能做"（需预冻24小时）→压缩机款→"想什么时候做就做"（无需预冻）→升级逻辑通顺</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-highlight">
+          <div class="hl-label">💎 对$100-149压缩机冰淇淋机的启示</div>
+          <div class="hl-text">非压缩机入门款验证$100价位冰淇淋制作需求真实✅ →压缩机款$100-149是功能升级而非budget alternative✅ →Prime Day Ninja CREAMi热卖确认消费者关注度✅ →$100-149压缩机冰淇淋机填补Cuisinart $100与Ninja CREAMi $200-300之间的空白</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 延续中机会点 ===== -->
+    <section class="section-block" id="continue">
+      <div class="section-header">
+        <h2>🔄 延续中机会点</h2>
+      </div>
+      <table class="continue-table">
+        <thead>
+          <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>压缩机冰淇淋机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>7/8 Cuisinart FastFreeze $80-100入门款验证需求层次+EatingWell编辑推荐</td><td>延续·有变化</td></tr>
+          <tr><td>制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/8 Prime Day放量+Kismile nugget ice $119.98+nugget ice子品类起势</td><td>延续·有变化</td></tr>
+          <tr><td>电烤盘/室内烧烤炉</td><td>$100-129</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/5 Zojirushi促销+BBQ峰值已过</td><td>延续·无变化</td></tr>
+          <tr><td>蒸烤炸一体机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/7 中信Q2前瞻电蒸锅延续表现较好</td><td>延续·无变化</td></tr>
+          <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td>延续·无变化</td></tr>
+          <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/7 美的冷热双萃京东TOP1+60秒冷萃技术验证</td><td>延续·无变化</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== 其他动向 ===== -->
+    <section class="section-block" id="watch">
+      <div class="section-header">
+        <h2>👀 其他动向</h2>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🛒 Amazon Prime Day启动</div>
+        <div class="watch-text">据manofmany.com（7/8）：澳洲7/8-7/13，美国同步预热→厨房小家电为大促重点品类→Ninja SLUSHi Professional $236.55（原$599.99，61% off）、Ninja CREAMi $227.8（原$299）→冰淇淋/冷冻饮品机品类获大促资源倾斜→短期销量脉冲但验证消费者关注度</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🍹 Ninja Slushi TikTok病毒传播</div>
+        <div class="watch-text">据Serious Eats（7/7）：编辑推荐Ninja Slushi XL（$350），"TikTok上有人把它绑在船上用"→家用冷冻饮品品类社媒热度极高→$299 Ninja Slushi在Walmart促销至$179→品类验证但当前价位高于$100-149目标→nugget ice和冰淇淋机是该品类在$100-149的落地形态</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🛡️ 家电非毒性/安全趋势</div>
+        <div class="watch-text">据Food &amp; Wine（7/7）：前主厨推荐non-toxic厨房工具，强调避免Teflon和黑色塑料→消费者对材质安全关注度提升→对$100+小家电产品的启示：材质宣称（BPA-free、不锈钢内胆、无涂层）是$100+产品的必备卖点</div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <div class="page-footer">
+      <div class="footer-divider"></div>
+      <div>数据来源：Amazon · PR Newswire · WIRED · BGR · Serious Eats · Food &amp; Wine · AllRecipes · The Mirror · Techlicious · CNN Underscored · GizStreet · MorningStar</div>
+      <div>⚠️ $90硬门槛：低于$90的产品不录入 | 推导逻辑：从$100+价位段空白/痛点出发</div>
+      <div style="margin-top:6px;"><a href="../index.html">返回首页</a></div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
