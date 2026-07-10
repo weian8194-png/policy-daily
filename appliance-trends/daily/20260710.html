@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年7月10日 小家电市场趋势</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f0fdfa; }
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(13,148,136,0.06); color: #e2e8f0; border-left-color: #0d9488; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.hot { background: rgba(13,148,136,0.15); color: #5eead4; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #f0fdfa; color: #0d9488; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
+    .opportunity-card.card-trend { border-left: 4px solid #f59e0b; }
+    .opportunity-card.card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-pizza { background: #dc2626; }
+    .tag-icecream { background: #d97706; }
+    .tag-ice { background: #0e7490; }
+    .tag-griddle { background: #dc2626; }
+    .tag-airfryer { background: #ea580c; }
+    .tag-steam { background: #2563eb; }
+    .tag-coffee { background: #7c2d12; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-new { background: #faf5ff; color: #8b5cf6; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-summary .summary-item { font-size: 12px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 16px 8px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-price .price-title { font-size: 11px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
+    .card-source .source-label { font-size: 11px; color: #94a3b8; }
+    .card-source a { font-size: 11px; color: #0d9488; text-decoration: none; word-break: break-all; }
+    .card-source a:hover { text-decoration: underline; }
+    .card-change-note { background: #faf5ff; border-radius: 6px; margin: 8px 16px; padding: 8px 12px; border: 1px solid #e9d5ff; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #7c3aed; margin-bottom: 2px; }
+    .card-change-note .change-text { font-size: 12px; color: #4c1d95; line-height: 1.6; }
+    .detail-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; border-top: 3px solid #8b5cf6; }
+    .detail-title { font-size: 16px; font-weight: 700; color: #0f172a; padding: 14px 16px 6px; }
+    .detail-section { padding: 6px 16px; }
+    .detail-section .detail-label { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .detail-section .detail-text { font-size: 13px; color: #334155; line-height: 1.7; }
+    .detail-section .detail-text ul { padding-left: 16px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #faf5ff; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #e9d5ff; }
+    .detail-highlight .hl-label { font-size: 11px; font-weight: 700; color: #7c3aed; margin-bottom: 4px; }
+    .detail-highlight .hl-text { font-size: 12px; color: #4c1d95; line-height: 1.7; }
+    .detail-warning { background: #fef2f2; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fecaca; }
+    .detail-warning .warn-label { font-size: 11px; font-weight: 700; color: #dc2626; margin-bottom: 4px; }
+    .detail-warning .warn-text { font-size: 12px; color: #991b1b; line-height: 1.7; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .watch-item a { color: #0d9488; text-decoration: none; }
+    .watch-item a:hover { text-decoration: underline; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .main-content { margin-left: 0; padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h1>🏠 小家电趋势</h1>
+      <div class="version">Appliance Trends v2.1</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">📊 今日数据</div>
+        <a class="nav-item" href="#hot">🔥 机会速报 <span class="nav-count hot">7</span></a>
+        <a class="nav-item" href="#detail">📋 重点详析 <span class="nav-count hot">1</span></a>
+        <a class="nav-item" href="#continue">🔄 延续中机会 <span class="nav-count">7</span></a>
+        <a class="nav-item" href="#watch">👀 值得关注 <span class="nav-count">2</span></a>
+      </div>
+      <div style="height:1px;background:rgba(255,255,255,0.04);margin:10px 24px;"></div>
+      <div class="nav-section">
+        <div class="nav-section-title">📅 历史归档</div>
+        <a class="nav-item" href="./">← 返回首页</a>
+        <a class="nav-item" href="./20260709.html">2026-07-09</a>
+        <a class="nav-item" href="./20260708.html">2026-07-08</a>
+        <a class="nav-item" href="./20260707.html">2026-07-07</a>
+      </div>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="content-header">
+      <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+      <div class="date-line">数据日期: <span class="date-val">2026年7月10日（周五）</span> <span class="update-time">08:30 更新</span></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-chip hot"><span class="stat-num">7</span>🔥 追踪机会</div>
+      <div class="stat-chip new"><span class="stat-num">1</span>🆕 今日新增</div>
+      <div class="stat-chip trend"><span class="stat-num">0</span>🔄 有变化</div>
+    </div>
+
+    <!-- ===== Opportunity Quick Report ===== -->
+    <section class="section-block" id="hot">
+      <div class="section-header">
+        <h2>🔥 今日机会速报</h2>
+        <span class="section-badge badge-hot">7个机会</span>
+      </div>
+
+      <!-- 新增：室内披萨烤箱 -->
+      <div class="opportunity-card card-new">
+        <div class="card-top">
+          <span class="category-tag tag-pizza">🍕 室内披萨烤箱</span>
+          <span class="status-badge status-new">🆕 新增</span>
+        </div>
+        <div class="card-title">室内披萨烤箱/高热台式烤箱 · $100-149 · ⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">📅 今日新增</div>
+          <div class="change-text">Panasonic发布FlashXpress Indoor Pizza Oven Plus (NB-G300)，MSRP $449.99→首款主流品牌专为室内披萨烹饪设计的高热台式烤箱→验证"室内高热烹饪"需求正从户外专用设备向台式家电迁移</div>
+        </div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">趋势：</span>Panasonic将FlashXpress从烤面包机升级为"披萨专用+6合1"→双加热元件最高755°F→3分钟拿坡里披萨→PFAS-free珐琅涂层</div>
+          <div class="summary-item"><span class="summary-label">痛点：</span>家用烤箱最高500-550°F做不出脆底→户外炉$300-600不能室内用→$100-149台式烤箱缺"高热+披萨石"组合</div>
+          <div class="summary-item"><span class="summary-label">机会：</span>"披萨专精型台式烤箱"在$100-149空白→550-600°F+披萨石+空气炸+专用预设→天然$100+价位</div>
+        </div>
+        <div class="card-price">
+          <div class="price-title">💰 推荐价与机会</div>
+          <div class="price-text">
+            推荐价$109-149：550-600°F高热+披萨石+空气炸+5合1功能→"公寓披萨夜"场景→比户外炉便宜且室内用→天然$100+价位<br>
+            风险：$100-149能否达550-600°F有技术挑战；如只达450-500°F则沦为budget alternative
+          </div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span>PR Newswire 7/9、MorningStar、The Kitchn 7/9</div>
+      </div>
+
+      <!-- 延续·无变化：制冰机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-ice">🧊 制冰机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：冰淇淋机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-icecream">🍦 冰淇淋机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">压缩机冰淇淋机 · $100-149 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：咖啡机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-coffee">☕ 咖啡机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">冷萃+热萃双模式咖啡机 · $100-129 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：蒸烤炸 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-airfryer">🍟 蒸烤炸一体</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸烤炸一体机 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：电烤盘 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-griddle">🍳 电烤盘</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">电烤盘/室内烧烤炉 · $100-129 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：蒸汽清洁机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-steam">💨 蒸汽清洁</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸汽+吸尘+除螨三合一清洁机 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+    </section>
+
+    <!-- ===== Detail Analysis ===== -->
+    <section class="section-block" id="detail">
+      <div class="section-header">
+        <h2>📋 今日变化详析</h2>
+        <span class="section-badge badge-new">1项新增</span>
+      </div>
+
+      <div class="detail-card" style="border-top-color:#dc2626;">
+        <div class="detail-title">🍕 室内披萨烤箱/高热台式烤箱：Panasonic验证品类需求</div>
+        <div class="detail-section">
+          <div class="detail-label">Panasonic FlashXpress Indoor Pizza Oven Plus (NB-G300) 详情（PR Newswire 7/9）</div>
+          <div class="detail-text">
+            <ul>
+              <li>① 产品定位：首款主流品牌专为"室内披萨烹饪"设计的台式烤箱→不是"能烤披萨的烤面包机"，而是"以披萨为核心功能的台式烤箱"→产品经理Hana Umemoto："a smarter way to make restaurant-style pizza"</li>
+              <li>② 技术亮点：上方碳红外线加热器+下方不锈钢加热器→最高755°F→3分钟拿坡里风格→专设5种Pizza Preset（拿坡里/纽约/薄底/深盘/冷冻）+Steak Mode（配铸铁烤盘）→20升容量→适配12寸披萨</li>
+              <li>③ 价格锚定：MSRP $449.99→Panasonic.com/Amazon.com同步→对比户外披萨炉Ooni Koda 2 Pro $499/Gozney Arc Lite $349→以"室内+多功能"对标户外专用炉</li>
+              <li>④ 材质与配件：PFAS-free珐琅涂层内胆→7件配件随附（披萨石/披萨铲/空气炸篮/铁丝架/铸铁烤盘/手柄/碎屑盘）</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-highlight">
+          <div class="hl-label">💎 $100-149价位机会分析</div>
+          <div class="hl-text">
+            已有产品验证：Breville Compact Smart Oven $130（可烤12寸披萨但最高450°F无披萨石）→Cuisinart户外披萨烤箱$115-$300（不能室内用）→"室内+高热+披萨石"组合在$100-149无人占据✅<br>
+            技术可行性：550-600°F在$100-149可达成（石英管加热器+改进保温）→关键差异化是"比普通烤箱高100-150°F + 披萨石 + 专用预设"✅<br>
+            市场空白：公寓用户/小户型→不能在阳台户外炉→Panasonic $449太贵→需"室内披萨效果明显好于普通烤箱"的$100-149产品✅
+          </div>
+        </div>
+        <div class="detail-warning">
+          <div class="warn-label">⚠️ 风险提示</div>
+          <div class="detail-text" style="color:#991b1b;font-size:12px;line-height:1.7;">
+            ① $100-149价位能否达到550-600°F有技术挑战（Panasonic用碳红外线加热器才达755°F）<br>
+            ② 如果只达450-500°F则与普通台式烤箱差异不大→沦为budget alternative❌<br>
+            ③ 需关注Amazon现有$100-149台式烤箱是否开始增加"pizza preset"功能→可能被先发者抢占
+          </div>
+        </div>
+        <div class="detail-section">
+          <div class="detail-label">与现有追踪项的关系</div>
+          <div class="detail-text">
+            与"蒸烤炸一体机"重叠：都是多功能台式烤箱，但披萨烤箱强调高热+披萨石，蒸烤炸强调蒸汽功能<br>
+            与"电烤盘/室内烧烤炉"互补：电烤盘偏烧烤，披萨烤箱偏烘焙→可并存<br>
+            趋势验证：Panasonic此举确认"台式烤箱差异化"方向→从"通用型"向"场景专精型"进化
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Continue Table ===== -->
+    <section class="section-block" id="continue">
+      <div class="section-header">
+        <h2>🔄 延续中机会点</h2>
+      </div>
+      <table class="continue-table">
+        <thead>
+          <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🍕 室内披萨烤箱/高热台式烤箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>7/10 Panasonic NB-G300发布验证品类需求</td><td style="color:#8b5cf6;font-weight:600;">新增</td></tr>
+          <tr><td>🍦 压缩机冰淇淋机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>7/8 Cuisinart FastFreeze入门款验证需求层次</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>🧊 制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/9 COTLIN嵌入式制冰机+nugget ice $115.07</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>🍳 电烤盘/室内烧烤炉</td><td>$100-129</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/5 Zojirushi促销+BBQ峰值已过</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>🍟 蒸烤炸一体机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 蒸功能上市验证</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>💨 蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>☕ 冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 冷萃技术验证</td><td style="color:#64748b;">延续·无变化</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Watch Items ===== -->
+    <section class="section-block" id="watch">
+      <div class="section-header">
+        <h2>👀 其他值得关注</h2>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🍦 Dash Soft Serve冰淇淋机$99.99登TODAY Show</div>
+        <div class="watch-text">据TODAY Show（7/9），Dash Soft Serve Ice Cream Machine在Amazon售价$99.99→35分钟制作软冰淇淋+冷冻碗+配料斜槽+分配杆→验证家用冰淇淋制作需求持续→但注意Dash为冷冻碗式（需提前冷冻24-48小时），非压缩机式→$99.99刚好踩线$90门槛→压缩机式仍保持$100+溢价逻辑</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🛡️ Magnifique Combo Air Fryer $249.99·非毒性材质新玩家</div>
+        <div class="watch-text">据Yahoo UK（7/9），Magnifique Combo Air Fryer $249.99→12种烹饪模式→全玻璃+不锈钢材质→零PFAS零Teflon→4.5qt玻璃碗+可换盖设计→验证非毒性材质从加分项变必备项✅ + $200-250多功能台式烤箱竞争激烈 + 可换盖设计是差异化新方向</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">☕ Hamilton Beach FlexBrew Advanced 5-in-1 $119.99</div>
+        <div class="watch-text">据The Kitchn（7/9）评测：混合咖啡机→可用胶囊或咖啡粉→热/冰双模式→配独立壶→验证$100-149混合咖啡机需求→此价位段已有稳定竞争</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🧊 Bunpeony Nugget Ice Maker MSRP $255.78·线下渠道扩展</div>
+        <div class="watch-text">据BrickSeek/Home Depot（7/9）：Bunpeony Compact Nugget Ice Maker 33lb/Day→MSRP $255.78→零售价$267.62→nugget ice品类从Amazon扩展到Home Depot线下渠道→品类渗透继续深化</div>
+      </div>
+    </section>
+
+    <div class="page-footer">
+      <div class="footer-divider"></div>
+      <div>📊 数据来源：PR Newswire · MorningStar · WIRED · BGR · The Kitchn · Food &amp; Wine · AllRecipes · Serious Eats · Techlicious · CNN Underscored · The Mirror · Amazon （12个信息源）</div>
+      <div>⏰ 每日08:00自动更新 · $90+中高客单价选品机会</div>
+      <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
