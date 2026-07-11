@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年7月11日 小家电市场趋势</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f0fdfa; }
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(13,148,136,0.06); color: #e2e8f0; border-left-color: #0d9488; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.hot { background: rgba(13,148,136,0.15); color: #5eead4; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #f0fdfa; color: #0d9488; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
+    .opportunity-card.card-trend { border-left: 4px solid #f59e0b; }
+    .opportunity-card.card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-pizza { background: #dc2626; }
+    .tag-icecream { background: #d97706; }
+    .tag-ice { background: #0e7490; }
+    .tag-griddle { background: #dc2626; }
+    .tag-airfryer { background: #ea580c; }
+    .tag-steam { background: #2563eb; }
+    .tag-coffee { background: #7c2d12; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-new { background: #faf5ff; color: #8b5cf6; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-summary { background: #f0fdfa; border-radius: 6px; margin: 12px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-summary .summary-item { font-size: 12px; color: #115e59; padding: 3px 0; line-height: 1.6; }
+    .card-summary .summary-label { font-weight: 700; color: #134e4a; margin-right: 4px; }
+    .card-price { background: #fef3c7; border-radius: 6px; margin: 0 16px 8px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-price .price-title { font-size: 11px; font-weight: 700; color: #92400e; margin-bottom: 4px; }
+    .card-price .price-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-source { padding: 6px 16px 10px; border-top: 1px solid #f1f5f9; }
+    .card-source .source-label { font-size: 11px; color: #94a3b8; }
+    .card-source a { font-size: 11px; color: #0d9488; text-decoration: none; word-break: break-all; }
+    .card-source a:hover { text-decoration: underline; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 8px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 2px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.6; }
+    .detail-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; border-top: 3px solid #f59e0b; }
+    .detail-title { font-size: 16px; font-weight: 700; color: #0f172a; padding: 14px 16px 6px; }
+    .detail-section { padding: 6px 16px; }
+    .detail-section .detail-label { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .detail-section .detail-text { font-size: 13px; color: #334155; line-height: 1.7; }
+    .detail-section .detail-text ul { padding-left: 16px; }
+    .detail-section .detail-text li { padding: 2px 0; }
+    .detail-highlight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .detail-highlight .hl-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .detail-highlight .hl-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .watch-item a { color: #0d9488; text-decoration: none; }
+    .watch-item a:hover { text-decoration: underline; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .main-content { margin-left: 0; padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h1>🏠 小家电趋势</h1>
+      <div class="version">Appliance Trends v2.1</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">📊 今日数据</div>
+        <a class="nav-item" href="#hot">🔥 机会速报 <span class="nav-count hot">7</span></a>
+        <a class="nav-item" href="#detail">📋 变化详析 <span class="nav-count hot">2</span></a>
+        <a class="nav-item" href="#continue">🔄 延续中机会 <span class="nav-count">7</span></a>
+        <a class="nav-item" href="#watch">👀 值得关注 <span class="nav-count">3</span></a>
+      </div>
+      <div style="height:1px;background:rgba(255,255,255,0.04);margin:10px 24px;"></div>
+      <div class="nav-section">
+        <div class="nav-section-title">📅 历史归档</div>
+        <a class="nav-item" href="./">← 返回首页</a>
+        <a class="nav-item" href="./20260710.html">2026-07-10</a>
+        <a class="nav-item" href="./20260709.html">2026-07-09</a>
+        <a class="nav-item" href="./20260708.html">2026-07-08</a>
+      </div>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="content-header">
+      <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+      <div class="date-line">数据日期: <span class="date-val">2026年7月11日（周六）</span> <span class="update-time">08:30 更新</span></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-chip hot"><span class="stat-num">7</span>🔥 追踪机会</div>
+      <div class="stat-chip new"><span class="stat-num">0</span>🆕 今日新增</div>
+      <div class="stat-chip trend"><span class="stat-num">2</span>🔄 有变化</div>
+    </div>
+
+    <!-- ===== Opportunity Quick Report ===== -->
+    <section class="section-block" id="hot">
+      <div class="section-header">
+        <h2>🔥 今日机会速报</h2>
+        <span class="section-badge badge-hot">7个机会</span>
+      </div>
+
+      <!-- 延续·有变化：冰淇淋机 -->
+      <div class="opportunity-card card-trend">
+        <div class="card-top">
+          <span class="category-tag tag-icecream">🍦 冰淇淋机</span>
+          <span class="status-badge status-changed">🔄 有变化</span>
+        </div>
+        <div class="card-title">压缩机冰淇淋机 · $100-149 · ⭐⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">📅 今日新增变化</div>
+          <div class="change-text">Gourmia Soft Serve Ice Cream and Frozen Drink Maker在Costco上架$199.99→压缩机式+6预设（软冰淇淋/冰沙/奶昔/星冰乐等）→30分钟出成品→无需预冷冻→influencer集中推荐→验证"压缩机+软冰淇淋+冷冻饮品"多功能组合在$200价位有市场需求→品类从单一功能向"soft serve + frozen drink combo"演进</div>
+        </div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">品类演进：</span>Gourmia $199.99确认"压缩机+软冰淇淋分配杆"是$200+功能组合→$100-149入门压缩机冰淇淋 + $200+进阶soft serve combo→需求分层清晰</div>
+          <div class="summary-item"><span class="summary-label">机会确认：</span>Cuisinart FastFreeze（$100-149入门款）+ Gourmia $199.99（进阶款）→品类价格层次完整→$100-149入门压缩机冰淇淋机会更确定</div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span>fooshya/Costco influencer（7/10）</div>
+      </div>
+
+      <!-- 延续·有变化：室内披萨烤箱 -->
+      <div class="opportunity-card card-trend">
+        <div class="card-top">
+          <span class="category-tag tag-pizza">🍕 室内披萨烤箱</span>
+          <span class="status-badge status-changed">🔄 有变化</span>
+        </div>
+        <div class="card-title">室内披萨烤箱/高热台式烤箱 · $100-149 · ⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">📅 今日新增变化</div>
+          <div class="change-text">Prime Day 2026已开跑→Ninja Foodi 13-in-1 Toaster Oven &amp; Air Fryer降至$199.99（原$369.99，46% off）→flip-up省空间设计+13种烹饪模式→验证多功能台式烤箱在Prime Day获最大折扣→消费者对"台式多功能烤箱"的支付意愿在高折扣时释放→间接验证室内披萨烤箱品类方向</div>
+        </div>
+        <div class="card-summary">
+          <div class="summary-item"><span class="summary-label">Prime Day信号：</span>折扣集中在$100-200多功能台式烤箱→此价位段是消费者最活跃购买区间→"室内披萨专精型台式烤箱"若定价$109-149恰好落在此区间</div>
+          <div class="summary-item"><span class="summary-label">空白仍在：</span>Ninja Foodi 13-in-1 $199.99确认"台式多功能烤箱"市场厚度→但Ninja没有"高热+披萨石"专精功能→差异化空白未被填补</div>
+        </div>
+        <div class="card-source"><span class="source-label">来源：</span>Kookloofeed（7/10）</div>
+      </div>
+
+      <!-- 延续·无变化：制冰机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-ice">🧊 制冰机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：咖啡机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-coffee">☕ 咖啡机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">冷萃+热萃双模式咖啡机 · $100-129 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：蒸烤炸 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-airfryer">🍟 蒸烤炸一体</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸烤炸一体机 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：电烤盘 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-griddle">🍳 电烤盘</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">电烤盘/室内烧烤炉 · $100-129 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <!-- 延续·无变化：蒸汽清洁机 -->
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-steam">💨 蒸汽清洁</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸汽+吸尘+除螨三合一清洁机 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+    </section>
+
+    <!-- ===== Detail Analysis ===== -->
+    <section class="section-block" id="detail">
+      <div class="section-header">
+        <h2>📋 今日变化详析</h2>
+        <span class="section-badge badge-trend">2项有变化</span>
+      </div>
+
+      <div class="detail-card" style="border-top-color:#d97706;">
+        <div class="detail-title">🍦 压缩机冰淇淋机：Gourmia在Costco验证"soft serve + frozen drink combo"</div>
+        <div class="detail-section">
+          <div class="detail-label">Gourmia Soft Serve Ice Cream and Frozen Drink Maker（fooshya/Costco 7/10）</div>
+          <div class="detail-text">
+            <ul>
+              <li>① 产品定位：压缩机式（非冷冻碗式）→6预设（软冰淇淋/冰沙/奶昔/星冰乐等）→30分钟出成品→无需预冷冻→"absolute game changer for summer"</li>
+              <li>② 价格锚定：Costco $199.99→对比Ninja CREAMi $169.99（Prime Day价，原$219.99）→Gourmia多"soft serve分配杆"和"frozen drink"功能，CREAMi有7种冰品模式→两台定位不同</li>
+              <li>③ 品类演进信号：$100-149基础压缩机冰淇淋 → $200+软冰淇淋+冷冻饮品combo → 需求分层清晰</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-highlight">
+          <div class="hl-label">💎 对$100-149机会的影响</div>
+          <div class="hl-text">
+            Gourmia验证压缩机冰淇淋需求从"小众爱好"走向"夏季标配"→influencer集中推荐加速品类教育✅<br>
+            Cuisinart FastFreeze（$100-149入门款）+ Gourmia $199.99（进阶款）→品类价格层次完整→$100-149入门压缩机冰淇淋机会更确定✅
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-card" style="border-top-color:#dc2626;">
+        <div class="detail-title">🍕 室内披萨烤箱：Prime Day验证多功能台式烤箱需求</div>
+        <div class="detail-section">
+          <div class="detail-label">Ninja Prime Day 2026厨房电器全线折扣（Kookloofeed 7/10）</div>
+          <div class="detail-text">
+            <ul>
+              <li>① Ninja Foodi 13-in-1 Toaster Oven &amp; Air Fryer (SP351)→$199.99（原$369.99，46% off）→flip-up省空间设计→13种烹饪模式→Prime Day最大折扣Ninja机型</li>
+              <li>② Ninja XL Air Fryer→$119.99（33% off）→6.5qt+6功能→最畅销Ninja空气炸锅</li>
+              <li>③ Ninja CREAMi 7-in-1→$169.99（原$219.99，23% off）→冰品制作</li>
+            </ul>
+          </div>
+        </div>
+        <div class="detail-highlight">
+          <div class="hl-label">💎 对室内披萨烤箱机会的影响</div>
+          <div class="hl-text">
+            Prime Day折扣集中在$100-200多功能台式烤箱→此价位段是消费者最活跃购买区间→"室内披萨专精型台式烤箱"定价$109-149恰好落在此区间✅<br>
+            Ninja Foodi 13-in-1 $199.99确认"台式多功能烤箱"市场厚度→但Ninja没有"高热+披萨石"专精功能→空白仍在✅<br>
+            Prime Day级流量可加速品类教育→消费者对"台式高热烤箱"接受度提升✅
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Continue Table ===== -->
+    <section class="section-block" id="continue">
+      <div class="section-header">
+        <h2>🔄 延续中机会点</h2>
+      </div>
+      <table class="continue-table">
+        <thead>
+          <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🍦 压缩机冰淇淋机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>7/11 Gourmia soft serve+frozen drink combo $199.99验证品类演进</td><td style="color:#d97706;font-weight:600;">延续·有变化</td></tr>
+          <tr><td>🍕 室内披萨烤箱/高热台式烤箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>7/11 Prime Day Ninja Foodi 13-in-1 $199.99验证多功能台式烤箱需求</td><td style="color:#d97706;font-weight:600;">延续·有变化</td></tr>
+          <tr><td>🧊 制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/9 COTLIN嵌入式制冰机+nugget ice $115.07</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>🍳 电烤盘/室内烧烤炉</td><td>$100-129</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/5 Zojirushi促销+BBQ峰值已过</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>🍟 蒸烤炸一体机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 蒸功能上市验证</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>💨 蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>☕ 冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 冷萃技术验证</td><td style="color:#64748b;">延续·无变化</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Watch Items ===== -->
+    <section class="section-block" id="watch">
+      <div class="section-header">
+        <h2>👀 其他值得关注</h2>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🔥 NuWave PIC Flex便携电磁炉+煎锅套装$129.51</div>
+        <div class="watch-text">据The Inventory（7/10），NuWave PIC Flex Portable Induction Cooktop含9寸Duralon不粘煎锅→Amazon $129.51（原$149.99）→6.5寸加热线圈→81温度设定→3档功率→精准温控→小户型/宿舍/RV场景→验证$100-149便携电磁炉需求→但电磁炉属于烹饪工具而非小家电，与现有追踪项关系较远</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🛒 Prime Day 2026全球开跑</div>
+        <div class="watch-text">Amazon Prime Day 2026已确认在印度（据aboutamazon.in 7/10，史上最快Prime Day）和澳洲（OzBargain大量Prime标签deal）开跑→美国站预计7月中→Ninja全线折扣+Toshiba微波空气炸combo $199.99→厨房小家电折扣力度大→短期内消费者持币等Prime Day→榜单排名可能有波动</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🛡️ Ninja Crispi 5-in-1玻璃空气炸锅Costco $124.99</div>
+        <div class="watch-text">据fooshya（7/10），Ninja Crispi 5-in-1 Portable Glass Air Fry Cooking System在Costco $124.99（$35 off）→玻璃容器+便携+5合1→消费者评价"小、易清洁、比大空气炸锅好用"→验证：①玻璃容器（零PFAS）从高端变主流②便携式空气炸在$100+有市场③与此前追踪的"非毒性材质趋势"一致</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🍕 Ooni Koda 2 vs Gozney Arc Lite户外披萨炉对比</div>
+        <div class="watch-text">据The Independent（7/10），Ooni Koda 2 £399/Gozney Arc Lite £350→均为燃气户外炉→500°C→14寸披萨→户外披萨炉竞争激烈→间接验证室内披萨烤箱差异化机会（户外不能在室内用→公寓用户需要室内方案）</div>
+      </div>
+    </section>
+
+    <div class="page-footer">
+      <div class="footer-divider"></div>
+      <div>📊 数据来源：fooshya · Kookloofeed · The Inventory · The Independent · OzBargain · DealsOfAmerica · GlobalNews · Amazon （12个信息源）</div>
+      <div>⏰ 每日08:00自动更新 · $90+中高客单价选品机会</div>
+      <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
