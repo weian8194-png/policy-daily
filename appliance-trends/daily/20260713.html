@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年7月13日 小家电市场趋势</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f0fdfa; }
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(13,148,136,0.06); color: #e2e8f0; border-left-color: #0d9488; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.hot { background: rgba(13,148,136,0.15); color: #5eead4; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #f0fdfa; color: #0d9488; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; display: flex; align-items: flex-start; gap: 12px; }
+    .highlight-banner .hl-icon { font-size: 28px; flex-shrink: 0; }
+    .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
+    .highlight-banner .hl-text strong { color: #92400e; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-trend { border-left: 4px solid #f59e0b; }
+    .opportunity-card.card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-icecream { background: #d97706; }
+    .tag-pizza { background: #dc2626; }
+    .tag-ice { background: #0e7490; }
+    .tag-griddle { background: #dc2626; }
+    .tag-airfryer { background: #ea580c; }
+    .tag-steam { background: #2563eb; }
+    .tag-coffee { background: #7c2d12; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .main-content { margin-left: 0; padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h1>🏠 小家电趋势</h1>
+      <div class="version">Appliance Trends v2.1</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">📊 今日数据</div>
+        <a class="nav-item" href="#hot">🔥 机会速报 <span class="nav-count">7</span></a>
+        <a class="nav-item" href="#continue">🔄 延续中机会 <span class="nav-count">7</span></a>
+        <a class="nav-item" href="#watch">👀 其他动向 <span class="nav-count">4</span></a>
+      </div>
+      <div style="height:1px;background:rgba(255,255,255,0.04);margin:10px 24px;"></div>
+      <div class="nav-section">
+        <div class="nav-section-title">📅 历史归档</div>
+        <a class="nav-item" href="../">← 返回首页</a>
+        <a class="nav-item" href="./20260712.html">2026-07-12</a>
+        <a class="nav-item" href="./20260711.html">2026-07-11</a>
+        <a class="nav-item" href="./20260710.html">2026-07-10</a>
+      </div>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="content-header">
+      <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+      <div class="date-line">数据日期: <span class="date-val">2026年7月13日（周一）</span> <span class="update-time">08:30 更新</span></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-chip hot"><span class="stat-num">7</span>🔥 追踪机会</div>
+      <div class="stat-chip new"><span class="stat-num">0</span>🆕 今日新增</div>
+      <div class="stat-chip trend"><span class="stat-num">1</span>🔄 有变化</div>
+    </div>
+
+    <div class="highlight-banner">
+      <div class="hl-icon">🔄</div>
+      <div class="hl-text"><strong>压缩机冰淇淋机有供应链新验证。</strong>据Global Times（7/12）报道，宁波沙冰机(slushie machine)首先在北美市场获得认可后扩展至欧洲，制冷设备出口同比增长22.7%，进一步验证"冷饮制作"品类在美国市场的多场景需求。</div>
+    </div>
+
+    <!-- ===== Opportunity Quick Report ===== -->
+    <section class="section-block" id="hot">
+      <div class="section-header">
+        <h2>🔥 今日机会速报</h2>
+        <span class="section-badge badge-trend">7个机会 · 1个有变化</span>
+      </div>
+
+      <div class="opportunity-card card-trend">
+        <div class="card-top">
+          <span class="category-tag tag-icecream">🍦 冰淇淋机</span>
+          <span class="status-badge status-changed">🔄 有变化</span>
+        </div>
+        <div class="card-title">压缩机冰淇淋机 · $100-149 · ⭐⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">📊 今日新增数据</div>
+          <div class="change-text">
+            • 宁波某小家电制造商新进入家用冷饮设备市场，其<strong>沙冰机(slushie machine)首先在北美获得认可</strong>，随后扩展至欧洲，前5个月出口约20个集装箱<br>
+            • 宁波制冰机对欧洲出口同比增长70%+；制冷设备（冰淇淋机+制冰机等）出口额达13亿元人民币，<strong>同比增长22.7%</strong><br>
+            • 广东威利电器冰淇淋机+啤酒冷却器销售额同比增长80%+
+          </div>
+        </div>
+        <div class="card-insight">
+          <div class="insight-label">💡 $100+选品启示</div>
+          <div class="insight-text">沙冰机(slushie machine)作为压缩机冰淇淋机的品类延伸，在北美先于欧洲获得验证，说明美国消费者对"冷饮制作"品类的接受度不只限于冰淇淋。$100+价位可考虑冰淇淋+沙冰+冷饮一机多用的差异化组合（如Gourmia soft serve+frozen drink combo $199.99），比单功能冰淇淋机有更强竞争力。</div>
+        </div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-pizza">🍕 室内披萨烤箱</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">室内披萨烤箱/高热台式烤箱 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-ice">🧊 制冰机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-griddle">🍳 电烤盘</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">电烤盘/室内烧烤炉 · $100-129 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-airfryer">🍟 蒸烤炸一体</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸烤炸一体机 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-steam">💨 蒸汽清洁</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸汽+吸尘+除螨三合一清洁机 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-coffee">☕ 咖啡机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">冷萃+热萃双模式咖啡机 · $100-129 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+    </section>
+
+    <!-- ===== Continue Table ===== -->
+    <section class="section-block" id="continue">
+      <div class="section-header">
+        <h2>🔄 延续中机会点</h2>
+      </div>
+      <table class="continue-table">
+        <thead>
+          <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🍦 压缩机冰淇淋机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>7/13 宁波沙冰机北美先行验证+制冷设备出口增22.7%</td><td style="color:#d97706;font-weight:600;">延续·有变化</td></tr>
+          <tr><td>🍕 室内披萨烤箱/高热台式烤箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>7/11 Prime Day Ninja Foodi 13-in-1 $199.99验证多功能台式烤箱需求</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>🧊 制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/9 COTLIN嵌入式制冰机+nugget ice $115.07</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>🍳 电烤盘/室内烧烤炉</td><td>$100-129</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/5 Zojirushi促销+BBQ峰值已过</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>🍟 蒸烤炸一体机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 蒸功能上市验证</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>💨 蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>☕ 冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 冷萃技术验证</td><td style="color:#64748b;">延续·无变化</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Watch Items ===== -->
+    <section class="section-block" id="watch">
+      <div class="section-header">
+        <h2>👀 其他动向</h2>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🛒 AllRecipes 7月Amazon新品汇总</div>
+        <div class="watch-text">据AllRecipes（7/12），10款Amazon厨房新品均在$20以下，以厨房工具/配件为主（Cuisinart烤箱手套、Ello玻璃杯、便携搅拌器等），无$90+小家电新品值得追踪</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🌡️ The Takeout懒人厨房推荐（无线肉探针信号）</div>
+        <div class="watch-text">据The Takeout（7/12），推荐无线肉探针(wireless meat probe)等懒人厨房工具，其中无线肉探针$70+起步，高端型号（如Combustion Inc.）可达$129。属烹饪配件而非小家电主品类，暂不纳入追踪，但"智能烹饪配件"$100+化趋势值得关注</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🏆 Best Choice 2026厨房必备更新</div>
+        <div class="watch-text">据Best Choice（7/12更新），Ninja 12-in-1 PossibleCooker PLUS、CHEF iQ Smart Multicooker、Hamilton Beach Indoor Searing Grill等上榜，均为已追踪品类（多功能烹饪/室内烧烤），无新信息</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🧊 LG嵌入式洗碗机（EuroCucina 2026）</div>
+        <div class="watch-text">据clickpetroleoegas（7/11），LG发布新一代嵌入式洗碗机，AI+微气泡+蒸汽1小时洗烘，属大型嵌入式家电，不在小家电追踪范围，但"AI+微气泡"清洁技术趋势可能渗透到小型清洁设备</div>
+      </div>
+    </section>
+
+    <div class="page-footer">
+      <div class="footer-divider"></div>
+      <div>📊 数据来源：Global Times · AllRecipes · The Takeout · Best Choice · clickpetroleoegas · Amazon （12个信息源）</div>
+      <div>⏰ 每日08:00自动更新 · $90+中高客单价选品机会</div>
+      <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
