@@ -8,8 +8,6 @@
     html { scroll-behavior: smooth; scroll-padding-top: 20px; }
     [id] { scroll-margin-top: 20px; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); } }
-    .nav-item:active, .nav-item:focus { color: #f1f5f9 !important; background: rgba(56,189,248,0.15) !important; border-left-color: #38bdf8 !important; }
     .layout { display: flex; min-height: 100vh; }
     .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
     .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f8fafc; }
@@ -74,14 +72,22 @@
     .severity-badge.info { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
     .platform-tag { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; color: #fff; }
     .platform-tag.amazon { background: #FF9900; }
-    .platform-tag.ebay { background: #e53238; }
+    .platform-tag.cbp { background: #1e3a5f; }
+    .platform-tag.cpsc { background: #dc2626; }
+    .platform-tag.fcc { background: #1a365d; }
+    .platform-tag.usps { background: #1e40af; }
+    .platform-tag.eu { background: #003399; }
+    .platform-tag.germany { background: #5c6ac4; }
+    .platform-tag.russia { background: #c53030; }
     .platform-tag.tiktok { background: #000; }
     .platform-tag.temu { background: #E85D2D; }
+    .platform-tag.lazada { background: #0f1465; }
+    .platform-tag.ebay { background: #e53238; }
     .platform-tag.shein { background: #000; }
-    .platform-tag.eu { background: #003399; }
-    .platform-tag.china { background: #dc2626; }
-    .platform-tag.tax { background: #7c3aed; }
     .platform-tag.logistics { background: #0369a1; }
+    .platform-tag.france { background: #002395; }
+    .platform-tag.shipping { background: #0d9488; }
+    .platform-tag.china { background: #c0392b; }
     .card-title { font-size: 14px; font-weight: 700; color: #0f172a; line-height: 1.5; }
     .card-deadline { font-size: 12px; color: #64748b; white-space: nowrap; font-weight: 600; }
     .card-body { padding: 0 18px 16px; }
@@ -90,7 +96,6 @@
     .detail-table td { padding: 6px 0; color: #334155; line-height: 1.6; }
     .detail-table td a { color: #2563eb; text-decoration: none; font-size: 12px; }
     .detail-table td a:hover { text-decoration: underline; }
-    .detail-table td.label { width: 88px; text-align: left; padding: 6px 8px 6px 0; color: #64748b; font-weight: 600; vertical-align: top; white-space: nowrap; font-size: 13px; }
     .action-list { background: #f8fafc; border-radius: 6px; padding: 10px 14px; margin-top: 10px; border: 1px solid #e2e8f0; }
     .action-list .action-title { font-size: 12px; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
     .action-list ol { margin: 0; padding-left: 18px; }
@@ -101,37 +106,13 @@
     .timeline-section { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 18px 20px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
     .timeline-section h3 { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 14px; }
     .timeline-list { list-style: none; padding: 0; }
-    .timeline-item { display: flex; gap: 12px; padding: 6px 0; font-size: 13px; line-height: 1.5; }
-    .timeline-item .tl-date { min-width: 56px; font-weight: 700; color: #334155; white-space: nowrap; }
-    .timeline-item .tl-sev { font-size: 11px; font-weight: 700; }
-    .timeline-item .tl-sev.danger { color: #dc2626; }
-    .timeline-item .tl-sev.warn { color: #d97706; }
-    .timeline-item .tl-text { color: #475569; }
-    .compliance-section { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 18px 20px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-    .compliance-section h3 { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 14px; }
-    .compliance-list { list-style: none; padding: 0; }
-    .compliance-list li { font-size: 13px; padding: 4px 0 4px 16px; position: relative; line-height: 1.6; color: #334155; }
-    .compliance-list li::before { content: ""; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; }
-    .compliance-list li.sev-danger::before { background: #dc2626; }
-    .compliance-list li.sev-warn::before { background: #d97706; }
-    .compliance-list li.sev-danger { color: #991b1b; }
-    .compliance-list li.sev-warn { color: #92400e; }
-    .footer { text-align: center; padding: 20px 0 10px; border-top: 1px solid #e2e8f0; margin-top: 20px; }
-    .footer p { font-size: 12px; color: #94a3b8; line-height: 1.8; }
-    @media (max-width: 768px) {
-      .sidebar { display: none; }
-      .main-content { margin-left: 0; padding: 16px; }
-    }
-    .platform-tag.wb { background: #7c3aed; }
-    .platform-tag.gwd { background: #0ea5e9; }
-    .platform-tag.ustr { background: #1e3a5f; }
-    .platform-tag.france { background: #002395; }
-    .platform-tag.russia { background: #8b0000; }
-    .platform-tag.morgan { background: #002244; }
-    .platform-tag.fcc { background: #1a365d; }
-    .platform-tag.usps { background: #1e40af; }
-    .platform-tag.lazada { background: #0f1465; }
-    .platform-tag.germany { background: #5c6ac4; }
+    .timeline-item { display: flex; gap: 12px; padding: 6px 0; font-size: 13px; line-height: 1.6; }
+    .timeline-date { min-width: 80px; font-weight: 700; color: #334155; white-space: nowrap; }
+    .timeline-desc { color: #475569; }
+    .timeline-desc .t-danger { color: #dc2626; font-weight: 600; }
+    .timeline-desc .t-warn { color: #d97706; font-weight: 600; }
+    .timeline-desc .t-info { color: #16a34a; }
+    .footer { text-align: center; padding: 20px 0 10px; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; margin-top: 30px; }
   </style>
 </head>
 <body>
@@ -148,15 +129,15 @@
     <nav class="sidebar-nav">
       <div class="nav-section">
         <div class="nav-section-title">今日概览</div>
-        <a href="#executive-summary" class="nav-item active">高管摘要 <span class="nav-count">5</span></a>
-        <a href="#compliance" class="nav-item">合规提醒 <span class="nav-count danger">15</span></a>
+        <a href="#executive-summary" class="nav-item active">高管摘要 <span class="nav-count">10</span></a>
+        <a href="#compliance" class="nav-item">合规提醒 <span class="nav-count danger">6</span></a>
       </div>
       <div class="nav-divider"></div>
       <div class="nav-section">
         <div class="nav-section-title">政策板块</div>
-        <a href="#platform" class="nav-item">平台政策 <span class="nav-count">5</span></a>
-        <a href="#compliance-tax" class="nav-item">合规/税务 <span class="nav-count">2</span></a>
-        <a href="#logistics" class="nav-item">物流/航运 <span class="nav-count">1</span></a>
+        <a href="#platform" class="nav-item">平台政策 <span class="nav-count">7</span></a>
+        <a href="#compliance-tax" class="nav-item">合规/税务 <span class="nav-count">5</span></a>
+        <a href="#logistics" class="nav-item">物流/航运 <span class="nav-count">4</span></a>
       </div>
       <div class="nav-divider"></div>
       <div class="nav-section">
@@ -167,7 +148,8 @@
       <div class="archive-section">
         <div class="archive-section-title">归档</div>
         <details class="archive-month" open>
-          <summary><span class="month-info">2026年7月</span> <span class="month-stats">11篇</span></summary>
+          <summary><span class="month-info">2026年7月</span> <span class="month-stats">12篇</span></summary>
+          <a href="daily/20260713.html" class="archive-day">7月13日（周一）</a>
           <a href="daily/20260711.html" class="archive-day">7月11日（周六）</a>
           <a href="daily/20260710.html" class="archive-day">7月10日（周五）</a>
           <a href="daily/20260709.html" class="archive-day">7月9日（周四）</a>
@@ -214,7 +196,7 @@
       <div class="stat-chip platform"><span class="stat-num">48</span>项合计</div>
     </div>
 
-    <div class="compliance-banner">
+    <div class="compliance-banner" id="compliance">
       <div class="banner-title">⚠️ 近期紧急合规提醒</div>
       <ul>
         <li><span class="date-tag">7/13</span> 亚马逊德国LEJ1履约中心今日永久关闭，FBA卖家需紧急切换库存</li>
@@ -226,7 +208,7 @@
       </ul>
     </div>
 
-    <div class="section-block">
+    <div class="section-block" id="platform">
       <div class="section-header">
         <span class="section-icon">🔴</span>
         <h2>平台政策</h2>
@@ -408,7 +390,7 @@
       </div>
     </div>
 
-    <div class="section-block">
+    <div class="section-block" id="compliance-tax">
       <div class="section-header">
         <span class="section-icon">🟡</span>
         <h2>合规/税务动态</h2>
@@ -540,14 +522,125 @@
       </div>
     </div>
 
-    <div class="section-block">
+
+    <!-- 物流/航运 -->
+    <div class="section-block" id="logistics">
+      <div class="section-header">
+        <span class="section-icon">🚢</span>
+        <h2>物流/航运</h2>
+      </div>
+
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge warning">🟡 关注</span>
+            <span class="platform-tag shipping">航运</span>
+            <span class="card-title">SCFI运价指数连续10周上涨创新高+达飞/MSC 7/15上调亚欧FAK运价</span>
+          </div>
+          <span class="card-deadline">7/15运价调整</span>
+        </div>
+        <div class="card-body">
+          <table class="detail-table">
+            <tr><th>变了什么</th><td>截至7/3 SCFI报收3326.87点连续10周上涨创2022年8月以来新高：①达飞7/15起上调亚欧FAK运价——北欧40HQ \$7000、北非\$10400、黑海\$7800 ②MSC同步7/15上调——北欧\$7700、西地中海\$7700、阿尔及利亚\$10100 ③达飞7/25新增巴拿马运河过境附加费 ④马士基WK30上海至鹿特丹报价较上周下跌\$700/FEU，现货运价拐点确认 ⑤宁波至美西运价突破\$6000/高柜，美东\$7000-9000/高柜</td></tr>
+            <tr><th>影响谁</th><td>所有跨境出口卖家，尤其欧线/美线海运卖家</td></tr>
+            <tr><th>关键时间</th><td>7/15达飞/MSC运价上调+7/25达飞巴拿马附加费</td></tr>
+          </table>
+          <div class="action-list">
+            <div class="action-title">🎯 3步行动清单</div>
+            <div class="action-item">1. 本周：7/15前锁定7月下半月舱位与运价</div>
+            <div class="action-item">2. 本月：在报价中预留运费波动缓冲</div>
+            <div class="action-item">3. 持续：关注马士基降价信号，欧线拐点可能带来8月运价回调</div>
+          </div>
+          <div class="source-link">来源：<a href="https://www.chwang.com/section/logistics_latest" target="_blank">出海网</a> · <a href="http://m.toutiao.com/group/7660372412235514368/" target="_blank">金融界</a></div>
+        </div>
+      </div>
+
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge warning">🟡 关注</span>
+            <span class="platform-tag logistics">苏伊士运河</span>
+            <span class="card-title">苏伊士运河7/15起大幅上调通行附加费</span>
+          </div>
+          <span class="card-deadline">7/15生效</span>
+        </div>
+        <div class="card-body">
+          <table class="detail-table">
+            <tr><th>变了什么</th><td>苏伊士运河管理局宣布7/15起大幅上调通行附加费：①对经运河的亚欧航线集装箱船加收附加费 ②此次调价叠加红海局势导致的绕航成本，亚欧航线整体成本进一步上升 ③与达飞/MSC 7/15 FAK运价上调形成叠加效应 ④建议通过运河的货主提前评估运费预算</td></tr>
+            <tr><th>影响谁</th><td>所有使用亚欧航线的跨境卖家和货代</td></tr>
+            <tr><th>关键时间</th><td>7/15生效</td></tr>
+          </table>
+          <div class="action-list">
+            <div class="action-title">🎯 3步行动清单</div>
+            <div class="action-item">1. 本周：确认7/15后经苏伊士运河航线附加费金额</div>
+            <div class="action-item">2. 本月：评估绕航好望角与经苏伊士运河的成本差异</div>
+            <div class="action-item">3. 持续：关注苏伊士运河管理局后续调整动态</div>
+          </div>
+          <div class="source-link">来源：<a href="https://www.chwang.com/section/logistics_latest" target="_blank">出海网</a></div>
+        </div>
+      </div>
+
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge danger">🔴 紧急</span>
+            <span class="platform-tag usps">USPS</span>
+            <span class="card-title">USPS暂停接受中国大陆及香港包裹</span>
+          </div>
+          <span class="card-deadline">已生效</span>
+        </div>
+        <div class="card-body">
+          <table class="detail-table">
+            <tr><th>变了什么</th><td>USPS已暂停接受中国大陆及香港的包裹寄送：①与CBP 7/24取消\$800 de minimis免税直接相关 ②多国邮政已同步暂停对美包裹寄送 ③中国卖家通过邮政小包直邮美国的渠道基本中断 ④需转向DHL/FedEx等商业快递或海外仓模式</td></tr>
+            <tr><th>影响谁</th><td>所有通过USPS邮政小包发往美国的中国跨境卖家</td></tr>
+            <tr><th>关键时间</th><td>已生效</td></tr>
+          </table>
+          <div class="action-list">
+            <div class="action-title">🎯 3步行动清单</div>
+            <div class="action-item">1. 今日：确认当前在途USPS包裹状态</div>
+            <div class="action-item">2. 本周：紧急切换至DHL/FedEx商业快递或海外仓发货</div>
+            <div class="action-item">3. 持续：关注USPS恢复对华包裹寄送的时间表</div>
+          </div>
+          <div class="source-link">来源：<a href="https://info.expeditors.com/newsflash/cbp-issues-guidance-for-international-mail-shipments" target="_blank">Expeditors/CBP</a></div>
+        </div>
+      </div>
+
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge info">🟢 参考</span>
+            <span class="platform-tag logistics">物流</span>
+            <span class="card-title">FedEx/UPS/DHL三大物流巨头启动关税返还流程</span>
+          </div>
+          <span class="card-deadline">进行中</span>
+        </div>
+        <div class="card-body">
+          <table class="detail-table">
+            <tr><th>变了什么</th><td>FedEx/UPS/DHL三大物流巨头已启动关税返还流程：①FedEx已收\$8亿全额返还客户 ②UPS和DHL也同步推进类似流程 ③主要涉及此前多收的关税保证金和处理费 ④卖家需关注各自物流商的返还通知和操作指引</td></tr>
+            <tr><th>影响谁</th><td>所有使用FedEx/UPS/DHL发货的跨境卖家</td></tr>
+            <tr><th>关键时间</th><td>进行中</td></tr>
+          </table>
+          <div class="action-list">
+            <div class="action-title">🎯 3步行动清单</div>
+            <div class="action-item">1. 本周：联系物流商确认是否有待返还的关税保证金</div>
+            <div class="action-item">2. 本月：按物流商指引提交返还申请</div>
+            <div class="action-item">3. 持续：关注返还到账情况，核对应退金额</div>
+          </div>
+          <div class="source-link">来源：<a href="https://www.chwang.com/bigevent" target="_blank">出海网</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block" id="timeline">
       <div class="section-header">
         <span class="section-icon">⏰</span>
         <h2>近期关键时间线</h2>
       </div>
       <div class="summary-card">
         <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">7/13</span><span class="summary-text">🔴 亚马逊德国LEJ1履约中心永久关闭 + 🟡 Lazada类目错放治理生效</span></div>
-        <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">7/15</span><span class="summary-text">🔴 亚马逊OTDR 90%门槛生效 + 🟡 德国站备货时间简化 + 🔴 苏伊士运河附加费上调</span></div>
+        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">7/14</span><span class="summary-text">🟡 Lazada新加坡站调整活动费率</span></div>
+        <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">7/15</span><span class="summary-text">🔴 亚马逊OTDR 90%门槛生效 + 🟡 德国站备货时间简化 + 🔴 苏伊士运河附加费上调 + 🟡 达飞/MSC上调亚欧FAK运价</span></div>
+        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">7/16</span><span class="summary-text">🟡 亚马逊GWD上海仓正式开放入仓</span></div>
         <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">7/17</span><span class="summary-text">🔴 亚马逊欧洲站FBA包装尺寸认证截止</span></div>
         <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">7/20</span><span class="summary-text">🔴 亚马逊欧英站Buy Box取消预审 + 🔴 FCC DJI壳公司回应截止</span></div>
         <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">7/21-23</span><span class="summary-text">🔴 亚马逊停用Google Shopping比价广告</span></div>
@@ -556,16 +649,11 @@
         <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">7/27</span><span class="summary-text">🔴 亚马逊标题75字符限制强制执行</span></div>
         <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">7/30</span><span class="summary-text">🔴 亚马逊FBA新选择计划生效</span></div>
         <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">7/31</span><span class="summary-text">🔴 亚马逊AWD停止接收大件商品 + 🔴 德国维修权法案生效</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">8/4</span><span class="summary-text">🔴 电子商务法修正草案征求意见截止</span></div>
         <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">8/2</span><span class="summary-text">🟡 欧盟AI生成内容披露规定落地</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">8/4</span><span class="summary-text">🔴 电子商务法修正草案征求意见截止</span></div>
+        <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">8/4</span><span class="summary-text">🔴 电子商务法修正草案征求意见截止</span></div>
         <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">8/12</span><span class="summary-text">🟡 欧盟PPWR包装法强制生效</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">8/24</span><span class="summary-text">🔴 Amazon BSA第18条禁止店铺转让/质押生效</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">8/30</span><span class="summary-text">🔴 亚马逊美加站锂电小家电TIC验证未完成强制下架</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">8/2</span><span class="summary-text">🟡 欧盟AI生成内容披露规定落地</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">8/4</span><span class="summary-text">🔴 电子商务法修正草案征求意见截止</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">8/12</span><span class="summary-text">🟡 欧盟PPWR包装法强制生效</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">8/24</span><span class="summary-text">🔴 Amazon BSA第18条禁止店铺转让/质押生效</span></div>
+        <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">8/24</span><span class="summary-text">🔴 Amazon BSA第18条禁止店铺转让/质押生效</span></div>
+        <div class="summary-item"><span class="severity-badge danger" style="font-size:10px;">8/30</span><span class="summary-text">🔴 亚马逊美加站锂电小家电TIC验证未完成强制下架</span></div>
         <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">9/1</span><span class="summary-text">🔴 Amazon MFN备货时间系统自动接管AHT锁180天 + 🟡 俄罗斯EAC信息公示合规截止</span></div>
         <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">9/30</span><span class="summary-text">🟡 Amazon BHDR企业单营业时间送达率≥90%考核执行</span></div>
         <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">~9月</span><span class="summary-text">🔴 CBP"加强海关执法"行政令IOR新规细则落地</span></div>
@@ -573,17 +661,10 @@
         <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">11/1</span><span class="summary-text">🟡 欧盟FBA货件额外加收€2海关手续费 + PID强制申报</span></div>
         <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">2027/1/8</span><span class="summary-text">🔴 CPSC eFiling对FTZ自贸区货物强制执行</span></div>
         <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">2028/10</span><span class="summary-text">🔴 英国135英镑免税直邮通道正式关闭</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">9/1</span><span class="summary-text">🔴 Amazon MFN备货时间系统自动接管AHT锁180天 + 🟡 俄罗斯EAC信息公示合规截止</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">9/30</span><span class="summary-text">🟡 Amazon BHDR企业单营业时间送达率≥90%考核执行</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">~9月</span><span class="summary-text">🔴 CBP"加强海关执法"行政令IOR新规细则落地</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">10/31</span><span class="summary-text">🟡 Amazon FBA新选择计划祖父条款截止</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">11/1</span><span class="summary-text">🟡 欧盟FBA货件额外加收€2海关手续费 + PID强制申报</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">2027/1/8</span><span class="summary-text">🔴 CPSC eFiling对FTZ自贸区货物强制执行</span></div>
-        <div class="summary-item"><span class="severity-badge warning" style="font-size:10px;">2028/10</span><span class="summary-text">🔴 英国135英镑免税直邮通道正式关闭</span></div>
-      </div>
+            </div>
     </div>
 
-    <div class="section-block">
+    <div class="section-block" id="executive-summary">
       <div class="section-header">
         <span class="section-icon">📊</span>
         <h2>摘要速览</h2>
@@ -607,100 +688,5 @@
     </footer>
   </main>
 </div>
-<script>
-// Default sources data for reset
-const DEFAULT_SOURCES = [
-  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'卖家新闻',url:'https://sellercentral.amazon.com/news',domain:'sellercentral.amazon.com'},
-  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'官方新闻中心',url:'https://press.aboutamazon.com',domain:'press.aboutamazon.com'},
-  {ch:'Amazon🇺🇸',chColor:'#FF9900',name:'卖家官方论坛（美区 Bug 哨所）',url:'https://sellercentral.amazon.com/forums',domain:'sellercentral.amazon.com'},
-  {ch:'Amazon🇪🇺',chColor:'#FF9900',name:'卖家中心（德国站）',url:'https://sellercentral.amazon.de',domain:'sellercentral.amazon.de'},
-  {ch:'Amazon🇪🇺',chColor:'#FF9900',name:'卖家中心（英国站）',url:'https://sellercentral.amazon.co.uk',domain:'sellercentral.amazon.co.uk'},
-  {ch:'Amazon🇯🇵',chColor:'#FF9900',name:'卖家中心（日本站）',url:'https://sellercentral.amazon.co.jp',domain:'sellercentral.amazon.co.jp'},
-  {ch:'Amazon',chColor:'#FF9900',name:'全球公告（Sell.amazon）',url:'https://sell.amazon.com/blog/announcements',domain:'sell.amazon.com'},
-  {ch:'Walmart',chColor:'#0071DC',name:'商家新闻',url:'https://marketplace.walmart.com/news',domain:'marketplace.walmart.com'},
-  {ch:'Walmart',chColor:'#0071DC',name:'API 变更日志',url:'https://developer.walmart.com/us-marketplace/page/whats-new',domain:'developer.walmart.com'},
-  {ch:'Target',chColor:'#CC0000',name:'Target Plus 入驻与政策',url:'https://plus.target.com/sell',domain:'plus.target.com'},
-  {ch:'TikTok Shop',chColor:'#000000',name:'官方大学与政策中心',url:'https://seller.tiktok.com/university/policy',domain:'seller.tiktok.com'},
-  {ch:'TikTok Shop',chColor:'#000000',name:'全球新闻中心',url:'https://seller.tiktokglobalshop.com/business/en/newsroom',domain:'seller.tiktokglobalshop.com'},
-  {ch:'TEMU',chColor:'#E85D2C',name:'跨境卖家中心',url:'https://seller.kuajingmaihuo.com',domain:'seller.kuajingmaihuo.com'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国海关 CBP CSMS 货运消息系统',url:'https://www.cbp.gov/trade/automated',domain:'cbp.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国 FDA 食品与补充剂监管局',url:'https://www.fda.gov/food',domain:'fda.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国 CPSC 消费品安全委员会（小家电下架杀手）',url:'https://www.cpsc.gov/Newsroom',domain:'cpsc.gov'},
-  {ch:'官方机构',chColor:'#dc2626',name:'美国加州 Prop 65 环保标签局',url:'https://oehha.ca.gov/proposition-65',domain:'oehha.ca.gov'},
-  {ch:'欧盟',chColor:'#003399',name:'欧盟税务与海关总署（VAT/关税总线）',url:'https://taxation-customs.ec.europa.eu',domain:'ec.europa.eu'},
-  {ch:'欧盟',chColor:'#003399',name:'欧盟 Safety Gate 安全门（欧洲产品安全召回）',url:'https://ec.europa.eu/consumers/consumers_safety/safety_products/rapex',domain:'ec.europa.eu'},
-  {ch:'德国',chColor:'#1d4ed8',name:'德国 WEEE 注册局（Stiftung EAR · 带电产品硬合规）',url:'https://www.stiftung-ear.de',domain:'stiftung-ear.de'},
-  {ch:'德国',chColor:'#1d4ed8',name:'德国 LUCID 包装法注册局（Verpackungsregister）',url:'https://www.verpackungsregister.org',domain:'verpackungsregister.org'},
-  {ch:'日本',chColor:'#C41E3A',name:'日本経済産業省 METI（PSE/产品合规）',url:'https://www.meti.go.jp',domain:'meti.go.jp'},
-  {ch:'Amazon',chColor:'#FF9900',name:'SP-API 变更日志（防 RPA 脚本断流）',url:'https://developer-docs.amazon.com/sp-api/changelog',domain:'developer-docs.amazon.com'},
-  {ch:'航运',chColor:'#0d9488',name:'上海航运交易所（SCFI/NCFI 头程运价精算）',url:'https://www.sse.net.cn',domain:'sse.net.cn'},
-  {ch:'行业社区',chColor:'#7c3aed',name:'知无不言（一线暗改/黑产/防挨打爆料）',url:'https://www.wearesellers.com',domain:'wearesellers.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'卖家之家',url:'https://mjzj.com',domain:'mjzj.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'雨果跨境',url:'https://cifnews.com',domain:'cifnews.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'亿邦动力',url:'https://ebrun.com',domain:'ebrun.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'至美通（北美/欧盟政策+物流）',url:'https://www.chinatotop.com',domain:'chinatotop.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'跨境大发哥（全平台政策+税务）',url:'https://m.toutiao.com/search/?keyword=跨境大发哥',domain:'toutiao.com'},
-  {ch:'航运',chColor:'#0d9488',name:'WL123跨境导航（物流+关税+清关）',url:'https://www.wl123.com',domain:'wl123.com'},
-  {ch:'行业媒体',chColor:'#7c3aed',name:'白鲸出海（东南亚+欧洲政策）',url:'https://www.baijingapp.com',domain:'baijingapp.com'},
-  {ch:'航运',chColor:'#0d9488',name:'跨境物流百晓生（运价+航线+物流）',url:'https://m.toutiao.com/search/?keyword=跨境物流百晓生',domain:'toutiao.com'},
-  {ch:'行业媒体',chColor:'#f59e0b',name:'吉易跨境',url:'https://www.jiyikj.com',domain:'jiyikj.com'}
-]
-
-function buildRow(s) {
-  const urlCell = s.url ? '<a href="'+s.url+'" target="_blank">'+s.url.replace(/^https?:\/\//,'')+'</a>' : '—';
-  const domainCell = s.domain || '—';
-  return '<tr><td class="st-channel"><span class="sc-tag" style="background:'+s.chColor+'">'+s.ch+'</span></td><td class="st-name">'+s.name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+domainCell+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td></tr>';
-}
-
-function resetSources() {
-  const tbody = document.getElementById('sources-tbody');
-  tbody.innerHTML = DEFAULT_SOURCES.map(buildRow).join('');
-  updateCount();
-}
-
-function delSourceRow(btn) {
-  btn.closest('tr').remove();
-  updateCount();
-}
-
-function addSourceRow() {
-  const tbody = document.getElementById('sources-tbody');
-  if (tbody.querySelector('.add-row')) return;
-  const tr = document.createElement('tr');
-  tr.className = 'add-row';
-  tr.innerHTML = '<td class="st-channel"><input placeholder="渠道" id="new-ch"></td><td class="st-name"><input placeholder="名称" id="new-name"></td><td class="st-url"><input placeholder="URL" id="new-url"></td><td class="st-domain"><input placeholder="域名" id="new-domain"></td><td class="st-enable"><input type="checkbox" checked id="new-enabled"></td><td style="text-align:center"><button class="btn-save" onclick="saveNewSource()">✓</button> <button class="btn-cancel" onclick="cancelNewSource()">✕</button></td>';
-  tbody.appendChild(tr);
-  document.getElementById('new-ch').focus();
-}
-
-function saveNewSource() {
-  const ch = document.getElementById('new-ch').value.trim();
-  const name = document.getElementById('new-name').value.trim();
-  const url = document.getElementById('new-url').value.trim();
-  const domain = document.getElementById('new-domain').value.trim();
-  if (!name) { document.getElementById('new-name').focus(); return; }
-  const row = document.querySelector('.add-row');
-  const urlCell = url ? '<a href="'+url+'" target="_blank">'+url.replace(/^https?:\/\//,'')+'</a>' : '—';
-  row.className = '';
-  row.innerHTML = '<td class="st-channel"><span class="sc-tag" style="background:#64748b">'+(ch||'自定义')+'</span></td><td class="st-name">'+name+'</td><td class="st-url">'+urlCell+'</td><td class="st-domain">'+(domain||'—')+'</td><td class="st-enable"><input type="checkbox" checked></td><td class="st-del"><button class="btn-del" onclick="delSourceRow(this)">✕</button></td>';
-  updateCount();
-}
-
-function cancelNewSource() {
-  const row = document.querySelector('.add-row');
-  if (row) row.remove();
-}
-
-function updateCount() {
-  const count = document.querySelectorAll('#sources-tbody tr:not(.add-row)').length;
-  const badge = document.querySelector('#sources .section-badge');
-  if (badge) badge.textContent = count + '个来源';
-  const navCount = document.querySelector('a[href="#sources"] .nav-count');
-  if (navCount) navCount.textContent = count;
-}
-
-// Init sources table on page load
-document.addEventListener('DOMContentLoaded', resetSources);
-</script>
 </body>
 </html>
