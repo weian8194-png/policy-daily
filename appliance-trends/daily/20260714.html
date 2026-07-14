@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年7月14日 小家电市场趋势</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
+    .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f0fdfa; }
+    .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
+    .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .sidebar-nav { padding: 8px 0; }
+    .nav-section { margin-bottom: 4px; }
+    .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .nav-item:hover { background: rgba(13,148,136,0.06); color: #e2e8f0; border-left-color: #0d9488; }
+    .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
+    .nav-count.hot { background: rgba(13,148,136,0.15); color: #5eead4; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .content-header .date-line .update-time { font-size: 11px; background: #f0fdfa; color: #0d9488; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; display: flex; align-items: flex-start; gap: 12px; }
+    .highlight-banner .hl-icon { font-size: 28px; flex-shrink: 0; }
+    .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
+    .highlight-banner .hl-text strong { color: #92400e; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
+    .opportunity-card.card-trend { border-left: 4px solid #f59e0b; }
+    .opportunity-card.card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-slushee { background: #7c3aed; }
+    .tag-icecream { background: #d97706; }
+    .tag-pizza { background: #dc2626; }
+    .tag-ice { background: #0e7490; }
+    .tag-griddle { background: #dc2626; }
+    .tag-airfryer { background: #ea580c; }
+    .tag-steam { background: #2563eb; }
+    .tag-coffee { background: #7c2d12; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-new { background: #faf5ff; color: #8b5cf6; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-new-note { background: #faf5ff; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #e9d5ff; }
+    .card-new-note .new-label { font-size: 11px; font-weight: 700; color: #8b5cf6; margin-bottom: 4px; }
+    .card-new-note .new-text { font-size: 12px; color: #5b21b6; line-height: 1.7; }
+    .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .main-content { margin-left: 0; padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h1>🏠 小家电趋势</h1>
+      <div class="version">Appliance Trends v2.1</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">📊 今日数据</div>
+        <a class="nav-item" href="#quick-report">🔥 机会速报 <span class="nav-count hot">8</span></a>
+        <a class="nav-item" href="#detail-analysis">📋 详析延续 <span class="nav-count">8</span></a>
+        <a class="nav-item" href="#watchlist">🔍 其他动向 <span class="nav-count">3</span></a>
+      </div>
+      <div style="height:1px;background:rgba(255,255,255,0.04);margin:10px 24px;"></div>
+      <div class="nav-section">
+        <div class="nav-section-title">📅 历史归档</div>
+        <a class="nav-item" href="../">← 返回首页</a>
+        <a class="nav-item" href="./20260713.html">2026-07-13</a>
+        <a class="nav-item" href="./20260712.html">2026-07-12</a>
+        <a class="nav-item" href="./20260711.html">2026-07-11</a>
+      </div>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="content-header">
+      <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+      <div class="date-line">数据日期: <span class="date-val">2026年7月14日（周二）</span> <span class="update-time">08:30 更新</span></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-chip hot"><span class="stat-num">8</span>🔥 追踪机会</div>
+      <div class="stat-chip new"><span class="stat-num">1</span>🆕 今日新增</div>
+      <div class="stat-chip trend"><span class="stat-num">1</span>🔄 有变化</div>
+    </div>
+
+    <div class="highlight-banner">
+      <div class="hl-icon">🆕</div>
+      <div class="hl-text"><strong>家用沙冰/冷饮机正式列为新增追踪品类！</strong>Ninja Slushi Twist全新发布($399.99双腔)，Ninja SLUSHi首次登顶TikTok Shop 6月Top 10（$1.95M营收），Iceman by Chefman走红($179.95)——冷饮制作品类从"小众玩具"升格为"主流家电"。同时，Typhur Smart Nugget Ice Maker新晋Amazon Best Seller，首次将App智能控制带入$200制冰机价位。</div>
+    </div>
+
+    <!-- ===== Opportunity Quick Report ===== -->
+    <section class="section-block" id="quick-report">
+      <div class="section-header">
+        <h2>🔥 今日机会速报</h2>
+        <span class="section-badge badge-new">8个机会 · 1个新增 · 1个有变化</span>
+      </div>
+
+      <div class="opportunity-card card-new">
+        <div class="card-top">
+          <span class="category-tag tag-slushee">🧊 沙冰/冷饮机</span>
+          <span class="status-badge status-new">🆕 新增</span>
+        </div>
+        <div class="card-title">家用沙冰/冷饮机 · $100-179 · ⭐⭐⭐⭐⭐</div>
+        <div class="card-new-note">
+          <div class="new-label">📊 核心验证数据</div>
+          <div class="new-text">
+            • 据NetInfluencer（7/13）TikTok Shop 6月Top 10：<strong>Ninja SLUSHi首次上榜</strong>，单月$1.95M营收，6,660台，均价$292.30，1,680位创作者带货——家用冷饮机首次进入TikTok销冠榜单<br>
+            • 同月Ninja CREAMi XL Deluxe也上榜（#8，$2.18M，8,770台），<strong>Ninja首次同时占据TikTok Top 10两个席位</strong><br>
+            • 据Berlin Herald（7/12）&amp; MixTV1（7/13）：<strong>Ninja Slushi Twist全新发布</strong>，$399.99，双48oz独立腔体+Dual SlushAssist智能温控+旋转分配器，自清洁冲洗——品类进入"第二代产品"<br>
+            • 据Today.com（7/13）&amp; Noovomoi（7/13）：<strong>Iceman by Chefman Slush-Ease MAX走红</strong>，$179.95（49% off），90oz/64oz液容量，5预设+LED屏，被称为"比Ninja便宜且效果相当"的替代
+          </div>
+        </div>
+        <div class="card-insight">
+          <div class="insight-label">💡 $100+选品机会推导</div>
+          <div class="insight-text">消费者在$100+价位已愿意为"一键出冷饮"的压缩机+预设程序组合付钱（Iceman $179.95验证、Ninja SLUSHi $292均价验证）。痛点：Ninja $292+太贵，Iceman $179.95体积偏大。$100-149缺一个"够用不占地方"的单腔压缩机沙冰机。推荐价天然落在$100-149：单腔48oz + 5预设（沙冰/奶昔/冰咖啡/鸡尾酒/冷饮）+ 自清洁 + 紧凑设计，BOM约$35-45，毛利60%+。与冰淇淋机区别：沙冰机是饮品类（高频日常+社交场景），冰淇淋机是甜品类（相对低频）。</div>
+        </div>
+      </div>
+
+      <div class="opportunity-card card-trend">
+        <div class="card-top">
+          <span class="category-tag tag-ice">🧊 制冰机</span>
+          <span class="status-badge status-changed">🔄 有变化</span>
+        </div>
+        <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐</div>
+        <div class="card-change-note">
+          <div class="change-label">📊 今日新增数据</div>
+          <div class="change-text">
+            据BrickSeek（7/13），<strong>Typhur Smart Nugget Ice Maker</strong>新晋Amazon Best Seller，$199（20% off from $249），核心差异化是<strong>App控制+自清洁泵</strong>+8次清洁剂赠品+35lbs/24H——这是首个在$200价位带加入智能App控制的nugget ice maker，此前GE Profile Opal 2.0（$400+）才有WiFi+App。Typhur把"智能制冰"从$400拉到$200，验证了$100-149价位做"基础版智能制冰"的可行性。
+          </div>
+        </div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-icecream">🍦 冰淇淋机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">压缩机冰淇淋机 · $100-149 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-pizza">🍕 室内披萨烤箱</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">室内披萨烤箱/高热台式烤箱 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-griddle">🍳 电烤盘</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">电烤盘/室内烧烤炉 · $100-129 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-airfryer">🍟 蒸烤炸一体</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸烤炸一体机 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-steam">💨 蒸汽清洁</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">蒸汽+吸尘+除螨三合一清洁机 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+
+      <div class="opportunity-card card-continue">
+        <div class="card-top">
+          <span class="category-tag tag-coffee">☕ 咖啡机</span>
+          <span class="status-badge status-unchanged">— 无变化</span>
+        </div>
+        <div class="card-title">冷萃+热萃双模式咖啡机 · $100-129 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+      </div>
+    </section>
+
+    <!-- ===== Detail / Continue Table ===== -->
+    <section class="section-block" id="detail-analysis">
+      <div class="section-header">
+        <h2>📋 延续中机会点</h2>
+      </div>
+      <table class="continue-table">
+        <thead>
+          <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🧊 家用沙冰/冷饮机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>7/14 Ninja Twist发布+TikTok $1.95M+Iceman走红</td><td style="color:#8b5cf6;font-weight:600;">新增</td></tr>
+          <tr><td>🍦 压缩机冰淇淋机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>7/13 宁波沙冰机北美先行验证+制冷设备出口增22.7%</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>🧊 制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/14 Typhur智能制冰Best Seller $199</td><td style="color:#d97706;font-weight:600;">延续·有变化</td></tr>
+          <tr><td>🍕 室内披萨烤箱/高热台式烤箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>7/11 Prime Day Ninja Foodi 13-in-1 $199.99验证</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>🍳 电烤盘/室内烧烤炉</td><td>$100-129</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>7/5 Zojirushi促销+BBQ峰值已过</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>🍟 蒸烤炸一体机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 蒸功能上市验证</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>💨 蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td style="color:#64748b;">延续·无变化</td></tr>
+          <tr><td>☕ 冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>7/2 冷萃技术验证</td><td style="color:#64748b;">延续·无变化</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Watch Items ===== -->
+    <section class="section-block" id="watchlist">
+      <div class="section-header">
+        <h2>🔍 其他动向</h2>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🧊 Ninja Slushi Twist vs 原版SLUSHi定位分化</div>
+        <div class="watch-text">据MixTV1（7/13）：Twist $399.99面向"常办聚会/大家庭"（双腔+渐层饮品），原版SLUSHi $259面向"日常冷饮爱好者"（单腔+紧凑），品类用户画像正在细分</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">🍕 The Independent披萨烤箱对比 &amp; Which.co.uk最佳披萨烤箱</div>
+        <div class="watch-text">据The Independent（7/13）：Ooni Karu 2（多燃料/500°C）vs Ninja Artisan Electric（电/370°C），电动披萨烤箱"便利性换极致温度"形成共识。Which.co.uk（7/13）测试45+款，Sage Pizzaiolo为唯一Electric+Indoor选项，室内披萨烤箱品类仍由高端品牌主导</div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-title">📱 TikTok厨房类趋势（配件类为主）</div>
+        <div class="watch-text">据TMZ（7/13）&amp; BestChoice（7/13）：Fullstar Pro Chopper切菜器持续走红，Takeya冷萃咖啡maker为TikTok Amazon热门，均为$25以下配件类，不影响$90+小家电追踪</div>
+      </div>
+    </section>
+
+    <div class="page-footer">
+      <div class="footer-divider"></div>
+      <div>📊 数据来源：NetInfluencer · Berlin Herald · MixTV1 · Today.com · Noovomoi · BrickSeek · BestChoice · The Independent · Which.co.uk · TMZ · CyberGuy · Amazon（12个信息源）</div>
+      <div>⏰ 每日08:00自动更新 · $90+中高客单价选品机会</div>
+      <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
