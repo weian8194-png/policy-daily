@@ -3,20 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>美国亚马逊$90+小家电市场趋势</title>
+  <title>2026年7月16日 小家电市场趋势</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; scroll-padding-top: 16px; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-
-    .section-block:target { animation: target-flash 1.5s ease-out; }
-    @keyframes target-flash { 0% { box-shadow: 0 0 0 3px rgba(13,148,136,0.4); } 100% { box-shadow: 0 0 0 0 rgba(13,148,136,0); } }
-    .nav-item:active, .nav-item:focus { color: #f1f5f9 !important; background: rgba(13,148,136,0.15) !important; border-left-color: #0d9488 !important; }
-
     .layout { display: flex; min-height: 100vh; }
     .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
     .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f0fdfa; }
-
     .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
     .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
@@ -25,69 +19,45 @@
     .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
     .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
     .nav-item:hover { background: rgba(13,148,136,0.06); color: #e2e8f0; border-left-color: #0d9488; }
-    .nav-item.active { color: #f1f5f9; background: rgba(13,148,136,0.1); border-left-color: #0d9488; }
     .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
     .nav-count.hot { background: rgba(13,148,136,0.15); color: #5eead4; }
     .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
-
-    .archive-section { padding: 0; }
-    .archive-section-title { display: flex; align-items: center; justify-content: space-between; padding: 8px 24px; font-size: 11px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; }
-    details.archive-month { padding: 0; }
-    details.archive-month summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px 6px 28px; cursor: pointer; font-size: 13px; color: #94a3b8; list-style: none; transition: color 0.15s; border-left: 2px solid transparent; }
-    details.archive-month summary::-webkit-details-marker { display: none; }
-    details.archive-month summary::before { content: "📁"; margin-right: 6px; font-size: 12px; }
-    details.archive-month[open] summary::before { content: "📂"; }
-    details.archive-month summary:hover { color: #e2e8f0; background: rgba(13,148,136,0.06); border-left-color: #0d9488; }
-    details.archive-month summary .month-info { font-weight: 500; }
-    details.archive-month summary .month-stats { font-size: 11px; color: #475569; }
-    .archive-day { display: block; padding: 3px 24px 3px 48px; color: #64748b; text-decoration: none; font-size: 12px; transition: all 0.15s; border-left: 2px solid transparent; }
-    .archive-day::before { content: "📄 "; font-size: 11px; }
-    .archive-day:hover { color: #e2e8f0; background: rgba(13,148,136,0.06); border-left-color: #0d9488; }
-    .archive-day .day-count { font-size: 10px; color: #475569; margin-left: 4px; }
-
     .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
     .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
     .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
     .content-header .date-line .date-val { font-weight: 700; color: #334155; }
     .content-header .date-line .update-time { font-size: 11px; background: #f0fdfa; color: #0d9488; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
-
     .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
     .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
     .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
     .stat-chip.hot .stat-num { color: #0d9488; }
     .stat-chip.new .stat-num { color: #8b5cf6; }
     .stat-chip.trend .stat-num { color: #f59e0b; }
-
     .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; display: flex; align-items: flex-start; gap: 12px; }
     .highlight-banner .hl-icon { font-size: 28px; flex-shrink: 0; }
     .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
     .highlight-banner .hl-text strong { color: #92400e; }
-
     .section-block { margin-bottom: 28px; }
     .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
     .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
     .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
     .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
-    .section-header .badge-new { background: #faf5ff; color: #8b5cf6; }
     .section-header .badge-trend { background: #fffbeb; color: #d97706; }
-
     .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
     .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
-    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
     .opportunity-card.card-trend { border-left: 4px solid #f59e0b; }
     .opportunity-card.card-continue { border-left: 4px solid #94a3b8; }
     .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
     .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-ice { background: #0e7490; }
     .tag-slushee { background: #7c3aed; }
     .tag-icecream { background: #d97706; }
     .tag-pizza { background: #dc2626; }
-    .tag-ice { background: #0e7490; }
     .tag-griddle { background: #dc2626; }
     .tag-airfryer { background: #ea580c; }
     .tag-steam { background: #2563eb; }
     .tag-coffee { background: #7c2d12; }
     .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
-    .status-new { background: #faf5ff; color: #8b5cf6; }
     .status-changed { background: #fffbeb; color: #d97706; }
     .status-unchanged { background: #f1f5f9; color: #64748b; }
     .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
@@ -97,27 +67,22 @@
     .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
     .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
     .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
-
     .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
     .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
     .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
     .continue-table tr:hover td { background: #f8fafc; }
-
     .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
     .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
     .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
     .watch-item a { color: #0d9488; text-decoration: none; }
     .watch-item a:hover { text-decoration: underline; }
-
     .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
     .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
     .page-footer a { color: #0d9488; text-decoration: none; }
     .page-footer a:hover { text-decoration: underline; }
-
-    @media (max-width: 900px) {
-      .sidebar { display: none; }
-      .main-content { margin-left: 0; padding: 16px; }
-    }
+    .back-link { display: inline-block; margin-bottom: 16px; color: #0d9488; text-decoration: none; font-size: 13px; font-weight: 600; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 900px) { .sidebar { display: none; } .main-content { margin-left: 0; padding: 16px; } }
   </style>
 </head>
 <body>
@@ -136,73 +101,13 @@
         <a class="nav-item" href="#watchlist">🔍 其他动向 <span class="nav-count">3</span></a>
       </div>
       <div class="nav-divider"></div>
-
-      <div class="archive-section">
-        <div class="archive-section-title">📅 历史归档 / Archives</div>
-        <details class="archive-month" open>
-          <summary><span class="month-info">2026年07月</span><span class="month-stats">16天</span></summary>
-          <a class="archive-day" href="./daily/20260716.html">2026-07-16 <span class="day-count">8个</span></a>
-          <a class="archive-day" href="./daily/20260715.html">2026-07-15 <span class="day-count">8个</span></a>
-          <a class="archive-day" href="./daily/20260714.html">2026-07-14 <span class="day-count">8个</span></a>
-          <a class="archive-day" href="./daily/20260713.html">2026-07-13 <span class="day-count">7个</span></a>
-          <a class="archive-day" href="./daily/20260712.html">2026-07-12 <span class="day-count">7个</span></a>
-          <a class="archive-day" href="./daily/20260711.html">2026-07-11 <span class="day-count">7个</span></a>
-          <a class="archive-day" href="./daily/20260710.html">2026-07-10 <span class="day-count">7个</span></a>
-          <a class="archive-day" href="./daily/20260709.html">2026-07-09 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260708.html">2026-07-08 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260707.html">2026-07-07 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260706.html">2026-07-06 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260705.html">2026-07-05 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260704.html">2026-07-04 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260703.html">2026-07-03 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260702.html">2026-07-02 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260701.html">2026-07-01 <span class="day-count">5个</span></a>
-        </details>
-        <details class="archive-month">
-          <summary><span class="month-info">2026年06月</span><span class="month-stats">27天</span></summary>
-          <a class="archive-day" href="./daily/20260630.html">2026-06-30 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260629.html">2026-06-29 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260628.html">2026-06-28 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260627.html">2026-06-27 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260625.html">2026-06-25 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260624.html">2026-06-24 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260623.html">2026-06-23 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260622.html">2026-06-22 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260621.html">2026-06-21 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260620.html">2026-06-20 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260619.html">2026-06-19 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260618.html">2026-06-18 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260617.html">2026-06-17 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260616.html">2026-06-16 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260615.html">2026-06-15 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260614.html">2026-06-14 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260613.html">2026-06-13 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260612.html">2026-06-12 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260611.html">2026-06-11 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260610.html">2026-06-10 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260608.html">2026-06-08 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260607.html">2026-06-07 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260606.html">2026-06-06 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260605.html">2026-06-05 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260604.html">2026-06-04 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260603.html">2026-06-03 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260602.html">2026-06-02 <span class="day-count">5个</span></a>
-        </details>
-        <details class="archive-month">
-          <summary><span class="month-info">2026年05月</span><span class="month-stats">4天</span></summary>
-          <a class="archive-day" href="./daily/20260531.html">2026-05-31 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260530.html">2026-05-30 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260529.html">2026-05-29 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260528.html">2026-05-28 <span class="day-count">5个</span></a>
-        </details>
-      </div>
-
-      <div class="nav-divider"></div>
-      <div class="nav-item" style="font-size:12px;">📡 信息源：12个配置源</div>
+      <a class="nav-item" href="../index.html">← 返回首页</a>
     </nav>
   </aside>
 
   <main class="main-content">
+
+    <a class="back-link" href="../index.html">← 返回首页</a>
 
     <div class="content-header">
       <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
@@ -217,7 +122,7 @@
 
     <div class="highlight-banner">
       <div class="hl-icon">🧊</div>
-      <div class="hl-text"><strong>GE Profile Opal Mini正式发布！</strong>TikTok爆款nugget制冰机紧凑版于7/14上市，三档$279-$399，比Ultra缩小30%。GE入场验证"小体积nugget冰"刚需，$279仍是大众心理门槛，$100-149价位段跟随者将直接受益于品类教育。同时Costco Brio 740i降至$199.99，制冰机赛道竞争白热化。沙冰机赛道Ranvaira入局$130-160区间，Ninja独大格局开始松动。</div>
+      <div class="hl-text"><strong>GE Profile Opal Mini正式发布！</strong>TikTok爆款nugget制冰机的紧凑版于7/14上市，三档$279-$399，比Ultra缩小30%。GE入场验证"小体积nugget冰"刚需，$279仍是大众心理门槛，$100-149价位段跟随者将直接受益于品类教育。同时Costco Brio 740i降至$199.99，制冰机赛道竞争白热化。</div>
     </div>
 
     <!-- ===== Opportunity Quick Report ===== -->
@@ -236,7 +141,7 @@
         <div class="card-change-note">
           <div class="change-label">📊 今日新增数据</div>
           <div class="change-text">
-            GE Profile于7/14正式发布<strong>Opal Mini Nugget Ice Maker</strong>——制冰机品类今年最大产品发布。三档配置：Opal Mini（$279-$299）、Opal Mini Pro（$379）、Opal Mini Pro+（$399），比Opal Ultra缩小30%，日产能36磅、储冰2磅。Opal Mini采用顶部注水设计缩小占地，Pro/Pro+配侧边水箱+SmartHQ App控制。首发四色（石灰/炭灰/钢灰/不锈钢），秋季追加牡丹粉/苔绿/月石蓝。<strong>Walmart独占炭灰款$279</strong>。据Mashable（7/15），GE小家电执行总监André Zdanow表示"客户最常见建议就是做更小的Opal"。同时Costco（截至7/19）<strong>Brio 740i Nugget Ice Maker降至$199.99</strong>（$50 off），Ninja CREAMi降至$149.99（$40 off）。
+            GE Profile于7/14正式发布Opal Mini Nugget Ice Maker——制冰机品类今年最大产品发布。三档配置：<strong>Opal Mini（$279-$299）</strong>、Opal Mini Pro（$379）、Opal Mini Pro+（$399），比Opal Ultra缩小30%，日产能36磅、储冰2磅。Opal Mini采用顶部注水设计缩小占地，Pro/Pro+配侧边水箱+SmartHQ App控制。首发四色（石灰/炭灰/钢灰/不锈钢），秋季追加牡丹粉/苔绿/月石蓝。<strong>Walmart独占炭灰款$279</strong>。据Mashable（7/15），GE小家电执行总监André Zdanow表示"客户最常见建议就是做更小的Opal"。同时Costco（截至7/19）<strong>Brio 740i Nugget Ice Maker降至$199.99</strong>（$50 off），Ninja CREAMi降至$149.99（$40 off）。
           </div>
         </div>
         <div class="card-insight">
