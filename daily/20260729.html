@@ -112,516 +112,479 @@
 </head>
 <body>
 <div class="layout">
-
-<main class="main-content">
-  <div class="content-header">
-    <h1>📋 跨境政策日报</h1>
-    <div class="date-line">
-      <span class="date-val">2026年7月29日 周二</span>
-      <span class="update-time">更新于 08:25</span>
+  <nav class="sidebar">
+    <div class="sidebar-brand">
+      <h1>跨境政策日报</h1>
+      <div class="version">Policy Daily v2.7</div>
     </div>
-  </div>
-
-  <div class="stats-row">
-    <div class="stat-chip danger"><span class="stat-num">5</span>🔴紧急</div>
-    <div class="stat-chip warn"><span class="stat-num">9</span>🟡关注</div>
-    <div class="stat-chip info"><span class="stat-num">2</span>🟢参考</div>
-    <div class="stat-chip platform"><span class="stat-num">34</span>信息源</div>
-  </div>
-
-  <!-- 合规提醒 Banner -->
-  <div class="compliance-banner" id="compliance">
-    <div class="banner-title">⚠️ 紧急合规提醒</div>
-    <ul>
-      <li><span class="date-tag">7/27</span> 亚马逊标题75字符限制已生效(第3天) — AI自动截断改写中</li>
-      <li><span class="date-tag">7/28</span> 亚马逊五点描述新规已生效 — 禁用emoji/营销词/售后话术+AI审核</li>
-      <li><span class="date-tag">7/29</span> 美国贸易欺诈执法指南发布 — 全供应链追责+三重叠加处罚</li>
-      <li><span class="date-tag">7/31</span> AWD停止接收大件商品+德国维修权法案生效(倒计时2天)</li>
-      <li><span class="date-tag">8/1</span> CBP CNC/精密设备须附数字原产地声明+能效声明(倒计时3天)</li>
-      <li><span class="date-tag">8/24</span> 亚马逊禁止未经书面许可转让或质押账号(新增)</li>
-    </ul>
-  </div>
-
-  <!-- 摘要速览 -->
-  <div class="section-block" id="executive-summary">
-    <div class="section-header">
-      <span class="section-icon">🔥</span>
-      <h2>摘要速览</h2>
-    </div>
-    <div class="summary-card">
-      <div class="summary-item">
-        <span class="severity-badge danger">🔴</span>
-        <span class="summary-text">美国DOJ/DHS发布首份《贸易欺诈执法资源指南》：贸易欺诈升级为国家安全威胁，全供应链追责(进口商→报关行→货代→分销商→高管)，行政+民事+刑事三重叠加处罚，TFTF工作组10个月追缴超10亿美元</span>
+    <div class="sidebar-nav">
+      <div class="nav-section">
+        <div class="nav-section-title">今日导航</div>
+        <a class="nav-item active" href="#executive-summary">摘要速览 <span class="nav-count danger">8</span></a>
+        <a class="nav-item" href="#compliance">合规提醒 <span class="nav-count danger">6</span></a>
+        <a class="nav-item" href="#platform">平台政策 <span class="nav-count danger">5</span></a>
+        <a class="nav-item" href="#compliance-tax">合规/税务 <span class="nav-count warn">9</span></a>
+        <a class="nav-item" href="#logistics">物流/航运 <span class="nav-count warn">2</span></a>
+        <a class="nav-item" href="#timeline">时间线 <span class="nav-count">19</span></a>
+        <a class="nav-item" href="#sources">信息源 <span class="nav-count">34</span></a>
       </div>
-      <div class="summary-item">
-        <span class="severity-badge danger">🔴</span>
-        <span class="summary-text">CBP对越南中资工厂现场突击检查：核查原材料来源+生产流程+在越增值比例，排查"洗产地"转口贸易，可能借此加征越南额外关税</span>
-      </div>
-      <div class="summary-item">
-        <span class="severity-badge danger">🔴</span>
-        <span class="summary-text">亚马逊五点描述强制新规7/28落地：禁用特殊符号/emoji/售后话术/绝对化词，AI自动审核改写，卖家仅14天审核窗口</span>
-      </div>
-      <div class="summary-item">
-        <span class="severity-badge danger">🔴</span>
-        <span class="summary-text">亚马逊8/24起禁止未经书面许可转让或质押账号：违规直接冻结+不承担赔偿责任</span>
-      </div>
-      <div class="summary-item">
-        <span class="severity-badge danger">🔴</span>
-        <span class="summary-text">亚马逊登顶《财富》500强：7170亿美元营收首超沃尔玛，活跃卖家一年减少60万(240万→180万)，合规门槛持续抬高</span>
-      </div>
-      <div class="summary-item">
-        <span class="severity-badge warning">🟡</span>
-        <span class="summary-text">进口商就"强迫劳动关税"集体起诉美国政府：要求撤销对60个经济体几乎所有进口商品关税</span>
-      </div>
-      <div class="summary-item">
-        <span class="severity-badge warning">🟡</span>
-        <span class="summary-text">红海/霍尔木兹通航骤降：Bab el-Mandeb降50%+霍尔木兹降90%+能源外运仅100万桶/日</span>
-      </div>
-      <div class="summary-item">
-        <span class="severity-badge warning">🟡</span>
-        <span class="summary-text">跨境电商全国税务处罚标准统一：金税四期四流比对+私卡收外汇罚0.5-5倍+骗取出口退税最高5倍</span>
+      <div class="nav-divider"></div>
+      <div class="archive-section">
+        <div class="archive-section-title">历史归档</div>
+        <details class="archive-month" open>
+          <summary><span class="month-info">7月</span><span class="month-stats">29篇</span></summary>
+          <a class="archive-day" href="20260729.html">7/29 周三</a>
+          <a class="archive-day" href="20260728.html">7/28 周二</a>
+          <a class="archive-day" href="20260727.html">7/27 周一</a>
+          <a class="archive-day" href="20260726.html">7/26 周日</a>
+          <a class="archive-day" href="20260725.html">7/25 周六</a>
+          <a class="archive-day" href="20260724.html">7/24 周五</a>
+        </details>
+        <details class="archive-month">
+          <summary><span class="month-info">6月</span><span class="month-stats">30篇</span></summary>
+          <a class="archive-day" href="20260630.html">6/30</a>
+        </details>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <!-- 平台政策 -->
-  <div class="section-block" id="platform">
-    <div class="section-header">
-      <span class="section-icon">🏪</span>
-      <h2>平台政策</h2>
-    </div>
-
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge danger">🔴紧急</span>
-          <span class="platform-tag amazon">Amazon</span>
-        </div>
-        <span class="card-date">7/28已生效</span>
+  <main class="main-content">
+    <!-- 摘要速览 -->
+    <section id="executive-summary" class="section-block">
+      <div class="content-header">
+        <h1>跨境政策日报</h1>
+        <div class="date-line"><span class="date-val">2026年7月29日 周三</span><span class="update-time">08:25 更新</span></div>
       </div>
-      <div class="card-body">
-        <h3>亚马逊五点描述强制新规落地</h3>
-        <p>7月28日，亚马逊与75字符标题限制同步实施五点描述(Bullet Points)严格新规：</p>
+      <div class="stats-row">
+        <div class="stat-chip danger"><span class="stat-num">5</span>紧急</div>
+        <div class="stat-chip warn"><span class="stat-num">9</span>关注</div>
+        <div class="stat-chip info"><span class="stat-num">2</span>参考</div>
+        <div class="stat-chip platform"><span class="stat-num">34</span>信息源</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-item"><span class="severity-badge danger">紧急</span><span class="summary-text">美国DOJ/DHS发布首份《贸易欺诈执法资源指南》：贸易欺诈升级为国家安全威胁，全供应链追责(进口商→报关行→货代→分销商→高管)，行政+民事+刑事三重叠加处罚，TFTF工作组10个月追缴超10亿美元</span></div>
+        <div class="summary-item"><span class="severity-badge danger">紧急</span><span class="summary-text">CBP对越南中资工厂现场突击检查：核查原材料来源+生产流程+在越增值比例，排查"洗产地"转口贸易，可能借此加征越南额外关税</span></div>
+        <div class="summary-item"><span class="severity-badge danger">紧急</span><span class="summary-text">亚马逊五点描述强制新规7/28落地：禁用特殊符号/emoji/售后话术/绝对化词，AI自动审核改写，卖家仅14天审核窗口</span></div>
+        <div class="summary-item"><span class="severity-badge danger">紧急</span><span class="summary-text">亚马逊8/24起禁止未经书面许可转让或质押账号：违规直接冻结+不承担赔偿责任</span></div>
+        <div class="summary-item"><span class="severity-badge danger">紧急</span><span class="summary-text">亚马逊登顶《财富》500强：7170亿美元营收首超沃尔玛，活跃卖家一年减少60万(240万→180万)，合规门槛持续抬高</span></div>
+        <div class="summary-item"><span class="severity-badge warning">关注</span><span class="summary-text">进口商就"强迫劳动关税"集体起诉美国政府：要求撤销对60个经济体几乎所有进口商品关税</span></div>
+        <div class="summary-item"><span class="severity-badge warning">关注</span><span class="summary-text">红海/霍尔木兹通航骤降：Bab el-Mandeb降50%+霍尔木兹降90%+能源外运仅100万桶/日</span></div>
+        <div class="summary-item"><span class="severity-badge warning">关注</span><span class="summary-text">跨境电商全国税务处罚标准统一：金税四期四流比对+私卡收外汇罚0.5-5倍+骗取出口退税最高5倍</span></div>
+      </div>
+    </section>
+
+    <!-- 合规提醒 -->
+    <section id="compliance" class="section-block">
+      <div class="compliance-banner">
+        <div class="banner-title">⚠️ 合规提醒</div>
         <ul>
-          <li><strong>禁用所有特殊符号与emoji</strong>：包括™、®、€、★、☑等，AI自动识别并删除</li>
-          <li><strong>禁止售后承诺类话术</strong>：如"全额退款""如有问题联系我们""提供帮助"等</li>
-          <li><strong>禁止绝对化营销词</strong>：Best、No.1、Premium、100%、Hot Sale、Free Shipping等</li>
-          <li><strong>同一词根限制</strong>：同一词根在全段出现不得超过2次</li>
-          <li><strong>每条10-255字符</strong>：至少填写3条，建议写满5条提升Listing质量评分</li>
-          <li><strong>AI自动审核</strong>：不合规内容AI自动改写，卖家仅14天审核窗口</li>
-          <li><strong>首字母大写规范</strong>：每条第一个单词首字母大写，其他全部小写</li>
-          <li><strong>数字写法</strong>：名称/型号/测量值用阿拉伯数字，1-9用英文单词，数字与单位间加空格</li>
+          <li><span class="date-tag">7/27</span> 🔴 亚马逊标题75字符限制已生效(第3天) — AI自动截断改写中</li>
+          <li><span class="date-tag">7/28</span> 🔴 亚马逊五点描述新规已生效 — 禁用emoji/营销词/售后话术+AI审核</li>
+          <li><span class="date-tag">7/29</span> 🔴 美国贸易欺诈执法指南发布 — 全供应链追责+三重叠加处罚</li>
+          <li><span class="date-tag">7/31</span> 🔴 AWD停止接收大件商品+德国维修权法案生效(倒计时2天)</li>
+          <li><span class="date-tag">8/1</span> 🔴 CBP CNC/精密设备须附数字原产地声明+能效声明(倒计时3天)</li>
+          <li><span class="date-tag">8/24</span> 🔴 亚马逊禁止未经书面许可转让或质押账号(新增)</li>
         </ul>
-        <div class="action-box">
-          <div class="action-title">🎯 3步行动清单</div>
-          <ol>
-            <li>逐条自查所有在售ASIN五点描述是否含禁用元素(emoji/营销词/售后话术)</li>
-            <li>用自然语言短句重写，每条解决一个核心痛点，移除所有特殊符号和绝对化词</li>
-            <li>14天内审核AI改写结果，优先处理高销量ASIN避免关键词权重丢失</li>
-          </ol>
+      </div>
+    </section>
+
+    <!-- 平台政策 -->
+    <section id="platform" class="section-block">
+      <div class="section-header">
+        <span class="section-icon">📋</span>
+        <h2>平台政策</h2>
+      </div>
+
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge danger">紧急</span>
+            <span class="platform-tag amazon">Amazon</span>
+            <span class="card-title">亚马逊五点描述强制新规7/28落地</span>
+          </div>
         </div>
-        <div class="card-source">来源：<a href="https://cj.sina.cn/articles/view/7879923516/1d5ae173c06808x5fe" target="_blank">新浪财经·亚马逊五点描述合规撰写指南</a></div>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge danger">🔴紧急</span>
-          <span class="platform-tag amazon">Amazon</span>
+        <div class="card-body">
+          <p>7月28日，亚马逊与75字符标题限制同步实施五点描述(Bullet Points)严格新规：禁用所有特殊符号与emoji（包括™、®、€、★、☑等，AI自动识别并删除）；禁止售后承诺类话术（如"全额退款""如有问题联系我们"）；禁止绝对化营销词（Best、No.1、Premium、100%、Hot Sale、Free Shipping等）；同一词根在全段出现不得超过2次；每条10-255字符，至少填写3条建议写满5条提升Listing质量评分；不合规内容AI自动改写，卖家仅14天审核窗口；首字母大写规范+数字写法有具体要求。</p>
+          <div class="detail-row"><span class="detail-label">生效时间</span><span class="detail-value">2026年7月28日（已生效）</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">全站点非影音类商品</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">新浪财经 / 亚马逊卖家中心</span></div>
+          <div class="action-list">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>逐条自查所有在售ASIN五点描述是否含禁用元素(emoji/营销词/售后话术)</li>
+              <li>用自然语言短句重写，每条解决一个核心痛点，移除所有特殊符号和绝对化词</li>
+              <li>14天内审核AI改写结果，优先处理高销量ASIN避免关键词权重丢失</li>
+            </ol>
+          </div>
         </div>
-        <span class="card-date">8/24生效</span>
       </div>
-      <div class="card-body">
-        <h3>亚马逊8/24起禁止未经书面许可转让或质押账号</h3>
-        <p>亚马逊更新服务商业解决方案协议，明确自2026年8月24日起：</p>
-        <ul>
-          <li><strong>禁止未经书面许可转让账号</strong>：包括销售收入受偿权</li>
-          <li><strong>违规后果</strong>：账号直接冻结且亚马逊不承担赔偿责任</li>
-          <li><strong>刑事判决配合</strong>：此前已有多起买卖账号刑事判决，灰色操作空间被大幅压缩</li>
-          <li><strong>金税四期穿透</strong>：税务与资金流穿透核查，私卡收款/刷单虚增面临定向稽查</li>
-        </ul>
-        <div class="action-box">
-          <div class="action-title">🎯 3步行动清单</div>
-          <ol>
-            <li>排查是否存在账号转让/质押安排，如需转让提前向亚马逊申请书面许可</li>
-            <li>终止所有灰色账号买卖/代持/质押操作</li>
-            <li>确认销售收入受偿权条款，8/24前完成合规整改</li>
-          </ol>
+
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge danger">紧急</span>
+            <span class="platform-tag amazon">Amazon</span>
+            <span class="card-title">亚马逊8/24起禁止未经书面许可转让或质押账号</span>
+          </div>
         </div>
-        <div class="card-source">来源：<a href="https://cj.sina.cn/articles/view/7879923516/1d5ae173c06808x5fe" target="_blank">新浪财经·亚马逊新规对中小卖家影响</a></div>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge danger">🔴紧急</span>
-          <span class="platform-tag amazon">Amazon</span>
+        <div class="card-body">
+          <p>亚马逊更新服务商业解决方案协议，自2026年8月24日起禁止未经书面许可转让账号（包括销售收入受偿权），违规直接冻结且亚马逊不承担赔偿责任。此前已有多起买卖账号刑事判决，灰色操作空间被大幅压缩。金税四期下税务与资金流穿透核查，私卡收款/刷单虚增面临定向稽查。</p>
+          <div class="detail-row"><span class="detail-label">生效时间</span><span class="detail-value">2026年8月24日</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">所有亚马逊第三方卖家</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">新浪财经</span></div>
+          <div class="action-list">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>排查是否存在账号转让/质押安排，如需转让提前向亚马逊申请书面许可</li>
+              <li>终止所有灰色账号买卖/代持/质押操作</li>
+              <li>确认销售收入受偿权条款，8/24前完成合规整改</li>
+            </ol>
+          </div>
         </div>
-        <span class="card-date">7/27公布</span>
       </div>
-      <div class="card-body">
-        <h3>亚马逊登顶《财富》500强+活跃卖家锐减60万</h3>
-        <p>2026年《财富》世界500强排行榜显示，亚马逊以7170亿美元营收首次超越沃尔玛登顶。同时：</p>
-        <ul>
-          <li><strong>第三方卖家GMV</strong>：约5750亿美元，占平台总GMV的69%</li>
-          <li><strong>活跃卖家锐减</strong>：2025.7-2026.7从240万降至180万，一年减少约60万</li>
-          <li><strong>新卖家日增骤降</strong>：从4000余个降至550个，创十多年最低</li>
-          <li><strong>中国卖家GMV占比低</strong>：头部55.9%为中国卖家但仅贡献28.6%的GMV</li>
-          <li><strong>标杆新卖家孵化计划7/28上线</strong>：首期目标2000个品牌三年破1亿人民币</li>
-          <li><strong>变体上传工具8月底停用旧版</strong>：多变体卖家需调整操作流程</li>
-        </ul>
-        <div class="card-source">来源：<a href="https://cj.sina.cn/articles/view/7879923516/1d5ae173c06808x5fe" target="_blank">新浪财经</a> | <a href="https://gmteight.com/flash/detail/1475297" target="_blank">GMTEight</a></div>
-      </div>
-    </div>
 
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge warning">🟡关注</span>
-          <span class="platform-tag amazon">Amazon</span>
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge danger">紧急</span>
+            <span class="platform-tag amazon">Amazon</span>
+            <span class="card-title">亚马逊登顶《财富》500强+活跃卖家锐减60万</span>
+          </div>
         </div>
-        <span class="card-date">7/28确认</span>
-      </div>
-      <div class="card-body">
-        <h3>亚马逊Buy Box(Featured Offer)规则变更+英国站FBM时效考核</h3>
-        <p><strong>Buy Box变更：</strong></p>
-        <ul>
-          <li>取消单独的Featured Offer资格门槛，更多卖家可参与竞争</li>
-          <li>价格/配送速度/账户健康/库存/客户体验仍为决定因素</li>
-          <li>卖家需优化综合指标而非仅价格竞争</li>
-        </ul>
-        <p><strong>英国站FBM时效考核(9/30)：</strong></p>
-        <ul>
-          <li>工作日妥投率须维持90%以上，未达标Listing对B2B买家隐藏</li>
-          <li>默认备货时间缩短，超时设置SKU系统自动调整</li>
-        </ul>
-        <div class="card-source">来源：<a href="https://podcasts.apple.com/gr/podcast/selling-on-giants-the-ecommerce-marketplace-podcast/id1687719955" target="_blank">Selling on Giants Podcast</a></div>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge warning">🟡关注</span>
-          <span class="platform-tag" style="background:#0071dc">Walmart</span>
+        <div class="card-body">
+          <p>2026年《财富》世界500强排行榜显示，亚马逊以7170亿美元营收首次超越沃尔玛登顶。第三方卖家GMV约5750亿美元占平台总GMV的69%。活跃卖家从2025年7月的240万降至2026年7月的180万，一年减少约60万；新卖家日增从4000余个降至550个创十多年最低。头部55.9%为中国卖家但仅贡献28.6%的GMV。标杆新卖家孵化计划7/28上线，首期目标2000个品牌三年破1亿人民币。变体上传工具8月底停用旧版。</p>
+          <div class="detail-row"><span class="detail-label">公布时间</span><span class="detail-value">2026年7月27日</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">所有亚马逊第三方卖家</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">新浪财经 / GMTEight</span></div>
         </div>
-        <span class="card-date">7月截止</span>
       </div>
-      <div class="card-body">
-        <h3>沃尔玛OAuth 2.0集成截止日临近</h3>
-        <p>沃尔玛正将Solution Provider集成迁移至OAuth 2.0。卖家需确认Feed工具/库存平台/ERP系统/代理商/内部应用在现有访问方式停用前完成迁移。同时沃尔玛：</p>
-        <ul>
-          <li>WFS引入长期仓储费，库存管理更趋近FBA模式</li>
-          <li>收紧Made in USA/可降解/可堆肥/PFAS等产品宣称执法</li>
-          <li>Sparky AI助手深入购物体验，卖家需完善产品数据供AI理解推荐</li>
-        </ul>
-        <div class="card-source">来源：<a href="https://podcasts.apple.com/gr/podcast/selling-on-giants-the-ecommerce-marketplace-podcast/id1687719955" target="_blank">Selling on Giants Podcast</a></div>
-      </div>
-    </div>
-  </div>
 
-  <!-- 合规/税务动态 -->
-  <div class="section-block" id="compliance-tax">
-    <div class="section-header">
-      <span class="section-icon">⚖️</span>
-      <h2>合规/税务动态</h2>
-    </div>
-
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge danger">🔴紧急</span>
-          <span class="platform-tag cbp">DOJ/DHS/CBP</span>
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge warning">关注</span>
+            <span class="platform-tag amazon">Amazon</span>
+            <span class="card-title">亚马逊Buy Box规则变更+英国站FBM时效考核</span>
+          </div>
         </div>
-        <span class="card-date">7/29发布</span>
-      </div>
-      <div class="card-body">
-        <h3>美国首份《贸易欺诈执法资源指南》发布</h3>
-        <p>7月29日，美国司法部(DOJ)与国土安全部(DHS)同步发布首份跨部门《贸易欺诈执法资源指南》，标志着美国贸易执法进入全新阶段：</p>
-        <ul>
-          <li><strong>贸易欺诈升级为国家安全威胁</strong>：从收入征收/行政合规升级为经济安全/公共安全/供应链完整性/国家安全问题</li>
-          <li><strong>全供应链追责</strong>：责任不再止于进口商，报关行/货代/批发商/分销商/企业高管均可能被追责</li>
-          <li><strong>三重叠加处罚</strong>：行政罚+民事三倍追偿(FCA)+刑事起诉可同时适用</li>
-          <li><strong>TFTF工作组战绩</strong>：2025年8月成立至今10个月追缴超10亿美元(约70亿人民币)</li>
-          <li><strong>执法优先级</strong>：虚假产品/原产地申报、转口贸易、分类欺诈、低报货值、FTA滥用、AD/CVD规避、空壳公司、退税欺诈、伪造认证</li>
-          <li><strong>强迫劳动入刑</strong>：强迫劳动执法不再限于扣货/进口禁令，企业和个人可能面临刑事责任</li>
-          <li><strong>案例：781箱中国橱柜低报货值扣押</strong>：申报10个橱柜$500，实查781箱橱柜值$123,554</li>
-          <li><strong>案例：375块假冒欧米茄手表扣押</strong>：零售价值超$5400万，90%通过跨境电商小包入境</li>
-        </ul>
-        <div class="action-box">
-          <div class="action-title">🎯 3步行动清单</div>
-          <ol>
-            <li>以指南为基准开展合规审查：原产地认定/分类/估值/AD/CVD风险/FTA资格/PGA要求</li>
-            <li>强化供应链尽职调查：映射关键供应商/核实生产地/审查分包商网络/评估转口风险/评价强迫劳动暴露</li>
-            <li>将贸易合规从运营职能提升为企业风险管理事项，确保5年记录留存+内部调查程序+合规培训</li>
-          </ol>
+        <div class="card-body">
+          <p>亚马逊Buy Box(Featured Offer)规则变更：取消单独的Featured Offer资格门槛，更多卖家可参与竞争，价格/配送速度/账户健康/库存/客户体验仍为决定因素。英国站FBM时效考核9/30生效：工作日妥投率须维持90%以上，未达标Listing对B2B买家隐藏，默认备货时间缩短，超时设置SKU系统自动调整。</p>
+          <div class="detail-row"><span class="detail-label">生效时间</span><span class="detail-value">Buy Box已变更 / FBM 9/30考核</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">亚马逊全球卖家 / 英国站FBM卖家</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">Selling on Giants Podcast</span></div>
+          <div class="action-list warning">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>优化综合指标(价格/配送/账户健康/库存)，而非仅价格竞争</li>
+              <li>英国站FBM卖家确认工作日妥投率是否达标(90%以上)</li>
+              <li>检查备货时间设置是否合理，避免系统自动调整</li>
+            </ol>
+          </div>
         </div>
-        <div class="card-source">来源：<a href="https://www.strtrade.com/trade-news-resources/str-trade-report/trade-report/july/what-the-new-trade-fraud-enforcement-guide-means-for-importers" target="_blank">S&amp;R Trade Report</a> | <a href="https://www.163.com/dy/article/L2UCQCTQ0556109M.html" target="_blank">网易·10个月罚超70亿</a></div>
       </div>
-    </div>
 
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge danger">🔴紧急</span>
-          <span class="platform-tag cbp">CBP</span>
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge warning">关注</span>
+            <span class="platform-tag" style="background:#0071dc">Walmart</span>
+            <span class="card-title">沃尔玛OAuth 2.0集成截止日临近</span>
+          </div>
         </div>
-        <span class="card-date">7/28执行</span>
-      </div>
-      <div class="card-body">
-        <h3>CBP对越南中资工厂现场突击检查</h3>
-        <p>据Bloomberg 7/28报道，美国海关与边境保护局(CBP)近期对越南中资工厂实施了现场检查：</p>
-        <ul>
-          <li><strong>核查内容</strong>：原材料来源+生产流程+在越增值比例+知识产权侵权</li>
-          <li><strong>目标</strong>：排查中国产品经越南"洗产地"转口贸易(label-swapping)</li>
-          <li><strong>检查结果</strong>：未获决定性"洗产地"证据，但美方可能借此寻求加征越南额外关税</li>
-          <li><strong>USTR表态</strong>：USTR的Jamieson Greer明确指出"有中国产品送到越南贴'越南'标签的非法运输"</li>
-          <li><strong>越南回应</strong>：越共总书记兼国家主席苏林政府扩大打击转口出口和知识产权侵权，近期查扣5万双假冒Nike</li>
-          <li><strong>301关税背景</strong>：7/23美方对60国加征10-12.5%"强迫劳动关税"，越南适用12.5%档</li>
-        </ul>
-        <div class="action-box">
-          <div class="action-title">🎯 3步行动清单</div>
-          <ol>
-            <li>如使用越南供应链，核实产品在越增值比例是否充分(建议>50%)</li>
-            <li>整理原材料来源证明+生产流程文件+工厂实地记录，应对CBP后续检查</li>
-            <li>评估越南额外关税风险，准备替代供应链方案(印度/印尼等)</li>
-          </ol>
+        <div class="card-body">
+          <p>沃尔玛正将Solution Provider集成迁移至OAuth 2.0，卖家需确认Feed工具/库存平台/ERP系统/代理商/内部应用在现有访问方式停用前完成迁移。同时WFS引入长期仓储费库存管理更趋近FBA模式；收紧Made in USA/可降解/可堆肥/PFAS等产品宣称执法；Sparky AI助手深入购物体验，卖家需完善产品数据供AI理解推荐。</p>
+          <div class="detail-row"><span class="detail-label">截止时间</span><span class="detail-value">7月</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">所有沃尔玛Solution Provider卖家</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">Selling on Giants Podcast</span></div>
+          <div class="action-list warning">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>确认所有集成工具/平台/ERP是否已完成OAuth 2.0迁移</li>
+              <li>检查产品数据是否完善，供Sparky AI理解和推荐</li>
+              <li>核查产品宣称(Made in USA/可降解/PFAS等)是否合规</li>
+            </ol>
+          </div>
         </div>
-        <div class="card-source">来源：<a href="https://prod.biz.chosun.com/en/en-international/2026/07/28/FGGQQRCO3FCUHFQYHDWTE3RUPQ/" target="_blank">Chosun Biz/Bloomberg</a></div>
       </div>
-    </div>
+    </section>
 
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge warning">🟡关注</span>
-          <span class="platform-tag cbp">CBP</span>
+    <!-- 合规/税务动态 -->
+    <section id="compliance-tax" class="section-block">
+      <div class="section-header">
+        <span class="section-icon">⚖️</span>
+        <h2>合规/税务动态</h2>
+      </div>
+
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge danger">紧急</span>
+            <span class="platform-tag cbp">DOJ/DHS/CBP</span>
+            <span class="card-title">美国首份《贸易欺诈执法资源指南》发布</span>
+          </div>
         </div>
-        <span class="card-date">9/22测试/10/22强制</span>
-      </div>
-      <div class="card-body">
-        <h3>CBP Entry Type 13非正式邮件入境9/22自愿测试</h3>
-        <p>CBP启动Entry Type 13(Informal Mail Entry)自愿测试，为邮政渠道进口提供电子申报路径：</p>
-        <ul>
-          <li><strong>9/22起</strong>：进口商/中介人可通过ACE系统电子提交邮政追踪号+收件人信息</li>
-          <li><strong>10/22起</strong>：PGA管制商品(FDA/CPSC等)及98/99章商品须正式入境或Entry 13</li>
-          <li><strong>$2,500以下</strong>：可继续使用非正式清关程序但须缴关税</li>
-          <li><strong>2027/7/1</strong>：de minimis永久取消(One Big Beautiful Bill Act)，无值豁免阈值</li>
-        </ul>
-        <div class="card-source">来源：<a href="https://www.trasportoeuropa.it/notizie/logistica/da-luglio-2026-negli-stati-uniti-nuove-regole-doganali-postali/" target="_blank">Trasporto Europa</a></div>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge warning">🟡关注</span>
-          <span class="platform-tag" style="background:#7c3aed">法院</span>
+        <div class="card-body">
+          <p>7月29日，美国司法部(DOJ)与国土安全部(DHS)同步发布首份跨部门《贸易欺诈执法资源指南》。贸易欺诈升级为国家安全威胁，全供应链追责（进口商→报关行→货代→分销商→高管），行政罚+民事三倍追偿(FCA)+刑事起诉可同时适用。TFTF工作组10个月追缴超10亿美元（约70亿人民币）。执法优先级：虚假产品/原产地申报、转口贸易、分类欺诈、低报货值、FTA滥用、AD/CVD规避、空壳公司、退税欺诈、伪造认证。强迫劳动执法不再限于扣货/进口禁令，企业和个人可能面临刑事责任。案例：781箱中国橱柜低报货值扣押（申报$500实查$123,554）；375块假冒欧米茄手表扣押（零售价值超$5400万，90%通过跨境电商小包入境）。</p>
+          <div class="detail-row"><span class="detail-label">生效时间</span><span class="detail-value">2026年7月29日发布</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">所有对美出口/进口企业</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">S&amp;R Trade Report / 网易</span></div>
+          <div class="action-list">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>以指南为基准开展合规审查：原产地认定/分类/估值/AD/CVD风险/FTA资格/PGA要求</li>
+              <li>强化供应链尽职调查：映射关键供应商/核实生产地/审查分包商网络/评估转口风险/评价强迫劳动暴露</li>
+              <li>将贸易合规从运营职能提升为企业风险管理事项，确保5年记录留存+内部调查程序+合规培训</li>
+            </ol>
+          </div>
         </div>
-        <span class="card-date">7/28起诉</span>
       </div>
-      <div class="card-body">
-        <h3>进口商就"强迫劳动关税"集体起诉美国政府</h3>
-        <p>一位香料进口商、一位手表零售商和一位玩具制造商联合向美国国际贸易法院提起诉讼：</p>
-        <ul>
-          <li><strong>诉求</strong>：要求撤销对60个经济体几乎所有进口商品的"强迫劳动关税"</li>
-          <li><strong>影响</strong>：若胜诉可能重塑301/强迫劳动关税法律基础</li>
-          <li><strong>背景</strong>：7/23特朗普政府对59国+EU加征10-12.5%关税，覆盖99%进口品类</li>
-        </ul>
-        <div class="card-source">来源：<a href="https://forum.freightwaves.com/t/importers-sue-over-forced-labor-tariffs-on-60-economies/10875" target="_blank">FreightWaves Forum</a></div>
-      </div>
-    </div>
 
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge warning">🟡关注</span>
-          <span class="platform-tag" style="background:#dc2626">税务总局</span>
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge danger">紧急</span>
+            <span class="platform-tag cbp">CBP</span>
+            <span class="card-title">CBP对越南中资工厂现场突击检查</span>
+          </div>
         </div>
-        <span class="card-date">7月生效</span>
-      </div>
-      <div class="card-body">
-        <h3>跨境电商全国税务处罚标准统一</h3>
-        <p>2026年税务总局全新《税务行政处罚裁量基准》正式落地，核心变化：</p>
-        <ul>
-          <li><strong>全国一把尺子</strong>：同案不同罚/地方松紧不一彻底结束</li>
-          <li><strong>四流自动比对</strong>：平台销售额+海关出口额+银行收汇额+企业申报额交叉比对，差值超预警线自动触发风险核查</li>
-          <li><strong>隐瞒收入/虚假申报</strong>：罚款为少缴税款0.5-5倍，涉案超500万且抗拒检查顶格4-5倍</li>
-          <li><strong>骗取出口退税</strong>：500万以上或五年内再犯直接4-5倍顶格处罚，金额达标移送公安</li>
-          <li><strong>虚开进项票</strong>：250万以上或多次虚开最高罚30-50万</li>
-          <li><strong>轻微违规有"免罚"机会</strong>：一年内首次违规且主动整改+未造成税款流失可免罚</li>
-        </ul>
-        <div class="card-source">来源：<a href="http://m.toutiao.com/group/7667722617360794114/" target="_blank">头条·跨境电商税务新规</a></div>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge warning">🟡关注</span>
-          <span class="platform-tag" style="background:#1e40af">EU</span>
+        <div class="card-body">
+          <p>据Bloomberg 7/28报道，CBP近期对越南中资工厂实施现场检查，核查原材料来源+生产流程+在越增值比例+知识产权侵权，排查中国产品经越南"洗产地"转口贸易(label-swapping)。未获决定性"洗产地"证据，但美方可能借此寻求加征越南额外关税。USTR的Jamieson Greer明确指出"有中国产品送到越南贴'越南'标签的非法运输"。越共总书记苏林政府扩大打击转口出口和知识产权侵权，近期查扣5万双假冒Nike。7/23美方对60国加征10-12.5%"强迫劳动关税"，越南适用12.5%档。</p>
+          <div class="detail-row"><span class="detail-label">执行时间</span><span class="detail-value">2026年7月28日</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">使用越南供应链的跨境卖家</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">Chosun Biz / Bloomberg</span></div>
+          <div class="action-list">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>如使用越南供应链，核实产品在越增值比例是否充分(建议&gt;50%)</li>
+              <li>整理原材料来源证明+生产流程文件+工厂实地记录，应对CBP后续检查</li>
+              <li>评估越南额外关税风险，准备替代供应链方案(印度/印尼等)</li>
+            </ol>
+          </div>
         </div>
-        <span class="card-date">11月生效</span>
       </div>
-      <div class="card-body">
-        <h3>欧盟€2小额包裹行政处理费11月落地</h3>
-        <p>继7/1已生效的€3固定关税后，欧盟将于2026年11月起对跨境小包加征行政处理费：</p>
-        <ul>
-          <li><strong>直邮消费者</strong>：€2/件</li>
-          <li><strong>发往仓库</strong>：€0.50/件</li>
-          <li><strong>叠加效应</strong>：7/1已生效€3固定关税+11月€2行政费=单件增加€5成本</li>
-          <li><strong>2028/7过渡期结束</strong>：€3固定关税改为五档税率分类征税</li>
-          <li><strong>针对对象</strong>：主要针对中国跨境电商(Shein 1.3亿EU用户/Temu 9200万)</li>
-        </ul>
-        <div class="card-source">来源：<a href="https://www.zonaintegritas.news/eu-imposes-new-tariff-low-value-imports" target="_blank">Zona Integritas</a></div>
-      </div>
-    </div>
 
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge info">🟢参考</span>
-          <span class="platform-tag cbp">CBP</span>
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge warning">关注</span>
+            <span class="platform-tag cbp">CBP</span>
+            <span class="card-title">CBP Entry Type 13非正式邮件入境9/22自愿测试</span>
+          </div>
         </div>
-        <span class="card-date">7/28查获</span>
-      </div>
-      <div class="card-body">
-        <h3>CBP查扣近2万件假冒FIFA世界杯商品</h3>
-        <p>CBP在休斯顿George Bush国际机场查获近2万件假冒FIFA世界杯2026商品，包括假冒球衣(美国/墨西哥/葡萄牙/法国/德国/巴西/西班牙/阿根廷/厄瓜多尔)、短裤、射门杯、手扇、足球、威士忌酒壶及宠物球衣，估值近$900万。大部分来自中国。</p>
-        <div class="card-source">来源：<a href="https://www.fox32chicago.com/news/cbp-officers-seize-nearly-20000-counterfeit-fifa-world-cup-items-george-bush-intercontinental-airport" target="_blank">FOX32/CBP</a></div>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge info">🟢参考</span>
-          <span class="platform-tag amazon">Amazon</span>
+        <div class="card-body">
+          <p>CBP启动Entry Type 13(Informal Mail Entry)自愿测试，为邮政渠道进口提供电子申报路径。9/22起进口商/中介人可通过ACE系统电子提交邮政追踪号+收件人信息；10/22起PGA管制商品(FDA/CPSC等)及98/99章商品须正式入境或Entry 13；$2,500以下可继续使用非正式清关程序但须缴关税；2027/7/1 de minimis永久取消(One Big Beautiful Bill Act)。</p>
+          <div class="detail-row"><span class="detail-label">生效时间</span><span class="detail-value">9/22自愿测试 / 10/22强制</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">邮政渠道进口商</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">Trasporto Europa</span></div>
+          <div class="action-list warning">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>评估邮政渠道进口是否受影响，关注ACE系统电子申报流程</li>
+              <li>PGA管制商品卖家提前准备正式入境或Entry 13申报能力</li>
+              <li>关注2027/7/1 de minimis永久取消的时间节点</li>
+            </ol>
+          </div>
         </div>
-        <span class="card-date">8月底</span>
       </div>
-      <div class="card-body">
-        <h3>亚马逊变体上传工具8月底停用旧版</h3>
-        <p>8月底旧版变体上传工具将停用，新版强制上线，多变体卖家需调整操作流程。同时亚马逊：</p>
-        <ul>
-          <li>卖家中心Passkey扩展至二级用户，提升账号安全</li>
-          <li>Amazon Business引入托盘配送(pallet delivery)用于符合条件的FBM订单</li>
-          <li>亚马逊DSP扩展至Spotify播客广告库存</li>
-        </ul>
-        <div class="card-source">来源：<a href="https://cj.sina.cn/articles/view/7879923516/1d5ae173c06808x5fe" target="_blank">新浪财经</a></div>
-      </div>
-    </div>
-  </div>
 
-  <!-- 物流/航运 -->
-  <div class="section-block" id="logistics">
-    <div class="section-header">
-      <span class="section-icon">🚢</span>
-      <h2>物流/航运</h2>
-    </div>
-
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge warning">🟡关注</span>
-          <span class="platform-tag" style="background:#0e7490">航运</span>
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge warning">关注</span>
+            <span class="platform-tag" style="background:#7c3aed">法院</span>
+            <span class="card-title">进口商就"强迫劳动关税"集体起诉美国政府</span>
+          </div>
         </div>
-        <span class="card-date">7/28数据</span>
-      </div>
-      <div class="card-body">
-        <h3>红海/霍尔木兹海峡通航量骤降+SCFI三周连跌</h3>
-        <p><strong>通航数据(Clarksons 7/28)：</strong></p>
-        <ul>
-          <li>Bab el-Mandeb日均31艘(较Q2降50%)</li>
-          <li>霍尔木兹海峡13艘/日(较冲突前降90%)</li>
-          <li>VLCC仅6艘/周(降95%)</li>
-          <li>能源外运仅约100万桶/日(7月初1000万/冲突前1500万)</li>
-          <li>无LNG/ VLGC通过霍尔木兹已超10天</li>
-          <li>VLCC日赚$14.5万(+13%)，VLGC日赚$17.2万(+24%)</li>
-        </ul>
-        <p><strong>运价数据(SCFI 7/24)：</strong></p>
-        <ul>
-          <li>SCFI 3,062.95点(-17.36)，三周连跌</li>
-          <li>Drewry $4,374/FEU(-4%)</li>
-          <li>上海-洛杉矶跌6%至$5,878/FEU</li>
-          <li>上海-纽约跌4%至$7,598/FEU</li>
-          <li>波斯湾航线逆势涨7.5%至$4,584/TEU</li>
-          <li>CMA CGM 8/1起紧急燃油附加费$75-$165/TEU</li>
-        </ul>
-        <div class="card-source">来源：<a href="https://www.shipmanagementinternational.com/news/middle-east-conflict-red-sea-crossings-down-by-further-50-as-disruption-spreads-saysnbspclarksons" target="_blank">Ship Management International/Clarksons</a> | <a href="https://www.seetaoe.com/details/272805.html" target="_blank">Seetao</a> | <a href="https://gmteight.com/flash/detail/1490162" target="_blank">GMTEight/上海航运交易所</a></div>
-      </div>
-    </div>
-
-    <div class="policy-card">
-      <div class="card-header">
-        <div class="card-title-row">
-          <span class="severity-badge warning">🟡关注</span>
-          <span class="platform-tag" style="background:#0e7490">航运</span>
+        <div class="card-body">
+          <p>一位香料进口商、一位手表零售商和一位玩具制造商联合向美国国际贸易法院提起诉讼，要求撤销对60个经济体几乎所有进口商品的"强迫劳动关税"。若胜诉可能重塑301/强迫劳动关税法律基础。背景：7/23特朗普政府对59国+EU加征10-12.5%关税，覆盖99%进口品类。</p>
+          <div class="detail-row"><span class="detail-label">起诉时间</span><span class="detail-value">2026年7月28日</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">受301/强迫劳动关税影响的进口商</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">FreightWaves Forum</span></div>
         </div>
-        <span class="card-date">7/28数据</span>
       </div>
-      <div class="card-body">
-        <h3>跨太平洋运价暴涨：美西+54%美东+25%同比</h3>
-        <p>受进口商预判关税政策调整+燃油成本上行抢运影响：</p>
-        <ul>
-          <li>美西40尺整箱：$5,200-$6,200(同比+54%)</li>
-          <li>美东40尺整箱：$6,300-$7,500(同比+25%)</li>
-          <li>Drewry：上海-洛杉矶环比+12%，上海-纽约环比+6%</li>
-          <li>Freightos线上：美西+19%，美东+13%</li>
-          <li>NYFI西海岸运价飙升23%，东海岸+23%</li>
-          <li>7月各大船公司将执行GRI与PSS，未来数周运价或进一步上涨</li>
-        </ul>
-        <div class="card-source">来源：<a href="http://m.toutiao.com/group/7667479122905547315/" target="_blank">中国远洋海运e刊/头条</a></div>
+
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge warning">关注</span>
+            <span class="platform-tag" style="background:#dc2626">税务总局</span>
+            <span class="card-title">跨境电商全国税务处罚标准统一</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>2026年税务总局全新《税务行政处罚裁量基准》正式落地：全国一把尺子结束同案不同罚；金税四期四流自动比对（平台销售额+海关出口额+银行收汇额+企业申报额交叉比对，差值超预警线自动触发风险核查）；隐瞒收入/虚假申报罚款为少缴税款0.5-5倍，涉案超500万且抗拒检查顶格4-5倍；骗取出口退税500万以上或五年内再犯直接4-5倍顶格处罚，金额达标移送公安；虚开进项票250万以上或多次虚开最高罚30-50万；轻微违规一年内首次且主动整改+未造成税款流失可免罚。</p>
+          <div class="detail-row"><span class="detail-label">生效时间</span><span class="detail-value">2026年7月</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">所有跨境电商企业</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">头条 / 税务总局</span></div>
+          <div class="action-list warning">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>核查四流(平台销售额/海关出口额/银行收汇额/企业申报额)是否一致</li>
+              <li>停止私卡收外汇操作，确保所有收入通过合规渠道申报</li>
+              <li>建立内部税务合规审查机制，避免虚开进项票/骗取出口退税</li>
+            </ol>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- 近期关键时间线 -->
-  <div class="section-block" id="timeline">
-    <div class="section-header">
-      <span class="section-icon">⏰</span>
-      <h2>近期关键时间线</h2>
-    </div>
-    <div class="timeline-card">
-      <div class="timeline-item danger"><span class="tl-date">7/29</span><span class="tl-text">🔴 美国DOJ/DHS贸易欺诈执法指南发布+CBP越南中资工厂突击检查</span></div>
-      <div class="timeline-item danger"><span class="tl-date">7/30</span><span class="tl-text">🔴 Amazon FBA新选品计划生效(200件免仓储+佣金封顶5%)</span></div>
-      <div class="timeline-item danger"><span class="tl-date">7/31</span><span class="tl-text">🔴 AWD停止接收大件商品+德国维修权法案+欧五国PCP条款更新</span></div>
-      <div class="timeline-item danger"><span class="tl-date">8/1</span><span class="tl-text">🔴 CBP CNC/精密设备须附DOS+能效声明+🟡CMA CGM附加费+印尼代扣所得税+Lazada泰国佣金上调</span></div>
-      <div class="timeline-item warn"><span class="tl-date">8/2</span><span class="tl-text">🟡 欧盟AI生成内容披露规定落地</span></div>
-      <div class="timeline-item danger"><span class="tl-date">8/4</span><span class="tl-text">🔴 电子商务法修正草案征求意见截止</span></div>
-      <div class="timeline-item warn"><span class="tl-date">8/12</span><span class="tl-text">🟡 欧盟PPWR包装法强制生效</span></div>
-      <div class="timeline-item danger"><span class="tl-date">8/15</span><span class="tl-text">🔴 亚马逊AI生成人物标注规定正式生效(未标注下架)</span></div>
-      <div class="timeline-item danger"><span class="tl-date">8/24</span><span class="tl-text">🔴 亚马逊禁止未经书面许可转让或质押账号</span></div>
-      <div class="timeline-item danger"><span class="tl-date">8/29</span><span class="tl-text">🔴 UPS确认全面取消de minimis</span></div>
-      <div class="timeline-item danger"><span class="tl-date">8/30</span><span class="tl-text">🔴 亚马逊美加站锂电小家电TIC验证强制下架</span></div>
-      <div class="timeline-item danger"><span class="tl-date">9/1</span><span class="tl-text">🔴 电池消费税2%+印尼大宗商品出口管控</span></div>
-      <div class="timeline-item warn"><span class="tl-date">9/7</span><span class="tl-text">🟡 亚马逊西班牙DC ZAZ8启用</span></div>
-      <div class="timeline-item warn"><span class="tl-date">9/22</span><span class="tl-text">🟡 CBP Entry Type 13自愿测试启动</span></div>
-      <div class="timeline-item warn"><span class="tl-date">9/30</span><span class="tl-text">🟡 亚马逊英国站FBM时效强制考核</span></div>
-      <div class="timeline-item danger"><span class="tl-date">10/15</span><span class="tl-text">🔴 Amazon旺季配送费+$0.32/件+3.5%燃油附加费</span></div>
-      <div class="timeline-item warn"><span class="tl-date">10/20</span><span class="tl-text">🟡 速卖通DSA整改+离岸信托个税90天过渡</span></div>
-      <div class="timeline-item danger"><span class="tl-date">2027/1/1</span><span class="tl-text">🔴 新商标法+韩国电商法+美国de minimis永久取消</span></div>
-      <div class="timeline-item warn"><span class="tl-date">2027/4</span><span class="tl-text">🟡 中国移动电源新国标3C认证强制</span></div>
-    </div>
-  </div>
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge warning">关注</span>
+            <span class="platform-tag" style="background:#1e40af">EU</span>
+            <span class="card-title">欧盟€2小额包裹行政处理费11月落地</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>继7/1已生效的€3固定关税后，欧盟将于2026年11月起对跨境小包加征行政处理费：直邮消费者€2/件，发往仓库€0.50/件。叠加效应：€3固定关税+€2行政费=单件增加€5成本。2028/7过渡期结束€3固定关税改为五档税率分类征税。主要针对中国跨境电商（Shein 1.3亿EU用户/Temu 9200万）。</p>
+          <div class="detail-row"><span class="detail-label">生效时间</span><span class="detail-value">2026年11月</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">对欧盟跨境小包卖家</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">Zona Integritas</span></div>
+          <div class="action-list warning">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>评估€5/件叠加成本对利润的影响，调整定价策略</li>
+              <li>考虑海外仓模式(€0.50/件)替代直邮(€2/件)降低成本</li>
+              <li>关注2028/7五档税率分类征税细则</li>
+            </ol>
+          </div>
+        </div>
+      </div>
 
-  <!-- 信息源 -->
-  <div class="section-block" id="sources">
-    <div class="section-header">
-      <span class="section-icon">📡</span>
-      <h2>信息源</h2>
-    </div>
-    <div class="sources-note">
-      本日报数据来自34个配置信息源：平台官方13源(Amazon/Walmart/TikTok Shop/Target等)+官方机构9源(CBP/FDA/CPSC/欧盟/德国WEEE/LUCID/METI等)+航运物流3源(上海航运交易所/WL123/跨境物流百晓生)+行业媒体9源(知无不言/卖家之家/雨果跨境/亿邦动力/至美通/白鲸出海/TEMU卖家中心/吉易跨境/跨境大发哥)
-    </div>
-  </div>
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge info">参考</span>
+            <span class="platform-tag cbp">CBP</span>
+            <span class="card-title">CBP查扣近2万件假冒FIFA世界杯商品</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>CBP在休斯顿George Bush国际机场查获近2万件假冒FIFA世界杯2026商品，包括假冒球衣(美国/墨西哥/葡萄牙/法国/德国/巴西/西班牙/阿根廷/厄瓜多尔)、短裤、射门杯、手扇、足球、威士忌酒壶及宠物球衣，估值近$900万。大部分来自中国。</p>
+          <div class="detail-row"><span class="detail-label">查获时间</span><span class="detail-value">2026年7月28日</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">侵权商品卖家警示</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">FOX32 / CBP</span></div>
+        </div>
+      </div>
 
-  <footer class="page-footer">
-    跨境政策日报 · 能工智人 · 2026年7月29日 · （34个信息源）
-  </footer>
-</main>
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge info">参考</span>
+            <span class="platform-tag amazon">Amazon</span>
+            <span class="card-title">亚马逊变体上传工具8月底停用旧版</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>8月底旧版变体上传工具将停用，新版强制上线，多变体卖家需调整操作流程。同时亚马逊卖家中心Passkey扩展至二级用户提升账号安全；Amazon Business引入托盘配送(pallet delivery)用于符合条件的FBM订单；亚马逊DSP扩展至Spotify播客广告库存。</p>
+          <div class="detail-row"><span class="detail-label">生效时间</span><span class="detail-value">2026年8月底</span></div>
+          <div class="detail-row"><span class="detail-label">影响范围</span><span class="detail-value">多变体卖家</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">新浪财经</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 物流/航运 -->
+    <section id="logistics" class="section-block">
+      <div class="section-header">
+        <span class="section-icon">🚢</span>
+        <h2>物流/航运</h2>
+      </div>
+
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge warning">关注</span>
+            <span class="platform-tag shipping">航运</span>
+            <span class="card-title">红海/霍尔木兹海峡通航量骤降+SCFI三周连跌</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>通航数据(Clarksons 7/28)：Bab el-Mandeb日均31艘（较Q2降50%），霍尔木兹海峡13艘/日（较冲突前降90%），VLCC仅6艘/周（降95%），能源外运仅约100万桶/日（7月初1000万/冲突前1500万），无LNG/VLGC通过霍尔木兹已超10天，VLCC日赚$14.5万(+13%)，VLGC日赚$17.2万(+24%)。运价数据(SCFI 7/24)：SCFI 3,062.95点(-17.36)三周连跌，Drewry $4,374/FEU(-4%)，上海-洛杉矶跌6%至$5,878/FEU，上海-纽约跌4%至$7,598/FEU，波斯湾航线逆势涨7.5%至$4,584/TEU，CMA CGM 8/1起紧急燃油附加费$75-$165/TEU。</p>
+          <div class="detail-row"><span class="detail-label">数据日期</span><span class="detail-value">2026年7月28日</span></div>
+          <div class="detail-row"><span class="detail-label">核心指标</span><span class="detail-value">SCFI 3,063 / Drewry $4,374/FEU</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">Clarksons / Seetao / 上海航运交易所</span></div>
+          <div class="action-list warning">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>关注中东局势对航运路线的影响，评估替代航线方案</li>
+              <li>抓住运价回落窗口提前订舱，锁定较低运价</li>
+              <li>预留CMA CGM 8/1紧急燃油附加费成本</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="policy-card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <span class="severity-badge warning">关注</span>
+            <span class="platform-tag shipping">航运</span>
+            <span class="card-title">跨太平洋运价暴涨：美西+54%美东+25%同比</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>受进口商预判关税政策调整+燃油成本上行抢运影响：美西40尺整箱$5,200-$6,200（同比+54%），美东40尺整箱$6,300-$7,500（同比+25%）。Drewry上海-洛杉矶环比+12%，上海-纽约环比+6%；Freightos线上美西+19%美东+13%；NYFI西海岸运价飙升23%东海岸+23%。7月各大船公司将执行GRI与PSS，未来数周运价或进一步上涨。</p>
+          <div class="detail-row"><span class="detail-label">数据日期</span><span class="detail-value">2026年7月28日</span></div>
+          <div class="detail-row"><span class="detail-label">核心指标</span><span class="detail-value">美西$5,200-$6,200 / 美东$6,300-$7,500</span></div>
+          <div class="detail-row"><span class="detail-label">信息来源</span><span class="detail-value">中国远洋海运e刊 / 头条</span></div>
+          <div class="action-list warning">
+            <div class="action-title">🎯 3步行动清单</div>
+            <ol>
+              <li>评估运价上涨对成本的冲击，调整备货和发货节奏</li>
+              <li>比较不同船公司GRI/PSS执行力度，选择最优承运方案</li>
+              <li>关注后续运价走势，锁定长期合约降低波动风险</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 时间线 -->
+    <section id="timeline" class="section-block">
+      <div class="section-header">
+        <span class="section-icon">⏰</span>
+        <h2>近期关键时间线</h2>
+      </div>
+      <div class="timeline-block">
+        <div class="timeline-item"><span class="timeline-date">7/29</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">美国DOJ/DHS贸易欺诈执法指南发布+CBP越南中资工厂突击检查</span></div>
+        <div class="timeline-item"><span class="timeline-date">7/30</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">Amazon FBA新选品计划生效(200件免仓储+佣金封顶5%)</span></div>
+        <div class="timeline-item"><span class="timeline-date">7/31</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">AWD停止接收大件商品+德国维修权法案+欧五国PCP条款更新</span></div>
+        <div class="timeline-item"><span class="timeline-date">8/1</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">CBP CNC/精密设备须附DOS+能效声明+CMA CGM附加费+印尼代扣所得税+Lazada泰国佣金上调</span></div>
+        <div class="timeline-item"><span class="timeline-date">8/2</span><span class="timeline-badge warn">🟡</span><span class="timeline-text">欧盟AI生成内容披露规定落地</span></div>
+        <div class="timeline-item"><span class="timeline-date">8/4</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">电子商务法修正草案征求意见截止</span></div>
+        <div class="timeline-item"><span class="timeline-date">8/12</span><span class="timeline-badge warn">🟡</span><span class="timeline-text">欧盟PPWR包装法强制生效</span></div>
+        <div class="timeline-item"><span class="timeline-date">8/15</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">亚马逊AI生成人物标注规定正式生效(未标注下架)</span></div>
+        <div class="timeline-item"><span class="timeline-date">8/24</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">亚马逊禁止未经书面许可转让或质押账号</span></div>
+        <div class="timeline-item"><span class="timeline-date">8/29</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">UPS确认全面取消de minimis</span></div>
+        <div class="timeline-item"><span class="timeline-date">8/30</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">亚马逊美加站锂电小家电TIC验证强制下架</span></div>
+        <div class="timeline-item"><span class="timeline-date">9/1</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">电池消费税2%+印尼大宗商品出口管控</span></div>
+        <div class="timeline-item"><span class="timeline-date">9/7</span><span class="timeline-badge warn">🟡</span><span class="timeline-text">亚马逊西班牙DC ZAZ8启用</span></div>
+        <div class="timeline-item"><span class="timeline-date">9/22</span><span class="timeline-badge warn">🟡</span><span class="timeline-text">CBP Entry Type 13自愿测试启动</span></div>
+        <div class="timeline-item"><span class="timeline-date">9/30</span><span class="timeline-badge warn">🟡</span><span class="timeline-text">亚马逊英国站FBM时效强制考核</span></div>
+        <div class="timeline-item"><span class="timeline-date">10/15</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">Amazon旺季配送费+$0.32/件+3.5%燃油附加费</span></div>
+        <div class="timeline-item"><span class="timeline-date">10/20</span><span class="timeline-badge warn">🟡</span><span class="timeline-text">速卖通DSA整改+离岸信托个税90天过渡</span></div>
+        <div class="timeline-item"><span class="timeline-date">2027/1</span><span class="timeline-badge danger">🔴</span><span class="timeline-text">新商标法+韩国电商法+美国de minimis永久取消</span></div>
+        <div class="timeline-item"><span class="timeline-date">2027/4</span><span class="timeline-badge warn">🟡</span><span class="timeline-text">中国移动电源新国标3C认证强制</span></div>
+      </div>
+    </section>
+
+    <!-- 信息源 -->
+    <section id="sources" class="section-block">
+      <div class="section-header">
+        <span class="section-icon">📡</span>
+        <h2>信息源配置</h2>
+      </div>
+      <div class="sources-block">
+        <strong>平台官方（13源）：</strong>Amazon Seller Central / Amazon Press / Amazon Forums / Amazon DE / Amazon UK / Amazon JP / Amazon Blog / SP-API Changelog / Walmart News / Walmart API / Target Plus / TikTok Shop Policy / TikTok Shop Newsroom<br>
+        <strong>官方机构（9源）：</strong>CBP / FDA / CPSC / California OEHHA Prop 65 / EU Taxation-Customs / EU Safety Gate / Stiftung EAR / LUCID Verpackungsregister / METI<br>
+        <strong>航运/物流（3源）：</strong>上海航运交易所 / WL123跨境导航 / 跨境物流百晓生<br>
+        <strong>行业媒体（9源）：</strong>知无不言 / 卖家之家 / 雨果跨境 / 亿邦动力 / 至美通 / 跨境大发哥 / 白鲸出海 / TEMU卖家中心 / 吉易跨境
+      </div>
+    </section>
+
+    <div class="footer">（34个信息源）</div>
+  </main>
 </div>
 </body>
 </html>
