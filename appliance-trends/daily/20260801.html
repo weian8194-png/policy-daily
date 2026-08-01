@@ -3,20 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>美国亚马逊$90+小家电市场趋势</title>
+  <title>2026年8月1日 小家电市场趋势</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; scroll-padding-top: 16px; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-
     .section-block:target { animation: target-flash 1.5s ease-out; }
     @keyframes target-flash { 0% { box-shadow: 0 0 0 3px rgba(13,148,136,0.4); } 100% { box-shadow: 0 0 0 0 rgba(13,148,136,0); } }
-    .nav-item:active, .nav-item:focus { color: #f1f5f9 !important; background: rgba(13,148,136,0.15) !important; border-left-color: #0d9488 !important; }
-
     .layout { display: flex; min-height: 100vh; }
     .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
     .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f0fdfa; }
-
     .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
     .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
@@ -25,44 +21,24 @@
     .nav-section-title { font-size: 11px; font-weight: 700; color: #475569; padding: 12px 24px 4px; text-transform: uppercase; letter-spacing: 1px; }
     .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px; color: #94a3b8; text-decoration: none; font-size: 13px; transition: all 0.15s; border-left: 2px solid transparent; }
     .nav-item:hover { background: rgba(13,148,136,0.06); color: #e2e8f0; border-left-color: #0d9488; }
-    .nav-item.active { color: #f1f5f9; background: rgba(13,148,136,0.1); border-left-color: #0d9488; }
     .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
     .nav-count.hot { background: rgba(13,148,136,0.15); color: #5eead4; }
     .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
-
-    .archive-section { padding: 0; }
-    .archive-section-title { display: flex; align-items: center; justify-content: space-between; padding: 8px 24px; font-size: 11px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; }
-    details.archive-month { padding: 0; }
-    details.archive-month summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px 6px 28px; cursor: pointer; font-size: 13px; color: #94a3b8; list-style: none; transition: color 0.15s; border-left: 2px solid transparent; }
-    details.archive-month summary::-webkit-details-marker { display: none; }
-    details.archive-month summary::before { content: "\01F4C1"; margin-right: 6px; font-size: 12px; }
-    details.archive-month[open] summary::before { content: "\01F4C2"; }
-    details.archive-month summary:hover { color: #e2e8f0; background: rgba(13,148,136,0.06); border-left-color: #0d9488; }
-    details.archive-month summary .month-info { font-weight: 500; }
-    details.archive-month summary .month-stats { font-size: 11px; color: #475569; }
-    .archive-day { display: block; padding: 3px 24px 3px 48px; color: #64748b; text-decoration: none; font-size: 12px; transition: all 0.15s; border-left: 2px solid transparent; }
-    .archive-day::before { content: "\01F4C4 "; font-size: 11px; }
-    .archive-day:hover { color: #e2e8f0; background: rgba(13,148,136,0.06); border-left-color: #0d9488; }
-    .archive-day .day-count { font-size: 10px; color: #475569; margin-left: 4px; }
-
     .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
     .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
     .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
     .content-header .date-line .date-val { font-weight: 700; color: #334155; }
     .content-header .date-line .update-time { font-size: 11px; background: #f0fdfa; color: #0d9488; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
-
     .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
     .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
     .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
     .stat-chip.hot .stat-num { color: #0d9488; }
     .stat-chip.new .stat-num { color: #8b5cf6; }
     .stat-chip.trend .stat-num { color: #f59e0b; }
-
     .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; display: flex; align-items: flex-start; gap: 12px; }
     .highlight-banner .hl-icon { font-size: 28px; flex-shrink: 0; }
     .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
     .highlight-banner .hl-text strong { color: #92400e; }
-
     .section-block { margin-bottom: 28px; }
     .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
     .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
@@ -70,7 +46,6 @@
     .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
     .section-header .badge-new { background: #faf5ff; color: #8b5cf6; }
     .section-header .badge-trend { background: #fffbeb; color: #d97706; }
-
     .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
     .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
     .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
@@ -130,85 +105,7 @@
         <a class="nav-item" href="#watchlist">🔍 其他动向 <span class="nav-count">4</span></a>
       </div>
       <div class="nav-divider"></div>
-
-      <div class="archive-section">
-        <div class="archive-section-title">📅 历史归档 / Archives</div>
-        <details class="archive-month" open>
-          <summary><span class="month-info">2026年08月</span><span class="month-stats">1天</span></summary>
-          <a class="archive-day" href="./daily/20260801.html">2026-08-01 <span class="day-count">10个</span></a>
-        </details>
-        <details class="archive-month">
-          <summary><span class="month-info">2026年07月</span><span class="month-stats">28天</span></summary>
-          <a class="archive-day" href="./daily/20260731.html">2026-07-31 <span class="day-count">10个</span></a>
-          <a class="archive-day" href="./daily/20260730.html">2026-07-30 <span class="day-count">10个</span></a>
-          <a class="archive-day" href="./daily/20260729.html">2026-07-29 <span class="day-count">9个</span></a>
-          <a class="archive-day" href="./daily/20260728.html">2026-07-28 <span class="day-count">9个</span></a>
-          <a class="archive-day" href="./daily/20260727.html">2026-07-27 <span class="day-count">9个</span></a>
-          <a class="archive-day" href="./daily/20260726.html">2026-07-26 <span class="day-count">9个</span></a>
-          <a class="archive-day" href="./daily/20260725.html">2026-07-25 <span class="day-count">9个</span></a>
-          <a class="archive-day" href="./daily/20260724.html">2026-07-24 <span class="day-count">9个</span></a>
-          <a class="archive-day" href="./daily/20260723.html">2026-07-23 <span class="day-count">9个</span></a>
-          <a class="archive-day" href="./daily/20260722.html">2026-07-22 <span class="day-count">9个</span></a>
-          <a class="archive-day" href="./daily/20260721.html">2026-07-21 <span class="day-count">9个</span></a>
-          <a class="archive-day" href="./daily/20260717.html">2026-07-17 <span class="day-count">8个</span></a>
-          <a class="archive-day" href="./daily/20260716.html">2026-07-16 <span class="day-count">8个</span></a>
-          <a class="archive-day" href="./daily/20260715.html">2026-07-15 <span class="day-count">8个</span></a>
-          <a class="archive-day" href="./daily/20260714.html">2026-07-14 <span class="day-count">8个</span></a>
-          <a class="archive-day" href="./daily/20260713.html">2026-07-13 <span class="day-count">7个</span></a>
-          <a class="archive-day" href="./daily/20260712.html">2026-07-12 <span class="day-count">7个</span></a>
-          <a class="archive-day" href="./daily/20260711.html">2026-07-11 <span class="day-count">7个</span></a>
-          <a class="archive-day" href="./daily/20260710.html">2026-07-10 <span class="day-count">7个</span></a>
-          <a class="archive-day" href="./daily/20260709.html">2026-07-09 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260708.html">2026-07-08 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260707.html">2026-07-07 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260706.html">2026-07-06 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260705.html">2026-07-05 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260704.html">2026-07-04 <span class="day-count">6个</span></a>
-          <a class="archive-day" href="./daily/20260703.html">2026-07-03 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260702.html">2026-07-02 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260701.html">2026-07-01 <span class="day-count">5个</span></a>
-        </details>
-        <details class="archive-month">
-          <summary><span class="month-info">2026年06月</span><span class="month-stats">27天</span></summary>
-          <a class="archive-day" href="./daily/20260630.html">2026-06-30 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260629.html">2026-06-29 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260628.html">2026-06-28 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260627.html">2026-06-27 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260625.html">2026-06-25 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260624.html">2026-06-24 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260623.html">2026-06-23 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260622.html">2026-06-22 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260621.html">2026-06-21 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260620.html">2026-06-20 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260619.html">2026-06-19 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260618.html">2026-06-18 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260617.html">2026-06-17 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260616.html">2026-06-16 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260615.html">2026-06-15 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260614.html">2026-06-14 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260613.html">2026-06-13 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260612.html">2026-06-12 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260611.html">2026-06-11 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260610.html">2026-06-10 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260608.html">2026-06-08 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260607.html">2026-06-07 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260606.html">2026-06-06 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260605.html">2026-06-05 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260604.html">2026-06-04 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260603.html">2026-06-03 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260602.html">2026-06-02 <span class="day-count">5个</span></a>
-        </details>
-        <details class="archive-month">
-          <summary><span class="month-info">2026年05月</span><span class="month-stats">4天</span></summary>
-          <a class="archive-day" href="./daily/20260531.html">2026-05-31 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260530.html">2026-05-30 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260529.html">2026-05-29 <span class="day-count">5个</span></a>
-          <a class="archive-day" href="./daily/20260528.html">2026-05-28 <span class="day-count">5个</span></a>
-        </details>
-      </div>
-
-      <div class="nav-divider"></div>
-      <div class="nav-item" style="font-size:12px;">📡 信息源：12个配置源</div>
+      <a class="nav-item" href="../index.html" style="color:#5eead4;">← 返回首页</a>
     </nav>
   </aside>
 
@@ -247,8 +144,8 @@
           <div class="change-text">
 1）<strong>GreenPan Frost 15-in-1入场Costco</strong>：知名高端厨具品牌GreenPan推出Frost 15-in-1 Ice Cream and Frozen Drink Maker，<strong>$249.99</strong>独家入驻Costco（Mashed 7/30）。功能覆盖冰淇淋、雪葩、冰沙、冷冻饮品等15种模式，定价处于Ninja Creami（$189.99）和Ninja SLUSHi（$299.99+）之间。GreenPan跨界进入冷冻饮品赛道，验证品类吸引力已超越传统小家电品牌圈。<br>
 2）<strong>Cuisinart Cool Combo 2-in-1上市</strong>：Cuisinart推出Cool Combo 2-in-1 Ice Cream &amp; Snow Cone Maker，<strong>$99.95</strong>（GadgetFlow 7/31推荐）。1.5夸脱容量、加料口可加坚果/水果、一键启动童锁安全、3年质保。采用冷冻碗（非压缩机），定位家庭入门级。Cuisinart作为美国家喻户晓的厨房品牌入场，进一步验证"一机多做冷冻甜品"需求真实。<br>
-3）<strong>Bellatte压缩机刨冰机$149.99</strong>：Amazon上Bellatte Shaved Ice Machine with Compressor从$299.99降至<strong>$149.99</strong>（50% off，DealCatcher 8/1），压缩机驱动即开即用，无需预冻。<br>
-4）<strong>Candid Clara测评验证</strong>：YouTube测评博主Candid Clara发布"Making Frappe in the Costco frozen drink maker"等视频，几乎确定是GreenPan Frost对比Ninja全系列。<br>
+3）<strong>Bellatte压缩机刨冰机$149.99</strong>：Amazon上Bellatte Shaved Ice Machine with Compressor从$299.99降至<strong>$149.99</strong>（50% off，DealCatcher 8/1），压缩机驱动即开即用，无需预冻。$150价位压缩机刨冰机进一步丰富$100-200冷冻饮品产品矩阵。<br>
+4）<strong>Candid Clara测评验证</strong>：YouTube测评博主Candid Clara发布"Making Frappe in the Costco frozen drink maker"及"I Tested a £150 Costco Machine Against £650 of Ninja Appliances"等视频，几乎确定是GreenPan Frost对比Ninja全系列——社交验证持续扩散。<br>
 来源：Mashed（7/30）、GadgetFlow（7/31）、DealCatcher（8/1）、Candid Clara YouTube</div>
         </div>
         <div class="card-insight">
@@ -267,7 +164,7 @@
           <div class="change-label">📊 今日新增数据</div>
           <div class="change-text">
 1）<strong>Kismile Nugget Countertop Ice Maker $109.49（45% off）</strong>：Amazon上Kismile nugget ice maker从$199.89降至<strong>$109.49</strong>（DealCatcher 7/30），继续验证nugget ice maker在$100-110价位的激进折扣策略已成为常态——原价$200产品实际成交价持续向$100靠拢。<br>
-2）<strong>Made-in-China Insights深度分析</strong>：Made-in-China Insights（7/31）发布制冰机趋势长文，从消费者行为角度分析：用户已从"是否需要制冰机"转向"买哪种制冰机"（比较冰块质地、噪音、清洁、排水、速度、占地面积），说明品类认知已过教育期进入比较购买阶段。<br>
+2）<strong>Made-in-China Insights深度分析</strong>：Made-in-China Insights（7/31）发布制冰机趋势长文，从消费者行为角度分析：用户已从"是否需要制冰机"转向"买哪种制冰机"（比较冰块质地、噪音、清洁、排水、速度、占地面积），说明品类认知已过教育期进入比较购买阶段。文中引用Livingetc 7/11趋势报告作为锚点，与此前追踪数据一致。<br>
 来源：DealCatcher（7/30）、Made-in-China Insights（7/31）</div>
         </div>
         <div class="card-insight">
@@ -386,7 +283,7 @@
 
       <div class="watch-item">
         <div class="watch-title">📌 Warming Tray/智能保温餐盘趋势浮现（7/31）</div>
-        <div class="watch-text">Made-in-China Insights报道智能保温餐盘趋势——多区加热、Wi-Fi遥控、APP控制。但目前Amazon美国站$100+价位缺乏有代表性的消费者级产品，多数为$30-60基础款或$200+商业款。暂不列为独立机会点，持续关注。<br>来源：Made-in-China Insights（7/31）</div>
+        <div class="watch-text">Made-in-China Insights报道智能保温餐盘趋势——多区加热、Wi-Fi遥控、APP控制。但目前Amazon美国站$100+价位缺乏有代表性的消费者级产品，多数为$30-60基础款或$200+商业款。暂不列为独立机会点，持续关注是否有品牌推出$100+智能家用款。<br>来源：Made-in-China Insights（7/31）</div>
       </div>
 
       <div class="watch-item">
