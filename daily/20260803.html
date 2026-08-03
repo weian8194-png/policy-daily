@@ -29,8 +29,8 @@
     details.archive-month { padding: 0; }
     details.archive-month summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 24px 6px 28px; cursor: pointer; font-size: 13px; color: #94a3b8; list-style: none; transition: color 0.15s; border-left: 2px solid transparent; }
     details.archive-month summary::-webkit-details-marker { display: none; }
-    details.archive-month summary::before { content: "F4C1"; margin-right: 6px; font-size: 12px; }
-    details.archive-month[open] summary::before { content: "F4C2"; }
+    details.archive-month summary::before { content: "▸"; margin-right: 6px; font-size: 12px; }
+    details.archive-month[open] summary::before { content: "▾"; }
     details.archive-month summary:hover { color: #e2e8f0; background: rgba(56,189,248,0.06); border-left-color: #38bdf8; }
     details.archive-month summary .month-info { font-weight: 500; }
     details.archive-month summary .month-stats { font-size: 11px; color: #475569; }
@@ -52,7 +52,7 @@
     .compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
     .compliance-banner ul { list-style: none; padding: 0; }
     .compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
-    .compliance-banner li::before { content: "B8"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+    .compliance-banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
     .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
     .section-block { margin-bottom: 28px; }
     .summary-card { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.04); overflow: hidden; }
@@ -84,10 +84,12 @@
     .platform-tag.tax { background: #0891b2; }
     .platform-tag.fda { background: #1a5276; }
     .platform-tag.congress { background: #1e3a5f; }
-    .platform-tag.fsis { background: #006242; }
     .platform-tag.california { background: #b91c1c; }
+    .platform-tag.dhs { background: #1e3a5f; }
+    .platform-tag.customs { background: #1e3a5f; }
+    .platform-tag.safe { background: #0d9488; }
     .platform-tag.cmacgm { background: #1e3a8a; }
-    .platform-tag.eupa { background: #003399; }
+    .platform-tag.walmart { background: #0071dc; }
     .card-title { font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.4; }
     .card-body { padding: 0 18px 16px; }
     .card-body p { font-size: 13px; color: #475569; margin-bottom: 8px; line-height: 1.7; }
@@ -113,8 +115,7 @@
     .sources-block a { color: #2563eb; text-decoration: none; }
     .sources-block a:hover { text-decoration: underline; }
     .footer { text-align: center; padding: 24px 0 16px; font-size: 11px; color: #94a3b8; }
-      .platform-tag.safe { background: #0d9488; }
-</style>
+  </style>
 </head>
 <body>
 <div class="layout">
@@ -128,7 +129,7 @@
         <div class="nav-section-title">今日导航</div>
         <a class="nav-item active" href="#executive-summary">摘要速览 <span class="nav-count danger">10</span></a>
         <a class="nav-item" href="#compliance">合规提醒 <span class="nav-count danger">15</span></a>
-        <a class="nav-item" href="#platform">平台政策 <span class="nav-count danger">4</span></a>
+        <a class="nav-item" href="#platform">平台政策 <span class="nav-count warn">4</span></a>
         <a class="nav-item" href="#compliance-tax">合规/税务 <span class="nav-count warn">4</span></a>
         <a class="nav-item" href="#logistics">物流/航运 <span class="nav-count warn">1</span></a>
         <a class="nav-item" href="#timeline">时间线 <span class="nav-count">22</span></a>
@@ -138,7 +139,8 @@
       <div class="archive-section">
         <div class="archive-section-title">历史归档</div>
         <details class="archive-month" open>
-          <summary><span class="month-info">8月</span><span class="month-stats">2篇</span></summary>
+          <summary><span class="month-info">8月</span><span class="month-stats">3篇</span></summary>
+          <a class="archive-day" href="20260803.html">8/3 周一</a>
           <a class="archive-day" href="20260802.html">8/2 周日</a>
           <a class="archive-day" href="20260801.html">8/1 周六</a>
         </details>
