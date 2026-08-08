@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场分析 | 2026年8月8日（周六）</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 960px; margin: 0 auto; padding: 28px 24px 40px; }
+    .back-link { display: inline-block; font-size: 13px; color: #0d9488; text-decoration: none; margin-bottom: 16px; }
+    .back-link:hover { text-decoration: underline; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 24px; font-weight: 800; color: #0f172a; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; display: flex; align-items: flex-start; gap: 12px; }
+    .highlight-banner .hl-icon { font-size: 28px; flex-shrink: 0; }
+    .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
+    .highlight-banner .hl-text strong { color: #92400e; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .section-header .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .section-header .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
+    .opportunity-card.card-trend { border-left: 4px solid #f59e0b; }
+    .opportunity-card.card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-ice { background: #0e7490; }
+    .tag-icecream { background: #d97706; }
+    .tag-induction { background: #0891b2; }
+    .tag-griddle { background: #dc2626; }
+    .tag-slushee { background: #7c3aed; }
+    .tag-pizza { background: #dc2626; }
+    .tag-steam { background: #2563eb; }
+    .tag-clean { background: #059669; }
+    .tag-coffee { background: #7c2d12; }
+    .tag-cooling { background: #0284c7; }
+    .tag-fridge { background: #be185d; }
+    .tag-breadice { background: #6d28d9; }
+    .tag-glassaf { background: #0d9488; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-new { background: #faf5ff; color: #8b5cf6; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="content-header">
+    <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="date-line">数据日期: <strong>2026年8月8日（周六）</strong> · 08:30 更新</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip hot"><span class="stat-num">13</span>🔥 追踪机会</div>
+    <div class="stat-chip new"><span class="stat-num">0</span>🆕 新增</div>
+    <div class="stat-chip trend"><span class="stat-num">2</span>🔄 有变化</div>
+  </div>
+
+  <div class="highlight-banner">
+    <div class="hl-icon">🍕</div>
+    <div class="hl-text"><strong>Current Backyard Model P获Men's Journal 2026烧烤大奖"最佳室内披萨烤箱"，850°F+门式设计验证室内披萨烤箱需求真实可商业化。</strong>Ninja三款多功能设备（Foodi XL Pro $229.99/PossibleCooker $140/French Door $200）同时创2026低价，多功能台面烹饪赛道竞争白热化。</div>
+  </div>
+
+  <!-- ===== Opportunity Quick Report ===== -->
+  <section class="section-block" id="quick-report">
+    <div class="section-header">
+      <h2>🔥 今日机会速报</h2>
+      <span class="section-badge badge-trend">13个机会 · 0新增 · 2变化</span>
+    </div>
+
+    <div class="opportunity-card card-trend">
+      <div class="card-top">
+        <span class="category-tag tag-pizza">🍕 室内披萨烤箱</span>
+        <span class="status-badge status-changed">🔄 有变化</span>
+      </div>
+      <div class="card-title">室内披萨烤箱/高热台式烤箱 · $149-349 · ⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📊 今日新增数据</div>
+        <div class="change-text">
+<strong>Current Backyard Model P获Men's Journal 2026烧烤大奖"最佳室内披萨烤箱"</strong>（8/7）。在测试所有主流室内披萨烤箱后脱颖而出：<br>
+▸ 核心突破：可达850°F（约454°C），实现真正那不勒斯风格披萨<br>
+▸ 室内可用设计：烤箱门设计有效阻隔烟雾和气味，不触发烟雾报警器<br>
+▸ 温控精度：石板温度梯度保持在100°F以内，无需频繁旋转<br>
+▸ 6种电子烹饪模式 + App远程控制<br>
+▸ 规格：17.5×21.2×14.21英寸，31磅，标准120V插座<br>
+▸ 价格：$699，最大12英寸披萨<br>
+来源：Men's Journal（8/7）</div>
+      </div>
+      <div class="card-insight">
+        <div class="insight-label">💡 机会推导</div>
+        <div class="insight-text">Model P以$699确立室内披萨烤箱天花板产品，其核心设计逻辑（烤箱门=室内可用+高温+精准温控）验证了"$149-349价位段室内披萨烤箱"的差异化空间。<strong>$149-349价位段可聚焦"850°F高温+门式设计"的核心体验，去掉App和6模式电子控温等非核心功能，天然落在$200-300价位。</strong></div>
+      </div>
+    </div>
+
+    <div class="opportunity-card card-trend">
+      <div class="card-top">
+        <span class="category-tag tag-steam">💨 蒸烤炸一体</span>
+        <span class="status-badge status-changed">🔄 有变化</span>
+      </div>
+      <div class="card-title">蒸烤炸一体机 · $100-179 · ⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📊 今日新增数据</div>
+        <div class="change-text">
+<strong>Ninja三款多功能烹饪设备同时创下2026年最低价</strong>：<br>
+▸ <strong>Foodi XL Pro 10-in-1降至$229.99</strong>（9to5toys，8/7）：原价$380，$150折扣，2026年最低价。10合1功能，可容12磅火鸡，90秒预热<br>
+▸ <strong>PossibleCooker Pro Plus 9-in-1降至$140</strong>：替代16种厨房工具，9合1多功能料理锅<br>
+▸ <strong>French Door Premier 10-in-1降至$200</strong>：法式双门设计台面烤箱，$80折扣<br>
+来源：9to5toys（8/7）</div>
+      </div>
+      <div class="card-insight">
+        <div class="insight-label">💡 机会推导</div>
+        <div class="insight-text">Ninja在$140-230价位段密集布局3款以上多功能烹饪设备，罕见同时大幅降价，信号明确：<strong>多功能台面烹饪设备赛道竞争白热化</strong>，Ninja正以品牌+价格双重优势挤压中小品牌空间。新入局者需避开Ninja已覆盖的"10合1台面烤箱"红海，寻找差异化切入口（如玻璃碗可视+蒸烤炸+特定烹饪场景专精）。</div>
+      </div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-coffee">☕ 冷萃咖啡机</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">冷萃+热萃咖啡机 · $100-129 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-glassaf">🍳 玻璃碗空气炸锅</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">玻璃碗空气炸锅 · $100-200 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-ice">🧊 制冰机</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-icecream">🍦 冰淇淋机</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">压缩机冰淇淋机/冷冻甜品机 · $100-179 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-breadice">🍞🍦 面包+冰淇淋</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">面包+冰淇淋多功能一体机 · $249+(欧) · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-slushee">🧊 沙冰/冷饮机</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">家用沙冰/冷饮机 · $100-179 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-cooling">🌬️ 个人冷却风扇</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">3-in-1个人冷却风扇 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-induction">🔥 电磁炉</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">便携式双灶电磁炉 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-griddle">🥩 电烤盘</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">电烤盘/室内烧烤炉 · $100-129 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-clean">💨 蒸汽清洁机</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">蒸汽+吸尘+除螨清洁机 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-fridge">💎 护肤冷藏冰箱</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">浴室/梳妆台护肤冷藏小冰箱 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+  </section>
+
+  <!-- ===== Detail Analysis / Continue Table ===== -->
+  <section class="section-block" id="detail-analysis">
+    <div class="section-header">
+      <h2>📋 延续中机会点</h2>
+      <span class="section-badge badge-hot">13个追踪中</span>
+    </div>
+
+    <table class="continue-table">
+      <thead>
+        <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>室内披萨烤箱/高热台式烤箱</td><td>$149-349</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>8/8 Model P获2026烧烤大奖验证室内需求</td><td><span class="status-badge status-changed">🔄 有变化</span></td></tr>
+        <tr><td>蒸烤炸一体机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/8 Ninja三款多功能设备创2026低价</td><td><span class="status-badge status-changed">🔄 有变化</span></td></tr>
+        <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/7 Ninja CM401降至$140+Hot&amp;Iced XL评测</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>玻璃碗空气炸锅</td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>8/7 Kmart平价版评测确认品类扩散</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/6 Bellatte雪花制冰机$150上架</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>压缩机冰淇淋机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>8/6 Amazon降至$279年内第二低</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>面包+冰淇淋多功能一体机</td><td>$249+(欧)</td><td>⭐⭐⭐⭐</td><td>8/4</td><td>8/4 Panasonic欧洲发布</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>家用沙冰/冷饮机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>8/5 刨冰机月销3000+验证需求</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>3-in-1个人冷却风扇</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/30</td><td>7/31 ChillPill实为2-in-1</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>便携式双灶电磁炉</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/21</td><td>7/23 Cuisinart $89.95</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>电烤盘/室内烧烤炉</td><td>$100-129</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/4 Ninja Sizzle GR101登顶对比榜#1</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>浴室/梳妆台护肤冷藏小冰箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/2</td><td>8/2 新增追踪</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== Watchlist ===== -->
+  <section class="section-block" id="watchlist">
+    <div class="section-header">
+      <h2>🔍 其他动向</h2>
+      <span class="section-badge badge-hot">3个动向</span>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">📌 Bella 7合1空气炸锅烤箱$100验证多功能台面需求</div>
+      <div class="watch-text">The Kitchn（8/7）编辑实测3周后称"再也没开过传统烤箱"。$100正好踩$90门槛，7合1功能（空气炸/烤/吐司/百吉饼/烘焙/烧烤/保温），验证多功能台面烤箱在$100价位段的强劲需求——消费者愿为"替代传统烤箱"的便利付费。</div>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">📌 TikTok厨房趋势年度报告：烹饪小家电病毒式传播逻辑</div>
+      <div class="watch-text">Hill Country News（8/7）综合报告："Cooking hacks"为TikTok 2026年顶级趋势。71%消费者曾因产品走红而购买或考虑购买；"cafe-at-home"趋势推动单品研磨机销量增长22%。核心洞察：TikTok用户更倾向"有意购买"而非冲动消费，需在30秒视频中证明产品价值——多功能、简化烹饪流程的产品更易走红。</div>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">📌 SharkNinja系统性构建TikTok病毒式厨房帝国</div>
+      <div class="watch-text">The West Australian（8/7）报道分析SharkNinja如何系统性地利用TikTok打造病毒式厨房小家电品牌，印证TikTok已成为厨房小家电不可忽视的渠道——Ninja Creami的持续TikTok热度就是典型案例。</div>
+    </div>
+  </section>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <div>📊 数据来源：CNET · 9to5toys · bensbargains · The Inventory · Consumer Reports · bestchoice.com · The Kitchn · HomePageNews · Slashgear · Chowhound · 什么值得买 · TechRadar（12个信息源）</div>
+    <div>⏰ 每日08:30自动更新 · $90+中高客单价选品机会</div>
+    <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+  </div>
+
+</div>
+</body>
+</html>
