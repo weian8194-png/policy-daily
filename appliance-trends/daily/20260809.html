@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电市场分析 | 2026年8月9日（周日）</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 960px; margin: 0 auto; padding: 28px 24px 40px; }
+    .back-link { display: inline-block; font-size: 13px; color: #0d9488; text-decoration: none; margin-bottom: 16px; }
+    .back-link:hover { text-decoration: underline; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 24px; font-weight: 800; color: #0f172a; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; display: flex; align-items: flex-start; gap: 12px; }
+    .highlight-banner .hl-icon { font-size: 28px; flex-shrink: 0; }
+    .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
+    .highlight-banner .hl-text strong { color: #92400e; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .section-header .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .section-header .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
+    .opportunity-card.card-trend { border-left: 4px solid #f59e0b; }
+    .opportunity-card.card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-ice { background: #0e7490; }
+    .tag-icecream { background: #d97706; }
+    .tag-induction { background: #0891b2; }
+    .tag-griddle { background: #dc2626; }
+    .tag-slushee { background: #7c3aed; }
+    .tag-pizza { background: #dc2626; }
+    .tag-steam { background: #2563eb; }
+    .tag-clean { background: #059669; }
+    .tag-coffee { background: #7c2d12; }
+    .tag-cooling { background: #0284c7; }
+    .tag-fridge { background: #be185d; }
+    .tag-breadice { background: #6d28d9; }
+    .tag-glassaf { background: #0d9488; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-new { background: #faf5ff; color: #8b5cf6; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="content-header">
+    <h1>🏠 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="date-line">数据日期: <strong>2026年8月9日（周日）</strong> · 08:30 更新</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip hot"><span class="stat-num">13</span>🔥 追踪机会</div>
+    <div class="stat-chip new"><span class="stat-num">0</span>🆕 新增</div>
+    <div class="stat-chip trend"><span class="stat-num">1</span>🔄 有变化</div>
+  </div>
+
+  <div class="highlight-banner">
+    <div class="hl-icon">🥩</div>
+    <div class="hl-text"><strong>SmoqeX室内颗粒烟熏炉Kickstarter筹$347K（34倍超额），验证消费者愿为"室内真实烟熏"付$500+。</strong>Instant Pot品牌入局室内烤炉推出6-in-1 Indoor Grill $159.95。室内烧烤从"煎烤"升级到"真实BBQ烟熏"，$150-250价位段存在明确差异化空白。</div>
+  </div>
+
+  <!-- ===== Opportunity Quick Report ===== -->
+  <section class="section-block" id="quick-report">
+    <div class="section-header">
+      <h2>🔥 今日机会速报</h2>
+      <span class="section-badge badge-trend">13个机会 · 0新增 · 1变化</span>
+    </div>
+
+    <div class="opportunity-card card-trend">
+      <div class="card-top">
+        <span class="category-tag tag-griddle">🥩 电烤盘/室内烧烤炉</span>
+        <span class="status-badge status-changed">🔄 有变化</span>
+      </div>
+      <div class="card-title">电烤盘/室内烧烤炉 · $100-169 · ⭐⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📊 今日新增数据</div>
+        <div class="change-text">
+<strong>两条重要验证——SmoqeX室内颗粒烟熏炉Kickstarter超额34倍筹款 + Instant品牌入局室内烤炉赛道</strong>：<br><br>
+1️⃣ <strong>SmoqeX Indoor Pellet Smoker</strong>（Kickstarter，2/10-3/12筹资）：3合1室内颗粒烟熏炉+空气炸锅+烤炉<br>
+▸ 587名支持者共筹$347,536（目标仅$10K），平均每笔认缴约$592<br>
+▸ 室内真实烟熏：使用木质颗粒产生真实烟味，电加热器独立维持温度<br>
+▸ 3合1：烟熏/空气炸/高温煎烤，一机覆盖BBQ全场景<br>
+▸ 高效用颗粒：颗粒消耗仅为传统颗粒烟熏炉的一小部分<br>
+▸ 当前状态：ETL认证完成，工厂量产准备中<br>
+来源：Kickstarter（8/8更新）<br><br>
+2️⃣ <strong>Instant 6-in-1 Indoor Grill &amp; Air Fryer</strong>：$159.95-169.95<br>
+▸ 6合1：炭烤/空气炸/烘焙/再加热/烤/脱水<br>
+▸ 气味过滤系统+透明烹饪窗+可拆卸盖板<br>
+▸ 用户反馈：6分钟烤好汉堡/扇贝/虾/牛排<br>
+来源：ownit.co（8/7）</div>
+      </div>
+      <div class="card-insight">
+        <div class="insight-label">💡 机会推导</div>
+        <div class="insight-text">SmoqeX以平均$592认缴价证明消费者对"室内真实烟熏"的强烈付费意愿，这是室内烧烤品类的质变——从Ninja Sizzle的"室内煎烤"升级到"室内真实BBQ烟熏"。但$592对大多数人仍是天花板。<strong>$150-250价位段存在明确空白：保留颗粒烟熏核心体验（木质颗粒+电加热控温+烟味过滤），去掉空气炸/脱水等非核心功能，用更小容量和简化设计，天然落在$180-250。</strong>Instant的气味过滤方案（滤网+透明盖）也值得借鉴——室内烹饪的气味管理是$100+价位段的核心差异化功能。</div>
+      </div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-pizza">🍕 室内披萨烤箱</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">室内披萨烤箱/高热台式烤箱 · $149-349 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-steam">💨 蒸烤炸一体</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">蒸烤炸一体机 · $100-179 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-coffee">☕ 冷萃咖啡机</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">冷萃+热萃咖啡机 · $100-129 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-glassaf">🍳 玻璃碗空气炸锅</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">玻璃碗空气炸锅 · $100-200 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-ice">🧊 制冰机</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-icecream">🍦 冰淇淋机</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">压缩机冰淇淋机/冷冻甜品机 · $100-179 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-breadice">🍞🍦 面包+冰淇淋</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">面包+冰淇淋多功能一体机 · $249+(欧) · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-slushee">🧊 沙冰/冷饮机</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">家用沙冰/冷饮机 · $100-179 · ⭐⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-cooling">🌬️ 个人冷却风扇</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">3-in-1个人冷却风扇 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-induction">🔥 电磁炉</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">便携式双灶电磁炉 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-clean">💨 蒸汽清洁机</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">蒸汽+吸尘+除螨清洁机 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+
+    <div class="opportunity-card card-continue">
+      <div class="card-top">
+        <span class="category-tag tag-fridge">💎 护肤冷藏冰箱</span>
+        <span class="status-badge status-unchanged">— 无变化</span>
+      </div>
+      <div class="card-title">浴室/梳妆台护肤冷藏小冰箱 · $100-149 · ⭐⭐⭐⭐ — 延续，无新增变化</div>
+    </div>
+  </section>
+
+  <!-- ===== Detail Analysis / Continue Table ===== -->
+  <section class="section-block" id="detail-analysis">
+    <div class="section-header">
+      <h2>📋 延续中机会点</h2>
+      <span class="section-badge badge-hot">13个追踪中</span>
+    </div>
+
+    <table class="continue-table">
+      <thead>
+        <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>电烤盘/室内烧烤炉</td><td>$100-169</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/9 SmoqeX筹$347K+Instant入局验证室内烟熏</td><td><span class="status-badge status-changed">🔄 有变化</span></td></tr>
+        <tr><td>室内披萨烤箱/高热台式烤箱</td><td>$149-349</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>8/8 Model P获2026烧烤大奖验证室内需求</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>蒸烤炸一体机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/8 Ninja三款多功能设备创2026低价</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/7 Ninja CM401降至$140+Hot&amp;Iced XL评测</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>玻璃碗空气炸锅</td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>8/7 Kmart平价版评测确认品类扩散</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/6 Bellatte雪花制冰机$150上架</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>压缩机冰淇淋机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>8/6 Amazon降至$279年内第二低</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>面包+冰淇淋多功能一体机</td><td>$249+(欧)</td><td>⭐⭐⭐⭐</td><td>8/4</td><td>8/4 Panasonic欧洲发布</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>家用沙冰/冷饮机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>8/5 刨冰机月销3000+验证需求</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>3-in-1个人冷却风扇</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/30</td><td>7/31 ChillPill实为2-in-1</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>便携式双灶电磁炉</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/21</td><td>7/23 Cuisinart $89.95</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+        <tr><td>浴室/梳妆台护肤冷藏小冰箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/2</td><td>8/2 新增追踪</td><td><span class="status-badge status-unchanged">— 无变化</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== Watchlist ===== -->
+  <section class="section-block" id="watchlist">
+    <div class="section-header">
+      <h2>🔍 其他动向</h2>
+      <span class="section-badge badge-hot">3个动向</span>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">📌 KitchenAid Artisan Plus上市$600验证高端升级付费意愿</div>
+      <div class="watch-text">The Kitchn（8/8）编辑测试1个月后称"值得多付$100"——350W升级电机+11档精密调速+½档低速启动防面粉飞溅。验证$500-600价位段消费者仍愿为"可感知的体验提升"买单，品质升级替代低价走量的趋势明确。</div>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">📌 中国厨房小家电2026H1量缩价升：均价同比+11.5%</div>
+      <div class="watch-text">财闻/奥维云网（8/7）：全渠道零售量同比-14.6%，零售额仅-5%，均价260元同比+11.5%。传统烹饪类品类因缺乏显性体验突破需求偏弱，高端产品矩阵推动价值中枢上移。与美线趋势一致：品质升级替代低价走量。</div>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">📌 Dash推出无绳厨房小家电系列：锂电趋势值得关注</div>
+      <div class="watch-text">PRNewswire（8/6）：4款锂电无绳产品（切碎机/手持搅拌棒/打蛋器/个人搅拌机），单品$79.99，4合1套装$299.99。电池跨设备通用可互换。无绳趋势值得关注，但单品$79.99低于$90门槛，套装$299.99可追踪——未来若出现$100+的无绳多功能厨房设备值得关注。</div>
+    </div>
+  </section>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <div>📊 数据来源：CNET · 9to5toys · bensbargains · The Inventory · Consumer Reports · bestchoice.com · The Kitchn · HomePageNews · Slashgear · Chowhound · 什么值得买 · TechRadar（12个信息源）</div>
+    <div>⏰ 每日08:30自动更新 · $90+中高客单价选品机会</div>
+    <div style="margin-top:6px;"><a href="https://github.com/weian8194-png/policy-daily" target="_blank">GitHub 仓库</a> · Powered by Coze AI</div>
+  </div>
+
+</div>
+</body>
+</html>
