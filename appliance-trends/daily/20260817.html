@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电趋势 | 2026年8月17日（周一）</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; padding: 24px 20px; max-width: 900px; margin: 0 auto; }
+    h1 { font-size: 22px; font-weight: 800; color: #0f172a; margin-bottom: 4px; }
+    .date-line { font-size: 13px; color: #64748b; margin-bottom: 20px; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .badge-hot { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; background: #f0fdfa; color: #0d9488; }
+    .section-header .badge-detail { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; background: #eff6ff; color: #2563eb; }
+    .section-header .badge-watch { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #dc2626; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; }
+    .tag-glassaf { background: #0d9488; }
+    .tag-pizza { background: #dc2626; }
+    .tag-grill { background: #ea580c; }
+    .tag-sizzle { background: #b91c1c; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-new { background: #fef2f2; color: #dc2626; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-body { padding: 8px 16px 12px; font-size: 12px; color: #475569; line-height: 1.8; }
+    .card-body strong { color: #1e293b; }
+    .card-body ul { padding-left: 16px; margin: 6px 0; }
+    .card-body li { margin-bottom: 4px; }
+    .card-change-note { background: #fef2f2; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fecaca; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #dc2626; margin-bottom: 4px; }
+    .card-change-note .change-text { font-size: 12px; color: #7f1d1d; line-height: 1.7; }
+    .card-change-note-yellow { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-change-note-yellow .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
+    .card-change-note-yellow .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 10px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; font-size: 11px; }
+    .continue-table td { padding: 6px 10px; border-bottom: 1px solid #f1f5f9; font-size: 11px; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 20px 0; font-size: 11px; color: #94a3b8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<h1>🔥 美国亚马逊$90+小家电市场趋势</h1>
+<p class="date-line">2026年8月17日（周一） · 每日分析</p>
+
+<!-- 🔥 速报 -->
+<div class="section-block" id="quick-report">
+  <div class="section-header">
+    <h2>🔥 速报</h2>
+    <span class="badge-hot">2个变化</span>
+  </div>
+
+  <!-- Ninja Sizzle - 新增 -->
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-sizzle">Ninja Sizzle室内Grill</span>
+      <span class="status-badge status-new">新增</span>
+    </div>
+    <div class="card-title">Ninja Sizzle Indoor Grill &amp; Griddle · $100-130 · ⭐⭐⭐⭐⭐</div>
+    <div class="card-change-note">
+      <div class="change-label">📌 今日新增</div>
+      <div class="change-text">Ninja Sizzle™ Indoor Grill &amp; Griddle（GR101）获bestchoice.com室内hibachi grill品类Best Choice #1（9.9/10 Exceptional）——Ninja品牌首次独立推出室内烧烤+平底烤盘二合一设备，14英寸可互换grill/griddle plate，500°F最高温，低烟网盖，全配件可洗碗机清洗，4-6人份量。同时UK/EU/Canada市场已有升级款Ninja Sizzle Pro XL（GX101），40%更大容量+ProTemp IQ精确温控+PFAS-free陶瓷不粘</div>
+    </div>
+    <div class="card-body">
+      <strong>1. Ninja Sizzle GR101</strong>（Amazon US）：500°F / 14" / grill+griddle可互换 / 低烟网盖 / dishwasher-safe / 4-6人份
+      <ul>
+        <li><strong>可互换plate</strong>：grill plate（炭烤纹路）+ griddle plate（平面煎烤），一机两用</li>
+        <li><strong>500°F MAX HEAT</strong>：室内高热grilling &amp; searing，优于PowerXL Smokeless Grill Elite</li>
+        <li><strong>低烟网盖</strong>：perforated mesh lid控制厨房烟雾+防飞溅</li>
+        <li><strong>Edge-to-Edge均匀加热</strong>：无热点无冷点</li>
+        <li><strong>family-sized 14"</strong>：可放6个汉堡/6个pancake，4-6人份</li>
+      </ul>
+      <strong>2. Ninja Sizzle Pro XL GX101</strong>（UK/EU/Canada）：ProTemp IQ精确温控250°F-500°F / 20" / 10人份 / 定时器 / PFAS-free陶瓷不粘 / CA$199.99（原CA$249.99）
+    </div>
+    <div class="card-insight">
+      <div class="insight-label">💡 机会分析</div>
+      <div class="insight-text">Ninja Sizzle推出是室内烧烤品类的重大信号——此前品类主要由Hamilton Beach $50-80低端和PowerXL $150中端占据，Ninja以品牌力+500°F高热+可互换plate杀入，直接拉高品类天花板。GR101 US定价预计$100-130，恰在$100+段。差异化方向：①精确数字温控（ProTemp IQ下放US GR101）②内置肉温探针（Typhur路线）③更大plate面积（Pro XL 20" vs GR101 14"）——$130-169做"grill+griddle+精确温控+探针"组合，天然卖$130+。</div>
+    </div>
+  </div>
+
+  <!-- 电烤盘/室内烧烤炉 - 延续有变化 -->
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-grill">室内烧烤炉</span>
+      <span class="status-badge status-changed">延续·有变化</span>
+    </div>
+    <div class="card-title">电烤盘/室内烧烤炉 · $100-169 · ⭐⭐⭐⭐⭐</div>
+    <div class="card-change-note-yellow">
+      <div class="change-label">📌 今日新增</div>
+      <div class="change-text">Ninja Sizzle推出进一步验证室内烧烤品类品牌化趋势——形成三条验证路径：①集成grill plate多功能台式烤箱（Nuwave Bravo XL Pro $149.99）→ "偶尔grill不想多买设备" ②独立烟熏炉（SmoqeX $347K众筹）→ "深度烧烤爱好者" ③独立grill+griddle二合一（Ninja Sizzle $100-130）→ "日常台面grill/griddle切换"。同时bestchoice.com smokeless indoor grill榜单（8/16）中Ninja Sizzle GR101排名#1，CUSIMAX 1500W升级款（LED智能屏+涡轮排烟95%无烟）排名#2</div>
+    </div>
+    <div class="card-insight">
+      <div class="insight-label">💡 机会更新</div>
+      <div class="insight-text">Ninja入场最大增量意义：品牌背书+Amazon渠道力将快速教育消费者"室内grill是厨房刚需而非新奇玩具"，品类渗透率有望加速。$100-169段机会不变：独立式室内grill，参考Ninja的grill+griddle可互换设计+500°F高热，差异化做精确温控+探针。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 📋 详析 -->
+<div class="section-block" id="detail-analysis">
+  <div class="section-header">
+    <h2>📋 详析</h2>
+    <span class="badge-detail">延续追踪</span>
+  </div>
+
+  <div class="continue-table-wrap">
+    <table class="continue-table">
+      <thead>
+        <tr>
+          <th>品类</th>
+          <th>价位</th>
+          <th>星级</th>
+          <th>首次发现</th>
+          <th>最近变化</th>
+          <th>状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>电烤盘/室内烧烤炉</td>
+          <td>$100-169</td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>6/28</td>
+          <td>8/17 Ninja Sizzle GR101 #1+三路径</td>
+          <td>延续·有变化</td>
+        </tr>
+        <tr>
+          <td>室内披萨烤箱/高热台式烤箱</td>
+          <td>$149-349</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>7/10</td>
+          <td>8/16 Nuwave Bravo XL Pro</td>
+          <td>延续·无变化</td>
+        </tr>
+        <tr>
+          <td>蒸烤炸一体机</td>
+          <td>$100-179</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>6/28</td>
+          <td>8/13 Ninja 8-in-1 $169</td>
+          <td>延续·无变化</td>
+        </tr>
+        <tr>
+          <td>冷萃+热萃咖啡机</td>
+          <td>$100-129</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>6/28</td>
+          <td>8/7 Ninja CM401 $140</td>
+          <td>延续·无变化</td>
+        </tr>
+        <tr>
+          <td>玻璃碗空气炸锅</td>
+          <td>$100-200</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>8/6</td>
+          <td>8/16 Trusted Reviews #1</td>
+          <td>延续·无变化</td>
+        </tr>
+        <tr>
+          <td>制冰机</td>
+          <td>$100-149</td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>6/28</td>
+          <td>8/12 Electactic冰水一体$218</td>
+          <td>延续·无变化</td>
+        </tr>
+        <tr>
+          <td>压缩机冰淇淋机</td>
+          <td>$100-179</td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>7/4</td>
+          <td>8/13 Cuisinart TikTok企划</td>
+          <td>延续·无变化</td>
+        </tr>
+        <tr>
+          <td>面包+冰淇淋一体机</td>
+          <td>$249+(欧)</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>8/4</td>
+          <td>8/4 Panasonic欧洲发布</td>
+          <td>延续·无变化</td>
+        </tr>
+        <tr>
+          <td>家用沙冰/冷饮机</td>
+          <td>$100-179</td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>7/14</td>
+          <td>8/5 刨冰机月销3000+</td>
+          <td>延续·无变化</td>
+        </tr>
+        <tr>
+          <td>3-in-1个人冷却风扇</td>
+          <td>$100-149</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>7/30</td>
+          <td>7/31 ChillPill实为2-in-1</td>
+          <td>延续·无变化</td>
+        </tr>
+        <tr>
+          <td>便携式双灶电磁炉</td>
+          <td>$100-149</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>7/21</td>
+          <td>7/23 Cuisinart $89.95</td>
+          <td>延续·无变化</td>
+        </tr>
+        <tr>
+          <td>蒸汽+吸尘+除螨清洁机</td>
+          <td>$100-149</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>7/2</td>
+          <td>7/2 不开窗逻辑确认</td>
+          <td>延续·无变化</td>
+        </tr>
+        <tr>
+          <td>浴室/梳妆台护肤冷藏冰箱</td>
+          <td>$100-149</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>8/2</td>
+          <td>8/2 新增追踪</td>
+          <td>延续·无变化</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 🔍 关注 -->
+<div class="section-block" id="watchlist">
+  <div class="section-header">
+    <h2>🔍 关注</h2>
+    <span class="badge-watch">4条动向</span>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">Martha Stewart stand mixer $149.99 获Amazon bestseller</div>
+    <div class="watch-text">Chowhound（8/16）：660W/12速/5.3QT/5色，2023年上线Amazon以来持续走量。$100-200非KitchenAid stand mixer竞争白热化（Martha Stewart $149.99 / Vivohome $149.99 / Hamilton Beach $139.99 / Cebory $169.99 / Aucma $135.99），品类极度拥挤，差异化壁垒低，选品需谨慎</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">韩国无明火烹饪电器热浪驱动</div>
+    <div class="watch-text">fooshya.com（8/16）：Tefal推出Wide Two-Tier Electric Steamer（24cm双曾6L）+ EasyFry Far-Infrared Air Fryer Light（远红外+360°热风+8自动模式+透明视窗）+ POP mini rice cooker（8自动程序+NFC食谱+4色）。"热浪→无明火烹饪"逻辑在美国同样成立</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">Ninja Creami持续TikTok爆火</div>
+    <div class="watch-text">zdask.com（8/16）：2021年上市老产品因TikTok high-protein ice cream视频再次卖断货，$200-250。验证压缩机冰淇淋机赛道社媒驱动能力，但Ninja Creami非压缩机而是冷冻+钻削式，与$100+压缩机机会不冲突</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">Canoly C16冷压榨汁机3-in-1发布</div>
+    <div class="watch-text">the-gadgeteer（7/7）：一机替换榨汁机+绞肉机+研磨机，解决"冷压榨汁机难清洗"痛点。价位未明且属$100以下可能性大，暂不录入追踪</div>
+  </div>
+</div>
+
+<div class="page-footer">
+  <p>数据来源：bestchoice.com · chowhound.com · fooshya.com · zdask.com · the-gadgeteer.com</p>
+  <p><a href="index.html">← 返回首页</a></p>
+</div>
+
+</body>
+</html>
