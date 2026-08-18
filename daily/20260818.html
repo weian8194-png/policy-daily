@@ -4,115 +4,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>跨境政策日报 · 2026年8月18日（星期二）</title>
-<style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 20px; }
-    [id] { scroll-margin-top: 20px; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    .layout { display: flex; min-height: 100vh; }
-    .sidebar { width: 220px; background: #0f172a; color: #e2e8f0; padding: 24px 16px; position: fixed; top: 0; left: 0; height: 100vh; overflow-y: auto; z-index: 100; }
-    .sidebar-header h2 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
-    .sidebar-header .date { font-size: 14px; color: #94a3b8; margin-top: 4px; }
-    .sidebar-header .weekday { font-size: 12px; color: #64748b; margin-top: 2px; }
-    .nav-section { margin-top: 20px; }
-    .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: 6px; color: #cbd5e1; text-decoration: none; font-size: 13px; font-weight: 500; transition: all 0.15s; }
-    .nav-item:hover { background: #1e293b; color: #f1f5f9; }
-    .nav-count { background: #334155; color: #94a3b8; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 10px; min-width: 22px; text-align: center; }
-    .main-content { margin-left: 220px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f8fafc; }
-    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
-    .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
-    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
-    .content-header .date-line .date-val { font-weight: 700; color: #334155; }
-    .content-header .date-line .update-time { font-size: 11px; background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
-    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
-    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
-    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
-    .stat-chip.danger .stat-num { color: #dc2626; }
-    .stat-chip.warn .stat-num { color: #d97706; }
-    .stat-chip.info .stat-num { color: #16a34a; }
-    .stat-chip.platform .stat-num { color: #0284c7; }
-    .compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
-    .compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
-    .compliance-banner ul { list-style: none; padding: 0; }
-    .compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
-    .compliance-banner li::before { content: "▸"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
-    .compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
-    .section-block { margin-bottom: 28px; }
-    .section-title { font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 8px; }
-    .summary-grid { display: grid; gap: 8px; }
-    .summary-card { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 12px 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); display: flex; align-items: flex-start; gap: 10px; }
-    .summary-badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
-    .summary-badge.danger { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
-    .summary-badge.warning { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
-    .summary-badge.info { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
-    .summary-text { font-size: 13px; color: #334155; line-height: 1.6; }
-    .policy-card { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 14px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-    .card-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px 10px; }
-    .card-title-row { display: flex; align-items: center; gap: 8px; flex: 1; }
-    .severity-badge { font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
-    .severity-badge.danger { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
-    .severity-badge.warning { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
-    .severity-badge.info { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
-    .platform-tag { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; color: #fff; }
-    .platform-tag.amazon { background: #FF9900; }
-    .platform-tag.tiktok { background: #000000; }
-    .platform-tag.cpsc { background: #dc2626; }
-    .platform-tag.cbp { background: #1e3a5f; }
-    .platform-tag.eu { background: #003399; }
-    .platform-tag.shipping { background: #475569; }
-    .platform-tag.tax { background: #0891b2; }
-    .platform-tag.walmart { background: #0071dc; }
-    .platform-tag.sz { background: #0066cc; }
-    .platform-tag.usa { background: #1e3a5f; }
-    .platform-tag.shopee { background: #ee4d2d; }
-    .card-title { font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.4; }
-    .card-body { padding: 0 18px 16px; }
-    .card-body p { font-size: 13px; color: #475569; margin-bottom: 8px; line-height: 1.7; }
-    .card-body .detail-row { display: flex; gap: 8px; margin-bottom: 6px; font-size: 12px; }
-    .card-body .detail-label { color: #94a3b8; min-width: 60px; font-weight: 600; }
-    .card-body .detail-value { color: #334155; }
-    .card-body .action-list { background: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; padding: 10px 14px; margin-top: 10px; }
-    .card-body .action-list .action-title { font-size: 12px; font-weight: 700; color: #dc2626; margin-bottom: 6px; }
-    .card-body .action-list ol { margin: 0; padding-left: 18px; }
-    .card-body .action-list li { font-size: 12px; color: #7f1d1d; line-height: 1.6; }
-    .card-body .action-list.warning { background: #fffbeb; border-color: #fde68a; }
-    .card-body .action-list.warning .action-title { color: #d97706; }
-    .card-body .action-list.warning li { color: #78350f; }
-    .timeline-section { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-    .timeline-section h3 { font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 12px; }
-    .timeline-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; font-size: 13px; color: #475569; }
-    .timeline-item .tl-date { font-weight: 700; color: #0f172a; min-width: 56px; }
-    .timeline-item .tl-badge { font-size: 10px; padding: 1px 6px; border-radius: 3px; font-weight: 700; }
-    .tl-badge.danger { background: #fef2f2; color: #dc2626; }
-    .tl-badge.warning { background: #fffbeb; color: #d97706; }
-    .tl-badge.info { background: #f0fdf4; color: #16a34a; }
-    .sources-section { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-    .sources-section h3 { font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 12px; }
-    .source-group { margin-bottom: 14px; }
-    .source-group-title { font-size: 13px; font-weight: 700; color: #475569; margin-bottom: 6px; }
-    .source-list { display: flex; flex-wrap: wrap; gap: 6px; }
-    .source-link { font-size: 11px; color: #2563eb; text-decoration: none; background: #eff6ff; padding: 3px 8px; border-radius: 4px; }
-    .source-link:hover { background: #dbeafe; }
-    .footer { text-align: center; padding: 24px 0 16px; font-size: 11px; color: #94a3b8; }
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+[id] { scroll-margin-top: 20px; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.layout { display: flex; min-height: 100vh; }
+.sidebar { width: 220px; background: #0f172a; color: #e2e8f0; padding: 24px 16px; position: fixed; top: 0; left: 0; height: 100vh; overflow-y: auto; z-index: 100; }
+.sidebar-header h2 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.sidebar-header .date { font-size: 14px; color: #94a3b8; margin-top: 4px; }
+.sidebar-header .weekday { font-size: 12px; color: #64748b; margin-top: 2px; }
+.nav-section { margin-top: 20px; }
+.nav-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: 6px; color: #cbd5e1; text-decoration: none; font-size: 13px; font-weight: 500; transition: all 0.15s; }
+.nav-item:hover { background: #1e293b; color: #f1f5f9; }
+.nav-count { background: #334155; color: #94a3b8; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 10px; min-width: 22px; text-align: center; }
+.main-content { margin-left: 220px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f8fafc; }
+.content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
+.content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
+.content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+.content-header .date-line .date-val { font-weight: 700; color: #334155; }
+.content-header .date-line .update-time { font-size: 11px; background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+.stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+.stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+.stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+.stat-chip.danger .stat-num { color: #dc2626; }
+.stat-chip.warn .stat-num { color: #d97706; }
+.stat-chip.info .stat-num { color: #16a34a; }
+.stat-chip.platform .stat-num { color: #0284c7; }
+.compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
+.compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
+.compliance-banner ul { list-style: none; padding: 0; }
+.compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
+.compliance-banner li::before { content: "\25b8"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
+.compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
+.section-block { margin-bottom: 28px; }
+.section-title { font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 8px; }
+.policy-card { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 14px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.card-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px 10px; }
+.card-title-row { display: flex; align-items: center; gap: 8px; flex: 1; flex-wrap: wrap; }
+.severity-badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+.severity-badge.danger { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.severity-badge.warning { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+.severity-badge.info { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+.platform-tag { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+.platform-tag.walmart { background: #f0fdf4; color: #16a34a; border-color: #bbf7d0; }
+.platform-tag.tiktok { background: #fdf4ff; color: #9333ea; border-color: #e9d5ff; }
+.platform-tag.eu { background: #fefce8; color: #a16207; border-color: #fde68a; }
+.platform-tag.usa { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+.platform-tag.cpsc { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+.platform-tag.cbp { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
+.platform-tag.lazada { background: #7c3aed10; color: #7c3aed; border-color: #c4b5fd; }
+.platform-tag.temu { background: #fef2f2; color: #dc2626; border-color: #fecaca; }
+.card-title { font-size: 14px; font-weight: 600; color: #1e293b; }
+.card-body { padding: 4px 18px 16px; }
+.card-body p { font-size: 13px; color: #475569; line-height: 1.7; margin-bottom: 10px; }
+.detail-row { display: flex; gap: 8px; padding: 4px 0; font-size: 12px; }
+.detail-label { color: #64748b; font-weight: 600; min-width: 70px; }
+.detail-value { color: #334155; }
+.action-list { background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 10px 14px; margin-top: 8px; }
+.action-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+.action-list ol { padding-left: 18px; }
+.action-list li { font-size: 12px; color: #78350f; line-height: 1.7; }
+.timeline-section { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 18px; }
+.timeline-item { display: flex; gap: 12px; padding: 6px 0; font-size: 13px; border-bottom: 1px solid #f1f5f9; }
+.timeline-item:last-child { border-bottom: none; }
+.timeline-date { min-width: 90px; font-weight: 700; color: #334155; white-space: nowrap; }
+.timeline-dot { min-width: 16px; text-align: center; }
+.timeline-text { color: #475569; }
+.footer { text-align: center; padding: 24px; font-size: 12px; color: #94a3b8; }
+.archive-link { display: inline-block; margin-top: 6px; color: #2563eb; text-decoration: none; font-size: 12px; }
+.archive-link:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
 <div class="layout">
-<nav class="sidebar">
+<aside class="sidebar">
 <div class="sidebar-header">
-<h2>📋 跨境政策日报</h2>
+<h2>📋 政策日报</h2>
 <div class="date">2026年8月18日（星期二）</div>
-<div class="weekday">星期六</div>
+<div class="weekday">每日8:30更新</div>
 </div>
-<div class="nav-section">
-<a href="#executive-summary" class="nav-item">🔥 速报 <span class="nav-count">19</span></a>
-<a href="#compliance" class="nav-item">⚠️ 合规提醒</a>
-<a href="#platform" class="nav-item">🔴 平台政策 <span class="nav-count">5</span></a>
-<a href="#compliance-tax" class="nav-item">🟡 合规/税务动态 <span class="nav-count">7</span></a>
-<a href="#logistics" class="nav-item">🚢 物流/航运 <span class="nav-count">3</span></a>
-<a href="#timeline" class="nav-item">⏰ 近期时间线</a>
-<a href="#sources" class="nav-item">📡 信息源</a>
-</div>
+<nav class="nav-section">
+<a class="nav-item" href="#executive-summary">摘要速览 <span class="nav-count">5</span></a>
+<a class="nav-item" href="#compliance">合规提醒 <span class="nav-count">17</span></a>
+<a class="nav-item" href="#platform">平台政策 <span class="nav-count">8</span></a>
+<a class="nav-item" href="#compliance-tax">合规/税务动态 <span class="nav-count">7</span></a>
+<a class="nav-item" href="#logistics">物流/航运 <span class="nav-count">2</span></a>
+<a class="nav-item" href="#timeline">近期时间线 <span class="nav-count">21</span></a>
+<a class="nav-item" href="#sources">信息源 <span class="nav-count">34</span></a>
 </nav>
+</aside>
 <main class="main-content">
 <div class="content-header">
 <h1>跨境出海政策日报</h1>
