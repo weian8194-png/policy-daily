@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电趋势 | 2026年8月25日（周二）</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; padding: 24px 20px; max-width: 900px; margin: 0 auto; }
+    h1 { font-size: 22px; font-weight: 800; color: #0f172a; margin-bottom: 4px; }
+    .date-line { font-size: 13px; color: #64748b; margin-bottom: 20px; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .badge-hot { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; background: #f0fdfa; color: #0d9488; }
+    .section-header .badge-detail { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; background: #eff6ff; color: #2563eb; }
+    .section-header .badge-watch { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-new { border-left: 4px solid #dc2626; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; }
+    .tag-soda { background: #0891b2; }
+    .tag-icecream { background: #8b5cf6; }
+    .tag-icemaker { background: #0ea5e9; }
+    .tag-slushie { background: #e11d48; }
+    .tag-airfryer { background: #f97316; }
+    .tag-grill { background: #dc2626; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-new { background: #fef2f2; color: #dc2626; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-body { padding: 8px 16px 12px; font-size: 12px; color: #475569; line-height: 1.8; }
+    .card-body strong { color: #1e293b; }
+    .card-change-note-yellow { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-change-note-yellow .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
+    .card-change-note-yellow .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-change-note-green { background: #f0fdf4; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #bbf7d0; }
+    .card-change-note-green .change-label { font-size: 11px; font-weight: 700; color: #16a34a; margin-bottom: 4px; }
+    .card-change-note-green .change-text { font-size: 12px; color: #14532d; line-height: 1.7; }
+    .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 10px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; font-size: 11px; }
+    .continue-table td { padding: 6px 10px; border-bottom: 1px solid #f1f5f9; font-size: 11px; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 20px 0; font-size: 11px; color: #94a3b8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<h1>🔥 美国亚马逊$90+小家电市场趋势</h1>
+<p class="date-line">2026年8月25日（周二） · 每日分析</p>
+
+<!-- 🔥 速报 -->
+<div class="section-block" id="quick-report">
+  <div class="section-header">
+    <h2>🔥 速报</h2>
+    <span class="badge-hot">1新增+1变化</span>
+  </div>
+
+  <!-- 家用台式汽水/气泡水机 - 新增 -->
+  <div class="opportunity-card card-new">
+    <div class="card-top">
+      <span class="category-tag tag-soda">汽水/气泡水机</span>
+      <span class="status-badge status-new">新增</span>
+    </div>
+    <div class="card-title">家用台式汽水/气泡水机（电动） · $100-179 · ⭐⭐⭐⭐</div>
+    <div class="card-change-note-green">
+      <div class="change-label">🆕 首次发现</div>
+      <div class="change-text">Consumer Reports（8/24 Deals页）将<strong>Ninja Thirsti Drink System and Soda Machine</strong>列为9大推荐Deal之一，现价$149.99（原$179.99，降16%）。CR评测核心：①"reliably sparkly water that lasts"——不是每台气泡水机都能做到气泡持久，Thirsti做到了 ②"exceedingly easy to use"——可定制性强但操作极简 ③<strong>3档气泡浓度</strong>设置消除猜度 ④加水+冰入水箱→放杯→选量+气泡度→按Start，全自动化。与SodaStream（手动打气、$80-130）完全不同技术路线：Thirsti是<strong>电动压缩机+水箱+出液口一体</strong>，更像"家用台式汽水喷泉"</div>
+    </div>
+    <div class="card-insight">
+      <div class="insight-label">💡 机会分析</div>
+      <div class="insight-text">$100+电动台式汽水机是尚未被中国卖家充分挖掘的空白——SodaStream占$80-130手动段，但电动段（水箱+自动碳化+出液）品牌极少，Ninja是首个CR背书大牌。差异化窗口：①压缩机自动碳化+双模（气泡水+风味糖浆自动混合）+2L大水箱，BOM约$40-50，推荐价$129-149 ②Ninja需冰+水填水箱，中国卖家可做"直连净水器进水"型号免去手动加水，BOM增加约$8但解决高频痛点 ③CO2高压系统需UL/ETL认证——门槛也是护城河 ④Thirsti Flavor Drops配件$19（零卡零糖调味液）说明"机器+耗材"模式可行</div>
+    </div>
+    <div class="card-body">
+      <strong>来源：</strong>Consumer Reports Deals &amp; Savings（8/24）/ dealnews.com（8/23 Ninja Thirsti Flavor Drops $19）
+    </div>
+  </div>
+
+  <!-- 压缩机冰淇淋机 - 延续有变化 -->
+  <div class="opportunity-card card-hot">
+    <div class="card-top">
+      <span class="category-tag tag-icecream">压缩机冰淇淋机</span>
+      <span class="status-badge status-changed">延续·有变化</span>
+    </div>
+    <div class="card-title">压缩机冰淇淋机 · $100-179 · ⭐⭐⭐⭐⭐</div>
+    <div class="card-change-note-yellow">
+      <div class="change-label">📌 今日新增</div>
+      <div class="change-text">Woot（8/24）上架<strong>Ninja CREAMi XL Deluxe 11-in-1翻新机$99.99</strong>（原$250，60% off），含两个24oz冻桶+11种预设程序。这是Ninja CREAMi XL系列<strong>首次在$100以下出现</strong>（翻新），验证了$100是消费者对高端冰淇淋机的心理门槛——原$250旗舰翻新后消费者愿意在$99.99成交。同期Amazon正品<strong>Ninja CREAMi XL 11-in-1 $186.99</strong>（原$249.99，25% off）</div>
+    </div>
+    <div class="card-insight">
+      <div class="insight-label">💡 机会更新</div>
+      <div class="insight-text">$99.99翻新机数据点说明：①$100是冰淇淋机"冲动消费"价位，新品如能卡$149-179带全新质保，比翻新$99.99更有价值感 ②CREAMi XL"两个24oz冻桶"配置被验证为刚需（一个在冻一个在做，连续出冰），中国卖家新品应<strong>标配双桶</strong> ③Labor Day促销季Ninja全线降价，Q4黑五可能更深折扣，新品需在9-10月窗口期快速上架占位</div>
+    </div>
+    <div class="card-body">
+      <strong>来源：</strong>Woot（8/24 Ninja CREAMi XL Deluxe翻新$99.99）/ Amazon（8/24 CREAMi XL $186.99）
+    </div>
+  </div>
+</div>
+
+<!-- 📋 详析：延续中机会点 -->
+<div class="section-block" id="detail-analysis">
+  <div class="section-header">
+    <h2>📋 延续追踪</h2>
+    <span class="badge-detail">14个机会点</span>
+  </div>
+
+  <table class="continue-table">
+    <thead>
+      <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>压缩机冰淇淋机</strong></td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>8/25 CREAMi XL翻新$99.99验证$100心理门槛</td><td><strong>延续·有变化</strong></td></tr>
+      <tr><td><strong>家用台式汽水/气泡水机</strong></td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>8/25</td><td>8/25 Ninja Thirsti CR背书$149.99</td><td><strong>新增</strong></td></tr>
+      <tr><td>制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/24 ecozy/Silonn APP控制入榜</td><td>延续·无变化</td></tr>
+      <tr><td>家用沙冰/冷饮机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>8/22 Slushi Twist $400售罄</td><td>延续·无变化</td></tr>
+      <tr><td>电烤盘/室内烧烤炉</td><td>$100-169</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/23 NutriChef 7-in-1登顶#1</td><td>延续·无变化</td></tr>
+      <tr><td>玻璃碗空气炸锅</td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>8/21 Kismile $159+TrustedReviews</td><td>延续·无变化</td></tr>
+      <tr><td>室内披萨烤箱</td><td>$149-349</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>8/16 Nuwave Bravo XL Pro</td><td>延续·无变化</td></tr>
+      <tr><td>蒸烤炸一体机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/13 Ninja French Door $169</td><td>延续·无变化</td></tr>
+      <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/7 Ninja CM401 $140</td><td>延续·无变化</td></tr>
+      <tr><td>护肤冷藏小冰箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/2</td><td>8/20 Cooluli 25万台召回</td><td>延续·无变化</td></tr>
+      <tr><td>面包+冰淇淋一体机</td><td>$249+(欧)</td><td>⭐⭐⭐⭐</td><td>8/4</td><td>8/4 Panasonic欧洲发布</td><td>延续·无变化</td></tr>
+      <tr><td>3-in-1个人冷却风扇</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/30</td><td>7/31 ChillPill实为2-in-1</td><td>延续·无变化</td></tr>
+      <tr><td>便携式双灶电磁炉</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/21</td><td>7/23 Cuisinart $89.95</td><td>延续·无变化</td></tr>
+      <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td>延续·无变化</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 🔍 关注：其他动向 -->
+<div class="section-block" id="watchlist">
+  <div class="section-header">
+    <h2>🔍 其他动向</h2>
+    <span class="badge-watch">4条</span>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🛒 Labor Day厨电促销全面升温</div>
+    <div class="watch-text">Ninja全线进入Labor Day折扣——Foodi Air Fryer $159.99（原$199.99）、CREAMi XL $186.99（原$249.99）、Thirsti Drink System $149.99（原$179.99）；Le Creuset Dutch Oven $239.95（原$299.95）；Our Place Always Pan Pro $99（原$175）；Bissell Little Green Pet Pro $139.99。Amazon/Target/Walmart/Costco四渠道同步</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">🍕 Ninja Woodfire Pizza Oven降至$279</div>
+    <div class="watch-text">Amazon（原$399，30% off），户外披萨烤箱不在小家电监控范围，但$279+促销力度说明Ninja品牌正全品类清库存，Q4新品周期可能即将启动</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">💨 Cuisinart AIR-200空气炸锅$99.99</div>
+    <div class="watch-text">CR Deals（原$149.95，33% off），带可视窗+翻面提醒+数码显示，4合1（烤/烘/炙/保温），洗碗机安全——$99.99踩在硬门槛上，折射$100+空气炸锅段Labor Day竞争白热化</div>
+  </div>
+
+  <div class="watch-item">
+    <div class="watch-title">❄️ Target台面制冰机$64.98</div>
+    <div class="watch-text">原$92.84，30% off，26.5磅/日产、不锈钢面板——低于$90硬门槛不录入，但说明$65-90段制冰机正被促销压价，$100+差异化制冰机需在功能上拉开距离</div>
+  </div>
+</div>
+
+<div class="page-footer">
+  <p>美国亚马逊$90+小家电市场趋势 · 每日分析</p>
+  <p><a href="../index.html">🏠 返回首页</a></p>
+</div>
+
+</body>
+</html>
