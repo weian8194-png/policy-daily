@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电趋势 2026-08-29</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 960px; margin: 0 auto; padding: 28px 32px 40px; }
+    .page-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .page-header h1 { font-size: 24px; font-weight: 800; color: #0f172a; }
+    .page-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .page-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; display: flex; align-items: flex-start; gap: 12px; }
+    .highlight-banner .hl-icon { font-size: 28px; flex-shrink: 0; }
+    .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
+    .highlight-banner .hl-text strong { color: #92400e; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .section-header .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-icemaker { background: #0ea5e9; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .card-source { font-size: 11px; color: #94a3b8; padding: 6px 16px 12px; line-height: 1.6; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="page-header">
+    <h1>🔥 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="date-line">每日趋势分析 · <span class="date-val">2026年8月29日（周六）</span></div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip hot"><span class="stat-num">14</span>追踪机会点</div>
+    <div class="stat-chip new"><span class="stat-num">0</span>新增机会</div>
+    <div class="stat-chip trend"><span class="stat-num">1</span>今日有变化</div>
+  </div>
+
+  <div class="highlight-banner">
+    <div class="hl-icon">🧊</div>
+    <div class="hl-text"><strong>Morphy Richards InfuseChill风味制冰机IFA首发</strong>——世界首款"风味制冰机"，倒入咖啡/果汁/汽水即可制作对应风味冰块，验证"制冰+风味"差异化方向。同品牌FrostPro制冰机£199.99-249.99在售，风味功能几乎无竞品。Amazon $100-149制冰机仍以bullet/nugget ice为主流，风味制冰功能空白，中国卖家窗口期明显。</div>
+  </div>
+
+  <div class="section-block" id="quick-report">
+    <div class="section-header">
+      <h2>🔥 机会速报</h2>
+      <span class="section-badge badge-hot">1项有变化</span>
+    </div>
+
+    <div class="opportunity-card card-hot">
+      <div class="card-top">
+        <span class="category-tag tag-icemaker">制冰机</span>
+        <span class="status-badge status-changed">延续·有变化</span>
+      </div>
+      <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📌 今日新增</div>
+        <div class="change-text"><strong>Morphy Richards InfuseChill Flavored Ice Maker</strong>在IFA 2026（8/28 PRNewswire）发布——世界首款"风味制冰机"，用户倒入咖啡、果汁、汽水等任意饮料，机器即可制作对应风味的冰块，用于创意冰饮调配。同品牌已有<strong>FrostPro Bullet Ice Maker</strong>（£199.99-249.99，约$250-315）在售，InfuseChill是其制冰品线的功能升级方向。Morphy Richards 90周年IFA展台还展示了S1 Pro无管便携空调、Fusion水壶+烤面包机、全自动咖啡机等。</div>
+      </div>
+      <div class="card-insight">
+        <div class="insight-label">💡 机会更新</div>
+        <div class="insight-text">①InfuseChill验证"制冰+风味"是消费者愿意为差异化付钱的方向——不是简单做冰块，而是"倒入饮料→得到风味冰块→创意调饮"，这是$100-149价位段中国卖家能做的增量功能 ②目前Amazon $100-149制冰机仍以bullet ice/nugget ice为主流，风味制冰功能几乎空白，先发者可抢占"flavored ice maker"搜索词 ③技术门槛不高：核心是制冷系统+饮料储存仓+防串味设计，BOM增量约$8-12，但售价可提升$20-40 ④注意：Morphy Richards为英国品牌，InfuseChill尚未公布美国上市时间和定价，中国卖家有窗口期</div>
+      </div>
+      <div class="card-source">来源：Morphy Richards IFA 2026 90周年新品发布（PRNewswire 8/28）/ Channel News Asia 8/28 / Morphy Richards FrostPro售价（idealo.co.uk 8/24）</div>
+    </div>
+  </div>
+
+  <div class="section-block" id="detail-analysis">
+    <div class="section-header">
+      <h2>📋 延续追踪</h2>
+      <span class="section-badge badge-trend">14个品类</span>
+    </div>
+    <table class="continue-table">
+      <thead><tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr></thead>
+      <tbody>
+        <tr><td>压缩机冰淇淋机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>8/26 CREAMi Deluxe $200+10%CB</td><td>延续·无变化</td></tr>
+        <tr><td><strong>制冰机</strong></td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/29 Morphy Richards InfuseChill风味制冰</td><td><strong>延续·有变化</strong></td></tr>
+        <tr><td>家用台式汽水/气泡水机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>8/25</td><td>8/25 Ninja Thirsti CR背书$149.99</td><td>延续·无变化</td></tr>
+        <tr><td>家用沙冰/冷饮机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>8/22 Ninja Slushi Twist $400 2h售罄</td><td>延续·无变化</td></tr>
+        <tr><td>电烤盘/室内烧烤炉</td><td>$100-169</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/23 NutriChef 7-in-1登顶#1</td><td>延续·无变化</td></tr>
+        <tr><td>玻璃碗空气炸锅</td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>8/21 Kismile AeroLucen $159</td><td>延续·无变化</td></tr>
+        <tr><td>室内披萨烤箱</td><td>$149-349</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>8/16 Nuwave Bravo XL Pro</td><td>延续·无变化</td></tr>
+        <tr><td>蒸烤炸一体机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/28 wan AIChef+Miele AI烹饪助手</td><td>延续·无变化</td></tr>
+        <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/27 IFA数据+43% KitchenAid KF4</td><td>延续·无变化</td></tr>
+        <tr><td>护肤冷藏小冰箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/2</td><td>8/20 Cooluli 25万台召回+火灾风险</td><td>延续·无变化</td></tr>
+        <tr><td>面包+冰淇淋一体机</td><td>$249+(欧)</td><td>⭐⭐⭐⭐</td><td>8/4</td><td>8/4 Panasonic欧洲发布</td><td>延续·无变化</td></tr>
+        <tr><td>3-in-1个人冷却风扇</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/30</td><td>7/31 ChillPill实为2-in-1</td><td>延续·无变化</td></tr>
+        <tr><td>便携式双灶电磁炉</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/21</td><td>7/23 Cuisinart $89.95</td><td>延续·无变化</td></tr>
+        <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td>延续·无变化</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" id="watchlist">
+    <div class="section-header">
+      <h2>🔍 其他动向</h2>
+      <span class="section-badge badge-trend">5条</span>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🧊 Morphy Richards IFA 2026 90周年新品矩阵（8/28）</div>
+      <div class="watch-text">英国百年小家电品牌首次大规模展示全品类——S1 Pro/S1 Lite无管便携空调（8m/s风量+四向摆风+制冷/除湿/风扇三合一）；Fusion水壶+烤面包机（IFA 2025 Gadget Flow Best of IFA）；Clay/Cassini新品系列（性能+家居装饰融合）；InfuseChill风味制冰机；全自动咖啡机。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">💧 Ninja HydraSense台面式滤水系统TikTok走红（8/28）</div>
+      <div class="watch-text">SharkNinja首款滤水产品$199.99，Precision Pressure技术过滤80+污染物（含PFAS/铅/微塑料），NSF/ANSI 42/53/401认证，6×Brita出水速度，96oz水箱+触屏用量追踪。TikTok用户将pickle juice/Kool-Aid/hot dog water倒入后滤出清水引发病毒传播。但品类认证门槛高（NSF/ANSI测试$10K-50K/款），滤芯替换消费模型依赖品牌渠道，中国跨境卖家进入门槛较高，暂列为观察项。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">📊 IFA 2026终极前瞻（8/28 36kr）</div>
+      <div class="watch-text">9/4-8柏林。核心趋势：①AI家电从"能联网"走向"能主动完成任务"（三星AI冰箱+Gemini识别食材3000+种）②追觅9/3全球发布会"Redefining Tomorrow's Home"③Ninja品牌持续横向扩张——空气炸锅→咖啡机→沙冰机→滤水器，证明厨房小家电品牌扩张路径可行。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🛒 Amazon Labor Day促销周末（8/29）</div>
+      <div class="watch-text">COSORI 9-in-1空气炸锅$120→$90（6QT，上月2万+台售出）；PIEZANO披萨烤箱$130→$91（800°F，TikTok爆款）；Our Place Wonder Oven 13QT $149（原$185）、32QT $169（原$245）；Ninja Foodi双区空气炸锅$199.99→$159.94。均为短期折扣，不影响品类结构判断。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🏭 Haatz重返IFA 2026扩展厨房产品线（8/28）</div>
+      <div class="watch-text">韩国厨电品牌连续第二年参展，今年新增水槽+水龙头+食物垃圾处理器，与油烟机+电磁灶组成"Cooking Zone"+"Washing Zone"场景化展示。食物垃圾处理器为首次亮相，用于试探欧洲市场需求。</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    数据来源：prnewswire.com · channelnewsasia.com · inthenews.tv · 36kr.com · thekitchn.com<br>
+    <a href="../index.html">🏠 返回首页</a>
+  </div>
+</div>
+</body>
+</html>
