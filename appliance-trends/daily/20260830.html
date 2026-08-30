@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电趋势 2026-08-30</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 960px; margin: 0 auto; padding: 28px 32px 40px; }
+    .page-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .page-header h1 { font-size: 24px; font-weight: 800; color: #0f172a; }
+    .page-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .page-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; display: flex; align-items: flex-start; gap: 12px; }
+    .highlight-banner .hl-icon { font-size: 28px; flex-shrink: 0; }
+    .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
+    .highlight-banner .hl-text strong { color: #92400e; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .section-header .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-steam { background: #8b5cf6; }
+    .tag-airfryer { background: #0ea5e9; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-new { background: #ede9fe; color: #7c3aed; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-new-note { background: #ede9fe; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #c4b5fd; }
+    .card-new-note .new-label { font-size: 11px; font-weight: 700; color: #7c3aed; margin-bottom: 4px; }
+    .card-new-note .new-text { font-size: 12px; color: #4c1d95; line-height: 1.7; }
+    .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .card-source { font-size: 11px; color: #94a3b8; padding: 6px 16px 12px; line-height: 1.6; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="page-header">
+    <h1>🔥 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="date-line">每日趋势分析 · <span class="date-val">2026年8月30日（周日）</span></div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip hot"><span class="stat-num">15</span>追踪机会点</div>
+    <div class="stat-chip new"><span class="stat-num">1</span>新增机会</div>
+    <div class="stat-chip trend"><span class="stat-num">1</span>今日有变化</div>
+  </div>
+
+  <div class="highlight-banner">
+    <div class="hl-icon">♨️</div>
+    <div class="hl-text"><strong>蒸汽烤面包机/小型蒸汽烤箱新机会确认</strong>——TastingTable编辑专题推荐为"小厨房最佳小家电"，Balmuda The Toaster蒸汽技术使食物外脆内软。Amazon $100-149价位段toaster oven蒸汽功能完全空白，先发者可抢占"steam toaster oven"搜索词。同时Ninja Crispi DualZone玻璃空气炸锅发布，玻璃碗空气炸锅品线持续升级。</div>
+  </div>
+
+  <div class="section-block" id="quick-report">
+    <div class="section-header">
+      <h2>🔥 机会速报</h2>
+      <span class="section-badge badge-hot">1新增 · 1变化</span>
+    </div>
+
+    <div class="opportunity-card card-new">
+      <div class="card-top">
+        <span class="category-tag tag-steam">蒸汽烤面包机</span>
+        <span class="status-badge status-new">新增</span>
+      </div>
+      <div class="card-title">蒸汽烤面包机/小型蒸汽烤箱 · $100-149 · ⭐⭐⭐⭐</div>
+      <div class="card-new-note">
+        <div class="new-label">🆕 趋势信号</div>
+        <div class="new-text">TastingTable（8/29）专题推荐蒸汽烤面包机为"小厨房最佳小家电"——<strong>Balmuda The Toaster</strong>通过顶部注水产生蒸汽，使食物外脆内软，14.1×12.6×8.2英寸极省空间。Balmuda美国售价约$329，Pro版更贵。编辑亲测多年后称"steam oven remains the best small appliance in my book"。</div>
+      </div>
+      <div class="card-insight">
+        <div class="insight-label">💡 痛点与机会</div>
+        <div class="insight-text">Amazon $100-149价位段toaster oven几乎全部是传统干热型（bake/broil/toast/reheat），<strong>蒸汽功能完全空白</strong>。消费者在"重新加热披萨/面包/炸鸡时不变软变潮"这个需求上，蒸汽+干热双模远优于纯干热。不是"砍Balmuda功能做便宜版"，而是"toaster oven本身就该$100-149，加蒸汽模块是增量功能，天然就值这个价"。</div>
+      </div>
+      <div class="card-change-note">
+        <div class="change-label">💰 BOM与推荐价</div>
+        <div class="change-text">蒸汽模块核心是顶部小水箱（50-80ml）+蒸汽发生片/管，BOM增量约$5-8，但售价可从普通toaster oven的$90-110提升到$129-149。推荐价$129.99，与同容量普通toaster oven拉开$20-30价差。Amazon搜索"steam toaster oven"仅Balmuda（$329）和极少数日系品牌（$200+），$100-149区间零产品。先发者可抢占搜索词。</div>
+      </div>
+      <div class="card-source">来源：TastingTable 8/29 / Balmuda US官方售价</div>
+    </div>
+
+    <div class="opportunity-card card-hot">
+      <div class="card-top">
+        <span class="category-tag tag-airfryer">玻璃碗空气炸锅</span>
+        <span class="status-badge status-changed">延续·有变化</span>
+      </div>
+      <div class="card-title">玻璃碗空气炸锅 · $100-200 · ⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📌 今日新增</div>
+        <div class="change-text"><strong>Ninja Crispi DualZone Air Fryer</strong>发布（china-gadgets.de 8/29），在原Crispi玻璃空气炸锅基础上加入双区双篮技术——可同时烹饪两种不同食物/温度。同时<strong>Ninja Crispi Pro</strong>获pickr.com.au正式评测4.5/5分（8/29），评测者称"空气炸锅从此不再只是空气炸锅"——玻璃容器可视化烹饪+密封冷藏+多模式使其从单一功能升维为"烹饪系统"。新加坡二手市场Ninja Crispi频繁流通（S$189-265），反映实际购买活跃度。</div>
+      </div>
+      <div class="card-source">来源：china-gadgets.de 8/29 / pickr.com.au 8/29 / Carousell SG 8/29</div>
+    </div>
+  </div>
+
+  <div class="section-block" id="detail-analysis">
+    <div class="section-header">
+      <h2>📋 延续追踪</h2>
+      <span class="section-badge badge-trend">15个品类</span>
+    </div>
+    <table class="continue-table">
+      <thead><tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr></thead>
+      <tbody>
+        <tr><td><strong>蒸汽烤面包机/小型蒸汽烤箱</strong></td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/30</td><td>8/30 Balmuda验证+Amazon空白</td><td><strong>新增</strong></td></tr>
+        <tr><td>压缩机冰淇淋机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>8/26 CREAMi Deluxe $200+10%CB</td><td>延续·无变化</td></tr>
+        <tr><td>制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/29 Morphy Richards InfuseChill</td><td>延续·无变化</td></tr>
+        <tr><td><strong>玻璃碗空气炸锅</strong></td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>8/30 Ninja DualZone+Pro 4.5分</td><td><strong>延续·有变化</strong></td></tr>
+        <tr><td>家用台式汽水/气泡水机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>8/25</td><td>8/25 Ninja Thirsti CR背书$149.99</td><td>延续·无变化</td></tr>
+        <tr><td>家用沙冰/冷饮机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>8/22 Ninja Slushi Twist $400 2h售罄</td><td>延续·无变化</td></tr>
+        <tr><td>电烤盘/室内烧烤炉</td><td>$100-169</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/23 NutriChef 7-in-1登顶#1</td><td>延续·无变化</td></tr>
+        <tr><td>室内披萨烤箱</td><td>$149-349</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>8/16 Nuwave Bravo XL Pro</td><td>延续·无变化</td></tr>
+        <tr><td>蒸烤炸一体机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/28 wan AIChef+Miele AI烹饪助手</td><td>延续·无变化</td></tr>
+        <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/27 IFA数据+43% KitchenAid KF4</td><td>延续·无变化</td></tr>
+        <tr><td>护肤冷藏小冰箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/2</td><td>8/20 Cooluli 25万台召回+火灾风险</td><td>延续·无变化</td></tr>
+        <tr><td>面包+冰淇淋一体机</td><td>$249+(欧)</td><td>⭐⭐⭐⭐</td><td>8/4</td><td>8/4 Panasonic欧洲发布</td><td>延续·无变化</td></tr>
+        <tr><td>3-in-1个人冷却风扇</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/30</td><td>7/31 ChillPill实为2-in-1</td><td>延续·无变化</td></tr>
+        <tr><td>便携式双灶电磁炉</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/21</td><td>7/23 Cuisinart $89.95</td><td>延续·无变化</td></tr>
+        <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td>延续·无变化</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" id="watchlist">
+    <div class="section-header">
+      <h2>🔍 其他动向</h2>
+      <span class="section-badge badge-trend">6条</span>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🔪 Ninja CrushBOSS 3-in-1料理系统上市（8/29 TechRadar 4.5/5）</div>
+      <div class="watch-text">$319.99，1200W，集72oz搅拌机+64oz食物处理器+26oz个人杯于一体，SmoothSense/PrepIQ自动程序。印证Ninja"厨房小家电品牌横向扩张"策略持续——从空气炸锅→咖啡机→沙冰机→滤水器→制冰机→微波+空气炸锅→料理系统。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">📡 Ninja Crispi MW101微波+空气炸锅一体机Amazon售$424.99（8/30）</div>
+      <div class="watch-text">1000W微波+1700W空气炸锅+14功能+FusionCrisp自动循环。Tom's Guide评"安静得让空气炸锅被重新思考"。$424.99≈单独买微波炉+空气炸锅总价，FusionCrisp自动化是溢价点。暂未进入$100-150追踪区间。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🏷️ Ninja品牌矩阵周末密集曝光</div>
+      <div class="watch-text">Crispi MW101（$425）/ Crispi Pro（$399 4.5分）/ Crispi DualZone / CrushBOSS（$320）/ Slushi Twist（$400）/ Thirsti（$200）/ HydraSense（$199.99 TikTok走红）——7款产品同时获媒体评测或deal推荐，品牌势能极强，中国卖家选品需注意Ninja进入的品类都有价格锚定效应。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">📊 IFA 2026倒计时5天（9/4-8柏林）</div>
+      <div class="watch-text">核心趋势：①AI家电从"能联网"走向"能主动完成任务"②Miele首发AI洗碗机G8+CulinaryCoach AI烹饪助手③Tineco首次扩展到Smart Kitchen品类④LG扩展Fit & Max至全系⑤三星首次自建展厅。IFA开幕后可能有新小家电发布，下周重点关注。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🛒 Amazon Labor Day大促（8/29-9/2）</div>
+      <div class="watch-text">COSORI 9-in-1空气炸锅$120→$90；PIEZANO披萨烤箱$130→$91；Our Place Wonder Oven $149-269；Ninja Foodi双区$199.99→$159.94。均为短期折扣，不影响品类结构判断。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">📱 TikTok美区厨房小件爆单（出海网8/29）</div>
+      <div class="watch-text">不锈钢汤勺托架28天1.83万单$10.99、汉堡压肉器4天2780件$9-15、五刃葱剪14天3174件$10。均为$20以下轻小件，低于$90门槛不录入，但"不锈钢+痛点可视化+短视频演示"打法对$90+产品同样适用。</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    <div>美国亚马逊$90+小家电市场趋势 · 每日自动分析</div>
+    <div>数据来源：Amazon/TastingTable/TechRadar/PRNewswire/出海网等</div>
+    <div><a href="../index.html">返回首页</a></div>
+  </div>
+</div>
+</body>
+</html>
