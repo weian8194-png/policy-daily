@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小家电趋势 2026-08-31</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .page { max-width: 960px; margin: 0 auto; padding: 28px 32px 40px; }
+    .page-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .page-header h1 { font-size: 24px; font-weight: 800; color: #0f172a; }
+    .page-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .page-header .date-line .date-val { font-weight: 700; color: #334155; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; display: flex; align-items: flex-start; gap: 12px; }
+    .highlight-banner .hl-icon { font-size: 28px; flex-shrink: 0; }
+    .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
+    .highlight-banner .hl-text strong { color: #92400e; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-header .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .section-header .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
+    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
+    .opportunity-card.card-changed { border-left: 4px solid #f59e0b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
+    .tag-steam { background: #8b5cf6; }
+    .tag-airfryer { background: #0ea5e9; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-new { background: #ede9fe; color: #7c3aed; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .card-source { font-size: 11px; color: #94a3b8; padding: 6px 16px 12px; line-height: 1.6; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .continue-table tr:hover td { background: #f8fafc; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; line-height: 1.8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer .footer-divider { width: 32px; height: 2px; background: #e2e8f0; margin: 0 auto 10px; border-radius: 1px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="page-header">
+    <h1>🔥 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="date-line">每日趋势分析 · <span class="date-val">2026年8月31日（周一）</span></div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip hot"><span class="stat-num">15</span>追踪机会点</div>
+    <div class="stat-chip new"><span class="stat-num">0</span>新增机会</div>
+    <div class="stat-chip trend"><span class="stat-num">1</span>今日有变化</div>
+  </div>
+
+  <div class="highlight-banner">
+    <div class="hl-icon">♨️</div>
+    <div class="hl-text"><strong>蒸汽烤面包机持续获得验证</strong>——Our Place Wonder Oven Steam Infusion入选TrustedReviews 2026最佳台式烤箱（$149-269），Nuwave Combi Steam Oven获The Inventory专题推荐。两个新信源从不同角度确认蒸汽+干热组合是toaster oven品类升级方向，Amazon $100-149区间蒸汽功能仍空白。中国小家电市场出现"消费者后悔"反思，多功能集成成为明确趋势。</div>
+  </div>
+
+  <!-- 🔥 速报 -->
+  <div class="section-block" id="quick-report">
+    <div class="section-header">
+      <h2>🔥 速报</h2>
+      <span class="section-badge badge-hot">1个有变化</span>
+    </div>
+
+    <div class="opportunity-card card-changed">
+      <div class="card-top">
+        <span class="category-tag tag-steam">蒸汽烤箱</span>
+        <span class="status-badge status-changed">延续·有变化</span>
+      </div>
+      <div class="card-title">蒸汽烤面包机/小型蒸汽烤箱 · $100-149</div>
+      <div class="card-change-note">
+        <div class="change-label">今日新增验证</div>
+        <div class="change-text">① <strong>Our Place Wonder Oven Steam Infusion</strong>（TrustedReviews 8/30）——6-in-1多功能+Steam Infusion技术，12L容量，入选2026最佳台式烤箱榜单。Our Place是DTC知名品牌，进入steam oven品类意味着消费者教育门槛降低。基础款$149正处于追踪价位上沿。<br><br>② <strong>Nuwave Combi Steam Oven</strong>（The Inventory 8/29）——16-quart，50-450°F，120预设，PFAS-free不锈钢内胆，可空气炸/蒸汽/低温慢煮/烤/烘焙。编辑明确指出"这不是又一个加了蒸汽托盘的空气炸锅"，combi steam通过湿度控制实现传统干热无法达到的精度。</div>
+      </div>
+      <div class="card-insight">
+        <div class="insight-label">机会窗口</div>
+        <div class="insight-text">Amazon $100-149区间steam toaster oven仍几乎空白（Balmuda $329+/Our Place $149+/Nuwave $200+）。Our Place入局是利好——品牌教育消费者"蒸汽再热>干热再热"认知，但Our Place定价偏高且12L偏小。$129-149/16-20L性价比款仍有先发机会。</div>
+      </div>
+      <div class="card-source">来源：TrustedReviews 8/30 / The Inventory 8/29 / Our Place官网</div>
+    </div>
+  </div>
+
+  <!-- 📋 详析 -->
+  <div class="section-block" id="detail-analysis">
+    <div class="section-header">
+      <h2>📋 详析</h2>
+      <span class="section-badge badge-trend">其他动向</span>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">Typhur Sync获2026最佳台式烤箱#1（TrustedReviews 8/30）</div>
+      <div class="watch-text">27-quart容量，世界首款NIST认证完全无线智能温度探针，2400 RPM风扇比传统烤箱快30%。定价预估$300+，$100-149价位无线探针暂不现实，但探针模块化下沉趋势值得关注。</div>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">wan AIChef ultra明日（9/1）Indiegogo开售</div>
+      <div class="watch-text">$1,799起（$3,999 MSRP 55%off），5-in-1 AI烹饪机器人，NVIDIA驱动。远超$90+范围，但AI烹饪"视觉识别+自动烹饪"若下沉至$200-300对蒸烤炸一体机有影响。</div>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">IFA 2026倒计时4天（9/4-8柏林）</div>
+      <div class="watch-text">追觅9/3全球发布会"Redefining Tomorrow's Home"；Morphy Richards 90周年+InfuseChill风味制冰+全自动咖啡机+无管便携空调；三星AI冰箱(Gemini识别3000+种食材)；LG Fit&Max扩展；Tineco首次Smart Kitchen品类。开幕后重点关注新品发布。</div>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">中国小家电市场反思（凤凰网8/31）</div>
+      <div class="watch-text">消费者开始区分"我有需求"和"我需要专门买台机器"，小熊精简SKU转向中高端旗舰+多功能集成+易清洗+智能化。奥维云网：2025年国内厨房小家电销量同比-8.9%，2026Q1同比-12%。制冰机/空气炸锅/电蒸锅销售额仍在涨。<strong>多功能集成是明确趋势，单品功能单一越来越难卖</strong>——$100+多功能组合产品利好。</div>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">Amazon Labor Day大促进行中（9/7 Labor Day）</div>
+      <div class="watch-text">Ninja Crispi 4-in-1玻璃空气炸锅$180→$160；Aucma Stand Mixer $170→$136；Honinst Stand Mixer $170→$130；Aromaster锥刀磨豆机$133→$90；Ninja French Door Countertop Oven $219→$169。短期折扣不影响品类结构判断。</div>
+    </div>
+
+    <div class="watch-item">
+      <div class="watch-title">Boss Electrical AI烹饪眼镜（AWE2026）</div>
+      <div class="watch-text">可穿戴AI眼镜识别食材+监控炉温+语音指导+联动智能灶具。非厨房台式小家电不录入，但"烹饪过程AI辅助"趋势值得关注。</div>
+    </div>
+  </div>
+
+  <!-- 🔍 关注 -->
+  <div class="section-block" id="watchlist">
+    <div class="section-header">
+      <h2>🔍 延续追踪</h2>
+      <span class="section-badge badge-hot">15个机会点</span>
+    </div>
+
+    <table class="continue-table">
+      <tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr>
+      <tr><td>蒸汽烤面包机/小型蒸汽烤箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/30</td><td>8/31 Our Place+Nuwave验证</td><td>延续·有变化</td></tr>
+      <tr><td>压缩机冰淇淋机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>8/26 CREAMi Deluxe</td><td>延续·无变化</td></tr>
+      <tr><td>制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/29 InfuseChill风味制冰</td><td>延续·无变化</td></tr>
+      <tr><td>玻璃碗空气炸锅</td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>8/30 DualZone+Pro 4.5分</td><td>延续·无变化</td></tr>
+      <tr><td>家用台式汽水/气泡水机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>8/25</td><td>8/25 Thirsti CR背书</td><td>延续·无变化</td></tr>
+      <tr><td>家用沙冰/冷饮机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>8/22 Slushi Twist售罄</td><td>延续·无变化</td></tr>
+      <tr><td>电烤盘/室内烧烤炉</td><td>$100-169</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/23 NutriChef登顶#1</td><td>延续·无变化</td></tr>
+      <tr><td>室内披萨烤箱</td><td>$149-349</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>8/16 Bravo XL Pro</td><td>延续·无变化</td></tr>
+      <tr><td>蒸烤炸一体机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/28 AIChef+Miele AI</td><td>延续·无变化</td></tr>
+      <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/27 IFA+43%</td><td>延续·无变化</td></tr>
+      <tr><td>护肤冷藏小冰箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/2</td><td>8/20 Cooluli召回</td><td>延续·无变化</td></tr>
+      <tr><td>面包+冰淇淋一体机</td><td>$249+</td><td>⭐⭐⭐⭐</td><td>8/4</td><td>8/4 Panasonic欧发</td><td>延续·无变化</td></tr>
+      <tr><td>3-in-1个人冷却风扇</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/30</td><td>7/31 ChillPill实为2-in-1</td><td>延续·无变化</td></tr>
+      <tr><td>便携式双灶电磁炉</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/21</td><td>7/23 Cuisinart $89.95</td><td>延续·无变化</td></tr>
+      <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑确认</td><td>延续·无变化</td></tr>
+    </table>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-divider"></div>
+    美国亚马逊$90+小家电市场趋势分析 · 每日更新<br>
+    <a href="../index.html">返回首页</a> · <a href="20260830.html">昨日报告</a>
+  </div>
+</div>
+</body>
+</html>
