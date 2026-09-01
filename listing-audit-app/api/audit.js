@@ -357,6 +357,53 @@ function auditListing(data) {
       '将百分号改为 Percent，如 99.6% → 99.6 Percent');
   }
 
+  // ===== CDQ: Title vs Bullets Capacity/Dimension Consistency =====
+  // Extract capacity/dimension values from title and bullets, compare for conflicts
+  const specValueRegex = /(\d+(?:\.\d+)?)\s*(qt|quart|l|liter|litre|ml|oz|ounce|gallon|gal|cu ft|cubic feet|sq ft|sq in|g|gram|kg|lb|pound|inch|in|cm|mm|w|watt|v|volt|°[fc])/gi;
+  const titleSpecVals = {};
+  let m;
+  while ((m = specValueRegex.exec(title)) !== null) {
+    const unit = m[2].toLowerCase();
+    // Normalize unit aliases
+    const normalizedUnit = unit.replace(/quart/, 'qt').replace(/litre/, 'liter').replace(/ounce/, 'oz').replace(/gallon/, 'gal').replace(/pound/, 'lb').replace(/inch/, 'in');
+    const key = `${m[1]}${normalizedUnit}`;
+    titleSpecVals[key] = { value: m[1], unit: normalizedUnit, raw: m[0] };
+  }
+  specValueRegex.lastIndex = 0;
+
+  if (Object.keys(titleSpecVals).length > 0 && bullets && bullets.length > 0) {
+    const bulletsTextForSpec = bullets.join(' ');
+    const bulletSpecVals = {};
+    while ((m = specValueRegex.exec(bulletsTextForSpec)) !== null) {
+      const unit = m[2].toLowerCase();
+      const normalizedUnit = unit.replace(/quart/, 'qt').replace(/litre/, 'liter').replace(/ounce/, 'oz').replace(/gallon/, 'gal').replace(/pound/, 'lb').replace(/inch/, 'in');
+      const key = `${m[1]}${normalizedUnit}`;
+      bulletSpecVals[key] = { value: m[1], unit: normalizedUnit, raw: m[0] };
+    }
+
+    // Find conflicting units: same unit type but different values in title vs bullets
+    const conflicts = [];
+    for (const [tKey, tVal] of Object.entries(titleSpecVals)) {
+      for (const [bKey, bVal] of Object.entries(bulletSpecVals)) {
+        // Same unit, different value = conflict
+        if (tVal.unit === bVal.unit && tVal.value !== bVal.value) {
+          // Avoid duplicate conflicts for same unit pair
+          const conflictKey = `${tVal.unit}:${tVal.value}vs${bVal.value}`;
+          if (!conflicts.some(c => c.key === conflictKey)) {
+            conflicts.push({ key: conflictKey, unit: tVal.unit, titleVal: tVal.raw, bulletVal: bVal.raw });
+          }
+        }
+      }
+    }
+
+    if (conflicts.length > 0) {
+      const conflictDesc = conflicts.map(c => `标题"${c.titleVal}" vs 五点"${c.bulletVal}"`).join('；');
+      addIssue(cdqDataConsistency, 12, 'high', `标题与五点规格数值不一致(${conflicts.length}处)`,
+        `${conflictDesc}，亚马逊CDQ算法会标记数据冲突，消费者也会产生信任危机`,
+        `核对产品实际参数，统一标题与五点中的规格数值，确保完全一致`);
+    }
+  }
+
   // ===== LQI: Content Quality =====
   if (titleLower.includes('bpa') && !bulletsText.includes('bpa')) {
     addIssue(lqiContentQuality, 8, 'high', 'BPA Free仅标题提及，五点未展开',

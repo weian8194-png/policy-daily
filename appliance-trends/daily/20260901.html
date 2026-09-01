@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年9月1日（周二）小家电市场趋势</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; max-width: 900px; margin: 0 auto; padding: 28px 24px; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 24px; font-weight: 800; color: #0f172a; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; }
+    .highlight-banner .hl-icon { font-size: 28px; float: left; margin-right: 12px; }
+    .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
+    .highlight-banner .hl-text strong { color: #92400e; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; }
+    .tag-airfryer { background: #f97316; }
+    .tag-steam { background: #8b5cf6; }
+    .tag-icemaker { background: #0ea5e9; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-new { background: #faf5ff; color: #8b5cf6; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .card-source { font-size: 11px; color: #94a3b8; padding: 6px 16px 12px; line-height: 1.6; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="content-header">
+    <h1>🔥 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="date-line">每日趋势分析 · <strong>2026年9月1日（星期二）</strong> · 08:30 更新</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip hot"><span class="stat-num">15</span>追踪机会点</div>
+    <div class="stat-chip new"><span class="stat-num">1</span>新增机会</div>
+    <div class="stat-chip trend"><span class="stat-num">3</span>今日有变化</div>
+  </div>
+
+  <div class="highlight-banner">
+    <div class="hl-icon">🔍</div>
+    <div class="hl-text"><strong>Kismile AeroLucen玻璃碗空气炸锅$159上市</strong>——5Qt硼硅玻璃碗+3600RPM DC电机+PID温控+PFAS-free，cook-store-serve一体，与Ninja Crispi $180形成直接竞对，$100-130性价比空白确认。同时蒸汽toaster oven方向再获Philips OneChef和Our Place Steam Infusion验证，制冰机赛道添DOOGEE NU60智能制冰机IFA首秀。</div>
+  </div>
+
+  <div class="section-block" id="quick-report">
+    <div class="section-header">
+      <h2>🔥 机会速报</h2>
+      <span class="section-badge badge-hot">4项活跃</span>
+    </div>
+
+    <div class="opportunity-card card-new">
+      <div class="card-top">
+        <span class="category-tag tag-airfryer">空气炸锅</span>
+        <span class="status-badge status-new">新增</span>
+      </div>
+      <div class="card-title">Kismile AeroLucen玻璃碗空气炸锅 · $159 · ⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📌 今日首报</div>
+        <div class="change-text">Kismile AeroLucen Glass Air Fryer正式上市——5Qt硼硅玻璃碗+3600RPM DC电机+PID温控+1500W碳纤维加热，90-450°F宽温域，PFAS-free无涂层。可逆Magic Crisper Plate（5Qt全容量/2.5Qt高位两种模式），玻璃碗加盖可直上桌当碗/存剩菜（cook-store-serve一体）。Amazon/Kismile官网$159，Pearl/Onyx两色。</div>
+      </div>
+      <div class="card-insight">
+        <div class="insight-label">💡 机会推导</div>
+        <div class="insight-text">$159 vs Ninja Crispi $180→Kismile差异化：①全透明硼硅玻璃碗 ②PID精准温控 ③3600RPM DC电机（同档位最高）④cook-store-serve一体 ⑤便宜$21。中国卖家$100-130区间仍有空间：5Qt玻璃碗+DC电机+PFAS-free，减Crisper Plate+状态灯，BOM约$35-45，Amazon售价$109-129，毛利率45-50%。玻璃碗空气炸锅已从"概念验证"进入"多品牌竞争"阶段，$100-130性价比空白确认。</div>
+      </div>
+      <div class="card-source">来源：MikeShouts 8/31 / Amazon</div>
+    </div>
+
+    <div class="opportunity-card card-hot">
+      <div class="card-top">
+        <span class="category-tag tag-airfryer">空气炸锅</span>
+        <span class="status-badge status-changed">延续·有变化</span>
+      </div>
+      <div class="card-title">玻璃碗空气炸锅 · $100-200 · ⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📌 今日新增</div>
+        <div class="change-text">① <strong>Kismile AeroLucen $159上市</strong>（见上）→玻璃碗空气炸锅赛道再添一员，$150-180双雄格局，$100-130性价比空白确认。<br>② <strong>Nuuk Brisk Air Fryer获Exhibit.tech 8/31报道</strong>——6.5L，ILAG CeramicTech涂层（PTFE/PFAS/PFOA/铅/镉全free），see-through窗，验证"非毒性材质+可视化"双趋势。<br>③ <strong>国内端信号</strong>——淘宝"可视空气炸锅"搜索量爆发（5000+件），美的/苏泊尔/安本素/摩飞等10+品牌推出0涂层玻璃内胆款，中国ODM/OEM产能已就绪。</div>
+      </div>
+      <div class="card-source">来源：MikeShouts 8/31 / Exhibit.tech 8/31 / 淘宝 8/31</div>
+    </div>
+
+    <div class="opportunity-card card-trend">
+      <div class="card-top">
+        <span class="category-tag tag-steam">蒸汽烤箱</span>
+        <span class="status-badge status-changed">延续·有变化</span>
+      </div>
+      <div class="card-title">蒸汽烤面包机/小型蒸汽烤箱 · $100-149 · ⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📌 今日新增</div>
+        <div class="change-text">① <strong>Philips OneChef含蒸汽功能</strong>（Exhibit.tech 8/31）——6L 33预设功能，含空气炸/炒/蒸汽/煮/烤，AmbiHeat传感自动调温。Philips把蒸汽作为核心功能之一→再次验证蒸汽烹饪需求。<br>② <strong>Our Place Wonder Oven含Steam Infusion Tech</strong>（TrustedReviews 9/1 #4）——蒸汽注入进入toaster oven领域，约$195价位。<br>$100-149纯蒸汽toaster oven（非复合大机）仍为零产品空白。</div>
+      </div>
+      <div class="card-source">来源：Exhibit.tech 8/31 / TrustedReviews 9/1</div>
+    </div>
+
+    <div class="opportunity-card card-trend">
+      <div class="card-top">
+        <span class="category-tag tag-icemaker">制冰机</span>
+        <span class="status-badge status-changed">延续·有变化</span>
+      </div>
+      <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📌 今日新增</div>
+        <div class="change-text">① <strong>DOOGEE NU60智能制冰机亮相IFA 2026</strong>——True Nugget Ice技术（软质多孔可咀嚼冰），快速制冰，每轮17杯，触屏控制。DOOGEE从户外手机扩展至Smart Home生态，制冰机为核心产品（Hall 4.2 Booth 129，9/4-8）。<br>② <strong>制冰机进入智能生态</strong>——此前为独立单品，现DOOGEE NU60纳入智能生态（App控制+联动），Morphy Richards InfuseChill走风味差异化，GE/Samsung冰箱内置双制冰机。$100-149独立台式Nugget Ice制冰机仍有增量空间。</div>
+      </div>
+      <div class="card-source">来源：Cerebral Overload 8/31 / cdrinfo 8/30</div>
+    </div>
+  </div>
+
+  <div class="section-block" id="detail-analysis">
+    <div class="section-header">
+      <h2>📋 延续追踪</h2>
+      <span class="section-badge badge-trend">15个品类</span>
+    </div>
+    <table class="continue-table">
+      <thead><tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr></thead>
+      <tbody>
+        <tr><td><strong>玻璃碗空气炸锅</strong></td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>9/1 Kismile $159+Nuuk+国内</td><td><strong>延续·有变化</strong></td></tr>
+        <tr><td><strong>蒸汽烤面包机/小型蒸汽烤箱</strong></td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/30</td><td>9/1 OneChef蒸汽+Steam Infusion</td><td><strong>延续·有变化</strong></td></tr>
+        <tr><td><strong>制冰机</strong></td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>9/1 DOOGEE NU60 IFA首秀</td><td><strong>延续·有变化</strong></td></tr>
+        <tr><td>压缩机冰淇淋机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>8/26 CREAMi Deluxe</td><td>延续·无变化</td></tr>
+        <tr><td>家用台式汽水/气泡水机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>8/25</td><td>8/25 Thirsti $149.99</td><td>延续·无变化</td></tr>
+        <tr><td>家用沙冰/冷饮机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>8/22 Slushi Twist售罄</td><td>延续·无变化</td></tr>
+        <tr><td>电烤盘/室内烧烤炉</td><td>$100-169</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/23 NutriChef登顶#1</td><td>延续·无变化</td></tr>
+        <tr><td>室内披萨烤箱</td><td>$149-349</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>8/16 Bravo XL Pro</td><td>延续·无变化</td></tr>
+        <tr><td>蒸烤炸一体机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/28 AIChef+Miele</td><td>延续·无变化</td></tr>
+        <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/27 IFA+43%</td><td>延续·无变化</td></tr>
+        <tr><td>护肤冷藏小冰箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/2</td><td>8/20 Cooluli召回</td><td>延续·无变化</td></tr>
+        <tr><td>面包+冰淇淋一体机</td><td>$249+</td><td>⭐⭐⭐⭐</td><td>8/4</td><td>8/4 Panasonic欧发</td><td>延续·无变化</td></tr>
+        <tr><td>3-in-1个人冷却风扇</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/30</td><td>7/31 ChillPill</td><td>延续·无变化</td></tr>
+        <tr><td>便携式双灶电磁炉</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/21</td><td>7/23 Cuisinart $89.95</td><td>延续·无变化</td></tr>
+        <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑</td><td>延续·无变化</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" id="watchlist">
+    <div class="section-header">
+      <h2>🔍 其他动向</h2>
+      <span class="section-badge badge-trend">5条</span>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🏢 IFA 2026倒计时3天（9/4-8柏林）</div>
+      <div class="watch-text">确认参展小家电：①Morphy Richards 90周年（InfuseChill风味制冰/Fusion复古水壶烤面包机/S1 Pro便携空调/全自动咖啡机）②DOOGEE Smart Home生态（NU60智能制冰机）③DH Global 150L泡菜冰箱+制冰机 ④LG ThinQ Claw AI厨房聊天助手 ⑤Philips OneChef含蒸汽 ⑥Tineco扩展Smart Kitchen。明日起重点追踪IFA新品。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">📊 TrustedReviews 9/1更新"7 Best Toaster Ovens of 2026"</div>
+      <div class="watch-text">#1 Typhur Sync（无线智能探针+NIST认证+2400RPM，27Qt）#2 Cuisinart TOA-70（AirAdvantage+可逆烤盘，28% off）#3 Ninja SP151（40% off）#4 Our Place Wonder Oven（含Steam Infusion，19% off）#5 Nuwave Bravo XL Pro（10% off）。Typhur Sync为全新品牌+全新品类（无线智能探针toaster oven），值得关注后续。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🛒 Amazon Labor Day大促最后阶段（至9/7）</div>
+      <div class="watch-text">Ninja Crispi玻璃空气炸锅$180→$160 / Cuisinart空气炸锅烤箱$230→$150 / KitchenAid无绳搅拌机$140→$110 / Aucma搅拌机$170→$136 / Aromaster磨豆机$133→$90。短期折扣不影响品类结构判断。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🇨🇳 中国"可视+0涂层"空气炸锅内卷信号</div>
+      <div class="watch-text">淘宝8/31：美的/苏泊尔/安本素/摩飞等10+品牌推出可视空气炸锅，国内已进入价格战（最低¥99起）。美国Amazon$90+仍为Ninja/Kismile双品牌格局，中国卖家切入窗口期仍在。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🤖 LG AI Home厨房场景（IFA 8/31）</div>
+      <div class="watch-text">ThinQ Claw聊天式AI助手，在厨房区域根据用户购买食材推荐菜谱。AI+厨房趋势持续，对$90+小家电选品直接启示有限，更多是生态联动方向。</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    数据来源：MikeShouts · TrustedReviews · Exhibit.tech · Cerebral Overload · PRNewswire · TheKitchn<br>
+    <a href="https://weian8194-png.github.io/policy-daily/appliance-trends/">🏠 返回首页</a>
+  </div>
+</body>
+</html>
