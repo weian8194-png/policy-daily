@@ -3,108 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>跨境政策日报 · 2026年9月1日（星期二）</title>
+<title>跨境政策日报 · 2026年9月2日（星期三）</title>
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 20px; }
-[id] { scroll-margin-top: 20px; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-.layout { display: flex; min-height: 100vh; }
-.sidebar { width: 220px; background: #0f172a; color: #e2e8f0; padding: 24px 16px; position: fixed; top: 0; left: 0; height: 100vh; overflow-y: auto; z-index: 100; }
-.sidebar-header h2 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
-.sidebar-header .date { font-size: 14px; color: #94a3b8; margin-top: 4px; }
-.sidebar-header .weekday { font-size: 12px; color: #64748b; margin-top: 2px; }
-.nav-section { margin-top: 20px; }
-.nav-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: 6px; color: #cbd5e1; text-decoration: none; font-size: 13px; font-weight: 500; transition: all 0.15s; }
-.nav-item:hover { background: #1e293b; color: #f1f5f9; }
-.nav-count { background: #334155; color: #94a3b8; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 10px; min-width: 22px; text-align: center; }
-.main-content { margin-left: 220px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f8fafc; }
-.content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #e2e8f0; }
-.content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
-.content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
-.content-header .date-line .date-val { font-weight: 700; color: #334155; }
-.content-header .date-line .update-time { font-size: 11px; background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
-.stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
-.stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
-.stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
-.stat-chip.danger .stat-num { color: #dc2626; }
-.stat-chip.warn .stat-num { color: #d97706; }
-.stat-chip.info .stat-num { color: #16a34a; }
-.stat-chip.platform .stat-num { color: #0284c7; }
-.compliance-banner { background: #fff; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; }
-.compliance-banner .banner-title { font-size: 13px; font-weight: 700; color: #dc2626; margin-bottom: 8px; }
-.compliance-banner ul { list-style: none; padding: 0; }
-.compliance-banner li { font-size: 12px; color: #7f1d1d; padding: 3px 0; padding-left: 14px; position: relative; line-height: 1.6; }
-.compliance-banner li::before { content: "\25b8"; position: absolute; left: 0; color: #dc2626; font-size: 9px; top: 5px; }
-.compliance-banner .date-tag { font-weight: 700; color: #991b1b; display: inline-block; min-width: 40px; }
-.section-block { margin-bottom: 28px; }
-.section-title { font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 8px; }
-.policy-card { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 14px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-.card-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px 10px; }
-.card-title-row { display: flex; align-items: center; gap: 8px; flex: 1; flex-wrap: wrap; }
-.severity-badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
-.severity-badge.danger { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
-.severity-badge.warning { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
-.severity-badge.info { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
-.platform-tag { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
-.platform-tag.walmart { background: #f0fdf4; color: #16a34a; border-color: #bbf7d0; }
-.platform-tag.tiktok { background: #fdf4ff; color: #9333ea; border-color: #e9d5ff; }
-.platform-tag.eu { background: #fefce8; color: #a16207; border-color: #fde68a; }
-.platform-tag.usa { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
-.platform-tag.cpsc { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
-.platform-tag.cbp { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
-.platform-tag.temu { background: #fef2f2; color: #dc2626; border-color: #fecaca; }
-.platform-tag.shipping { background: #eff6ff; color: #0284c7; border-color: #bae6fd; }
-.platform-tag.panama { background: #fff7ed; color: #b45309; border-color: #fed7aa; }
-.platform-tag.epa { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
-.platform-tag.china { background: #fef2f2; color: #dc2626; border-color: #fecaca; }
-.platform-tag.google { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
-.platform-tag.imo { background: #eff6ff; color: #0284c7; border-color: #bae6fd; }
-.platform-tag.dhs { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
-.card-title { font-size: 14px; font-weight: 600; color: #1e293b; }
-.card-body { padding: 4px 18px 16px; }
-.card-body p { font-size: 13px; color: #475569; line-height: 1.7; margin-bottom: 10px; }
-.detail-row { display: flex; gap: 8px; padding: 4px 0; font-size: 12px; }
-.detail-label { color: #64748b; font-weight: 600; min-width: 70px; }
-.detail-value { color: #334155; }
-.action-list { background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 10px 14px; margin-top: 8px; }
-.action-title { font-size: 12px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
-.action-list ol { padding-left: 18px; }
-.action-list li { font-size: 12px; color: #78350f; line-height: 1.7; }
-.timeline-section { background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; padding: 18px; }
-.timeline-item { display: flex; gap: 12px; padding: 6px 0; font-size: 13px; border-bottom: 1px solid #f1f5f9; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f2f5; color: #1a1a2e; line-height: 1.6; }
+.container { display: flex; min-height: 100vh; }
+.sidebar { width: 220px; background: linear-gradient(180deg, #16213e 0%, #0f3460 100%); color: #fff; padding: 20px 0; position: fixed; top: 0; left: 0; height: 100vh; overflow-y: auto; z-index: 100; }
+.sidebar h2 { padding: 0 20px 15px; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.15); margin-bottom: 10px; }
+.nav-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px; transition: all 0.2s; cursor: pointer; }
+.nav-item:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.nav-count { background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+.main-content { margin-left: 220px; flex: 1; padding: 24px; }
+.page-header { background: linear-gradient(135deg, #e94560 0%, #16213e 100%); color: #fff; padding: 24px 30px; border-radius: 12px; margin-bottom: 24px; }
+.page-header h1 { font-size: 22px; font-weight: 600; }
+.page-header .subtitle { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+.section-block { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.section-title { font-size: 17px; font-weight: 600; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #e94560; display: flex; align-items: center; gap: 8px; }
+.compliance-banner { background: linear-gradient(135deg, #e94560 0%, #c23152 100%); color: #fff; border-radius: 12px; padding: 20px 24px; margin-bottom: 20px; }
+.compliance-banner h3 { font-size: 16px; margin-bottom: 12px; }
+.compliance-item { background: rgba(255,255,255,0.12); border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+.compliance-item:last-child { margin-bottom: 0; }
+.compliance-item strong { color: #ffeb3b; }
+.policy-card { border: 1px solid #e8e8e8; border-radius: 10px; margin-bottom: 14px; overflow: hidden; transition: box-shadow 0.2s; }
+.policy-card:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.1); }
+.card-header { padding: 12px 16px; background: #fafafa; border-bottom: 1px solid #e8e8e8; }
+.card-title-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.severity-badge { padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 600; color: #fff; }
+.severity-badge.danger { background: #e94560; }
+.severity-badge.warning { background: #ff9800; }
+.severity-badge.info { background: #4caf50; }
+.platform-tag { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; background: #e3f2fd; color: #1565c0; }
+.platform-tag.amazon { background: #fff3e0; color: #e65100; }
+.platform-tag.walmart { background: #e8f5e9; color: #2e7d32; }
+.platform-tag.tiktok { background: #f3e5f5; color: #7b1fa2; }
+.platform-tag.cpsc { background: #fce4ec; color: #c62828; }
+.platform-tag.fda { background: #e0f2f1; color: #00695c; }
+.platform-tag.cbp { background: #e8eaf6; color: #283593; }
+.platform-tag.eu { background: #f3e5f5; color: #6a1b9a; }
+.platform-tag.shipping { background: #e0f7fa; color: #00838f; }
+.platform-tag.china { background: #fff8e1; color: #f57f17; }
+.platform-tag.brazil { background: #e8f5e9; color: #1b5e20; }
+.platform-tag.shein { background: #fce4ec; color: #c62828; }
+.platform-tag.vietnam { background: #e8f5e9; color: #2e7d32; }
+.card-title { font-size: 14px; font-weight: 500; flex: 1; }
+.card-body { padding: 14px 16px; }
+.card-body p { font-size: 13px; margin-bottom: 10px; color: #444; }
+.detail-row { display: flex; gap: 8px; margin-bottom: 6px; font-size: 12px; }
+.detail-label { color: #888; min-width: 70px; }
+.detail-value { color: #333; flex: 1; }
+.detail-value a { color: #1565c0; text-decoration: none; }
+.detail-value a:hover { text-decoration: underline; }
+.action-list { background: #fff8e1; border-radius: 6px; padding: 10px 14px; margin-top: 10px; }
+.action-title { font-size: 13px; font-weight: 600; color: #e65100; margin-bottom: 6px; }
+.action-list ol { padding-left: 18px; font-size: 12px; color: #555; }
+.action-list ol li { margin-bottom: 3px; }
+.timeline-section { padding: 0; }
+.timeline-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
 .timeline-item:last-child { border-bottom: none; }
-.timeline-date { min-width: 90px; font-weight: 700; color: #334155; white-space: nowrap; }
-.timeline-dot { min-width: 16px; text-align: center; }
-.timeline-text { color: #475569; }
-.footer { text-align: center; padding: 24px; font-size: 12px; color: #94a3b8; }
-.archive-link { display: inline-block; margin-top: 6px; color: #2563eb; text-decoration: none; font-size: 12px; }
-.archive-link:hover { text-decoration: underline; }
-
-.platform-tag.doj { background: #fef2f2; color: #dc2626; border-color: #fecaca; }
-.platform-tag.usda { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+.timeline-date { min-width: 80px; font-weight: 600; color: #e94560; }
+.timeline-content { flex: 1; color: #444; }
+.sources-list { font-size: 12px; color: #666; line-height: 1.8; }
+.sources-list a { color: #1565c0; text-decoration: none; }
+.sources-list a:hover { text-decoration: underline; }
+.footer { text-align: center; padding: 20px; color: #999; font-size: 12px; }
+.archive-link { display: inline-block; margin-top: 8px; padding: 4px 12px; background: #16213e; color: #fff; border-radius: 4px; text-decoration: none; font-size: 12px; }
+@media (max-width: 768px) { .sidebar { display: none; } .main-content { margin-left: 0; } }
 </style>
 </head>
 <body>
-<div class="layout">
-<aside class="sidebar">
-<div class="sidebar-header">
-<h2>📋 跨境政策日报</h2>
-<div class="date">2026年8月31日</div>
-<div class="weekday">星期一</div>
-</div>
-<nav>
-<div class="nav-section">
-<a class="nav-item" href="#executive-summary">📋 摘要速览 <span class="nav-count">7</span></a>
-<a class="nav-item" href="#compliance">⚠️ 合规提醒 <span class="nav-count">8</span></a>
-<a class="nav-item" href="#platform">🔴 平台政策 <span class="nav-count">14</span></a>
-<a class="nav-item" href="#compliance-tax">🟡 合规/税务动态 <span class="nav-count">7</span></a>
+<div class="container">
+<nav class="sidebar">
+<h2>📋 政策日报</h2>
+<a class="nav-item" href="#executive-summary">🔥 速报摘要</a>
+<a class="nav-item" href="#compliance">⚠️ 合规提醒 <span class="nav-count">7</span></a>
+<a class="nav-item" href="#platform">🏛️ 平台政策 <span class="nav-count">10</span></a>
+<a class="nav-item" href="#compliance-tax">🔍 合规/税务 <span class="nav-count">8</span></a>
 <a class="nav-item" href="#logistics">🚢 物流/航运 <span class="nav-count">3</span></a>
-<a class="nav-item" href="#timeline">⏰ 近期时间线 <span class="nav-count">10</span></a>
-<a class="nav-item" href="#sources">📡 信息源 <span class="nav-count">34</span></a>
-</div>
+<a class="nav-item" href="#timeline">⏰ 时间线</a>
+<a class="nav-item" href="#sources">📎 信息源</a>
 </nav>
-</aside>
 <main class="main-content">
 <div class="page-header">
 <h1>跨境政策日报 · 2026年9月2日（星期三）</h1>
@@ -221,10 +198,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC"
 <a class="archive-link" href="20260901.html" style="margin-left:8px;">← 前一天</a>
 </div>
 </main>
-</div>
-<div class="footer">
-<p>跨境政策日报 · 2026年8月31日（星期一） · 34个信息源</p>
-<a class="archive-link" href="../">← 返回首页</a>
 </div>
 </body>
 </html>
