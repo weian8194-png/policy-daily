@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026年9月2日（周三）小家电市场趋势</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; max-width: 900px; margin: 0 auto; padding: 28px 24px; }
+    .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
+    .content-header h1 { font-size: 24px; font-weight: 800; color: #0f172a; }
+    .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
+    .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
+    .stat-chip.hot .stat-num { color: #0d9488; }
+    .stat-chip.new .stat-num { color: #8b5cf6; }
+    .stat-chip.trend .stat-num { color: #f59e0b; }
+    .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; }
+    .highlight-banner .hl-icon { font-size: 28px; float: left; margin-right: 12px; }
+    .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
+    .highlight-banner .hl-text strong { color: #92400e; }
+    .section-block { margin-bottom: 28px; }
+    .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
+    .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
+    .section-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .badge-hot { background: #f0fdfa; color: #0d9488; }
+    .badge-new { background: #faf5ff; color: #8b5cf6; }
+    .badge-trend { background: #fffbeb; color: #d97706; }
+    .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
+    .card-new { border-left: 4px solid #8b5cf6; }
+    .card-hot { border-left: 4px solid #0d9488; }
+    .card-trend { border-left: 4px solid #f59e0b; }
+    .card-continue { border-left: 4px solid #94a3b8; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
+    .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; }
+    .tag-airfryer { background: #f97316; }
+    .tag-steam { background: #8b5cf6; }
+    .tag-icemaker { background: #0ea5e9; }
+    .tag-slushie { background: #ec4899; }
+    .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .status-new { background: #faf5ff; color: #8b5cf6; }
+    .status-changed { background: #fffbeb; color: #d97706; }
+    .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
+    .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
+    .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
+    .card-insight { background: #f0fdfa; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #ccfbf1; }
+    .card-insight .insight-label { font-size: 11px; font-weight: 700; color: #0d9488; margin-bottom: 4px; }
+    .card-insight .insight-text { font-size: 12px; color: #115e59; line-height: 1.7; }
+    .card-source { font-size: 11px; color: #94a3b8; padding: 6px 16px 12px; line-height: 1.6; }
+    .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
+    .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
+    .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
+    .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
+    .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
+    .page-footer { text-align: center; padding: 28px 20px 24px; font-size: 11px; color: #94a3b8; border-top: 1px solid #e2e8f0; margin-top: 28px; }
+    .page-footer a { color: #0d9488; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="content-header">
+    <h1>🔥 美国亚马逊$90+小家电市场趋势</h1>
+    <div class="date-line">每日趋势分析 · <strong>2026年9月2日（星期三）</strong> · 08:30 更新</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-chip hot"><span class="stat-num">15</span>追踪机会点</div>
+    <div class="stat-chip new"><span class="stat-num">0</span>新增机会</div>
+    <div class="stat-chip trend"><span class="stat-num">3</span>今日有变化</div>
+  </div>
+
+  <div class="highlight-banner">
+    <div class="hl-icon">🔍</div>
+    <div class="hl-text"><strong>Ninja Crispi Pro 6-in-1双容器玻璃空气炸锅获TrustedReviews榜首</strong>——6QT+2.5QT双玻璃容器，Ninja Crispi系列从4QT升级到Pro双容器，玻璃碗空气炸锅从"入门尝鲜"升级为"成熟产品线"。Cecotec确认IFA展出玻璃篮空气炸锅+slushy机+冰淇淋机，欧洲品牌入局验证全球化趋势。制冰机BuyersGuide 9月更新EUHOMY/Kismile/Antarctic Star三强格局稳定。</div>
+  </div>
+
+  <div class="section-block" id="quick-report">
+    <div class="section-header">
+      <h2>🔥 机会速报</h2>
+      <span class="section-badge badge-hot">3项活跃</span>
+    </div>
+
+    <div class="opportunity-card card-hot">
+      <div class="card-top">
+        <span class="category-tag tag-airfryer">空气炸锅</span>
+        <span class="status-badge status-changed">延续·有变化</span>
+      </div>
+      <div class="card-title">玻璃碗空气炸锅 · $100-200 · ⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📌 今日新增</div>
+        <div class="change-text">① <strong>Ninja Crispi Pro 6-in-1获TrustedReviews 9/1榜首</strong>——6QT+2.5QT双玻璃容器，360°全透明可视化，数字触控，最高400°F。Ninja Crispi系列从4QT单容器升级到Pro双容器→玻璃碗空气炸锅从"入门尝鲜"进入"成熟产品线"。<br>② <strong>Cecotec确认IFA 2026展出玻璃篮空气炸锅</strong>——西班牙品牌携"玻璃可拆卸篮+紧凑电机"新款亮相IFA，同时展出slushy机和家用冰淇淋机。从Ninja/Kismile北美品牌扩展至Cecotec欧洲品牌→全球化趋势确认。<br>③ <strong>Ninja Crispi 4-in-1 Labor Day降至$160</strong>（原$180）→短期折扣带来流量，品类结构不变。</div>
+      </div>
+      <div class="card-insight">
+        <div class="insight-label">💡 机会判断</div>
+        <div class="insight-text">Ninja产品线从4QT升级到6QT+2.5QT双容器Pro版，Kismile $159新入局，Cecotec欧洲IFA首秀。$100-130性价比空白仍是核心机会，中国卖家窗口期仍在但竞争加剧。</div>
+      </div>
+      <div class="card-source">来源：TrustedReviews 9/1 / benchmark.pl 8/31 / Amazon</div>
+    </div>
+
+    <div class="opportunity-card card-trend">
+      <div class="card-top">
+        <span class="category-tag tag-icemaker">制冰机</span>
+        <span class="status-badge status-changed">延续·有变化</span>
+      </div>
+      <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📌 今日新增</div>
+        <div class="change-text">① <strong>Cecotec IFA 2026将展出制冰机</strong>——除空气炸锅外，Cecotec还将展示家用slushy机和冰淇淋机，与其清洁电器生态形成"Smart Home厨房"组合。IFA 9/4-8开幕后可获取具体参数和定价。<br>② <strong>BuyersGuide.org 9月更新Best Ice Makers 2026</strong>——EUHOMY 44Lbs/24H Nugget制冰机#1（10.0），Kismile 35Lbs/Day不锈钢#2（9.9），Antarctic Star多色多尺寸#3（9.9）。$100-170区间三强格局稳定，中国卖家差异化空间在智能功能（App控制/自清洁/水质过滤）和外观设计。</div>
+      </div>
+      <div class="card-source">来源：benchmark.pl 8/31 / BuyersGuide.org 9/1</div>
+    </div>
+
+    <div class="opportunity-card card-trend">
+      <div class="card-top">
+        <span class="category-tag tag-slushie">沙冰机</span>
+        <span class="status-badge status-changed">延续·有变化</span>
+      </div>
+      <div class="card-title">家用沙冰/冷饮机 · $100-179 · ⭐⭐⭐⭐⭐</div>
+      <div class="card-change-note">
+        <div class="change-label">📌 今日新增</div>
+        <div class="change-text">① <strong>Cecotec确认IFA展出家用slushy机</strong>——Cecotec将展示slushy制作设备和家用冰淇淋机，欧洲品牌正式入局家用slushy赛道。<br>② <strong>Ninja SLUSHi在新加坡二手市场活跃</strong>——Carousell.sg 8/30：全新S$350（约US$265），多笔二手在售。Ninja SLUSHi为当前标杆（RapidChill/5预设/12h保温/2.5L），但US$400+定价远超$179门槛。$100-179简化版slushy机仍有空白，需验证消费者是否愿为此品类付$100+。</div>
+      </div>
+      <div class="card-source">来源：benchmark.pl 8/31 / Carousell.sg 8/30</div>
+    </div>
+  </div>
+
+  <div class="section-block" id="detail-analysis">
+    <div class="section-header">
+      <h2>📋 延续追踪</h2>
+      <span class="section-badge badge-trend">15个品类</span>
+    </div>
+    <table class="continue-table">
+      <thead><tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr></thead>
+      <tbody>
+        <tr><td><strong>玻璃碗空气炸锅</strong></td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>9/2 Crispi Pro 6QT+Cecotec IFA</td><td><strong>延续·有变化</strong></td></tr>
+        <tr><td><strong>制冰机</strong></td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>9/2 Cecotec IFA+BuyersGuide更新</td><td><strong>延续·有变化</strong></td></tr>
+        <tr><td><strong>家用沙冰/冷饮机</strong></td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>9/2 Cecotec slushy+SLUSHi二手</td><td><strong>延续·有变化</strong></td></tr>
+        <tr><td>蒸汽烤面包机/小型蒸汽烤箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/30</td><td>9/1 OneChef+Steam Infusion</td><td>延续·无变化</td></tr>
+        <tr><td>压缩机冰淇淋机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>8/26 CREAMi Deluxe</td><td>延续·无变化</td></tr>
+        <tr><td>家用台式汽水/气泡水机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>8/25</td><td>8/25 Thirsti $149.99</td><td>延续·无变化</td></tr>
+        <tr><td>电烤盘/室内烧烤炉</td><td>$100-169</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/23 NutriChef登顶#1</td><td>延续·无变化</td></tr>
+        <tr><td>室内披萨烤箱</td><td>$149-349</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>8/16 Bravo XL Pro</td><td>延续·无变化</td></tr>
+        <tr><td>蒸烤炸一体机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/28 AIChef+Miele</td><td>延续·无变化</td></tr>
+        <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/27 IFA+43%</td><td>延续·无变化</td></tr>
+        <tr><td>护肤冷藏小冰箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/2</td><td>8/20 Cooluli召回</td><td>延续·无变化</td></tr>
+        <tr><td>面包+冰淇淋一体机</td><td>$249+</td><td>⭐⭐⭐⭐</td><td>8/4</td><td>8/4 Panasonic欧发</td><td>延续·无变化</td></tr>
+        <tr><td>3-in-1个人冷却风扇</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/30</td><td>7/31 ChillPill</td><td>延续·无变化</td></tr>
+        <tr><td>便携式双灶电磁炉</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/21</td><td>7/23 Cuisinart $89.95</td><td>延续·无变化</td></tr>
+        <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑</td><td>延续·无变化</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-block" id="watchlist">
+    <div class="section-header">
+      <h2>🔍 其他动向</h2>
+      <span class="section-badge badge-trend">5条</span>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🏢 IFA 2026倒计时2天（9/4-8柏林）</div>
+      <div class="watch-text">新增确认参展：①Cecotec（玻璃篮空气炸锅+slushy机+冰淇淋机+Mambo厨房机器人+双豆仓咖啡机）②AEG世界首秀OnePot Pasta专用灶台+7.89cm超薄Trilobite 8000 GEN2扫地机。IFA开幕后重点关注小家电新品发布和定价。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🎨 Burgundy Red/酒红色成为2026秋季厨房色彩趋势</div>
+      <div class="watch-text">Google Trends显示"red kitchen appliances"搜索量同比暴增1,370%，Morphy Richards限量版Rhubarb水壶+烤面包机套组£159.98。色彩趋势对$90+小家电的启示：PFAS-free玻璃碗/不锈钢机身的空气炸锅和制冰机可考虑推出酒红/深红限定色款，借色彩趋势溢价。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">🛒 Amazon Labor Day大促持续至9/7</div>
+      <div class="watch-text">$90+区间重点折扣：Ninja Crispi 4-in-1玻璃空气炸锅$180→$160 / Cuisinatt空气炸锅烤箱$230→$150 / KitchenAid无绳搅拌机$140→$110 / Chefman Crispinator 7-in-1 8Qt $159.99→$109.99 / Ninja Espresso+Nespresso $279.99→$249.95。短期流量不影响品类判断。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">📊 TrustedReviews 9/1-9/2密集更新2026年度榜单</div>
+      <div class="watch-text">Best Waffle Makers（Ninja BW1001垂直华夫饼机Pro获#1）/ Best Bread Makers（Neretva 15-in-1 3.3lb陶瓷盆面包机20% off）/ Best Microwave Ovens（GE 4-in-1微波+空气炸组合）/ Best Ceramic &amp; Glass Non-Toxic Air Fryers（Ninja Crispi Pro 6QT榜首）。Ninja BW1001垂直华夫饼机为新面孔，定价预估$70-90，可能不达$90门槛。</div>
+    </div>
+    <div class="watch-item">
+      <div class="watch-title">📱 中国TikTok美区厨房用品持续出爆</div>
+      <div class="watch-text">不锈钢汤勺托架28天1.83万单GMV$23.18万，汉堡肉饼压模器10天5000单。均为$10-20低客单厨具，非$90+小家电，但验证"功能直观+痛点明确+短视频场景化"打法对厨房品类有效，可借鉴至$90+小家电推广策略。</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    数据来源：TrustedReviews · BuyersGuide.org · benchmark.pl · Carousell.sg · MikeShouts · PopSci<br>
+    <a href="https://weian8194-png.github.io/policy-daily/appliance-trends/">🏠 返回首页</a>
+  </div>
+</body>
+</html>
