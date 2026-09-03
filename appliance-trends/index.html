@@ -80,11 +80,19 @@
     .tag-icemaker { background: #0ea5e9; }
     .tag-airfryer { background: #f97316; }
     .tag-icecream { background: #8b5cf6; }
+    .tag-flavored { background: #7c3aed; }
     .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
     .status-new { background: #faf5ff; color: #8b5cf6; }
     .status-changed { background: #fffbeb; color: #d97706; }
     .status-unchanged { background: #f1f5f9; color: #64748b; }
     .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
+    .card-body { padding: 8px 16px 0; font-size: 12px; color: #475569; line-height: 1.7; }
+    .card-body .body-label { font-size: 11px; font-weight: 700; color: #8b5cf6; margin-top: 8px; margin-bottom: 4px; }
+    .card-body .body-label.trend { color: #0d9488; }
+    .card-body .body-label.pain { color: #dc2626; }
+    .card-body .body-label.bom { color: #7c3aed; }
+    .card-body ul { padding-left: 16px; margin: 4px 0; }
+    .card-body ul li { margin-bottom: 2px; }
     .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
     .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
     .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
@@ -116,14 +124,15 @@
       <div class="nav-section">
         <div class="nav-section-title">📊 今日数据</div>
         <a class="nav-item" href="#quick-report">🔥 机会速报 <span class="nav-count hot">3</span></a>
-        <a class="nav-item" href="#detail-analysis">📋 延续追踪 <span class="nav-count hot">15</span></a>
+        <a class="nav-item" href="#detail-analysis">📋 延续追踪 <span class="nav-count hot">16</span></a>
         <a class="nav-item" href="#watchlist">🔍 其他动向 <span class="nav-count">5</span></a>
       </div>
       <div class="nav-divider"></div>
       <div class="archive-section">
         <div class="archive-section-title">📅 历史归档</div>
                 <details class="archive-month" open>
-          <summary><span class="month-info">2026年09月</span><span class="month-stats">2天</span></summary>
+          <summary><span class="month-info">2026年09月</span><span class="month-stats">3天</span></summary>
+          <a class="archive-day" href="./daily/20260903.html">2026-09-03（周四）<span class="day-count">16个</span></a>
           <a class="archive-day" href="./daily/20260902.html">2026-09-02（周三）<span class="day-count">15个</span></a>
           <a class="archive-day" href="./daily/20260901.html">2026-09-01（周二）<span class="day-count">15个</span></a>
         </details>
@@ -196,24 +205,55 @@
   <main class="main-content">
     <div class="content-header">
       <h1>🔥 美国亚马逊$90+小家电市场趋势</h1>
-      <div class="date-line">每日趋势分析 · <span class="date-val">2026年9月2日（星期三）</span><span class="update-time">08:30 更新</span></div>
+      <div class="date-line">每日趋势分析 · <span class="date-val">2026年9月3日（星期四）</span><span class="update-time">08:30 更新</span></div>
     </div>
 
     <div class="stats-row">
-      <div class="stat-chip hot"><span class="stat-num">15</span>追踪机会点</div>
-      <div class="stat-chip new"><span class="stat-num">0</span>新增机会</div>
-      <div class="stat-chip trend"><span class="stat-num">3</span>今日有变化</div>
+      <div class="stat-chip hot"><span class="stat-num">16</span>追踪机会点</div>
+      <div class="stat-chip new"><span class="stat-num">1</span>新增机会</div>
+      <div class="stat-chip trend"><span class="stat-num">2</span>今日有变化</div>
     </div>
 
     <div class="highlight-banner">
       <div class="hl-icon">🔍</div>
-      <div class="hl-text"><strong>Ninja Crispi Pro 6-in-1双容器玻璃空气炸锅获TrustedReviews榜首</strong>——6QT+2.5QT双玻璃容器，Ninja Crispi系列从4QT升级到Pro双容器，玻璃碗空气炸锅从"入门尝鲜"升级为"成熟产品线"。Cecotec确认IFA展出玻璃篮空气炸锅+slushy机+冰淇淋机，欧洲品牌入局验证全球化趋势。制冰机BuyersGuide 9月更新三强格局稳定。</div>
+      <div class="hl-text"><strong>Morphy Richards InfuseChill风味制冰机IFA 2026展出</strong>——将咖啡、果汁、烈酒冻成风味冰块，9分钟出冰，自清洁+透明观察窗，美国版确认（110-120V/60Hz/UL认证）。Amazon无直接竞品，$100-179区间"风味制冰"子品类空白。Bosch携5款空气炸锅入局（含12L Double Stack），全球头部品牌验证赛道成熟度。中国网红小家电退潮（小熊电器利润-41%），功能实用回归验证$90+选品方向。</div>
     </div>
 
         <div class="section-block" id="quick-report">
       <div class="section-header">
         <h2>🔥 机会速报</h2>
         <span class="section-badge badge-hot">3项活跃</span>
+      </div>
+
+      <div class="opportunity-card card-new">
+        <div class="card-top">
+          <span class="category-tag tag-flavored">风味制冰</span>
+          <span class="status-badge status-new">新增</span>
+        </div>
+        <div class="card-title">风味制冰机（Flavored Ice Maker） · $100-179（预估） · ⭐⭐⭐⭐（待验证）</div>
+        <div class="card-body">
+          <div class="body-label trend">📈 趋势</div>
+          Morphy Richards在IFA 2026正式展出InfuseChill风味制冰机（型号IMB1012-UL），品牌定义"开创全新品类，超越传统制冰"。核心功能：将咖啡、果汁、烈酒、汽水等饮品冻制成风味冰块，而非传统制冰机仅制白冰。
+          <div class="body-label">📦 产品参数（morphyrichards.com产品页）</div>
+          <ul>
+            <li>电压：110-120V~ 60Hz（✅美国市场版本，型号后缀-UL为UL认证）</li>
+            <li>制冰量：625g/h，≥13.5kg/24h（与EUHOMY 44lbs、Kismile 35lbs同级）</li>
+            <li>冰篮容量：450g，水箱1.3L</li>
+            <li>出冰速度：9分钟首批</li>
+            <li>自清洁系统+可拆卸水洗部件</li>
+            <li>透明观察窗，功率150W，制冷100W</li>
+            <li>尺寸346×288×378mm，重量10kg</li>
+          </ul>
+          <div class="body-label pain">❗ 痛点与机会</div>
+          传统制冰机只能制白冰，风味冰需用户自己冻果汁冰块（耗时长、形状不规整、冻不透）。InfuseChill直接将饮品注入制冰系统，9分钟出风味冰，填补"定制化风味冰"品类空白。TikTok饮品赛道持续火热（slushy、cold brew、cocktail content），风味冰是高端饮品视觉+味觉升级的关键元素。$100+价位逻辑成立：消费者愿为"个性化饮品体验"付费。
+          <div class="body-label bom">🔧 BOM参考</div>
+          压缩机+注液系统+冰模+自清洁水泵+控制板+透明窗。核心差异在注液系统设计（需兼容不同饮品粘度）和冰模形状定制。推荐价$129-159。
+        </div>
+        <div class="card-insight">
+          <div class="insight-label">💡 机会判断</div>
+          <div class="insight-text">Amazon无直接竞品——所有$100-170制冰机均为白冰款（EUHOMY/Kismile/Antarctic Star）。InfuseChill开创的"风味制冰"子品类尚无其他品牌入局，中国卖家有窗口期。风险：美国定价未公布，IFA后需跟踪Amazon上架定价。</div>
+        </div>
+        <div class="card-source">来源：morphyrichards.com / IFA 2026 / PR Newswire 8/27</div>
       </div>
 
       <div class="opportunity-card card-hot">
@@ -224,13 +264,13 @@
         <div class="card-title">玻璃碗空气炸锅 · $100-200 · ⭐⭐⭐⭐</div>
         <div class="card-change-note">
           <div class="change-label">📌 今日新增</div>
-          <div class="change-text">① <strong>Ninja Crispi Pro 6-in-1获TrustedReviews 9/1榜首</strong>——6QT+2.5QT双玻璃容器，360°全透明可视化，数字触控，最高400°F。Ninja Crispi系列从4QT单容器升级到Pro双容器→玻璃碗空气炸锅从"入门尝鲜"进入"成熟产品线"。<br>② <strong>Cecotec确认IFA 2026展出玻璃篮空气炸锅</strong>——西班牙品牌携"玻璃可拆卸篮+紧凑电机"新款亮相IFA，同时展出slushy机和家用冰淇淋机。从Ninja/Kismile北美品牌扩展至Cecotec欧洲品牌→全球化趋势确认。<br>③ <strong>Ninja Crispi 4-in-1 Labor Day降至$160</strong>（原$180）→短期折扣带来流量，品类结构不变。</div>
+          <div class="change-text">① <strong>Bosch正式进入空气炸锅市场，IFA 2026展出5款新型号</strong>——Series 2紧凑款（4L）/ Double Stack双叠层（12L，市面最大之一）/ Series 4 Double Drawer（2×4.5L独立双抽屉）/ Double Flex（10L可分隔双区）/ Series 6常规款（6.1L）。英国定价£99.99-£209.99。<br>② <strong>Bosch新增HomeCafé Series 4半自动意式咖啡机</strong>——Bosch首款，30档磨豆+5档粉量，集成磨豆机一键现磨。</div>
         </div>
         <div class="card-insight">
           <div class="insight-label">💡 机会判断</div>
-          <div class="insight-text">Ninja产品线从4QT升级到6QT+2.5QT双容器Pro版，Kismile $159新入局，Cecotec欧洲IFA首秀。$100-130性价比空白仍是核心机会，中国卖家窗口期仍在但竞争加剧。</div>
+          <div class="insight-text">Bosch作为全球头部白电品牌大规模入局（5款+覆盖单层/双叠/双抽屉/可分隔），验证空气炸锅已从"网红产品"升级为"必需品类"。但Bosch走标准篮式路线，非玻璃碗——对玻璃碗空气炸锅赛道影响中性偏正面（大品牌教育市场，玻璃碗作为差异化高端子品类仍有空间）。</div>
         </div>
-        <div class="card-source">来源：TrustedReviews 9/1 / benchmark.pl 8/31 / Amazon</div>
+        <div class="card-source">来源：Bosch IFA 2026新闻稿 9/2 / bosch-home.co.uk</div>
       </div>
 
       <div class="opportunity-card card-trend">
@@ -241,36 +281,24 @@
         <div class="card-title">制冰机 · $100-149 · ⭐⭐⭐⭐⭐</div>
         <div class="card-change-note">
           <div class="change-label">📌 今日新增</div>
-          <div class="change-text">① <strong>Cecotec IFA 2026将展出制冰机</strong>——除空气炸锅外，Cecotec还将展示家用slushy机和冰淇淋机，与其清洁电器生态形成"Smart Home厨房"组合。IFA 9/4-8开幕后可获取具体参数和定价。<br>② <strong>BuyersGuide.org 9月更新Best Ice Makers 2026</strong>——EUHOMY 44Lbs/24H Nugget制冰机#1（10.0），Kismile 35Lbs/Day不锈钢#2（9.9），Antarctic Star多色多尺寸#3（9.9）。$100-170区间三强格局稳定，中国卖家差异化空间在智能功能和外观设计。</div>
+          <div class="change-text">① <strong>Morphy Richards InfuseChill为制冰机品类增加"风味"维度</strong>——传统制冰机仅制白冰，InfuseChill将饮品注入制冰系统直接生成风味冰，在制冰机品类中开辟"风味制冰"子方向。详见上方新增机会点。<br>② <strong>中国小家电市场"网红退潮"验证功能实用回归</strong>——小熊电器2026H1净利润暴跌41.3%，网红小家电闲置率65-70%（破壁机78%、早餐机近80%）。消费者从"颜值种草"转向"功能实用"。$90+功能型小家电正踩在"功能回归"趋势上。</div>
         </div>
-        <div class="card-source">来源：benchmark.pl 8/31 / BuyersGuide.org 9/1</div>
-      </div>
-
-      <div class="opportunity-card card-trend">
-        <div class="card-top">
-          <span class="category-tag tag-icemaker">沙冰机</span>
-          <span class="status-badge status-changed">延续·有变化</span>
-        </div>
-        <div class="card-title">家用沙冰/冷饮机 · $100-179 · ⭐⭐⭐⭐⭐</div>
-        <div class="card-change-note">
-          <div class="change-label">📌 今日新增</div>
-          <div class="change-text">① <strong>Cecotec确认IFA展出家用slushy机</strong>——Cecotec将展示slushy制作设备和家用冰淇淋机，欧洲品牌正式入局家用slushy赛道。<br>② <strong>Ninja SLUSHi在新加坡二手市场活跃</strong>——Carousell.sg 8/30：全新S$350（约US$265），多笔二手在售。Ninja SLUSHi为当前标杆（RapidChill/5预设/12h保温/2.5L），但US$400+定价远超$179门槛。$100-179简化版slushy机仍有空白。</div>
-        </div>
-        <div class="card-source">来源：benchmark.pl 8/31 / Carousell.sg 8/30</div>
+        <div class="card-source">来源：morphyrichards.com / 新浪财经 8/31</div>
       </div>
     </div>    <!-- 📋 延续追踪 -->
     <div class="section-block" id="detail-analysis">
       <div class="section-header">
         <h2>📋 延续追踪</h2>
-        <span class="section-badge badge-trend">15个品类</span>
+        <span class="section-badge badge-trend">16个品类</span>
       </div>
       <table class="continue-table">
         <thead><tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr></thead>
         <tbody>
-          <tr><td><strong>玻璃碗空气炸锅</strong></td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>9/2 Crispi Pro 6QT+Cecotec IFA</td><td><strong>延续·有变化</strong></td></tr>
-          <tr><td><strong>制冰机</strong></td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>9/2 Cecotec IFA+BuyersGuide更新</td><td><strong>延续·有变化</strong></td></tr>
-          <tr><td><strong>家用沙冰/冷饮机</strong></td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>9/2 Cecotec slushy+SLUSHi二手</td><td><strong>延续·有变化</strong></td></tr>
-          <tr><td>蒸汽烤面包机/小型蒸汽烤箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/30</td><td>9/1 OneChef+Steam Infusion</td><td>延续·无变化</td></tr>
+          <tr><td><strong>风味制冰机</strong></td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>9/3</td><td>9/3 Morphy Richards IFA+US版</td><td><strong>新增</strong></td></tr>
+          <tr><td><strong>玻璃碗空气炸锅</strong></td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>9/3 Bosch 5款入局验证</td><td><strong>延续·有变化</strong></td></tr>
+          <tr><td><strong>制冰机</strong></td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>9/3 InfuseChill+网红退潮</td><td><strong>延续·有变化</strong></td></tr>
+          <tr><td>家用沙冰/冷饮机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>9/2 Cecotec slushy+SLUSHi</td><td>延续·无变化</td></tr>
+          <tr><td>蒸汽烤面包机/小型蒸汽烤箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/30</td><td>9/1 OneChef+Steam</td><td>延续·无变化</td></tr>
           <tr><td>压缩机冰淇淋机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>8/26 CREAMi Deluxe</td><td>延续·无变化</td></tr>
           <tr><td>家用台式汽水/气泡水机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>8/25</td><td>8/25 Thirsti $149.99</td><td>延续·无变化</td></tr>
           <tr><td>电烤盘/室内烧烤炉</td><td>$100-169</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/23 NutriChef登顶#1</td><td>延续·无变化</td></tr>
@@ -291,28 +319,28 @@
         <span class="section-badge badge-trend">5条</span>
       </div>
       <div class="watch-item">
-        <div class="watch-title">🏢 IFA 2026倒计时2天（9/4-8柏林）</div>
-        <div class="watch-text">新增确认参展：①Cecotec（玻璃篮空气炸锅+slushy机+冰淇淋机+Mambo厨房机器人+双豆仓咖啡机）②AEG世界首秀OnePot Pasta专用灶台+7.89cm超薄Trilobite 8000 GEN2扫地机。IFA开幕后重点关注小家电新品发布和定价。</div>
+        <div class="watch-title">🏢 IFA 2026媒体日（9/3）多场新闻发布会密集举行</div>
+        <div class="watch-text">今日已确认：①Severin 16:00发布厨房新品（Spuma玻璃感应奶泡机+S-Wave平板微波炉+S-Taste磨豆咖啡机）②Haier 15:00展示AI烹饪生态（食材识别+烹饪监控+人形机器人）③Midea发布SpaceMaster系列（石墨烯0.2秒速热+350°C披萨程序，2027年全球上市）④Bosch发布空气炸锅5款+HomeCafé半自动咖啡机+Green Collection低碳烤箱。明日9/4 IFA正式开幕后预计有更多新品和定价信息释放。</div>
       </div>
       <div class="watch-item">
-        <div class="watch-title">🎨 Burgundy Red/酒红色成为2026秋季厨房色彩趋势</div>
-        <div class="watch-text">Google Trends显示"red kitchen appliances"搜索量同比暴增1,370%，Morphy Richards限量版Rhubarb水壶+烤面包机套组£159.98。色彩趋势启示：PFAS-free玻璃碗/不锈钢机身的空气炸锅和制冰机可考虑推出酒红/深红限定色款，借色彩趋势溢价。</div>
+        <div class="watch-title">🎨 AEG Design Collection小家电系列获红点设计奖</div>
+        <div class="watch-text">3-in-1披萨烤箱+空气炸+全功能烤箱组合，配套烤面包机/水壶/滤杯咖啡机/意式咖啡机统一设计语言。AEG研究显示86%欧洲披萨爱好者主要在家吃披萨，59%愿为"在家做出餐厅级披萨"更频繁烹饪。</div>
+      </div>
+      <div class="watch-item">
+        <div class="watch-title">📊 中国网红小家电退潮验证$90+功能选品方向</div>
+        <div class="watch-text">新浪财经8/31：小熊电器2026H1营收同比-7.34%、净利润-41.30%；杭州线下小家电销量同比-30%~40%；破壁机闲置率78%，早餐机近80%。消费者转向"功能实用+高频使用"刚需产品，千元以上电饭煲线下热销。$90+功能型小家电正踩在"功能回归"趋势上。</div>
       </div>
       <div class="watch-item">
         <div class="watch-title">🛒 Amazon Labor Day大促持续至9/7</div>
-        <div class="watch-text">$90+区间重点折扣：Ninja Crispi 4-in-1玻璃空气炸锅$180→$160 / Cuisinart空气炸锅烤箱$230→$150 / KitchenAid无绳搅拌机$140→$110 / Chefman Crispinator 7-in-1 8Qt $159.99→$109.99 / Ninja Espresso+Nespresso $279.99→$249.95。短期流量不影响品类判断。</div>
+        <div class="watch-text">$90+区间重点折扣维持不变：Ninja Crispi 4-in-1 $180→$160 / Cuisinart空气炸锅烤箱$230→$150 / Chefman Crispinator 7-in-1 $159.99→$109.99。短期流量不影响品类判断。</div>
       </div>
       <div class="watch-item">
-        <div class="watch-title">📊 TrustedReviews 9/1-9/2密集更新2026年度榜单</div>
-        <div class="watch-text">Best Waffle Makers（Ninja BW1001垂直华夫饼机Pro获#1）/ Best Bread Makers（Neretva 15-in-1 3.3lb陶瓷盆面包机20% off）/ Best Microwave Ovens（GE 4-in-1微波+空气炸组合）/ Best Ceramic &amp; Glass Non-Toxic Air Fryers（Ninja Crispi Pro 6QT榜首）。Ninja BW1001垂直华夫饼机为新面孔，定价预估$70-90，可能不达$90门槛。</div>
-      </div>
-      <div class="watch-item">
-        <div class="watch-title">📱 中国TikTok美区厨房用品持续出爆</div>
-        <div class="watch-text">不锈钢汤勺托架28天1.83万单GMV$23.18万，汉堡肉饼压模器10天5000单。均为$10-20低客单厨具，非$90+小家电，但验证"功能直观+痛点明确+短视频场景化"打法对厨房品类有效，可借鉴至$90+小家电推广策略。</div>
+        <div class="watch-title">🏷️ Morphy Richards 90周年品牌战略值得关注</div>
+        <div class="watch-text">英国老牌小家电（1936年创立）在IFA 2026推出4款新品（无管便携空调+InfuseChill风味制冰机+全自动咖啡机+Fusion早餐套装），定位"中高端+设计驱动"。品牌在中国2000+零售店、全球1亿家庭用户，是观察中国卖家差异化定位的对标品牌。</div>
       </div>
     </div>    <div class="page-footer">
       <div class="footer-divider"></div>
-      数据来源：TrustedReviews · BuyersGuide.org · benchmark.pl · Carousell.sg · MikeShouts · PopSci<br>
+      数据来源：morphyrichards.com · PR Newswire · Bosch IFA 2026 · 新浪财经 · IFA-berlin.com<br>
       <a href="https://weian8194-png.github.io/policy-daily/appliance-trends/">🏠 线上站点</a>
     </div>
   </main>
