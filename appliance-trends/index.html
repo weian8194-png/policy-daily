@@ -8,14 +8,11 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; scroll-padding-top: 16px; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f0fdfa; color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-
     .section-block:target { animation: target-flash 1.5s ease-out; }
     @keyframes target-flash { 0% { box-shadow: 0 0 0 3px rgba(13,148,136,0.4); } 100% { box-shadow: 0 0 0 0 rgba(13,148,136,0); } }
-
     .layout { display: flex; min-height: 100vh; }
     .sidebar { width: 260px; background: #0f172a; color: #cbd5e1; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding-bottom: 40px; }
     .main-content { margin-left: 260px; flex: 1; min-width: 0; padding: 28px 36px 40px; background: #f0fdfa; }
-
     .sidebar-brand { padding: 28px 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .sidebar-brand h1 { font-size: 17px; font-weight: 700; color: #f1f5f9; letter-spacing: 0.3px; }
     .sidebar-brand .version { font-size: 11px; color: #475569; margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; }
@@ -27,7 +24,6 @@
     .nav-count { font-size: 10px; background: rgba(255,255,255,0.08); color: #64748b; padding: 1px 7px; border-radius: 10px; font-weight: 600; }
     .nav-count.hot { background: rgba(13,148,136,0.15); color: #5eead4; }
     .nav-divider { height: 1px; background: rgba(255,255,255,0.04); margin: 10px 24px; }
-
     .archive-section { padding: 0; }
     .archive-section-title { display: flex; align-items: center; justify-content: space-between; padding: 8px 24px; font-size: 11px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 1px; }
     details.archive-month { padding: 0; }
@@ -42,25 +38,21 @@
     .archive-day::before { content: "\01F4C4 "; font-size: 11px; }
     .archive-day:hover { color: #e2e8f0; background: rgba(13,148,136,0.06); border-left-color: #0d9488; }
     .archive-day .day-count { font-size: 10px; color: #475569; margin-left: 4px; }
-
     .content-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid #ccfbf1; }
     .content-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; letter-spacing: 0.3px; }
     .content-header .date-line { font-size: 13px; color: #64748b; margin-top: 6px; }
     .content-header .date-line .date-val { font-weight: 700; color: #334155; }
     .content-header .date-line .update-time { font-size: 11px; background: #f0fdfa; color: #0d9488; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
-
     .stats-row { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
     .stat-chip { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
     .stat-chip .stat-num { font-size: 22px; font-weight: 800; margin-right: 4px; line-height: 1; }
     .stat-chip.hot .stat-num { color: #0d9488; }
     .stat-chip.new .stat-num { color: #8b5cf6; }
     .stat-chip.trend .stat-num { color: #f59e0b; }
-
     .highlight-banner { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px 20px; margin-bottom: 22px; display: flex; align-items: flex-start; gap: 12px; }
     .highlight-banner .hl-icon { font-size: 28px; flex-shrink: 0; }
     .highlight-banner .hl-text { font-size: 14px; color: #78350f; line-height: 1.7; }
     .highlight-banner .hl-text strong { color: #92400e; }
-
     .section-block { margin-bottom: 28px; }
     .section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #ccfbf1; }
     .section-header h2 { font-size: 16px; font-weight: 700; color: #0f172a; }
@@ -68,31 +60,15 @@
     .section-header .badge-hot { background: #f0fdfa; color: #0d9488; }
     .section-header .badge-new { background: #faf5ff; color: #8b5cf6; }
     .section-header .badge-trend { background: #fffbeb; color: #d97706; }
-
     .opportunity-card { background: #fff; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid #e2e8f0; }
     .opportunity-card.card-hot { border-left: 4px solid #0d9488; }
-    .opportunity-card.card-new { border-left: 4px solid #8b5cf6; }
-    .opportunity-card.card-trend { border-left: 4px solid #f59e0b; }
-    .opportunity-card.card-continue { border-left: 4px solid #94a3b8; }
-    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
     .category-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 3px; color: #fff; letter-spacing: 0.2px; }
-    .tag-steam { background: #8b5cf6; }
-    .tag-icemaker { background: #0ea5e9; }
+    .tag-slushi { background: #06b6d4; }
     .tag-airfryer { background: #f97316; }
-    .tag-icecream { background: #8b5cf6; }
-    .tag-flavored { background: #7c3aed; }
     .status-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
-    .status-new { background: #faf5ff; color: #8b5cf6; }
     .status-changed { background: #fffbeb; color: #d97706; }
-    .status-unchanged { background: #f1f5f9; color: #64748b; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; }
     .card-title { font-size: 14px; font-weight: 700; color: #0f172a; padding: 8px 16px 0; line-height: 1.5; }
-    .card-body { padding: 8px 16px 0; font-size: 12px; color: #475569; line-height: 1.7; }
-    .card-body .body-label { font-size: 11px; font-weight: 700; color: #8b5cf6; margin-top: 8px; margin-bottom: 4px; }
-    .card-body .body-label.trend { color: #0d9488; }
-    .card-body .body-label.pain { color: #dc2626; }
-    .card-body .body-label.bom { color: #7c3aed; }
-    .card-body ul { padding-left: 16px; margin: 4px 0; }
-    .card-body ul li { margin-bottom: 2px; }
     .card-change-note { background: #fffbeb; border-radius: 6px; margin: 8px 16px; padding: 10px 12px; border: 1px solid #fde68a; }
     .card-change-note .change-label { font-size: 11px; font-weight: 700; color: #d97706; margin-bottom: 4px; }
     .card-change-note .change-text { font-size: 12px; color: #78350f; line-height: 1.7; }
@@ -103,7 +79,6 @@
     .continue-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 12px; }
     .continue-table th { padding: 8px 12px; background: #f8fafc; color: #475569; font-weight: 600; text-align: left; border-bottom: 2px solid #e2e8f0; }
     .continue-table td { padding: 7px 12px; border-bottom: 1px solid #f1f5f9; }
-    .continue-table tr:hover td { background: #f8fafc; }
     .watch-item { background: #fff; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; border-left: 3px solid #94a3b8; }
     .watch-item .watch-title { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
     .watch-item .watch-text { font-size: 12px; color: #64748b; line-height: 1.6; }
@@ -130,8 +105,9 @@
       <div class="nav-divider"></div>
       <div class="archive-section">
         <div class="archive-section-title">📅 历史归档</div>
-                <details class="archive-month" open>
-          <summary><span class="month-info">2026年09月</span><span class="month-stats">6天</span></summary>
+        <details class="archive-month" open>
+          <summary><span class="month-info">2026年09月</span><span class="month-stats">7天</span></summary>
+          <a class="archive-day" href="./daily/20260907.html">2026-09-07（周一）<span class="day-count">16个</span></a>
           <a class="archive-day" href="./daily/20260906.html">2026-09-06（周日）<span class="day-count">16个</span></a>
           <a class="archive-day" href="./daily/20260905.html">2026-09-05（周六）<span class="day-count">16个</span></a>
           <a class="archive-day" href="./daily/20260904.html">2026-09-04（周五）<span class="day-count">16个</span></a>
@@ -139,7 +115,7 @@
           <a class="archive-day" href="./daily/20260902.html">2026-09-02（周三）<span class="day-count">15个</span></a>
           <a class="archive-day" href="./daily/20260901.html">2026-09-01（周二）<span class="day-count">15个</span></a>
         </details>
-<details class="archive-month">
+        <details class="archive-month">
           <summary><span class="month-info">2026年08月</span><span class="month-stats">31天</span></summary>
           <a class="archive-day" href="./daily/20260831.html">2026-08-31（周一）<span class="day-count">15个</span></a>
           <a class="archive-day" href="./daily/20260830.html">2026-08-30（周日）<span class="day-count">15个</span></a>
@@ -208,7 +184,7 @@
   <main class="main-content">
     <div class="content-header">
       <h1>🔥 美国亚马逊$90+小家电市场趋势</h1>
-      <div class="date-line">每日趋势分析 · <span class="date-val">2026年9月6日（星期日）</span><span class="update-time">08:30 更新</span></div>
+      <div class="date-line">每日趋势分析 · <span class="date-val">2026年9月7日（星期一）</span><span class="update-time">08:30 更新</span></div>
     </div>
 
     <div class="stats-row">
@@ -219,10 +195,10 @@
 
     <div class="highlight-banner">
       <div class="hl-icon">🔍</div>
-      <div class="hl-text"><strong>追觅ChillLab冷冻甜品机IFA首发——10分钟免预冻冲击Ninja CREAMi</strong>——追觅在IFA 2026展出ChillLab™ SLM80，搭载360° Rapid Compressor Cooling，10分钟无需预冻直接出冰淇淋，Smooth Flow Texture System产出Gelato级质地。截至7月追觅小厨电全球出货超44万台。Ninja Crispi 5-in-1 PowerPod新型号曝光（三容器4Qt+2.5Qt+6Cup），MAGNIFIQUE 12-in-1玻璃多能锅新入局。玻璃碗空气炸锅从Ninja独占进入多品牌竞逐。</div>
+      <div class="hl-text"><strong>Ninja SLUSHi MAX大容量冷冻饮品机Amazon 1000+台/月热卖</strong>——150oz/4.4L超大容量，Amazon 4.6星/600+评论，$329.99（Labor Day deal，常规$499.99）。Cuisinart ClearView玻璃空气炸锅$140新入局（内置灯+PFAS-free陶瓷盘），Bosch正式发布空气炸锅新线（IFA 2026三款）。玻璃空气炸锅三条路线更清晰：多容器便携/精准可视化/多功能一锅。</div>
     </div>
 
-        <div class="section-block" id="quick-report">
+    <div class="section-block" id="quick-report">
       <div class="section-header">
         <h2>🔥 机会速报</h2>
         <span class="section-badge badge-hot">2项有变化</span>
@@ -230,38 +206,39 @@
 
       <div class="opportunity-card card-hot">
         <div class="card-top">
-          <span class="category-tag tag-icecream">压缩机冰淇淋机</span>
+          <span class="category-tag tag-slushi">家用沙冰/冷饮机</span>
           <span class="status-badge status-changed">延续·有变化</span>
         </div>
-        <div class="card-title">压缩机冰淇淋机 · $100-179 · ⭐⭐⭐⭐⭐</div>
+        <div class="card-title">家用沙冰/冷饮机 · $100-179 · ⭐⭐⭐⭐⭐</div>
         <div class="card-change-note">
           <div class="change-label">📌 今日新增</div>
-          <div class="change-text">① <strong>追觅ChillLab™冷冻甜品机IFA首发——10分钟免预冻</strong>——搭载360° Rapid Compressor Cooling压缩机技术，10分钟内无需预冻直接制作冰淇淋/冷冻甜品。Smooth Flow Texture System非对称不锈钢螺旋桨加速均匀微冰晶形成并打散气泡，产出类似意大利手工Gelato的细腻质地。直接冲击Ninja CREAMi系列24小时预冻模式。<br>② <strong>追觅小厨电全球出货量首次披露</strong>——截至2026年7月，全球累计出货超44万台，海外营收突破2.2百万美元。6大品类同时亮相IFA，标志追觅从新进入者转向全品类玩家。</div>
+          <div class="change-text">① <strong>Ninja SLUSHi MAX大容量冷冻饮品机Amazon热卖数据曝光</strong>——150oz/4.4L超大容量机型，Amazon售价$329.99（Labor Day deal，常规$499.99，$170 off/34%折扣）。可一次制作12+份冷冻饮品，Ninja宣称MAX是原版SLUSHi的两倍大、两倍快。SlushAssist Technology辅助控温，内置出料手柄。Amazon 4.6星/600+评论，过去1个月售出1000+台。<br>② <strong>SLUSHi系列两级产品矩阵形成</strong>：MAX（$499.99）/原版（$349.95），覆盖派对/家庭场景。原版Labor Day价$299.95，今日截止。</div>
         </div>
         <div class="card-insight">
           <div class="insight-label">💡 机会判断</div>
-          <div class="insight-text">10分钟免预冻是压缩机冰淇淋机品类分水岭——"想吃什么现做"比"提前一天冻好等搅打"体验跃升一个级别。压缩机+免预冻将成为$100-179新消费者期望基准，单纯压缩机已不够差异化。</div>
+          <div class="insight-text">SLUSHi MAX的1000+台/月Amazon销量和4.6星评分证明"家用冷冻饮品机"已跨过大众验证门槛。$100-179区间存在"减容量不减核心体验"的空白——3-5杯量级（60-80oz），保留SlushAssist控温+自清洗+12小时保温等核心功能，售价可自然落入$129-149。</div>
         </div>
-        <div class="card-source">来源：PRNewswire 9/5 / IT之家 9/5</div>
+        <div class="card-source">来源：ConsumerQueen 9/4 / Digital Trends 9/3</div>
       </div>
 
       <div class="opportunity-card card-hot">
         <div class="card-top">
-          <span class="category-tag tag-airfryer">空气炸锅</span>
+          <span class="category-tag tag-airfryer">玻璃碗空气炸锅</span>
           <span class="status-badge status-changed">延续·有变化</span>
         </div>
         <div class="card-title">玻璃碗空气炸锅 · $100-200 · ⭐⭐⭐⭐</div>
         <div class="card-change-note">
           <div class="change-label">📌 今日新增</div>
-          <div class="change-text">① <strong>Ninja Crispi 5-in-1 PowerPod新型号曝光</strong>——TrustedReviews 9/6"2026最佳玻璃空气炸锅"榜单首次现身，第6"Best for meal prep"。三容器组合（4Qt+2.5Qt+6Cup），PowerPod适配三种尺寸玻璃容器，批量备餐同步处理。Ninja Crispi产品线已有4-in-1/Pro 6-in-1/5-in-1 PowerPod三款。<br>② <strong>MAGNIFIQUE 12-in-1玻璃多能锅新入局</strong>——TrustedReviews"2026最佳多能锅"第4"Best for table serving"。4.5Qt高硼硅玻璃，360°可视，PFAS-free，12合1功能可上桌。品类从Ninja独占进入多品牌竞逐。</div>
+          <div class="change-text">① <strong>TrustedReviews 9/7更新"7 Best Glass Air Fryers of 2026"</strong>——新增Cuisinart ClearView 4Qt Glass Basket Air Fryer（$140），排名第2"Best for precise cooks"。内置照明灯清晰监控上色，PFAS-free陶瓷烤盘，硼硅酸盐玻璃basket。Cuisinart ClearView是Ninja Crispi系列外又一个$100-200强产品。<br>② <strong>Bosch正式入局空气炸锅市场</strong>——IFA 2026发布三款：Series 2单篮4L、Double Stack双舱12L、Series 4 Dual Drawer+Double Flex双区10L。同时推出HomeCafé Series 4半自动意式咖啡机（30档研磨）。Bosch作为德系主力品牌入局，验证品类成熟度。</div>
         </div>
         <div class="card-insight">
           <div class="insight-label">💡 机会判断</div>
-          <div class="insight-text">Ninja Crispi 5-in-1三容器+MAGNIFIQUE 12-in-1分别代表"多容器灵活备餐"和"多功能一锅到底"两条路线，均天然落在$100-200。品类从独占进入多品牌验证阶段，适合跟进差异化产品。</div>
+          <div class="insight-text">Cuisinart ClearView $140+内置灯+PFAS-free陶瓷盘，是"精准可视化"路线的独立验证。Bosch入局从白电巨头角度验证品类从"新锐赛道"升级为"主流品类"。$100-200区间路线更清晰：①多容器便携备餐（Ninja Crispi路线）②精准可视化单篮（Cuisinart ClearView路线）③多功能一锅到底（MAGNIFIQUE 12-in-1路线）。</div>
         </div>
-        <div class="card-source">来源：TrustedReviews 9/6</div>
+        <div class="card-source">来源：TrustedReviews 9/7 / Bosch IFA 2026 / pc-tablet.com 9/4</div>
       </div>
-    </div>    <!-- 📋 延续追踪 -->
+    </div>
+
     <div class="section-block" id="detail-analysis">
       <div class="section-header">
         <h2>📋 延续追踪</h2>
@@ -270,16 +247,16 @@
       <table class="continue-table">
         <thead><tr><th>品类</th><th>价位</th><th>星级</th><th>首次发现</th><th>最近变化</th><th>状态</th></tr></thead>
         <tbody>
-          <tr><td>风味制冰机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>9/3</td><td>9/3 Morphy Richards IFA+US版</td><td>延续·无变化</td></tr>
-          <tr><td><strong>玻璃碗空气炸锅</strong></td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>9/6 Crispi 5-in-1+MAGNIFIQUE</td><td><strong>延续·有变化</strong></td></tr>
-          <tr><td>制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>9/3 InfuseChill+网红退潮</td><td>延续·无变化</td></tr>
-          <tr><td>家用沙冰/冷饮机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>9/2 Cecotec slushy+SLUSHi</td><td>延续·无变化</td></tr>
-          <tr><td>蒸汽烤面包机/小型蒸汽烤箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/30</td><td>9/1 OneChef+Steam</td><td>延续·无变化</td></tr>
-          <tr><td><strong>压缩机冰淇淋机</strong></td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>9/6 追觅ChillLab免预冻</td><td><strong>延续·有变化</strong></td></tr>
-          <tr><td>家用台式汽水/气泡水机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>8/25</td><td>8/25 Thirsti $149.99</td><td>延续·无变化</td></tr>
+          <tr><td>风味制冰机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>9/3</td><td>9/3 Morphy Richards IFA展出</td><td>延续·无变化</td></tr>
+          <tr><td><strong>玻璃碗空气炸锅</strong></td><td>$100-200</td><td>⭐⭐⭐⭐</td><td>8/6</td><td>9/7 ClearView+Bosch入局</td><td><strong>延续·有变化</strong></td></tr>
+          <tr><td>制冰机</td><td>$100-149</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>9/3 InfuseChill增加风味维度</td><td>延续·无变化</td></tr>
+          <tr><td>蒸烤炸一体机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>9/5 Haier AI Vision</td><td>延续·无变化</td></tr>
+          <tr><td>压缩机冰淇淋机</td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/4</td><td>9/6 ChillLab 10分钟免预冻</td><td>延续·无变化</td></tr>
+          <tr><td><strong>家用沙冰/冷饮机</strong></td><td>$100-179</td><td>⭐⭐⭐⭐⭐</td><td>7/14</td><td>9/7 SLUSHi MAX 1000+台/月</td><td><strong>延续·有变化</strong></td></tr>
+          <tr><td>蒸汽烤面包机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/30</td><td>9/1 OneChef+Steam</td><td>延续·无变化</td></tr>
+          <tr><td>台式汽水/气泡水机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>8/25</td><td>8/25 Thirsti $149.99</td><td>延续·无变化</td></tr>
           <tr><td>电烤盘/室内烧烤炉</td><td>$100-169</td><td>⭐⭐⭐⭐⭐</td><td>6/28</td><td>8/23 NutriChef登顶#1</td><td>延续·无变化</td></tr>
           <tr><td>室内披萨烤箱</td><td>$149-349</td><td>⭐⭐⭐⭐</td><td>7/10</td><td>8/16 Bravo XL Pro</td><td>延续·无变化</td></tr>
-          <tr><td>蒸烤炸一体机</td><td>$100-179</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>9/5 Haier AI+Ambient AI</td><td>延续·无变化</td></tr>
           <tr><td>冷萃+热萃咖啡机</td><td>$100-129</td><td>⭐⭐⭐⭐</td><td>6/28</td><td>8/27 IFA+43%</td><td>延续·无变化</td></tr>
           <tr><td>护肤冷藏小冰箱</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>8/2</td><td>8/20 Cooluli召回</td><td>延续·无变化</td></tr>
           <tr><td>面包+冰淇淋一体机</td><td>$249+</td><td>⭐⭐⭐⭐</td><td>8/4</td><td>8/4 Panasonic欧发</td><td>延续·无变化</td></tr>
@@ -288,27 +265,30 @@
           <tr><td>蒸汽+吸尘+除螨清洁机</td><td>$100-149</td><td>⭐⭐⭐⭐</td><td>7/2</td><td>7/2 不开窗逻辑</td><td>延续·无变化</td></tr>
         </tbody>
       </table>
-    </div>    <!-- 🔍 其他动向 -->
+    </div>
+
     <div class="section-block" id="watchlist">
       <div class="section-header">
         <h2>🔍 其他动向</h2>
         <span class="section-badge badge-trend">3条</span>
       </div>
       <div class="watch-item">
-        <div class="watch-title">🏢 追觅IFA 2026小厨电全品类亮相</div>
-        <div class="watch-text">除ChillLab和双舱空气炸锅外：Feast™ DS50 Pro双舱空气炸锅（垂直双仓+双擎风道，脆烤仓88.5%脱油率）、BioKnead™ MX60厨师机（专利双勾结构）、ToastControl™ TA60智能吐司机（机械臂自动升降）、Ecceluxe™ Go便携浓缩咖啡机（4-in-1兼容NS/DG/ESE/研磨）。追觅以"技术深潜+品类齐全"冲击传统品牌。</div>
+        <div class="watch-title">🛒 Labor Day大促今日（9/7）截止</div>
+        <div class="watch-text">Amazon/Best Buy $90+重点折扣：Ninja Prestige Smart XL Air Fryer & Countertop Oven $249.99（原$429.99）；Outin Nano便携浓缩咖啡机 $109.99（原$149.99）；Instant Pot Pro Plus 6Qt $169.95（原$229.99）；KitchenAid 5.5Qt Bowl-Lift Stand Mixer $349.99（原$499.99）；Ninja CREAMi Scoop & Swirl $50 off；Ninja Flip Toaster Oven & Air Fryer 40% off至$160以下。下周价格回稳</div>
       </div>
       <div class="watch-item">
-        <div class="watch-title">📅 IFA 2026公众开放日第二天（9/6）</div>
-        <div class="watch-text">媒体日（9/2-4）主要品牌发布会已完成，9/5起公众开放。追觅/Hisense/Dreame/Dyson等新品信息仍在持续释放中。</div>
+        <div class="watch-title">\U0001F3E2 IFA 2026公众日最后一天（9/7）</div>
+        <div class="watch-text">展会9/8闭馆。追觅/Hisense/Bosch/Siemens/Miele/AEG/LG等新品信息已持续释放。追觅小厨电6大品类IFA亮相获多源报道；Bosch发布空气炸锅+半自动咖啡机新线；AEG推出PizzaExpert烤箱+SaphirMatt hob</div>
       </div>
       <div class="watch-item">
-        <div class="watch-title">🛒 Labor Day大促最后24小时（至9/7）</div>
-        <div class="watch-text">Amazon $90+区间：Ninja SLUSHi $299.95（14% off确认常规价$349.95）；Ninja CREAMi Scoop & Swirl $50 off；Ninja Flip Toaster Oven & Air Fryer 40% off至$160以下；KitchenAid 5.5Qt Bowl-Lift Stand Mixer $349.99（原$499.99）。</div>
+        <div class="watch-title">📊 追觅ChillLab免预冻时间说明</div>
+        <div class="watch-text">中文报道"15分钟免预冻"对应冰淇淋类甜品，英文PR"10分钟"对应冷冻饮品。两者不矛盾——饮品基底薄冷却更快，冰淇淋基底厚需更长时间。选品参考：免预冻时间按品类基底厚度分层标注</div>
       </div>
-    </div>    <div class="page-footer">
+    </div>
+
+    <div class="page-footer">
       <div class="footer-divider"></div>
-      数据来源：TrustedReviews · BestChoice · GizmoChina · Chosun · Hipertextual · IFA 2026<br>
+      数据来源：TrustedReviews · ConsumerQueen · PRNewswire · Digital Trends · BBC Good Food · IFA 2026<br>
       <a href="https://weian8194-png.github.io/policy-daily/appliance-trends/">🏠 线上站点</a>
     </div>
   </main>
