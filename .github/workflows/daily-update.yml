@@ -53,12 +53,12 @@ jobs:
           echo "date=$report_date" >> "$GITHUB_OUTPUT"
           printf '%s\n' "$report_date" > .daily-update-date
 
-      - name: Require the OpenAI API key
+      - name: Require the API gateway key
         shell: bash
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          API_GATEWAY_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          if [ -z "$OPENAI_API_KEY" ]; then
+          if [ -z "$API_GATEWAY_KEY" ]; then
             echo "Repository secret OPENAI_API_KEY is not configured." >&2
             exit 1
           fi
@@ -70,6 +70,7 @@ jobs:
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          responses-api-endpoint: https://token-hub.hoomenology.com/v1/responses
           permission-profile: ":workspace"
           safety-strategy: drop-sudo
           prompt-file: .github/codex/daily-update.md
