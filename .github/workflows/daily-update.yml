@@ -63,24 +63,53 @@ jobs:
             exit 1
           fi
 
-      - name: Check the TokenHub Responses API
+      - name: Select and check a TokenHub model
+        id: gateway
         shell: bash
         env:
           API_GATEWAY_KEY: ${{ secrets.OPENAI_API_KEY }}
+          REQUESTED_MODEL: ${{ vars.TOKEN_HUB_MODEL }}
         run: |
+          models_file="$(mktemp)"
+          curl --fail --silent --show-error --max-time 30 \
+            --output "$models_file" \
+            --header "Authorization: Bearer $API_GATEWAY_KEY" \
+            https://token-hub.hoomenology.com/v1/models
+
+          if [ -n "$REQUESTED_MODEL" ]; then
+            model="$REQUESTED_MODEL"
+          else
+            model="$(jq -r '
+              [.data[].id] as $ids |
+              ["gpt-5.2-codex", "gpt-5.1-codex-max", "gpt-5.1-codex",
+               "gpt-5-codex", "gpt-4.1", "gpt-4.1-mini"] |
+              map(select(. as $candidate | $ids | index($candidate))) | .[0] // empty
+            ' "$models_file")"
+          fi
+          if [ -z "$model" ] || ! jq -e --arg model "$model" \
+            '.data | any(.id == $model)' "$models_file" >/dev/null; then
+            echo "No supported TokenHub model was found. Available GPT/Codex models:" >&2
+            jq -r '.data[].id | select(test("gpt|codex"; "i"))' "$models_file" \
+              | sort | head -40 >&2
+            exit 1
+          fi
+
           response_file="$(mktemp)"
           http_code="$(curl --silent --show-error --max-time 90 \
             --output "$response_file" --write-out '%{http_code}' \
             --request POST https://token-hub.hoomenology.com/v1/responses \
             --header "Authorization: Bearer $API_GATEWAY_KEY" \
             --header 'Content-Type: application/json' \
-            --data '{"model":"gpt-6-astra","input":"Reply with OK only.","max_output_tokens":16}')"
+            --data "$(jq -cn --arg model "$model" \
+              '{model: $model, input: "Reply with OK only.", max_output_tokens: 16}')")"
           if [[ "$http_code" -lt 200 || "$http_code" -ge 300 ]]; then
             jq '{error: (.error.message // "unknown gateway error"), type: (.error.type // "unknown")}' \
               "$response_file" >&2 || true
             exit 1
           fi
           jq -e '.id and (.output | type == "array")' "$response_file" >/dev/null
+          echo "model=$model" >> "$GITHUB_OUTPUT"
+          echo "TokenHub model check passed: $model"
 
       # Keep this as the final step in the job. The generated patch crosses into
       # a clean runner before any GitHub write token becomes available.
@@ -96,7 +125,7 @@ jobs:
           # `--search` is a global CLI flag, while action extra arguments are
           # appended to `codex exec`. Use the equivalent documented config key.
           codex-args: '["-c", "web_search=\"live\""]'
-          model: gpt-6-astra
+          model: ${{ steps.gateway.outputs.model }}
           effort: medium
 
   publish:
