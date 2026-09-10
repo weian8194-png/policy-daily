@@ -43,7 +43,7 @@ def update_policy(html, report_date):
     )
     html = replace_once(
         html, r'<span class="update-time">.*?</span>',
-        '<span class="update-time">云端保底 07:30</span>', "policy update time"
+        '<span class="update-time">云端保底 07:00</span>', "policy update time"
     )
     html = replace_once(
         html,
@@ -54,7 +54,7 @@ def update_policy(html, report_date):
     html = replace_once(
         html,
         r'<p>更新时间：\d{4}年\d{1,2}月\d{1,2}日 .*?</p>',
-        '<p>更新时间：{} 07:30 · 云端保底（34个信息源配置）</p>'.format(display),
+        '<p>更新时间：{} 07:00 · 云端保底（34个信息源配置）</p>'.format(display),
         "policy footer date",
     )
     return html
@@ -115,7 +115,7 @@ def update_appliance(html, report_date):
     )
     html = replace_once(
         html, r'<span class="update-time">.*?</span>',
-        '<span class="update-time">云端保底 07:30</span>', "appliance update time"
+        '<span class="update-time">云端保底 07:00</span>', "appliance update time"
     )
     html = replace_once(
         html,
