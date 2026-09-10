@@ -1,0 +1,152 @@
+name: Daily cloud update
+
+on:
+  schedule:
+    # GitHub cron uses UTC. 00:00 UTC is 08:00 in Asia/Shanghai.
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: "Optional report date (YYYY-MM-DD); blank uses today in Shanghai"
+        required: false
+        type: string
+
+concurrency:
+  group: daily-cloud-update
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  generate:
+    name: Research and generate patch
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    outputs:
+      patch: ${{ steps.codex.outputs.final-message }}
+      run-date: ${{ steps.run-date.outputs.date }}
+    steps:
+      - name: Check out the current site
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+
+      - name: Determine the Shanghai report date
+        id: run-date
+        shell: bash
+        env:
+          REQUESTED_DATE: ${{ inputs.report_date }}
+        run: |
+          if [ -n "$REQUESTED_DATE" ]; then
+            if [[ ! "$REQUESTED_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] || \
+              ! date -d "$REQUESTED_DATE" +%F >/dev/null 2>&1; then
+              echo "report_date must be a valid YYYY-MM-DD date" >&2
+              exit 1
+            fi
+            report_date="$REQUESTED_DATE"
+          else
+            report_date="$(TZ=Asia/Shanghai date +%F)"
+          fi
+          echo "date=$report_date" >> "$GITHUB_OUTPUT"
+          printf '%s\n' "$report_date" > .daily-update-date
+
+      - name: Require the OpenAI API key
+        shell: bash
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "Repository secret OPENAI_API_KEY is not configured." >&2
+            exit 1
+          fi
+
+      # Keep this as the final step in the job. The generated patch crosses into
+      # a clean runner before any GitHub write token becomes available.
+      - name: Run the daily publishing agent
+        id: codex
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          permission-profile: ":workspace"
+          safety-strategy: drop-sudo
+          prompt-file: .github/codex/daily-update.md
+          codex-args: '["--search"]'
+          effort: high
+
+  publish:
+    name: Validate and publish
+    needs: generate
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    env:
+      REPORT_DATE: ${{ needs.generate.outputs.run-date }}
+      GENERATED_PATCH: ${{ needs.generate.outputs.patch }}
+    steps:
+      - name: Check out the publishing branch
+        uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate and apply the generated patch
+        run: python scripts/apply_daily_patch.py --date "$REPORT_DATE" --env GENERATED_PATCH
+
+      - name: Validate both reports
+        run: python scripts/validate_daily.py --date "$REPORT_DATE"
+
+      - name: Commit and push
+        shell: bash
+        run: |
+          stamp="${REPORT_DATE//-/}"
+          git add -- \
+            index.html \
+            appliance-trends/index.html \
+            "daily/$stamp.html" \
+            "appliance-trends/daily/$stamp.html"
+
+          if git diff --cached --quiet; then
+            echo "No report changes to publish."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          commit_date="$(TZ=Asia/Shanghai date -d "$REPORT_DATE" '+%-m/%-d')"
+          git commit -m "$commit_date 每日数据更新"
+          git push origin HEAD:main
+
+  verify:
+    name: Verify GitHub Pages
+    needs: [generate, publish]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Check out verification script
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Wait for the published reports
+        run: >-
+          python scripts/verify_pages.py
+          --date "${{ needs.generate.outputs.run-date }}"
+          --base-url "https://weian8194-png.github.io/policy-daily/"
+          --attempts 20
+          --interval 30

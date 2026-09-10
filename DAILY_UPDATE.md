@@ -14,7 +14,7 @@
 3. 检索过去 24-48 小时信息。政策日报优先平台和政府官方来源；重要的行业媒体消息必须由官方来源或第二个独立来源交叉核验。小家电趋势优先品牌官网、Amazon 商品页、可靠评测媒体和展会/新闻稿。
 4. 每条新增事实记录可点击的原始 URL、发布日期/抓取日期和来源名称。不得编造链接、销量、价格、评分、政策日期或生效范围。无法核验的内容不发布。
 5. 若当天没有经核验的新信号，仍发布当天页面，明确写“今日未发现经核验新增”，只保留仍有效的重点事项。
-6. 更新两个首页并分别创建当天归档：`daily/YYYYMMDD.html` 和 `appliance-trends/daily/YYYYMMDD.html`。重复运行时更新同一文件，不创建重复归档。
+6. 更新两个首页，再运行 `python scripts/create_daily_archives.py --date YYYY-MM-DD` 创建当天归档：`daily/YYYYMMDD.html` 和 `appliance-trends/daily/YYYYMMDD.html`。重复运行时更新同一文件，不创建重复归档。
 7. 运行 `python scripts/validate_daily.py --date YYYY-MM-DD`。校验失败时不得提交或推送。
 8. 检查差异，只允许与当日数据、归档、校验或运行手册直接相关的改动。提交信息使用 `M/D 每日数据更新`，推送到 `origin/main`。
 9. 等待 GitHub Pages 构建后，验证首页和两个当天归档均返回成功，页面显示当天日期。线上验证失败则报告，不宣称发布成功。
@@ -40,3 +40,9 @@
 ## 失败与通知
 
 以下情况停止推送并报告：来源无法访问且无法交叉核验、Git 冲突、校验失败、推送失败、Pages 构建失败。正常成功只报告日期、两份报告的新增/变化数量、提交链接和线上地址。
+
+## 云端运行
+
+GitHub Actions 工作流 `.github/workflows/daily-update.yml` 每天 `00:00 UTC`（北京时间 `08:00`）运行，也支持手动触发。研究阶段使用官方 `openai/codex-action`，通过仓库 Secret `OPENAI_API_KEY` 调用 OpenAI Responses API；这部分消耗 OpenAI API 项目额度，不使用 Codex 桌面订阅额度。
+
+云端代理只有仓库工作区写权限，没有 GitHub 写权限。它输出统一补丁后，由新的隔离任务检查文件边界并运行本手册中的校验；只有当天两个首页和两个归档通过校验后，GitHub 才允许提交到 `main`。未配置 API 密钥、代理返回非补丁内容、修改越界或任一校验失败时，工作流停止且不发布。
