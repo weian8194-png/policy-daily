@@ -2,8 +2,8 @@ name: Daily cloud update
 
 on:
   schedule:
-    # GitHub cron uses UTC. 00:00 UTC is 08:00 in Asia/Shanghai.
-    - cron: "0 0 * * *"
+    # Start at 07:30 in Shanghai so the published pages can be ready by 08:00.
+    - cron: "30 23 * * *"
   workflow_dispatch:
     inputs:
       report_date:
@@ -63,6 +63,25 @@ jobs:
             exit 1
           fi
 
+      - name: Check the TokenHub Responses API
+        shell: bash
+        env:
+          API_GATEWAY_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          response_file="$(mktemp)"
+          http_code="$(curl --silent --show-error --max-time 90 \
+            --output "$response_file" --write-out '%{http_code}' \
+            --request POST https://token-hub.hoomenology.com/v1/responses \
+            --header "Authorization: Bearer $API_GATEWAY_KEY" \
+            --header 'Content-Type: application/json' \
+            --data '{"model":"gpt-6-astra","input":"Reply with OK only.","max_output_tokens":16}')"
+          if [[ "$http_code" -lt 200 || "$http_code" -ge 300 ]]; then
+            jq '{error: (.error.message // "unknown gateway error"), type: (.error.type // "unknown")}' \
+              "$response_file" >&2 || true
+            exit 1
+          fi
+          jq -e '.id and (.output | type == "array")' "$response_file" >/dev/null
+
       # Keep this as the final step in the job. The generated patch crosses into
       # a clean runner before any GitHub write token becomes available.
       - name: Run the daily publishing agent
@@ -77,7 +96,8 @@ jobs:
           # `--search` is a global CLI flag, while action extra arguments are
           # appended to `codex exec`. Use the equivalent documented config key.
           codex-args: '["-c", "web_search=\"live\""]'
-          effort: high
+          model: gpt-6-astra
+          effort: medium
 
   publish:
     name: Validate and publish
