@@ -73,7 +73,9 @@ jobs:
           permission-profile: ":workspace"
           safety-strategy: drop-sudo
           prompt-file: .github/codex/daily-update.md
-          codex-args: '["--search"]'
+          # `--search` is a global CLI flag, while action extra arguments are
+          # appended to `codex exec`. Use the equivalent documented config key.
+          codex-args: '["-c", "web_search=\"live\""]'
           effort: high
 
   publish:
