@@ -26,6 +26,7 @@ jobs:
       contents: read
     outputs:
       patch: ${{ steps.codex.outputs.final-message }}
+      research-outcome: ${{ steps.codex.outcome }}
       run-date: ${{ steps.run-date.outputs.date }}
     steps:
       - name: Check out the current site
@@ -65,6 +66,7 @@ jobs:
 
       - name: Select and check a TokenHub model
         id: gateway
+        continue-on-error: true
         shell: bash
         env:
           API_GATEWAY_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -115,6 +117,9 @@ jobs:
       # a clean runner before any GitHub write token becomes available.
       - name: Run the daily publishing agent
         id: codex
+        if: steps.gateway.outcome == 'success'
+        continue-on-error: true
+        timeout-minutes: 25
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
@@ -138,6 +143,7 @@ jobs:
     env:
       REPORT_DATE: ${{ needs.generate.outputs.run-date }}
       GENERATED_PATCH: ${{ needs.generate.outputs.patch }}
+      RESEARCH_OUTCOME: ${{ needs.generate.outputs.research-outcome }}
     steps:
       - name: Check out the publishing branch
         uses: actions/checkout@v5
@@ -149,8 +155,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate and apply the generated patch
-        run: python scripts/apply_daily_patch.py --date "$REPORT_DATE" --env GENERATED_PATCH
+      - name: Apply the generated patch or prepare a transparent fallback
+        shell: bash
+        run: |
+          if [ "$RESEARCH_OUTCOME" = "success" ] && [ -n "$GENERATED_PATCH" ]; then
+            python scripts/apply_daily_patch.py --date "$REPORT_DATE" --env GENERATED_PATCH
+          else
+            python scripts/prepare_daily_fallback.py --date "$REPORT_DATE"
+            python scripts/create_daily_archives.py --date "$REPORT_DATE"
+          fi
 
       - name: Validate both reports
         run: python scripts/validate_daily.py --date "$REPORT_DATE"

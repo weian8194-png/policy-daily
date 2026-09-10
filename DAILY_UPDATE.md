@@ -5,7 +5,7 @@
 - `index.html`：跨境政策日报
 - `appliance-trends/index.html`：美国亚马逊 `$90+` 小家电市场趋势
 
-所有日期、星期和调度均使用 `Asia/Shanghai`。自动任务每天 `08:00` 开始，目标是在 `08:30` 前完成发布。
+所有日期、星期和调度均使用 `Asia/Shanghai`。自动任务每天 `07:30` 开始，目标是在 `08:00` 前完成发布。
 
 ## 每次运行
 
@@ -43,6 +43,6 @@
 
 ## 云端运行
 
-GitHub Actions 工作流 `.github/workflows/daily-update.yml` 每天 `00:00 UTC`（北京时间 `08:00`）运行，也支持手动触发。研究阶段使用官方 `openai/codex-action`，通过仓库 Secret `OPENAI_API_KEY` 调用 OpenAI Responses API；这部分消耗 OpenAI API 项目额度，不使用 Codex 桌面订阅额度。
+GitHub Actions 工作流 `.github/workflows/daily-update.yml` 每天 `23:30 UTC`（北京时间次日 `07:30`）运行，也支持手动触发。研究阶段使用官方 `openai/codex-action`，通过仓库 Secret `OPENAI_API_KEY` 调用 TokenHub 的 Responses API；这部分消耗 TokenHub 额度，不使用 Codex 桌面订阅额度。
 
-云端代理只有仓库工作区写权限，没有 GitHub 写权限。它输出统一补丁后，由新的隔离任务检查文件边界并运行本手册中的校验；只有当天两个首页和两个归档通过校验后，GitHub 才允许提交到 `main`。未配置 API 密钥、代理返回非补丁内容、修改越界或任一校验失败时，工作流停止且不发布。
+云端代理只有仓库工作区写权限，没有 GitHub 写权限。它输出统一补丁后，由新的隔离任务检查文件边界并运行本手册中的校验；只有当天两个首页和两个归档通过校验后，GitHub 才允许提交到 `main`。TokenHub 或代理不可用时，确定性保底流程只更新日期、明确标注自动研究未完成、保留最近一次已核验事项并创建当天归档，不会编造新增信息。修改越界或任一校验失败时，工作流停止且不发布。

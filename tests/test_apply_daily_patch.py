@@ -24,6 +24,12 @@ ARCHIVE_SPEC = importlib.util.spec_from_file_location(
 ARCHIVE_MODULE = importlib.util.module_from_spec(ARCHIVE_SPEC)
 ARCHIVE_SPEC.loader.exec_module(ARCHIVE_MODULE)
 
+FALLBACK_SPEC = importlib.util.spec_from_file_location(
+    "prepare_daily_fallback", ROOT / "scripts" / "prepare_daily_fallback.py"
+)
+FALLBACK_MODULE = importlib.util.module_from_spec(FALLBACK_SPEC)
+FALLBACK_SPEC.loader.exec_module(FALLBACK_MODULE)
+
 
 def patch_for(paths):
     sections = []
@@ -127,6 +133,41 @@ class ArchiveCreationTests(unittest.TestCase):
                 appliance_path.read_text(encoding="utf-8"),
                 '<a href="./20260909.html">previous</a>',
             )
+
+
+class DailyFallbackTests(unittest.TestCase):
+    def test_prepares_new_date_and_is_idempotent_after_archiving(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "appliance-trends").mkdir()
+            (root / "index.html").write_text(
+                (ROOT / "index.html").read_text(encoding="utf-8"), encoding="utf-8"
+            )
+            (root / "appliance-trends" / "index.html").write_text(
+                (ROOT / "appliance-trends" / "index.html").read_text(encoding="utf-8"),
+                encoding="utf-8",
+            )
+
+            report_date = date(2026, 9, 11)
+            self.assertTrue(FALLBACK_MODULE.prepare_fallback(report_date, root))
+            policy = (root / "index.html").read_text(encoding="utf-8")
+            appliance = (root / "appliance-trends" / "index.html").read_text(
+                encoding="utf-8"
+            )
+
+            self.assertIn("2026年9月11日（星期五）", policy)
+            self.assertIn("自动联网研究未在时限内完成", policy)
+            self.assertIn("2026年9月11日（星期五）", appliance)
+            self.assertIn("自动联网研究未在时限内完成", appliance)
+            self.assertIn('href="./daily/20260911.html"', appliance)
+            self.assertIn('<span class="month-stats">11天</span>', appliance)
+
+            ARCHIVE_MODULE.create_archives(report_date, root)
+            self.assertFalse(FALLBACK_MODULE.prepare_fallback(report_date, root))
+
+    def test_rejects_unrecognised_page_structure(self):
+        with self.assertRaisesRegex(ValueError, "policy title"):
+            FALLBACK_MODULE.update_policy("<html></html>", date(2026, 9, 11))
 
 
 if __name__ == "__main__":
